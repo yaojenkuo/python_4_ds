@@ -1,37 +1,34 @@
-## Welcome to GitHub Pages
+## Python 與資料科學應用
 
-You can use the [editor on GitHub](https://github.com/yaojenkuo/python_4_ds/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+### 簡介
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+這是[郭耀仁](https://www.facebook.com/yaojen.kuo.1)在[台灣大學資訊工程學系資訊系統訓練班](https://www.csie.ntu.edu.tw/train/)所開設的 Python 與資料科學應用課程網頁，課程時數 30 小時。
 
-### Markdown
+### 評分標準
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+- 30% 出席率
+- 40% 期中作業
+- 30% 期末作業
 
-```markdown
-Syntax highlighted code block
+### 課程大綱
 
-# Header 1
-## Header 2
-### Header 3
+- [建立你的 Python 開發環境]()
+- [基本變數類型]()
+- [資料結構]()
+- [資料結構（2）]()
+- [再探 NumPy 套件]()
+- [資料結構（3）]()
+- [再探 Pandas 套件]()
+- [迴圈]()
+- [流程控制]()
+- [函數]()
+- [視覺化]()
+- [機器學習套件 Scikit-Learn]()
 
-- Bulleted
-- List
+### 推薦學習資源/書籍
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/yaojenkuo/python_4_ds/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+- [Codecademy](https://www.codecademy.com)
+- [Introducing Python](http://shop.oreilly.com/product/0636920028659.do)
+- [Learn Python the Hard Way](https://www.amazon.com/Learn-Python-Hard-Way-Introduction/dp/0321884914)
+- [Python for Data Analysis](http://shop.oreilly.com/product/0636920023784.do)
+- [scikit-learn - Machine Learning in Python](http://scikit-learn.org/stable/)
