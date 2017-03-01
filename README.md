@@ -12,10 +12,10 @@
 
 ### 課程大綱
 
-- [建立你的 Python 開發環境]()
-- [基本變數類型]()
-- [資料結構]()
-- [資料結構（2）]()
+- [建立你的 Python 開發環境](https://yaojenkuo.github.io/python_4_ds/ch1.slides.html)
+- [基本變數類型](https://yaojenkuo.github.io/python_4_ds/ch2.slides.html)
+- [資料結構](https://yaojenkuo.github.io/python_4_ds/ch3.slides.html)
+- [資料結構（2）](https://yaojenkuo.github.io/python_4_ds/ch4.slides.html)
 - [再探 NumPy 套件]()
 - [資料結構（3）]()
 - [再探 Pandas 套件]()
