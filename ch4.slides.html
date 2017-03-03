@@ -12083,7 +12083,7 @@ a.anchor-link {
 
 <span class="n">my_2d_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
                         <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
-<span class="nb">filter</span> <span class="o">=</span> <span class="n">my_2d_array</span> <span class="o">&gt;=</span><span class="mi">2</span>
+<span class="nb">filter</span> <span class="o">=</span> <span class="n">my_2d_array</span> <span class="o">&gt;=</span> <span class="mi">2</span>
 <span class="k">print</span><span class="p">(</span><span class="n">my_2d_array</span><span class="p">[</span><span class="nb">filter</span><span class="p">])</span>
 </pre></div>
 
@@ -12098,6 +12098,9 @@ a.anchor-link {
 <h2 id="&#36984;&#25799;-ndarray-&#30340;&#20803;&#32032;&#65288;4&#65289;">&#36984;&#25799; ndarray &#30340;&#20803;&#32032;&#65288;4&#65289;<a class="anchor-link" href="#&#36984;&#25799;-ndarray-&#30340;&#20803;&#32032;&#65288;4&#65289;">&#182;</a></h2><ul>
 <li>請同學練習從五人中選出 BMI &gt; 21 的元素</li>
 </ul>
+<div class="highlight"><pre><span></span><span class="n">heights</span> <span class="o">=</span> <span class="p">[</span><span class="mi">173</span><span class="p">,</span> <span class="mi">168</span><span class="p">,</span> <span class="mi">171</span><span class="p">,</span> <span class="mi">189</span><span class="p">,</span> <span class="mi">179</span><span class="p">]</span>
+<span class="n">weights</span> <span class="o">=</span> <span class="p">[</span><span class="mf">65.4</span><span class="p">,</span> <span class="mf">59.2</span><span class="p">,</span> <span class="mf">63.6</span><span class="p">,</span> <span class="mf">88.4</span><span class="p">,</span> <span class="mf">68.7</span><span class="p">]</span>
+</pre></div>
 
 </div>
 </div>
@@ -12110,12 +12113,14 @@ a.anchor-link {
 <h2 id="&#20102;&#35299;&#22806;&#35264;&#30340;&#23660;&#24615;">&#20102;&#35299;&#22806;&#35264;&#30340;&#23660;&#24615;<a class="anchor-link" href="#&#20102;&#35299;&#22806;&#35264;&#30340;&#23660;&#24615;">&#182;</a></h2><ul>
 <li><code>.size</code></li>
 <li><code>.shape</code></li>
+<li><code>.ndim</code></li>
 </ul>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 
 <span class="n">my_np_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
 <span class="k">print</span><span class="p">(</span><span class="n">my_np_array</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">my_np_array</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">my_np_array</span><span class="o">.</span><span class="n">ndim</span><span class="p">)</span>
 
 <span class="k">print</span><span class="p">(</span><span class="s2">&quot;---&quot;</span><span class="p">)</span> <span class="c1"># 分隔一下</span>
 
@@ -12123,6 +12128,7 @@ a.anchor-link {
                         <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
 <span class="k">print</span><span class="p">(</span><span class="n">my_2d_array</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">my_2d_array</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">my_2d_array</span><span class="o">.</span><span class="n">ndim</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12134,7 +12140,7 @@ a.anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#20102;&#35299;&#22806;&#35264;&#30340;&#23660;&#24615;&#65288;2&#65289;">&#20102;&#35299;&#22806;&#35264;&#30340;&#23660;&#24615;&#65288;2&#65289;<a class="anchor-link" href="#&#20102;&#35299;&#22806;&#35264;&#30340;&#23660;&#24615;&#65288;2&#65289;">&#182;</a></h2><ul>
-<li>請同學練習建立一個 <strong>ndarray</strong> 然後使用 <code>.size</code> 與 <code>.shape</code> 屬性觀察外觀</li>
+<li>請同學練習建立幾個 <strong>ndarray</strong> 然後使用 <code>.size</code>、<code>.shape</code> 與 <code>.ndim</code> 屬性</li>
 </ul>
 
 </div>
