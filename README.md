@@ -25,6 +25,10 @@
 - [視覺化]()
 - [機器學習套件 Scikit-Learn]()
 
+### 近期課程錄影清單
+
+- [第 280 期 Python 與資料科學應用（夜間班 3h）（三）（六）19:00-22:00](https://www.youtube.com/playlist?list=PLEq7iw5uOtuVLOqYRt9QwUme8S5oXioxB)
+
 ### 推薦學習資源/書籍
 
 - [Codecademy](https://www.codecademy.com)
