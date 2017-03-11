@@ -18,7 +18,7 @@
 - [資料結構（2）](https://yaojenkuo.github.io/python_4_ds/ch4.slides.html)
 - [再探 NumPy 套件](https://yaojenkuo.github.io/python_4_ds/numpy_adv.slides.html)
 - [資料結構（3）](https://yaojenkuo.github.io/python_4_ds/ch5.slides.html)
-- [再探 Pandas 套件]()
+- [再探 Pandas 套件](https://yaojenkuo.github.io/python_4_ds/pandas_adv.slides.html)
 - [迴圈]()
 - [流程控制]()
 - [函數]()
