@@ -20,8 +20,8 @@
 - [資料結構（3）](https://yaojenkuo.github.io/python_4_ds/ch5.slides.html)
 - [再探 Pandas 套件](https://yaojenkuo.github.io/python_4_ds/pandas_adv.slides.html)
 - [迴圈](https://yaojenkuo.github.io/python_4_ds/ch6.slides.html)
-- [流程控制]()
-- [函數]()
+- [流程控制](https://yaojenkuo.github.io/python_4_ds/ch7.slides.html)
+- [函數](https://yaojenkuo.github.io/python_4_ds/ch8.slides.html)
 - [視覺化]()
 - [機器學習套件 Scikit-Learn]()
 
