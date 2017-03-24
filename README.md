@@ -24,7 +24,8 @@
 - [函數](https://yaojenkuo.github.io/python_4_ds/ch8.slides.html)
 - [淺談物件導向](https://yaojenkuo.github.io/python_4_ds/ch9.slides.html)
 - [視覺化](https://yaojenkuo.github.io/python_4_ds/ch10.slides.html)
-- [機器學習套件 Scikit-Learn]()
+- [Python 與機器學習](https://yaojenkuo.github.io/python_4_ds/ch11.slides.html)
+- [Python 與機器學習（2）]()
 
 ### 近期課程錄影清單
 
