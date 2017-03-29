@@ -25,7 +25,8 @@
 - [淺談物件導向](https://yaojenkuo.github.io/python_4_ds/ch9.slides.html)
 - [視覺化](https://yaojenkuo.github.io/python_4_ds/ch10.slides.html)
 - [Python 與機器學習](https://yaojenkuo.github.io/python_4_ds/ch11.slides.html)
-- [Python 與機器學習（2）]()
+- [Python 與機器學習（2）](https://yaojenkuo.github.io/python_4_ds/ch12.slides.html)
+- [Python 與機器學習（3）](https://yaojenkuo.github.io/python_4_ds/ch13.slides.html)
 
 ### 近期課程錄影清單
 
