@@ -27,6 +27,9 @@
 - [Python 與機器學習](https://yaojenkuo.github.io/python_4_ds/ch11.slides.html)
 - [Python 與機器學習（2）](https://yaojenkuo.github.io/python_4_ds/ch12.slides.html)
 - [Python 與機器學習（3）](https://yaojenkuo.github.io/python_4_ds/ch13.slides.html)
+- [Python 與機器學習（4）](https://yaojenkuo.github.io/python_4_ds/ch14.slides.html)
+- [Python 與機器學習（5）](https://yaojenkuo.github.io/python_4_ds/ch15.slides.html)
+- [Python 與機器學習（6）](https://yaojenkuo.github.io/python_4_ds/ch16.slides.html)
 
 ### 近期課程錄影清單
 
