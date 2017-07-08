@@ -6,23 +6,23 @@
 
 ### 評分標準
 
-- 30% 出席率
-- 40% 期中作業
-- 30% 期末作業
+- 50% 出席率
+- 50% 期中作業
 
 ### 課程大綱
 
+- [關於這門課](https://yaojenkuo.github.io/python_4_ds/ch0.slides.html)
 - [建立你的 Python 開發環境](https://yaojenkuo.github.io/python_4_ds/ch1.slides.html)
 - [基本變數類型](https://yaojenkuo.github.io/python_4_ds/ch2.slides.html)
 - [資料結構](https://yaojenkuo.github.io/python_4_ds/ch3.slides.html)
-- [資料結構（2）](https://yaojenkuo.github.io/python_4_ds/ch4.slides.html)
-- [再探 NumPy 套件](https://yaojenkuo.github.io/python_4_ds/numpy_adv.slides.html)
-- [資料結構（3）](https://yaojenkuo.github.io/python_4_ds/ch5.slides.html)
-- [再探 Pandas 套件](https://yaojenkuo.github.io/python_4_ds/pandas_adv.slides.html)
 - [迴圈](https://yaojenkuo.github.io/python_4_ds/ch6.slides.html)
 - [流程控制](https://yaojenkuo.github.io/python_4_ds/ch7.slides.html)
 - [函數](https://yaojenkuo.github.io/python_4_ds/ch8.slides.html)
 - [淺談物件導向](https://yaojenkuo.github.io/python_4_ds/ch9.slides.html)
+- [資料結構（2）](https://yaojenkuo.github.io/python_4_ds/ch4.slides.html)
+- [再探 NumPy 套件](https://yaojenkuo.github.io/python_4_ds/numpy_adv.slides.html)
+- [資料結構（3）](https://yaojenkuo.github.io/python_4_ds/ch5.slides.html)
+- [再探 Pandas 套件](https://yaojenkuo.github.io/python_4_ds/pandas_adv.slides.html)
 - [視覺化](https://yaojenkuo.github.io/python_4_ds/ch10.slides.html)
 - [Python 與機器學習](https://yaojenkuo.github.io/python_4_ds/ch11.slides.html)
 - [Python 與機器學習（2）](https://yaojenkuo.github.io/python_4_ds/ch12.slides.html)
