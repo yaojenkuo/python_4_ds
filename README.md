@@ -31,6 +31,14 @@
 - [Python 與機器學習（5）](https://yaojenkuo.github.io/python_4_ds/ch15.slides.html)
 - [Python 與機器學習（6）](https://yaojenkuo.github.io/python_4_ds/ch16.slides.html)
 
+### 資源
+
+- [Oracle VM VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+- [Ubuntu 正體中文站](https://www.ubuntu-tw.org/modules/tinyd0/)
+- [Anaconda](https://www.continuum.io/downloads)
+- [InstaCode](http://instacode.live/channel/tony)
+- [VM 映像檔 - zipped](https://drive.google.com/open?id=0B1RAmsOPDTw1VVdJSFRaRGZPQ2c)
+
 ### 近期課程錄影清單
 
 - [第 280 期 Python 與資料科學應用（夜間班 3h）（三）（六）19:00-22:00](https://www.youtube.com/playlist?list=PLEq7iw5uOtuVLOqYRt9QwUme8S5oXioxB)
