@@ -11882,6 +11882,7 @@ a.anchor-link {
 <li>list</li>
 <li>tuple</li>
 <li>dict</li>
+<li>set</li>
 </ul>
 </li>
 <li>套件資料結構<ul>
@@ -11901,7 +11902,7 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="list">list<a class="anchor-link" href="#list">&#182;</a></h2><ul>
 <li>建立時使用 <code>[]</code> 中括號</li>
-<li>可以容納不同的變數類型（str, int, float, bool）</li>
+<li>可以容納不同的變數類型（str, int, float, bool, complex）</li>
 <li>Python 的索引值從 0 開始算</li>
 </ul>
 <div class="highlight"><pre><span></span><span class="n">team_name</span> <span class="o">=</span> <span class="s2">&quot;Chicago Bulls&quot;</span>
@@ -11922,8 +11923,25 @@ a.anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="list&#65288;2&#65289;">list&#65288;2&#65289;<a class="anchor-link" href="#list&#65288;2&#65289;">&#182;</a></h2><ul>
-<li>請同學練習判斷 <code>chicago_bulls</code> 的結構</li>
-<li>請同學練習判斷 <code>chicago_bulls</code> 裡面元素的變數類型</li>
+<li>建立一個 list 叫做 friends_list 儲存這些資訊</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="n">genre</span> <span class="o">=</span> <span class="s2">&quot;SitCom&quot;</span>
+<span class="n">seasons</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">episodes</span> <span class="o">=</span> <span class="mi">236</span>
+<span class="n">stars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Jennifer Aniston&quot;</span><span class="p">,</span> <span class="s2">&quot;Courteney Cox&quot;</span><span class="p">,</span> <span class="s2">&quot;Lisa Kudrow&quot;</span><span class="p">,</span>
+<span class="s2">&quot;Matt LeBlanc&quot;</span><span class="p">,</span> <span class="s2">&quot;Matthew Perry&quot;</span><span class="p">,</span> <span class="s2">&quot;David Schwimmer&quot;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="list&#65288;3&#65289;">list&#65288;3&#65289;<a class="anchor-link" href="#list&#65288;3&#65289;">&#182;</a></h2><ul>
+<li>建立好以後，請將季數與 "Matthew Perry" 印出</li>
 </ul>
 
 </div>
@@ -11975,7 +11993,7 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="dict">dict<a class="anchor-link" href="#dict">&#182;</a></h2><ul>
 <li>帶有鍵值（key）的 list</li>
-<li>建立時使用大括號 <code>{}</code> 或者使用 <code>dict()</code> 函數轉換既有的 list</li>
+<li>建立時使用大括號 <code>{}</code></li>
 </ul>
 <div class="highlight"><pre><span></span><span class="n">team_name</span> <span class="o">=</span> <span class="s2">&quot;Chicago Bulls&quot;</span>
 <span class="n">wins</span> <span class="o">=</span> <span class="mi">72</span>
@@ -12001,8 +12019,25 @@ a.anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="dict&#65288;2&#65289;">dict&#65288;2&#65289;<a class="anchor-link" href="#dict&#65288;2&#65289;">&#182;</a></h2><ul>
-<li>請同學練習使用鍵值選取字典中的元素</li>
-<li>請同學判斷字典中元素的變數類型</li>
+<li>建立一個 dict 叫做 friends_dict 儲存這些資訊</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="n">genre</span> <span class="o">=</span> <span class="s2">&quot;SitCom&quot;</span>
+<span class="n">seasons</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">episodes</span> <span class="o">=</span> <span class="mi">236</span>
+<span class="n">stars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Jennifer Aniston&quot;</span><span class="p">,</span> <span class="s2">&quot;Courteney Cox&quot;</span><span class="p">,</span> <span class="s2">&quot;Lisa Kudrow&quot;</span><span class="p">,</span>
+<span class="s2">&quot;Matt LeBlanc&quot;</span><span class="p">,</span> <span class="s2">&quot;Matthew Perry&quot;</span><span class="p">,</span> <span class="s2">&quot;David Schwimmer&quot;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="dict&#65288;3&#65289;">dict&#65288;3&#65289;<a class="anchor-link" href="#dict&#65288;3&#65289;">&#182;</a></h2><ul>
+<li>建立好以後，請將季數與 "Lisa Kudrow" 印出</li>
 </ul>
 
 </div>
@@ -12013,11 +12048,55 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="ndarray-&#21644;-data-frame">ndarray &#21644; data frame<a class="anchor-link" href="#ndarray-&#21644;-data-frame">&#182;</a></h2><ul>
-<li>ndarray 需要引入 numpy 套件</li>
-<li>data frame 需要引入 pandas 套件</li>
-<li>我們下一章再說</li>
+<h2 id="set">set<a class="anchor-link" href="#set">&#182;</a></h2><ul>
+<li>存放唯一值（unique values）的結構</li>
+<li>建立時使用大括號 <code>{}</code></li>
 </ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rgb</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rgb</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">rgb</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;blue&#39;, &#39;green&#39;, &#39;red&#39;}
+3
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="set&#65288;2&#65289;">set&#65288;2&#65289;<a class="anchor-link" href="#set&#65288;2&#65289;">&#182;</a></h2><ul>
+<li>set 不能夠用中括號選取元素</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="n">rgb</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">}</span>
+<span class="n">rgb</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
 
 </div>
 </div>
