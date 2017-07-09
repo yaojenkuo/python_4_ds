@@ -12084,31 +12084,127 @@ $$BMI = \frac{weight_{kg}}{height_{m}^2}$$
 <h2 id="&#24067;&#26519;&#21028;&#26039;">&#24067;&#26519;&#21028;&#26039;<a class="anchor-link" href="#&#24067;&#26519;&#21028;&#26039;">&#182;</a></h2><ul>
 <li>讓同學練習布林判斷</li>
 </ul>
+<table>
+<thead><tr>
+<th>判斷運算符號</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>==</code></td>
+<td>是否等於</td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td>是否不等於</td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>是否大於</td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>是否小於</td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td>是否大於等於</td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td>是否小於等於</td>
+</tr>
+<tr>
+<td><code>in</code></td>
+<td>是否包含於</td>
+</tr>
+<tr>
+<td><code>not in</code></td>
+<td>是否不包含於</td>
+</tr>
+<tr>
+<td><code>and</code></td>
+<td>判斷兩側的條件是否都為 <code>True</code></td>
+</tr>
+<tr>
+<td><code>or</code></td>
+<td>判斷兩側的條件是否至少有一側為 <code>True</code></td>
+</tr>
+<tr>
+<td><code>not</code></td>
+<td>將布林的 <code>True</code> 或 <code>False</code> 反轉</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#38364;&#26044;&#25991;&#23383;">&#38364;&#26044;&#25991;&#23383;<a class="anchor-link" href="#&#38364;&#26044;&#25991;&#23383;">&#182;</a></h2><ul>
+<li>何時使用單引號（<code>'</code>）何時使用雙引號（<code>"</code>）</li>
+<li>如何善用跳脫符號 <code>\</code></li>
+</ul>
+<div class="highlight"><pre><span></span><span class="n">McD</span> <span class="o">=</span> <span class="s2">&quot;I&#39;m loving it!&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">McD</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#38364;&#26044;&#25991;&#23383;&#65288;2&#65289;">&#38364;&#26044;&#25991;&#23383;&#65288;2&#65289;<a class="anchor-link" href="#&#38364;&#26044;&#25991;&#23383;&#65288;2&#65289;">&#182;</a></h2><ul>
+<li>帶有格式的 <code>print</code><ul>
+<li><code>%s</code>：文字</li>
+<li><code>%f</code>：浮點數</li>
+<li><code>%i</code>：整數</li>
+</ul>
+</li>
+</ul>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="err">```</span><span class="n">python</span>
-<span class="nb">print</span><span class="p">(</span><span class="mi">8</span> <span class="o">==</span> <span class="mi">8</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="mi">8</span> <span class="o">==</span> <span class="mi">7</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="mi">8</span> <span class="o">!=</span> <span class="mi">7</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="mi">8</span> <span class="o">==</span> <span class="s2">&quot;8&quot;</span><span class="p">)</span> <span class="c1"># False</span>
-<span class="nb">print</span><span class="p">(</span><span class="kc">False</span> <span class="o">==</span> <span class="s2">&quot;False&quot;</span><span class="p">)</span> <span class="c1"># False</span>
-<span class="nb">print</span><span class="p">(</span><span class="mi">1</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)</span> <span class="c1"># False</span>
-<span class="nb">print</span><span class="p">(</span><span class="mi">0</span> <span class="o">==</span> <span class="kc">False</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">&gt;=</span> <span class="kc">True</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="kc">True</span> <span class="o">&amp;</span> <span class="kc">False</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="kc">True</span> <span class="o">|</span> <span class="kc">False</span><span class="p">)</span>
-<span class="err">```</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pi</span> <span class="o">=</span> <span class="mf">3.141591</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;圓周率是 </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">pi</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;圓周率是 </span><span class="si">%.2f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">pi</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;圓周率整數部分是 </span><span class="si">%i</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">pi</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">是 </span><span class="si">%.4f</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="s2">&quot;圓周率&quot;</span><span class="p">,</span> <span class="n">pi</span><span class="p">))</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>圓周率是 3.141591
+圓周率是 3.14
+圓周率整數部分是 3
+圓周率是 3.1416
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
