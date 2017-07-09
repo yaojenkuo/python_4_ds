@@ -12375,16 +12375,6 @@ $$\bar{x} = \frac{\displaystyle\sum_{i=1}^{n}xi}{n}$$
 <h2 id="while-&#36852;&#22280;&#65288;4&#65289;">while &#36852;&#22280;&#65288;4&#65289;<a class="anchor-link" href="#while-&#36852;&#22280;&#65288;4&#65289;">&#182;</a></h2><ul>
 <li>投擲一枚公正的硬幣，出現三次正面才停止</li>
 </ul>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
-
-<span class="n">coin</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Head&quot;</span><span class="p">,</span> <span class="s2">&quot;Tail&quot;</span><span class="p">]</span>
-<span class="n">flips</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">while</span> <span class="n">coin</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;Head&quot;</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
-    <span class="n">flips</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">choice</span><span class="p">(</span><span class="n">coin</span><span class="p">))</span>
-
-<span class="k">print</span><span class="p">(</span><span class="n">flips</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">flips</span><span class="p">))</span>
-</pre></div>
 
 </div>
 </div>
