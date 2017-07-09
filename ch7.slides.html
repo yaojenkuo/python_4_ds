@@ -11860,16 +11860,50 @@ a.anchor-link {
 <li>透過 <code>if-else</code> 的結構創造程式的分支</li>
 <li>整數除以 2 的餘數只會有兩種答案</li>
 </ul>
-<div class="highlight"><pre><span></span><span class="n">my_seq</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_seq</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">iterator</span> <span class="ow">in</span> <span class="n">my_seq</span><span class="p">:</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">iterator</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">iterator</span><span class="p">,</span> <span class="s2">&quot;是偶數&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">iterator</span><span class="p">,</span> <span class="s2">&quot;是偶數&quot;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">iterator</span><span class="p">,</span> <span class="s2">&quot;是奇數&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">iterator</span><span class="p">,</span> <span class="s2">&quot;是奇數&quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1 是奇數
+2 是偶數
+3 是奇數
+4 是偶數
+5 是奇數
+6 是偶數
+7 是奇數
+8 是偶數
+9 是奇數
+10 是偶數
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -11893,18 +11927,52 @@ a.anchor-link {
 <h2 id="if-elif-else">if-elif-else<a class="anchor-link" href="#if-elif-else">&#182;</a></h2><ul>
 <li>整數除以 3 的餘數會有三種答案</li>
 </ul>
-<div class="highlight"><pre><span></span><span class="n">my_seq</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">))</span>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_seq</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">iterator</span> <span class="ow">in</span> <span class="n">my_seq</span><span class="p">:</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">iterator</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">iterator</span><span class="p">,</span> <span class="s2">&quot;可以被 3 整除&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">iterator</span><span class="p">,</span> <span class="s2">&quot;可以被 3 整除&quot;</span><span class="p">)</span>
     <span class="k">elif</span> <span class="p">(</span><span class="n">iterator</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span><span class="mi">1</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">iterator</span><span class="p">,</span> <span class="s2">&quot;除以 3 餘數是 1&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">iterator</span><span class="p">,</span> <span class="s2">&quot;除以 3 餘數是 1&quot;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">iterator</span><span class="p">,</span> <span class="s2">&quot;除以 3 餘數是 2&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">iterator</span><span class="p">,</span> <span class="s2">&quot;除以 3 餘數是 2&quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1 除以 3 餘數是 1
+2 除以 3 餘數是 2
+3 可以被 3 整除
+4 除以 3 餘數是 1
+5 除以 3 餘數是 2
+6 可以被 3 整除
+7 除以 3 餘數是 1
+8 除以 3 餘數是 2
+9 可以被 3 整除
+10 除以 3 餘數是 1
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -11928,16 +11996,43 @@ a.anchor-link {
 <h2 id="&#35731;&#36852;&#22280;&#26356;&#26377;&#24392;&#24615;">&#35731;&#36852;&#22280;&#26356;&#26377;&#24392;&#24615;<a class="anchor-link" href="#&#35731;&#36852;&#22280;&#26356;&#26377;&#24392;&#24615;">&#182;</a></h2><ul>
 <li><code>break</code> 描述</li>
 </ul>
-<div class="highlight"><pre><span></span><span class="n">weekdays</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Sunday&quot;</span><span class="p">,</span> <span class="s2">&quot;Monday&quot;</span><span class="p">,</span> <span class="s2">&quot;Tuesday&quot;</span><span class="p">,</span> <span class="s2">&quot;Wednesday&quot;</span><span class="p">,</span> <span class="s2">&quot;Thursday&quot;</span><span class="p">,</span> <span class="s2">&quot;Friday&quot;</span><span class="p">,</span> <span class="s2">&quot;Saturday&quot;</span><span class="p">]</span>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weekdays</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Sunday&quot;</span><span class="p">,</span> <span class="s2">&quot;Monday&quot;</span><span class="p">,</span> <span class="s2">&quot;Tuesday&quot;</span><span class="p">,</span> <span class="s2">&quot;Wednesday&quot;</span><span class="p">,</span> <span class="s2">&quot;Thursday&quot;</span><span class="p">,</span> <span class="s2">&quot;Friday&quot;</span><span class="p">,</span> <span class="s2">&quot;Saturday&quot;</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">weekday</span> <span class="ow">in</span> <span class="n">weekdays</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">weekday</span> <span class="o">==</span> <span class="s2">&quot;Thursday&quot;</span><span class="p">:</span>
         <span class="k">break</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">weekday</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">weekday</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Sunday
+Monday
+Tuesday
+Wednesday
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -11947,16 +12042,45 @@ a.anchor-link {
 <h2 id="&#35731;&#36852;&#22280;&#26356;&#26377;&#24392;&#24615;&#65288;2&#65289;">&#35731;&#36852;&#22280;&#26356;&#26377;&#24392;&#24615;&#65288;2&#65289;<a class="anchor-link" href="#&#35731;&#36852;&#22280;&#26356;&#26377;&#24392;&#24615;&#65288;2&#65289;">&#182;</a></h2><ul>
 <li><code>continue</code> 描述</li>
 </ul>
-<div class="highlight"><pre><span></span><span class="n">weekdays</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Sunday&quot;</span><span class="p">,</span> <span class="s2">&quot;Monday&quot;</span><span class="p">,</span> <span class="s2">&quot;Tuesday&quot;</span><span class="p">,</span> <span class="s2">&quot;Wednesday&quot;</span><span class="p">,</span> <span class="s2">&quot;Thursday&quot;</span><span class="p">,</span> <span class="s2">&quot;Friday&quot;</span><span class="p">,</span> <span class="s2">&quot;Saturday&quot;</span><span class="p">]</span>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weekdays</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Sunday&quot;</span><span class="p">,</span> <span class="s2">&quot;Monday&quot;</span><span class="p">,</span> <span class="s2">&quot;Tuesday&quot;</span><span class="p">,</span> <span class="s2">&quot;Wednesday&quot;</span><span class="p">,</span> <span class="s2">&quot;Thursday&quot;</span><span class="p">,</span> <span class="s2">&quot;Friday&quot;</span><span class="p">,</span> <span class="s2">&quot;Saturday&quot;</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">weekday</span> <span class="ow">in</span> <span class="n">weekdays</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">weekday</span> <span class="o">==</span> <span class="s2">&quot;Thursday&quot;</span><span class="p">:</span>
         <span class="k">continue</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">weekday</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">weekday</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Sunday
+Monday
+Tuesday
+Wednesday
+Friday
+Saturday
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -11971,14 +12095,31 @@ a.anchor-link {
 
 </div>
 </div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#26399;&#20013;&#20316;&#26989;">&#26399;&#20013;&#20316;&#26989;<a class="anchor-link" href="#&#26399;&#20013;&#20316;&#26989;">&#182;</a></h2><ul>
+<li>印出所有可以將 87 整除的因數（正數）</li>
+</ul>
+
+</div>
+</div>
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#35731;&#36852;&#22280;&#26356;&#26377;&#24392;&#24615;&#65288;4&#65289;">&#35731;&#36852;&#22280;&#26356;&#26377;&#24392;&#24615;&#65288;4&#65289;<a class="anchor-link" href="#&#35731;&#36852;&#22280;&#26356;&#26377;&#24392;&#24615;&#65288;4&#65289;">&#182;</a></h2><ul>
-<li>練習：找出可以將 87 整除的因數（正數）</li>
+<h2 id="&#26399;&#20013;&#20316;&#26989;&#65288;2&#65289;">&#26399;&#20013;&#20316;&#26989;&#65288;2&#65289;<a class="anchor-link" href="#&#26399;&#20013;&#20316;&#26989;&#65288;2&#65289;">&#182;</a></h2><ul>
+<li>將 1 到 100 印出，但是：<ul>
+<li>碰到 3 的倍數印出 "Bingo!"</li>
+<li>碰到 5 的倍數印出 "Awesome!"</li>
+<li>碰到 15 的倍數印出 "Fantastic!"</li>
+</ul>
+</li>
 </ul>
 
 </div>
