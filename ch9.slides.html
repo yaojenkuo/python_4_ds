@@ -11830,7 +11830,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#28154;&#35527;&#29289;&#20214;&#23566;&#21521;">&#28154;&#35527;&#29289;&#20214;&#23566;&#21521;<a class="anchor-link" href="#&#28154;&#35527;&#29289;&#20214;&#23566;&#21521;">&#182;</a></h1><h2 id="&#37101;&#32768;&#20161;">&#37101;&#32768;&#20161;<a class="anchor-link" href="#&#37101;&#32768;&#20161;">&#182;</a></h2>
+<h1 id="&#39006;&#21029;">&#39006;&#21029;<a class="anchor-link" href="#&#39006;&#21029;">&#182;</a></h1><h2 id="&#37101;&#32768;&#20161;">&#37101;&#32768;&#20161;<a class="anchor-link" href="#&#37101;&#32768;&#20161;">&#182;</a></h2>
 </div>
 </div>
 </div></section></section><section><section>
@@ -11839,28 +11839,11 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Data-Frame-&#29289;&#20214;">Data Frame &#29289;&#20214;<a class="anchor-link" href="#Data-Frame-&#29289;&#20214;">&#182;</a></h2><ul>
-<li>一個<strong>物件（Object）</strong>可以包含<strong>屬性（Attribute）</strong>與<strong>方法（Method）</strong></li>
-<li>一個 data frame 是一個物件，它有 <code>shape</code> 屬性、有 <code>head()</code> 方法...等</li>
-<li>記得跟函數型編程比較一下！</li>
+<h2 id="&#33258;&#35330;&#39006;&#21029;">&#33258;&#35330;&#39006;&#21029;<a class="anchor-link" href="#&#33258;&#35330;&#39006;&#21029;">&#182;</a></h2><ul>
+<li>除了內建的 <code>str</code>、<code>int</code>、<code>list</code> 等，我們也可以自訂類別</li>
+<li>然後賦予自訂類別各種屬性（Attribute）與方法（Method）</li>
+<li>屬性對應資料，方法對應函數</li>
 </ul>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
-
-<span class="n">name</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;蒙其·D·魯夫&quot;</span><span class="p">,</span> <span class="s2">&quot;羅羅亞·索隆&quot;</span><span class="p">,</span> <span class="s2">&quot;娜美&quot;</span><span class="p">,</span> <span class="s2">&quot;騙人布&quot;</span><span class="p">,</span> <span class="s2">&quot;賓什莫克·香吉士&quot;</span><span class="p">,</span> <span class="s2">&quot;多尼多尼·喬巴&quot;</span><span class="p">,</span> <span class="s2">&quot;妮可·羅賓&quot;</span><span class="p">,</span> <span class="s2">&quot;佛朗基&quot;</span><span class="p">,</span> <span class="s2">&quot;布魯克&quot;</span><span class="p">]</span>
-<span class="n">age</span> <span class="o">=</span> <span class="p">[</span><span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">90</span><span class="p">]</span>
-
-<span class="c1"># 建立 dict</span>
-<span class="n">straw_hat_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
-                  <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="n">age</span>
-<span class="p">}</span>
-
-<span class="c1"># 建立 data frame</span>
-<span class="n">straw_hat_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">straw_hat_dict</span><span class="p">)</span>
-
-<span class="c1"># data frame 的屬性與方法</span>
-<span class="k">print</span><span class="p">(</span><span class="n">straw_hat_df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="c1"># shape 屬性</span>
-<span class="n">straw_hat_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># head 方法</span>
-</pre></div>
 
 </div>
 </div>
@@ -11870,18 +11853,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#24314;&#31435;&#39006;&#21029;">&#24314;&#31435;&#39006;&#21029;<a class="anchor-link" href="#&#24314;&#31435;&#39006;&#21029;">&#182;</a></h2><ul>
-<li><strong>物件（Object）</strong>屬於一種<strong>類別（Class）</strong></li>
-<li>定義一個類別稱為 <code>StrawHat</code></li>
-</ul>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">StrawHat</span><span class="p">:</span>
-    <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    這是一個叫做 StrawHat 的類別</span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">has_devil_fruit</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">has_devil_fruit</span> <span class="o">=</span> <span class="n">has_devil_fruit</span>
-</pre></div>
+<h2 id="&#33258;&#35330;&#39006;&#21029;&#65288;2&#65289;">&#33258;&#35330;&#39006;&#21029;&#65288;2&#65289;<a class="anchor-link" href="#&#33258;&#35330;&#39006;&#21029;&#65288;2&#65289;">&#182;</a></h2><p><img src="https://storage.googleapis.com/intro-2-py-ds/img/ch7/aoeII.png" alt=""></p>
 
 </div>
 </div>
@@ -11891,296 +11863,276 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#24314;&#31435;&#39006;&#21029;&#65288;2&#65289;">&#24314;&#31435;&#39006;&#21029;&#65288;2&#65289;<a class="anchor-link" href="#&#24314;&#31435;&#39006;&#21029;&#65288;2&#65289;">&#182;</a></h2><ul>
+<h2 id="&#33258;&#35330;&#39006;&#21029;&#65288;3&#65289;">&#33258;&#35330;&#39006;&#21029;&#65288;3&#65289;<a class="anchor-link" href="#&#33258;&#35330;&#39006;&#21029;&#65288;3&#65289;">&#182;</a></h2><ul>
 <li><code>__init__()</code> 方法稱為建構子或者初始化方法</li>
 <li><code>self</code> 就像是 <code>this</code> 的作用，在使用方法時不需要加入</li>
 <li><code>__doc__</code> 屬性可以看類別說明文件</li>
 </ul>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">StrawHat</span><span class="p">:</span>
-    <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    這是一個叫做 StrawHat 的類別</span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">has_devil_fruit</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">has_devil_fruit</span> <span class="o">=</span> <span class="n">has_devil_fruit</span>
-
-<span class="k">print</span><span class="p">(</span><span class="n">StrawHat</span><span class="o">.</span><span class="n">__doc__</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#24314;&#31435;&#29289;&#20214;">&#24314;&#31435;&#29289;&#20214;<a class="anchor-link" href="#&#24314;&#31435;&#29289;&#20214;">&#182;</a></h2><ul>
-<li>根據 <code>StrawHat</code> 類別建立兩個物件 <code>luffy</code> 與 <code>zoro</code></li>
+<hr>
+<ul>
+<li>建築物（Building）類別有基本屬性為建築物名稱：</li>
 </ul>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">StrawHat</span><span class="p">:</span>
-    <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    這是一個叫做 StrawHat 的類別</span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">has_devil_fruit</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">has_devil_fruit</span> <span class="o">=</span> <span class="n">has_devil_fruit</span>
-
-<span class="n">luffy</span> <span class="o">=</span> <span class="n">StrawHat</span><span class="p">(</span><span class="s2">&quot;蒙其·D·魯夫&quot;</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
-<span class="n">zoro</span> <span class="o">=</span> <span class="n">StrawHat</span><span class="p">(</span><span class="s2">&quot;羅羅亞·索隆&quot;</span><span class="p">,</span> <span class="bp">False</span><span class="p">)</span>
-
-<span class="c1"># 物件的屬性</span>
-<span class="k">print</span><span class="p">(</span><span class="n">luffy</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">luffy</span><span class="o">.</span><span class="n">has_devil_fruit</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">zoro</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">zoro</span><span class="o">.</span><span class="n">has_devil_fruit</span><span class="p">)</span>
-</pre></div>
 
 </div>
 </div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#29289;&#20214;&#30340;&#23660;&#24615;">&#29289;&#20214;&#30340;&#23660;&#24615;<a class="anchor-link" href="#&#29289;&#20214;&#30340;&#23660;&#24615;">&#182;</a></h2><ul>
-<li>加入屬性</li>
-</ul>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">StrawHat</span><span class="p">:</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Building</span><span class="p">():</span>
     <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    這是一個叫做 StrawHat 的類別</span>
+<span class="sd">    建築物類別</span>
 <span class="sd">    &#39;&#39;&#39;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">has_devil_fruit</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">has_devil_fruit</span> <span class="o">=</span> <span class="n">has_devil_fruit</span>
 
-<span class="n">luffy</span> <span class="o">=</span> <span class="n">StrawHat</span><span class="p">(</span><span class="s2">&quot;蒙其·D·魯夫&quot;</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">town_center</span> <span class="o">=</span> <span class="n">Building</span><span class="p">(</span><span class="s2">&quot;城鎮中心&quot;</span><span class="p">)</span>
+<span class="n">barrack</span> <span class="o">=</span> <span class="n">Building</span><span class="p">(</span><span class="s2">&quot;軍營&quot;</span><span class="p">)</span>
+<span class="n">monastery</span> <span class="o">=</span> <span class="n">Building</span><span class="p">(</span><span class="s2">&quot;修道院&quot;</span><span class="p">)</span>
 
-<span class="n">luffy</span><span class="o">.</span><span class="n">devil_fruit</span> <span class="o">=</span> <span class="s2">&quot;橡膠果實&quot;</span>
-<span class="k">print</span><span class="p">(</span><span class="n">luffy</span><span class="o">.</span><span class="n">devil_fruit</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">town_center</span><span class="o">.</span><span class="n">__doc__</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">town_center</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">barrack</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">monastery</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+    建築物類別
+    
+城鎮中心
+軍營
+修道院
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#29289;&#20214;&#30340;&#23660;&#24615;&#65288;2&#65289;">&#29289;&#20214;&#30340;&#23660;&#24615;&#65288;2&#65289;<a class="anchor-link" href="#&#29289;&#20214;&#30340;&#23660;&#24615;&#65288;2&#65289;">&#182;</a></h2><ul>
-<li>修改屬性</li>
+<h2 id="&#33258;&#35330;&#39006;&#21029;&#65288;4&#65289;">&#33258;&#35330;&#39006;&#21029;&#65288;4&#65289;<a class="anchor-link" href="#&#33258;&#35330;&#39006;&#21029;&#65288;4&#65289;">&#182;</a></h2><ul>
+<li>建築物（Building）類別有基本方法為生產：</li>
 </ul>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">StrawHat</span><span class="p">:</span>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Building</span><span class="p">():</span>
     <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    這是一個叫做 StrawHat 的類別</span>
+<span class="sd">    建築物類別</span>
 <span class="sd">    &#39;&#39;&#39;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">has_devil_fruit</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">unit</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">has_devil_fruit</span> <span class="o">=</span> <span class="n">has_devil_fruit</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">unit</span> <span class="o">=</span> <span class="n">unit</span>
+    
+    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">生產</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
 
-<span class="n">luffy</span> <span class="o">=</span> <span class="n">StrawHat</span><span class="p">(</span><span class="s2">&quot;蒙其·D·魯夫&quot;</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">town_center</span> <span class="o">=</span> <span class="n">Building</span><span class="p">(</span><span class="s2">&quot;城鎮中心&quot;</span><span class="p">,</span> <span class="s2">&quot;村民&quot;</span><span class="p">)</span>
+<span class="n">barrack</span> <span class="o">=</span> <span class="n">Building</span><span class="p">(</span><span class="s2">&quot;軍營&quot;</span><span class="p">,</span> <span class="s2">&quot;長劍兵&quot;</span><span class="p">)</span>
+<span class="n">monastery</span> <span class="o">=</span> <span class="n">Building</span><span class="p">(</span><span class="s2">&quot;修道院&quot;</span><span class="p">,</span> <span class="s2">&quot;僧侶&quot;</span><span class="p">)</span>
 
-<span class="n">luffy</span><span class="o">.</span><span class="n">devil_fruit</span> <span class="o">=</span> <span class="s2">&quot;橡膠果實&quot;</span>
-<span class="n">luffy</span><span class="o">.</span><span class="n">devil_fruit</span> <span class="o">=</span> <span class="s2">&quot;Gum-Gum Fruit&quot;</span>
-<span class="k">print</span><span class="p">(</span><span class="n">luffy</span><span class="o">.</span><span class="n">devil_fruit</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">town_center</span><span class="o">.</span><span class="n">create</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">barrack</span><span class="o">.</span><span class="n">create</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">monastery</span><span class="o">.</span><span class="n">create</span><span class="p">())</span>
 </pre></div>
 
 </div>
 </div>
+</div>
+
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#29289;&#20214;&#30340;&#23660;&#24615;&#65288;3&#65289;">&#29289;&#20214;&#30340;&#23660;&#24615;&#65288;3&#65289;<a class="anchor-link" href="#&#29289;&#20214;&#30340;&#23660;&#24615;&#65288;3&#65289;">&#182;</a></h2><ul>
-<li>刪除屬性</li>
+<h2 id="&#33258;&#35330;&#39006;&#21029;&#65288;5&#65289;">&#33258;&#35330;&#39006;&#21029;&#65288;5&#65289;<a class="anchor-link" href="#&#33258;&#35330;&#39006;&#21029;&#65288;5&#65289;">&#182;</a></h2><ul>
+<li>類別具有繼承的特性：</li>
 </ul>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">StrawHat</span><span class="p">:</span>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Building</span><span class="p">():</span>
     <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    這是一個叫做 StrawHat 的類別</span>
+<span class="sd">    建築物類別</span>
 <span class="sd">    &#39;&#39;&#39;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">has_devil_fruit</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">unit</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">has_devil_fruit</span> <span class="o">=</span> <span class="n">has_devil_fruit</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">unit</span> <span class="o">=</span> <span class="n">unit</span>
+    
+    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">生產</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
 
-<span class="n">luffy</span> <span class="o">=</span> <span class="n">StrawHat</span><span class="p">(</span><span class="s2">&quot;蒙其·D·魯夫&quot;</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">Castle</span><span class="p">(</span><span class="n">Building</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    城堡類別</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">pass</span>
 
-<span class="n">luffy</span><span class="o">.</span><span class="n">devil_fruit</span> <span class="o">=</span> <span class="s2">&quot;橡膠果實&quot;</span>
-<span class="k">del</span><span class="p">(</span><span class="n">luffy</span><span class="o">.</span><span class="n">devil_fruit</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">luffy</span><span class="o">.</span><span class="n">devil_fruit</span><span class="p">)</span>
+<span class="n">castle</span> <span class="o">=</span> <span class="n">Castle</span><span class="p">(</span><span class="s2">&quot;城堡&quot;</span><span class="p">,</span> <span class="s2">&quot;特殊兵種&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">castle</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">castle</span><span class="o">.</span><span class="n">create</span><span class="p">())</span>
 </pre></div>
 
 </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>城堡
+城堡生產特殊兵種
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#29289;&#20214;&#30340;&#23660;&#24615;&#65288;4&#65289;">&#29289;&#20214;&#30340;&#23660;&#24615;&#65288;4&#65289;<a class="anchor-link" href="#&#29289;&#20214;&#30340;&#23660;&#24615;&#65288;4&#65289;">&#182;</a></h2><ul>
-<li>屬性相關的函數：<ul>
-<li><code>getattr()</code></li>
-<li><code>hasattr()</code></li>
-<li><code>setattr()</code></li>
-<li><code>delattr()</code></li>
+<h2 id="&#33258;&#35330;&#39006;&#21029;&#65288;6&#65289;">&#33258;&#35330;&#39006;&#21029;&#65288;6&#65289;<a class="anchor-link" href="#&#33258;&#35330;&#39006;&#21029;&#65288;6&#65289;">&#182;</a></h2><ul>
+<li>類別繼承之後可以新增或改寫方法：</li>
 </ul>
-</li>
-</ul>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">StrawHat</span><span class="p">:</span>
-    <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    這是一個叫做 StrawHat 的類別</span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">has_devil_fruit</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">has_devil_fruit</span> <span class="o">=</span> <span class="n">has_devil_fruit</span>
-
-<span class="n">luffy</span> <span class="o">=</span> <span class="n">StrawHat</span><span class="p">(</span><span class="s2">&quot;蒙其·D·魯夫&quot;</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">luffy</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">hasattr</span><span class="p">(</span><span class="n">luffy</span><span class="p">,</span> <span class="s2">&quot;has_devil_fruit&quot;</span><span class="p">))</span>
-<span class="nb">setattr</span><span class="p">(</span><span class="n">luffy</span><span class="p">,</span> <span class="s2">&quot;devil_fruit&quot;</span><span class="p">,</span> <span class="s2">&quot;橡膠果實&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">hasattr</span><span class="p">(</span><span class="n">luffy</span><span class="p">,</span> <span class="s2">&quot;devil_fruit&quot;</span><span class="p">))</span>
-<span class="nb">delattr</span><span class="p">(</span><span class="n">luffy</span><span class="p">,</span> <span class="s2">&quot;devil_fruit&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">hasattr</span><span class="p">(</span><span class="n">luffy</span><span class="p">,</span> <span class="s2">&quot;devil_fruit&quot;</span><span class="p">))</span>
-</pre></div>
 
 </div>
 </div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#29289;&#20214;&#30340;&#26041;&#27861;">&#29289;&#20214;&#30340;&#26041;&#27861;<a class="anchor-link" href="#&#29289;&#20214;&#30340;&#26041;&#27861;">&#182;</a></h2><ul>
-<li>加入方法（類別中的自訂函數）</li>
-</ul>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">StrawHat</span><span class="p">:</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Building</span><span class="p">():</span>
     <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    這是一個叫做 StrawHat 的類別</span>
+<span class="sd">    建築物類別</span>
 <span class="sd">    &#39;&#39;&#39;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">has_devil_fruit</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">unit</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">has_devil_fruit</span> <span class="o">=</span> <span class="n">has_devil_fruit</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">unit</span> <span class="o">=</span> <span class="n">unit</span>
+    
+    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">生產</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">display_crew_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="s2">&quot;姓名：&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;是否為惡魔果實能力者：&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">has_devil_fruit</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">Castle</span><span class="p">(</span><span class="n">Building</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    城堡類別</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">生產</span><span class="si">%s</span><span class="s2">與巨型投石車&quot;</span> <span class="o">%</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">attack</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">使用弓箭攻擊&quot;</span> <span class="o">%</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 
-<span class="n">luffy</span> <span class="o">=</span> <span class="n">StrawHat</span><span class="p">(</span><span class="s2">&quot;蒙其·D·魯夫&quot;</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
-<span class="n">zoro</span> <span class="o">=</span> <span class="n">StrawHat</span><span class="p">(</span><span class="s2">&quot;羅羅亞·索隆&quot;</span><span class="p">,</span> <span class="bp">False</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="n">luffy</span><span class="o">.</span><span class="n">display_crew_info</span><span class="p">())</span>
-<span class="k">print</span><span class="p">(</span><span class="n">zoro</span><span class="o">.</span><span class="n">display_crew_info</span><span class="p">())</span>
+<span class="n">castle</span> <span class="o">=</span> <span class="n">Castle</span><span class="p">(</span><span class="s2">&quot;城堡&quot;</span><span class="p">,</span> <span class="s2">&quot;特殊兵種&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">castle</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">castle</span><span class="o">.</span><span class="n">create</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">castle</span><span class="o">.</span><span class="n">attack</span><span class="p">())</span>
 </pre></div>
 
 </div>
 </div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
 </div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#39006;&#21029;&#30340;&#35722;&#25976;">&#39006;&#21029;&#30340;&#35722;&#25976;<a class="anchor-link" href="#&#39006;&#21029;&#30340;&#35722;&#25976;">&#182;</a></h2><ul>
-<li>在類別中加入屬於類別的變數</li>
-</ul>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">StrawHat</span><span class="p">:</span>
-    <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    這是一個叫做 StrawHat 的類別</span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    <span class="n">crew_count</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">has_devil_fruit</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">has_devil_fruit</span> <span class="o">=</span> <span class="n">has_devil_fruit</span>
-        <span class="n">StrawHat</span><span class="o">.</span><span class="n">crew_count</span> <span class="o">+=</span> <span class="mi">1</span>
 
-    <span class="k">def</span> <span class="nf">display_crew_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="s2">&quot;姓名：&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;是否為惡魔果實能力者：&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">has_devil_fruit</span><span class="p">)</span>
-
-<span class="n">luffy</span> <span class="o">=</span> <span class="n">StrawHat</span><span class="p">(</span><span class="s2">&quot;蒙其·D·魯夫&quot;</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
-<span class="n">zoro</span> <span class="o">=</span> <span class="n">StrawHat</span><span class="p">(</span><span class="s2">&quot;羅羅亞·索隆&quot;</span><span class="p">,</span> <span class="bp">False</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;草帽海賊團的人數為：&quot;</span><span class="p">,</span> <span class="n">StrawHat</span><span class="o">.</span><span class="n">crew_count</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#39006;&#21029;&#30340;&#32380;&#25215;">&#39006;&#21029;&#30340;&#32380;&#25215;<a class="anchor-link" href="#&#39006;&#21029;&#30340;&#32380;&#25215;">&#182;</a></h2><ul>
-<li>不用從零開始定義類別</li>
-</ul>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ParentStrawHat</span><span class="p">:</span>
-    <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    這是草帽類別的母類別</span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">has_devil_fruit</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">has_devil_fruit</span> <span class="o">=</span> <span class="n">has_devil_fruit</span>
-
-    <span class="k">def</span> <span class="nf">display_crew_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="s2">&quot;姓名：&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;是否為惡魔果實能力者：&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">has_devil_fruit</span><span class="p">)</span>
-
-<span class="k">class</span> <span class="nc">ChildStrawHat</span><span class="p">(</span><span class="n">ParentStrawHat</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    這是草帽類別的子類別</span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">has_devil_fruit</span><span class="p">,</span> <span class="n">devil_fruit</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">ChildStrawHat</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">has_devil_fruit</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">devil_fruit</span> <span class="o">=</span> <span class="n">devil_fruit</span>
-
-<span class="n">luffy</span> <span class="o">=</span> <span class="n">ChildStrawHat</span><span class="p">(</span><span class="s2">&quot;蒙其·D·魯夫&quot;</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="s2">&quot;橡膠果實&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">luffy</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">luffy</span><span class="o">.</span><span class="n">has_devil_fruit</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">luffy</span><span class="o">.</span><span class="n">devil_fruit</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">luffy</span><span class="o">.</span><span class="n">display_crew_info</span><span class="p">())</span>
-</pre></div>
-
-</div>
-</div>
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#39006;&#21029;&#30340;&#32380;&#25215;&#65288;2&#65289;">&#39006;&#21029;&#30340;&#32380;&#25215;&#65288;2&#65289;<a class="anchor-link" href="#&#39006;&#21029;&#30340;&#32380;&#25215;&#65288;2&#65289;">&#182;</a></h2><ul>
-<li>繼承後改寫母類別的方法</li>
+<h2 id="&#33258;&#35330;&#39006;&#21029;&#65288;7&#65289;">&#33258;&#35330;&#39006;&#21029;&#65288;7&#65289;<a class="anchor-link" href="#&#33258;&#35330;&#39006;&#21029;&#65288;7&#65289;">&#182;</a></h2><ul>
+<li>使用 <code>super()</code> 繼承母類別的屬性：</li>
 </ul>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ParentStrawHat</span><span class="p">:</span>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Building</span><span class="p">():</span>
     <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    這是草帽類別的母類別</span>
+<span class="sd">    建築物類別</span>
 <span class="sd">    &#39;&#39;&#39;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">has_devil_fruit</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">unit</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">has_devil_fruit</span> <span class="o">=</span> <span class="n">has_devil_fruit</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">unit</span> <span class="o">=</span> <span class="n">unit</span>
+    
+    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">生產</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">display_crew_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="s2">&quot;姓名：&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;是否為惡魔果實能力者：&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">has_devil_fruit</span><span class="p">)</span>
-
-<span class="k">class</span> <span class="nc">ChildStrawHat</span><span class="p">(</span><span class="n">ParentStrawHat</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">Castle</span><span class="p">(</span><span class="n">Building</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    這是草帽類別的子類別</span>
+<span class="sd">    城堡類別</span>
 <span class="sd">    &#39;&#39;&#39;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">has_devil_fruit</span><span class="p">,</span> <span class="n">devil_fruit</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">ChildStrawHat</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">has_devil_fruit</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">devil_fruit</span> <span class="o">=</span> <span class="n">devil_fruit</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">unit</span><span class="p">,</span> <span class="n">siege_unit</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">unit</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">siege_unit</span> <span class="o">=</span> <span class="n">siege_unit</span>
+    
+    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">生產</span><span class="si">%s</span><span class="s2">與</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">unit</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">siege_unit</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">display_crew_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="s2">&quot;姓名：&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;是否為惡魔果實能力者：&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">has_devil_fruit</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;惡魔果實：&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">devil_fruit</span>
-
-<span class="n">luffy</span> <span class="o">=</span> <span class="n">ChildStrawHat</span><span class="p">(</span><span class="s2">&quot;蒙其·D·魯夫&quot;</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="s2">&quot;橡膠果實&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">luffy</span><span class="o">.</span><span class="n">display_crew_info</span><span class="p">())</span>
+<span class="n">castle</span> <span class="o">=</span> <span class="n">Castle</span><span class="p">(</span><span class="s2">&quot;城堡&quot;</span><span class="p">,</span> <span class="s2">&quot;特殊兵種&quot;</span><span class="p">,</span> <span class="s2">&quot;巨型投石車&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">castle</span><span class="o">.</span><span class="n">create</span><span class="p">())</span>
 </pre></div>
 
 </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>城堡生產特殊兵種與巨型投石車
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -12200,22 +12152,80 @@ a.anchor-link {
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#38568;&#22530;&#32244;&#32722;">&#38568;&#22530;&#32244;&#32722;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;">&#182;</a></h2><p><img src="https://storage.googleapis.com/intro-2-py-ds/img/ch7/dbfighterz.jpg" alt=""></p>
+
+</div>
+</div>
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38568;&#22530;&#32244;&#32722;">&#38568;&#22530;&#32244;&#32722;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;">&#182;</a></h2><ol>
-<li>定義一個類別 <code>Pet</code><ul>
-<li>三個屬性：姓名、品種與叫聲</li>
-<li>一個方法：把叫聲印兩次出來</li>
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65288;2&#65289;">&#38568;&#22530;&#32244;&#32722;&#65288;2&#65289;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65288;2&#65289;">&#182;</a></h2><ul>
+<li>定義一個類別 <code>DBFighter</code><ul>
+<li>一個屬性：姓名</li>
+<li>三個方法：拳、踢、氣功波</li>
 </ul>
 </li>
-<li>定義一個類別 <code>Cat</code> 繼承 <code>Pet</code>，增加一個屬性：顏色</li>
-<li>定義一個類別 <code>Dog</code> 繼承 <code>Pet</code>，改寫方法為把叫聲印三次</li>
-<li>分別建立屬於 <code>Cat</code> 跟 <code>Dog</code> 的物件</li>
-</ol>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">DBFighter</span><span class="p">():</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    七龍珠格鬥遊戲</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+    
+    <span class="k">def</span> <span class="nf">punch</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">使用拳擊！&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+    
+    <span class="k">def</span> <span class="nf">kick</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">使用踢擊！&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+    
+    <span class="k">def</span> <span class="nf">shock_wave</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">使用氣功波！&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65288;3&#65289;">&#38568;&#22530;&#32244;&#32722;&#65288;3&#65289;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65288;3&#65289;">&#182;</a></h2><ul>
+<li>定義一個類別 <code>Goku</code> 繼承 <code>DBFighter</code>，增加原名（Kakarot）、新增龜派氣功方法（Kamehameha），利用 <code>Goku</code> 建立 <code>goku</code> 物件，印出原名與使用龜派氣功方法</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65288;4&#65289;">&#38568;&#22530;&#32244;&#32722;&#65288;4&#65289;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65288;4&#65289;">&#182;</a></h2><ul>
+<li>定義一個類別 <code>Vegeta</code> 繼承 <code>DBFighter</code>，新增終極閃光方法（final_flash），利用 <code>Vegeta</code> 建立 <code>vegeta</code> 物件，印出姓名與使用終極閃光方法</li>
+</ul>
 
 </div>
 </div>
