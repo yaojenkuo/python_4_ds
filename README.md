@@ -18,7 +18,7 @@
 - [迴圈](https://yaojenkuo.github.io/python_4_ds/ch6.slides.html)
 - [流程控制](https://yaojenkuo.github.io/python_4_ds/ch7.slides.html)
 - [函數](https://yaojenkuo.github.io/python_4_ds/ch8.slides.html)
-- [淺談物件導向](https://yaojenkuo.github.io/python_4_ds/ch9.slides.html)
+- [類別](https://yaojenkuo.github.io/python_4_ds/ch9.slides.html)
 - [資料結構（2）](https://yaojenkuo.github.io/python_4_ds/ch4.slides.html)
 - [再探 NumPy 套件](https://yaojenkuo.github.io/python_4_ds/numpy_adv.slides.html)
 - [資料結構（3）](https://yaojenkuo.github.io/python_4_ds/ch5.slides.html)
