@@ -18,6 +18,7 @@
 - [迴圈](https://yaojenkuo.github.io/python_4_ds/ch6.slides.html)
 - [流程控制](https://yaojenkuo.github.io/python_4_ds/ch7.slides.html)
 - [函數](https://yaojenkuo.github.io/python_4_ds/ch8.slides.html)
+- [模組與套件](https://yaojenkuo.github.io/python_4_ds/module.slides.html)
 - [類別](https://yaojenkuo.github.io/python_4_ds/ch9.slides.html)
 - [資料結構（2）](https://yaojenkuo.github.io/python_4_ds/ch4.slides.html)
 - [再探 NumPy 套件](https://yaojenkuo.github.io/python_4_ds/numpy_adv.slides.html)
@@ -41,6 +42,7 @@
 
 ### 近期課程錄影清單
 
+- [第 285 期 Python 與資料科學應用（暑期密集班）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuX9DstAUP0yFc8Ay6AMuvkS)
 - [第 283 期 Python 與資料科學應用（假日班下午）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuXWTMjHisPwOHKhu_jZPn2C)
 - [第 280 期 Python 與資料科學應用（夜間班）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuVLOqYRt9QwUme8S5oXioxB)
 
