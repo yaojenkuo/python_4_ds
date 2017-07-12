@@ -11857,17 +11857,45 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#20839;&#24314;&#20989;&#25976;">&#20839;&#24314;&#20989;&#25976;<a class="anchor-link" href="#&#20839;&#24314;&#20989;&#25976;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="n">distances</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mf">42.125</span><span class="p">]</span>
+<h2 id="&#20839;&#24314;&#20989;&#25976;">&#20839;&#24314;&#20989;&#25976;<a class="anchor-link" href="#&#20839;&#24314;&#20989;&#25976;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">distances</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mf">42.125</span><span class="p">]</span>
 
 <span class="c1"># 應用函數</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">distances</span><span class="p">))</span> <span class="c1"># 最長的距離</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">distances</span><span class="p">))</span> <span class="c1"># 最短的距離</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">distances</span><span class="p">))</span> <span class="c1"># 總共有幾個距離</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">distances</span><span class="p">,</span> <span class="n">reverse</span> <span class="o">=</span> <span class="bp">True</span><span class="p">))</span> <span class="c1"># 遞減排序</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">distances</span><span class="p">))</span> <span class="c1"># 最長的距離</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">distances</span><span class="p">))</span> <span class="c1"># 最短的距離</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">distances</span><span class="p">))</span> <span class="c1"># 總共有幾個距離</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">distances</span><span class="p">,</span> <span class="n">reverse</span> <span class="o">=</span> <span class="kc">True</span><span class="p">))</span> <span class="c1"># 遞減排序</span>
 </pre></div>
 
 </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>42.125
+1.6
+6
+[42.125, 21, 10, 5, 3, 1.6]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -11877,9 +11905,9 @@ a.anchor-link {
 <h2 id="&#33258;&#35330;&#20989;&#25976;">&#33258;&#35330;&#20989;&#25976;<a class="anchor-link" href="#&#33258;&#35330;&#20989;&#25976;">&#182;</a></h2><ul>
 <li>自訂函數的結構</li>
 </ul>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">function_name</span><span class="p">(</span><span class="err">輸入</span><span class="p">,</span> <span class="err">參數</span> <span class="mi">1</span><span class="p">,</span> <span class="err">參數</span> <span class="mi">2</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">function_name</span><span class="p">(</span><span class="err">輸入</span><span class="mi">1</span><span class="p">,</span> <span class="err">輸入</span><span class="mi">2</span><span class="p">,</span> <span class="err">參數</span><span class="mi">1</span><span class="p">,</span> <span class="err">參數</span><span class="mi">2</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    Docstrings # 說明文字</span>
+<span class="sd">    Docstrings</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="c1"># 做些什麼事</span>
     <span class="k">return</span> <span class="err">輸出</span>
@@ -11896,19 +11924,49 @@ a.anchor-link {
 <h2 id="&#33258;&#35330;&#20989;&#25976;&#65288;2&#65289;">&#33258;&#35330;&#20989;&#25976;&#65288;2&#65289;<a class="anchor-link" href="#&#33258;&#35330;&#20989;&#25976;&#65288;2&#65289;">&#182;</a></h2><ul>
 <li>$f(x) = x^2$</li>
 </ul>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">squared</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">squared</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    將輸入的數字平方之後回傳</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
     <span class="k">return</span> <span class="n">y</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">help</span><span class="p">(</span><span class="n">squared</span><span class="p">))</span>
-<span class="n">squared</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">help</span><span class="p">(</span><span class="n">squared</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">squared</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
 </pre></div>
 
 </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Help on function squared in module __main__:
+
+squared(x)
+    將輸入的數字平方之後回傳
+
+9
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -11938,16 +11996,25 @@ $$
 <h2 id="&#33258;&#35330;&#20989;&#25976;&#65288;4&#65289;">&#33258;&#35330;&#20989;&#25976;&#65288;4&#65289;<a class="anchor-link" href="#&#33258;&#35330;&#20989;&#25976;&#65288;4&#65289;">&#182;</a></h2><ul>
 <li>計算圓形的面積或周長</li>
 </ul>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span> <span class="c1"># 要使用 pi 得引入套件 math</span>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span> <span class="c1"># 要使用 pi 得引入套件 math</span>
 
 <span class="c1"># 定義自訂函數</span>
-<span class="k">def</span> <span class="nf">circle_calculate</span><span class="p">(</span><span class="n">radius</span><span class="p">,</span> <span class="n">is_area</span> <span class="o">=</span> <span class="bp">True</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">circle_calculate</span><span class="p">(</span><span class="n">radius</span><span class="p">,</span> <span class="n">is_area</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    依據輸入的半徑與 is_area 參數，計算圓形的面積或周長</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="n">circle_area</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span><span class="o">**</span><span class="mi">2</span>
     <span class="n">circle_circum</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span>
-    <span class="k">if</span> <span class="n">is_area</span> <span class="o">==</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">is_area</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">circle_area</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">circle_circum</span>
@@ -11955,12 +12022,34 @@ $$
 <span class="c1"># 呼叫自訂函數</span>
 <span class="n">help</span><span class="p">(</span><span class="n">circle_calculate</span><span class="p">)</span> <span class="c1"># 查詢自訂函數</span>
 <span class="n">my_radius</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="k">print</span><span class="p">(</span><span class="n">circle_calculate</span><span class="p">(</span><span class="n">my_radius</span><span class="p">))</span> <span class="c1"># 預設回傳面積</span>
-<span class="k">print</span><span class="p">(</span><span class="n">circle_calculate</span><span class="p">(</span><span class="n">my_radius</span><span class="p">,</span> <span class="n">is_area</span> <span class="o">=</span> <span class="bp">False</span><span class="p">))</span> <span class="c1"># 指定參數回傳周長</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">circle_calculate</span><span class="p">(</span><span class="n">my_radius</span><span class="p">,</span> <span class="n">is_area</span> <span class="o">=</span> <span class="kc">True</span><span class="p">))</span> <span class="c1"># 指定參數回傳面積</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">circle_calculate</span><span class="p">(</span><span class="n">my_radius</span><span class="p">,</span> <span class="n">is_area</span> <span class="o">=</span> <span class="kc">False</span><span class="p">))</span> <span class="c1"># 指定參數回傳周長</span>
 </pre></div>
 
 </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Help on function circle_calculate in module __main__:
+
+circle_calculate(radius, is_area)
+    依據輸入的半徑與 is_area 參數，計算圓形的面積或周長
+
+28.274333882308138
+18.84955592153876
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -11968,23 +12057,8 @@ $$
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#33258;&#35330;&#20989;&#25976;&#65288;5&#65289;">&#33258;&#35330;&#20989;&#25976;&#65288;5&#65289;<a class="anchor-link" href="#&#33258;&#35330;&#20989;&#25976;&#65288;5&#65289;">&#182;</a></h2><ul>
-<li>在 <code>return</code> 後面將多個值用逗號 <code>,</code> 隔開就會回傳一個 tuple</li>
+<li>練習：給 <code>is_area</code> 一個預設值 <code>True</code>，預設計算圓形的面積</li>
 </ul>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span> <span class="c1"># 要使用 pi 得引入套件 math</span>
-
-<span class="c1"># 定義自訂函數</span>
-<span class="k">def</span> <span class="nf">circle_calculate</span><span class="p">(</span><span class="n">radius</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    依據輸入的半徑同時計算並回傳圓形的面積與周長</span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    <span class="n">circle_area</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span><span class="o">**</span><span class="mi">2</span>
-    <span class="n">circle_circum</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span>
-    <span class="k">return</span> <span class="n">circle_area</span><span class="p">,</span> <span class="n">circle_circum</span>
-
-<span class="c1"># 呼叫自訂函數</span>
-<span class="n">my_radius</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="k">print</span><span class="p">(</span><span class="n">circle_calculate</span><span class="p">(</span><span class="n">my_radius</span><span class="p">))</span>
-</pre></div>
 
 </div>
 </div>
@@ -11995,7 +12069,59 @@ $$
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#33258;&#35330;&#20989;&#25976;&#65288;6&#65289;">&#33258;&#35330;&#20989;&#25976;&#65288;6&#65289;<a class="anchor-link" href="#&#33258;&#35330;&#20989;&#25976;&#65288;6&#65289;">&#182;</a></h2><ul>
-<li>小技巧：便利的指派</li>
+<li>在 <code>return</code> 後面將多個值用逗號 <code>,</code> 隔開就會回傳一個 tuple</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span> <span class="c1"># 要使用 pi 得引入套件 math</span>
+
+<span class="c1"># 定義自訂函數</span>
+<span class="k">def</span> <span class="nf">circle_calculate</span><span class="p">(</span><span class="n">radius</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    依據輸入的半徑同時計算並回傳圓形的面積與周長</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">circle_area</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span><span class="o">**</span><span class="mi">2</span>
+    <span class="n">circle_circum</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span>
+    <span class="k">return</span> <span class="n">circle_area</span><span class="p">,</span> <span class="n">circle_circum</span>
+    
+<span class="c1"># 呼叫自訂函數</span>
+<span class="n">my_radius</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">circle_calculate</span><span class="p">(</span><span class="n">my_radius</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(28.274333882308138, 18.84955592153876)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#33258;&#35330;&#20989;&#25976;&#65288;7&#65289;">&#33258;&#35330;&#20989;&#25976;&#65288;7&#65289;<a class="anchor-link" href="#&#33258;&#35330;&#20989;&#25976;&#65288;7&#65289;">&#182;</a></h2><ul>
+<li>小技巧：Multiple assignment（多重指派）</li>
 </ul>
 <div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">8</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">7</span>
@@ -12012,40 +12138,66 @@ $$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#33258;&#35330;&#20989;&#25976;&#65288;7&#65289;">&#33258;&#35330;&#20989;&#25976;&#65288;7&#65289;<a class="anchor-link" href="#&#33258;&#35330;&#20989;&#25976;&#65288;7&#65289;">&#182;</a></h2><ul>
+<h2 id="&#33258;&#35330;&#20989;&#25976;&#65288;8&#65289;">&#33258;&#35330;&#20989;&#25976;&#65288;8&#65289;<a class="anchor-link" href="#&#33258;&#35330;&#20989;&#25976;&#65288;8&#65289;">&#182;</a></h2><ul>
 <li>交換排序法（遞增）</li>
 </ul>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span> <span class="c1"># 呼叫函數時使用隨機整數</span>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span> <span class="c1"># 呼叫函數時使用隨機整數</span>
 
 <span class="c1"># 定義自訂函數</span>
-<span class="k">def</span> <span class="nf">exchange_sort</span><span class="p">(</span><span class="n">input_list</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">exchange_sort</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    依據輸入的 list 遞增排序 list 中的數字後回傳。</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="c1"># 遞增排序</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">input_list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">input_list</span><span class="p">)):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
             <span class="c1"># 如果前一個數字比後一個數字大則交換位置</span>
-            <span class="k">if</span> <span class="n">input_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">input_list</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
-                <span class="n">input_list</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">input_list</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">input_list</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">input_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-
-    <span class="k">return</span> <span class="n">input_list</span>
+            <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">x</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+                <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    
+    <span class="k">return</span> <span class="n">x</span>
 
 <span class="c1"># 呼叫自訂函數</span>
 <span class="n">my_list</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="mi">10</span><span class="p">)</span> <span class="c1"># 產生一組隨機數</span>
-<span class="k">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span> <span class="c1"># 看看未排序前</span>
-<span class="k">print</span><span class="p">(</span><span class="n">exchange_sort</span><span class="p">(</span><span class="n">my_list</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span> <span class="c1"># 看看未排序前</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">exchange_sort</span><span class="p">(</span><span class="n">my_list</span><span class="p">))</span>
 </pre></div>
 
 </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[63, 1, 22, 93, 47, 38, 95, 25, 96, 23]
+[1, 22, 23, 25, 38, 47, 63, 93, 95, 96]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#33258;&#35330;&#20989;&#25976;&#65288;7&#65289;">&#33258;&#35330;&#20989;&#25976;&#65288;7&#65289;<a class="anchor-link" href="#&#33258;&#35330;&#20989;&#25976;&#65288;7&#65289;">&#182;</a></h2><ul>
+<h2 id="&#33258;&#35330;&#20989;&#25976;&#65288;8&#65289;">&#33258;&#35330;&#20989;&#25976;&#65288;8&#65289;<a class="anchor-link" href="#&#33258;&#35330;&#20989;&#25976;&#65288;8&#65289;">&#182;</a></h2><ul>
 <li>練習：在交換排序法中增加一個參數：<code>reverse</code>，預設 <code>reverse = False</code> 遞增排序</li>
 </ul>
 
@@ -12065,7 +12217,16 @@ $$
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><span class="c1"># 定義自訂函數</span>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 定義自訂函數</span>
 <span class="k">def</span> <span class="nf">my_mean</span><span class="p">(</span><span class="n">input_list</span><span class="p">):</span>
     <span class="s1">&#39;計算平均數&#39;</span> <span class="c1"># docstrings</span>
     <span class="k">def</span> <span class="nf">my_sum</span><span class="p">(</span><span class="n">input_list</span><span class="p">):</span>
@@ -12083,12 +12244,27 @@ $$
     <span class="k">return</span> <span class="n">my_sum</span><span class="p">(</span><span class="n">input_list</span><span class="p">)</span> <span class="o">/</span> <span class="n">my_length</span><span class="p">(</span><span class="n">input_list</span><span class="p">)</span>
 
 <span class="c1"># 呼叫自訂函數</span>
-<span class="n">one_to_10</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">my_mean</span><span class="p">(</span><span class="n">one_to_10</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_mean</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)))</span>
 </pre></div>
 
 </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>5.5
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -12098,7 +12274,16 @@ $$
 <h2 id="&#37679;&#35492;&#34389;&#29702;">&#37679;&#35492;&#34389;&#29702;<a class="anchor-link" href="#&#37679;&#35492;&#34389;&#29702;">&#182;</a></h2><ul>
 <li>Python 使用 <code>try - except</code> 的語法結構進行錯誤處理</li>
 </ul>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span> <span class="c1"># 要使用 pi 得引入套件 math</span>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span> <span class="c1"># 要使用 pi 得引入套件 math</span>
 
 <span class="c1"># 定義自訂函數</span>
 <span class="k">def</span> <span class="nf">circle_calculate</span><span class="p">(</span><span class="n">radius</span><span class="p">):</span>
@@ -12108,15 +12293,31 @@ $$
         <span class="n">circle_circum</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span>
         <span class="k">return</span> <span class="n">circle_area</span><span class="p">,</span> <span class="n">circle_circum</span>
     <span class="k">except</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;請輸入數值。&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s2">&quot;請輸入數值。&quot;</span>
 
 <span class="c1"># 呼叫自訂函數</span>
 <span class="n">my_radius</span> <span class="o">=</span> <span class="s2">&quot;3&quot;</span>
-<span class="k">print</span><span class="p">(</span><span class="n">circle_calculate</span><span class="p">(</span><span class="n">my_radius</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">circle_calculate</span><span class="p">(</span><span class="n">my_radius</span><span class="p">))</span>
 </pre></div>
 
 </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>請輸入數值。
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -12126,13 +12327,111 @@ $$
 <h2 id="&#37679;&#35492;&#34389;&#29702;&#65288;2&#65289;">&#37679;&#35492;&#34389;&#29702;&#65288;2&#65289;<a class="anchor-link" href="#&#37679;&#35492;&#34389;&#29702;&#65288;2&#65289;">&#182;</a></h2><ul>
 <li>在 <code>except</code> 語法後面連接錯誤的種類</li>
 </ul>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">divide</span><span class="p">(</span><span class="n">numerator</span><span class="p">,</span> <span class="n">denominator</span><span class="p">):</span>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">divide</span><span class="p">(</span><span class="n">numerator</span><span class="p">,</span> <span class="n">denominator</span><span class="p">):</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">ans</span> <span class="o">=</span> <span class="n">numerator</span> <span class="o">/</span> <span class="n">denominator</span>
         <span class="k">return</span> <span class="n">ans</span>
     <span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;分母不可以為零！&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s2">&quot;分母不可以為零！&quot;</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;其他的錯誤&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">divide</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
 </pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>分母不可以為零！
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#37679;&#35492;&#34389;&#29702;&#65288;3&#65289;">&#37679;&#35492;&#34389;&#29702;&#65288;3&#65289;<a class="anchor-link" href="#&#37679;&#35492;&#34389;&#29702;&#65288;3&#65289;">&#182;</a></h2><ul>
+<li>練習：幫 <code>divide()</code> 函數多加一個 <code>except</code> 處理輸入文字的錯誤</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#21311;&#21517;&#20989;&#25976;">&#21311;&#21517;&#20989;&#25976;<a class="anchor-link" href="#&#21311;&#21517;&#20989;&#25976;">&#182;</a></h2><ul>
+<li>又稱為 <code>lambda</code> 函數</li>
+<li>不需要 <code>def</code>、<code>return</code> 的敘述</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_squared</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_squared</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>9
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#21311;&#21517;&#20989;&#25976;&#65288;2&#65289;">&#21311;&#21517;&#20989;&#25976;&#65288;2&#65289;<a class="anchor-link" href="#&#21311;&#21517;&#20989;&#25976;&#65288;2&#65289;">&#182;</a></h2><ul>
+<li>常與內建的兩個函數一起使用：<ul>
+<li><code>filter()</code></li>
+<li><code>map()</code></li>
+</ul>
+</li>
+</ul>
 
 </div>
 </div>
@@ -12142,12 +12441,266 @@ $$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#37679;&#35492;&#34389;&#29702;&#65288;3&#65289;">&#37679;&#35492;&#34389;&#29702;&#65288;3&#65289;<a class="anchor-link" href="#&#37679;&#35492;&#34389;&#29702;&#65288;3&#65289;">&#182;</a></h2><ul>
-<li>練習：幫 <code>divide()</code> 函數多加一個 <code>except</code> 是處理輸入文字的錯誤</li>
+<h2 id="&#21311;&#21517;&#20989;&#25976;&#65288;3&#65289;">&#21311;&#21517;&#20989;&#25976;&#65288;3&#65289;<a class="anchor-link" href="#&#21311;&#21517;&#20989;&#25976;&#65288;3&#65289;">&#182;</a></h2><ul>
+<li>搭配 <code>filter()</code> 將 1~10 中的奇數選出：</li>
 </ul>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="n">my_list</span><span class="p">)))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1, 3, 5, 7, 9]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#21311;&#21517;&#20989;&#25976;&#65288;4&#65289;">&#21311;&#21517;&#20989;&#25976;&#65288;4&#65289;<a class="anchor-link" href="#&#21311;&#21517;&#20989;&#25976;&#65288;4&#65289;">&#182;</a></h2><ul>
+<li>搭配 <code>map()</code> 將 1~10 每個數字都平方：</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">my_list</span><span class="p">)))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#24392;&#24615;&#21443;&#25976;">&#24392;&#24615;&#21443;&#25976;<a class="anchor-link" href="#&#24392;&#24615;&#21443;&#25976;">&#182;</a></h2><ul>
+<li><code>*args</code> 允許我們在函數中直接輸入容器中的資料</li>
+<li>不需要先將輸入資料儲存在容器中（例如 list）</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 非彈性參數的作法</span>
+<span class="k">def</span> <span class="nf">output_stars</span><span class="p">(</span><span class="n">stars</span><span class="p">):</span>
+    <span class="s1">&#39;將輸入的 list 元素一一輸出&#39;</span>
+    <span class="k">for</span> <span class="n">star</span> <span class="ow">in</span> <span class="n">stars</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">star</span><span class="p">)</span>
+
+<span class="n">stars_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Jennifer Aniston&quot;</span><span class="p">,</span> <span class="s2">&quot;Courteney Cox&quot;</span><span class="p">,</span> <span class="s2">&quot;Lisa Kudrow&quot;</span><span class="p">,</span> 
+<span class="s2">&quot;Matt LeBlanc&quot;</span><span class="p">,</span> <span class="s2">&quot;Matthew Perry&quot;</span><span class="p">,</span> <span class="s2">&quot;David Schwimmer&quot;</span><span class="p">]</span>
+<span class="n">output_stars</span><span class="p">(</span><span class="n">stars_list</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Jennifer Aniston
+Courteney Cox
+Lisa Kudrow
+Matt LeBlanc
+Matthew Perry
+David Schwimmer
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 彈性參數的作法</span>
+<span class="k">def</span> <span class="nf">output_stars</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="s1">&#39;將輸入的演員一一輸出&#39;</span>
+    <span class="k">for</span> <span class="n">star</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">star</span><span class="p">)</span>
+
+<span class="n">output_stars</span><span class="p">(</span><span class="s2">&quot;Jennifer Aniston&quot;</span><span class="p">,</span> <span class="s2">&quot;Courteney Cox&quot;</span><span class="p">,</span> <span class="s2">&quot;Lisa Kudrow&quot;</span><span class="p">,</span>
+             <span class="s2">&quot;Matt LeBlanc&quot;</span><span class="p">,</span> <span class="s2">&quot;Matthew Perry&quot;</span><span class="p">,</span> <span class="s2">&quot;David Schwimmer&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Jennifer Aniston
+Courteney Cox
+Lisa Kudrow
+Matt LeBlanc
+Matthew Perry
+David Schwimmer
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#24392;&#24615;&#21443;&#25976;&#65288;2&#65289;">&#24392;&#24615;&#21443;&#25976;&#65288;2&#65289;<a class="anchor-link" href="#&#24392;&#24615;&#21443;&#25976;&#65288;2&#65289;">&#182;</a></h2><ul>
+<li><code>**kwargs</code> 允許我們在函數中直接輸入容器中的資料</li>
+<li>不需要先將輸入資料儲存在容器中（例如 dict）</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 非彈性參數的作法</span>
+<span class="k">def</span> <span class="nf">output_info</span><span class="p">(</span><span class="n">infos</span><span class="p">):</span>
+    <span class="s1">&#39;將輸入的 dict 元素一一輸出&#39;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="ow">in</span> <span class="n">infos</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">))</span>
+
+<span class="n">series_info</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;genre&quot;</span><span class="p">:</span> <span class="s2">&quot;SitCom&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;seasons&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="s2">&quot;episodes&quot;</span><span class="p">:</span> <span class="mi">236</span><span class="p">,</span>
+    <span class="s2">&quot;stars&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Jennifer Aniston&quot;</span><span class="p">,</span> <span class="s2">&quot;Courteney Cox&quot;</span><span class="p">,</span> <span class="s2">&quot;Lisa Kudrow&quot;</span><span class="p">,</span>
+             <span class="s2">&quot;Matt LeBlanc&quot;</span><span class="p">,</span> <span class="s2">&quot;Matthew Perry&quot;</span><span class="p">,</span> <span class="s2">&quot;David Schwimmer&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="n">output_info</span><span class="p">(</span><span class="n">series_info</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>genre: SitCom
+seasons: 10
+episodes: 236
+stars: [&#39;Jennifer Aniston&#39;, &#39;Courteney Cox&#39;, &#39;Lisa Kudrow&#39;, &#39;Matt LeBlanc&#39;, &#39;Matthew Perry&#39;, &#39;David Schwimmer&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">output_info</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="s1">&#39;將影集資訊一一輸出&#39;</span>
+    <span class="k">for</span> <span class="n">info</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">info</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">[</span><span class="n">info</span><span class="p">]))</span>
+
+<span class="n">output_info</span><span class="p">(</span><span class="n">genre</span> <span class="o">=</span> <span class="s1">&#39;Sitcom&#39;</span><span class="p">,</span> <span class="n">seasons</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">episodes</span> <span class="o">=</span> <span class="mi">236</span><span class="p">,</span> 
+            <span class="n">stars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Jennifer Aniston&quot;</span><span class="p">,</span> <span class="s2">&quot;Courteney Cox&quot;</span><span class="p">,</span> <span class="s2">&quot;Lisa Kudrow&quot;</span><span class="p">,</span>
+             <span class="s2">&quot;Matt LeBlanc&quot;</span><span class="p">,</span> <span class="s2">&quot;Matthew Perry&quot;</span><span class="p">,</span> <span class="s2">&quot;David Schwimmer&quot;</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>genre: Sitcom
+seasons: 10
+episodes: 236
+stars: [&#39;Jennifer Aniston&#39;, &#39;Courteney Cox&#39;, &#39;Lisa Kudrow&#39;, &#39;Matt LeBlanc&#39;, &#39;Matthew Perry&#39;, &#39;David Schwimmer&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
