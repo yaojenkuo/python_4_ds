@@ -11830,7 +11830,17 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#36039;&#26009;&#32080;&#27083;&#65288;3&#65289;">&#36039;&#26009;&#32080;&#27083;&#65288;3&#65289;<a class="anchor-link" href="#&#36039;&#26009;&#32080;&#27083;&#65288;3&#65289;">&#182;</a></h1><h2 id="&#37101;&#32768;&#20161;">&#37101;&#32768;&#20161;<a class="anchor-link" href="#&#37101;&#32768;&#20161;">&#182;</a></h2>
+<h1 id="Pandas">Pandas<a class="anchor-link" href="#Pandas">&#182;</a></h1><h2 id="&#37101;&#32768;&#20161;">&#37101;&#32768;&#20161;<a class="anchor-link" href="#&#37101;&#32768;&#20161;">&#182;</a></h2>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Documentation">Documentation<a class="anchor-link" href="#Documentation">&#182;</a></h2><p><a href="https://pandas.pydata.org/pandas-docs/stable/index.html">https://pandas.pydata.org/pandas-docs/stable/index.html</a></p>
+
 </div>
 </div>
 </div></section></section><section><section>
@@ -11851,37 +11861,27 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#31532;&#19968;&#20491;-pandas-data-frame">&#31532;&#19968;&#20491; pandas data frame<a class="anchor-link" href="#&#31532;&#19968;&#20491;-pandas-data-frame">&#182;</a></h2><ul>
-<li>還記得 <strong>dict</strong> 這個資料結構嗎？</li>
-<li>將一個 <strong>dict</strong> 的資料結構轉換為 <strong>data frame</strong> 是最方便的方法</li>
-</ul>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span> <span class="c1"># 引用套件並縮寫為 pd</span>
-
-<span class="n">name</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Monkey D. Luffy&quot;</span><span class="p">,</span> <span class="s2">&quot;Roronoa Zoro&quot;</span><span class="p">,</span> <span class="s2">&quot;Nami&quot;</span><span class="p">,</span> <span class="s2">&quot;Usopp&quot;</span><span class="p">,</span> <span class="s2">&quot;Vinsmoke Sanji&quot;</span><span class="p">,</span> <span class="s2">&quot;Tony Tony Chopper&quot;</span><span class="p">,</span> <span class="s2">&quot;Nico Robin&quot;</span><span class="p">,</span> <span class="s2">&quot;Franky&quot;</span><span class="p">,</span> <span class="s2">&quot;Brook&quot;</span><span class="p">]</span>
-<span class="n">age</span> <span class="o">=</span> <span class="p">[</span><span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">90</span><span class="p">]</span>
-
-<span class="n">straw_hat_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
-                  <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="n">age</span>
-<span class="p">}</span>
-
-<span class="n">straw_hat_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">straw_hat_dict</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">straw_hat_df</span><span class="p">))</span>
-<span class="n">straw_hat_df</span>
-</pre></div>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#31532;&#19968;&#20491;-pandas-data-frame&#65288;2&#65289;">&#31532;&#19968;&#20491; pandas data frame&#65288;2&#65289;<a class="anchor-link" href="#&#31532;&#19968;&#20491;-pandas-data-frame&#65288;2&#65289;">&#182;</a></h2><ul>
-<li>請同學練習建立一個 <strong>dict</strong></li>
-<li>練習將 <strong>dict</strong> 轉換成 <strong>data frame</strong></li>
-<li>利用 <code>type()</code> 檢查 <strong>data frame</strong></li>
-</ul>
+<h2 id="Pandas-&#25552;&#20379;&#30340;&#36039;&#26009;&#32080;&#27083;">Pandas &#25552;&#20379;&#30340;&#36039;&#26009;&#32080;&#27083;<a class="anchor-link" href="#Pandas-&#25552;&#20379;&#30340;&#36039;&#26009;&#32080;&#27083;">&#182;</a></h2><table>
+<thead><tr>
+<th>名稱</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Series</td>
+<td>可以建立索引的一維陣列</td>
+</tr>
+<tr>
+<td>DataFrame</td>
+<td>有列索引與欄標籤的二維資料集</td>
+</tr>
+<tr>
+<td>Panel</td>
+<td>有列索引與欄標籤的三維資料集</td>
+</tr>
+</tbody>
+</table>
 
 </div>
 </div>
@@ -11891,22 +11891,27 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Data-frame-&#30340;&#29305;&#24615;">Data frame &#30340;&#29305;&#24615;<a class="anchor-link" href="#Data-frame-&#30340;&#29305;&#24615;">&#182;</a></h2><ul>
-<li>包含多種變數類型，不像 ndarray 僅容納單一變數類型</li>
+<h1 id="Series">Series<a class="anchor-link" href="#Series">&#182;</a></h1>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#24314;&#31435;-Series">&#24314;&#31435; Series<a class="anchor-link" href="#&#24314;&#31435;-Series">&#182;</a></h2><ul>
+<li>用 <code>Series()</code> 建立 Series</li>
+<li>其中 data 可以是：<ul>
+<li>一個 ndarray</li>
+<li>一個 dict</li>
+<li>單一資料</li>
 </ul>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span> <span class="c1"># 引用套件並縮寫為 pd</span>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
 
-<span class="n">name</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Monkey D. Luffy&quot;</span><span class="p">,</span> <span class="s2">&quot;Roronoa Zoro&quot;</span><span class="p">,</span> <span class="s2">&quot;Nami&quot;</span><span class="p">,</span> <span class="s2">&quot;Usopp&quot;</span><span class="p">,</span> <span class="s2">&quot;Vinsmoke Sanji&quot;</span><span class="p">,</span> <span class="s2">&quot;Tony Tony Chopper&quot;</span><span class="p">,</span> <span class="s2">&quot;Nico Robin&quot;</span><span class="p">,</span> <span class="s2">&quot;Franky&quot;</span><span class="p">,</span> <span class="s2">&quot;Brook&quot;</span><span class="p">]</span>
-<span class="n">age</span> <span class="o">=</span> <span class="p">[</span><span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">90</span><span class="p">]</span>
-<span class="n">is_male</span> <span class="o">=</span> <span class="p">[</span><span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">]</span>
-
-<span class="n">straw_hat_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
-                  <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="n">age</span><span class="p">,</span>
-                  <span class="s2">&quot;is_male&quot;</span><span class="p">:</span> <span class="n">is_male</span>
-<span class="p">}</span>
-
-<span class="n">straw_hat_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">straw_hat_dict</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="s2">&quot;is_male&quot;</span><span class="p">])</span> <span class="c1"># 指定欄位順序</span>
-<span class="n">straw_hat_df</span><span class="o">.</span><span class="n">dtypes</span>
+<span class="n">ser</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="n">idx</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -11917,13 +11922,1871 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Data-frame-&#30340;&#29305;&#24615;&#65288;2&#65289;">Data frame &#30340;&#29305;&#24615;&#65288;2&#65289;<a class="anchor-link" href="#Data-frame-&#30340;&#29305;&#24615;&#65288;2&#65289;">&#182;</a></h2><ul>
-<li>請同學建立一個擁有 <code>str</code>、<code>bool</code> 與數值的 data frame</li>
-<li>利用 <code>.dtypes</code> 屬性看看各個欄位的變數類型</li>
+<h2 id="&#24314;&#31435;-Series&#65288;2&#65289;">&#24314;&#31435; Series&#65288;2&#65289;<a class="anchor-link" href="#&#24314;&#31435;-Series&#65288;2&#65289;">&#182;</a></h2><ul>
+<li>data 是一個 ndarray</li>
 </ul>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="s2">&quot;Monkey D. Luffy&quot;</span><span class="p">,</span> <span class="s2">&quot;Roronoa Zoro&quot;</span><span class="p">,</span> <span class="s2">&quot;Nami&quot;</span><span class="p">,</span> <span class="s2">&quot;Usopp&quot;</span><span class="p">,</span> <span class="s2">&quot;Vinsmoke Sanji&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Tony Tony Chopper&quot;</span><span class="p">,</span> <span class="s2">&quot;Nico Robin&quot;</span><span class="p">,</span> <span class="s2">&quot;Franky&quot;</span><span class="p">,</span> <span class="s2">&quot;Brook&quot;</span><span class="p">))</span>
+<span class="n">ser</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="c1"># 預設的索引</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">ser</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;pandas.core.series.Series&#39;&gt;
+
+
+0      Monkey D. Luffy
+1         Roronoa Zoro
+2                 Nami
+3                Usopp
+4       Vinsmoke Sanji
+5    Tony Tony Chopper
+6           Nico Robin
+7               Franky
+8                Brook
+dtype: object
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 使用自訂的索引</span>
+
+<span class="n">crew_idx</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">9</span><span class="p">):</span>
+    <span class="n">crew_idx</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;crew &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">ser</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="n">crew_idx</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>crew 1      Monkey D. Luffy
+crew 2         Roronoa Zoro
+crew 3                 Nami
+crew 4                Usopp
+crew 5       Vinsmoke Sanji
+crew 6    Tony Tony Chopper
+crew 7           Nico Robin
+crew 8               Franky
+crew 9                Brook
+dtype: object
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#24314;&#31435;-Series&#65288;3&#65289;">&#24314;&#31435; Series&#65288;3&#65289;<a class="anchor-link" href="#&#24314;&#31435;-Series&#65288;3&#65289;">&#182;</a></h2><ul>
+<li>data 是一個 dict</li>
+<li>預設會將 key 當作索引值</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">crew_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;captain&quot;</span><span class="p">:</span> <span class="s2">&quot;Monkey D. Luffy&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;swordsman&quot;</span><span class="p">:</span> <span class="s2">&quot;Roronoa Zoro&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;navigator&quot;</span><span class="p">:</span> <span class="s2">&quot;Nami&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sniper&quot;</span><span class="p">:</span> <span class="s2">&quot;Usopp&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;chef&quot;</span><span class="p">:</span> <span class="s2">&quot;Vinsmoke Sanji&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;doctor&quot;</span><span class="p">:</span> <span class="s2">&quot;Tony Tony Chopper&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;archaeologist&quot;</span><span class="p">:</span> <span class="s2">&quot;Nico Robin&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;shipwright&quot;</span><span class="p">:</span> <span class="s2">&quot;Franky&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;musician&quot;</span><span class="p">:</span> <span class="s2">&quot;Brook&quot;</span>
+<span class="p">}</span>
+
+<span class="n">ser</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">crew_dict</span><span class="p">)</span> <span class="c1"># 會依照 key 排序</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>archaeologist           Nico Robin
+captain            Monkey D. Luffy
+chef                Vinsmoke Sanji
+doctor           Tony Tony Chopper
+musician                     Brook
+navigator                     Nami
+shipwright                  Franky
+sniper                       Usopp
+swordsman             Roronoa Zoro
+dtype: object
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">crew_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;captain&quot;</span><span class="p">:</span> <span class="s2">&quot;Monkey D. Luffy&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;swordsman&quot;</span><span class="p">:</span> <span class="s2">&quot;Roronoa Zoro&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;navigator&quot;</span><span class="p">:</span> <span class="s2">&quot;Nami&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sniper&quot;</span><span class="p">:</span> <span class="s2">&quot;Usopp&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;chef&quot;</span><span class="p">:</span> <span class="s2">&quot;Vinsmoke Sanji&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;doctor&quot;</span><span class="p">:</span> <span class="s2">&quot;Tony Tony Chopper&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;archaeologist&quot;</span><span class="p">:</span> <span class="s2">&quot;Nico Robin&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;shipwright&quot;</span><span class="p">:</span> <span class="s2">&quot;Franky&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;musician&quot;</span><span class="p">:</span> <span class="s2">&quot;Brook&quot;</span>
+<span class="p">}</span>
+
+<span class="n">ser</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">crew_dict</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="n">crew_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> <span class="c1"># 排序與原 dict 相同</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>captain            Monkey D. Luffy
+swordsman             Roronoa Zoro
+navigator                     Nami
+sniper                       Usopp
+chef                Vinsmoke Sanji
+doctor           Tony Tony Chopper
+archaeologist           Nico Robin
+shipwright                  Franky
+musician                     Brook
+dtype: object
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#24314;&#31435;-Series&#65288;4&#65289;">&#24314;&#31435; Series&#65288;4&#65289;<a class="anchor-link" href="#&#24314;&#31435;-Series&#65288;4&#65289;">&#182;</a></h2><ul>
+<li>data 可以是單一資料</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">luffy</span> <span class="o">=</span> <span class="s2">&quot;Monkey D. Luffy&quot;</span>
+<span class="n">ser</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">luffy</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0    Monkey D. Luffy
+1    Monkey D. Luffy
+2    Monkey D. Luffy
+3    Monkey D. Luffy
+4    Monkey D. Luffy
+dtype: object
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Series-&#30340;&#25805;&#20316;">Series &#30340;&#25805;&#20316;<a class="anchor-link" href="#Series-&#30340;&#25805;&#20316;">&#182;</a></h2><ul>
+<li>透過索引值或標籤選取資料</li>
+<li>跟 ndarray 沒有差太多</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">crew_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;captain&quot;</span><span class="p">:</span> <span class="s2">&quot;Monkey D. Luffy&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;swordsman&quot;</span><span class="p">:</span> <span class="s2">&quot;Roronoa Zoro&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;navigator&quot;</span><span class="p">:</span> <span class="s2">&quot;Nami&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sniper&quot;</span><span class="p">:</span> <span class="s2">&quot;Usopp&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;chef&quot;</span><span class="p">:</span> <span class="s2">&quot;Vinsmoke Sanji&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;doctor&quot;</span><span class="p">:</span> <span class="s2">&quot;Tony Tony Chopper&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;archaeologist&quot;</span><span class="p">:</span> <span class="s2">&quot;Nico Robin&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;shipwright&quot;</span><span class="p">:</span> <span class="s2">&quot;Franky&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;musician&quot;</span><span class="p">:</span> <span class="s2">&quot;Brook&quot;</span>
+<span class="p">}</span>
+
+<span class="n">ser</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">crew_dict</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="n">crew_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> <span class="c1"># 排序與原 dict 相同</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="p">[</span><span class="s1">&#39;captain&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="p">[[</span><span class="s1">&#39;captain&#39;</span><span class="p">,</span> <span class="s1">&#39;sniper&#39;</span><span class="p">,</span> <span class="s1">&#39;archaeologist&#39;</span><span class="p">]])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Monkey D. Luffy
+Monkey D. Luffy
+
+
+captain          Monkey D. Luffy
+sniper                     Usopp
+archaeologist         Nico Robin
+dtype: object
+captain          Monkey D. Luffy
+sniper                     Usopp
+archaeologist         Nico Robin
+dtype: object
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Series-&#30340;&#25805;&#20316;&#65288;2&#65289;">Series &#30340;&#25805;&#20316;&#65288;2&#65289;<a class="anchor-link" href="#Series-&#30340;&#25805;&#20316;&#65288;2&#65289;">&#182;</a></h2><ul>
+<li>透過 <code>:</code> 快速地切割</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">crew_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;captain&quot;</span><span class="p">:</span> <span class="s2">&quot;Monkey D. Luffy&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;swordsman&quot;</span><span class="p">:</span> <span class="s2">&quot;Roronoa Zoro&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;navigator&quot;</span><span class="p">:</span> <span class="s2">&quot;Nami&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sniper&quot;</span><span class="p">:</span> <span class="s2">&quot;Usopp&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;chef&quot;</span><span class="p">:</span> <span class="s2">&quot;Vinsmoke Sanji&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;doctor&quot;</span><span class="p">:</span> <span class="s2">&quot;Tony Tony Chopper&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;archaeologist&quot;</span><span class="p">:</span> <span class="s2">&quot;Nico Robin&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;shipwright&quot;</span><span class="p">:</span> <span class="s2">&quot;Franky&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;musician&quot;</span><span class="p">:</span> <span class="s2">&quot;Brook&quot;</span>
+<span class="p">}</span>
+
+<span class="n">ser</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">crew_dict</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="n">crew_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> <span class="c1"># 排序與原 dict 相同</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="p">[:</span><span class="mi">3</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="p">[</span><span class="s1">&#39;sniper&#39;</span><span class="p">:])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>captain      Monkey D. Luffy
+swordsman       Roronoa Zoro
+navigator               Nami
+dtype: object
+
+
+sniper                       Usopp
+chef                Vinsmoke Sanji
+doctor           Tony Tony Chopper
+archaeologist           Nico Robin
+shipwright                  Franky
+musician                     Brook
+dtype: object
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Series-&#30340;&#25805;&#20316;&#65288;3&#65289;">Series &#30340;&#25805;&#20316;&#65288;3&#65289;<a class="anchor-link" href="#Series-&#30340;&#25805;&#20316;&#65288;3&#65289;">&#182;</a></h2><ul>
+<li>也可以透過判斷條件進行布林篩選</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">crew_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;captain&quot;</span><span class="p">:</span> <span class="s2">&quot;Monkey D. Luffy&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;swordsman&quot;</span><span class="p">:</span> <span class="s2">&quot;Roronoa Zoro&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;navigator&quot;</span><span class="p">:</span> <span class="s2">&quot;Nami&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sniper&quot;</span><span class="p">:</span> <span class="s2">&quot;Usopp&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;chef&quot;</span><span class="p">:</span> <span class="s2">&quot;Vinsmoke Sanji&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;doctor&quot;</span><span class="p">:</span> <span class="s2">&quot;Tony Tony Chopper&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;archaeologist&quot;</span><span class="p">:</span> <span class="s2">&quot;Nico Robin&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;shipwright&quot;</span><span class="p">:</span> <span class="s2">&quot;Franky&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;musician&quot;</span><span class="p">:</span> <span class="s2">&quot;Brook&quot;</span>
+<span class="p">}</span>
+
+<span class="n">ser</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">crew_dict</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="n">crew_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> <span class="c1"># 排序與原 dict 相同</span>
+<span class="nb">filter</span> <span class="o">=</span> <span class="n">ser</span><span class="o">.</span><span class="n">isin</span><span class="p">((</span><span class="s2">&quot;Nami&quot;</span><span class="p">,</span> <span class="s2">&quot;Nico Robin&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="p">[</span><span class="nb">filter</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>navigator              Nami
+archaeologist    Nico Robin
+dtype: object
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Series-&#30340;&#25805;&#20316;&#65288;4&#65289;">Series &#30340;&#25805;&#20316;&#65288;4&#65289;<a class="anchor-link" href="#Series-&#30340;&#25805;&#20316;&#65288;4&#65289;">&#182;</a></h2><ul>
+<li>NumPy 的函數也都適用</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">crew_age</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Monkey D. Luffy&quot;</span><span class="p">:</span> <span class="mi">19</span><span class="p">,</span>
+    <span class="s2">&quot;Roronoa Zoro&quot;</span><span class="p">:</span> <span class="mi">21</span><span class="p">,</span>
+    <span class="s2">&quot;Nami&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="s2">&quot;Usopp&quot;</span><span class="p">:</span> <span class="mi">19</span><span class="p">,</span>
+    <span class="s2">&quot;Vinsmoke Sanji&quot;</span><span class="p">:</span> <span class="mi">21</span><span class="p">,</span>
+    <span class="s2">&quot;Tony Tony Chopper&quot;</span><span class="p">:</span> <span class="mi">17</span><span class="p">,</span>
+    <span class="s2">&quot;Nico Robin&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="s2">&quot;Franky&quot;</span><span class="p">:</span> <span class="mi">36</span><span class="p">,</span>
+    <span class="s2">&quot;Brook&quot;</span><span class="p">:</span> <span class="mi">90</span>
+<span class="p">}</span>
+
+<span class="n">ser</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">crew_age</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;草帽海賊團的平均年齡：</span><span class="si">%.2f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">ser</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;草帽海賊團的年齡標準差：</span><span class="si">%.2f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">ser</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>草帽海賊團的平均年齡：30.33
+草帽海賊團的年齡標準差：21.88
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Series-&#30340;&#25805;&#20316;&#65288;5&#65289;">Series &#30340;&#25805;&#20316;&#65288;5&#65289;<a class="anchor-link" href="#Series-&#30340;&#25805;&#20316;&#65288;5&#65289;">&#182;</a></h2><ul>
+<li>同樣適用 element-wise 運算</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">crew_age</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Monkey D. Luffy&quot;</span><span class="p">:</span> <span class="mi">19</span><span class="p">,</span>
+    <span class="s2">&quot;Roronoa Zoro&quot;</span><span class="p">:</span> <span class="mi">21</span><span class="p">,</span>
+    <span class="s2">&quot;Nami&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="s2">&quot;Usopp&quot;</span><span class="p">:</span> <span class="mi">19</span><span class="p">,</span>
+    <span class="s2">&quot;Vinsmoke Sanji&quot;</span><span class="p">:</span> <span class="mi">21</span><span class="p">,</span>
+    <span class="s2">&quot;Tony Tony Chopper&quot;</span><span class="p">:</span> <span class="mi">17</span><span class="p">,</span>
+    <span class="s2">&quot;Nico Robin&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="s2">&quot;Franky&quot;</span><span class="p">:</span> <span class="mi">36</span><span class="p">,</span>
+    <span class="s2">&quot;Brook&quot;</span><span class="p">:</span> <span class="mi">90</span>
+<span class="p">}</span>
+
+<span class="n">ser</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">crew_age</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="n">crew_age</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Monkey D. Luffy      17
+Roronoa Zoro         19
+Nami                 18
+Usopp                17
+Vinsmoke Sanji       19
+Tony Tony Chopper    15
+Nico Robin           28
+Franky               34
+Brook                88
+dtype: int64
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="DataFrame">DataFrame<a class="anchor-link" href="#DataFrame">&#182;</a></h1>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#24314;&#31435;-DataFrame">&#24314;&#31435; DataFrame<a class="anchor-link" href="#&#24314;&#31435;-DataFrame">&#182;</a></h2><ul>
+<li>用 <code>DataFrame()</code> 建立 DataFrame</li>
+<li>其中 data 是：<ul>
+<li>一個 dict</li>
+<li>一個 ndarray</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#24314;&#31435;-DataFrame&#65288;2&#65289;">&#24314;&#31435; DataFrame&#65288;2&#65289;<a class="anchor-link" href="#&#24314;&#31435;-DataFrame&#65288;2&#65289;">&#182;</a></h2><ul>
+<li>其中 data 是一個 dict</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">straw_hat_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Monkey D. Luffy&quot;</span><span class="p">,</span> <span class="s2">&quot;Roronoa Zoro&quot;</span><span class="p">,</span> <span class="s2">&quot;Nami&quot;</span><span class="p">,</span> <span class="s2">&quot;Usopp&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Vinsmoke Sanji&quot;</span><span class="p">,</span> <span class="s2">&quot;Tony Tony Chopper&quot;</span><span class="p">,</span> <span class="s2">&quot;Nico Robin&quot;</span><span class="p">,</span> <span class="s2">&quot;Franky&quot;</span><span class="p">,</span> <span class="s2">&quot;Brook&quot;</span><span class="p">],</span>
+                  <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">90</span><span class="p">],</span>
+                  <span class="s2">&quot;is_male&quot;</span><span class="p">:</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">straw_hat_dict</span><span class="p">)</span> <span class="c1"># 欄標籤預設排序</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">df</span><span class="p">))</span>
+<span class="n">df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+</pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">Out[54]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>age</th>
+      <th>is_male</th>
+      <th>name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>19</td>
+      <td>True</td>
+      <td>Monkey D. Luffy</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>21</td>
+      <td>True</td>
+      <td>Roronoa Zoro</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>20</td>
+      <td>False</td>
+      <td>Nami</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>19</td>
+      <td>True</td>
+      <td>Usopp</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>21</td>
+      <td>True</td>
+      <td>Vinsmoke Sanji</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>17</td>
+      <td>True</td>
+      <td>Tony Tony Chopper</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>30</td>
+      <td>False</td>
+      <td>Nico Robin</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>36</td>
+      <td>True</td>
+      <td>Franky</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>90</td>
+      <td>True</td>
+      <td>Brook</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">straw_hat_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Monkey D. Luffy&quot;</span><span class="p">,</span> <span class="s2">&quot;Roronoa Zoro&quot;</span><span class="p">,</span> <span class="s2">&quot;Nami&quot;</span><span class="p">,</span> <span class="s2">&quot;Usopp&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Vinsmoke Sanji&quot;</span><span class="p">,</span> <span class="s2">&quot;Tony Tony Chopper&quot;</span><span class="p">,</span> <span class="s2">&quot;Nico Robin&quot;</span><span class="p">,</span> <span class="s2">&quot;Franky&quot;</span><span class="p">,</span> <span class="s2">&quot;Brook&quot;</span><span class="p">],</span>
+                  <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">90</span><span class="p">],</span>
+                  <span class="s2">&quot;is_male&quot;</span><span class="p">:</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">straw_hat_dict</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="s2">&quot;is_male&quot;</span><span class="p">])</span> <span class="c1"># 指定欄標籤排序</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">df</span><span class="p">))</span>
+<span class="n">df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+</pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">Out[6]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>age</th>
+      <th>is_male</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Monkey D. Luffy</td>
+      <td>19</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Roronoa Zoro</td>
+      <td>21</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Nami</td>
+      <td>20</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Usopp</td>
+      <td>19</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Vinsmoke Sanji</td>
+      <td>21</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Tony Tony Chopper</td>
+      <td>17</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Nico Robin</td>
+      <td>30</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Franky</td>
+      <td>36</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Brook</td>
+      <td>90</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#24314;&#31435;-DataFrame&#65288;3&#65289;">&#24314;&#31435; DataFrame&#65288;3&#65289;<a class="anchor-link" href="#&#24314;&#31435;-DataFrame&#65288;3&#65289;">&#182;</a></h2><ul>
+<li>其中 data 是一個 ndarray</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span><span class="s2">&quot;Monkey D. Luffy&quot;</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="kc">True</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Roronoa Zoro&quot;</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="kc">True</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Nami&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="kc">False</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Usopp&quot;</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="kc">True</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Vinsmoke Sanji&quot;</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="kc">True</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Tony Tony Chopper&quot;</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="kc">True</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Nico Robin&quot;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="kc">False</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Franky&quot;</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="kc">True</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Brook&quot;</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
+<span class="p">])</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="s2">&quot;is_male&quot;</span><span class="p">])</span>
+<span class="n">df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[10]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>age</th>
+      <th>is_male</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Monkey D. Luffy</td>
+      <td>19</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Roronoa Zoro</td>
+      <td>21</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Nami</td>
+      <td>20</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Usopp</td>
+      <td>19</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Vinsmoke Sanji</td>
+      <td>21</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Tony Tony Chopper</td>
+      <td>17</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Nico Robin</td>
+      <td>30</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Franky</td>
+      <td>36</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Brook</td>
+      <td>90</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span><span class="s2">&quot;Monkey D. Luffy&quot;</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="kc">True</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Roronoa Zoro&quot;</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="kc">True</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Nami&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="kc">False</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Usopp&quot;</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="kc">True</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Vinsmoke Sanji&quot;</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="kc">True</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Tony Tony Chopper&quot;</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="kc">True</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Nico Robin&quot;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="kc">False</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Franky&quot;</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="kc">True</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Brook&quot;</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
+<span class="p">])</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="s2">&quot;is_male&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;is_male&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;is_male&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">bool</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>name       object
+age        object
+is_male    object
+dtype: object
+
+
+name       object
+age         int64
+is_male      bool
+dtype: object
+</pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">Out[11]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>age</th>
+      <th>is_male</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Monkey D. Luffy</td>
+      <td>19</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Roronoa Zoro</td>
+      <td>21</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Nami</td>
+      <td>20</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Usopp</td>
+      <td>19</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Vinsmoke Sanji</td>
+      <td>21</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Tony Tony Chopper</td>
+      <td>17</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Nico Robin</td>
+      <td>30</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Franky</td>
+      <td>36</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Brook</td>
+      <td>90</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Data-frame-&#30340;&#25805;&#20316;">Data frame &#30340;&#25805;&#20316;<a class="anchor-link" href="#Data-frame-&#30340;&#25805;&#20316;">&#182;</a></h2><ul>
+<li>包含多種變數類型，不像 ndarray 僅容納單一變數類型</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">straw_hat_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Monkey D. Luffy&quot;</span><span class="p">,</span> <span class="s2">&quot;Roronoa Zoro&quot;</span><span class="p">,</span> <span class="s2">&quot;Nami&quot;</span><span class="p">,</span> <span class="s2">&quot;Usopp&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Vinsmoke Sanji&quot;</span><span class="p">,</span> <span class="s2">&quot;Tony Tony Chopper&quot;</span><span class="p">,</span> <span class="s2">&quot;Nico Robin&quot;</span><span class="p">,</span> <span class="s2">&quot;Franky&quot;</span><span class="p">,</span> <span class="s2">&quot;Brook&quot;</span><span class="p">],</span>
+                  <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">90</span><span class="p">],</span>
+                  <span class="s2">&quot;is_male&quot;</span><span class="p">:</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">straw_hat_dict</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="s2">&quot;is_male&quot;</span><span class="p">])</span> <span class="c1"># 指定欄標籤排序</span>
+<span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[57]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>name       object
+age         int64
+is_male      bool
+dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Data-frame-&#30340;&#25805;&#20316;&#65288;2&#65289;">Data frame &#30340;&#25805;&#20316;&#65288;2&#65289;<a class="anchor-link" href="#Data-frame-&#30340;&#25805;&#20316;&#65288;2&#65289;">&#182;</a></h2><ul>
+<li>可以直接指派新增一個變數</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">straw_hat_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Monkey D. Luffy&quot;</span><span class="p">,</span> <span class="s2">&quot;Roronoa Zoro&quot;</span><span class="p">,</span> <span class="s2">&quot;Nami&quot;</span><span class="p">,</span> <span class="s2">&quot;Usopp&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Vinsmoke Sanji&quot;</span><span class="p">,</span> <span class="s2">&quot;Tony Tony Chopper&quot;</span><span class="p">,</span> <span class="s2">&quot;Nico Robin&quot;</span><span class="p">,</span> <span class="s2">&quot;Franky&quot;</span><span class="p">,</span> <span class="s2">&quot;Brook&quot;</span><span class="p">],</span>
+                  <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">90</span><span class="p">],</span>
+                  <span class="s2">&quot;is_male&quot;</span><span class="p">:</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">straw_hat_dict</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="s2">&quot;is_male&quot;</span><span class="p">])</span> <span class="c1"># 指定欄標籤排序</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;age_2_yr_ago&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="mi">2</span>
+<span class="n">df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[59]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>age</th>
+      <th>is_male</th>
+      <th>age_2_yr_ago</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Monkey D. Luffy</td>
+      <td>19</td>
+      <td>True</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Roronoa Zoro</td>
+      <td>21</td>
+      <td>True</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Nami</td>
+      <td>20</td>
+      <td>False</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Usopp</td>
+      <td>19</td>
+      <td>True</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Vinsmoke Sanji</td>
+      <td>21</td>
+      <td>True</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Tony Tony Chopper</td>
+      <td>17</td>
+      <td>True</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Nico Robin</td>
+      <td>30</td>
+      <td>False</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Franky</td>
+      <td>36</td>
+      <td>True</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Brook</td>
+      <td>90</td>
+      <td>True</td>
+      <td>88</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">straw_hat_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Monkey D. Luffy&quot;</span><span class="p">,</span> <span class="s2">&quot;Roronoa Zoro&quot;</span><span class="p">,</span> <span class="s2">&quot;Nami&quot;</span><span class="p">,</span> <span class="s2">&quot;Usopp&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Vinsmoke Sanji&quot;</span><span class="p">,</span> <span class="s2">&quot;Tony Tony Chopper&quot;</span><span class="p">,</span> <span class="s2">&quot;Nico Robin&quot;</span><span class="p">,</span> <span class="s2">&quot;Franky&quot;</span><span class="p">,</span> <span class="s2">&quot;Brook&quot;</span><span class="p">],</span>
+                  <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">90</span><span class="p">],</span>
+                  <span class="s2">&quot;is_male&quot;</span><span class="p">:</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">straw_hat_dict</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="s2">&quot;is_male&quot;</span><span class="p">])</span> <span class="c1"># 指定欄標籤排序</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;favorite_food&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Meat&quot;</span><span class="p">,</span> <span class="s2">&quot;Food matches wine&quot;</span><span class="p">,</span> <span class="s2">&quot;Orange&quot;</span><span class="p">,</span> <span class="s2">&quot;Fish&quot;</span><span class="p">,</span> <span class="s2">&quot;Food matches black tea&quot;</span><span class="p">,</span>
+                       <span class="s2">&quot;Sweets&quot;</span><span class="p">,</span> <span class="s2">&quot;Food matches coffee&quot;</span><span class="p">,</span> <span class="s2">&quot;Food matches coke&quot;</span><span class="p">,</span> <span class="s2">&quot;Milk&quot;</span><span class="p">]</span>
+<span class="n">df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[60]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>age</th>
+      <th>is_male</th>
+      <th>favorite_food</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Monkey D. Luffy</td>
+      <td>19</td>
+      <td>True</td>
+      <td>Meat</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Roronoa Zoro</td>
+      <td>21</td>
+      <td>True</td>
+      <td>Food matches wine</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Nami</td>
+      <td>20</td>
+      <td>False</td>
+      <td>Orange</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Usopp</td>
+      <td>19</td>
+      <td>True</td>
+      <td>Fish</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Vinsmoke Sanji</td>
+      <td>21</td>
+      <td>True</td>
+      <td>Food matches black tea</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Tony Tony Chopper</td>
+      <td>17</td>
+      <td>True</td>
+      <td>Sweets</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Nico Robin</td>
+      <td>30</td>
+      <td>False</td>
+      <td>Food matches coffee</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Franky</td>
+      <td>36</td>
+      <td>True</td>
+      <td>Food matches coke</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Brook</td>
+      <td>90</td>
+      <td>True</td>
+      <td>Milk</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Data-frame-&#30340;&#25805;&#20316;&#65288;3&#65289;">Data frame &#30340;&#25805;&#20316;&#65288;3&#65289;<a class="anchor-link" href="#Data-frame-&#30340;&#25805;&#20316;&#65288;3&#65289;">&#182;</a></h2><ul>
+<li>利用 <code>.insert()</code> 指定變數新增的位置</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">straw_hat_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Monkey D. Luffy&quot;</span><span class="p">,</span> <span class="s2">&quot;Roronoa Zoro&quot;</span><span class="p">,</span> <span class="s2">&quot;Nami&quot;</span><span class="p">,</span> <span class="s2">&quot;Usopp&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Vinsmoke Sanji&quot;</span><span class="p">,</span> <span class="s2">&quot;Tony Tony Chopper&quot;</span><span class="p">,</span> <span class="s2">&quot;Nico Robin&quot;</span><span class="p">,</span> <span class="s2">&quot;Franky&quot;</span><span class="p">,</span> <span class="s2">&quot;Brook&quot;</span><span class="p">],</span>
+                  <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">90</span><span class="p">],</span>
+                  <span class="s2">&quot;is_male&quot;</span><span class="p">:</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">straw_hat_dict</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="s2">&quot;is_male&quot;</span><span class="p">])</span> <span class="c1"># 指定欄標籤排序</span>
+<span class="n">df</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;favorite_food&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;Meat&quot;</span><span class="p">,</span> <span class="s2">&quot;Food matches wine&quot;</span><span class="p">,</span> <span class="s2">&quot;Orange&quot;</span><span class="p">,</span> <span class="s2">&quot;Fish&quot;</span><span class="p">,</span> <span class="s2">&quot;Food matches black tea&quot;</span><span class="p">,</span>
+                               <span class="s2">&quot;Sweets&quot;</span><span class="p">,</span> <span class="s2">&quot;Food matches coffee&quot;</span><span class="p">,</span> <span class="s2">&quot;Food matches coke&quot;</span><span class="p">,</span> <span class="s2">&quot;Milk&quot;</span><span class="p">])</span>
+<span class="n">df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[66]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>favorite_food</th>
+      <th>age</th>
+      <th>is_male</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Monkey D. Luffy</td>
+      <td>Meat</td>
+      <td>19</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Roronoa Zoro</td>
+      <td>Food matches wine</td>
+      <td>21</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Nami</td>
+      <td>Orange</td>
+      <td>20</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Usopp</td>
+      <td>Fish</td>
+      <td>19</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Vinsmoke Sanji</td>
+      <td>Food matches black tea</td>
+      <td>21</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Tony Tony Chopper</td>
+      <td>Sweets</td>
+      <td>17</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Nico Robin</td>
+      <td>Food matches coffee</td>
+      <td>30</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Franky</td>
+      <td>Food matches coke</td>
+      <td>36</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Brook</td>
+      <td>Milk</td>
+      <td>90</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Data-frame-&#30340;&#25805;&#20316;&#65288;3&#65289;">Data frame &#30340;&#25805;&#20316;&#65288;3&#65289;<a class="anchor-link" href="#Data-frame-&#30340;&#25805;&#20316;&#65288;3&#65289;">&#182;</a></h2><ul>
+<li>利用 <code>del</code> 刪除變數</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">straw_hat_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Monkey D. Luffy&quot;</span><span class="p">,</span> <span class="s2">&quot;Roronoa Zoro&quot;</span><span class="p">,</span> <span class="s2">&quot;Nami&quot;</span><span class="p">,</span> <span class="s2">&quot;Usopp&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Vinsmoke Sanji&quot;</span><span class="p">,</span> <span class="s2">&quot;Tony Tony Chopper&quot;</span><span class="p">,</span> <span class="s2">&quot;Nico Robin&quot;</span><span class="p">,</span> <span class="s2">&quot;Franky&quot;</span><span class="p">,</span> <span class="s2">&quot;Brook&quot;</span><span class="p">],</span>
+                  <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">90</span><span class="p">],</span>
+                  <span class="s2">&quot;is_male&quot;</span><span class="p">:</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">straw_hat_dict</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="s2">&quot;is_male&quot;</span><span class="p">])</span> <span class="c1"># 指定欄標籤排序</span>
+<span class="k">del</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;is_male&#39;</span><span class="p">]</span>
+<span class="n">df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[63]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Monkey D. Luffy</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Roronoa Zoro</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Nami</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Usopp</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Vinsmoke Sanji</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Tony Tony Chopper</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Nico Robin</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Franky</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Brook</td>
+      <td>90</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Data-frame-&#30340;&#25805;&#20316;&#65288;4&#65289;">Data frame &#30340;&#25805;&#20316;&#65288;4&#65289;<a class="anchor-link" href="#Data-frame-&#30340;&#25805;&#20316;&#65288;4&#65289;">&#182;</a></h2><ul>
+<li>利用 <code>.pop()</code> 將變數刪除後指派給一個 Series</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">straw_hat_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Monkey D. Luffy&quot;</span><span class="p">,</span> <span class="s2">&quot;Roronoa Zoro&quot;</span><span class="p">,</span> <span class="s2">&quot;Nami&quot;</span><span class="p">,</span> <span class="s2">&quot;Usopp&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;Vinsmoke Sanji&quot;</span><span class="p">,</span> <span class="s2">&quot;Tony Tony Chopper&quot;</span><span class="p">,</span> <span class="s2">&quot;Nico Robin&quot;</span><span class="p">,</span> <span class="s2">&quot;Franky&quot;</span><span class="p">,</span> <span class="s2">&quot;Brook&quot;</span><span class="p">],</span>
+                  <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">90</span><span class="p">],</span>
+                  <span class="s2">&quot;is_male&quot;</span><span class="p">:</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">straw_hat_dict</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="s2">&quot;is_male&quot;</span><span class="p">])</span> <span class="c1"># 指定欄標籤排序</span>
+<span class="n">ser</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;is_male&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">ser</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;pandas.core.series.Series&#39;&gt;
+0     True
+1     True
+2    False
+3     True
+4     True
+5     True
+6    False
+7     True
+8     True
+Name: is_male, dtype: bool
+</pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">Out[67]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Monkey D. Luffy</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Roronoa Zoro</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Nami</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Usopp</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Vinsmoke Sanji</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Tony Tony Chopper</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Nico Robin</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Franky</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Brook</td>
+      <td>90</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -12060,6 +13923,15 @@ a.anchor-link {
 <li>練習 <strong>data frame</strong> 的 <code>describe()</code>、<code>head()</code> 與 <code>tail()</code> 方法</li>
 </ul>
 
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Panel">Panel<a class="anchor-link" href="#Panel">&#182;</a></h1>
 </div>
 </div>
 </div></section></section><section><section>
