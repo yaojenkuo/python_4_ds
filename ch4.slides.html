@@ -13299,6 +13299,54 @@ bool
 
 </div>
 </div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#36984;&#25799;-ndarray-&#30340;&#20803;&#32032;&#65288;8&#65289;">&#36984;&#25799; ndarray &#30340;&#20803;&#32032;&#65288;8&#65289;<a class="anchor-link" href="#&#36984;&#25799;-ndarray-&#30340;&#20803;&#32032;&#65288;8&#65289;">&#182;</a></h2><ul>
+<li>假如希望判斷兩個 ndarray 是否相同，可以使用 <code>np.array_equal()</code></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">friends_stars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Jennifer Aniston&quot;</span><span class="p">,</span> <span class="s2">&quot;Courteney Cox&quot;</span><span class="p">,</span> <span class="s2">&quot;Lisa Kudrow&quot;</span><span class="p">,</span>
+<span class="s2">&quot;Matt LeBlanc&quot;</span><span class="p">,</span> <span class="s2">&quot;Matthew Perry&quot;</span><span class="p">,</span> <span class="s2">&quot;David Schwimmer&quot;</span><span class="p">]</span>
+<span class="n">friends_arr_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">friends_stars</span><span class="p">)</span>
+<span class="n">friends_arr_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">friends_stars</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array_equal</span><span class="p">(</span><span class="n">friends_arr_1</span><span class="p">,</span> <span class="n">friends_arr_2</span><span class="p">))</span>
+<span class="n">friends_arr_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">friends_stars</span><span class="p">[:])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array_equal</span><span class="p">(</span><span class="n">friends_arr_1</span><span class="p">,</span> <span class="n">friends_arr_2</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>False
+True
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
