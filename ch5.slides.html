@@ -12350,8 +12350,8 @@ dtype: object
 <span class="p">}</span>
 
 <span class="n">ser</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">crew_dict</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="n">crew_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> <span class="c1"># 排序與原 dict 相同</span>
-<span class="nb">filter</span> <span class="o">=</span> <span class="n">ser</span><span class="o">.</span><span class="n">isin</span><span class="p">((</span><span class="s2">&quot;Nami&quot;</span><span class="p">,</span> <span class="s2">&quot;Nico Robin&quot;</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="p">[</span><span class="nb">filter</span><span class="p">])</span>
+<span class="n">name_filter</span> <span class="o">=</span> <span class="n">ser</span><span class="o">.</span><span class="n">isin</span><span class="p">((</span><span class="s2">&quot;Nami&quot;</span><span class="p">,</span> <span class="s2">&quot;Nico Robin&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="p">[</span><span class="n">name_filter</span><span class="p">])</span>
 </pre></div>
 
 </div>
