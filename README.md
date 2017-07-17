@@ -22,6 +22,7 @@
 - [類別](https://yaojenkuo.github.io/python_4_ds/ch9.slides.html)
 - [NumPy](https://yaojenkuo.github.io/python_4_ds/ch4.slides.html)
 - [Pandas](https://yaojenkuo.github.io/python_4_ds/ch5.slides.html)
+- [資料載入](https://yaojenkuo.github.io/python_4_ds/data_import.slides.html)
 - [視覺化](https://yaojenkuo.github.io/python_4_ds/ch10.slides.html)
 - [Python 與機器學習](https://yaojenkuo.github.io/python_4_ds/ch11.slides.html)
 - [Python 與機器學習（2）](https://yaojenkuo.github.io/python_4_ds/ch12.slides.html)
