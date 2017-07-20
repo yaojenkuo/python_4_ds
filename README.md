@@ -30,6 +30,7 @@
 - [Python 與機器學習（4）](https://yaojenkuo.github.io/python_4_ds/ch14.slides.html)
 - [Python 與機器學習（5）](https://yaojenkuo.github.io/python_4_ds/ch15.slides.html)
 - [Python 與機器學習（6）](https://yaojenkuo.github.io/python_4_ds/ch16.slides.html)
+- [Python 與機器學習（7）](https://yaojenkuo.github.io/python_4_ds/ch17.slides.html)
 
 ### 資源
 
