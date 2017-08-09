@@ -11885,10 +11885,10 @@ a.anchor-link {
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>42.125
+<pre>42.195
 1.6
 6
-[42.125, 21, 10, 5, 3, 1.6]
+[42.195, 21, 10, 5, 3, 1.6]
 </pre>
 </div>
 </div>
@@ -11976,7 +11976,6 @@ squared(x)
 <h2 id="&#33258;&#35330;&#20989;&#25976;&#65288;3&#65289;">&#33258;&#35330;&#20989;&#25976;&#65288;3&#65289;<a class="anchor-link" href="#&#33258;&#35330;&#20989;&#25976;&#65288;3&#65289;">&#182;</a></h2><ul>
 <li>練習：自訂 Sign 函數</li>
 </ul>
-<p><img src="https://storage.googleapis.com/py_ds_basic/Signum_function.png" alt="sign_function"></p>
 $$
 sgn(x) =
   \begin{cases}
@@ -11988,12 +11987,112 @@ $$
 </div>
 </div>
 </div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+v5g5gI52JY1IAAAAAElFTkSuQmCC
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#33258;&#35330;&#20989;&#25976;&#65288;4&#65289;">&#33258;&#35330;&#20989;&#25976;&#65288;4&#65289;<a class="anchor-link" href="#&#33258;&#35330;&#20989;&#25976;&#65288;4&#65289;">&#182;</a></h2><ul>
+<li>練習：自訂總和的函數 <code>sum_fun()</code>、計算個數的函數 <code>cnt_fun()</code> 與平均數函數 <code>mean_fun()</code></li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#33258;&#35330;&#20989;&#25976;&#65288;5&#65289;">&#33258;&#35330;&#20989;&#25976;&#65288;5&#65289;<a class="anchor-link" href="#&#33258;&#35330;&#20989;&#25976;&#65288;5&#65289;">&#182;</a></h2><ul>
 <li>計算圓形的面積或周長</li>
 </ul>
 
@@ -12002,7 +12101,7 @@ $$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span> <span class="c1"># 要使用 pi 得引入套件 math</span>
@@ -12056,7 +12155,7 @@ circle_calculate(radius, is_area)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#33258;&#35330;&#20989;&#25976;&#65288;5&#65289;">&#33258;&#35330;&#20989;&#25976;&#65288;5&#65289;<a class="anchor-link" href="#&#33258;&#35330;&#20989;&#25976;&#65288;5&#65289;">&#182;</a></h2><ul>
+<h2 id="&#33258;&#35330;&#20989;&#25976;&#65288;6&#65289;">&#33258;&#35330;&#20989;&#25976;&#65288;6&#65289;<a class="anchor-link" href="#&#33258;&#35330;&#20989;&#25976;&#65288;6&#65289;">&#182;</a></h2><ul>
 <li>練習：給 <code>is_area</code> 一個預設值 <code>True</code>，預設計算圓形的面積</li>
 </ul>
 
@@ -12068,7 +12167,7 @@ circle_calculate(radius, is_area)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#33258;&#35330;&#20989;&#25976;&#65288;6&#65289;">&#33258;&#35330;&#20989;&#25976;&#65288;6&#65289;<a class="anchor-link" href="#&#33258;&#35330;&#20989;&#25976;&#65288;6&#65289;">&#182;</a></h2><ul>
+<h2 id="&#33258;&#35330;&#20989;&#25976;&#65288;7&#65289;">&#33258;&#35330;&#20989;&#25976;&#65288;7&#65289;<a class="anchor-link" href="#&#33258;&#35330;&#20989;&#25976;&#65288;7&#65289;">&#182;</a></h2><ul>
 <li>在 <code>return</code> 後面將多個值用逗號 <code>,</code> 隔開就會回傳一個 tuple</li>
 </ul>
 
@@ -12077,7 +12176,7 @@ circle_calculate(radius, is_area)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span> <span class="c1"># 要使用 pi 得引入套件 math</span>
@@ -12094,6 +12193,9 @@ circle_calculate(radius, is_area)
 <span class="c1"># 呼叫自訂函數</span>
 <span class="n">my_radius</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">circle_calculate</span><span class="p">(</span><span class="n">my_radius</span><span class="p">))</span>
+<span class="n">circle_area</span><span class="p">,</span> <span class="n">circle_circum</span> <span class="o">=</span> <span class="n">circle_calculate</span><span class="p">(</span><span class="n">my_radius</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">circle_area</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">circle_circum</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12107,6 +12209,8 @@ circle_calculate(radius, is_area)
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>(28.274333882308138, 18.84955592153876)
+28.274333882308138
+18.84955592153876
 </pre>
 </div>
 </div>
@@ -12120,7 +12224,7 @@ circle_calculate(radius, is_area)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#33258;&#35330;&#20989;&#25976;&#65288;7&#65289;">&#33258;&#35330;&#20989;&#25976;&#65288;7&#65289;<a class="anchor-link" href="#&#33258;&#35330;&#20989;&#25976;&#65288;7&#65289;">&#182;</a></h2><ul>
+<h2 id="&#33258;&#35330;&#20989;&#25976;&#65288;8&#65289;">&#33258;&#35330;&#20989;&#25976;&#65288;8&#65289;<a class="anchor-link" href="#&#33258;&#35330;&#20989;&#25976;&#65288;8&#65289;">&#182;</a></h2><ul>
 <li>小技巧：Multiple assignment（多重指派）</li>
 </ul>
 <div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">8</span>
@@ -12138,7 +12242,7 @@ circle_calculate(radius, is_area)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#33258;&#35330;&#20989;&#25976;&#65288;8&#65289;">&#33258;&#35330;&#20989;&#25976;&#65288;8&#65289;<a class="anchor-link" href="#&#33258;&#35330;&#20989;&#25976;&#65288;8&#65289;">&#182;</a></h2><ul>
+<h2 id="&#33258;&#35330;&#20989;&#25976;&#65288;9&#65289;">&#33258;&#35330;&#20989;&#25976;&#65288;9&#65289;<a class="anchor-link" href="#&#33258;&#35330;&#20989;&#25976;&#65288;9&#65289;">&#182;</a></h2><ul>
 <li>交換排序法（遞增）</li>
 </ul>
 
@@ -12147,7 +12251,7 @@ circle_calculate(radius, is_area)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span> <span class="c1"># 呼叫函數時使用隨機整數</span>
@@ -12182,8 +12286,8 @@ circle_calculate(radius, is_area)
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[63, 1, 22, 93, 47, 38, 95, 25, 96, 23]
-[1, 22, 23, 25, 38, 47, 63, 93, 95, 96]
+<pre>[87, 5, 0, 47, 10, 72, 61, 62, 66, 86]
+[0, 5, 10, 47, 61, 62, 66, 72, 86, 87]
 </pre>
 </div>
 </div>
@@ -12197,7 +12301,7 @@ circle_calculate(radius, is_area)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#33258;&#35330;&#20989;&#25976;&#65288;8&#65289;">&#33258;&#35330;&#20989;&#25976;&#65288;8&#65289;<a class="anchor-link" href="#&#33258;&#35330;&#20989;&#25976;&#65288;8&#65289;">&#182;</a></h2><ul>
+<h2 id="&#33258;&#35330;&#20989;&#25976;&#65288;10&#65289;">&#33258;&#35330;&#20989;&#25976;&#65288;10&#65289;<a class="anchor-link" href="#&#33258;&#35330;&#20989;&#25976;&#65288;10&#65289;">&#182;</a></h2><ul>
 <li>練習：在交換排序法中增加一個參數：<code>reverse</code>，預設 <code>reverse = False</code> 遞增排序</li>
 </ul>
 
@@ -12223,7 +12327,7 @@ circle_calculate(radius, is_area)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 定義自訂函數</span>
@@ -12280,7 +12384,7 @@ circle_calculate(radius, is_area)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span> <span class="c1"># 要使用 pi 得引入套件 math</span>
@@ -12333,7 +12437,7 @@ circle_calculate(radius, is_area)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">divide</span><span class="p">(</span><span class="n">numerator</span><span class="p">,</span> <span class="n">denominator</span><span class="p">):</span>
@@ -12394,7 +12498,7 @@ circle_calculate(radius, is_area)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_squared</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
@@ -12450,7 +12554,7 @@ circle_calculate(radius, is_area)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
@@ -12490,7 +12594,7 @@ circle_calculate(radius, is_area)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
@@ -12531,7 +12635,7 @@ circle_calculate(radius, is_area)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 非彈性參數的作法</span>
@@ -12571,7 +12675,7 @@ David Schwimmer
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 彈性參數的作法</span>
@@ -12623,7 +12727,7 @@ David Schwimmer
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 非彈性參數的作法</span>
@@ -12667,7 +12771,7 @@ stars: [&#39;Jennifer Aniston&#39;, &#39;Courteney Cox&#39;, &#39;Lisa Kudrow&#3
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">output_info</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
