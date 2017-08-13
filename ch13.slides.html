@@ -11830,7 +11830,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Python-&#33287;&#27231;&#22120;&#23416;&#32722;&#65288;3&#65289;">Python &#33287;&#27231;&#22120;&#23416;&#32722;&#65288;3&#65289;<a class="anchor-link" href="#Python-&#33287;&#27231;&#22120;&#23416;&#32722;&#65288;3&#65289;">&#182;</a></h1><h2 id="&#37101;&#32768;&#20161;">&#37101;&#32768;&#20161;<a class="anchor-link" href="#&#37101;&#32768;&#20161;">&#182;</a></h2>
+<h1 id="Python-&#33287;&#27231;&#22120;&#23416;&#32722;---&#20998;&#32676;">Python &#33287;&#27231;&#22120;&#23416;&#32722; - &#20998;&#32676;<a class="anchor-link" href="#Python-&#33287;&#27231;&#22120;&#23416;&#32722;---&#20998;&#32676;">&#182;</a></h1><h2 id="&#37101;&#32768;&#20161;">&#37101;&#32768;&#20161;<a class="anchor-link" href="#&#37101;&#32768;&#20161;">&#182;</a></h2>
 </div>
 </div>
 </div></section></section><section><section>
@@ -11894,25 +11894,10 @@ $$\text{Training set: } (x_i, y_i)$$
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">random</span>
-
-<span class="n">x1_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-<span class="n">x_points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
-<span class="n">x_points_len</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x_points</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">y_minus</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">),</span> <span class="n">k</span> <span class="o">=</span> <span class="n">x_points_len</span><span class="p">))</span> <span class="o">-</span> <span class="n">x_points</span><span class="p">[:</span><span class="n">x_points_len</span><span class="p">]</span>
-<span class="n">y_plus</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">),</span> <span class="n">k</span> <span class="o">=</span> <span class="n">x_points_len</span><span class="p">))</span> <span class="o">-</span> <span class="n">x_points</span><span class="p">[</span><span class="n">x_points_len</span><span class="p">:]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_points</span><span class="p">[:</span><span class="n">x_points_len</span><span class="p">],</span> <span class="n">y_minus</span><span class="p">,</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;_&#39;</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">200</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_points</span><span class="p">[</span><span class="n">x_points_len</span><span class="p">:],</span> <span class="n">y_plus</span><span class="p">,</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">200</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x1_arr</span><span class="p">,</span> <span class="mi">3</span> <span class="o">-</span> <span class="n">x1_arr</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;k&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;$x_1$&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;$x_2$&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Classification&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -11927,174 +11912,197 @@ $$\text{Training set: } (x_i, y_i)$$
 
 
 <div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
+<img src="data:image/png;base64,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
 "
 >
 </div>
@@ -12119,57 +12127,7 @@ $$\text{Training set: } x_i$$
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">random</span>
-
-<span class="n">x1_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-<span class="n">x_points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-<span class="n">x_points_len</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x_points</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
-<span class="n">y_minus</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">),</span> <span class="n">k</span> <span class="o">=</span> <span class="n">x_points_len</span><span class="p">))</span> <span class="o">-</span> <span class="n">x_points</span><span class="p">[:</span><span class="n">x_points_len</span><span class="p">]</span>
-<span class="n">y_plus</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">),</span> <span class="n">k</span> <span class="o">=</span> <span class="n">x_points_len</span><span class="p">))</span> <span class="o">-</span> <span class="n">x_points</span><span class="p">[</span><span class="n">x_points_len</span><span class="p">:]</span>
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_points</span><span class="p">[:</span><span class="n">x_points_len</span><span class="p">],</span> <span class="n">y_minus</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_points</span><span class="p">[</span><span class="n">x_points_len</span><span class="p">:],</span> <span class="n">y_plus</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
-<span class="n">circle1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">Circle</span><span class="p">((</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
-<span class="n">circle2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">Circle</span><span class="p">((</span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">2.2</span><span class="p">),</span> <span class="mf">1.2</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">add_artist</span><span class="p">(</span><span class="n">circle1</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">add_artist</span><span class="p">(</span><span class="n">circle2</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;$x_1$&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;$x_2$&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Classification&quot;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">Out[9]:</div>
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x119e4ceb8&gt;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -12496,23 +12454,10 @@ $$c: \; \text{分群的索引值}$$$$\mu_k: \; \text{不同分群的中心點}$$
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">random</span>
-
-<span class="n">x_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">13</span><span class="p">)</span>
-<span class="n">y_arr_length</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
-<span class="n">y_arr_1</span> <span class="o">=</span> <span class="n">x_arr</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">),</span> <span class="n">k</span> <span class="o">=</span> <span class="n">y_arr_length</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
-<span class="n">y_arr_2</span> <span class="o">=</span> <span class="n">x_arr</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">7</span><span class="p">]</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">),</span> <span class="n">k</span> <span class="o">=</span> <span class="n">y_arr_length</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
-<span class="n">y_arr_3</span> <span class="o">=</span> <span class="n">x_arr</span><span class="p">[</span><span class="mi">7</span><span class="p">:]</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">),</span> <span class="n">k</span> <span class="o">=</span> <span class="n">y_arr_length</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_arr</span><span class="p">[:</span><span class="mi">3</span><span class="p">],</span> <span class="n">y_arr_1</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;k&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_arr</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">7</span><span class="p">],</span> <span class="n">y_arr_2</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;k&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_arr</span><span class="p">[</span><span class="mi">7</span><span class="p">:],</span> <span class="n">y_arr_3</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;k&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -12630,26 +12575,10 @@ AAgEhQ4AgaDQASAQFDoABIJCB4BAUOgAEIj/B+rLxu2GuCbfAAAAAElFTkSuQmCC
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">random</span>
-
-<span class="n">x_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">13</span><span class="p">)</span>
-<span class="n">y_arr_length</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
-<span class="n">y_arr_1</span> <span class="o">=</span> <span class="n">x_arr</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">),</span> <span class="n">k</span> <span class="o">=</span> <span class="n">y_arr_length</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
-<span class="n">y_arr_2</span> <span class="o">=</span> <span class="n">x_arr</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">7</span><span class="p">]</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">),</span> <span class="n">k</span> <span class="o">=</span> <span class="n">y_arr_length</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
-<span class="n">y_arr_3</span> <span class="o">=</span> <span class="n">x_arr</span><span class="p">[</span><span class="mi">7</span><span class="p">:]</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">),</span> <span class="n">k</span> <span class="o">=</span> <span class="n">y_arr_length</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_arr</span><span class="p">[:</span><span class="mi">3</span><span class="p">],</span> <span class="n">y_arr_1</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_arr</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">7</span><span class="p">],</span> <span class="n">y_arr_2</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;g&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_arr</span><span class="p">[</span><span class="mi">7</span><span class="p">:],</span> <span class="n">y_arr_3</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="n">markersize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="n">markersize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;g&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="n">markersize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -12784,27 +12713,10 @@ gkAHgIz4P5y3a/MTNiaDAAAAAElFTkSuQmCC
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">random</span>
-
-<span class="n">x_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">13</span><span class="p">)</span>
-<span class="n">y_arr_length</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
-<span class="n">y_arr_1</span> <span class="o">=</span> <span class="n">x_arr</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">),</span> <span class="n">k</span> <span class="o">=</span> <span class="n">y_arr_length</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
-<span class="n">y_arr_2</span> <span class="o">=</span> <span class="n">x_arr</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">7</span><span class="p">]</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">),</span> <span class="n">k</span> <span class="o">=</span> <span class="n">y_arr_length</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
-<span class="n">y_arr_3</span> <span class="o">=</span> <span class="n">x_arr</span><span class="p">[</span><span class="mi">7</span><span class="p">:]</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">),</span> <span class="n">k</span> <span class="o">=</span> <span class="n">y_arr_length</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_arr</span><span class="p">[:</span><span class="mi">3</span><span class="p">],</span> <span class="n">y_arr_1</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_arr</span><span class="p">[[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]],</span> <span class="n">y_arr_2</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]],</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;g&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_arr</span><span class="p">[[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">]],</span> <span class="n">y_arr_2</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]],</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_arr</span><span class="p">[</span><span class="mi">7</span><span class="p">:],</span> <span class="n">y_arr_3</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="n">markersize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="n">markersize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;g&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="n">markersize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -12935,27 +12847,10 @@ AgAAAABJRU5ErkJggg==
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">random</span>
-
-<span class="n">x_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">13</span><span class="p">)</span>
-<span class="n">y_arr_length</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
-<span class="n">y_arr_1</span> <span class="o">=</span> <span class="n">x_arr</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">),</span> <span class="n">k</span> <span class="o">=</span> <span class="n">y_arr_length</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
-<span class="n">y_arr_2</span> <span class="o">=</span> <span class="n">x_arr</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">7</span><span class="p">]</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">),</span> <span class="n">k</span> <span class="o">=</span> <span class="n">y_arr_length</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
-<span class="n">y_arr_3</span> <span class="o">=</span> <span class="n">x_arr</span><span class="p">[</span><span class="mi">7</span><span class="p">:]</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">),</span> <span class="n">k</span> <span class="o">=</span> <span class="n">y_arr_length</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_arr</span><span class="p">[:</span><span class="mi">3</span><span class="p">],</span> <span class="n">y_arr_1</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_arr</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">7</span><span class="p">],</span> <span class="n">y_arr_2</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_arr</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="mi">10</span><span class="p">],</span> <span class="n">y_arr_3</span><span class="p">[:</span><span class="mi">3</span><span class="p">],</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;g&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_arr</span><span class="p">[</span><span class="mi">10</span><span class="p">:],</span> <span class="n">y_arr_3</span><span class="p">[</span><span class="mi">3</span><span class="p">:],</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="n">markersize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="n">markersize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;g&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mf">11.5</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="n">markersize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -13131,23 +13026,13 @@ AAAASUVORK5CYII=
 
 </div>
 </div>
-</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
-<span class="n">y1</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;s&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">[[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]],</span> <span class="n">y1</span><span class="p">[[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]],</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">markersize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Number of clusters&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;$J(c, \mu_k)$&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
 </div>
