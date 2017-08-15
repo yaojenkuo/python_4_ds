@@ -12398,6 +12398,203 @@ JEpqoEREJEpqoEREJEpqoEREJEr/D7Hpbw+xpD2iAAAAAElFTkSuQmCC
 </div>
 </div>
 
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#22914;&#20309;&#23433;&#35037;-TensorFlow">&#22914;&#20309;&#23433;&#35037; TensorFlow<a class="anchor-link" href="#&#22914;&#20309;&#23433;&#35037;-TensorFlow">&#182;</a></h2><blockquote><p><strong>TensorFlow</strong> is an open source software library for numerical computation using data flow graphs. The graph nodes represent mathematical operations, while the graph edges represent the multidimensional data arrays (tensors) that flow between them. This flexible architecture lets you deploy computation to one or more CPUs or GPUs in a desktop, server, or mobile device without rewriting code.</p>
+</blockquote>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#22914;&#20309;&#23433;&#35037;-TensorFlow&#65288;2&#65289;">&#22914;&#20309;&#23433;&#35037; TensorFlow&#65288;2&#65289;<a class="anchor-link" href="#&#22914;&#20309;&#23433;&#35037;-TensorFlow&#65288;2&#65289;">&#182;</a></h2><ul>
+<li>利用 Anaconda 建立一個虛擬環境（命名為 tensorflow）<ul>
+<li>windows:</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="c1"># bash</span>
+conda create -n tensorflow <span class="nv">python</span><span class="o">=</span>3.5
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#22914;&#20309;&#23433;&#35037;-TensorFlow&#65288;3&#65289;">&#22914;&#20309;&#23433;&#35037; TensorFlow&#65288;3&#65289;<a class="anchor-link" href="#&#22914;&#20309;&#23433;&#35037;-TensorFlow&#65288;3&#65289;">&#182;</a></h2><ul>
+<li>利用 Anaconda 建立一個虛擬環境（命名為 tensorflow）<ul>
+<li>mac:</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="c1"># bash</span>
+conda create -n tensorflow
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#22914;&#20309;&#23433;&#35037;-TensorFlow&#65288;4&#65289;">&#22914;&#20309;&#23433;&#35037; TensorFlow&#65288;4&#65289;<a class="anchor-link" href="#&#22914;&#20309;&#23433;&#35037;-TensorFlow&#65288;4&#65289;">&#182;</a></h2><ul>
+<li>啟動虛擬環境</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="c1"># bash</span>
+<span class="nb">source</span> activate tensorflow
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#22914;&#20309;&#23433;&#35037;-TensorFlow&#65288;5&#65289;">&#22914;&#20309;&#23433;&#35037; TensorFlow&#65288;5&#65289;<a class="anchor-link" href="#&#22914;&#20309;&#23433;&#35037;-TensorFlow&#65288;5&#65289;">&#182;</a></h2><ul>
+<li>安裝 TensorFlow<ul>
+<li>windows：</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="c1"># bash</span>
+pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/windows/cpu/tensorflow-1.2.1-cp35-cp35m-win_amd64.whl
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#22914;&#20309;&#23433;&#35037;-TensorFlow&#65288;6&#65289;">&#22914;&#20309;&#23433;&#35037; TensorFlow&#65288;6&#65289;<a class="anchor-link" href="#&#22914;&#20309;&#23433;&#35037;-TensorFlow&#65288;6&#65289;">&#182;</a></h2><ul>
+<li>安裝 TensorFlow<ul>
+<li>mac：</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="c1"># bash</span>
+pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.2.1-py3-none-any.whl
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#22914;&#20309;&#23433;&#35037;-TensorFlow&#65288;7&#65289;">&#22914;&#20309;&#23433;&#35037; TensorFlow&#65288;7&#65289;<a class="anchor-link" href="#&#22914;&#20309;&#23433;&#35037;-TensorFlow&#65288;7&#65289;">&#182;</a></h2><ul>
+<li>跟 TensorFlow 說聲嗨</li>
+</ul>
+<div class="highlight"><pre><span></span>python
+</pre></div>
+<div class="highlight"><pre><span></span><span class="c1"># python</span>
+<span class="kn">import</span> <span class="nn">tensorflow</span> <span class="kn">as</span> <span class="nn">tf</span>
+<span class="n">hello</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="s1">&#39;Hello, TensorFlow!&#39;</span><span class="p">)</span>
+<span class="n">sess</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">hello</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#22914;&#20309;&#23433;&#35037;-TensorFlow&#65288;8&#65289;">&#22914;&#20309;&#23433;&#35037; TensorFlow&#65288;8&#65289;<a class="anchor-link" href="#&#22914;&#20309;&#23433;&#35037;-TensorFlow&#65288;8&#65289;">&#182;</a></h2><ul>
+<li>讓我們的 Jupyter Notebook 可以添加虛擬環境的 Kernel</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="c1"># bash</span>
+pip install ipykernel
+python -m ipykernel install --user --name<span class="o">=</span>tensorflow
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#22914;&#20309;&#23433;&#35037;-TensorFlow&#65288;9&#65289;">&#22914;&#20309;&#23433;&#35037; TensorFlow&#65288;9&#65289;<a class="anchor-link" href="#&#22914;&#20309;&#23433;&#35037;-TensorFlow&#65288;9&#65289;">&#182;</a></h2><ul>
+<li>新增一個 kernel 為 tensorflow 的 Notebook</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">version</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#22914;&#20309;&#23433;&#35037;-TensorFlow&#65288;10&#65289;">&#22914;&#20309;&#23433;&#35037; TensorFlow&#65288;10&#65289;<a class="anchor-link" href="#&#22914;&#20309;&#23433;&#35037;-TensorFlow&#65288;10&#65289;">&#182;</a></h2><ul>
+<li>卸載虛擬環境<ul>
+<li>windows</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="n">deactivate</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#22914;&#20309;&#23433;&#35037;-TensorFlow&#65288;11&#65289;">&#22914;&#20309;&#23433;&#35037; TensorFlow&#65288;11&#65289;<a class="anchor-link" href="#&#22914;&#20309;&#23433;&#35037;-TensorFlow&#65288;11&#65289;">&#182;</a></h2><ul>
+<li>卸載虛擬環境<ul>
+<li>mac</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">deactivate</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#22914;&#20309;&#23433;&#35037;-TensorFlow&#65288;12&#65289;">&#22914;&#20309;&#23433;&#35037; TensorFlow&#65288;12&#65289;<a class="anchor-link" href="#&#22914;&#20309;&#23433;&#35037;-TensorFlow&#65288;12&#65289;">&#182;</a></h2><ul>
+<li>刪除虛擬環境</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">remove</span> <span class="o">--</span><span class="n">name</span> <span class="n">tensorflow</span> <span class="o">--</span><span class="nb">all</span>
+</pre></div>
+
+</div>
+</div>
 </div></section></section>
 </div>
 </div>
