@@ -47,7 +47,7 @@
 ### 資源
 
 - [Learn the Command Line(codecademy)](https://www.codecademy.com/learn/learn-the-command-line)
-- [Cygwin](http://www.cygwin.com/)
+- [Cygwin(Linux feeling on Windows)](http://www.cygwin.com/)
 - [Oracle VM VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 - [Ubuntu 正體中文站](https://www.ubuntu-tw.org/modules/tinyd0/)
 - [Anaconda](https://www.continuum.io/downloads)
