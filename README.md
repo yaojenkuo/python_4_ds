@@ -59,6 +59,7 @@
 
 ### 推薦學習資源/書籍
 
+- [Python 與資料科學入門：建立開發環境](https://www.udemy.com/intro-to-python-ds-1)
 - [Codecademy](https://www.codecademy.com)
 - [Introducing Python](http://shop.oreilly.com/product/0636920028659.do)
 - [Learn Python the Hard Way](https://www.amazon.com/Learn-Python-Hard-Way-Introduction/dp/0321884914)
