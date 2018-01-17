@@ -7,14 +7,7 @@
 ### 評分標準
 
 - 50% 出席率
-- 50% 期中作業
-
-|作業編號|課程|作業內容|
-|0|建立你的 Python 開發環境|[作業 0](http://yaojenkuo.io/python_4_ds/ch1.slides.html#/5)|
-|1|迴圈|[作業 1](http://yaojenkuo.io/python_4_ds/ch6.slides.html#/7)|
-|2|流程控制|[作業 2](http://yaojenkuo.io/python_4_ds/ch7.slides.html#/3)|
-|3|函數|[作業 3](http://yaojenkuo.io/python_4_ds/ch8.slides.html#/8)|
-|4|NumPy|[作業 4](http://yaojenkuo.io/python_4_ds/ch4.slides.html#/11)|
+- 50% 期中作業：[期中作業清單]()
 
 ### 課程大綱
 
