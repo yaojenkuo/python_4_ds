@@ -7,7 +7,7 @@
 ### 評分標準
 
 - 50% 出席率
-- 50% [作業](ttps://yaojenkuo.github.io/python_4_ds/homework.slides.html)
+- 50% [作業](https://yaojenkuo.github.io/python_4_ds/homework.slides.html)
 
 ### 課程大綱
 
