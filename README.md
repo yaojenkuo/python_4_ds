@@ -44,6 +44,7 @@
 
 ### 近期課程錄影清單
 
+- [第 293 期 Python 與資料科學應用（寒假密集班）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuUp3Iv2e9CFSMpocWSB36va)
 - [第 290 期 Python 與資料科學應用（假日班下午）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuXK0Rs8VVzDMJEiN2ZlvFr4)
 - [第 289 期 Python 與資料科學應用（假日班下午）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuVnMbRb76tCn2qW3Ft9osAz)
 - [第 287 期 Python 與資料科學應用（暑期密集班）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuVKZvkQ0B7S6fszUnEf8PmQ)
