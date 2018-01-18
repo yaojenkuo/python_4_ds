@@ -9,6 +9,8 @@
 - 50% 出席率
 - 50% [作業](https://yaojenkuo.github.io/python_4_ds/homework.slides.html)
 
+作業請寄至：tony@kyosei.ai，註明班別與姓名。
+
 ### 課程大綱
 
 - [建立開發環境](https://yaojenkuo.github.io/python_4_ds/dev_env.slides.html)
