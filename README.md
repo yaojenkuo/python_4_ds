@@ -6,10 +6,17 @@
 
 ### 評分標準
 
-- 50% 出席率
-- 50% [作業](https://yaojenkuo.github.io/python_4_ds/homework.slides.html)
+70 分即可獲得證書，作業請寄至 tony@kyosei.ai，註明班別與姓名。
 
-作業請寄至：tony@kyosei.ai，註明班別與姓名。
+[作業連結](https://yaojenkuo.github.io/python_4_ds/homework.slides.html)
+
+|作業編號|作業名稱|作業分數|
+|-------|------|-------|
+|作業 0|模組與套件|30/230|
+|作業 1|NumPy 入門|30/230|
+|作業 2|pandas 入門|50/230|
+|作業 3|網站爬蟲|50/230|
+|作業 4|監督式學習與 scikit-learn|70/230|
 
 ### 課程大綱
 
@@ -26,23 +33,19 @@
 - [pandas 專題：奧運獎牌排行](https://yaojenkuo.github.io/python_4_ds/pandas_olympic.slides.html)
 - [pandas 專題：美國普查](https://yaojenkuo.github.io/python_4_ds/pandas_us_census.slides.html)
 - [pandas 專題：世界能源指標](https://yaojenkuo.github.io/python_4_ds/pandas_energy_indicator.slides.html)
-- [資料載入與網站爬蟲]()
-- [網站爬蟲專題：IMDB/Yahoo! 奇摩股市]()
+- [靜態網頁擷取](https://yaojenkuo.github.io/python_4_ds/static_scraper.slides.html)
+- [動態網頁擷取](https://yaojenkuo.github.io/python_4_ds/dynamic_scraper.slides.html)
 - [資料視覺化]()
 - [資料視覺化專題：臺北市氣溫]()
 - [監督式學習與 scikit-learn]()
-- [Kaggle 專題：Titanic: Machine Learning from Disaster]()
-- [Kaggle 專題：House Prices: Advanced Regression Techniques]()
+- [Kaggle 專題]()
 
 ### 資源
 
 - [Learn the Command Line(codecademy)](https://www.codecademy.com/learn/learn-the-command-line)
 - [Cygwin(Linux feeling on Windows)](http://www.cygwin.com/)
-- [Oracle VM VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-- [Ubuntu 正體中文站](https://www.ubuntu-tw.org/modules/tinyd0/)
 - [Anaconda](https://www.continuum.io/downloads)
 - [InstaCode](http://instacode.live/channel/tony)
-- [VM 映像檔 - zipped](https://drive.google.com/open?id=0B1RAmsOPDTw1VVdJSFRaRGZPQ2c)
 
 ### 近期課程錄影清單
 
