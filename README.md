@@ -35,10 +35,9 @@
 - [pandas 專題：世界能源指標](https://yaojenkuo.github.io/python_4_ds/pandas_energy_indicator.slides.html)
 - [靜態網頁擷取](https://yaojenkuo.github.io/python_4_ds/static_scraper.slides.html)
 - [動態網頁擷取](https://yaojenkuo.github.io/python_4_ds/dynamic_scraper.slides.html)
-- [資料視覺化]()
-- [資料視覺化專題：臺北市氣溫]()
-- [監督式學習與 scikit-learn]()
-- [Kaggle 專題]()
+- [資料視覺化](https://yaojenkuo.github.io/python_4_ds/pandas_viz.slides.html)
+- [監督式學習與 scikit-learn](https://yaojenkuo.github.io/python_4_ds/supervised_learning.slides.html)
+- [Kaggle 範例](https://yaojenkuo.github.io/python_4_ds/kaggle_demo.slides.html)
 
 ### 資源
 
