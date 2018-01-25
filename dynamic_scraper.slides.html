@@ -11863,6 +11863,16 @@ pip install pandas matplotlib selenium ipykernel
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#26356;&#26032;-Chrome-&#28687;&#35261;&#22120;">&#26356;&#26032; Chrome &#28687;&#35261;&#22120;<a class="anchor-link" href="#&#26356;&#26032;-Chrome-&#28687;&#35261;&#22120;">&#182;</a></h2><p><a href="https://www.google.com/chrome/browser/desktop/index.html">https://www.google.com/chrome/browser/desktop/index.html</a></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#19979;&#36617;&#39493;&#21205;-Chrome-&#28687;&#35261;&#22120;&#30340;-Driver">&#19979;&#36617;&#39493;&#21205; Chrome &#28687;&#35261;&#22120;&#30340; Driver<a class="anchor-link" href="#&#19979;&#36617;&#39493;&#21205;-Chrome-&#28687;&#35261;&#22120;&#30340;-Driver">&#182;</a></h2><p><a href="https://sites.google.com/a/chromium.org/chromedriver/downloads">https://sites.google.com/a/chromium.org/chromedriver/downloads</a></p>
 
 </div>
@@ -11875,7 +11885,7 @@ pip install pandas matplotlib selenium ipykernel
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#28204;&#35430;">&#28204;&#35430;<a class="anchor-link" href="#&#28204;&#35430;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
 
-<span class="n">driver_path</span> <span class="o">=</span> <span class="s2">&quot;~/Downloads/chromedriver.exe&quot;</span>
+<span class="n">driver_path</span> <span class="o">=</span> <span class="s2">&quot;C:/Users/user/Downloads/chromedriver.exe&quot;</span> <span class="c1"># 改為你的 driver 路徑</span>
 <span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">(</span><span class="n">executable_path</span> <span class="o">=</span> <span class="n">driver_path</span><span class="p">)</span>
 <span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;http://www.python.org&quot;</span><span class="p">)</span>
 </pre></div>
@@ -11890,6 +11900,26 @@ pip install pandas matplotlib selenium ipykernel
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#32080;&#26463;&#28204;&#35430;">&#32080;&#26463;&#28204;&#35430;<a class="anchor-link" href="#&#32080;&#26463;&#28204;&#35430;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="n">driver</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#20063;&#21487;&#20197;&#20351;&#29992;-Firefox">&#20063;&#21487;&#20197;&#20351;&#29992; Firefox<a class="anchor-link" href="#&#20063;&#21487;&#20197;&#20351;&#29992;-Firefox">&#182;</a></h2><p><a href="https://www.mozilla.org/en-US/firefox/new/">https://www.mozilla.org/en-US/firefox/new/</a></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#19979;&#36617;&#39493;&#21205;-Firefox-&#28687;&#35261;&#22120;&#30340;-Driver">&#19979;&#36617;&#39493;&#21205; Firefox &#28687;&#35261;&#22120;&#30340; Driver<a class="anchor-link" href="#&#19979;&#36617;&#39493;&#21205;-Firefox-&#28687;&#35261;&#22120;&#30340;-Driver">&#182;</a></h2><p><a href="https://www.mozilla.org/en-US/firefox/new/">https://www.mozilla.org/en-US/firefox/new/</a></p>
 
 </div>
 </div>
@@ -11952,8 +11982,8 @@ pip install pandas matplotlib selenium ipykernel
     <span class="kn">from</span> <span class="nn">selenium.webdriver.common.keys</span> <span class="k">import</span> <span class="n">Keys</span>
     <span class="kn">import</span> <span class="nn">time</span>
 
-    <span class="c1">#driver_path = &quot;~/Downloads/chromedriver.exe&quot;</span>
-    <span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">()</span>
+    <span class="n">driver_path</span> <span class="o">=</span> <span class="s2">&quot;C:/Users/user/Downloads/chromedriver.exe&quot;</span> <span class="c1"># 改為你的 driver 路徑</span>
+    <span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">(</span><span class="n">driver_path</span><span class="p">)</span>
     <span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;http://www.imdb.com/&quot;</span><span class="p">)</span>
     <span class="n">search_elem</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_css_selector</span><span class="p">(</span><span class="s2">&quot;#navbar-query&quot;</span><span class="p">)</span>
     <span class="n">search_elem</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="s1">&#39;la la land&#39;</span><span class="p">)</span>
@@ -12054,8 +12084,8 @@ pip install pandas matplotlib selenium ipykernel
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_top_100</span><span class="p">():</span>
     <span class="kn">from</span> <span class="nn">selenium</span> <span class="k">import</span> <span class="n">webdriver</span>
     
-    <span class="c1">#driver_path = &quot;~/Downloads/chromedriver.exe&quot;</span>
-    <span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">()</span>
+    <span class="n">driver_path</span> <span class="o">=</span> <span class="s2">&quot;C:/Users/user/Downloads/chromedriver.exe&quot;</span> <span class="c1"># 改為你的 driver 路徑</span>
+    <span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">(</span><span class="n">driver_path</span><span class="p">)</span>
     <span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://tw.finance.yahoo.com/&quot;</span><span class="p">)</span>
     <span class="n">more_rank_elem</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_css_selector</span><span class="p">(</span><span class="s1">&#39;.yui-text-left .yui-text-left table tr:nth-child(1) .stext div a&#39;</span><span class="p">)</span>
     <span class="n">more_rank_elem</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
@@ -12099,8 +12129,8 @@ pip install pandas matplotlib selenium ipykernel
  &#39;6409 旭隼&#39;,
  &#39;1590 亞德客-KY&#39;,
  &#39;6414 樺漢&#39;,
- &#39;6452 康友-KY&#39;,
  &#39;2723 美食-KY&#39;,
+ &#39;6452 康友-KY&#39;,
  &#39;2059 川湖&#39;,
  &#39;2327 國巨&#39;,
  &#39;2207 和泰車&#39;,
@@ -12108,92 +12138,92 @@ pip install pandas matplotlib selenium ipykernel
  &#39;2049 上銀&#39;,
  &#39;2474 可成&#39;,
  &#39;2454 聯發科&#39;,
+ &#39;2231 為升&#39;,
  &#39;8464 億豐&#39;,
+ &#39;3443 創意&#39;,
  &#39;1476 儒鴻&#39;,
  &#39;2912 統一超&#39;,
  &#39;3406 玉晶光&#39;,
- &#39;2231 為升&#39;,
+ &#39;2357 華碩&#39;,
  &#39;4943 康控-KY&#39;,
  &#39;2227 裕日車&#39;,
- &#39;2357 華碩&#39;,
  &#39;3665 貿聯-KY&#39;,
- &#39;3443 創意&#39;,
- &#39;8341 日友&#39;,
  &#39;2330 台積電&#39;,
- &#39;2395 研華&#39;,
+ &#39;8341 日友&#39;,
  &#39;3413 京鼎&#39;,
+ &#39;2395 研華&#39;,
  &#39;8454 富邦媒&#39;,
+ &#39;2939 凱羿-KY&#39;,
  &#39;1707 葡萄王&#39;,
- &#39;6456 GIS-KY&#39;,
  &#39;3533 嘉澤&#39;,
+ &#39;6456 GIS-KY&#39;,
  &#39;2496 卓越&#39;,
  &#39;2439 美律&#39;,
+ &#39;3130 一零四&#39;,
  &#39;8422 可寧衛&#39;,
  &#39;4551 智伸科&#39;,
  &#39;4763 材料-KY&#39;,
  &#39;9921 巨大&#39;,
- &#39;3130 一零四&#39;,
+ &#39;2239 英利-KY&#39;,
  &#39;2360 致茂&#39;,
  &#39;6504 南六&#39;,
  &#39;2707 晶華&#39;,
- &#39;2239 英利-KY&#39;,
  &#39;8070 長華&#39;,
  &#39;1537 廣隆&#39;,
- &#39;6451 訊芯-KY&#39;,
- &#39;1256 鮮活果汁-KY&#39;,
- &#39;9910 豐泰&#39;,
- &#39;2727 王品&#39;,
  &#39;2308 台達電&#39;,
+ &#39;1256 鮮活果汁-KY&#39;,
  &#39;8114 振樺電&#39;,
- &#39;4438 廣越&#39;,
+ &#39;6451 訊芯-KY&#39;,
+ &#39;2727 王品&#39;,
  &#39;4912 聯德控股-KY&#39;,
- &#39;4137 麗豐-KY&#39;,
- &#39;4148 全宇生技-KY&#39;,
  &#39;1477 聚陽&#39;,
- &#39;1536 和大&#39;,
- &#39;8480 泰昇-KY&#39;,
+ &#39;9910 豐泰&#39;,
+ &#39;4438 廣越&#39;,
  &#39;9914 美利達&#39;,
- &#39;1723 中碳&#39;,
- &#39;1558 伸興&#39;,
- &#39;9938 百和&#39;,
- &#39;3450 聯鈞&#39;,
- &#39;6271 同欣電&#39;,
+ &#39;4137 麗豐-KY&#39;,
  &#39;2731 雄獅&#39;,
- &#39;6533 晶心科&#39;,
- &#39;6464 台數科&#39;,
- &#39;6505 台塑化&#39;,
- &#39;3026 禾伸堂&#39;,
- &#39;2345 智邦&#39;,
+ &#39;1536 和大&#39;,
+ &#39;1723 中碳&#39;,
+ &#39;8480 泰昇-KY&#39;,
+ &#39;3450 聯鈞&#39;,
  &#39;3532 台勝科&#39;,
+ &#39;1558 伸興&#39;,
+ &#39;6271 同欣電&#39;,
  &#39;3034 聯詠&#39;,
- &#39;1338 廣華-KY&#39;,
- &#39;9941 裕融&#39;,
- &#39;4977 眾達-KY&#39;,
- &#39;2379 瑞昱&#39;,
  &#39;6591 動力-KY&#39;,
+ &#39;4148 全宇生技-KY&#39;,
+ &#39;6505 台塑化&#39;,
+ &#39;6464 台數科&#39;,
+ &#39;3026 禾伸堂&#39;,
+ &#39;6533 晶心科&#39;,
+ &#39;2379 瑞昱&#39;,
+ &#39;9941 裕融&#39;,
  &#39;4739 康普&#39;,
+ &#39;1338 廣華-KY&#39;,
  &#39;2929 淘帝-KY&#39;,
+ &#39;2455 全新&#39;,
+ &#39;4977 眾達-KY&#39;,
+ &#39;2345 智邦&#39;,
+ &#39;6269 台郡&#39;,
  &#39;3045 台灣大&#39;,
  &#39;2412 中華電&#39;,
  &#39;1326 台化&#39;,
- &#39;2492 華新科&#39;,
- &#39;6269 台郡&#39;,
+ &#39;9938 百和&#39;,
+ &#39;3661 世芯-KY&#39;,
  &#39;2228 劍麟&#39;,
- &#39;8499 鼎炫-KY&#39;,
- &#39;2383 台光電&#39;,
- &#39;2456 奇力新&#39;,
- &#39;1301 台塑&#39;,
- &#39;4552 力達-KY&#39;,
+ &#39;2492 華新科&#39;,
  &#39;5264 鎧勝-KY&#39;,
- &#39;3617 碩天&#39;,
- &#39;6230 超眾&#39;,
  &#39;3044 健鼎&#39;,
- &#39;2455 全新&#39;,
+ &#39;4552 力達-KY&#39;,
+ &#39;1301 台塑&#39;,
+ &#39;3617 碩天&#39;,
+ &#39;2456 奇力新&#39;,
+ &#39;2383 台光電&#39;,
+ &#39;1526 日馳&#39;,
+ &#39;2317 鴻海&#39;,
+ &#39;5871 中租-KY&#39;,
  &#39;3019 亞光&#39;,
- &#39;6605 帝寶&#39;,
- &#39;3454 晶睿&#39;,
- &#39;9942 茂順&#39;,
- &#39;5871 中租-KY&#39;]</pre>
+ &#39;6230 超眾&#39;]</pre>
 </div>
 
 </div>
@@ -12201,26 +12231,6 @@ pip install pandas matplotlib selenium ipykernel
 </div>
 </div>
 
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38568;&#22530;&#32244;&#32722;">&#38568;&#22530;&#32244;&#32722;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;">&#182;</a></h2><p>擷取股票代碼、股票名稱與成交價</p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38568;&#22530;&#32244;&#32722;">&#38568;&#22530;&#32244;&#32722;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;">&#182;</a></h2><p>選擇適當的資料結構儲存 IMDB 資料與股票資料</p>
-
-</div>
-</div>
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
