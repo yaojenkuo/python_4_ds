@@ -6,7 +6,8 @@
 
 ### 評分標準
 
-70 分即可獲得證書，作業請寄至 tony@kyosei.ai，註明班別與姓名。
+- 70 分即可獲得證書，作業請寄至 tony@kyosei.ai，註明班別與姓名
+- 作業繳交期限為課程結束後一週內，如遇長假期（春節、連假）則順延
 
 [作業連結](https://yaojenkuo.github.io/python_4_ds/homework.slides.html)
 
