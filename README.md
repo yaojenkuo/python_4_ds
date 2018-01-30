@@ -45,10 +45,10 @@
 - [Learn the Command Line(codecademy)](https://www.codecademy.com/learn/learn-the-command-line)
 - [Cygwin(Linux feeling on Windows)](http://www.cygwin.com/)
 - [Anaconda](https://www.continuum.io/downloads)
-- [InstaCode](http://instacode.live/channel/tony)
 
 ### 近期課程錄影清單
 
+- [第 294 期 Python 與資料科學應用（寒假密集班）](https://youtu.be/iMGvasO_xOA)
 - [第 293 期 Python 與資料科學應用（寒假密集班）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuUp3Iv2e9CFSMpocWSB36va)
 - [第 290 期 Python 與資料科學應用（假日班下午）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuXK0Rs8VVzDMJEiN2ZlvFr4)
 - [第 289 期 Python 與資料科學應用（假日班下午）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuVnMbRb76tCn2qW3Ft9osAz)
