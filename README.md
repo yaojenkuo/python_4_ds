@@ -40,11 +40,26 @@
 - [監督式學習與 scikit-learn](https://yaojenkuo.github.io/python_4_ds/supervised_learning.slides.html)
 - [Kaggle 範例](https://yaojenkuo.github.io/python_4_ds/kaggle_demo.slides.html)
 
-### 資源
+### 學習資源
+
+#### 關於命令列
 
 - [Learn the Command Line(codecademy)](https://www.codecademy.com/learn/learn-the-command-line)
 - [Cygwin(Linux feeling on Windows)](http://www.cygwin.com/)
+
+#### 關於開發環境
+
+- [Python 與資料科學入門：建立開發環境](https://www.udemy.com/intro-to-python-ds-1)
+- [Simple Python Version Management: pyenv](https://github.com/pyenv/pyenv)
 - [Anaconda](https://www.continuum.io/downloads)
+
+#### 關於 Python
+
+- [Codecademy](https://www.codecademy.com/learn/learn-python)
+- [Introducing Python](http://shop.oreilly.com/product/0636920028659.do)
+- [Learn Python the Hard Way](https://www.amazon.com/Learn-Python-Hard-Way-Introduction/dp/0321884914)
+- [Python for Data Analysis](http://shop.oreilly.com/product/0636920023784.do)
+- [scikit-learn - Machine Learning in Python](http://scikit-learn.org/stable/)
 
 ### 近期課程錄影清單
 
@@ -56,12 +71,3 @@
 - [第 285 期 Python 與資料科學應用（暑期密集班）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuX9DstAUP0yFc8Ay6AMuvkS)
 - [第 283 期 Python 與資料科學應用（假日班下午）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuXWTMjHisPwOHKhu_jZPn2C)
 - [第 280 期 Python 與資料科學應用（夜間班）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuVLOqYRt9QwUme8S5oXioxB)
-
-### 推薦學習資源/書籍
-
-- [Python 與資料科學入門：建立開發環境](https://www.udemy.com/intro-to-python-ds-1)
-- [Codecademy](https://www.codecademy.com)
-- [Introducing Python](http://shop.oreilly.com/product/0636920028659.do)
-- [Learn Python the Hard Way](https://www.amazon.com/Learn-Python-Hard-Way-Introduction/dp/0321884914)
-- [Python for Data Analysis](http://shop.oreilly.com/product/0636920023784.do)
-- [scikit-learn - Machine Learning in Python](http://scikit-learn.org/stable/)
