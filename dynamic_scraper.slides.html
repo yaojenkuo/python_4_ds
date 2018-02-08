@@ -11919,7 +11919,33 @@ pip install pandas matplotlib selenium ipykernel
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#19979;&#36617;&#39493;&#21205;-Firefox-&#28687;&#35261;&#22120;&#30340;-Driver">&#19979;&#36617;&#39493;&#21205; Firefox &#28687;&#35261;&#22120;&#30340; Driver<a class="anchor-link" href="#&#19979;&#36617;&#39493;&#21205;-Firefox-&#28687;&#35261;&#22120;&#30340;-Driver">&#182;</a></h2><p><a href="https://www.mozilla.org/en-US/firefox/new/">https://www.mozilla.org/en-US/firefox/new/</a></p>
+<h2 id="&#19979;&#36617;&#39493;&#21205;-Firefox-&#28687;&#35261;&#22120;&#30340;-Driver">&#19979;&#36617;&#39493;&#21205; Firefox &#28687;&#35261;&#22120;&#30340; Driver<a class="anchor-link" href="#&#19979;&#36617;&#39493;&#21205;-Firefox-&#28687;&#35261;&#22120;&#30340;-Driver">&#182;</a></h2><p><a href="https://github.com/mozilla/geckodriver/releases">https://github.com/mozilla/geckodriver/releases</a></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#32080;&#26463;&#28204;&#35430;">&#32080;&#26463;&#28204;&#35430;<a class="anchor-link" href="#&#32080;&#26463;&#28204;&#35430;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="n">driver</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#28204;&#35430;">&#28204;&#35430;<a class="anchor-link" href="#&#28204;&#35430;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+
+<span class="n">driver_path</span> <span class="o">=</span> <span class="s2">&quot;C:/Users/user/Downloads/geckodriver.exe&quot;</span> <span class="c1"># 改為你的 driver 路徑</span>
+<span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Firefox</span><span class="p">(</span><span class="n">executable_path</span> <span class="o">=</span> <span class="n">driver_path</span><span class="p">)</span>
+<span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;http://www.python.org&quot;</span><span class="p">)</span>
+</pre></div>
 
 </div>
 </div>
@@ -11935,7 +11961,7 @@ pip install pandas matplotlib selenium ipykernel
 <li><code>.backward()</code>: 上一頁</li>
 <li><code>.close()</code>: 關閉瀏覽器</li>
 <li><code>.find_element(s)_by_css_selector</code>: 利用 CSS 選擇器擷取一個或多個元素</li>
-<li><code>.find_element(s)_by_xpath_selector</code>: 利用 XPath 選擇器擷取一個或多個元素</li>
+<li><code>.find_element(s)_by_xpath</code>: 利用 XPath 選擇器擷取一個或多個元素</li>
 </ul>
 
 </div>
