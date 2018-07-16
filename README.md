@@ -10,7 +10,6 @@
 - 70 分即可獲得證書，作業請寄至 tony@kyosei.ai，註明班別與姓名
 - 作業繳交期限為課程結束後一週內，如遇長假期（春節、連假）則順延
 
-
 ### 課程互動頻道
 
 <https://www.sli.do>
@@ -30,8 +29,9 @@
 - [pandas 專題：美國普查](https://yaojenkuo.github.io/python_4_ds/pandas_us_census.slides.html)
 - [pandas 專題：世界能源指標](https://yaojenkuo.github.io/python_4_ds/pandas_energy_indicator.slides.html)
 - [資料視覺化](https://yaojenkuo.github.io/python_4_ds/data_viz.slides.html)
-- [監督式學習與 scikit-learn](https://yaojenkuo.github.io/python_4_ds/supervised_learning.slides.html)
-- [Kaggle 範例](https://yaojenkuo.github.io/python_4_ds/kaggle_demo.slides.html)
+- [機器學習簡介](https://yaojenkuo.github.io/python_4_ds/intro_2_ml.slides.html)
+- [迴歸問題](https://yaojenkuo.github.io/python_4_ds/regression.slides.html)
+- [分類問題](https://yaojenkuo.github.io/python_4_ds/classification.slides.html)
 
 ### 學習資源
 
