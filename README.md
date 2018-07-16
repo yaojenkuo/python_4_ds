@@ -9,17 +9,15 @@
 - 70 分即可獲得證書，作業請寄至 tony@kyosei.ai，註明班別與姓名
 - 作業繳交期限為課程結束後一週內，如遇長假期（春節、連假）則順延
 
-<!--
 [作業連結](https://yaojenkuo.github.io/python_4_ds/homework.slides.html)
 
-|作業編號|作業名稱|作業分數|
-|-------|------|-------|
-|作業 0|模組與套件|30/250|
-|作業 1|NumPy 入門|30/250|
-|作業 2|pandas 入門|70/250|
-|作業 3|網站爬蟲|50/250|
-|作業 4|監督式學習與 scikit-learn|70/250|
--->
+### 課程互動頻道
+
+<https://www.sli.do>
+
+### 課程共用筆記
+
+[300 期寒假密集班](https://colab.research.google.com/drive/1D_a3idela6AvAMOm4AxigfoecY1YlQvm)
 
 ### 課程大綱
 
