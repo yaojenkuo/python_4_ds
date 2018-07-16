@@ -11839,6 +11839,72 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#21629;&#20196;&#21015;">&#21629;&#20196;&#21015;<a class="anchor-link" href="#&#21629;&#20196;&#21015;">&#182;</a></h2><ul>
+<li>Windows 使用者請下載 <a href="http://cmder.net/">cmder</a></li>
+<li>macOS 使用者請啟動 Terminal 終端機應用程式（Spotlight search -&gt; "Terminal"）</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#21629;&#20196;&#21015;&#26159;&#20160;&#40636;&#65311;">&#21629;&#20196;&#21015;&#26159;&#20160;&#40636;&#65311;<a class="anchor-link" href="#&#21629;&#20196;&#21015;&#26159;&#20160;&#40636;&#65311;">&#182;</a></h2><ul>
+<li>電腦並不是一開始就有圖形化介面（Graphic User Interface, GUI）</li>
+<li>也不是一開始就有滑鼠</li>
+<li>因此跟電腦的溝通工具是命令列</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#22522;&#30990;&#21629;&#20196;&#21015;&#25351;&#20196;">&#22522;&#30990;&#21629;&#20196;&#21015;&#25351;&#20196;<a class="anchor-link" href="#&#22522;&#30990;&#21629;&#20196;&#21015;&#25351;&#20196;">&#182;</a></h2><ul>
+<li><code>pwd</code></li>
+<li><code>ls</code></li>
+<li><code>cd</code></li>
+<li><code>mkdir</code></li>
+<li><code>touch</code></li>
+<li><code>mv</code></li>
+<li><code>cp</code></li>
+<li><code>exit</code></li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#38283;&#30332;&#29872;&#22659;">&#38283;&#30332;&#29872;&#22659;<a class="anchor-link" href="#&#38283;&#30332;&#29872;&#22659;">&#182;</a></h2><ul>
+<li>瀏覽器<ul>
+<li>Google Colaboratory</li>
+<li>Project Jupyter</li>
+</ul>
+</li>
+<li>本機<ul>
+<li>Anaconda</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#30452;&#25509;&#22312;&#28687;&#35261;&#22120;&#20351;&#29992;">&#30452;&#25509;&#22312;&#28687;&#35261;&#22120;&#20351;&#29992;<a class="anchor-link" href="#&#30452;&#25509;&#22312;&#28687;&#35261;&#22120;&#20351;&#29992;">&#182;</a></h2><ul>
 <li><a href="https://research.google.com/colaboratory/faq.html">Google Colaboratory</a></li>
 <li><a href="http://jupyter.org/">Project Jupyter</a></li>
@@ -11919,8 +11985,8 @@ a.anchor-link {
 <li>為了避免套件版本衝突，可以建立資源隔絕的虛擬環境</li>
 </ul>
 <div class="highlight"><pre><span></span>conda create -n pyscraper <span class="nv">python</span><span class="o">=</span>3
-<span class="o">(</span><span class="nb">source</span><span class="o">)</span> activate pyscraper
-pip install pandas matplotlib beautifulsoup4 selenium ipykernel
+activate pyscraper <span class="c1"># macOS 使用者請下 source activate pyscraper</span>
+pip install ipykernel
 </pre></div>
 
 </div>
@@ -11967,7 +12033,7 @@ jupyter kernelspec remove pyscraper
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#31227;&#38500;&#34395;&#25836;&#29872;&#22659;">&#31227;&#38500;&#34395;&#25836;&#29872;&#22659;<a class="anchor-link" href="#&#31227;&#38500;&#34395;&#25836;&#29872;&#22659;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="o">(</span><span class="nb">source</span><span class="o">)</span> deactivate
+<h2 id="&#31227;&#38500;&#34395;&#25836;&#29872;&#22659;">&#31227;&#38500;&#34395;&#25836;&#29872;&#22659;<a class="anchor-link" href="#&#31227;&#38500;&#34395;&#25836;&#29872;&#22659;">&#182;</a></h2><div class="highlight"><pre><span></span>deactivate <span class="c1"># macOS 使用者請下 source deactivate</span>
 conda env list
 conda remove --name pyscraper --all
 </pre></div>
@@ -11981,6 +12047,19 @@ conda remove --name pyscraper --all
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#38568;&#22530;&#32244;&#32722;">&#38568;&#22530;&#32244;&#32722;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;">&#182;</a></h2><p>自行操作一次新增虛擬環境與 Kernel</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#35037;-pep8-&#22806;&#25499;&#65288;optional&#65289;">&#35037; pep8 &#22806;&#25499;&#65288;optional&#65289;<a class="anchor-link" href="#&#35037;-pep8-&#22806;&#25499;&#65288;optional&#65289;">&#182;</a></h2><div class="highlight"><pre><span></span>$ pip install --upgrade pep8
+$ jupyter nbextension install https://github.com/kenkoooo/jupyter-autopep8/archive/master.zip --user
+$ jupyter nbextension <span class="nb">enable</span> jupyter-autopep8-master/jupyter-autopep8
+</pre></div>
 
 </div>
 </div>
