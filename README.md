@@ -9,6 +9,7 @@
 - 70 分即可獲得證書，作業請寄至 tony@kyosei.ai，註明班別與姓名
 - 作業繳交期限為課程結束後一週內，如遇長假期（春節、連假）則順延
 
+<!--
 [作業連結](https://yaojenkuo.github.io/python_4_ds/homework.slides.html)
 
 |作業編號|作業名稱|作業分數|
@@ -18,42 +19,23 @@
 |作業 2|pandas 入門|70/250|
 |作業 3|網站爬蟲|50/250|
 |作業 4|監督式學習與 scikit-learn|70/250|
+-->
 
 ### 課程大綱
 
 - [建立開發環境](https://yaojenkuo.github.io/python_4_ds/dev_env.slides.html)
-- [Python 基礎（Crash Course）](https://yaojenkuo.github.io/python_4_ds/python_crash_course.slides.html)
-    - [變數型別](https://yaojenkuo.github.io/python_4_ds/variable_types.slides.html)
-    - [資料結構](https://yaojenkuo.github.io/python_4_ds/data_structure.slides.html)
-    - [迴圈](https://yaojenkuo.github.io/python_4_ds/loop.slides.html)
-    - [流程控制](https://yaojenkuo.github.io/python_4_ds/control_statement.slides.html)
-    - [自訂函數](https://yaojenkuo.github.io/python_4_ds/function.slides.html)
-- [模組與套件](https://yaojenkuo.github.io/python_4_ds/module.slides.html)
+- [靜態網頁擷取](https://yaojenkuo.github.io/python_4_ds/static_scraper.slides.html)
+- [動態網頁擷取](https://yaojenkuo.github.io/python_4_ds/dynamic_scraper.slides.html)
 - [NumPy 入門](https://yaojenkuo.github.io/python_4_ds/ch4.slides.html)
 - [pandas 入門](https://yaojenkuo.github.io/python_4_ds/pandas_intro.slides.html)
 - [pandas 專題：奧運獎牌排行](https://yaojenkuo.github.io/python_4_ds/pandas_olympic.slides.html)
 - [pandas 專題：美國普查](https://yaojenkuo.github.io/python_4_ds/pandas_us_census.slides.html)
 - [pandas 專題：世界能源指標](https://yaojenkuo.github.io/python_4_ds/pandas_energy_indicator.slides.html)
-- [靜態網頁擷取](https://yaojenkuo.github.io/python_4_ds/static_scraper.slides.html)
-- [動態網頁擷取](https://yaojenkuo.github.io/python_4_ds/dynamic_scraper.slides.html)
 - [資料視覺化](https://yaojenkuo.github.io/python_4_ds/pandas_viz.slides.html)
 - [監督式學習與 scikit-learn](https://yaojenkuo.github.io/python_4_ds/supervised_learning.slides.html)
 - [Kaggle 範例](https://yaojenkuo.github.io/python_4_ds/kaggle_demo.slides.html)
 
 ### 學習資源
-
-#### 關於命令列
-
-- [Learn the Command Line(codecademy)](https://www.codecademy.com/learn/learn-the-command-line)
-- [Cygwin(Linux feeling on Windows)](http://www.cygwin.com/)
-
-#### 關於開發環境
-
-- [Python 與資料科學入門：建立開發環境](https://www.udemy.com/intro-to-python-ds-1)
-- [Simple Python Version Management: pyenv](https://github.com/pyenv/pyenv)
-- [Anaconda](https://www.continuum.io/downloads)
-
-#### 關於 Python
 
 - [Codecademy](https://www.codecademy.com/learn/learn-python)
 - [Introducing Python](http://shop.oreilly.com/product/0636920028659.do)
