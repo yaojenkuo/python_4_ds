@@ -16,7 +16,7 @@
 
 ### 課程共用筆記
 
-[300 期寒假密集班](https://colab.research.google.com/drive/1D_a3idela6AvAMOm4AxigfoecY1YlQvm)
+[300 期暑假密集班](https://colab.research.google.com/drive/1D_a3idela6AvAMOm4AxigfoecY1YlQvm)
 
 ### 課程大綱
 
