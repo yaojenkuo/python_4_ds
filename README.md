@@ -14,9 +14,10 @@
 
 <https://www.sli.do>
 
-### 課程共用筆記
+### 課程共筆
 
-[300 期暑假密集班](https://colab.research.google.com/drive/1D_a3idela6AvAMOm4AxigfoecY1YlQvm)
+- [301 期暑假密集班](https://colab.research.google.com/drive/1cxguHMhanA3_JNKkr_yliPFOzK6bnF15)
+- [300 期暑假密集班](https://colab.research.google.com/drive/1D_a3idela6AvAMOm4AxigfoecY1YlQvm)
 
 ### 課程大綱
 
@@ -35,9 +36,8 @@
 
 ### 學習資源
 
-- [Codecademy](https://www.codecademy.com/learn/learn-python)
-- [Introducing Python](http://shop.oreilly.com/product/0636920028659.do)
-- [Learn Python the Hard Way](https://www.amazon.com/Learn-Python-Hard-Way-Introduction/dp/0321884914)
+- [DataCamp](https://www.datacamp.com?tap_a=5644-dce66f&tap_s=194899-1fb421)
+- [DataInPoint](https://medium.com/datainpoint)
 - [Python for Data Analysis](http://shop.oreilly.com/product/0636920023784.do)
 - [scikit-learn - Machine Learning in Python](http://scikit-learn.org/stable/)
 
