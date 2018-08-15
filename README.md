@@ -16,6 +16,7 @@
 
 ### 課程共筆
 
+- [302 期暑假密集班](https://colab.research.google.com/drive/19NImQH5Ojwn9UD4dediEgna6UCEQRT7p)
 - [301 期暑假密集班](https://colab.research.google.com/drive/1cxguHMhanA3_JNKkr_yliPFOzK6bnF15)
 - [300 期暑假密集班](https://colab.research.google.com/drive/1D_a3idela6AvAMOm4AxigfoecY1YlQvm)
 
@@ -43,7 +44,8 @@
 
 ### 近期課程錄影清單
 
-- [第 301 期 Python 與資料科學應用（暑期密集班](https://www.youtube.com/playlist?list=PLEq7iw5uOtuWmjDABIfpTG8LM8IsdOvjE)
+- [第 302 期 Python 與資料科學應用（暑期密集班）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuUNW-DdH-w1MYIiq3S1hTsi)
+- [第 301 期 Python 與資料科學應用（暑期密集班）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuWmjDABIfpTG8LM8IsdOvjE)
 - [第 300 期 Python 與資料科學應用（暑期密集班）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuVulxWyLq6pyMDYRvQmR04T)
 - [第 294 期 Python 與資料科學應用（寒假密集班）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuWxEa90e19wI1mjG5K7Beid)
 - [第 293 期 Python 與資料科學應用（寒假密集班）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuUp3Iv2e9CFSMpocWSB36va)
