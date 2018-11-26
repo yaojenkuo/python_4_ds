@@ -36,7 +36,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 
 <!-- Loading the mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -58,7 +58,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
     <!-- End of mathjax configuration -->
 
 <!-- Get Font-awesome from cdn -->
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.css">
 
 <style type="text/css">
     /*!
@@ -67,8 +67,8 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 *
 */
 /*!
- * Bootstrap v3.3.6 (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
+ * Bootstrap v3.3.7 (http://getbootstrap.com)
+ * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -1163,7 +1163,6 @@ a:focus {
   text-decoration: underline;
 }
 a:focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -2592,7 +2591,6 @@ select[size] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -3083,7 +3081,6 @@ select[multiple].input-lg {
 .btn.focus,
 .btn:active.focus,
 .btn.active.focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -8814,6 +8811,9 @@ body > #header .header-bar {
     margin-left: 10px;
   }
 }
+[dir="rtl"] #ipython_notebook {
+  float: right !important;
+}
 #noscript {
   width: auto;
   padding-top: 16px;
@@ -9016,8 +9016,14 @@ span#login_widget > .button .badge,
  *
  * Author: Jupyter Development Team
  */
+[dir="rtl"] #tabs li {
+  float: right;
+}
 ul#tabs {
   margin-bottom: 4px;
+}
+[dir="rtl"] ul#tabs {
+  margin-right: 0px;
 }
 ul#tabs a {
   padding-top: 6px;
@@ -9040,6 +9046,16 @@ ul.breadcrumb span {
 }
 .list_toolbar .tree-buttons {
   padding-top: 1px;
+}
+[dir="rtl"] .list_toolbar .tree-buttons {
+  float: left !important;
+}
+[dir="rtl"] .list_toolbar .pull-right {
+  padding-top: 1px;
+  float: left !important;
+}
+[dir="rtl"] .list_toolbar .pull-left {
+  float: right !important;
 }
 .dynamic-buttons {
   padding-top: 3px;
@@ -9176,6 +9192,9 @@ ul.breadcrumb span {
 #tree-selector {
   padding-right: 0px;
 }
+[dir="rtl"] #tree-selector a {
+  float: right;
+}
 #button-select-all {
   min-width: 50px;
 }
@@ -9265,6 +9284,9 @@ ul#new-menu {
   left: auto;
   right: 0;
 }
+[dir="rtl"] #new-menu {
+  text-align: right;
+}
 .kernel-menu-icon {
   padding-right: 12px;
   width: 24px;
@@ -9309,6 +9331,9 @@ ul#new-menu {
 }
 #running .panel-group .panel .panel-body .list_container .list_item:last-child {
   border-bottom: 0px;
+}
+[dir="rtl"] #running .col-sm-8 {
+  float: right !important;
 }
 .delete-button {
   display: none;
@@ -9605,6 +9630,7 @@ div.cell.selected.jupyter-soft-selected {
   }
 }
 div.inner_cell {
+  min-width: 0;
   /* Old browsers */
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -9625,11 +9651,6 @@ div.inner_cell {
   box-flex: 1;
   /* Modern browsers */
   flex: 1;
-}
-@-moz-document url-prefix() {
-  div.inner_cell {
-    overflow-x: hidden;
-  }
 }
 /* input_area and input_prompt must match in top border and margin for alignment */
 div.input_area {
@@ -11300,7 +11321,7 @@ div#pager .ui-resizable-handle::after {
 }
 .shortcut_key {
   display: inline-block;
-  width: 20ex;
+  width: 21ex;
   text-align: right;
   font-family: monospace;
 }
@@ -11612,6 +11633,7 @@ ul.typeahead-list > li > a {
   box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
 }
 .terminal-app .terminal {
+  width: 100%;
   float: left;
   font-family: monospace;
   color: white;
@@ -11625,6 +11647,9 @@ ul.typeahead-list > li > a {
 .terminal-app .terminal dummy-screen {
   line-height: 1em;
   font-size: 14px;
+}
+.terminal-app .terminal .xterm-rows {
+  padding: 10px;
 }
 .terminal-app .terminal-cursor {
   color: black;
@@ -11747,7 +11772,6 @@ ul.typeahead-list > li > a {
 /* Overrides of notebook CSS for static HTML export */
 .reveal {
   font-size: 160%;
-  overflow-y: scroll;
 }
 .reveal pre {
   width: inherit;
@@ -11777,6 +11801,41 @@ ul.typeahead-list > li > a {
 }
 .reveal .progress {
   position: static;
+}
+.reveal .controls .navigate-left,
+.reveal .controls .navigate-left.enabled {
+  border-right-color: #727272;
+}
+.reveal .controls .navigate-left.enabled:hover,
+.reveal .controls .navigate-left.enabled.enabled:hover {
+  border-right-color: #dfdfdf;
+}
+.reveal .controls .navigate-right,
+.reveal .controls .navigate-right.enabled {
+  border-left-color: #727272;
+}
+.reveal .controls .navigate-right.enabled:hover,
+.reveal .controls .navigate-right.enabled.enabled:hover {
+  border-left-color: #dfdfdf;
+}
+.reveal .controls .navigate-up,
+.reveal .controls .navigate-up.enabled {
+  border-bottom-color: #727272;
+}
+.reveal .controls .navigate-up.enabled:hover,
+.reveal .controls .navigate-up.enabled.enabled:hover {
+  border-bottom-color: #dfdfdf;
+}
+.reveal .controls .navigate-down,
+.reveal .controls .navigate-down.enabled {
+  border-top-color: #727272;
+}
+.reveal .controls .navigate-down.enabled:hover,
+.reveal .controls .navigate-down.enabled.enabled:hover {
+  border-top-color: #dfdfdf;
+}
+.reveal .progress span {
+  background: #727272;
 }
 div.input_area {
   padding: 0.06em;
@@ -11811,6 +11870,19 @@ a.anchor-link {
 .rendered_html p {
   text-align: inherit;
 }
+::-webkit-scrollbar
+{
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar *
+{
+  background:transparent;
+}
+::-webkit-scrollbar-thumb
+{
+  background: #727272 !important;
+}
 </style>
 
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
@@ -11825,29 +11897,406 @@ a.anchor-link {
 <div class="reveal">
 <div class="slides">
 <section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="&#38748;&#24907;&#32178;&#38913;&#25847;&#21462;">&#38748;&#24907;&#32178;&#38913;&#25847;&#21462;<a class="anchor-link" href="#&#38748;&#24907;&#32178;&#38913;&#25847;&#21462;">&#182;</a></h1><h2 id="&#37101;&#32768;&#20161;">&#37101;&#32768;&#20161;<a class="anchor-link" href="#&#37101;&#32768;&#20161;">&#182;</a></h2>
 </div>
 </div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#20808;&#23433;&#35037;-chrome-&#22806;&#25499;">&#20808;&#23433;&#35037; chrome &#22806;&#25499;<a class="anchor-link" href="#&#20808;&#23433;&#35037;-chrome-&#22806;&#25499;">&#182;</a></h2><ul>
+<h2 id="&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#30340;&#26680;&#24515;&#20219;&#21209;">&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#30340;&#26680;&#24515;&#20219;&#21209;<a class="anchor-link" href="#&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#30340;&#26680;&#24515;&#20219;&#21209;">&#182;</a></h2><ul>
+<li>如何獲得資料</li>
+<li>如何解析資料</li>
+<li>如何清理整併資料</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#32178;&#38913;&#36039;&#26009;&#20358;&#28304;">&#32178;&#38913;&#36039;&#26009;&#20358;&#28304;<a class="anchor-link" href="#&#32178;&#38913;&#36039;&#26009;&#20358;&#28304;">&#182;</a></h2><ul>
+<li><a href="https://www.json.org/">JSON</a></li>
+<li><a href="https://zh.wikipedia.org/zh-tw/HTML">HTML</a></li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="JSON">JSON<a class="anchor-link" href="#JSON">&#182;</a></h2>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#20197;-json-&#22871;&#20214;&#35299;&#26512;-JSON-&#25991;&#23383;&#28858;-dict">&#20197; <code>json</code> &#22871;&#20214;&#35299;&#26512; JSON &#25991;&#23383;&#28858; <code>dict</code><a class="anchor-link" href="#&#20197;-json-&#22871;&#20214;&#35299;&#26512;-JSON-&#25991;&#23383;&#28858;-dict">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="n">json_str</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">{</span>
+<span class="s2">  &quot;teamName&quot;: &quot;Chicago Bulls&quot;,</span>
+<span class="s2">  &quot;season&quot;: &quot;1995-96&quot;,</span>
+<span class="s2">  &quot;records&quot;: {</span>
+<span class="s2">    &quot;wins&quot;: 72,</span>
+<span class="s2">    &quot;losses&quot;: 10</span>
+<span class="s2">  },</span>
+<span class="s2">  &quot;startingLineup&quot;: [&quot;Ron Harper&quot;, &quot;Michael Jordan&quot;, &quot;Scottie Pippen&quot;, &quot;Dennis Rodman&quot;, &quot;Luc Longley&quot;],</span>
+<span class="s2">  &quot;isChampion&quot;: true</span>
+<span class="s2">}</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">json_dict</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">json_str</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">json_dict</span><span class="p">))</span>
+<span class="n">json_dict</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;dict&#39;&gt;
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[13]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;isChampion&#39;: True,
+ &#39;records&#39;: {&#39;losses&#39;: 10, &#39;wins&#39;: 72},
+ &#39;season&#39;: &#39;1995-96&#39;,
+ &#39;startingLineup&#39;: [&#39;Ron Harper&#39;,
+  &#39;Michael Jordan&#39;,
+  &#39;Scottie Pippen&#39;,
+  &#39;Dennis Rodman&#39;,
+  &#39;Luc Longley&#39;],
+ &#39;teamName&#39;: &#39;Chicago Bulls&#39;}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#22914;&#26524;&#26159;&#26412;&#27231;&#30340;-.json-&#27284;&#26696;">&#22914;&#26524;&#26159;&#26412;&#27231;&#30340; .json &#27284;&#26696;<a class="anchor-link" href="#&#22914;&#26524;&#26159;&#26412;&#27231;&#30340;-.json-&#27284;&#26696;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;chicago_bulls_19951996.json&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">json_data</span><span class="p">:</span>
+  <span class="n">json_dict</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">json_data</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">json_dict</span><span class="p">))</span>
+<span class="n">json_dict</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;dict&#39;&gt;
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[17]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;isChampion&#39;: True,
+ &#39;records&#39;: {&#39;losses&#39;: 10, &#39;wins&#39;: 72},
+ &#39;season&#39;: &#39;1995-96&#39;,
+ &#39;startingLineup&#39;: [&#39;Ron Harper&#39;,
+  &#39;Michael Jordan&#39;,
+  &#39;Scottie Pippen&#39;,
+  &#39;Dennis Rodman&#39;,
+  &#39;Luc Longley&#39;],
+ &#39;teamName&#39;: &#39;Chicago Bulls&#39;}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#22914;&#26524;&#26159;&#32178;&#36335;&#19978;&#30340;-.json-&#27284;&#26696;">&#22914;&#26524;&#26159;&#32178;&#36335;&#19978;&#30340; .json &#27284;&#26696;<a class="anchor-link" href="#&#22914;&#26524;&#26159;&#32178;&#36335;&#19978;&#30340;-.json-&#27284;&#26696;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">requests</span> <span class="k">import</span> <span class="n">get</span>
+
+<span class="n">json_response</span> <span class="o">=</span> <span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://storage.googleapis.com/ds_data_import/chicago_bulls_1995_1996.json&quot;</span><span class="p">)</span>
+<span class="n">json_dict</span> <span class="o">=</span> <span class="n">json_response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">json_dict</span><span class="p">))</span>
+<span class="n">json_dict</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;dict&#39;&gt;
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[20]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;assistant_coach&#39;: [&#39;Jim Cleamons&#39;,
+  &#39;John Paxson&#39;,
+  &#39;Jimmy Rodgers&#39;,
+  &#39;Tex Winter&#39;],
+ &#39;coach&#39;: &#39;Phil Jackson&#39;,
+ &#39;records&#39;: {&#39;losses&#39;: 10, &#39;wins&#39;: 72},
+ &#39;starting_lineups&#39;: {&#39;C&#39;: &#39;Luc Longley&#39;,
+  &#39;PF&#39;: &#39;Dennis Rodman&#39;,
+  &#39;PG&#39;: &#39;Ron Harper&#39;,
+  &#39;SF&#39;: &#39;Scottie Pippen&#39;,
+  &#39;SG&#39;: &#39;Michael Jordan&#39;},
+ &#39;team_name&#39;: &#39;Chicago Bulls&#39;}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#20197;-pchome-&#21830;&#21697;&#38913;&#38754;&#28858;&#20363;">&#20197; pchome &#21830;&#21697;&#38913;&#38754;&#28858;&#20363;<a class="anchor-link" href="#&#20197;-pchome-&#21830;&#21697;&#38913;&#38754;&#28858;&#20363;">&#182;</a></h2><p><a href="https://ecshweb.pchome.com.tw/search/v3.3/?q=mac">https://ecshweb.pchome.com.tw/search/v3.3/?q=mac</a></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#20808;&#19979;&#36617;-Chrome-&#22806;&#25499;">&#20808;&#19979;&#36617; Chrome &#22806;&#25499;<a class="anchor-link" href="#&#20808;&#19979;&#36617;-Chrome-&#22806;&#25499;">&#182;</a></h2><ul>
+<li><a href="https://chrome.google.com/webstore/detail/quick-javascript-switcher/geddoclleiomckbhadiaipdggiiccfje">Quick Javascript Switcher</a>：關閉 JavaScript 的作用</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#38364;&#38281;-JavaScript-&#20043;&#24460;&#21830;&#21697;&#36039;&#35338;&#37117;&#19981;&#35211;&#20102;">&#38364;&#38281; JavaScript &#20043;&#24460;&#21830;&#21697;&#36039;&#35338;&#37117;&#19981;&#35211;&#20102;<a class="anchor-link" href="#&#38364;&#38281;-JavaScript-&#20043;&#24460;&#21830;&#21697;&#36039;&#35338;&#37117;&#19981;&#35211;&#20102;">&#182;</a></h2>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#25171;&#38283;-Chrome-&#38283;&#30332;&#32773;&#24037;&#20855;">&#25171;&#38283; Chrome &#38283;&#30332;&#32773;&#24037;&#20855;<a class="anchor-link" href="#&#25171;&#38283;-Chrome-&#38283;&#30332;&#32773;&#24037;&#20855;">&#182;</a></h2><p><img src="ss01.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#25171;&#38283;-Network-&#27161;&#31844;&#65292;&#40670;&#36984;-XHR">&#25171;&#38283; Network &#27161;&#31844;&#65292;&#40670;&#36984; XHR<a class="anchor-link" href="#&#25171;&#38283;-Network-&#27161;&#31844;&#65292;&#40670;&#36984;-XHR">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="kn">from</span> <span class="nn">requests</span> <span class="k">import</span> <span class="n">get</span>
+
+<span class="n">json_response</span> <span class="o">=</span> <span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://ecshweb.pchome.com.tw/search/v3.3/all/results?q=mac&amp;page=1&amp;sort=rnk/dc&quot;</span><span class="p">)</span>
+<span class="n">json_dict</span> <span class="o">=</span> <span class="n">json_response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">json_dict</span><span class="p">[</span><span class="s1">&#39;prods&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;Id&#39;: &#39;DYAJBD-A90097XCW&#39;, &#39;cateId&#39;: &#39;DYAJBD&#39;, &#39;picS&#39;: &#39;/items/DYAJBDA90097XCW/000002_1531729125.png&#39;, &#39;picB&#39;: &#39;/items/DYAJBDA90097XCW/000001_1542854872.jpg&#39;, &#39;name&#39;: &#39;MacBook Pro 13-inch : 2.3GHz dual-core i5, 128GB - Space Grey (MPXQ2TA/A)&#39;, &#39;describe&#39;: &#39;▼限時88折優惠▼MacBook Pro 13-(太空灰) : 2.3GHz dual-core i5, 128GB - Space Grey太空灰 (MPXQ2TA/A\\r\\n★此機型無觸控列和touch id \r\n\r\n★限時88折優惠 11 01 (四) 10:00 至 11 30 (五) 10:00止 \r\n數量有限，售完為止\r\n網路價$41900．限時價↘$３６８７２\r\n\r\n商品特色\r\n● 2.3 ghz 處理器 \r\n● 128 gb 儲存空間\r\n● 2.3 ghz 雙核心第七代 intel core i5 處理器\r\n● turbo boost 可達 3.6 ghz\r\n● 8 gb 2133 mhz lpddr 3 記憶體\r\n● 128 gb ssd 儲存裝置\r\n● intel iris plus graphics 640\r\n● 兩個 thunderbolt 3 埠\r\n\r\n\r\n館長小叮嚀：儲值購買最划算～\r\n【11 1~30限定】刷卡買3 000儲值金\r\n送150刷卡金→最高回饋5%↑11月儲值優惠活動，請點我\r\n\r\n11月刷卡限時優惠 限量需登錄\r\n\r\n↑銀行刷卡活動詳情請點圖片了解\r\n\r\n\r\n注意事項&#39;, &#39;price&#39;: 36872, &#39;originPrice&#39;: 36872, &#39;author&#39;: &#39;&#39;, &#39;brand&#39;: &#39;&#39;, &#39;publishDate&#39;: &#39;&#39;, &#39;sellerId&#39;: &#39;&#39;, &#39;isPChome&#39;: 1, &#39;isNC17&#39;: 0, &#39;couponActid&#39;: [], &#39;BU&#39;: &#39;ec&#39;}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="HTML">HTML<a class="anchor-link" href="#HTML">&#182;</a></h2>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#20808;&#23433;&#35037;-Chrome-&#22806;&#25499;">&#20808;&#23433;&#35037; Chrome &#22806;&#25499;<a class="anchor-link" href="#&#20808;&#23433;&#35037;-Chrome-&#22806;&#25499;">&#182;</a></h2><ul>
 <li><a href="https://chrome.google.com/webstore/detail/selectorgadget/mhjhnkcfbdhnjickkkdbjoemdmbfginb?hl=zh-TW">SelectorGadget</a>: 幫助 CSS 選擇</li>
 </ul>
 
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11858,8 +12307,7 @@ a.anchor-link {
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11871,8 +12319,7 @@ a.anchor-link {
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11885,8 +12332,7 @@ a.anchor-link {
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11898,8 +12344,7 @@ a.anchor-link {
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11911,8 +12356,7 @@ a.anchor-link {
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11924,8 +12368,7 @@ a.anchor-link {
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11937,8 +12380,7 @@ a.anchor-link {
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11951,8 +12393,7 @@ a.anchor-link {
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11965,8 +12406,7 @@ a.anchor-link {
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11978,8 +12418,7 @@ a.anchor-link {
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11991,8 +12430,7 @@ a.anchor-link {
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12029,7 +12467,11 @@ pip install pyquery # terminal
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[1]:</div>
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[1]:</div>
+
+
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -12060,7 +12502,11 @@ pip install pyquery # terminal
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>&lt;span itemprop=&#34;ratingValue&#34;&gt;8.1&lt;/span&gt;
 8.1
@@ -12089,7 +12535,11 @@ pip install pyquery # terminal
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[3]:</div>
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[3]:</div>
+
+
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -12102,8 +12552,7 @@ pip install pyquery # terminal
 </div>
 
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12128,7 +12577,11 @@ pip install pyquery # terminal
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[5]:</div>
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[5]:</div>
+
+
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -12141,8 +12594,7 @@ pip install pyquery # terminal
 </div>
 
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12167,7 +12619,11 @@ pip install pyquery # terminal
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[7]:</div>
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[7]:</div>
+
+
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -12217,8 +12673,7 @@ require(
             progress: true,
             history: true,
 
-            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-            transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+            transition: "slide",
 
             // Optional libraries used to extend on reveal.js
             dependencies: [
@@ -12238,13 +12693,25 @@ require(
 
         Reveal.addEventListener('slidechanged', update);
 
-        var update_scroll = function(event){
-          $(".reveal").scrollTop(0);
-        };
+        function setScrollingSlide() {
+            var scroll = false
+            if (scroll === true) {
+              var h = $('.reveal').height() * 0.95;
+              $('section.present').find('section')
+                .filter(function() {
+                  return $(this).height() > h;
+                })
+                .css('height', 'calc(95vh)')
+                .css('overflow-y', 'scroll')
+                .css('margin-top', '20px');
+            }
+        }
 
-        Reveal.addEventListener('slidechanged', update_scroll);
+        // check and set the scrolling slide every time the slide change
+        Reveal.addEventListener('slidechanged', setScrollingSlide);
 
     }
+
 );
 </script>
 
