@@ -7,8 +7,12 @@
 ### 評分標準
 
 - [作業](https://yaojenkuo.github.io/python_4_ds/homework.slides.html)
-- 70 分即可獲得證書，作業請寄至 tony@kyosei.ai，註明班別與姓名
+- 70 分即可獲得證書，作業請上傳至 Google 表單
 - 作業繳交期限為課程結束後一週內，如遇長假期（春節、連假）則順延
+
+### 作業上傳表單
+
+- [307 期平日夜間班](https://goo.gl/forms/ieo3plwIY8MIF5zm1)
 
 ### 課程互動頻道
 
@@ -16,6 +20,7 @@
 
 ### 課程共筆
 
+- [307 期平日夜間班](https://colab.research.google.com/drive/1SffQGmZIZTeKOLP0lSy4MXscf58tnwCl)
 - [302 期暑假密集班](https://colab.research.google.com/drive/19NImQH5Ojwn9UD4dediEgna6UCEQRT7p)
 - [301 期暑假密集班](https://colab.research.google.com/drive/1cxguHMhanA3_JNKkr_yliPFOzK6bnF15)
 - [300 期暑假密集班](https://colab.research.google.com/drive/1D_a3idela6AvAMOm4AxigfoecY1YlQvm)
@@ -23,8 +28,6 @@
 ### 課程大綱
 
 - [建立開發環境](https://yaojenkuo.github.io/python_4_ds/dev_env.slides.html)
-- [靜態網頁擷取](https://yaojenkuo.github.io/python_4_ds/static_scraper.slides.html)
-- [動態網頁擷取](https://yaojenkuo.github.io/python_4_ds/dynamic_scraper.slides.html)
 - [NumPy 入門](https://yaojenkuo.github.io/python_4_ds/intro_2_numpy.slides.html)
 - [pandas 入門](https://yaojenkuo.github.io/python_4_ds/pandas_intro.slides.html)
 - [pandas 專題：奧運獎牌排行](https://yaojenkuo.github.io/python_4_ds/pandas_olympic.slides.html)
@@ -34,11 +37,13 @@
 - [機器學習簡介](https://yaojenkuo.github.io/python_4_ds/intro_2_ml.slides.html)
 - [迴歸問題](https://yaojenkuo.github.io/python_4_ds/regression.slides.html)
 - [分類問題](https://yaojenkuo.github.io/python_4_ds/classification.slides.html)
+- [靜態網頁擷取](https://yaojenkuo.github.io/python_4_ds/static_scraper.slides.html)
+- [動態網頁擷取](https://yaojenkuo.github.io/python_4_ds/dynamic_scraper.slides.html)
 
 ### 學習資源
 
 - [DataCamp](https://www.datacamp.com?tap_a=5644-dce66f&tap_s=194899-1fb421)
-- [DataInPoint](https://medium.com/datainpoint)
+- [DataInPoint](https://www.datainpoint.com)
 - [Python for Data Analysis](http://shop.oreilly.com/product/0636920023784.do)
 - [scikit-learn - Machine Learning in Python](http://scikit-learn.org/stable/)
 
