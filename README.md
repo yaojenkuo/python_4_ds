@@ -12,6 +12,7 @@
 
 ### 作業上傳表單
 
+- [309 期寒假密集班]()
 - [307 期平日夜間班](https://goo.gl/forms/ieo3plwIY8MIF5zm1)
 
 ### 課程互動頻道
@@ -20,6 +21,7 @@
 
 ### 課程共筆
 
+- [309 期寒假密集班](https://colab.research.google.com/drive/1nDhlXPyVlvfRq5sx6a8MvBCEnNC-3RrS)
 - [307 期平日夜間班](https://colab.research.google.com/drive/1SffQGmZIZTeKOLP0lSy4MXscf58tnwCl)
 - [302 期暑假密集班](https://colab.research.google.com/drive/19NImQH5Ojwn9UD4dediEgna6UCEQRT7p)
 - [301 期暑假密集班](https://colab.research.google.com/drive/1cxguHMhanA3_JNKkr_yliPFOzK6bnF15)
@@ -42,13 +44,14 @@
 
 ### 學習資源
 
-- [DataCamp](https://www.datacamp.com?tap_a=5644-dce66f&tap_s=194899-1fb421)
 - [DataInPoint](https://www.datainpoint.com)
+- [DataCamp](https://www.datacamp.com?tap_a=5644-dce66f&tap_s=194899-1fb421)
 - [Python for Data Analysis](http://shop.oreilly.com/product/0636920023784.do)
 - [scikit-learn - Machine Learning in Python](http://scikit-learn.org/stable/)
 
 ### 近期課程錄影清單
 
+- [第 309 期 Python 與資料科學應用（寒假密集班）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuUzxgsMBOMy5-EIzXSdgFT-)
 - [第 307 期 Python 與資料分析（平日夜間班）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuVHTtYxS34N03mGUEr4Fl5D)
 - [第 302 期 Python 與資料科學應用（暑期密集班）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuUNW-DdH-w1MYIiq3S1hTsi)
 - [第 301 期 Python 與資料科學應用（暑期密集班）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuWmjDABIfpTG8LM8IsdOvjE)
