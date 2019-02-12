@@ -19,6 +19,10 @@
 
 <https://www.sli.do>
 
+### 課程 Facebook 群組
+
+<https://www.facebook.com/groups/ntucsietrainpyds/>
+
 ### 課程共筆
 
 - [309 期寒假密集班](https://colab.research.google.com/drive/1nDhlXPyVlvfRq5sx6a8MvBCEnNC-3RrS)
