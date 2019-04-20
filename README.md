@@ -12,6 +12,7 @@
 
 ### 作業上傳表單
 
+- [311 期假日班下午](https://forms.gle/m3C59C9saYFJSHfm7)
 - [309 期寒假密集班](https://goo.gl/forms/S2YXpZxn9JwH2e3E3)
 - [307 期平日夜間班](https://goo.gl/forms/ieo3plwIY8MIF5zm1)
 
@@ -25,6 +26,7 @@
 
 ### 課程共筆
 
+- [311 期週末下午班](https://colab.research.google.com/drive/12_QPE9jH3i0D__Owrrn6cB_q7MYW7tLr)
 - [309 期寒假密集班](https://colab.research.google.com/drive/1nDhlXPyVlvfRq5sx6a8MvBCEnNC-3RrS)
 - [307 期平日夜間班](https://colab.research.google.com/drive/1SffQGmZIZTeKOLP0lSy4MXscf58tnwCl)
 - [302 期暑假密集班](https://colab.research.google.com/drive/19NImQH5Ojwn9UD4dediEgna6UCEQRT7p)
@@ -34,27 +36,30 @@
 ### 課程大綱
 
 - [建立開發環境](https://yaojenkuo.github.io/python_4_ds/dev_env.slides.html)
+- [靜態網頁擷取](https://yaojenkuo.github.io/python_4_ds/static_scraper.slides.html)
+- [動態網頁擷取](https://yaojenkuo.github.io/python_4_ds/dynamic_scraper.slides.html)
 - [NumPy 入門](https://yaojenkuo.github.io/python_4_ds/intro_2_numpy.slides.html)
 - [pandas 入門](https://yaojenkuo.github.io/python_4_ds/pandas_intro.slides.html)
 - [pandas 專題：奧運獎牌排行](https://yaojenkuo.github.io/python_4_ds/pandas_olympic.slides.html)
 - [pandas 專題：美國普查](https://yaojenkuo.github.io/python_4_ds/pandas_us_census.slides.html)
 - [pandas 專題：世界能源指標](https://yaojenkuo.github.io/python_4_ds/pandas_energy_indicator.slides.html)
 - [資料視覺化](https://yaojenkuo.github.io/python_4_ds/data_viz.slides.html)
+<!---
 - [機器學習簡介](https://yaojenkuo.github.io/python_4_ds/intro_2_ml.slides.html)
 - [迴歸問題](https://yaojenkuo.github.io/python_4_ds/regression.slides.html)
 - [分類問題](https://yaojenkuo.github.io/python_4_ds/classification.slides.html)
-- [靜態網頁擷取](https://yaojenkuo.github.io/python_4_ds/static_scraper.slides.html)
-- [動態網頁擷取](https://yaojenkuo.github.io/python_4_ds/dynamic_scraper.slides.html)
+--->
+
 
 ### 學習資源
 
 - [DataInPoint](https://www.datainpoint.com)
 - [DataCamp](https://www.datacamp.com?tap_a=5644-dce66f&tap_s=194899-1fb421)
 - [Python for Data Analysis](http://shop.oreilly.com/product/0636920023784.do)
-- [scikit-learn - Machine Learning in Python](http://scikit-learn.org/stable/)
 
 ### 近期課程錄影清單
 
+- [第 311 期 Python 與資料科學應用（假日班下午）]()
 - [第 309 期 Python 與資料科學應用（寒假密集班）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuUzxgsMBOMy5-EIzXSdgFT-)
 - [第 307 期 Python 與資料分析（平日夜間班）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuVHTtYxS34N03mGUEr4Fl5D)
 - [第 302 期 Python 與資料科學應用（暑期密集班）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuUNW-DdH-w1MYIiq3S1hTsi)
