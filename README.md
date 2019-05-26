@@ -40,7 +40,7 @@
 - [關於](00-about.slides.html)
 - [起步走](01-setup.slides.html)
 - [Python 程式設計常用技巧](02-python-programming-skills.slides.html)
-- [網頁資料擷取](https://yaojenkuo.github.io/python_4_ds/static_scraper.slides.html)
+- [網頁資料擷取](03-web-scraping-101.slides.html)
 - [NumPy 101](https://yaojenkuo.github.io/python_4_ds/intro_2_numpy.slides.html)
 - [Pandas 101](https://yaojenkuo.github.io/python_4_ds/pandas_intro.slides.html)
 - [Pandas 專題：資料清洗]()
@@ -54,7 +54,7 @@
 
 ### 近期課程錄影清單
 
-- [第 312 期 Python 與資料科學應用（假日班下午）]()
+- [第 312 期 Python 與資料科學應用（假日班下午）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuU2MjWUWArwjxQnp55yXTtt)
 - [第 311 期 Python 與資料科學應用（假日班下午）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuXfAla3JulbR6vNeIkDnt4E)
 - [第 309 期 Python 與資料科學應用（寒假密集班）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuUzxgsMBOMy5-EIzXSdgFT-)
 - [第 307 期 Python 與資料分析（平日夜間班）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuVHTtYxS34N03mGUEr4Fl5D)
