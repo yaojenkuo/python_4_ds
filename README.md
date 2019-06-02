@@ -12,7 +12,7 @@
 
 ### 作業上傳表單
 
-- [312 期假日下午班]()
+- [312 期假日下午班](https://forms.gle/xrh3SkSV9WszWdMm9)
 - [311 期假日下午班](https://forms.gle/m3C59C9saYFJSHfm7)
 - [309 期寒假密集班](https://goo.gl/forms/S2YXpZxn9JwH2e3E3)
 - [307 期平日夜間班](https://goo.gl/forms/ieo3plwIY8MIF5zm1)
