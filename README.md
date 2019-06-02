@@ -41,7 +41,7 @@
 - [起步走](01-setup.slides.html)
 - [Python 程式設計常用技巧](02-python-programming-skills.slides.html)
 - [網頁資料擷取](03-web-scraping-101.slides.html)
-- [NumPy 101](https://yaojenkuo.github.io/python_4_ds/intro_2_numpy.slides.html)
+- [NumPy 101](04-numpy-101.slides.html)
 - [Pandas 101](https://yaojenkuo.github.io/python_4_ds/pandas_intro.slides.html)
 - [Pandas 專題：資料清洗]()
 - [資料視覺化](https://yaojenkuo.github.io/python_4_ds/data_viz.slides.html)
