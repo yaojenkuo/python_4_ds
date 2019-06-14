@@ -42,9 +42,9 @@
 - [Python 程式設計常用技巧](02-python-programming-skills.slides.html)
 - [網頁資料擷取](03-web-scraping-101.slides.html)
 - [NumPy 101](04-numpy-101.slides.html)
-- [Pandas 101](https://yaojenkuo.github.io/python_4_ds/pandas_intro.slides.html)
+- [Pandas 101](05-pandas-101.slides.html)
 - [Pandas 專題：資料清洗]()
-- [資料視覺化](https://yaojenkuo.github.io/python_4_ds/data_viz.slides.html)
+- [資料視覺化](06-matplotlib-pyplot-101.slides.html)
 
 ### 延伸閱讀
 
