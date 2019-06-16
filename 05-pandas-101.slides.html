@@ -13242,10 +13242,9 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#25104;&#28858;&#21021;&#32026;&#36039;&#26009;&#20998;&#26512;&#24107;-|-Python-&#33287;&#36039;&#26009;&#31185;&#23416;&#25033;&#29992;">&#25104;&#28858;&#21021;&#32026;&#36039;&#26009;&#20998;&#26512;&#24107; | Python &#33287;&#36039;&#26009;&#31185;&#23416;&#25033;&#29992;<a class="anchor-link" href="#&#25104;&#28858;&#21021;&#32026;&#36039;&#26009;&#20998;&#26512;&#24107;-|-Python-&#33287;&#36039;&#26009;&#31185;&#23416;&#25033;&#29992;">&#182;</a></h1><blockquote><p>pandas：處理表格式資料的 Python 模組</p>
+<h1 id="&#25104;&#28858;&#21021;&#32026;&#36039;&#26009;&#20998;&#26512;&#24107;-|-Python-&#33287;&#36039;&#26009;&#31185;&#23416;&#25033;&#29992;">&#25104;&#28858;&#21021;&#32026;&#36039;&#26009;&#20998;&#26512;&#24107; | Python &#33287;&#36039;&#26009;&#31185;&#23416;&#25033;&#29992;<a class="anchor-link" href="#&#25104;&#28858;&#21021;&#32026;&#36039;&#26009;&#20998;&#26512;&#24107;-|-Python-&#33287;&#36039;&#26009;&#31185;&#23416;&#25033;&#29992;">&#182;</a></h1><blockquote><p>pandas 101：處理表格式資料的 Python 模組</p>
 </blockquote>
-<p>郭耀仁</p>
-
+<h2 id="&#37101;&#32768;&#20161;">&#37101;&#32768;&#20161;<a class="anchor-link" href="#&#37101;&#32768;&#20161;">&#182;</a></h2>
 </div>
 </div>
 </div></section><section>
@@ -13255,7 +13254,9 @@ a.anchor-link {
 <h2 id="&#22823;&#32177;">&#22823;&#32177;<a class="anchor-link" href="#&#22823;&#32177;">&#182;</a></h2><ul>
 <li>pandas 解決了什麼問題</li>
 <li>pandas 基礎</li>
+<li>奧運獎牌排行</li>
 <li>pandas 技巧</li>
+<li>美國普查</li>
 </ul>
 
 </div>
@@ -13271,10 +13272,73 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#23526;&#20316;&#32244;&#32722;&#65306;&#23559;&#38283;&#26364;&#32676;&#23798;&#30340;&#19978;&#24066;&#20844;&#21496;&#32929;&#20729;&#25361;&#36984;&#20986;&#20358;">&#23526;&#20316;&#32244;&#32722;&#65306;&#23559;&#38283;&#26364;&#32676;&#23798;&#30340;&#19978;&#24066;&#20844;&#21496;&#32929;&#20729;&#25361;&#36984;&#20986;&#20358;<a class="anchor-link" href="#&#23526;&#20316;&#32244;&#32722;&#65306;&#23559;&#38283;&#26364;&#32676;&#23798;&#30340;&#19978;&#24066;&#20844;&#21496;&#32929;&#20729;&#25361;&#36984;&#20986;&#20358;">&#182;</a></h2><p><a href="https://tw.stock.yahoo.com/d/i/rank.php?t=pri&amp;e=tse&amp;n=100">https://tw.stock.yahoo.com/d/i/rank.php?t=pri&amp;e=tse&amp;n=100</a></p>
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#35531;&#35336;&#31639;&#35387;&#20874;&#26044;&#38283;&#26364;&#32676;&#23798;&#30340;&#19978;&#24066;&#20844;&#21496;&#32929;&#20729;&#20013;&#20301;&#25976;">&#38568;&#22530;&#32244;&#32722;&#65306;&#35531;&#35336;&#31639;&#35387;&#20874;&#26044;&#38283;&#26364;&#32676;&#23798;&#30340;&#19978;&#24066;&#20844;&#21496;&#32929;&#20729;&#20013;&#20301;&#25976;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#35531;&#35336;&#31639;&#35387;&#20874;&#26044;&#38283;&#26364;&#32676;&#23798;&#30340;&#19978;&#24066;&#20844;&#21496;&#32929;&#20729;&#20013;&#20301;&#25976;">&#182;</a></h2><p><a href="https://tw.stock.yahoo.com/d/i/rank.php?t=pri&amp;e=tse&amp;n=100">https://tw.stock.yahoo.com/d/i/rank.php?t=pri&amp;e=tse&amp;n=100</a></p>
 
 </div>
 </div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="k">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="k">def</span> <span class="nf">get_price_rank</span><span class="p">():</span>
+    <span class="n">page_url</span> <span class="o">=</span> <span class="s2">&quot;https://tw.stock.yahoo.com/d/i/rank.php?t=pri&amp;e=tse&amp;n=100&quot;</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">page_url</span><span class="p">)</span>
+    <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+    <span class="n">stock_tickers</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">stock_names</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;.name a&quot;</span><span class="p">):</span>
+        <span class="n">stock_ticker</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">stock_name</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">stock_tickers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">stock_ticker</span><span class="p">)</span>
+        <span class="n">stock_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">stock_name</span><span class="p">)</span>
+    <span class="n">prices</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="o">+</span><span class="mi">10</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+        <span class="n">price</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;table&quot;</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;td&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;td&quot;</span><span class="p">)[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">text</span>
+        <span class="n">prices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">price</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">stock_tickers</span><span class="p">,</span> <span class="n">stock_names</span><span class="p">,</span> <span class="n">prices</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">stock_tickers</span><span class="p">,</span> <span class="n">stock_names</span><span class="p">,</span> <span class="n">prices</span> <span class="o">=</span> <span class="n">get_price_rank</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">stock_tickers</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">stock_names</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">statistics</span> <span class="k">import</span> <span class="n">median</span>
+
+<span class="n">ky_prices</span> <span class="o">=</span> <span class="p">[</span><span class="n">price</span> <span class="k">for</span> <span class="n">stock_name</span><span class="p">,</span> <span class="n">price</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">stock_names</span><span class="p">,</span> <span class="n">prices</span><span class="p">)</span> <span class="k">if</span> <span class="s2">&quot;KY&quot;</span> <span class="ow">in</span> <span class="n">stock_name</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">median</span><span class="p">(</span><span class="n">ky_prices</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13282,6 +13346,38 @@ a.anchor-link {
 <h2 id="Python-&#19968;&#30452;&#20197;&#20358;&#37117;&#38750;&#24120;&#36969;&#21512;&#36039;&#26009;&#34389;&#29702;&#65292;&#20294;&#22905;&#30340;&#20998;&#26512;&#33021;&#21147;&#24456;&#34180;&#24369;&#65292;pandas-&#30340;&#38283;&#30332;&#26377;&#21161;&#26044;&#35036;&#36275;-Python-&#36039;&#26009;&#20998;&#26512;&#30340;&#38656;&#27714;&#65292;&#35731;&#20351;&#29992;&#32773;&#33021;&#22816;&#22312;-Python-&#20013;&#22519;&#34892;&#23436;&#25972;&#30340;&#36039;&#26009;&#20998;&#26512;&#27969;&#31243;&#65292;&#32780;&#28961;&#38656;&#20999;&#25563;&#21040;-data-centric-&#30340;&#29305;&#23450;&#35486;&#35328;&#65292;&#22914;-R&#12290;">Python &#19968;&#30452;&#20197;&#20358;&#37117;&#38750;&#24120;&#36969;&#21512;&#36039;&#26009;&#34389;&#29702;&#65292;&#20294;&#22905;&#30340;&#20998;&#26512;&#33021;&#21147;&#24456;&#34180;&#24369;&#65292;<code>pandas</code> &#30340;&#38283;&#30332;&#26377;&#21161;&#26044;&#35036;&#36275; Python &#36039;&#26009;&#20998;&#26512;&#30340;&#38656;&#27714;&#65292;&#35731;&#20351;&#29992;&#32773;&#33021;&#22816;&#22312; Python &#20013;&#22519;&#34892;&#23436;&#25972;&#30340;&#36039;&#26009;&#20998;&#26512;&#27969;&#31243;&#65292;&#32780;&#28961;&#38656;&#20999;&#25563;&#21040; data-centric &#30340;&#29305;&#23450;&#35486;&#35328;&#65292;&#22914; R&#12290;<a class="anchor-link" href="#Python-&#19968;&#30452;&#20197;&#20358;&#37117;&#38750;&#24120;&#36969;&#21512;&#36039;&#26009;&#34389;&#29702;&#65292;&#20294;&#22905;&#30340;&#20998;&#26512;&#33021;&#21147;&#24456;&#34180;&#24369;&#65292;pandas-&#30340;&#38283;&#30332;&#26377;&#21161;&#26044;&#35036;&#36275;-Python-&#36039;&#26009;&#20998;&#26512;&#30340;&#38656;&#27714;&#65292;&#35731;&#20351;&#29992;&#32773;&#33021;&#22816;&#22312;-Python-&#20013;&#22519;&#34892;&#23436;&#25972;&#30340;&#36039;&#26009;&#20998;&#26512;&#27969;&#31243;&#65292;&#32780;&#28961;&#38656;&#20999;&#25563;&#21040;-data-centric-&#30340;&#29305;&#23450;&#35486;&#35328;&#65292;&#22914;-R&#12290;">&#182;</a></h2>
 </div>
 </div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;ticker&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">stock_tickers</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;stock_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">stock_names</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;price&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">prices</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;stock_name&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">&quot;KY&quot;</span><span class="p">)][</span><span class="s2">&quot;price&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13344,7 +13440,7 @@ a.anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -13359,35 +13455,10 @@ a.anchor-link {
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[1]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>0        Ron Harper
-1    Michael Jordan
-2    Scottie Pippen
-3     Dennis Rodman
-4       Luc Longley
-dtype: object</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ser</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">numbers</span>
@@ -13395,31 +13466,6 @@ dtype: object</pre>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[2]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>9         Ron Harper
-23    Michael Jordan
-33    Scottie Pippen
-91     Dennis Rodman
-13       Luc Longley
-dtype: object</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -13433,7 +13479,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
@@ -13446,72 +13492,16 @@ dtype: object</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;player&quot;</span><span class="p">)</span>
+</pre></div>
 
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[3]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>number</th>
-      <th>player</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>9</td>
-      <td>Ron Harper</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>23</td>
-      <td>Michael Jordan</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>33</td>
-      <td>Scottie Pippen</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>91</td>
-      <td>Dennis Rodman</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>13</td>
-      <td>Luc Longley</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
+    </div>
 </div>
 </div>
 
@@ -13525,7 +13515,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -13535,79 +13525,10 @@ dtype: object</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[4]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>number</th>
-      <th>player</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>9</td>
-      <td>Ron Harper</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>23</td>
-      <td>Michael Jordan</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>33</td>
-      <td>Scottie Pippen</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>91</td>
-      <td>Dennis Rodman</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>13</td>
-      <td>Luc Longley</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -13617,69 +13538,10 @@ dtype: object</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[5]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>number</th>
-      <th>player</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>2</th>
-      <td>33</td>
-      <td>Scottie Pippen</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>91</td>
-      <td>Dennis Rodman</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>13</td>
-      <td>Luc Longley</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">index</span>
@@ -13689,111 +13551,16 @@ dtype: object</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[6]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>RangeIndex(start=0, stop=5, step=1)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[7]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>number</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>5.000000</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>33.800000</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>33.304654</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>9.000000</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>13.000000</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>23.000000</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>33.000000</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>91.000000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -13807,38 +13574,13 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;player&quot;</span><span class="p">]</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[8]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>0        Ron Harper
-1    Michael Jordan
-2    Scottie Pippen
-3     Dennis Rodman
-4       Luc Longley
-Name: player, dtype: object</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -13857,7 +13599,7 @@ Name: player, dtype: object</pre>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;PG&quot;</span><span class="p">,</span> <span class="s2">&quot;SG&quot;</span><span class="p">,</span> <span class="s2">&quot;SF&quot;</span><span class="p">,</span> <span class="s2">&quot;PF&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">]</span>
@@ -13868,69 +13610,10 @@ Name: player, dtype: object</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[9]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>number</th>
-      <th>player</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>SG</th>
-      <td>23</td>
-      <td>Michael Jordan</td>
-    </tr>
-    <tr>
-      <th>SF</th>
-      <td>33</td>
-      <td>Scottie Pippen</td>
-    </tr>
-    <tr>
-      <th>PF</th>
-      <td>91</td>
-      <td>Dennis Rodman</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
@@ -13940,69 +13623,10 @@ Name: player, dtype: object</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[10]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>number</th>
-      <th>player</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>SG</th>
-      <td>23</td>
-      <td>Michael Jordan</td>
-    </tr>
-    <tr>
-      <th>SF</th>
-      <td>33</td>
-      <td>Scottie Pippen</td>
-    </tr>
-    <tr>
-      <th>PF</th>
-      <td>91</td>
-      <td>Dennis Rodman</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">is_trio</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;number&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="mi">23</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">91</span><span class="p">])</span>
@@ -14011,81 +13635,6 @@ Name: player, dtype: object</pre>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>PG    False
-SG     True
-SF     True
-PF     True
-C     False
-Name: number, dtype: bool
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[11]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>number</th>
-      <th>player</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>SG</th>
-      <td>23</td>
-      <td>Michael Jordan</td>
-    </tr>
-    <tr>
-      <th>SF</th>
-      <td>33</td>
-      <td>Scottie Pippen</td>
-    </tr>
-    <tr>
-      <th>PF</th>
-      <td>91</td>
-      <td>Dennis Rodman</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -14103,7 +13652,7 @@ Name: number, dtype: bool
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
@@ -14113,79 +13662,10 @@ Name: number, dtype: bool
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[12]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>number</th>
-      <th>player</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>C</th>
-      <td>13</td>
-      <td>Luc Longley</td>
-    </tr>
-    <tr>
-      <th>PF</th>
-      <td>91</td>
-      <td>Dennis Rodman</td>
-    </tr>
-    <tr>
-      <th>PG</th>
-      <td>9</td>
-      <td>Ron Harper</td>
-    </tr>
-    <tr>
-      <th>SF</th>
-      <td>33</td>
-      <td>Scottie Pippen</td>
-    </tr>
-    <tr>
-      <th>SG</th>
-      <td>23</td>
-      <td>Michael Jordan</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;number&quot;</span><span class="p">)</span>
@@ -14195,76 +13675,304 @@ Name: number, dtype: bool
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[13]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>number</th>
-      <th>player</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>PG</th>
-      <td>9</td>
-      <td>Ron Harper</td>
-    </tr>
-    <tr>
-      <th>C</th>
-      <td>13</td>
-      <td>Luc Longley</td>
-    </tr>
-    <tr>
-      <th>SG</th>
-      <td>23</td>
-      <td>Michael Jordan</td>
-    </tr>
-    <tr>
-      <th>SF</th>
-      <td>33</td>
-      <td>Scottie Pippen</td>
-    </tr>
-    <tr>
-      <th>PF</th>
-      <td>91</td>
-      <td>Dennis Rodman</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#29554;&#21462;&#36039;&#26009;&#30340;&#26368;&#22823;&#20540;&#26368;&#23567;&#20540;">&#29554;&#21462;&#36039;&#26009;&#30340;&#26368;&#22823;&#20540;&#26368;&#23567;&#20540;<a class="anchor-link" href="#&#29554;&#21462;&#36039;&#26009;&#30340;&#26368;&#22823;&#20540;&#26368;&#23567;&#20540;">&#182;</a></h2><ul>
+<li><code>df["col_name"].max()</code></li>
+<li><code>df["col_name"].min()</code></li>
+</ul>
 
 </div>
 </div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#29554;&#21462;&#36039;&#26009;&#26368;&#22823;&#20540;&#26368;&#23567;&#20540;&#30340;&#32034;&#24341;&#20540;">&#29554;&#21462;&#36039;&#26009;&#26368;&#22823;&#20540;&#26368;&#23567;&#20540;&#30340;&#32034;&#24341;&#20540;<a class="anchor-link" href="#&#29554;&#21462;&#36039;&#26009;&#26368;&#22823;&#20540;&#26368;&#23567;&#20540;&#30340;&#32034;&#24341;&#20540;">&#182;</a></h2><ul>
+<li><code>df["col_name"].idxmax()</code></li>
+<li><code>df["col_name"].idxmin()</code></li>
+</ul>
 
-</div></div></section></section><section><section>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#35504;&#30340;&#32972;&#34399;&#25976;&#23383;&#26368;&#22823;&#65311;">&#38568;&#22530;&#32244;&#32722;&#65306;&#35504;&#30340;&#32972;&#34399;&#25976;&#23383;&#26368;&#22823;&#65311;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#35504;&#30340;&#32972;&#34399;&#25976;&#23383;&#26368;&#22823;&#65311;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span>
+<span class="n">players</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Ron Harper&quot;</span><span class="p">,</span> <span class="s2">&quot;Michael Jordan&quot;</span><span class="p">,</span> <span class="s2">&quot;Scottie Pippen&quot;</span><span class="p">,</span> <span class="s2">&quot;Dennis Rodman&quot;</span><span class="p">,</span> <span class="s2">&quot;Luc Longley&quot;</span><span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;number&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">numbers</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;player&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">players</span>
+<span class="n">df</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">max_number</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;number&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;number&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">max_number</span><span class="p">][</span><span class="s2">&quot;player&quot;</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;player&quot;</span><span class="p">)[</span><span class="s2">&quot;number&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#35504;&#30340;&#32972;&#34399;&#25976;&#23383;&#26368;&#23567;&#65311;">&#38568;&#22530;&#32244;&#32722;&#65306;&#35504;&#30340;&#32972;&#34399;&#25976;&#23383;&#26368;&#23567;&#65311;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#35504;&#30340;&#32972;&#34399;&#25976;&#23383;&#26368;&#23567;&#65311;">&#182;</a></h2>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">min_number</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;number&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;number&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">min_number</span><span class="p">][</span><span class="s2">&quot;player&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;player&quot;</span><span class="p">)[</span><span class="s2">&quot;number&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmin</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#22887;&#36939;&#29518;&#29260;&#25490;&#34892;">&#22887;&#36939;&#29518;&#29260;&#25490;&#34892;<a class="anchor-link" href="#&#22887;&#36939;&#29518;&#29260;&#25490;&#34892;">&#182;</a></h2>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#20358;&#28304;">&#20358;&#28304;<a class="anchor-link" href="#&#20358;&#28304;">&#182;</a></h2><p><a href="https://www.coursera.org/">Coursera</a> 的 <a href="https://www.coursera.org/learn/python-data-analysis/home/welcome">Introduction to Data Science in Python</a> 課程作業</p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://storage.googleapis.com/py_ml_datasets/olympics.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">col</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;01&#39;</span><span class="p">:</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="n">col</span><span class="p">:</span><span class="s1">&#39;Gold&#39;</span><span class="o">+</span><span class="n">col</span><span class="p">[</span><span class="mi">4</span><span class="p">:]},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">col</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;02&#39;</span><span class="p">:</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="n">col</span><span class="p">:</span><span class="s1">&#39;Silver&#39;</span><span class="o">+</span><span class="n">col</span><span class="p">[</span><span class="mi">4</span><span class="p">:]},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">col</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;03&#39;</span><span class="p">:</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="n">col</span><span class="p">:</span><span class="s1">&#39;Bronze&#39;</span><span class="o">+</span><span class="n">col</span><span class="p">[</span><span class="mi">4</span><span class="p">:]},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">col</span><span class="p">[:</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;№&#39;</span><span class="p">:</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="n">col</span><span class="p">:</span><span class="s1">&#39;#&#39;</span><span class="o">+</span><span class="n">col</span><span class="p">[</span><span class="mi">1</span><span class="p">:]},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">names_ids</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;\s\(&#39;</span><span class="p">)</span> <span class="c1"># split the index by &#39;(&#39;</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">names_ids</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># the [0] element is the country name (new index) </span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;ID&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">names_ids</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="c1"># the [1] element is the abbreviation or ID (take first 3 characters from that)</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Totals&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#21738;&#20491;&#22283;&#23478;&#36111;&#24471;&#30340;&#22799;&#23395;&#22887;&#36939;&#37329;&#29260;&#25976;&#26368;&#22810;&#65311;">&#38568;&#22530;&#32244;&#32722;&#65306;&#21738;&#20491;&#22283;&#23478;&#36111;&#24471;&#30340;&#22799;&#23395;&#22887;&#36939;&#37329;&#29260;&#25976;&#26368;&#22810;&#65311;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#21738;&#20491;&#22283;&#23478;&#36111;&#24471;&#30340;&#22799;&#23395;&#22887;&#36939;&#37329;&#29260;&#25976;&#26368;&#22810;&#65311;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">answer_one</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    這個函數應該回傳一個文字，國家名</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="s2">&quot;答案&quot;</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">answer_one</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Gold&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()</span>
+
+<span class="n">answer_one</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#21738;&#20491;&#22283;&#23478;&#22799;&#23395;&#22887;&#36939;&#33287;&#20908;&#23395;&#22887;&#36939;&#30340;&#37329;&#29260;&#25976;&#24046;&#36317;&#25976;&#26368;&#22823;&#65311;">&#38568;&#22530;&#32244;&#32722;&#65306;&#21738;&#20491;&#22283;&#23478;&#22799;&#23395;&#22887;&#36939;&#33287;&#20908;&#23395;&#22887;&#36939;&#30340;&#37329;&#29260;&#25976;&#24046;&#36317;&#25976;&#26368;&#22823;&#65311;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#21738;&#20491;&#22283;&#23478;&#22799;&#23395;&#22887;&#36939;&#33287;&#20908;&#23395;&#22887;&#36939;&#30340;&#37329;&#29260;&#25976;&#24046;&#36317;&#25976;&#26368;&#22823;&#65311;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">answer_two</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    這個函數應該回傳一個文字，國家名</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="s2">&quot;答案&quot;</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">answer_two</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="n">diff</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Gold&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Gold.1&quot;</span><span class="p">]</span>
+    <span class="n">diff_abs</span> <span class="o">=</span> <span class="n">diff</span><span class="o">.</span><span class="n">abs</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">diff_abs</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()</span>
+
+<span class="n">answer_two</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#21738;&#20491;&#22283;&#23478;&#22799;&#23395;&#22887;&#36939;&#33287;&#20908;&#23395;&#22887;&#36939;&#30340;&#37329;&#29260;&#25976;&#24046;&#36317;&#38500;&#20197;&#32317;&#37329;&#29260;&#25976;&#30340;&#27604;&#20363;&#26368;&#22823;&#65311;&#65288;&#20677;&#32771;&#24942;&#33267;&#23569;&#26377;&#19968;&#20491;&#22799;&#23395;&#37329;&#29260;&#33287;&#19968;&#20491;&#20908;&#23395;&#37329;&#29260;&#30340;&#22283;&#23478;&#65289;">&#38568;&#22530;&#32244;&#32722;&#65306;&#21738;&#20491;&#22283;&#23478;&#22799;&#23395;&#22887;&#36939;&#33287;&#20908;&#23395;&#22887;&#36939;&#30340;&#37329;&#29260;&#25976;&#24046;&#36317;&#38500;&#20197;&#32317;&#37329;&#29260;&#25976;&#30340;&#27604;&#20363;&#26368;&#22823;&#65311;&#65288;&#20677;&#32771;&#24942;&#33267;&#23569;&#26377;&#19968;&#20491;&#22799;&#23395;&#37329;&#29260;&#33287;&#19968;&#20491;&#20908;&#23395;&#37329;&#29260;&#30340;&#22283;&#23478;&#65289;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#21738;&#20491;&#22283;&#23478;&#22799;&#23395;&#22887;&#36939;&#33287;&#20908;&#23395;&#22887;&#36939;&#30340;&#37329;&#29260;&#25976;&#24046;&#36317;&#38500;&#20197;&#32317;&#37329;&#29260;&#25976;&#30340;&#27604;&#20363;&#26368;&#22823;&#65311;&#65288;&#20677;&#32771;&#24942;&#33267;&#23569;&#26377;&#19968;&#20491;&#22799;&#23395;&#37329;&#29260;&#33287;&#19968;&#20491;&#20908;&#23395;&#37329;&#29260;&#30340;&#22283;&#23478;&#65289;">&#182;</a></h2>$$\text{Ratio} = \frac{\text{Summer Gold} - \text{Winter Gold}}{\text{Total Gold}}$$<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">answer_three</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    這個函數應該回傳一個文字，國家名</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="s2">&quot;答案&quot;</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">answer_three</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="n">summer_gold</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Gold&quot;</span><span class="p">]</span>
+    <span class="n">winter_gold</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Gold.1&quot;</span><span class="p">]</span>
+    <span class="n">total_gold</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Gold.2&quot;</span><span class="p">]</span>
+    <span class="n">ratio</span> <span class="o">=</span> <span class="p">(</span><span class="n">summer_gold</span> <span class="o">-</span> <span class="n">winter_gold</span><span class="p">)</span><span class="o">/</span><span class="n">total_gold</span>
+    <span class="n">ratio_not_one</span> <span class="o">=</span> <span class="n">ratio</span><span class="p">[</span><span class="n">ratio</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">ratio_not_one</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()</span>
+
+<span class="n">answer_three</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#35336;&#31639;-146-&#20491;&#22283;&#23478;&#30340;&#29518;&#29260;&#40670;&#25976;&#65292;&#37329;&#29260;-3-&#40670;&#12289;&#37504;&#29260;-2-&#40670;&#12289;&#37509;&#29260;-1-&#40670;&#12290;">&#38568;&#22530;&#32244;&#32722;&#65306;&#35336;&#31639; 146 &#20491;&#22283;&#23478;&#30340;&#29518;&#29260;&#40670;&#25976;&#65292;&#37329;&#29260; 3 &#40670;&#12289;&#37504;&#29260; 2 &#40670;&#12289;&#37509;&#29260; 1 &#40670;&#12290;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#35336;&#31639;-146-&#20491;&#22283;&#23478;&#30340;&#29518;&#29260;&#40670;&#25976;&#65292;&#37329;&#29260;-3-&#40670;&#12289;&#37504;&#29260;-2-&#40670;&#12289;&#37509;&#29260;-1-&#40670;&#12290;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">answer_four</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    這個函數應該回傳一個 Series，長度為 146</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="s2">&quot;答案&quot;</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">answer_four</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="n">total_gold</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Gold.2&quot;</span><span class="p">]</span>
+    <span class="n">total_silver</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Silver.2&quot;</span><span class="p">]</span>
+    <span class="n">total_bronze</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Bronze.2&quot;</span><span class="p">]</span>
+    <span class="n">points</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="n">total_gold</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">total_silver</span> <span class="o">+</span> <span class="n">total_bronze</span>
+    <span class="k">return</span> <span class="n">points</span>
+
+<span class="n">answer_four</span><span class="p">(</span><span class="n">df</span><span class="p">)[:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14300,10 +14008,10 @@ Name: number, dtype: bool
 
 </div>
 </div>
-</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
@@ -14318,202 +14026,6 @@ Name: number, dtype: bool
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/Users/kuoyaojen/anaconda3/lib/python3.7/site-packages/urllib3/connectionpool.py:847: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  InsecureRequestWarning)
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[14]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>AQI</th>
-      <th>CO</th>
-      <th>CO_8hr</th>
-      <th>County</th>
-      <th>Latitude</th>
-      <th>Longitude</th>
-      <th>NO</th>
-      <th>NO2</th>
-      <th>NOx</th>
-      <th>O3</th>
-      <th>...</th>
-      <th>PM2.5</th>
-      <th>PM2.5_AVG</th>
-      <th>Pollutant</th>
-      <th>PublishTime</th>
-      <th>SO2</th>
-      <th>SO2_AVG</th>
-      <th>SiteName</th>
-      <th>Status</th>
-      <th>WindDirec</th>
-      <th>WindSpeed</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>屏東縣</td>
-      <td>22.352222</td>
-      <td>120.377222</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>...</td>
-      <td>11</td>
-      <td></td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td></td>
-      <td></td>
-      <td>屏東(琉球)</td>
-      <td>設備維護</td>
-      <td>323</td>
-      <td>3.7</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>58</td>
-      <td>0.36</td>
-      <td>0.4</td>
-      <td>苗栗縣</td>
-      <td>24.616369</td>
-      <td>120.786028</td>
-      <td>0.9</td>
-      <td>11</td>
-      <td>11</td>
-      <td>65</td>
-      <td>...</td>
-      <td>30</td>
-      <td>18</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>3.4</td>
-      <td>3</td>
-      <td>苗栗(後龍)</td>
-      <td>普通</td>
-      <td>222</td>
-      <td>2.7</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>53</td>
-      <td>0.21</td>
-      <td>0.2</td>
-      <td>彰化縣</td>
-      <td>23.843139</td>
-      <td>120.273117</td>
-      <td>0.5</td>
-      <td>3.8</td>
-      <td>4.3</td>
-      <td>77</td>
-      <td>...</td>
-      <td>14</td>
-      <td>16</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>2.6</td>
-      <td>3</td>
-      <td>彰化(大城)</td>
-      <td>普通</td>
-      <td>343</td>
-      <td>1.9</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>61</td>
-      <td>0.13</td>
-      <td>0.1</td>
-      <td>臺南市</td>
-      <td>23.265066</td>
-      <td>120.124167</td>
-      <td>0.4</td>
-      <td>5.3</td>
-      <td>5.8</td>
-      <td>74</td>
-      <td>...</td>
-      <td>18</td>
-      <td>20</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>2.7</td>
-      <td>3</td>
-      <td>臺南(北門)</td>
-      <td>普通</td>
-      <td>310</td>
-      <td>2.5</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>50</td>
-      <td>0.17</td>
-      <td>0.2</td>
-      <td>新北市</td>
-      <td>25.298562</td>
-      <td>121.536763</td>
-      <td>0.1</td>
-      <td>1.8</td>
-      <td>2</td>
-      <td>52</td>
-      <td>...</td>
-      <td>8</td>
-      <td>12</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>0.3</td>
-      <td>1</td>
-      <td>富貴角</td>
-      <td>良好</td>
-      <td>97</td>
-      <td>7.9</td>
-    </tr>
-  </tbody>
-</table>
-<p>5 rows × 23 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14525,7 +14037,7 @@ Name: number, dtype: bool
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -14545,7 +14057,7 @@ Name: number, dtype: bool
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">aqi</span><span class="p">[</span><span class="s2">&quot;PM2.5&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">aqi</span><span class="p">[</span><span class="s2">&quot;PM2.5&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">get_na</span><span class="p">)</span>
@@ -14554,190 +14066,6 @@ Name: number, dtype: bool
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[16]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>AQI</th>
-      <th>CO</th>
-      <th>CO_8hr</th>
-      <th>County</th>
-      <th>Latitude</th>
-      <th>Longitude</th>
-      <th>NO</th>
-      <th>NO2</th>
-      <th>NOx</th>
-      <th>O3</th>
-      <th>...</th>
-      <th>PM2.5</th>
-      <th>PM2.5_AVG</th>
-      <th>Pollutant</th>
-      <th>PublishTime</th>
-      <th>SO2</th>
-      <th>SO2_AVG</th>
-      <th>SiteName</th>
-      <th>Status</th>
-      <th>WindDirec</th>
-      <th>WindSpeed</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>NaN</td>
-      <td></td>
-      <td></td>
-      <td>屏東縣</td>
-      <td>22.352222</td>
-      <td>120.377222</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>...</td>
-      <td>11</td>
-      <td></td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td></td>
-      <td></td>
-      <td>屏東(琉球)</td>
-      <td>設備維護</td>
-      <td>323</td>
-      <td>3.7</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>58</td>
-      <td>0.36</td>
-      <td>0.4</td>
-      <td>苗栗縣</td>
-      <td>24.616369</td>
-      <td>120.786028</td>
-      <td>0.9</td>
-      <td>11</td>
-      <td>11</td>
-      <td>65</td>
-      <td>...</td>
-      <td>30</td>
-      <td>18</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>3.4</td>
-      <td>3</td>
-      <td>苗栗(後龍)</td>
-      <td>普通</td>
-      <td>222</td>
-      <td>2.7</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>53</td>
-      <td>0.21</td>
-      <td>0.2</td>
-      <td>彰化縣</td>
-      <td>23.843139</td>
-      <td>120.273117</td>
-      <td>0.5</td>
-      <td>3.8</td>
-      <td>4.3</td>
-      <td>77</td>
-      <td>...</td>
-      <td>14</td>
-      <td>16</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>2.6</td>
-      <td>3</td>
-      <td>彰化(大城)</td>
-      <td>普通</td>
-      <td>343</td>
-      <td>1.9</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>61</td>
-      <td>0.13</td>
-      <td>0.1</td>
-      <td>臺南市</td>
-      <td>23.265066</td>
-      <td>120.124167</td>
-      <td>0.4</td>
-      <td>5.3</td>
-      <td>5.8</td>
-      <td>74</td>
-      <td>...</td>
-      <td>18</td>
-      <td>20</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>2.7</td>
-      <td>3</td>
-      <td>臺南(北門)</td>
-      <td>普通</td>
-      <td>310</td>
-      <td>2.5</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>50</td>
-      <td>0.17</td>
-      <td>0.2</td>
-      <td>新北市</td>
-      <td>25.298562</td>
-      <td>121.536763</td>
-      <td>0.1</td>
-      <td>1.8</td>
-      <td>2</td>
-      <td>52</td>
-      <td>...</td>
-      <td>8</td>
-      <td>12</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>0.3</td>
-      <td>1</td>
-      <td>富貴角</td>
-      <td>良好</td>
-      <td>97</td>
-      <td>7.9</td>
-    </tr>
-  </tbody>
-</table>
-<p>5 rows × 23 columns</p>
-</div>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -14757,7 +14085,7 @@ Name: number, dtype: bool
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">aqi</span><span class="p">[</span><span class="s2">&quot;PM2.5&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span>
@@ -14767,91 +14095,10 @@ Name: number, dtype: bool
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[17]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>0     False
-1     False
-2     False
-3     False
-4     False
-5     False
-6     False
-7      True
-8     False
-9     False
-10    False
-11    False
-12    False
-13    False
-14    False
-15    False
-16    False
-17    False
-18    False
-19     True
-20    False
-21    False
-22    False
-23    False
-24    False
-25    False
-26    False
-27    False
-28    False
-29    False
-      ...  
-51    False
-52    False
-53    False
-54    False
-55    False
-56    False
-57    False
-58    False
-59    False
-60    False
-61    False
-62    False
-63    False
-64    False
-65    False
-66    False
-67    False
-68    False
-69    False
-70    False
-71     True
-72     True
-73    False
-74    False
-75    False
-76    False
-77     True
-78    False
-79    False
-80    False
-Name: PM2.5, Length: 81, dtype: bool</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># how many missing values are there</span>
@@ -14862,30 +14109,10 @@ Name: PM2.5, Length: 81, dtype: bool</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[18]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>6</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">aqi</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
@@ -14895,1538 +14122,10 @@ Name: PM2.5, Length: 81, dtype: bool</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[19]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>AQI</th>
-      <th>CO</th>
-      <th>CO_8hr</th>
-      <th>County</th>
-      <th>Latitude</th>
-      <th>Longitude</th>
-      <th>NO</th>
-      <th>NO2</th>
-      <th>NOx</th>
-      <th>O3</th>
-      <th>...</th>
-      <th>PM2.5</th>
-      <th>PM2.5_AVG</th>
-      <th>Pollutant</th>
-      <th>PublishTime</th>
-      <th>SO2</th>
-      <th>SO2_AVG</th>
-      <th>SiteName</th>
-      <th>Status</th>
-      <th>WindDirec</th>
-      <th>WindSpeed</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>58</td>
-      <td>0.36</td>
-      <td>0.4</td>
-      <td>苗栗縣</td>
-      <td>24.616369</td>
-      <td>120.786028</td>
-      <td>0.9</td>
-      <td>11</td>
-      <td>11</td>
-      <td>65</td>
-      <td>...</td>
-      <td>30</td>
-      <td>18</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>3.4</td>
-      <td>3</td>
-      <td>苗栗(後龍)</td>
-      <td>普通</td>
-      <td>222</td>
-      <td>2.7</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>53</td>
-      <td>0.21</td>
-      <td>0.2</td>
-      <td>彰化縣</td>
-      <td>23.843139</td>
-      <td>120.273117</td>
-      <td>0.5</td>
-      <td>3.8</td>
-      <td>4.3</td>
-      <td>77</td>
-      <td>...</td>
-      <td>14</td>
-      <td>16</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>2.6</td>
-      <td>3</td>
-      <td>彰化(大城)</td>
-      <td>普通</td>
-      <td>343</td>
-      <td>1.9</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>61</td>
-      <td>0.13</td>
-      <td>0.1</td>
-      <td>臺南市</td>
-      <td>23.265066</td>
-      <td>120.124167</td>
-      <td>0.4</td>
-      <td>5.3</td>
-      <td>5.8</td>
-      <td>74</td>
-      <td>...</td>
-      <td>18</td>
-      <td>20</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>2.7</td>
-      <td>3</td>
-      <td>臺南(北門)</td>
-      <td>普通</td>
-      <td>310</td>
-      <td>2.5</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>50</td>
-      <td>0.17</td>
-      <td>0.2</td>
-      <td>新北市</td>
-      <td>25.298562</td>
-      <td>121.536763</td>
-      <td>0.1</td>
-      <td>1.8</td>
-      <td>2</td>
-      <td>52</td>
-      <td>...</td>
-      <td>8</td>
-      <td>12</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>0.3</td>
-      <td>1</td>
-      <td>富貴角</td>
-      <td>良好</td>
-      <td>97</td>
-      <td>7.9</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>74</td>
-      <td>0.3</td>
-      <td>0.4</td>
-      <td>雲林縣</td>
-      <td>23.753506</td>
-      <td>120.251825</td>
-      <td>1.7</td>
-      <td>7.4</td>
-      <td>9.1</td>
-      <td></td>
-      <td>...</td>
-      <td>19</td>
-      <td>25</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>3.4</td>
-      <td>3</td>
-      <td>麥寮</td>
-      <td>普通</td>
-      <td>328</td>
-      <td>2.9</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>32</td>
-      <td>-</td>
-      <td></td>
-      <td>臺東縣</td>
-      <td>23.045083</td>
-      <td>121.161933</td>
-      <td>0.5</td>
-      <td>5</td>
-      <td>5.4</td>
-      <td>42</td>
-      <td>...</td>
-      <td>5</td>
-      <td>5</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>2.2</td>
-      <td>2</td>
-      <td>關山</td>
-      <td>良好</td>
-      <td>229</td>
-      <td>1.6</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>67</td>
-      <td>0.31</td>
-      <td>0.3</td>
-      <td>金門縣</td>
-      <td>24.432133</td>
-      <td>118.312256</td>
-      <td>0.7</td>
-      <td>10</td>
-      <td>11</td>
-      <td>69</td>
-      <td>...</td>
-      <td>24</td>
-      <td>22</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>3.4</td>
-      <td>4</td>
-      <td>金門</td>
-      <td>普通</td>
-      <td>29</td>
-      <td>2.6</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>63</td>
-      <td>0.29</td>
-      <td>0.3</td>
-      <td>連江縣</td>
-      <td>26.160469</td>
-      <td>119.949875</td>
-      <td>0.3</td>
-      <td>7.2</td>
-      <td>7.5</td>
-      <td>63</td>
-      <td>...</td>
-      <td>20</td>
-      <td>21</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>3.8</td>
-      <td>3</td>
-      <td>馬祖</td>
-      <td>普通</td>
-      <td>333</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>68</td>
-      <td>0.39</td>
-      <td>0.4</td>
-      <td>南投縣</td>
-      <td>23.968842</td>
-      <td>120.967903</td>
-      <td>0.9</td>
-      <td>9</td>
-      <td>9.8</td>
-      <td>53</td>
-      <td>...</td>
-      <td>28</td>
-      <td>22</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>1.3</td>
-      <td>2</td>
-      <td>埔里</td>
-      <td>普通</td>
-      <td>286</td>
-      <td>2.2</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>70</td>
-      <td>0.42</td>
-      <td>0.7</td>
-      <td>高雄市</td>
-      <td>22.608711</td>
-      <td>120.312017</td>
-      <td>2.7</td>
-      <td>18</td>
-      <td>21</td>
-      <td>53</td>
-      <td>...</td>
-      <td>12</td>
-      <td>23</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>1.7</td>
-      <td>3</td>
-      <td>復興</td>
-      <td>普通</td>
-      <td>207</td>
-      <td>1.7</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>45</td>
-      <td>0.66</td>
-      <td>0.8</td>
-      <td>新北市</td>
-      <td>25.017000</td>
-      <td>121.516306</td>
-      <td>10</td>
-      <td>29</td>
-      <td>40</td>
-      <td>28</td>
-      <td>...</td>
-      <td>14</td>
-      <td>14</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>2</td>
-      <td>2</td>
-      <td>永和</td>
-      <td>良好</td>
-      <td>75</td>
-      <td>1.6</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>117</td>
-      <td>0.37</td>
-      <td>0.4</td>
-      <td>南投縣</td>
-      <td>23.756389</td>
-      <td>120.677306</td>
-      <td>0.1</td>
-      <td>9.2</td>
-      <td>9.4</td>
-      <td>78</td>
-      <td>...</td>
-      <td>45</td>
-      <td>42</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>2.5</td>
-      <td>2</td>
-      <td>竹山</td>
-      <td>對敏感族群不健康</td>
-      <td>286</td>
-      <td>1.4</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>55</td>
-      <td>1.55</td>
-      <td>2.0</td>
-      <td>桃園市</td>
-      <td>24.953278</td>
-      <td>121.221667</td>
-      <td>33</td>
-      <td>44</td>
-      <td>77</td>
-      <td>20</td>
-      <td>...</td>
-      <td>12</td>
-      <td>17</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>3</td>
-      <td>3</td>
-      <td>中壢</td>
-      <td>普通</td>
-      <td>221</td>
-      <td>0.9</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>42</td>
-      <td>1.43</td>
-      <td>1.5</td>
-      <td>新北市</td>
-      <td>25.072611</td>
-      <td>121.493806</td>
-      <td>65</td>
-      <td>45</td>
-      <td>109</td>
-      <td>-</td>
-      <td>...</td>
-      <td>10</td>
-      <td>13</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td></td>
-      <td>3</td>
-      <td>三重</td>
-      <td>良好</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>31</td>
-      <td>0.31</td>
-      <td>0.3</td>
-      <td>宜蘭縣</td>
-      <td>24.632203</td>
-      <td>121.792928</td>
-      <td>1.6</td>
-      <td>7.3</td>
-      <td>8.9</td>
-      <td>50</td>
-      <td>...</td>
-      <td>14</td>
-      <td>10</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>1.8</td>
-      <td>2</td>
-      <td>冬山</td>
-      <td>良好</td>
-      <td>266</td>
-      <td>1.8</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>48</td>
-      <td>0.32</td>
-      <td>0.4</td>
-      <td>宜蘭縣</td>
-      <td>24.747917</td>
-      <td>121.746394</td>
-      <td>1</td>
-      <td>5.9</td>
-      <td>6.9</td>
-      <td>55</td>
-      <td>...</td>
-      <td>10</td>
-      <td>15</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>2.5</td>
-      <td>2</td>
-      <td>宜蘭</td>
-      <td>良好</td>
-      <td>126</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>49</td>
-      <td>0.22</td>
-      <td>0.2</td>
-      <td>臺北市</td>
-      <td>25.182722</td>
-      <td>121.529583</td>
-      <td>0.2</td>
-      <td>0.4</td>
-      <td>0.6</td>
-      <td>50</td>
-      <td>...</td>
-      <td>4</td>
-      <td>10</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>1.5</td>
-      <td>2</td>
-      <td>陽明</td>
-      <td>良好</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>31</td>
-      <td>0.29</td>
-      <td>0.3</td>
-      <td>臺東縣</td>
-      <td>22.755358</td>
-      <td>121.150450</td>
-      <td>2.2</td>
-      <td>3.5</td>
-      <td>5.6</td>
-      <td>35</td>
-      <td>...</td>
-      <td>2</td>
-      <td>7</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>0.9</td>
-      <td>1</td>
-      <td>臺東</td>
-      <td>良好</td>
-      <td>55</td>
-      <td>2.4</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>61</td>
-      <td>0.15</td>
-      <td>0.2</td>
-      <td>屏東縣</td>
-      <td>21.958069</td>
-      <td>120.788928</td>
-      <td>0.5</td>
-      <td>1.5</td>
-      <td>2</td>
-      <td>57</td>
-      <td>...</td>
-      <td>6</td>
-      <td>7</td>
-      <td>臭氧八小時</td>
-      <td>2019-04-02 14:00</td>
-      <td>1.1</td>
-      <td>1</td>
-      <td>恆春</td>
-      <td>普通</td>
-      <td>39</td>
-      <td>9.6</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>110</td>
-      <td>0.44</td>
-      <td>0.5</td>
-      <td>屏東縣</td>
-      <td>22.523108</td>
-      <td>120.561175</td>
-      <td>0.7</td>
-      <td>12</td>
-      <td>12</td>
-      <td>87</td>
-      <td>...</td>
-      <td>39</td>
-      <td>39</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>3.6</td>
-      <td>4</td>
-      <td>潮州</td>
-      <td>對敏感族群不健康</td>
-      <td>239</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>82</td>
-      <td>0.43</td>
-      <td>0.5</td>
-      <td>屏東縣</td>
-      <td>22.673081</td>
-      <td>120.488033</td>
-      <td>0.6</td>
-      <td>12</td>
-      <td>13</td>
-      <td>79</td>
-      <td>...</td>
-      <td>19</td>
-      <td>28</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>3</td>
-      <td>3</td>
-      <td>屏東</td>
-      <td>普通</td>
-      <td>287</td>
-      <td>1.8</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>66</td>
-      <td>0.3</td>
-      <td>0.5</td>
-      <td>高雄市</td>
-      <td>22.565833</td>
-      <td>120.337736</td>
-      <td>4</td>
-      <td>15</td>
-      <td>19</td>
-      <td>57</td>
-      <td>...</td>
-      <td>12</td>
-      <td>22</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>2.4</td>
-      <td>4</td>
-      <td>小港</td>
-      <td>普通</td>
-      <td>240</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>67</td>
-      <td>0.33</td>
-      <td>0.5</td>
-      <td>高雄市</td>
-      <td>22.605386</td>
-      <td>120.307564</td>
-      <td>3.6</td>
-      <td>16</td>
-      <td>20</td>
-      <td>57</td>
-      <td>...</td>
-      <td>12</td>
-      <td>22</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>1.4</td>
-      <td>3</td>
-      <td>前鎮</td>
-      <td>普通</td>
-      <td>351</td>
-      <td>2.3</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>100</td>
-      <td>0.36</td>
-      <td>0.5</td>
-      <td>高雄市</td>
-      <td>22.632567</td>
-      <td>120.288086</td>
-      <td>1.8</td>
-      <td>5.9</td>
-      <td>7.7</td>
-      <td>78</td>
-      <td>...</td>
-      <td>24</td>
-      <td>35</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>2</td>
-      <td>3</td>
-      <td>前金</td>
-      <td>普通</td>
-      <td>311</td>
-      <td>3.4</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>64</td>
-      <td>0.28</td>
-      <td>0.5</td>
-      <td>高雄市</td>
-      <td>22.674861</td>
-      <td>120.292917</td>
-      <td>1.4</td>
-      <td>6.6</td>
-      <td>8</td>
-      <td>68</td>
-      <td>...</td>
-      <td>12</td>
-      <td>21</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>2.2</td>
-      <td>4</td>
-      <td>左營</td>
-      <td>普通</td>
-      <td>305</td>
-      <td>4.2</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>88</td>
-      <td>0.37</td>
-      <td>0.5</td>
-      <td>高雄市</td>
-      <td>22.733667</td>
-      <td>120.328289</td>
-      <td>1.8</td>
-      <td>8.4</td>
-      <td>10</td>
-      <td>73</td>
-      <td>...</td>
-      <td>6</td>
-      <td>31</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>2.6</td>
-      <td>2</td>
-      <td>楠梓</td>
-      <td>普通</td>
-      <td>300</td>
-      <td>3.1</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>77</td>
-      <td>0.27</td>
-      <td>0.5</td>
-      <td>高雄市</td>
-      <td>22.479500</td>
-      <td>120.411750</td>
-      <td>0.7</td>
-      <td>4.6</td>
-      <td>5.3</td>
-      <td>70</td>
-      <td>...</td>
-      <td>13</td>
-      <td>26</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>2.3</td>
-      <td>4</td>
-      <td>林園</td>
-      <td>普通</td>
-      <td>252</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>30</th>
-      <td>111</td>
-      <td>0.38</td>
-      <td>0.6</td>
-      <td>高雄市</td>
-      <td>22.565747</td>
-      <td>120.425081</td>
-      <td>1.3</td>
-      <td>15</td>
-      <td>16</td>
-      <td>76</td>
-      <td>...</td>
-      <td>29</td>
-      <td>39</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>3.9</td>
-      <td>4</td>
-      <td>大寮</td>
-      <td>對敏感族群不健康</td>
-      <td>282</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>31</th>
-      <td>102</td>
-      <td>0.44</td>
-      <td>0.6</td>
-      <td>高雄市</td>
-      <td>22.627392</td>
-      <td>120.358083</td>
-      <td>0.2</td>
-      <td>13</td>
-      <td>13</td>
-      <td>79</td>
-      <td>...</td>
-      <td>25</td>
-      <td>36</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>2.3</td>
-      <td>5</td>
-      <td>鳳山</td>
-      <td>對敏感族群不健康</td>
-      <td>299</td>
-      <td>2.2</td>
-    </tr>
-    <tr>
-      <th>32</th>
-      <td>97</td>
-      <td>0.32</td>
-      <td>0.6</td>
-      <td>高雄市</td>
-      <td>22.689056</td>
-      <td>120.332631</td>
-      <td>1.3</td>
-      <td>7</td>
-      <td>8.4</td>
-      <td>69</td>
-      <td>...</td>
-      <td>22</td>
-      <td>34</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>2.1</td>
-      <td>4</td>
-      <td>仁武</td>
-      <td>普通</td>
-      <td>272</td>
-      <td>3.5</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>47</th>
-      <td>80</td>
-      <td>0.3</td>
-      <td>0.5</td>
-      <td>彰化縣</td>
-      <td>24.131672</td>
-      <td>120.469061</td>
-      <td>1.5</td>
-      <td>6.2</td>
-      <td>7.7</td>
-      <td>73</td>
-      <td>...</td>
-      <td>22</td>
-      <td>27</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td></td>
-      <td>4</td>
-      <td>線西</td>
-      <td>普通</td>
-      <td>349</td>
-      <td>2.4</td>
-    </tr>
-    <tr>
-      <th>48</th>
-      <td>100</td>
-      <td>0.42</td>
-      <td>0.9</td>
-      <td>彰化縣</td>
-      <td>24.066000</td>
-      <td>120.541519</td>
-      <td>0.4</td>
-      <td>12</td>
-      <td>12</td>
-      <td>69</td>
-      <td>...</td>
-      <td>37</td>
-      <td>35</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>3.5</td>
-      <td>3</td>
-      <td>彰化</td>
-      <td>普通</td>
-      <td>303</td>
-      <td>2.3</td>
-    </tr>
-    <tr>
-      <th>49</th>
-      <td>91</td>
-      <td>0.53</td>
-      <td>0.7</td>
-      <td>臺中市</td>
-      <td>24.162197</td>
-      <td>120.616917</td>
-      <td>1.2</td>
-      <td>19</td>
-      <td>20</td>
-      <td>70</td>
-      <td>...</td>
-      <td>35</td>
-      <td>32</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>5.4</td>
-      <td>3</td>
-      <td>西屯</td>
-      <td>普通</td>
-      <td>287</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>50</th>
-      <td>98</td>
-      <td>0.63</td>
-      <td>0.8</td>
-      <td>臺中市</td>
-      <td>24.151958</td>
-      <td>120.641092</td>
-      <td>3.4</td>
-      <td>22</td>
-      <td>26</td>
-      <td>69</td>
-      <td>...</td>
-      <td>45</td>
-      <td>35</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>4.9</td>
-      <td>3</td>
-      <td>忠明</td>
-      <td>普通</td>
-      <td>281</td>
-      <td>2.4</td>
-    </tr>
-    <tr>
-      <th>51</th>
-      <td>91</td>
-      <td>0.54</td>
-      <td>0.8</td>
-      <td>臺中市</td>
-      <td>24.099611</td>
-      <td>120.677689</td>
-      <td>1.1</td>
-      <td>15</td>
-      <td>16</td>
-      <td>71</td>
-      <td>...</td>
-      <td>35</td>
-      <td>32</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>4.5</td>
-      <td>3</td>
-      <td>大里</td>
-      <td>普通</td>
-      <td>281</td>
-      <td>1.9</td>
-    </tr>
-    <tr>
-      <th>52</th>
-      <td>73</td>
-      <td>0.5</td>
-      <td>0.7</td>
-      <td>臺中市</td>
-      <td>24.225628</td>
-      <td>120.568794</td>
-      <td>2.4</td>
-      <td>20</td>
-      <td>22</td>
-      <td>63</td>
-      <td>...</td>
-      <td>38</td>
-      <td>24</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>6.5</td>
-      <td>3</td>
-      <td>沙鹿</td>
-      <td>普通</td>
-      <td>254</td>
-      <td>1.8</td>
-    </tr>
-    <tr>
-      <th>53</th>
-      <td>84</td>
-      <td>0.63</td>
-      <td>0.6</td>
-      <td>臺中市</td>
-      <td>24.256586</td>
-      <td>120.741711</td>
-      <td>3.5</td>
-      <td>17</td>
-      <td>20</td>
-      <td>74</td>
-      <td>...</td>
-      <td>46</td>
-      <td>29</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>2.5</td>
-      <td>2</td>
-      <td>豐原</td>
-      <td>普通</td>
-      <td>243</td>
-      <td>3.1</td>
-    </tr>
-    <tr>
-      <th>54</th>
-      <td>95</td>
-      <td>0.43</td>
-      <td>0.4</td>
-      <td>苗栗縣</td>
-      <td>24.382942</td>
-      <td>120.758833</td>
-      <td>2.5</td>
-      <td>17</td>
-      <td>20</td>
-      <td>54</td>
-      <td>...</td>
-      <td>41</td>
-      <td>33</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>4.3</td>
-      <td>3</td>
-      <td>三義</td>
-      <td>普通</td>
-      <td>199</td>
-      <td>2.4</td>
-    </tr>
-    <tr>
-      <th>55</th>
-      <td>74</td>
-      <td>0.47</td>
-      <td>0.6</td>
-      <td>苗栗縣</td>
-      <td>24.565269</td>
-      <td>120.820200</td>
-      <td>3.1</td>
-      <td>15</td>
-      <td>18</td>
-      <td>42</td>
-      <td>...</td>
-      <td>29</td>
-      <td>25</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>3.7</td>
-      <td>3</td>
-      <td>苗栗</td>
-      <td>普通</td>
-      <td>230</td>
-      <td>1.8</td>
-    </tr>
-    <tr>
-      <th>56</th>
-      <td>46</td>
-      <td>0.34</td>
-      <td>0.5</td>
-      <td>苗栗縣</td>
-      <td>24.696969</td>
-      <td>120.898572</td>
-      <td>1.8</td>
-      <td>11</td>
-      <td>12</td>
-      <td>45</td>
-      <td>...</td>
-      <td>17</td>
-      <td>14</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>1.5</td>
-      <td>1</td>
-      <td>頭份</td>
-      <td>良好</td>
-      <td>294</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>57</th>
-      <td>63</td>
-      <td>0.54</td>
-      <td>0.5</td>
-      <td>新竹市</td>
-      <td>24.805619</td>
-      <td>120.972075</td>
-      <td>2.3</td>
-      <td>17</td>
-      <td>19</td>
-      <td>50</td>
-      <td>...</td>
-      <td>30</td>
-      <td>20</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>3.9</td>
-      <td>2</td>
-      <td>新竹</td>
-      <td>普通</td>
-      <td>213</td>
-      <td>1.8</td>
-    </tr>
-    <tr>
-      <th>58</th>
-      <td>42</td>
-      <td>0.52</td>
-      <td>0.5</td>
-      <td>新竹縣</td>
-      <td>24.740644</td>
-      <td>121.088903</td>
-      <td>1.9</td>
-      <td>21</td>
-      <td>23</td>
-      <td>18</td>
-      <td>...</td>
-      <td>19</td>
-      <td>13</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>3.6</td>
-      <td>1</td>
-      <td>竹東</td>
-      <td>良好</td>
-      <td>221</td>
-      <td>2.2</td>
-    </tr>
-    <tr>
-      <th>59</th>
-      <td>56</td>
-      <td>0.46</td>
-      <td>0.5</td>
-      <td>新竹縣</td>
-      <td>24.900142</td>
-      <td>121.038653</td>
-      <td>1.8</td>
-      <td>15</td>
-      <td>17</td>
-      <td>60</td>
-      <td>...</td>
-      <td>23</td>
-      <td>17</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>4.9</td>
-      <td>2</td>
-      <td>湖口</td>
-      <td>普通</td>
-      <td>240</td>
-      <td>3.7</td>
-    </tr>
-    <tr>
-      <th>60</th>
-      <td>65</td>
-      <td>0.5</td>
-      <td>0.6</td>
-      <td>桃園市</td>
-      <td>24.863869</td>
-      <td>121.216350</td>
-      <td>4</td>
-      <td>25</td>
-      <td>29</td>
-      <td>39</td>
-      <td>...</td>
-      <td>19</td>
-      <td>21</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>3.8</td>
-      <td>2</td>
-      <td>龍潭</td>
-      <td>普通</td>
-      <td>240</td>
-      <td>1.8</td>
-    </tr>
-    <tr>
-      <th>61</th>
-      <td>44</td>
-      <td>0.48</td>
-      <td>0.5</td>
-      <td>桃園市</td>
-      <td>24.952786</td>
-      <td>121.203986</td>
-      <td>3.1</td>
-      <td>20</td>
-      <td>23</td>
-      <td>44</td>
-      <td>...</td>
-      <td>13</td>
-      <td>13</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>3.5</td>
-      <td>3</td>
-      <td>平鎮</td>
-      <td>良好</td>
-      <td>108</td>
-      <td>0.8</td>
-    </tr>
-    <tr>
-      <th>62</th>
-      <td>58</td>
-      <td>0.44</td>
-      <td>0.4</td>
-      <td>桃園市</td>
-      <td>25.035503</td>
-      <td>121.082761</td>
-      <td>2.7</td>
-      <td>14</td>
-      <td>17</td>
-      <td>58</td>
-      <td>...</td>
-      <td>24</td>
-      <td>18</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>3.6</td>
-      <td>2</td>
-      <td>觀音</td>
-      <td>普通</td>
-      <td>263</td>
-      <td>4.4</td>
-    </tr>
-    <tr>
-      <th>63</th>
-      <td>50</td>
-      <td></td>
-      <td>0.4</td>
-      <td>桃園市</td>
-      <td>25.060344</td>
-      <td>121.201811</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>...</td>
-      <td>12</td>
-      <td>15</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td></td>
-      <td>3</td>
-      <td>大園</td>
-      <td>良好</td>
-      <td>153</td>
-      <td>2.4</td>
-    </tr>
-    <tr>
-      <th>64</th>
-      <td>55</td>
-      <td>0.56</td>
-      <td>0.5</td>
-      <td>桃園市</td>
-      <td>24.995368</td>
-      <td>121.304383</td>
-      <td>3.4</td>
-      <td>21</td>
-      <td>25</td>
-      <td>32</td>
-      <td>...</td>
-      <td>16</td>
-      <td>17</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>4.9</td>
-      <td>4</td>
-      <td>桃園</td>
-      <td>普通</td>
-      <td>82</td>
-      <td>1.6</td>
-    </tr>
-    <tr>
-      <th>65</th>
-      <td>43</td>
-      <td>0.79</td>
-      <td>1.0</td>
-      <td>臺北市</td>
-      <td>25.063200</td>
-      <td>121.513311</td>
-      <td>24</td>
-      <td>39</td>
-      <td>63</td>
-      <td>-</td>
-      <td>...</td>
-      <td>8</td>
-      <td>13</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>2.2</td>
-      <td>2</td>
-      <td>大同</td>
-      <td>良好</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>67</th>
-      <td>50</td>
-      <td>0.53</td>
-      <td>0.6</td>
-      <td>臺北市</td>
-      <td>25.020608</td>
-      <td>121.529556</td>
-      <td>5.7</td>
-      <td>26</td>
-      <td>31</td>
-      <td>30</td>
-      <td>...</td>
-      <td>11</td>
-      <td>15</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>2.2</td>
-      <td>2</td>
-      <td>古亭</td>
-      <td>良好</td>
-      <td>47</td>
-      <td>1.7</td>
-    </tr>
-    <tr>
-      <th>68</th>
-      <td>35</td>
-      <td>0.5</td>
-      <td>0.5</td>
-      <td>臺北市</td>
-      <td>25.046503</td>
-      <td>121.507972</td>
-      <td>6.3</td>
-      <td>28</td>
-      <td>35</td>
-      <td>29</td>
-      <td>...</td>
-      <td>6</td>
-      <td>11</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>2.1</td>
-      <td>2</td>
-      <td>萬華</td>
-      <td>良好</td>
-      <td>76</td>
-      <td>1.8</td>
-    </tr>
-    <tr>
-      <th>69</th>
-      <td>47</td>
-      <td>0.66</td>
-      <td>0.7</td>
-      <td>臺北市</td>
-      <td>25.062361</td>
-      <td>121.526528</td>
-      <td>9.3</td>
-      <td>32</td>
-      <td>41</td>
-      <td>28</td>
-      <td>...</td>
-      <td>8</td>
-      <td>15</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>4.1</td>
-      <td>3</td>
-      <td>中山</td>
-      <td>良好</td>
-      <td>95</td>
-      <td>1.6</td>
-    </tr>
-    <tr>
-      <th>70</th>
-      <td>54</td>
-      <td></td>
-      <td>0.3</td>
-      <td>臺北市</td>
-      <td>25.105417</td>
-      <td>121.515389</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>55</td>
-      <td>...</td>
-      <td>7</td>
-      <td>13</td>
-      <td>臭氧八小時</td>
-      <td>2019-04-02 14:00</td>
-      <td></td>
-      <td>2</td>
-      <td>士林</td>
-      <td>普通</td>
-      <td>78</td>
-      <td>1.3</td>
-    </tr>
-    <tr>
-      <th>73</th>
-      <td>52</td>
-      <td>0.4</td>
-      <td>0.5</td>
-      <td>新北市</td>
-      <td>25.068950</td>
-      <td>121.481028</td>
-      <td>2.4</td>
-      <td>15</td>
-      <td>17</td>
-      <td>42</td>
-      <td>...</td>
-      <td>10</td>
-      <td>16</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>1</td>
-      <td>2</td>
-      <td>菜寮</td>
-      <td>普通</td>
-      <td>68</td>
-      <td>1.8</td>
-    </tr>
-    <tr>
-      <th>74</th>
-      <td>40</td>
-      <td>0.45</td>
-      <td>0.5</td>
-      <td>新北市</td>
-      <td>25.037972</td>
-      <td>121.432500</td>
-      <td>4.2</td>
-      <td>18</td>
-      <td>22</td>
-      <td>43</td>
-      <td>...</td>
-      <td>9</td>
-      <td>11</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>1.9</td>
-      <td>2</td>
-      <td>新莊</td>
-      <td>良好</td>
-      <td>66</td>
-      <td>2.6</td>
-    </tr>
-    <tr>
-      <th>75</th>
-      <td>50</td>
-      <td>0.58</td>
-      <td>0.6</td>
-      <td>新北市</td>
-      <td>25.012972</td>
-      <td>121.458667</td>
-      <td>4.8</td>
-      <td>25</td>
-      <td>30</td>
-      <td>33</td>
-      <td>...</td>
-      <td>14</td>
-      <td>15</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>1.9</td>
-      <td>1</td>
-      <td>板橋</td>
-      <td>良好</td>
-      <td>51</td>
-      <td>2.1</td>
-    </tr>
-    <tr>
-      <th>76</th>
-      <td>56</td>
-      <td>0.54</td>
-      <td>0.6</td>
-      <td>新北市</td>
-      <td>24.982528</td>
-      <td>121.451861</td>
-      <td>3.4</td>
-      <td>22</td>
-      <td>25</td>
-      <td>40</td>
-      <td>...</td>
-      <td>15</td>
-      <td>18</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>1.9</td>
-      <td>1</td>
-      <td>土城</td>
-      <td>普通</td>
-      <td>16</td>
-      <td>0.9</td>
-    </tr>
-    <tr>
-      <th>78</th>
-      <td>43</td>
-      <td>0.21</td>
-      <td>0.3</td>
-      <td>新北市</td>
-      <td>25.179667</td>
-      <td>121.689881</td>
-      <td>1.1</td>
-      <td>5.4</td>
-      <td>6.5</td>
-      <td>56</td>
-      <td>...</td>
-      <td>8</td>
-      <td>12</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>0.8</td>
-      <td>2</td>
-      <td>萬里</td>
-      <td>良好</td>
-      <td>90</td>
-      <td>1.7</td>
-    </tr>
-    <tr>
-      <th>79</th>
-      <td>60</td>
-      <td>0.37</td>
-      <td>0.4</td>
-      <td>新北市</td>
-      <td>25.067131</td>
-      <td>121.642300</td>
-      <td>4.1</td>
-      <td>17</td>
-      <td>21</td>
-      <td>34</td>
-      <td>...</td>
-      <td>16</td>
-      <td>19</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>1.7</td>
-      <td>2</td>
-      <td>汐止</td>
-      <td>普通</td>
-      <td>54</td>
-      <td>1.2</td>
-    </tr>
-    <tr>
-      <th>80</th>
-      <td>37</td>
-      <td>0.28</td>
-      <td>0.6</td>
-      <td>基隆市</td>
-      <td>25.129167</td>
-      <td>121.760056</td>
-      <td>1.6</td>
-      <td>6.2</td>
-      <td>7.7</td>
-      <td>50</td>
-      <td>...</td>
-      <td>6</td>
-      <td>11</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>1.8</td>
-      <td>2</td>
-      <td>基隆</td>
-      <td>良好</td>
-      <td>82</td>
-      <td>1.7</td>
-    </tr>
-  </tbody>
-</table>
-<p>73 rows × 23 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">filled_val</span> <span class="o">=</span> <span class="mi">999</span>
@@ -16434,1534 +14133,6 @@ Name: PM2.5, Length: 81, dtype: bool</pre>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[20]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>AQI</th>
-      <th>CO</th>
-      <th>CO_8hr</th>
-      <th>County</th>
-      <th>Latitude</th>
-      <th>Longitude</th>
-      <th>NO</th>
-      <th>NO2</th>
-      <th>NOx</th>
-      <th>O3</th>
-      <th>...</th>
-      <th>PM2.5</th>
-      <th>PM2.5_AVG</th>
-      <th>Pollutant</th>
-      <th>PublishTime</th>
-      <th>SO2</th>
-      <th>SO2_AVG</th>
-      <th>SiteName</th>
-      <th>Status</th>
-      <th>WindDirec</th>
-      <th>WindSpeed</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>999</td>
-      <td></td>
-      <td></td>
-      <td>屏東縣</td>
-      <td>22.352222</td>
-      <td>120.377222</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>...</td>
-      <td>11</td>
-      <td></td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td></td>
-      <td></td>
-      <td>屏東(琉球)</td>
-      <td>設備維護</td>
-      <td>323</td>
-      <td>3.7</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>58</td>
-      <td>0.36</td>
-      <td>0.4</td>
-      <td>苗栗縣</td>
-      <td>24.616369</td>
-      <td>120.786028</td>
-      <td>0.9</td>
-      <td>11</td>
-      <td>11</td>
-      <td>65</td>
-      <td>...</td>
-      <td>30</td>
-      <td>18</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>3.4</td>
-      <td>3</td>
-      <td>苗栗(後龍)</td>
-      <td>普通</td>
-      <td>222</td>
-      <td>2.7</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>53</td>
-      <td>0.21</td>
-      <td>0.2</td>
-      <td>彰化縣</td>
-      <td>23.843139</td>
-      <td>120.273117</td>
-      <td>0.5</td>
-      <td>3.8</td>
-      <td>4.3</td>
-      <td>77</td>
-      <td>...</td>
-      <td>14</td>
-      <td>16</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>2.6</td>
-      <td>3</td>
-      <td>彰化(大城)</td>
-      <td>普通</td>
-      <td>343</td>
-      <td>1.9</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>61</td>
-      <td>0.13</td>
-      <td>0.1</td>
-      <td>臺南市</td>
-      <td>23.265066</td>
-      <td>120.124167</td>
-      <td>0.4</td>
-      <td>5.3</td>
-      <td>5.8</td>
-      <td>74</td>
-      <td>...</td>
-      <td>18</td>
-      <td>20</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>2.7</td>
-      <td>3</td>
-      <td>臺南(北門)</td>
-      <td>普通</td>
-      <td>310</td>
-      <td>2.5</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>50</td>
-      <td>0.17</td>
-      <td>0.2</td>
-      <td>新北市</td>
-      <td>25.298562</td>
-      <td>121.536763</td>
-      <td>0.1</td>
-      <td>1.8</td>
-      <td>2</td>
-      <td>52</td>
-      <td>...</td>
-      <td>8</td>
-      <td>12</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>0.3</td>
-      <td>1</td>
-      <td>富貴角</td>
-      <td>良好</td>
-      <td>97</td>
-      <td>7.9</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>74</td>
-      <td>0.3</td>
-      <td>0.4</td>
-      <td>雲林縣</td>
-      <td>23.753506</td>
-      <td>120.251825</td>
-      <td>1.7</td>
-      <td>7.4</td>
-      <td>9.1</td>
-      <td></td>
-      <td>...</td>
-      <td>19</td>
-      <td>25</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>3.4</td>
-      <td>3</td>
-      <td>麥寮</td>
-      <td>普通</td>
-      <td>328</td>
-      <td>2.9</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>32</td>
-      <td>-</td>
-      <td></td>
-      <td>臺東縣</td>
-      <td>23.045083</td>
-      <td>121.161933</td>
-      <td>0.5</td>
-      <td>5</td>
-      <td>5.4</td>
-      <td>42</td>
-      <td>...</td>
-      <td>5</td>
-      <td>5</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>2.2</td>
-      <td>2</td>
-      <td>關山</td>
-      <td>良好</td>
-      <td>229</td>
-      <td>1.6</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>62</td>
-      <td></td>
-      <td></td>
-      <td>澎湖縣</td>
-      <td>23.569031</td>
-      <td>119.566158</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>...</td>
-      <td>999</td>
-      <td>20</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td></td>
-      <td>1</td>
-      <td>馬公</td>
-      <td>普通</td>
-      <td>10</td>
-      <td>4.2</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>67</td>
-      <td>0.31</td>
-      <td>0.3</td>
-      <td>金門縣</td>
-      <td>24.432133</td>
-      <td>118.312256</td>
-      <td>0.7</td>
-      <td>10</td>
-      <td>11</td>
-      <td>69</td>
-      <td>...</td>
-      <td>24</td>
-      <td>22</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>3.4</td>
-      <td>4</td>
-      <td>金門</td>
-      <td>普通</td>
-      <td>29</td>
-      <td>2.6</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>63</td>
-      <td>0.29</td>
-      <td>0.3</td>
-      <td>連江縣</td>
-      <td>26.160469</td>
-      <td>119.949875</td>
-      <td>0.3</td>
-      <td>7.2</td>
-      <td>7.5</td>
-      <td>63</td>
-      <td>...</td>
-      <td>20</td>
-      <td>21</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>3.8</td>
-      <td>3</td>
-      <td>馬祖</td>
-      <td>普通</td>
-      <td>333</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>68</td>
-      <td>0.39</td>
-      <td>0.4</td>
-      <td>南投縣</td>
-      <td>23.968842</td>
-      <td>120.967903</td>
-      <td>0.9</td>
-      <td>9</td>
-      <td>9.8</td>
-      <td>53</td>
-      <td>...</td>
-      <td>28</td>
-      <td>22</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>1.3</td>
-      <td>2</td>
-      <td>埔里</td>
-      <td>普通</td>
-      <td>286</td>
-      <td>2.2</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>70</td>
-      <td>0.42</td>
-      <td>0.7</td>
-      <td>高雄市</td>
-      <td>22.608711</td>
-      <td>120.312017</td>
-      <td>2.7</td>
-      <td>18</td>
-      <td>21</td>
-      <td>53</td>
-      <td>...</td>
-      <td>12</td>
-      <td>23</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>1.7</td>
-      <td>3</td>
-      <td>復興</td>
-      <td>普通</td>
-      <td>207</td>
-      <td>1.7</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>45</td>
-      <td>0.66</td>
-      <td>0.8</td>
-      <td>新北市</td>
-      <td>25.017000</td>
-      <td>121.516306</td>
-      <td>10</td>
-      <td>29</td>
-      <td>40</td>
-      <td>28</td>
-      <td>...</td>
-      <td>14</td>
-      <td>14</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>2</td>
-      <td>2</td>
-      <td>永和</td>
-      <td>良好</td>
-      <td>75</td>
-      <td>1.6</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>117</td>
-      <td>0.37</td>
-      <td>0.4</td>
-      <td>南投縣</td>
-      <td>23.756389</td>
-      <td>120.677306</td>
-      <td>0.1</td>
-      <td>9.2</td>
-      <td>9.4</td>
-      <td>78</td>
-      <td>...</td>
-      <td>45</td>
-      <td>42</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>2.5</td>
-      <td>2</td>
-      <td>竹山</td>
-      <td>對敏感族群不健康</td>
-      <td>286</td>
-      <td>1.4</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>55</td>
-      <td>1.55</td>
-      <td>2.0</td>
-      <td>桃園市</td>
-      <td>24.953278</td>
-      <td>121.221667</td>
-      <td>33</td>
-      <td>44</td>
-      <td>77</td>
-      <td>20</td>
-      <td>...</td>
-      <td>12</td>
-      <td>17</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>3</td>
-      <td>3</td>
-      <td>中壢</td>
-      <td>普通</td>
-      <td>221</td>
-      <td>0.9</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>42</td>
-      <td>1.43</td>
-      <td>1.5</td>
-      <td>新北市</td>
-      <td>25.072611</td>
-      <td>121.493806</td>
-      <td>65</td>
-      <td>45</td>
-      <td>109</td>
-      <td>-</td>
-      <td>...</td>
-      <td>10</td>
-      <td>13</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td></td>
-      <td>3</td>
-      <td>三重</td>
-      <td>良好</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>31</td>
-      <td>0.31</td>
-      <td>0.3</td>
-      <td>宜蘭縣</td>
-      <td>24.632203</td>
-      <td>121.792928</td>
-      <td>1.6</td>
-      <td>7.3</td>
-      <td>8.9</td>
-      <td>50</td>
-      <td>...</td>
-      <td>14</td>
-      <td>10</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>1.8</td>
-      <td>2</td>
-      <td>冬山</td>
-      <td>良好</td>
-      <td>266</td>
-      <td>1.8</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>48</td>
-      <td>0.32</td>
-      <td>0.4</td>
-      <td>宜蘭縣</td>
-      <td>24.747917</td>
-      <td>121.746394</td>
-      <td>1</td>
-      <td>5.9</td>
-      <td>6.9</td>
-      <td>55</td>
-      <td>...</td>
-      <td>10</td>
-      <td>15</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>2.5</td>
-      <td>2</td>
-      <td>宜蘭</td>
-      <td>良好</td>
-      <td>126</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>49</td>
-      <td>0.22</td>
-      <td>0.2</td>
-      <td>臺北市</td>
-      <td>25.182722</td>
-      <td>121.529583</td>
-      <td>0.2</td>
-      <td>0.4</td>
-      <td>0.6</td>
-      <td>50</td>
-      <td>...</td>
-      <td>4</td>
-      <td>10</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>1.5</td>
-      <td>2</td>
-      <td>陽明</td>
-      <td>良好</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>32</td>
-      <td>0.21</td>
-      <td>0.3</td>
-      <td>花蓮縣</td>
-      <td>23.971306</td>
-      <td>121.599769</td>
-      <td>0.6</td>
-      <td>3.2</td>
-      <td>3.8</td>
-      <td>66</td>
-      <td>...</td>
-      <td>999</td>
-      <td>2</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>1.4</td>
-      <td>2</td>
-      <td>花蓮</td>
-      <td>良好</td>
-      <td>97</td>
-      <td>2.8</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>31</td>
-      <td>0.29</td>
-      <td>0.3</td>
-      <td>臺東縣</td>
-      <td>22.755358</td>
-      <td>121.150450</td>
-      <td>2.2</td>
-      <td>3.5</td>
-      <td>5.6</td>
-      <td>35</td>
-      <td>...</td>
-      <td>2</td>
-      <td>7</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>0.9</td>
-      <td>1</td>
-      <td>臺東</td>
-      <td>良好</td>
-      <td>55</td>
-      <td>2.4</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>61</td>
-      <td>0.15</td>
-      <td>0.2</td>
-      <td>屏東縣</td>
-      <td>21.958069</td>
-      <td>120.788928</td>
-      <td>0.5</td>
-      <td>1.5</td>
-      <td>2</td>
-      <td>57</td>
-      <td>...</td>
-      <td>6</td>
-      <td>7</td>
-      <td>臭氧八小時</td>
-      <td>2019-04-02 14:00</td>
-      <td>1.1</td>
-      <td>1</td>
-      <td>恆春</td>
-      <td>普通</td>
-      <td>39</td>
-      <td>9.6</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>110</td>
-      <td>0.44</td>
-      <td>0.5</td>
-      <td>屏東縣</td>
-      <td>22.523108</td>
-      <td>120.561175</td>
-      <td>0.7</td>
-      <td>12</td>
-      <td>12</td>
-      <td>87</td>
-      <td>...</td>
-      <td>39</td>
-      <td>39</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>3.6</td>
-      <td>4</td>
-      <td>潮州</td>
-      <td>對敏感族群不健康</td>
-      <td>239</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>82</td>
-      <td>0.43</td>
-      <td>0.5</td>
-      <td>屏東縣</td>
-      <td>22.673081</td>
-      <td>120.488033</td>
-      <td>0.6</td>
-      <td>12</td>
-      <td>13</td>
-      <td>79</td>
-      <td>...</td>
-      <td>19</td>
-      <td>28</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>3</td>
-      <td>3</td>
-      <td>屏東</td>
-      <td>普通</td>
-      <td>287</td>
-      <td>1.8</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>66</td>
-      <td>0.3</td>
-      <td>0.5</td>
-      <td>高雄市</td>
-      <td>22.565833</td>
-      <td>120.337736</td>
-      <td>4</td>
-      <td>15</td>
-      <td>19</td>
-      <td>57</td>
-      <td>...</td>
-      <td>12</td>
-      <td>22</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>2.4</td>
-      <td>4</td>
-      <td>小港</td>
-      <td>普通</td>
-      <td>240</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>67</td>
-      <td>0.33</td>
-      <td>0.5</td>
-      <td>高雄市</td>
-      <td>22.605386</td>
-      <td>120.307564</td>
-      <td>3.6</td>
-      <td>16</td>
-      <td>20</td>
-      <td>57</td>
-      <td>...</td>
-      <td>12</td>
-      <td>22</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>1.4</td>
-      <td>3</td>
-      <td>前鎮</td>
-      <td>普通</td>
-      <td>351</td>
-      <td>2.3</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>100</td>
-      <td>0.36</td>
-      <td>0.5</td>
-      <td>高雄市</td>
-      <td>22.632567</td>
-      <td>120.288086</td>
-      <td>1.8</td>
-      <td>5.9</td>
-      <td>7.7</td>
-      <td>78</td>
-      <td>...</td>
-      <td>24</td>
-      <td>35</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>2</td>
-      <td>3</td>
-      <td>前金</td>
-      <td>普通</td>
-      <td>311</td>
-      <td>3.4</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>64</td>
-      <td>0.28</td>
-      <td>0.5</td>
-      <td>高雄市</td>
-      <td>22.674861</td>
-      <td>120.292917</td>
-      <td>1.4</td>
-      <td>6.6</td>
-      <td>8</td>
-      <td>68</td>
-      <td>...</td>
-      <td>12</td>
-      <td>21</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>2.2</td>
-      <td>4</td>
-      <td>左營</td>
-      <td>普通</td>
-      <td>305</td>
-      <td>4.2</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>88</td>
-      <td>0.37</td>
-      <td>0.5</td>
-      <td>高雄市</td>
-      <td>22.733667</td>
-      <td>120.328289</td>
-      <td>1.8</td>
-      <td>8.4</td>
-      <td>10</td>
-      <td>73</td>
-      <td>...</td>
-      <td>6</td>
-      <td>31</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>2.6</td>
-      <td>2</td>
-      <td>楠梓</td>
-      <td>普通</td>
-      <td>300</td>
-      <td>3.1</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>77</td>
-      <td>0.27</td>
-      <td>0.5</td>
-      <td>高雄市</td>
-      <td>22.479500</td>
-      <td>120.411750</td>
-      <td>0.7</td>
-      <td>4.6</td>
-      <td>5.3</td>
-      <td>70</td>
-      <td>...</td>
-      <td>13</td>
-      <td>26</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>2.3</td>
-      <td>4</td>
-      <td>林園</td>
-      <td>普通</td>
-      <td>252</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>51</th>
-      <td>91</td>
-      <td>0.54</td>
-      <td>0.8</td>
-      <td>臺中市</td>
-      <td>24.099611</td>
-      <td>120.677689</td>
-      <td>1.1</td>
-      <td>15</td>
-      <td>16</td>
-      <td>71</td>
-      <td>...</td>
-      <td>35</td>
-      <td>32</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>4.5</td>
-      <td>3</td>
-      <td>大里</td>
-      <td>普通</td>
-      <td>281</td>
-      <td>1.9</td>
-    </tr>
-    <tr>
-      <th>52</th>
-      <td>73</td>
-      <td>0.5</td>
-      <td>0.7</td>
-      <td>臺中市</td>
-      <td>24.225628</td>
-      <td>120.568794</td>
-      <td>2.4</td>
-      <td>20</td>
-      <td>22</td>
-      <td>63</td>
-      <td>...</td>
-      <td>38</td>
-      <td>24</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>6.5</td>
-      <td>3</td>
-      <td>沙鹿</td>
-      <td>普通</td>
-      <td>254</td>
-      <td>1.8</td>
-    </tr>
-    <tr>
-      <th>53</th>
-      <td>84</td>
-      <td>0.63</td>
-      <td>0.6</td>
-      <td>臺中市</td>
-      <td>24.256586</td>
-      <td>120.741711</td>
-      <td>3.5</td>
-      <td>17</td>
-      <td>20</td>
-      <td>74</td>
-      <td>...</td>
-      <td>46</td>
-      <td>29</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>2.5</td>
-      <td>2</td>
-      <td>豐原</td>
-      <td>普通</td>
-      <td>243</td>
-      <td>3.1</td>
-    </tr>
-    <tr>
-      <th>54</th>
-      <td>95</td>
-      <td>0.43</td>
-      <td>0.4</td>
-      <td>苗栗縣</td>
-      <td>24.382942</td>
-      <td>120.758833</td>
-      <td>2.5</td>
-      <td>17</td>
-      <td>20</td>
-      <td>54</td>
-      <td>...</td>
-      <td>41</td>
-      <td>33</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>4.3</td>
-      <td>3</td>
-      <td>三義</td>
-      <td>普通</td>
-      <td>199</td>
-      <td>2.4</td>
-    </tr>
-    <tr>
-      <th>55</th>
-      <td>74</td>
-      <td>0.47</td>
-      <td>0.6</td>
-      <td>苗栗縣</td>
-      <td>24.565269</td>
-      <td>120.820200</td>
-      <td>3.1</td>
-      <td>15</td>
-      <td>18</td>
-      <td>42</td>
-      <td>...</td>
-      <td>29</td>
-      <td>25</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>3.7</td>
-      <td>3</td>
-      <td>苗栗</td>
-      <td>普通</td>
-      <td>230</td>
-      <td>1.8</td>
-    </tr>
-    <tr>
-      <th>56</th>
-      <td>46</td>
-      <td>0.34</td>
-      <td>0.5</td>
-      <td>苗栗縣</td>
-      <td>24.696969</td>
-      <td>120.898572</td>
-      <td>1.8</td>
-      <td>11</td>
-      <td>12</td>
-      <td>45</td>
-      <td>...</td>
-      <td>17</td>
-      <td>14</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>1.5</td>
-      <td>1</td>
-      <td>頭份</td>
-      <td>良好</td>
-      <td>294</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>57</th>
-      <td>63</td>
-      <td>0.54</td>
-      <td>0.5</td>
-      <td>新竹市</td>
-      <td>24.805619</td>
-      <td>120.972075</td>
-      <td>2.3</td>
-      <td>17</td>
-      <td>19</td>
-      <td>50</td>
-      <td>...</td>
-      <td>30</td>
-      <td>20</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>3.9</td>
-      <td>2</td>
-      <td>新竹</td>
-      <td>普通</td>
-      <td>213</td>
-      <td>1.8</td>
-    </tr>
-    <tr>
-      <th>58</th>
-      <td>42</td>
-      <td>0.52</td>
-      <td>0.5</td>
-      <td>新竹縣</td>
-      <td>24.740644</td>
-      <td>121.088903</td>
-      <td>1.9</td>
-      <td>21</td>
-      <td>23</td>
-      <td>18</td>
-      <td>...</td>
-      <td>19</td>
-      <td>13</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>3.6</td>
-      <td>1</td>
-      <td>竹東</td>
-      <td>良好</td>
-      <td>221</td>
-      <td>2.2</td>
-    </tr>
-    <tr>
-      <th>59</th>
-      <td>56</td>
-      <td>0.46</td>
-      <td>0.5</td>
-      <td>新竹縣</td>
-      <td>24.900142</td>
-      <td>121.038653</td>
-      <td>1.8</td>
-      <td>15</td>
-      <td>17</td>
-      <td>60</td>
-      <td>...</td>
-      <td>23</td>
-      <td>17</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>4.9</td>
-      <td>2</td>
-      <td>湖口</td>
-      <td>普通</td>
-      <td>240</td>
-      <td>3.7</td>
-    </tr>
-    <tr>
-      <th>60</th>
-      <td>65</td>
-      <td>0.5</td>
-      <td>0.6</td>
-      <td>桃園市</td>
-      <td>24.863869</td>
-      <td>121.216350</td>
-      <td>4</td>
-      <td>25</td>
-      <td>29</td>
-      <td>39</td>
-      <td>...</td>
-      <td>19</td>
-      <td>21</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>3.8</td>
-      <td>2</td>
-      <td>龍潭</td>
-      <td>普通</td>
-      <td>240</td>
-      <td>1.8</td>
-    </tr>
-    <tr>
-      <th>61</th>
-      <td>44</td>
-      <td>0.48</td>
-      <td>0.5</td>
-      <td>桃園市</td>
-      <td>24.952786</td>
-      <td>121.203986</td>
-      <td>3.1</td>
-      <td>20</td>
-      <td>23</td>
-      <td>44</td>
-      <td>...</td>
-      <td>13</td>
-      <td>13</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>3.5</td>
-      <td>3</td>
-      <td>平鎮</td>
-      <td>良好</td>
-      <td>108</td>
-      <td>0.8</td>
-    </tr>
-    <tr>
-      <th>62</th>
-      <td>58</td>
-      <td>0.44</td>
-      <td>0.4</td>
-      <td>桃園市</td>
-      <td>25.035503</td>
-      <td>121.082761</td>
-      <td>2.7</td>
-      <td>14</td>
-      <td>17</td>
-      <td>58</td>
-      <td>...</td>
-      <td>24</td>
-      <td>18</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>3.6</td>
-      <td>2</td>
-      <td>觀音</td>
-      <td>普通</td>
-      <td>263</td>
-      <td>4.4</td>
-    </tr>
-    <tr>
-      <th>63</th>
-      <td>50</td>
-      <td></td>
-      <td>0.4</td>
-      <td>桃園市</td>
-      <td>25.060344</td>
-      <td>121.201811</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>...</td>
-      <td>12</td>
-      <td>15</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td></td>
-      <td>3</td>
-      <td>大園</td>
-      <td>良好</td>
-      <td>153</td>
-      <td>2.4</td>
-    </tr>
-    <tr>
-      <th>64</th>
-      <td>55</td>
-      <td>0.56</td>
-      <td>0.5</td>
-      <td>桃園市</td>
-      <td>24.995368</td>
-      <td>121.304383</td>
-      <td>3.4</td>
-      <td>21</td>
-      <td>25</td>
-      <td>32</td>
-      <td>...</td>
-      <td>16</td>
-      <td>17</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>4.9</td>
-      <td>4</td>
-      <td>桃園</td>
-      <td>普通</td>
-      <td>82</td>
-      <td>1.6</td>
-    </tr>
-    <tr>
-      <th>65</th>
-      <td>43</td>
-      <td>0.79</td>
-      <td>1.0</td>
-      <td>臺北市</td>
-      <td>25.063200</td>
-      <td>121.513311</td>
-      <td>24</td>
-      <td>39</td>
-      <td>63</td>
-      <td>-</td>
-      <td>...</td>
-      <td>8</td>
-      <td>13</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>2.2</td>
-      <td>2</td>
-      <td>大同</td>
-      <td>良好</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>66</th>
-      <td>999</td>
-      <td>0.38</td>
-      <td>0.5</td>
-      <td>臺北市</td>
-      <td>25.050000</td>
-      <td>121.578611</td>
-      <td>4.9</td>
-      <td>20</td>
-      <td>25</td>
-      <td>33</td>
-      <td>...</td>
-      <td>9</td>
-      <td></td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>2.3</td>
-      <td>2</td>
-      <td>松山</td>
-      <td>設備維護</td>
-      <td>41</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>67</th>
-      <td>50</td>
-      <td>0.53</td>
-      <td>0.6</td>
-      <td>臺北市</td>
-      <td>25.020608</td>
-      <td>121.529556</td>
-      <td>5.7</td>
-      <td>26</td>
-      <td>31</td>
-      <td>30</td>
-      <td>...</td>
-      <td>11</td>
-      <td>15</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>2.2</td>
-      <td>2</td>
-      <td>古亭</td>
-      <td>良好</td>
-      <td>47</td>
-      <td>1.7</td>
-    </tr>
-    <tr>
-      <th>68</th>
-      <td>35</td>
-      <td>0.5</td>
-      <td>0.5</td>
-      <td>臺北市</td>
-      <td>25.046503</td>
-      <td>121.507972</td>
-      <td>6.3</td>
-      <td>28</td>
-      <td>35</td>
-      <td>29</td>
-      <td>...</td>
-      <td>6</td>
-      <td>11</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>2.1</td>
-      <td>2</td>
-      <td>萬華</td>
-      <td>良好</td>
-      <td>76</td>
-      <td>1.8</td>
-    </tr>
-    <tr>
-      <th>69</th>
-      <td>47</td>
-      <td>0.66</td>
-      <td>0.7</td>
-      <td>臺北市</td>
-      <td>25.062361</td>
-      <td>121.526528</td>
-      <td>9.3</td>
-      <td>32</td>
-      <td>41</td>
-      <td>28</td>
-      <td>...</td>
-      <td>8</td>
-      <td>15</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>4.1</td>
-      <td>3</td>
-      <td>中山</td>
-      <td>良好</td>
-      <td>95</td>
-      <td>1.6</td>
-    </tr>
-    <tr>
-      <th>70</th>
-      <td>54</td>
-      <td></td>
-      <td>0.3</td>
-      <td>臺北市</td>
-      <td>25.105417</td>
-      <td>121.515389</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>55</td>
-      <td>...</td>
-      <td>7</td>
-      <td>13</td>
-      <td>臭氧八小時</td>
-      <td>2019-04-02 14:00</td>
-      <td></td>
-      <td>2</td>
-      <td>士林</td>
-      <td>普通</td>
-      <td>78</td>
-      <td>1.3</td>
-    </tr>
-    <tr>
-      <th>71</th>
-      <td>71</td>
-      <td></td>
-      <td>0.2</td>
-      <td>新北市</td>
-      <td>25.164500</td>
-      <td>121.449239</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>...</td>
-      <td>999</td>
-      <td>11</td>
-      <td>臭氧八小時</td>
-      <td>2019-04-02 14:00</td>
-      <td></td>
-      <td></td>
-      <td>淡水</td>
-      <td>普通</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>72</th>
-      <td>44</td>
-      <td></td>
-      <td>0.3</td>
-      <td>新北市</td>
-      <td>25.077197</td>
-      <td>121.376869</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>...</td>
-      <td>999</td>
-      <td>12</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td></td>
-      <td>1</td>
-      <td>林口</td>
-      <td>良好</td>
-      <td>126</td>
-      <td>2.7</td>
-    </tr>
-    <tr>
-      <th>73</th>
-      <td>52</td>
-      <td>0.4</td>
-      <td>0.5</td>
-      <td>新北市</td>
-      <td>25.068950</td>
-      <td>121.481028</td>
-      <td>2.4</td>
-      <td>15</td>
-      <td>17</td>
-      <td>42</td>
-      <td>...</td>
-      <td>10</td>
-      <td>16</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>1</td>
-      <td>2</td>
-      <td>菜寮</td>
-      <td>普通</td>
-      <td>68</td>
-      <td>1.8</td>
-    </tr>
-    <tr>
-      <th>74</th>
-      <td>40</td>
-      <td>0.45</td>
-      <td>0.5</td>
-      <td>新北市</td>
-      <td>25.037972</td>
-      <td>121.432500</td>
-      <td>4.2</td>
-      <td>18</td>
-      <td>22</td>
-      <td>43</td>
-      <td>...</td>
-      <td>9</td>
-      <td>11</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>1.9</td>
-      <td>2</td>
-      <td>新莊</td>
-      <td>良好</td>
-      <td>66</td>
-      <td>2.6</td>
-    </tr>
-    <tr>
-      <th>75</th>
-      <td>50</td>
-      <td>0.58</td>
-      <td>0.6</td>
-      <td>新北市</td>
-      <td>25.012972</td>
-      <td>121.458667</td>
-      <td>4.8</td>
-      <td>25</td>
-      <td>30</td>
-      <td>33</td>
-      <td>...</td>
-      <td>14</td>
-      <td>15</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>1.9</td>
-      <td>1</td>
-      <td>板橋</td>
-      <td>良好</td>
-      <td>51</td>
-      <td>2.1</td>
-    </tr>
-    <tr>
-      <th>76</th>
-      <td>56</td>
-      <td>0.54</td>
-      <td>0.6</td>
-      <td>新北市</td>
-      <td>24.982528</td>
-      <td>121.451861</td>
-      <td>3.4</td>
-      <td>22</td>
-      <td>25</td>
-      <td>40</td>
-      <td>...</td>
-      <td>15</td>
-      <td>18</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>1.9</td>
-      <td>1</td>
-      <td>土城</td>
-      <td>普通</td>
-      <td>16</td>
-      <td>0.9</td>
-    </tr>
-    <tr>
-      <th>77</th>
-      <td>51</td>
-      <td></td>
-      <td>0.5</td>
-      <td>新北市</td>
-      <td>24.977222</td>
-      <td>121.537778</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>...</td>
-      <td>999</td>
-      <td>16</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td></td>
-      <td>2</td>
-      <td>新店</td>
-      <td>普通</td>
-      <td>125</td>
-      <td>1.6</td>
-    </tr>
-    <tr>
-      <th>78</th>
-      <td>43</td>
-      <td>0.21</td>
-      <td>0.3</td>
-      <td>新北市</td>
-      <td>25.179667</td>
-      <td>121.689881</td>
-      <td>1.1</td>
-      <td>5.4</td>
-      <td>6.5</td>
-      <td>56</td>
-      <td>...</td>
-      <td>8</td>
-      <td>12</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>0.8</td>
-      <td>2</td>
-      <td>萬里</td>
-      <td>良好</td>
-      <td>90</td>
-      <td>1.7</td>
-    </tr>
-    <tr>
-      <th>79</th>
-      <td>60</td>
-      <td>0.37</td>
-      <td>0.4</td>
-      <td>新北市</td>
-      <td>25.067131</td>
-      <td>121.642300</td>
-      <td>4.1</td>
-      <td>17</td>
-      <td>21</td>
-      <td>34</td>
-      <td>...</td>
-      <td>16</td>
-      <td>19</td>
-      <td>細懸浮微粒</td>
-      <td>2019-04-02 14:00</td>
-      <td>1.7</td>
-      <td>2</td>
-      <td>汐止</td>
-      <td>普通</td>
-      <td>54</td>
-      <td>1.2</td>
-    </tr>
-    <tr>
-      <th>80</th>
-      <td>37</td>
-      <td>0.28</td>
-      <td>0.6</td>
-      <td>基隆市</td>
-      <td>25.129167</td>
-      <td>121.760056</td>
-      <td>1.6</td>
-      <td>6.2</td>
-      <td>7.7</td>
-      <td>50</td>
-      <td>...</td>
-      <td>6</td>
-      <td>11</td>
-      <td></td>
-      <td>2019-04-02 14:00</td>
-      <td>1.8</td>
-      <td>2</td>
-      <td>基隆</td>
-      <td>良好</td>
-      <td>82</td>
-      <td>1.7</td>
-    </tr>
-  </tbody>
-</table>
-<p>81 rows × 23 columns</p>
-</div>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -17975,7 +14146,7 @@ Name: PM2.5, Length: 81, dtype: bool</pre>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">aqi</span><span class="p">[</span><span class="s2">&quot;County&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
@@ -17985,32 +14156,10 @@ Name: PM2.5, Length: 81, dtype: bool</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[21]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([&#39;屏東縣&#39;, &#39;苗栗縣&#39;, &#39;彰化縣&#39;, &#39;臺南市&#39;, &#39;新北市&#39;, &#39;雲林縣&#39;, &#39;臺東縣&#39;, &#39;澎湖縣&#39;, &#39;金門縣&#39;,
-       &#39;連江縣&#39;, &#39;南投縣&#39;, &#39;高雄市&#39;, &#39;桃園市&#39;, &#39;宜蘭縣&#39;, &#39;臺北市&#39;, &#39;花蓮縣&#39;, &#39;嘉義市&#39;, &#39;嘉義縣&#39;,
-       &#39;臺中市&#39;, &#39;新竹市&#39;, &#39;新竹縣&#39;, &#39;基隆市&#39;], dtype=object)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">aqi</span><span class="p">[</span><span class="s2">&quot;AQI&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">aqi</span><span class="p">[</span><span class="s2">&quot;AQI&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
@@ -18020,25 +14169,6 @@ Name: PM2.5, Length: 81, dtype: bool</pre>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>127.0
-2.0
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -18052,7 +14182,7 @@ Name: PM2.5, Length: 81, dtype: bool</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">aqi</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;County&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()[</span><span class="s2">&quot;PM2.5&quot;</span><span class="p">]</span>
@@ -18062,56 +14192,13 @@ Name: PM2.5, Length: 81, dtype: bool</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[23]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>County
-南投縣    41.333333
-嘉義市    31.000000
-嘉義縣    30.500000
-基隆市     6.000000
-宜蘭縣    12.000000
-屏東縣    18.750000
-彰化縣    24.000000
-新北市    11.555556
-新竹市    30.000000
-新竹縣    21.000000
-桃園市    16.000000
-澎湖縣          NaN
-臺中市    39.800000
-臺北市     7.571429
-臺南市    15.000000
-臺東縣     3.500000
-花蓮縣          NaN
-苗栗縣    29.250000
-連江縣    20.000000
-金門縣    24.000000
-雲林縣    28.666667
-高雄市    17.916667
-Name: PM2.5, dtype: float64</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#36681;&#32622;">&#36681;&#32622;<a class="anchor-link" href="#&#36681;&#32622;">&#182;</a></h2><ul>
-<li><code>df.stack()</code>：寬轉長格式</li>
-<li><code>s.unstack()</code>：長轉寬格式</li>
+<li><code>pd.melt()</code>：寬轉長格式</li>
+<li><code>df.pivot()</code>：長轉寬格式</li>
 </ul>
 
 </div>
@@ -18119,11 +14206,11 @@ Name: PM2.5, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">wide_df</span> <span class="o">=</span> <span class="n">aqi</span><span class="p">[[</span><span class="s2">&quot;SiteName&quot;</span><span class="p">,</span> <span class="s2">&quot;AQI&quot;</span><span class="p">,</span> <span class="s2">&quot;PM2.5&quot;</span><span class="p">]]</span>
-<span class="n">wide_df</span> <span class="o">=</span> <span class="n">wide_df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;SiteName&quot;</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">wide_df</span> <span class="o">=</span> <span class="n">aqi</span><span class="p">[[</span><span class="s2">&quot;SiteName&quot;</span><span class="p">,</span> <span class="s2">&quot;AQI&quot;</span><span class="p">,</span> <span class="s2">&quot;PM2.5&quot;</span><span class="p">,</span> <span class="s2">&quot;SO2&quot;</span><span class="p">]]</span>
+<span class="n">wide_df</span> <span class="o">=</span> <span class="n">wide_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;SiteName&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">wide_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -18131,631 +14218,48 @@ Name: PM2.5, dtype: float64</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">long_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">wide_df</span><span class="p">,</span> <span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;SiteName&quot;</span><span class="p">],</span> <span class="n">value_vars</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;AQI&quot;</span><span class="p">,</span> <span class="s2">&quot;PM2.5&quot;</span><span class="p">,</span> <span class="s2">&quot;SO2&quot;</span><span class="p">],</span> <span class="n">var_name</span><span class="o">=</span><span class="s2">&quot;AirQualityMetric&quot;</span><span class="p">,</span> <span class="n">value_name</span><span class="o">=</span><span class="s2">&quot;Value&quot;</span><span class="p">)</span>
+<span class="n">long_df</span> <span class="o">=</span> <span class="n">long_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;SiteName&quot;</span><span class="p">)</span>
+<span class="n">long_df</span> <span class="o">=</span> <span class="n">long_df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">long_df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
 
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[24]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>AQI</th>
-      <th>PM2.5</th>
-    </tr>
-    <tr>
-      <th>SiteName</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>屏東(琉球)</th>
-      <td>NaN</td>
-      <td>11.0</td>
-    </tr>
-    <tr>
-      <th>苗栗(後龍)</th>
-      <td>58.0</td>
-      <td>30.0</td>
-    </tr>
-    <tr>
-      <th>彰化(大城)</th>
-      <td>53.0</td>
-      <td>14.0</td>
-    </tr>
-    <tr>
-      <th>臺南(北門)</th>
-      <td>61.0</td>
-      <td>18.0</td>
-    </tr>
-    <tr>
-      <th>富貴角</th>
-      <td>50.0</td>
-      <td>8.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
+    </div>
 </div>
 </div>
 
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">wide_df</span><span class="o">.</span><span class="n">stack</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">long_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[25]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>SiteName       
-屏東(琉球)    PM2.5     11.0
-苗栗(後龍)    AQI       58.0
-          PM2.5     30.0
-彰化(大城)    AQI       53.0
-          PM2.5     14.0
-臺南(北門)    AQI       61.0
-          PM2.5     18.0
-富貴角       AQI       50.0
-          PM2.5      8.0
-麥寮        AQI       74.0
-          PM2.5     19.0
-關山        AQI       32.0
-          PM2.5      5.0
-馬公        AQI       62.0
-金門        AQI       67.0
-          PM2.5     24.0
-馬祖        AQI       63.0
-          PM2.5     20.0
-埔里        AQI       68.0
-          PM2.5     28.0
-復興        AQI       70.0
-          PM2.5     12.0
-永和        AQI       45.0
-          PM2.5     14.0
-竹山        AQI      117.0
-          PM2.5     45.0
-中壢        AQI       55.0
-          PM2.5     12.0
-三重        AQI       42.0
-          PM2.5     10.0
-                   ...  
-桃園        AQI       55.0
-          PM2.5     16.0
-大同        AQI       43.0
-          PM2.5      8.0
-松山        PM2.5      9.0
-古亭        AQI       50.0
-          PM2.5     11.0
-萬華        AQI       35.0
-          PM2.5      6.0
-中山        AQI       47.0
-          PM2.5      8.0
-士林        AQI       54.0
-          PM2.5      7.0
-淡水        AQI       71.0
-林口        AQI       44.0
-菜寮        AQI       52.0
-          PM2.5     10.0
-新莊        AQI       40.0
-          PM2.5      9.0
-板橋        AQI       50.0
-          PM2.5     14.0
-土城        AQI       56.0
-          PM2.5     15.0
-新店        AQI       51.0
-萬里        AQI       43.0
-          PM2.5      8.0
-汐止        AQI       60.0
-          PM2.5     16.0
-基隆        AQI       37.0
-          PM2.5      6.0
-Length: 154, dtype: float64</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">wide_df</span><span class="o">.</span><span class="n">stack</span><span class="p">()</span><span class="o">.</span><span class="n">unstack</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pivot_df</span> <span class="o">=</span> <span class="n">long_df</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s2">&quot;SiteName&quot;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;AirQualityMetric&quot;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s2">&quot;Value&quot;</span><span class="p">)</span>
+<span class="n">pivot_df</span> <span class="o">=</span> <span class="n">pivot_df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="k">del</span> <span class="n">pivot_df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">name</span>
+<span class="n">pivot_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[26]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>AQI</th>
-      <th>PM2.5</th>
-    </tr>
-    <tr>
-      <th>SiteName</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>屏東(琉球)</th>
-      <td>NaN</td>
-      <td>11.0</td>
-    </tr>
-    <tr>
-      <th>苗栗(後龍)</th>
-      <td>58.0</td>
-      <td>30.0</td>
-    </tr>
-    <tr>
-      <th>彰化(大城)</th>
-      <td>53.0</td>
-      <td>14.0</td>
-    </tr>
-    <tr>
-      <th>臺南(北門)</th>
-      <td>61.0</td>
-      <td>18.0</td>
-    </tr>
-    <tr>
-      <th>富貴角</th>
-      <td>50.0</td>
-      <td>8.0</td>
-    </tr>
-    <tr>
-      <th>麥寮</th>
-      <td>74.0</td>
-      <td>19.0</td>
-    </tr>
-    <tr>
-      <th>關山</th>
-      <td>32.0</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>馬公</th>
-      <td>62.0</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>金門</th>
-      <td>67.0</td>
-      <td>24.0</td>
-    </tr>
-    <tr>
-      <th>馬祖</th>
-      <td>63.0</td>
-      <td>20.0</td>
-    </tr>
-    <tr>
-      <th>埔里</th>
-      <td>68.0</td>
-      <td>28.0</td>
-    </tr>
-    <tr>
-      <th>復興</th>
-      <td>70.0</td>
-      <td>12.0</td>
-    </tr>
-    <tr>
-      <th>永和</th>
-      <td>45.0</td>
-      <td>14.0</td>
-    </tr>
-    <tr>
-      <th>竹山</th>
-      <td>117.0</td>
-      <td>45.0</td>
-    </tr>
-    <tr>
-      <th>中壢</th>
-      <td>55.0</td>
-      <td>12.0</td>
-    </tr>
-    <tr>
-      <th>三重</th>
-      <td>42.0</td>
-      <td>10.0</td>
-    </tr>
-    <tr>
-      <th>冬山</th>
-      <td>31.0</td>
-      <td>14.0</td>
-    </tr>
-    <tr>
-      <th>宜蘭</th>
-      <td>48.0</td>
-      <td>10.0</td>
-    </tr>
-    <tr>
-      <th>陽明</th>
-      <td>49.0</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>花蓮</th>
-      <td>32.0</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>臺東</th>
-      <td>31.0</td>
-      <td>2.0</td>
-    </tr>
-    <tr>
-      <th>恆春</th>
-      <td>61.0</td>
-      <td>6.0</td>
-    </tr>
-    <tr>
-      <th>潮州</th>
-      <td>110.0</td>
-      <td>39.0</td>
-    </tr>
-    <tr>
-      <th>屏東</th>
-      <td>82.0</td>
-      <td>19.0</td>
-    </tr>
-    <tr>
-      <th>小港</th>
-      <td>66.0</td>
-      <td>12.0</td>
-    </tr>
-    <tr>
-      <th>前鎮</th>
-      <td>67.0</td>
-      <td>12.0</td>
-    </tr>
-    <tr>
-      <th>前金</th>
-      <td>100.0</td>
-      <td>24.0</td>
-    </tr>
-    <tr>
-      <th>左營</th>
-      <td>64.0</td>
-      <td>12.0</td>
-    </tr>
-    <tr>
-      <th>楠梓</th>
-      <td>88.0</td>
-      <td>6.0</td>
-    </tr>
-    <tr>
-      <th>林園</th>
-      <td>77.0</td>
-      <td>13.0</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>大里</th>
-      <td>91.0</td>
-      <td>35.0</td>
-    </tr>
-    <tr>
-      <th>沙鹿</th>
-      <td>73.0</td>
-      <td>38.0</td>
-    </tr>
-    <tr>
-      <th>豐原</th>
-      <td>84.0</td>
-      <td>46.0</td>
-    </tr>
-    <tr>
-      <th>三義</th>
-      <td>95.0</td>
-      <td>41.0</td>
-    </tr>
-    <tr>
-      <th>苗栗</th>
-      <td>74.0</td>
-      <td>29.0</td>
-    </tr>
-    <tr>
-      <th>頭份</th>
-      <td>46.0</td>
-      <td>17.0</td>
-    </tr>
-    <tr>
-      <th>新竹</th>
-      <td>63.0</td>
-      <td>30.0</td>
-    </tr>
-    <tr>
-      <th>竹東</th>
-      <td>42.0</td>
-      <td>19.0</td>
-    </tr>
-    <tr>
-      <th>湖口</th>
-      <td>56.0</td>
-      <td>23.0</td>
-    </tr>
-    <tr>
-      <th>龍潭</th>
-      <td>65.0</td>
-      <td>19.0</td>
-    </tr>
-    <tr>
-      <th>平鎮</th>
-      <td>44.0</td>
-      <td>13.0</td>
-    </tr>
-    <tr>
-      <th>觀音</th>
-      <td>58.0</td>
-      <td>24.0</td>
-    </tr>
-    <tr>
-      <th>大園</th>
-      <td>50.0</td>
-      <td>12.0</td>
-    </tr>
-    <tr>
-      <th>桃園</th>
-      <td>55.0</td>
-      <td>16.0</td>
-    </tr>
-    <tr>
-      <th>大同</th>
-      <td>43.0</td>
-      <td>8.0</td>
-    </tr>
-    <tr>
-      <th>松山</th>
-      <td>NaN</td>
-      <td>9.0</td>
-    </tr>
-    <tr>
-      <th>古亭</th>
-      <td>50.0</td>
-      <td>11.0</td>
-    </tr>
-    <tr>
-      <th>萬華</th>
-      <td>35.0</td>
-      <td>6.0</td>
-    </tr>
-    <tr>
-      <th>中山</th>
-      <td>47.0</td>
-      <td>8.0</td>
-    </tr>
-    <tr>
-      <th>士林</th>
-      <td>54.0</td>
-      <td>7.0</td>
-    </tr>
-    <tr>
-      <th>淡水</th>
-      <td>71.0</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>林口</th>
-      <td>44.0</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>菜寮</th>
-      <td>52.0</td>
-      <td>10.0</td>
-    </tr>
-    <tr>
-      <th>新莊</th>
-      <td>40.0</td>
-      <td>9.0</td>
-    </tr>
-    <tr>
-      <th>板橋</th>
-      <td>50.0</td>
-      <td>14.0</td>
-    </tr>
-    <tr>
-      <th>土城</th>
-      <td>56.0</td>
-      <td>15.0</td>
-    </tr>
-    <tr>
-      <th>新店</th>
-      <td>51.0</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>萬里</th>
-      <td>43.0</td>
-      <td>8.0</td>
-    </tr>
-    <tr>
-      <th>汐止</th>
-      <td>60.0</td>
-      <td>16.0</td>
-    </tr>
-    <tr>
-      <th>基隆</th>
-      <td>37.0</td>
-      <td>6.0</td>
-    </tr>
-  </tbody>
-</table>
-<p>81 rows × 2 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">long_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">wide_df</span><span class="o">.</span><span class="n">stack</span><span class="p">())</span>
-<span class="n">long_df</span> <span class="o">=</span> <span class="n">long_df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
-<span class="n">long_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;SiteName&quot;</span><span class="p">,</span> <span class="s2">&quot;AirQualityIndex&quot;</span><span class="p">,</span> <span class="s2">&quot;Value&quot;</span><span class="p">]</span>
-<span class="n">long_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[27]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>SiteName</th>
-      <th>AirQualityIndex</th>
-      <th>Value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>屏東(琉球)</td>
-      <td>PM2.5</td>
-      <td>11.0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>苗栗(後龍)</td>
-      <td>AQI</td>
-      <td>58.0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>苗栗(後龍)</td>
-      <td>PM2.5</td>
-      <td>30.0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>彰化(大城)</td>
-      <td>AQI</td>
-      <td>53.0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>彰化(大城)</td>
-      <td>PM2.5</td>
-      <td>14.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -18763,14 +14267,14 @@ Length: 154, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#21512;&#20341;">&#21512;&#20341;<a class="anchor-link" href="#&#21512;&#20341;">&#182;</a></h2><p>利用 <code>pd.merge()</code> 進行 SQL 風格的合併。</p>
+<h2 id="&#21512;&#20341;">&#21512;&#20341;<a class="anchor-link" href="#&#21512;&#20341;">&#182;</a></h2><p>利用 <code>pd.merge()</code> 進行 SQL 風格的合併</p>
 
 </div>
 </div>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">left</span> <span class="o">=</span> <span class="n">long_df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -18782,539 +14286,182 @@ Length: 154, dtype: float64</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#32654;&#22283;&#26222;&#26597;">&#32654;&#22283;&#26222;&#26597;<a class="anchor-link" href="#&#32654;&#22283;&#26222;&#26597;">&#182;</a></h2>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#20358;&#28304;">&#20358;&#28304;<a class="anchor-link" href="#&#20358;&#28304;">&#182;</a></h2><p><a href="https://www.coursera.org/">Coursera</a> 的 <a href="https://www.coursera.org/learn/python-data-analysis/home/welcome">Introduction to Data Science in Python</a> 課程作業</p>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-<div class="output_area">
+<span class="n">census_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://storage.googleapis.com/py_ml_datasets/census.csv&#39;</span><span class="p">)</span>
+<span class="n">census_df</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
 
-    <div class="prompt output_prompt">Out[28]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>SiteName</th>
-      <th>AirQualityIndex</th>
-      <th>Value</th>
-      <th>Latitude</th>
-      <th>Longitude</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>屏東(琉球)</td>
-      <td>PM2.5</td>
-      <td>11.0</td>
-      <td>22.352222</td>
-      <td>120.377222</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>苗栗(後龍)</td>
-      <td>AQI</td>
-      <td>58.0</td>
-      <td>24.616369</td>
-      <td>120.786028</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>苗栗(後龍)</td>
-      <td>PM2.5</td>
-      <td>30.0</td>
-      <td>24.616369</td>
-      <td>120.786028</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>彰化(大城)</td>
-      <td>AQI</td>
-      <td>53.0</td>
-      <td>23.843139</td>
-      <td>120.273117</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>彰化(大城)</td>
-      <td>PM2.5</td>
-      <td>14.0</td>
-      <td>23.843139</td>
-      <td>120.273117</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>臺南(北門)</td>
-      <td>AQI</td>
-      <td>61.0</td>
-      <td>23.265066</td>
-      <td>120.124167</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>臺南(北門)</td>
-      <td>PM2.5</td>
-      <td>18.0</td>
-      <td>23.265066</td>
-      <td>120.124167</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>富貴角</td>
-      <td>AQI</td>
-      <td>50.0</td>
-      <td>25.298562</td>
-      <td>121.536763</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>富貴角</td>
-      <td>PM2.5</td>
-      <td>8.0</td>
-      <td>25.298562</td>
-      <td>121.536763</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>麥寮</td>
-      <td>AQI</td>
-      <td>74.0</td>
-      <td>23.753506</td>
-      <td>120.251825</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>麥寮</td>
-      <td>PM2.5</td>
-      <td>19.0</td>
-      <td>23.753506</td>
-      <td>120.251825</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>關山</td>
-      <td>AQI</td>
-      <td>32.0</td>
-      <td>23.045083</td>
-      <td>121.161933</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>關山</td>
-      <td>PM2.5</td>
-      <td>5.0</td>
-      <td>23.045083</td>
-      <td>121.161933</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>馬公</td>
-      <td>AQI</td>
-      <td>62.0</td>
-      <td>23.569031</td>
-      <td>119.566158</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>金門</td>
-      <td>AQI</td>
-      <td>67.0</td>
-      <td>24.432133</td>
-      <td>118.312256</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>金門</td>
-      <td>PM2.5</td>
-      <td>24.0</td>
-      <td>24.432133</td>
-      <td>118.312256</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>馬祖</td>
-      <td>AQI</td>
-      <td>63.0</td>
-      <td>26.160469</td>
-      <td>119.949875</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>馬祖</td>
-      <td>PM2.5</td>
-      <td>20.0</td>
-      <td>26.160469</td>
-      <td>119.949875</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>埔里</td>
-      <td>AQI</td>
-      <td>68.0</td>
-      <td>23.968842</td>
-      <td>120.967903</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>埔里</td>
-      <td>PM2.5</td>
-      <td>28.0</td>
-      <td>23.968842</td>
-      <td>120.967903</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>復興</td>
-      <td>AQI</td>
-      <td>70.0</td>
-      <td>22.608711</td>
-      <td>120.312017</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>復興</td>
-      <td>PM2.5</td>
-      <td>12.0</td>
-      <td>22.608711</td>
-      <td>120.312017</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>永和</td>
-      <td>AQI</td>
-      <td>45.0</td>
-      <td>25.017000</td>
-      <td>121.516306</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>永和</td>
-      <td>PM2.5</td>
-      <td>14.0</td>
-      <td>25.017000</td>
-      <td>121.516306</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>竹山</td>
-      <td>AQI</td>
-      <td>117.0</td>
-      <td>23.756389</td>
-      <td>120.677306</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>竹山</td>
-      <td>PM2.5</td>
-      <td>45.0</td>
-      <td>23.756389</td>
-      <td>120.677306</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>中壢</td>
-      <td>AQI</td>
-      <td>55.0</td>
-      <td>24.953278</td>
-      <td>121.221667</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>中壢</td>
-      <td>PM2.5</td>
-      <td>12.0</td>
-      <td>24.953278</td>
-      <td>121.221667</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>三重</td>
-      <td>AQI</td>
-      <td>42.0</td>
-      <td>25.072611</td>
-      <td>121.493806</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>三重</td>
-      <td>PM2.5</td>
-      <td>10.0</td>
-      <td>25.072611</td>
-      <td>121.493806</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>124</th>
-      <td>桃園</td>
-      <td>AQI</td>
-      <td>55.0</td>
-      <td>24.995368</td>
-      <td>121.304383</td>
-    </tr>
-    <tr>
-      <th>125</th>
-      <td>桃園</td>
-      <td>PM2.5</td>
-      <td>16.0</td>
-      <td>24.995368</td>
-      <td>121.304383</td>
-    </tr>
-    <tr>
-      <th>126</th>
-      <td>大同</td>
-      <td>AQI</td>
-      <td>43.0</td>
-      <td>25.063200</td>
-      <td>121.513311</td>
-    </tr>
-    <tr>
-      <th>127</th>
-      <td>大同</td>
-      <td>PM2.5</td>
-      <td>8.0</td>
-      <td>25.063200</td>
-      <td>121.513311</td>
-    </tr>
-    <tr>
-      <th>128</th>
-      <td>松山</td>
-      <td>PM2.5</td>
-      <td>9.0</td>
-      <td>25.050000</td>
-      <td>121.578611</td>
-    </tr>
-    <tr>
-      <th>129</th>
-      <td>古亭</td>
-      <td>AQI</td>
-      <td>50.0</td>
-      <td>25.020608</td>
-      <td>121.529556</td>
-    </tr>
-    <tr>
-      <th>130</th>
-      <td>古亭</td>
-      <td>PM2.5</td>
-      <td>11.0</td>
-      <td>25.020608</td>
-      <td>121.529556</td>
-    </tr>
-    <tr>
-      <th>131</th>
-      <td>萬華</td>
-      <td>AQI</td>
-      <td>35.0</td>
-      <td>25.046503</td>
-      <td>121.507972</td>
-    </tr>
-    <tr>
-      <th>132</th>
-      <td>萬華</td>
-      <td>PM2.5</td>
-      <td>6.0</td>
-      <td>25.046503</td>
-      <td>121.507972</td>
-    </tr>
-    <tr>
-      <th>133</th>
-      <td>中山</td>
-      <td>AQI</td>
-      <td>47.0</td>
-      <td>25.062361</td>
-      <td>121.526528</td>
-    </tr>
-    <tr>
-      <th>134</th>
-      <td>中山</td>
-      <td>PM2.5</td>
-      <td>8.0</td>
-      <td>25.062361</td>
-      <td>121.526528</td>
-    </tr>
-    <tr>
-      <th>135</th>
-      <td>士林</td>
-      <td>AQI</td>
-      <td>54.0</td>
-      <td>25.105417</td>
-      <td>121.515389</td>
-    </tr>
-    <tr>
-      <th>136</th>
-      <td>士林</td>
-      <td>PM2.5</td>
-      <td>7.0</td>
-      <td>25.105417</td>
-      <td>121.515389</td>
-    </tr>
-    <tr>
-      <th>137</th>
-      <td>淡水</td>
-      <td>AQI</td>
-      <td>71.0</td>
-      <td>25.164500</td>
-      <td>121.449239</td>
-    </tr>
-    <tr>
-      <th>138</th>
-      <td>林口</td>
-      <td>AQI</td>
-      <td>44.0</td>
-      <td>25.077197</td>
-      <td>121.376869</td>
-    </tr>
-    <tr>
-      <th>139</th>
-      <td>菜寮</td>
-      <td>AQI</td>
-      <td>52.0</td>
-      <td>25.068950</td>
-      <td>121.481028</td>
-    </tr>
-    <tr>
-      <th>140</th>
-      <td>菜寮</td>
-      <td>PM2.5</td>
-      <td>10.0</td>
-      <td>25.068950</td>
-      <td>121.481028</td>
-    </tr>
-    <tr>
-      <th>141</th>
-      <td>新莊</td>
-      <td>AQI</td>
-      <td>40.0</td>
-      <td>25.037972</td>
-      <td>121.432500</td>
-    </tr>
-    <tr>
-      <th>142</th>
-      <td>新莊</td>
-      <td>PM2.5</td>
-      <td>9.0</td>
-      <td>25.037972</td>
-      <td>121.432500</td>
-    </tr>
-    <tr>
-      <th>143</th>
-      <td>板橋</td>
-      <td>AQI</td>
-      <td>50.0</td>
-      <td>25.012972</td>
-      <td>121.458667</td>
-    </tr>
-    <tr>
-      <th>144</th>
-      <td>板橋</td>
-      <td>PM2.5</td>
-      <td>14.0</td>
-      <td>25.012972</td>
-      <td>121.458667</td>
-    </tr>
-    <tr>
-      <th>145</th>
-      <td>土城</td>
-      <td>AQI</td>
-      <td>56.0</td>
-      <td>24.982528</td>
-      <td>121.451861</td>
-    </tr>
-    <tr>
-      <th>146</th>
-      <td>土城</td>
-      <td>PM2.5</td>
-      <td>15.0</td>
-      <td>24.982528</td>
-      <td>121.451861</td>
-    </tr>
-    <tr>
-      <th>147</th>
-      <td>新店</td>
-      <td>AQI</td>
-      <td>51.0</td>
-      <td>24.977222</td>
-      <td>121.537778</td>
-    </tr>
-    <tr>
-      <th>148</th>
-      <td>萬里</td>
-      <td>AQI</td>
-      <td>43.0</td>
-      <td>25.179667</td>
-      <td>121.689881</td>
-    </tr>
-    <tr>
-      <th>149</th>
-      <td>萬里</td>
-      <td>PM2.5</td>
-      <td>8.0</td>
-      <td>25.179667</td>
-      <td>121.689881</td>
-    </tr>
-    <tr>
-      <th>150</th>
-      <td>汐止</td>
-      <td>AQI</td>
-      <td>60.0</td>
-      <td>25.067131</td>
-      <td>121.642300</td>
-    </tr>
-    <tr>
-      <th>151</th>
-      <td>汐止</td>
-      <td>PM2.5</td>
-      <td>16.0</td>
-      <td>25.067131</td>
-      <td>121.642300</td>
-    </tr>
-    <tr>
-      <th>152</th>
-      <td>基隆</td>
-      <td>AQI</td>
-      <td>37.0</td>
-      <td>25.129167</td>
-      <td>121.760056</td>
-    </tr>
-    <tr>
-      <th>153</th>
-      <td>基隆</td>
-      <td>PM2.5</td>
-      <td>6.0</td>
-      <td>25.129167</td>
-      <td>121.760056</td>
-    </tr>
-  </tbody>
-</table>
-<p>154 rows × 5 columns</p>
+    </div>
 </div>
 </div>
 
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">census_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
 </div>
 
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#21738;&#20491;&#24030;&#65288;state&#65289;&#30340;&#37089;&#65288;county&#65289;&#25976;&#26368;&#22810;&#65311;">&#38568;&#22530;&#32244;&#32722;&#65306;&#21738;&#20491;&#24030;&#65288;state&#65289;&#30340;&#37089;&#65288;county&#65289;&#25976;&#26368;&#22810;&#65311;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#21738;&#20491;&#24030;&#65288;state&#65289;&#30340;&#37089;&#65288;county&#65289;&#25976;&#26368;&#22810;&#65311;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">answer_one</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    這個函數應該回傳一個文字，州名</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="s2">&quot;答案&quot;</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">answer_one</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;STNAME&quot;</span><span class="p">)[</span><span class="s2">&quot;CTYNAME&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()</span>
+
+<span class="n">answer_one</span><span class="p">(</span><span class="n">census_df</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#20677;&#32771;&#24942;&#27599;&#24030;&#65288;state&#65289;&#20154;&#21475;&#26368;&#22810;&#30340;&#19977;&#20491;&#37089;&#65288;county&#65289;&#35336;&#31639;&#20154;&#21475;&#32317;&#21644;&#65288;CENSUS2010POP&#65289;&#65292;&#21738;&#19977;&#20491;&#24030;&#32317;&#21644;&#25976;&#26368;&#22810;&#65311;&#65288;&#35531;&#27880;&#24847;-SUMLEV-&#35722;&#25976;&#65289;">&#38568;&#22530;&#32244;&#32722;&#65306;&#20677;&#32771;&#24942;&#27599;&#24030;&#65288;state&#65289;&#20154;&#21475;&#26368;&#22810;&#30340;&#19977;&#20491;&#37089;&#65288;county&#65289;&#35336;&#31639;&#20154;&#21475;&#32317;&#21644;&#65288;CENSUS2010POP&#65289;&#65292;&#21738;&#19977;&#20491;&#24030;&#32317;&#21644;&#25976;&#26368;&#22810;&#65311;&#65288;&#35531;&#27880;&#24847; SUMLEV &#35722;&#25976;&#65289;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#20677;&#32771;&#24942;&#27599;&#24030;&#65288;state&#65289;&#20154;&#21475;&#26368;&#22810;&#30340;&#19977;&#20491;&#37089;&#65288;county&#65289;&#35336;&#31639;&#20154;&#21475;&#32317;&#21644;&#65288;CENSUS2010POP&#65289;&#65292;&#21738;&#19977;&#20491;&#24030;&#32317;&#21644;&#25976;&#26368;&#22810;&#65311;&#65288;&#35531;&#27880;&#24847;-SUMLEV-&#35722;&#25976;&#65289;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">answer_two</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    這個函數應該回傳一個清單，三個州名</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="s2">&quot;答案&quot;</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">answer_two</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="n">county_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;SUMLEV&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">50</span><span class="p">]</span>
+    <span class="n">groupby_summary</span> <span class="o">=</span> <span class="n">county_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;STNAME&quot;</span><span class="p">)[</span><span class="s2">&quot;CENSUS2010POP&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nlargest</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">groupby_summary_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">groupby_summary</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+    <span class="n">ans</span> <span class="o">=</span> <span class="n">groupby_summary_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;STNAME&quot;</span><span class="p">)[</span><span class="s2">&quot;CENSUS2010POP&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">nlargest</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">index</span>
+    <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span>
+
+<span class="n">answer_two</span><span class="p">(</span><span class="n">census_df</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#21738;&#20491;&#37089;&#65288;county&#65289;&#22312;-2010-2015-&#26399;&#38291;&#20154;&#21475;&#25913;&#35722;&#25976;&#37327;&#26368;&#39640;&#65311;&#65288;POPESTIMATE2010:POPESTIMATE2015-&#36889;&#20845;&#20491;&#35722;&#25976;&#65289;">&#21738;&#20491;&#37089;&#65288;county&#65289;&#22312; 2010-2015 &#26399;&#38291;&#20154;&#21475;&#25913;&#35722;&#25976;&#37327;&#26368;&#39640;&#65311;&#65288;POPESTIMATE2010:POPESTIMATE2015 &#36889;&#20845;&#20491;&#35722;&#25976;&#65289;<a class="anchor-link" href="#&#21738;&#20491;&#37089;&#65288;county&#65289;&#22312;-2010-2015-&#26399;&#38291;&#20154;&#21475;&#25913;&#35722;&#25976;&#37327;&#26368;&#39640;&#65311;&#65288;POPESTIMATE2010:POPESTIMATE2015-&#36889;&#20845;&#20491;&#35722;&#25976;&#65289;">&#182;</a></h2><p>提示：如果 6 年的人口數分別為 120, 80, 105, 100, 130, 120 則人口改變數量為 130-80 = 50</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">answer_three</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    這個函數應該回傳一個文字，郡名</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="s2">&quot;答案&quot;</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">answer_three</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="n">county_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;SUMLEV&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">50</span><span class="p">]</span>
+    <span class="n">county_df</span> <span class="o">=</span> <span class="n">county_df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;CTYNAME&quot;</span><span class="p">)</span>
+    <span class="n">county_df</span> <span class="o">=</span> <span class="n">county_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s2">&quot;POPESTIMATE2010&quot;</span><span class="p">:</span><span class="s2">&quot;POPESTIMATE2015&quot;</span><span class="p">]</span>
+    <span class="n">max_population</span> <span class="o">=</span> <span class="n">county_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s2">&quot;POPESTIMATE2010&quot;</span><span class="p">:</span><span class="s2">&quot;POPESTIMATE2015&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">min_population</span> <span class="o">=</span> <span class="n">county_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s2">&quot;POPESTIMATE2010&quot;</span><span class="p">:</span><span class="s2">&quot;POPESTIMATE2015&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">diff_population</span> <span class="o">=</span> <span class="n">max_population</span> <span class="o">-</span> <span class="n">min_population</span>
+    <span class="k">return</span> <span class="n">diff_population</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()</span>
+
+<span class="n">answer_three</span><span class="p">(</span><span class="n">census_df</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#31721;&#36984;&#20986;&#23660;&#26044;-REGION-1-&#25110;-2&#12289;&#38283;&#38957;&#21517;&#31281;&#28858;-Washington-&#20006;&#19988;-POPESTIMATE2015-&#22823;&#26044;-POPESTIMATE2014-&#30340;&#37089;&#65288;county&#65289;">&#31721;&#36984;&#20986;&#23660;&#26044; REGION 1 &#25110; 2&#12289;&#38283;&#38957;&#21517;&#31281;&#28858; Washington &#20006;&#19988; POPESTIMATE2015 &#22823;&#26044; POPESTIMATE2014 &#30340;&#37089;&#65288;county&#65289;<a class="anchor-link" href="#&#31721;&#36984;&#20986;&#23660;&#26044;-REGION-1-&#25110;-2&#12289;&#38283;&#38957;&#21517;&#31281;&#28858;-Washington-&#20006;&#19988;-POPESTIMATE2015-&#22823;&#26044;-POPESTIMATE2014-&#30340;&#37089;&#65288;county&#65289;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">answer_four</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    這個函數應該回傳一個 DataFrame，外型為 5x2，</span>
+<span class="sd">    變數名稱為 [&#39;STNAME&#39;, &#39;CTYNAME&#39;]，</span>
+<span class="sd">    索引值由小到大排列</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="s2">&quot;答案&quot;</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">answer_four</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="n">county_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;SUMLEV&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">50</span><span class="p">]</span>
+    <span class="n">contains_washington</span> <span class="o">=</span> <span class="n">county_df</span><span class="p">[</span><span class="s2">&quot;CTYNAME&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">&quot;Washington&quot;</span><span class="p">)</span>
+    <span class="n">region_filter</span> <span class="o">=</span> <span class="p">(</span><span class="n">county_df</span><span class="p">[</span><span class="s2">&quot;REGION&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">county_df</span><span class="p">[</span><span class="s2">&quot;REGION&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">pop_filter</span> <span class="o">=</span> <span class="n">county_df</span><span class="p">[</span><span class="s2">&quot;POPESTIMATE2015&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">county_df</span><span class="p">[</span><span class="s2">&quot;POPESTIMATE2014&quot;</span><span class="p">]</span>
+    <span class="n">ans</span> <span class="o">=</span> <span class="n">county_df</span><span class="p">[</span><span class="n">contains_washington</span> <span class="o">&amp;</span> <span class="n">region_filter</span> <span class="o">&amp;</span> <span class="n">pop_filter</span><span class="p">][[</span><span class="s2">&quot;STNAME&quot;</span><span class="p">,</span> <span class="s2">&quot;CTYNAME&quot;</span><span class="p">]]</span>
+    <span class="n">ans</span> <span class="o">=</span> <span class="n">ans</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ans</span>
+
+<span class="n">answer_four</span><span class="p">(</span><span class="n">census_df</span><span class="p">)</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
@@ -19322,12 +14469,135 @@ Length: 154, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#24310;&#20280;&#38321;&#35712;">&#24310;&#20280;&#38321;&#35712;<a class="anchor-link" href="#&#24310;&#20280;&#38321;&#35712;">&#182;</a></h2><ul>
-<li><a href="http://pandas.pydata.org/pandas-docs/stable/">pandas: powerful Python data analysis toolkit</a></li>
+<h2 id="&#24310;&#20280;&#38321;&#35712;">&#24310;&#20280;&#38321;&#35712;<a class="anchor-link" href="#&#24310;&#20280;&#38321;&#35712;">&#182;</a></h2><p><a href="http://pandas.pydata.org/pandas-docs/stable/">pandas: powerful Python data analysis toolkit</a></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#20316;&#26989;">&#20316;&#26989;<a class="anchor-link" href="#&#20316;&#26989;">&#182;</a></h2>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#25847;&#21462;-Avengers:-Endgame-(2019)-&#30340;&#19978;&#26144;&#26085;&#26399;&#21015;&#34920;&#65292;&#25913;&#20197;-pandas-&#22238;&#31572;&#36889;&#20841;&#20491;&#21839;&#38988;&#65306;">&#25847;&#21462; Avengers: Endgame (2019) &#30340;&#19978;&#26144;&#26085;&#26399;&#21015;&#34920;&#65292;&#25913;&#20197; <code>pandas</code> &#22238;&#31572;&#36889;&#20841;&#20491;&#21839;&#38988;&#65306;<a class="anchor-link" href="#&#25847;&#21462;-Avengers:-Endgame-(2019)-&#30340;&#19978;&#26144;&#26085;&#26399;&#21015;&#34920;&#65292;&#25913;&#20197;-pandas-&#22238;&#31572;&#36889;&#20841;&#20491;&#21839;&#38988;&#65306;">&#182;</a></h2><ul>
+<li>最多的上映日期為哪一天？</li>
+<li>有幾個國家在那天上映？</li>
 </ul>
 
 </div>
 </div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">answer_one</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[2]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>release_date
+22 April 2019     1
+23 April 2019     1
+24 April 2019    31
+25 April 2019    22
+26 April 2019    14
+28 April 2019     1
+29 April 2019     1
+Name: country, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">answer_one</span><span class="p">()</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[3]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;24 April 2019&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">answer_two</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[5]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;共有 31 個國家在 24 April 2019 上映 Avengers: Endgame (2019)&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div></section></section>
 </div>
 </div>
