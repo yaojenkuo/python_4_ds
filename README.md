@@ -43,7 +43,7 @@
 - [網頁資料擷取](03-web-scraping-101.slides.html)
 - [NumPy 101](04-numpy-101.slides.html)
 - [Pandas 101](05-pandas-101.slides.html)
-- [Pandas 專題：資料清洗]()
+- [Pandas 專題：資料處理](06-pandas-data-wrangling.slides.html)
 - [資料視覺化](06-matplotlib-pyplot-101.slides.html)
 
 ### 延伸閱讀
