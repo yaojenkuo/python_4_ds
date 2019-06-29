@@ -44,7 +44,8 @@
 - [NumPy 101](04-numpy-101.slides.html)
 - [Pandas 101](05-pandas-101.slides.html)
 - [Pandas 專題：資料處理](06-pandas-data-wrangling.slides.html)
-- [資料視覺化](06-matplotlib-pyplot-101.slides.html)
+- [Matplotlib PyPlot 101](07-pyplot-101.slides.html)
+- [Seaborn 101](08-seaborn-101.slides.html)
 
 ### 延伸閱讀
 
