@@ -6,12 +6,13 @@
 
 ### 評分標準
 
-- 一個作業的分數為 20 分
+- 一個作業的分數為 25 分
 - 70 分即可獲得證書，作業請上傳至 Google 表單
 - 作業繳交期限為課程結束後一週內，如遇長假期（春節、連假）則順延
 
 ### 作業上傳表單
 
+- [315 期暑期密集班](https://forms.gle/wSPvWDXeMaJYAH4Q7)
 - [312 期假日下午班](https://forms.gle/xrh3SkSV9WszWdMm9)
 - [311 期假日下午班](https://forms.gle/m3C59C9saYFJSHfm7)
 - [309 期寒假密集班](https://goo.gl/forms/S2YXpZxn9JwH2e3E3)
@@ -27,6 +28,7 @@
 
 ### 課程共筆
 
+- [315 期假日下午班](https://colab.research.google.com/drive/1qGAngB7FykvWaKVGdIc4hHAKyHktWOTJ)
 - [312 期假日下午班](https://colab.research.google.com/drive/1qrlyUWt7BIB4Xv2YYms7PHFELQzZuoEi)
 - [311 期假日下午班](https://colab.research.google.com/drive/12_QPE9jH3i0D__Owrrn6cB_q7MYW7tLr)
 - [309 期寒假密集班](https://colab.research.google.com/drive/1nDhlXPyVlvfRq5sx6a8MvBCEnNC-3RrS)
@@ -49,12 +51,14 @@
 
 ### 延伸閱讀
 
-- [DataInPoint](https://www.datainpoint.com)
+- [進擊的資料科學](https://www.books.com.tw/products/0010827812)
+- [進擊的資料科學：網頁版](https://www.datainpoint.com/data-science-in-action/)
+- [Python Data Science Handbook](https://www.amazon.com/Python-Data-Science-Handbook-Essential/dp/1491912057)
 - [DataCamp](https://www.datacamp.com?tap_a=5644-dce66f&tap_s=194899-1fb421)
-- [Python for Data Analysis](http://shop.oreilly.com/product/0636920023784.do)
 
 ### 近期課程錄影清單
 
+- [第 315 期 Python 與資料科學應用（暑期密集班）]()
 - [第 312 期 Python 與資料科學應用（假日班下午）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuU2MjWUWArwjxQnp55yXTtt)
 - [第 311 期 Python 與資料科學應用（假日班下午）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuXfAla3JulbR6vNeIkDnt4E)
 - [第 309 期 Python 與資料科學應用（寒假密集班）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuUzxgsMBOMy5-EIzXSdgFT-)
