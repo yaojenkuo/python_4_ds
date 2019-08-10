@@ -13254,7 +13254,6 @@ a.anchor-link {
 <h2 id="&#22823;&#32177;">&#22823;&#32177;<a class="anchor-link" href="#&#22823;&#32177;">&#182;</a></h2><ul>
 <li>網頁資料擷取的核心任務</li>
 <li>擷取 JSON 格式網頁資料</li>
-<li>擷取 XML 格式網頁資料</li>
 <li>擷取 HTML 格式網頁資料</li>
 <li>瀏覽器自動化</li>
 </ul>
@@ -13311,7 +13310,6 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#35299;&#26512;&#36039;&#26009;">&#35299;&#26512;&#36039;&#26009;<a class="anchor-link" href="#&#35299;&#26512;&#36039;&#26009;">&#182;</a></h2><ul>
 <li>如果資料是 JSON 格式：以 <code>requests</code> 獲取後可直接以 Python 資料結構解析</li>
-<li>如果資料是 XML 格式：以 <code>lxml</code> 搭配 XPath 解析</li>
 <li>如果資料是 HTML 格式：以 <code>bs4</code>、<code>pyquery</code> 或 <code>selenium</code> 搭配 CSS Selector/XPath 解析</li>
 </ul>
 
@@ -13386,45 +13384,54 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38568;&#22530;&#32244;&#32722;">&#38568;&#22530;&#32244;&#32722;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;">&#182;</a></h2>
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#21488;&#28771;&#30340;&#28204;&#31449;&#20849;&#26377;&#24190;&#20491;&#65311;">&#38568;&#22530;&#32244;&#32722;&#65306;&#21488;&#28771;&#30340;&#28204;&#31449;&#20849;&#26377;&#24190;&#20491;&#65311;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#21488;&#28771;&#30340;&#28204;&#31449;&#20849;&#26377;&#24190;&#20491;&#65311;">&#182;</a></h2>
 </div>
 </div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#21488;&#28771;&#30340;&#28204;&#31449;&#20849;&#26377;&#24190;&#20491;&#65311;">&#21488;&#28771;&#30340;&#28204;&#31449;&#20849;&#26377;&#24190;&#20491;&#65311;<a class="anchor-link" href="#&#21488;&#28771;&#30340;&#28204;&#31449;&#20849;&#26377;&#24190;&#20491;&#65311;">&#182;</a></h2>
-</div>
-</div>
-</div></section><section>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n_sites</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">aqi</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;台灣的測站共有 </span><span class="si">{}</span><span class="s2"> 個&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n_sites</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;台灣的測站共有 </span><span class="si">{}</span><span class="s2"> 個&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n_sites</span><span class="p">))</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-</div></section><section>
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>台灣的測站共有 82 個
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#20301;&#26044;&#21488;&#21271;&#24066;&#33287;&#26032;&#21271;&#24066;&#30340;&#28204;&#31449;&#20849;&#26377;&#24190;&#20491;&#65311;">&#20301;&#26044;&#21488;&#21271;&#24066;&#33287;&#26032;&#21271;&#24066;&#30340;&#28204;&#31449;&#20849;&#26377;&#24190;&#20491;&#65311;<a class="anchor-link" href="#&#20301;&#26044;&#21488;&#21271;&#24066;&#33287;&#26032;&#21271;&#24066;&#30340;&#28204;&#31449;&#20849;&#26377;&#24190;&#20491;&#65311;">&#182;</a></h2>
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#20301;&#26044;&#33274;&#21271;&#24066;&#33287;&#26032;&#21271;&#24066;&#30340;&#28204;&#31449;&#20849;&#26377;&#24190;&#20491;&#65311;&#21508;&#28204;&#31449;&#21517;&#28858;&#65311;">&#38568;&#22530;&#32244;&#32722;&#65306;&#20301;&#26044;&#33274;&#21271;&#24066;&#33287;&#26032;&#21271;&#24066;&#30340;&#28204;&#31449;&#20849;&#26377;&#24190;&#20491;&#65311;&#21508;&#28204;&#31449;&#21517;&#28858;&#65311;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#20301;&#26044;&#33274;&#21271;&#24066;&#33287;&#26032;&#21271;&#24066;&#30340;&#28204;&#31449;&#20849;&#26377;&#24190;&#20491;&#65311;&#21508;&#28204;&#31449;&#21517;&#28858;&#65311;">&#182;</a></h2>
 </div>
 </div>
-</div></section><section>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sites_in_tp</span> <span class="o">=</span> <span class="p">[</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;SiteName&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">aqi</span> <span class="k">if</span> <span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;County&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;臺北市&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;County&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;新北市&quot;</span><span class="p">)]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;位於台北市與新北市的測站共有 </span><span class="si">{}</span><span class="s2"> 個：&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sites_in_tp</span><span class="p">)))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;位於臺北市與新北市的測站共有 </span><span class="si">{}</span><span class="s2"> 個：&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n_sites_in_tp</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">sites_in_tp</span><span class="p">)</span>
 </pre></div>
 
@@ -13432,28 +13439,39 @@ a.anchor-link {
 </div>
 </div>
 
-</div></section><section>
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>位於臺北市與新北市的測站共有 19 個：
+[&#39;富貴角&#39;, &#39;永和&#39;, &#39;三重&#39;, &#39;陽明&#39;, &#39;大同&#39;, &#39;松山&#39;, &#39;古亭&#39;, &#39;萬華&#39;, &#39;中山&#39;, &#39;士林&#39;, &#39;淡水&#39;, &#39;林口&#39;, &#39;菜寮&#39;, &#39;新莊&#39;, &#39;板橋&#39;, &#39;土城&#39;, &#39;新店&#39;, &#39;萬里&#39;, &#39;汐止&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#36942;&#21435;&#19968;&#23567;&#26178;-PM2.5_AVG-&#26368;&#39640;&#33287;&#26368;&#20302;&#30340;&#28204;&#31449;&#20998;&#21029;&#28858;&#65311;">&#36942;&#21435;&#19968;&#23567;&#26178; PM2.5_AVG &#26368;&#39640;&#33287;&#26368;&#20302;&#30340;&#28204;&#31449;&#20998;&#21029;&#28858;&#65311;<a class="anchor-link" href="#&#36942;&#21435;&#19968;&#23567;&#26178;-PM2.5_AVG-&#26368;&#39640;&#33287;&#26368;&#20302;&#30340;&#28204;&#31449;&#20998;&#21029;&#28858;&#65311;">&#182;</a></h2>
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#36942;&#21435;&#19968;&#23567;&#26178;-PM2.5_AVG-&#26368;&#39640;&#33287;&#26368;&#20302;&#30340;&#28204;&#31449;&#20998;&#21029;&#28858;&#65311;">&#38568;&#22530;&#32244;&#32722;&#65306;&#36942;&#21435;&#19968;&#23567;&#26178; PM2.5_AVG &#26368;&#39640;&#33287;&#26368;&#20302;&#30340;&#28204;&#31449;&#20998;&#21029;&#28858;&#65311;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#36942;&#21435;&#19968;&#23567;&#26178;-PM2.5_AVG-&#26368;&#39640;&#33287;&#26368;&#20302;&#30340;&#28204;&#31449;&#20998;&#21029;&#28858;&#65311;">&#182;</a></h2>
 </div>
 </div>
-</div></section><section>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pm25_avg</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;PM2.5_AVG&quot;</span><span class="p">])</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">aqi</span><span class="p">]</span>
-<span class="n">max_val</span><span class="p">,</span> <span class="n">min_val</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">pm25_avg</span><span class="p">),</span> <span class="nb">min</span><span class="p">(</span><span class="n">pm25_avg</span><span class="p">)</span>
-<span class="n">max_sites</span><span class="p">,</span> <span class="n">min_sites</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">aqi</span><span class="p">:</span>
-    <span class="k">if</span> <span class="nb">float</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;PM2.5_AVG&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="n">max_val</span><span class="p">:</span>
-        <span class="n">max_sites</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;SiteName&quot;</span><span class="p">])</span>
-    <span class="k">elif</span> <span class="nb">float</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;PM2.5_AVG&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="n">min_val</span><span class="p">:</span>
-        <span class="n">min_sites</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;SiteName&quot;</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;過去一小時 PM2.5_AVG 最高為 </span><span class="si">{}</span><span class="s2">，測站為：&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">max_val</span><span class="p">),</span> <span class="n">max_sites</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;過去一小時 PM2.5_AVG 最高為 </span><span class="si">{}</span><span class="s2">，測站為：&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">max_val</span><span class="p">),</span> <span class="n">max_sites</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;過去一小時 PM2.5_AVG 最低為 </span><span class="si">{}</span><span class="s2">，測站為：&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">min_val</span><span class="p">),</span> <span class="n">min_sites</span><span class="p">)</span>
 </pre></div>
 
@@ -13461,68 +13479,26 @@ a.anchor-link {
 </div>
 </div>
 
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#25847;&#21462;-XML-&#26684;&#24335;&#32178;&#38913;&#36039;&#26009;">&#25847;&#21462; XML &#26684;&#24335;&#32178;&#38913;&#36039;&#26009;<a class="anchor-link" href="#&#25847;&#21462;-XML-&#26684;&#24335;&#32178;&#38913;&#36039;&#26009;">&#182;</a></h2>
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>過去一小時 PM2.5_AVG 最高為 30.0，測站為： [&#39;桃園&#39;]
+過去一小時 PM2.5_AVG 最低為 5.0，測站為： [&#39;冬山&#39;, &#39;宜蘭&#39;]
+</pre>
 </div>
 </div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#25847;&#21462;-XML-&#26684;&#24335;&#32178;&#38913;&#36039;&#26009;&#27493;&#39519;">&#25847;&#21462; XML &#26684;&#24335;&#32178;&#38913;&#36039;&#26009;&#27493;&#39519;<a class="anchor-link" href="#&#25847;&#21462;-XML-&#26684;&#24335;&#32178;&#38913;&#36039;&#26009;&#27493;&#39519;">&#182;</a></h2><ul>
-<li><code>requests.get()</code></li>
-<li><code>r.content</code></li>
-<li>以 <code>lxml</code> 搭配 XPath 解析</li>
-</ul>
 
 </div>
 </div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#20197;-https://opendata.epa.gov.tw/ws/Data/AQI/?$format=xml-&#31034;&#31684;">&#20197; <a href="https://opendata.epa.gov.tw/ws/Data/AQI/?$format=xml">https://opendata.epa.gov.tw/ws/Data/AQI/?$format=xml</a> &#31034;&#31684;<a class="anchor-link" href="#&#20197;-https://opendata.epa.gov.tw/ws/Data/AQI/?$format=xml-&#31034;&#31684;">&#182;</a></h2>
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">aqi_url</span> <span class="o">=</span> <span class="s2">&quot;https://opendata.epa.gov.tw/ws/Data/AQI/?$format=xml&quot;</span>
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">aqi_url</span><span class="p">,</span> <span class="n">verify</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div></div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">lxml</span> <span class="k">import</span> <span class="n">etree</span>
-<span class="kn">from</span> <span class="nn">io</span> <span class="k">import</span> <span class="n">BytesIO</span>
-
-<span class="n">f</span> <span class="o">=</span> <span class="n">BytesIO</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
-<span class="n">tree</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-<span class="n">site_names</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span><span class="o">.</span><span class="n">text</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tree</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s2">&quot;//SiteName&quot;</span><span class="p">)]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">site_names</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div></section></section><section><section>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13691,31 +13667,16 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38568;&#22530;&#32244;&#32722;">&#38568;&#22530;&#32244;&#32722;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;">&#182;</a></h2>
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#20197;-requests-&#25645;&#37197;-bs4-&#25847;&#21462;-Avengers:-Endgame-(2019)-&#30340;&#21127;&#24773;&#39006;&#22411;">&#38568;&#22530;&#32244;&#32722;&#65306;&#20197; <code>requests</code> &#25645;&#37197; <code>bs4</code> &#25847;&#21462; <a href="https://www.imdb.com/title/tt4154796">Avengers: Endgame (2019)</a> &#30340;&#21127;&#24773;&#39006;&#22411;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#20197;-requests-&#25645;&#37197;-bs4-&#25847;&#21462;-Avengers:-Endgame-(2019)-&#30340;&#21127;&#24773;&#39006;&#22411;">&#182;</a></h2>
 </div>
 </div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#20197;-requests-&#25645;&#37197;-bs4-&#25847;&#21462;-Avengers:-Endgame-(2019)-&#30340;&#21127;&#24773;&#39006;&#22411;">&#20197; <code>requests</code> &#25645;&#37197; <code>bs4</code> &#25847;&#21462; <a href="https://www.imdb.com/title/tt4154796">Avengers: Endgame (2019)</a> &#30340;&#21127;&#24773;&#39006;&#22411;<a class="anchor-link" href="#&#20197;-requests-&#25645;&#37197;-bs4-&#25847;&#21462;-Avengers:-Endgame-(2019)-&#30340;&#21127;&#24773;&#39006;&#22411;">&#182;</a></h2>
-</div>
-</div>
-</div></section><section>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">from</span> <span class="nn">bs4</span> <span class="k">import</span> <span class="n">BeautifulSoup</span>
-
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://www.imdb.com/title/tt4154796&quot;</span><span class="p">)</span>
-<span class="n">html_doc</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span>
-<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html_doc</span><span class="p">)</span>
-<span class="n">genre</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;.subtext a&quot;</span><span class="p">)</span>
-<span class="n">genre</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-<span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">genre</span><span class="p">:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">genre</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">g</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
 </pre></div>
 
@@ -13723,41 +13684,65 @@ a.anchor-link {
 </div>
 </div>
 
-</div></section><section>
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Action
+Adventure
+Sci-Fi
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#20197;-requests-&#25645;&#37197;-bs4-&#25847;&#21462;-Avengers:-Endgame-(2019)-&#30340;&#28436;&#21729;&#38499;&#23481;">&#20197; <code>requests</code> &#25645;&#37197; <code>bs4</code> &#25847;&#21462; <a href="https://www.imdb.com/title/tt4154796">Avengers: Endgame (2019)</a> &#30340;&#28436;&#21729;&#38499;&#23481;<a class="anchor-link" href="#&#20197;-requests-&#25645;&#37197;-bs4-&#25847;&#21462;-Avengers:-Endgame-(2019)-&#30340;&#28436;&#21729;&#38499;&#23481;">&#182;</a></h2>
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#20197;-requests-&#25645;&#37197;-bs4-&#25847;&#21462;-Avengers:-Endgame-(2019)-&#30340;&#28436;&#21729;&#38499;&#23481;">&#38568;&#22530;&#32244;&#32722;&#65306;&#20197; <code>requests</code> &#25645;&#37197; <code>bs4</code> &#25847;&#21462; <a href="https://www.imdb.com/title/tt4154796">Avengers: Endgame (2019)</a> &#30340;&#28436;&#21729;&#38499;&#23481;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#20197;-requests-&#25645;&#37197;-bs4-&#25847;&#21462;-Avengers:-Endgame-(2019)-&#30340;&#28436;&#21729;&#38499;&#23481;">&#182;</a></h2>
 </div>
 </div>
-</div></section><section>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">from</span> <span class="nn">bs4</span> <span class="k">import</span> <span class="n">BeautifulSoup</span>
-
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://www.imdb.com/title/tt4154796&quot;</span><span class="p">)</span>
-<span class="n">html_doc</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span>
-<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html_doc</span><span class="p">)</span>
-<span class="n">n_cast</span> <span class="o">=</span> <span class="mi">15</span>
-<span class="n">end_num</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">n_cast</span>
-<span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">cast</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">end_num</span><span class="p">:</span>
-    <span class="n">star</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;td&quot;</span><span class="p">)[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;img&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;alt&quot;</span><span class="p">)</span>
-    <span class="n">cast</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">star</span><span class="p">)</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">4</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">cast</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">cast</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-</div></section><section>
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;Robert Downey Jr.&#39;, &#39;Chris Evans&#39;, &#39;Mark Ruffalo&#39;, &#39;Chris Hemsworth&#39;, &#39;Scarlett Johansson&#39;, &#39;Jeremy Renner&#39;, &#39;Don Cheadle&#39;, &#39;Paul Rudd&#39;, &#39;Benedict Cumberbatch&#39;, &#39;Chadwick Boseman&#39;, &#39;Brie Larson&#39;, &#39;Tom Holland&#39;, &#39;Karen Gillan&#39;, &#39;Zoe Saldana&#39;, &#39;Evangeline Lilly&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13845,125 +13830,137 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38568;&#22530;&#32244;&#32722;">&#38568;&#22530;&#32244;&#32722;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;">&#182;</a></h2>
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#20197;-requests-&#25645;&#37197;-pyquery-&#25847;&#21462;-Avengers:-Endgame-(2019)-&#30340;&#21127;&#24773;&#39006;&#22411;">&#38568;&#22530;&#32244;&#32722;&#65306;&#20197; <code>requests</code> &#25645;&#37197; <code>pyquery</code> &#25847;&#21462; <a href="https://www.imdb.com/title/tt4154796">Avengers: Endgame (2019)</a> &#30340;&#21127;&#24773;&#39006;&#22411;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#20197;-requests-&#25645;&#37197;-pyquery-&#25847;&#21462;-Avengers:-Endgame-(2019)-&#30340;&#21127;&#24773;&#39006;&#22411;">&#182;</a></h2>
 </div>
 </div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#20197;-requests-&#25645;&#37197;-pyquery-&#25847;&#21462;-Avengers:-Endgame-(2019)-&#30340;&#21127;&#24773;&#39006;&#22411;">&#20197; <code>requests</code> &#25645;&#37197; <code>pyquery</code> &#25847;&#21462; <a href="https://www.imdb.com/title/tt4154796">Avengers: Endgame (2019)</a> &#30340;&#21127;&#24773;&#39006;&#22411;<a class="anchor-link" href="#&#20197;-requests-&#25645;&#37197;-pyquery-&#25847;&#21462;-Avengers:-Endgame-(2019)-&#30340;&#21127;&#24773;&#39006;&#22411;">&#182;</a></h2>
-</div>
-</div>
-</div></section><section>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">from</span> <span class="nn">pyquery</span> <span class="k">import</span> <span class="n">PyQuery</span> <span class="k">as</span> <span class="n">pq</span>
-
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://www.imdb.com/title/tt4154796&quot;</span><span class="p">)</span>
-<span class="n">html_doc</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span>
-<span class="n">d</span> <span class="o">=</span> <span class="n">pq</span><span class="p">(</span><span class="n">html_doc</span><span class="p">)</span>
-<span class="n">genre</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">text</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">d</span><span class="p">(</span><span class="s2">&quot;.subtext a&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
-<span class="n">genre</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">genre</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">genre</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-</div></section><section>
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;Action&#39;, &#39;Adventure&#39;, &#39;Sci-Fi&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#20197;-requests-&#25645;&#37197;-pyquery-&#25847;&#21462;-Avengers:-Endgame-(2019)-&#30340;&#28436;&#21729;&#38499;&#23481;">&#20197; <code>requests</code> &#25645;&#37197; <code>pyquery</code> &#25847;&#21462; <a href="https://www.imdb.com/title/tt4154796">Avengers: Endgame (2019)</a> &#30340;&#28436;&#21729;&#38499;&#23481;<a class="anchor-link" href="#&#20197;-requests-&#25645;&#37197;-pyquery-&#25847;&#21462;-Avengers:-Endgame-(2019)-&#30340;&#28436;&#21729;&#38499;&#23481;">&#182;</a></h2>
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#20197;-requests-&#25645;&#37197;-pyquery-&#25847;&#21462;-Avengers:-Endgame-(2019)-&#30340;&#28436;&#21729;&#38499;&#23481;">&#38568;&#22530;&#32244;&#32722;&#65306;&#20197; <code>requests</code> &#25645;&#37197; <code>pyquery</code> &#25847;&#21462; <a href="https://www.imdb.com/title/tt4154796">Avengers: Endgame (2019)</a> &#30340;&#28436;&#21729;&#38499;&#23481;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#20197;-requests-&#25645;&#37197;-pyquery-&#25847;&#21462;-Avengers:-Endgame-(2019)-&#30340;&#28436;&#21729;&#38499;&#23481;">&#182;</a></h2>
 </div>
 </div>
-</div></section><section>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">from</span> <span class="nn">pyquery</span> <span class="k">import</span> <span class="n">PyQuery</span> <span class="k">as</span> <span class="n">pq</span>
-
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://www.imdb.com/title/tt4154796&quot;</span><span class="p">)</span>
-<span class="n">html_doc</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span>
-<span class="n">d</span> <span class="o">=</span> <span class="n">pq</span><span class="p">(</span><span class="n">html_doc</span><span class="p">)</span>
-<span class="n">cast</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">text</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">d</span><span class="p">(</span><span class="s2">&quot;.primary_photo+ td a&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">cast</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">cast</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-</div></section><section>
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;Robert Downey Jr.&#39;, &#39;Chris Evans&#39;, &#39;Mark Ruffalo&#39;, &#39;Chris Hemsworth&#39;, &#39;Scarlett Johansson&#39;, &#39;Jeremy Renner&#39;, &#39;Don Cheadle&#39;, &#39;Paul Rudd&#39;, &#39;Benedict Cumberbatch&#39;, &#39;Chadwick Boseman&#39;, &#39;Brie Larson&#39;, &#39;Tom Holland&#39;, &#39;Karen Gillan&#39;, &#39;Zoe Saldana&#39;, &#39;Evangeline Lilly&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#33258;&#35330;&#19968;&#20491;&#20989;&#25976;-get_movie_data(movie_url)">&#33258;&#35330;&#19968;&#20491;&#20989;&#25976; <code>get_movie_data(movie_url)</code><a class="anchor-link" href="#&#33258;&#35330;&#19968;&#20491;&#20989;&#25976;-get_movie_data(movie_url)">&#182;</a></h2>
-<pre><code>## get_movie_data("https://www.imdb.com/title/tt4154796")
-## {'movieTitle': 'Avengers: Endgame\xa0(2019)',
-##  'moviePoster': 'https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_UX182_CR0,0,182,268_AL_.jpg',
-##  'movieRating': 8.8,
-##  'movieGenre': ['Action', 'Adventure', 'Sci-Fi'],
-##  'movieCast': ['Robert Downey Jr.',
-##   'Chris Evans',
-##   'Mark Ruffalo',
-##   'Chris Hemsworth',
-##   'Scarlett Johansson',
-##   'Jeremy Renner',
-##   'Don Cheadle',
-##   'Paul Rudd',
-##   'Benedict Cumberbatch',
-##   'Chadwick Boseman',
-##   'Brie Larson',
-##   'Tom Holland',
-##   'Karen Gillan',
-##   'Zoe Saldana',
-##   'Evangeline Lilly']}</code></pre>
-
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#33258;&#35330;&#19968;&#20491;&#20989;&#25976;-get_movie_data(movie_url)">&#38568;&#22530;&#32244;&#32722;&#65306;&#33258;&#35330;&#19968;&#20491;&#20989;&#25976; <code>get_movie_data(movie_url)</code><a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#33258;&#35330;&#19968;&#20491;&#20989;&#25976;-get_movie_data(movie_url)">&#182;</a></h2>
 </div>
 </div>
-</div></section><section>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">from</span> <span class="nn">pyquery</span> <span class="k">import</span> <span class="n">PyQuery</span> <span class="k">as</span> <span class="n">pq</span>
-
-<span class="k">def</span> <span class="nf">get_movie_data</span><span class="p">(</span><span class="n">movie_url</span><span class="p">):</span>
-    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">movie_url</span><span class="p">)</span>
-    <span class="n">d</span> <span class="o">=</span> <span class="n">pq</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-    <span class="n">movie_title</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">text</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">d</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()][</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">movie_poster</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">attr</span><span class="p">(</span><span class="s2">&quot;src&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">d</span><span class="p">(</span><span class="s2">&quot;.poster img&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()][</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">movie_rating</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">text</span><span class="p">())</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">d</span><span class="p">(</span><span class="s2">&quot;strong span&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()][</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">movie_genre</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">text</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">d</span><span class="p">(</span><span class="s2">&quot;.subtext a&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
-    <span class="n">movie_genre</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-    <span class="n">movie_cast</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">text</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">d</span><span class="p">(</span><span class="s2">&quot;.primary_photo+ td a&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
-    <span class="n">movie_data</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s2">&quot;movieTitle&quot;</span><span class="p">:</span> <span class="n">movie_title</span><span class="p">,</span>
-        <span class="s2">&quot;moviePoster&quot;</span><span class="p">:</span> <span class="n">movie_poster</span><span class="p">,</span>
-        <span class="s2">&quot;movieRating&quot;</span><span class="p">:</span> <span class="n">movie_rating</span><span class="p">,</span>
-        <span class="s2">&quot;movieGenre&quot;</span><span class="p">:</span> <span class="n">movie_genre</span><span class="p">,</span>
-        <span class="s2">&quot;movieCast&quot;</span><span class="p">:</span> <span class="n">movie_cast</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="n">movie_data</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_movie_data</span><span class="p">(</span><span class="s2">&quot;https://www.imdb.com/title/tt4154796&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-</div></section><section>
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[21]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;movieTitle&#39;: &#39;Avengers: Endgame (2019)&#39;,
+ &#39;moviePoster&#39;: &#39;https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_UX182_CR0,0,182,268_AL_.jpg&#39;,
+ &#39;movieRating&#39;: 8.6,
+ &#39;movieGenre&#39;: [&#39;Action&#39;, &#39;Adventure&#39;, &#39;Sci-Fi&#39;],
+ &#39;movieCast&#39;: [&#39;Robert Downey Jr.&#39;,
+  &#39;Chris Evans&#39;,
+  &#39;Mark Ruffalo&#39;,
+  &#39;Chris Hemsworth&#39;,
+  &#39;Scarlett Johansson&#39;,
+  &#39;Jeremy Renner&#39;,
+  &#39;Don Cheadle&#39;,
+  &#39;Paul Rudd&#39;,
+  &#39;Benedict Cumberbatch&#39;,
+  &#39;Chadwick Boseman&#39;,
+  &#39;Brie Larson&#39;,
+  &#39;Tom Holland&#39;,
+  &#39;Karen Gillan&#39;,
+  &#39;Zoe Saldana&#39;,
+  &#39;Evangeline Lilly&#39;]}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14009,41 +14006,13 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38568;&#22530;&#32244;&#32722;">&#38568;&#22530;&#32244;&#32722;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;">&#182;</a></h2>
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#33258;&#35330;&#19968;&#20491;&#20989;&#25976;-get_movie_data(movie_title)">&#33258;&#35330;&#19968;&#20491;&#20989;&#25976; <code>get_movie_data(movie_title)</code><a class="anchor-link" href="#&#33258;&#35330;&#19968;&#20491;&#20989;&#25976;-get_movie_data(movie_title)">&#182;</a></h2>
-<pre><code>## get_movie_data("Avengers: Endgame (2019)")
-## {'movieTitle': 'Avengers: Endgame\xa0(2019)',
-##  'moviePoster': 'https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_UX182_CR0,0,182,268_AL_.jpg',
-##  'movieRating': 8.8,
-##  'movieGenre': ['Action', 'Adventure', 'Sci-Fi'],
-##  'movieCast': ['Robert Downey Jr.',
-##   'Chris Evans',
-##   'Mark Ruffalo',
-##   'Chris Hemsworth',
-##   'Scarlett Johansson',
-##   'Jeremy Renner',
-##   'Don Cheadle',
-##   'Paul Rudd',
-##   'Benedict Cumberbatch',
-##   'Chadwick Boseman',
-##   'Brie Larson',
-##   'Tom Holland',
-##   'Karen Gillan',
-##   'Zoe Saldana',
-##   'Evangeline Lilly']}</code></pre>
-
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#33258;&#35330;&#19968;&#20491;&#20989;&#25976;-get_movie_data(movie_title)">&#38568;&#22530;&#32244;&#32722;&#65306;&#33258;&#35330;&#19968;&#20491;&#20989;&#25976; <code>get_movie_data(movie_title)</code><a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#33258;&#35330;&#19968;&#20491;&#20989;&#25976;-get_movie_data(movie_title)">&#182;</a></h2>
 </div>
 </div>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
@@ -14059,7 +14028,7 @@ a.anchor-link {
     <span class="n">movie_url</span> <span class="o">=</span> <span class="s2">&quot;https://www.imdb.com&quot;</span> <span class="o">+</span> <span class="n">search_results</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">movie_url</span><span class="p">)</span>
     <span class="n">d</span> <span class="o">=</span> <span class="n">pq</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-    <span class="n">movie_title</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">text</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">d</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">movie_title</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">text</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\xa0</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">d</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()][</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">movie_poster</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">attr</span><span class="p">(</span><span class="s2">&quot;src&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">d</span><span class="p">(</span><span class="s2">&quot;.poster img&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()][</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">movie_rating</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">text</span><span class="p">())</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">d</span><span class="p">(</span><span class="s2">&quot;strong span&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()][</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">movie_genre</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">text</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">d</span><span class="p">(</span><span class="s2">&quot;.subtext a&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
@@ -14073,15 +14042,64 @@ a.anchor-link {
         <span class="s2">&quot;movieCast&quot;</span><span class="p">:</span> <span class="n">movie_cast</span>
     <span class="p">}</span>
     <span class="k">return</span> <span class="n">movie_data</span>
-
-<span class="n">get_movie_data</span><span class="p">(</span><span class="s2">&quot;Avengers: Endgame (2019)&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-</div></section><section>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_movie_data</span><span class="p">(</span><span class="s2">&quot;Avengers: Endgame (2019)&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[23]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;movieTitle&#39;: &#39;Avengers: Endgame (2019)&#39;,
+ &#39;moviePoster&#39;: &#39;https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_UX182_CR0,0,182,268_AL_.jpg&#39;,
+ &#39;movieRating&#39;: 8.6,
+ &#39;movieGenre&#39;: [&#39;Action&#39;, &#39;Adventure&#39;, &#39;Sci-Fi&#39;],
+ &#39;movieCast&#39;: [&#39;Robert Downey Jr.&#39;,
+  &#39;Chris Evans&#39;,
+  &#39;Mark Ruffalo&#39;,
+  &#39;Chris Hemsworth&#39;,
+  &#39;Scarlett Johansson&#39;,
+  &#39;Jeremy Renner&#39;,
+  &#39;Don Cheadle&#39;,
+  &#39;Paul Rudd&#39;,
+  &#39;Benedict Cumberbatch&#39;,
+  &#39;Chadwick Boseman&#39;,
+  &#39;Brie Larson&#39;,
+  &#39;Tom Holland&#39;,
+  &#39;Karen Gillan&#39;,
+  &#39;Zoe Saldana&#39;,
+  &#39;Evangeline Lilly&#39;]}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14174,39 +14192,79 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38568;&#22530;&#32244;&#32722;">&#38568;&#22530;&#32244;&#32722;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;">&#182;</a></h2>
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#25847;&#21462;&#25152;&#26377;&#33775;&#33322;&#27231;&#19978;&#38651;&#24433;&#28165;&#21934;">&#38568;&#22530;&#32244;&#32722;&#65306;&#25847;&#21462;&#25152;&#26377;&#33775;&#33322;&#27231;&#19978;&#38651;&#24433;&#28165;&#21934;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#25847;&#21462;&#25152;&#26377;&#33775;&#33322;&#27231;&#19978;&#38651;&#24433;&#28165;&#21934;">&#182;</a></h2>
 </div>
 </div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#25847;&#21462;&#25152;&#26377;&#33775;&#33322;&#27231;&#19978;&#38651;&#24433;&#28165;&#21934;">&#25847;&#21462;&#25152;&#26377;&#33775;&#33322;&#27231;&#19978;&#38651;&#24433;&#28165;&#21934;<a class="anchor-link" href="#&#25847;&#21462;&#25152;&#26377;&#33775;&#33322;&#27231;&#19978;&#38651;&#24433;&#28165;&#21934;">&#182;</a></h2>
-</div>
-</div>
-</div></section><section>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
-
-<span class="n">ca_movie_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;http://www.fantasy-sky.com/ContentList.aspx?section=002&amp;category=0020</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)]</span>
-<span class="n">ca_movie_titles</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">ca_url</span> <span class="ow">in</span> <span class="n">ca_movie_urls</span><span class="p">:</span>
-    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ca_url</span><span class="p">,</span> <span class="n">cookies</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;COOKIE_LANGUAGE&#39;</span><span class="p">:</span> <span class="s1">&#39;en&#39;</span><span class="p">})</span>
-    <span class="n">d</span> <span class="o">=</span> <span class="n">pq</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-    <span class="n">movie_titles</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">text</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">d</span><span class="p">(</span><span class="s2">&quot;.movies-name&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
-    <span class="n">ca_movie_titles</span> <span class="o">+=</span> <span class="n">movie_titles</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">ca_movie_titles</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">ca_movie_titles</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-</div></section></section><section><section>
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;Avengers: Endgame&#39;, &#39;Red Joan&#39;, &#39;Stockholm&#39;, &#39;Kursk&#39;, &#39;Apollo 11&#39;, &#39;Greta&#39;, &#39;Teen Spirit&#39;, &#39;Shazam!&#39;, &#34;Isn&#39;t it Romantic&#34;, &#39;Alita: Battle Angel&#39;, &#39;Dumbo&#39;, &#39;Five Feet Apart&#39;, &#39;Hellboy&#39;, &#39;The Aftermath&#39;, &#34;Long Day&#39;s Journey Into Night&#34;, &#39;Late Life: The Chien-Ming Wang Story&#39;, &#34;Dad&#39;s Suit&#34;, &#39;Dearest Anita&#39;, &#39;The Knight of Shadows…&#39;, &#39;When Green Turns to Gold&#39;, &#39;Master Z: Ip Man Legacy&#39;, &#39;Shadow&#39;, &#39;Single Day&#39;, &#39;Still Human&#39;, &#39;Tracey&#39;, &#39;Who You Think I Am&#39;, &#39;Another World&#39;, &#39;Fly Me To The Saitama&#39;, &#39;Whistleblower&#39;, &#39;Hit-and-Run Squad&#39;, &#39;96&#39;, &#39;Dragon Ball Super: Broly&#39;, &#39;Masquerade Hotel&#39;, &#39;Extreme Job&#39;, &#39;Innocent Witness&#39;, &#39;Badhaai Ho&#39;, &#39;Border&#39;, &#39;Family is Family&#39;, &#39;The Peanuts Movie&#39;, &#39;Ferdinand&#39;, &#39;Where the Wild Things Are&#39;, &#39;Hop&#39;, &#39;Pan&#39;, &#39;Sing&#39;, &#39;Puss In Boots&#39;, &#39;The Lego Batman Movie&#39;, &#39;Wreck-It Ralph&#39;, &#39;The Polar Express&#39;, &#39;Trolls&#39;, &#39;Turbo&#39;, &#39;Yogi Bear&#39;, &#39;Detective Conan: Crimson Love Letter&#39;, &#39;Lupin the 3rd vs. Detective Conan&#39;, &#39;Detective Conan Episode &#34;ONE&#34;&#39;, &#39;Attack On Titan: Kakusei&#39;, &#39;My Hero Academia: Two Heroes&#39;, &#39;Mirai&#39;, &#39;U - July 22&#39;, &#39;A Better Tomorrow&#39;, &#39;Handan&#39;, &#39;Rampant&#39;, &#39;Hidden Man&#39;, &#39;A Land Imagined&#39;, &#39;Last Letter&#39;, &#39;The Scoundrels&#39;, &#39;More Than Blue&#39;, &#39;Stolen Identity&#39;, &#39;Hibiki&#39;, &#39;Project Gutenberg&#39;, &#39;Default&#39;, &#39;Capernaum&#39;, &#39;Million Dollar Man&#39;, &#39;The House Where The Mermaid Sleeps&#39;, &#39;Unstoppable&#39;, &#39;Territory Of Love&#39;, &#39;A Real Vermeer&#39;, &#34;Jupiter&#39;s Moon&#34;, &#39;Simpel…&#39;, &#39;Wished&#39;, &#39;Rouge&#39;, &#39;Gintama 2&#39;, &#39;After The Storm&#39;, &#39;Cafe Funiculi Funicula&#39;, &#39;Code Blue: The Movie&#39;, &#39;Monstrum&#39;, &#39;On Happiness Road&#39;, &#39;Still Walking&#39;, &#39;Life in Overtime&#39;, &#39;Like Father, Like Son&#39;, &#39;A Chinese Ghost Story&#39;, &#39;Shoplifters&#39;, &#39;Hichki&#39;, &#39;The Square&#39;, &#39;The Negotiation&#39;, &#39;Euforia&#39;, &#39;Father to Son&#39;, &#39;Father&#39;, &#39;The Benefit of the Doubt&#39;, &#39;Hello Mr. Billionaire&#39;, &#39;Secret Superstar&#39;, &#39;Long Time No Sea&#39;, &#39;Le Brio&#39;, &#39;Pad Man&#39;, &#39;Avengers: Infinity War&#39;, &#39;Avengers: Age of Ultron&#39;, &#39;The Avengers&#39;, &#39;Iron Man&#39;, &#39;Iron Man 2&#39;, &#39;Iron Man 3&#39;, &#39;Captain America: Civil War&#39;, &#39;Chef&#39;, &#39;The Judge&#39;, &#39;Crazy, Stupid, Love.&#39;, &#39;Crazy Heart&#39;, &#39;Aquaman&#39;, &#39;Captain Marvel&#39;, &#39;Deepwater Horizon&#39;, &#39;Creed&#39;, &#39;Eddie The Eagle&#39;, &#39;Les Misérables&#39;, &#39;Knight and Day&#39;, &#39;Invictus&#39;, &#39;Café Society&#39;, &#39;Going In Style&#39;, &#39;Fantastic Beasts and…&#39;, &#39;American Pastoral&#39;, &#39;J. Edgar&#39;, &#39;John Wick: Chapter 2&#39;, &#39;A Star is Born&#39;, &#39;Manchester By The Sea&#39;, &#39;Hitman: Agent 47&#39;, &#39;I, Daniel Blake&#39;, &#39;My Cousin Rachel&#39;, &#39;Prometheus&#39;, &#39;Moulin Rouge&#39;, &#39;Chronicle&#39;, &#39;Ruby Sparks&#39;, &#39;Life of Pi&#39;, &#39;Hidden Figures&#39;, &#39;Logan&#39;, &#39;Runner Runner&#39;, &#39;Collateral Beauty&#39;, &#39;Sherlock Holmes: A Game of Shadows&#39;, &#39;Snatched&#39;, &#39;The Intern&#39;, &#39;The Mule&#39;, &#39;Before I Fall&#39;, &#39;Black Swan&#39;, &#39;Spy&#39;, &#39;Superman Returns&#39;, &#39;The Shape of Water&#39;, &#39;The Pianist&#39;, &#39;The Grand Budapest Hotel&#39;, &#39;Australia&#39;, &#39;The Great Gatsby&#39;, &#39;The Lego Ninjago Movie&#39;, &#39;The Tree Of Life&#39;, &#39;The Book Thief&#39;, &#39;Steve Jobs&#39;, &#39;The Martian&#39;, &#39;The Devil Wears Prada&#39;, &#39;The Drop&#39;, &#39;The Mummy&#39;, &#39;Three Billboards Outside Ebbing, Missouri&#39;, &#39;This Means War&#39;, &#39;The Descendants&#39;, &#39;We Bought A Zoo&#39;, &#39;The Shawshank Redemption&#39;, &#39;Wonder Woman&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#25214;&#20986;&#33775;&#33322;&#27231;&#19978;&#26368;&#39640;&#35413;&#31561;&#30340;&#38651;&#24433;">&#38568;&#22530;&#32244;&#32722;&#65306;&#25214;&#20986;&#33775;&#33322;&#27231;&#19978;&#26368;&#39640;&#35413;&#31561;&#30340;&#38651;&#24433;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#25214;&#20986;&#33775;&#33322;&#27231;&#19978;&#26368;&#39640;&#35413;&#31561;&#30340;&#38651;&#24433;">&#182;</a></h2>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">ca_movie_titles</span><span class="p">[</span><span class="n">best_movie_index</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The Shawshank Redemption
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
