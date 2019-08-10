@@ -12,6 +12,7 @@
 
 ### 作業上傳表單
 
+- [319 期假日下午班](https://forms.gle/ymgTzpi758kKBBK97)
 - [315 期暑期密集班](https://forms.gle/wSPvWDXeMaJYAH4Q7)
 - [312 期假日下午班](https://forms.gle/xrh3SkSV9WszWdMm9)
 - [311 期假日下午班](https://forms.gle/m3C59C9saYFJSHfm7)
@@ -28,7 +29,8 @@
 
 ### 課程共筆
 
-- [315 期假日下午班](https://colab.research.google.com/drive/1qGAngB7FykvWaKVGdIc4hHAKyHktWOTJ)
+- [319 期假日下午班](https://colab.research.google.com/drive/1BOQ0PO11Lcans-zqnk2qNuArWXo0i-tC)
+- [315 期暑期密集班](https://colab.research.google.com/drive/1qGAngB7FykvWaKVGdIc4hHAKyHktWOTJ)
 - [312 期假日下午班](https://colab.research.google.com/drive/1qrlyUWt7BIB4Xv2YYms7PHFELQzZuoEi)
 - [311 期假日下午班](https://colab.research.google.com/drive/12_QPE9jH3i0D__Owrrn6cB_q7MYW7tLr)
 - [309 期寒假密集班](https://colab.research.google.com/drive/1nDhlXPyVlvfRq5sx6a8MvBCEnNC-3RrS)
@@ -58,6 +60,7 @@
 
 ### 近期課程錄影清單
 
+- [第 319 期 Python 與資料科學應用（假日班下午）]()
 - [第 315 期 Python 與資料科學應用（暑期密集班）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuVyoGYwn46IlStidqqTcEwB)
 - [第 312 期 Python 與資料科學應用（假日班下午）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuU2MjWUWArwjxQnp55yXTtt)
 - [第 311 期 Python 與資料科學應用（假日班下午）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuXfAla3JulbR6vNeIkDnt4E)
