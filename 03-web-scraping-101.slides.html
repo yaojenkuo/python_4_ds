@@ -14345,7 +14345,7 @@ Sci-Fi
 <div class=" highlight hl-ipython3"><pre><span></span><span class="ch">#!pip install selenium</span>
 <span class="kn">from</span> <span class="nn">selenium</span> <span class="k">import</span> <span class="n">webdriver</span>
 
-<span class="n">driver_path</span> <span class="o">=</span> <span class="s2">&quot;/YOUR/PATH/TO/CHROMEDRIVER&quot;</span>
+<span class="n">driver_path</span> <span class="o">=</span> <span class="s2">&quot;c:/YOUR/PATH/TO/CHROMEDRIVER&quot;</span>
 <span class="n">imdb_home</span> <span class="o">=</span> <span class="s2">&quot;https://www.imdb.com/&quot;</span>
 <span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">(</span><span class="n">executable_path</span><span class="o">=</span><span class="n">driver_path</span><span class="p">)</span> <span class="c1"># Use Chrome</span>
 <span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">imdb_home</span><span class="p">)</span>
@@ -14374,7 +14374,7 @@ Sci-Fi
 <div class=" highlight hl-ipython3"><pre><span></span><span class="ch">#!pip install selenium</span>
 <span class="kn">from</span> <span class="nn">selenium</span> <span class="k">import</span> <span class="n">webdriver</span>
 
-<span class="n">driver_path</span> <span class="o">=</span> <span class="s2">&quot;/YOUR/PATH/TO/GECKODRIVER&quot;</span>
+<span class="n">driver_path</span> <span class="o">=</span> <span class="s2">&quot;c:/YOUR/PATH/TO/GECKODRIVER&quot;</span>
 <span class="n">imdb_home</span> <span class="o">=</span> <span class="s2">&quot;https://www.imdb.com/&quot;</span>
 <span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Firefox</span><span class="p">(</span><span class="n">executable_path</span><span class="o">=</span><span class="n">driver_path</span><span class="p">)</span> <span class="c1"># Use Firefox</span>
 <span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">imdb_home</span><span class="p">)</span>
@@ -14444,69 +14444,65 @@ Sci-Fi
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38568;&#22530;&#32244;&#32722;">&#38568;&#22530;&#32244;&#32722;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;">&#182;</a></h2>
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#20197;-selenium-&#23526;&#20316;-get_movie_data(movie_title)">&#38568;&#22530;&#32244;&#32722;&#65306;&#20197; <code>selenium</code> &#23526;&#20316; <code>get_movie_data(movie_title)</code><a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#20197;-selenium-&#23526;&#20316;-get_movie_data(movie_title)">&#182;</a></h2>
 </div>
 </div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#20197;-selenium-&#23526;&#20316;-get_movie_data(movie_title)">&#20197; <code>selenium</code> &#23526;&#20316; <code>get_movie_data(movie_title)</code><a class="anchor-link" href="#&#20197;-selenium-&#23526;&#20316;-get_movie_data(movie_title)">&#182;</a></h2>
-</div>
-</div>
-</div></section><section>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">selenium</span> <span class="k">import</span> <span class="n">webdriver</span>
-
-<span class="k">def</span> <span class="nf">get_movie_data</span><span class="p">(</span><span class="n">movie_title</span><span class="p">):</span>
-    <span class="n">chrome_driver_path</span> <span class="o">=</span> <span class="s2">&quot;/YOUR/PATH/TO/CHROMEDRIVER&quot;</span>
-    <span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">(</span><span class="n">executable_path</span><span class="o">=</span><span class="n">chrome_driver_path</span><span class="p">)</span>
-    <span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://www.imdb.com&quot;</span><span class="p">)</span>
-    <span class="n">elem</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_xpath</span><span class="p">(</span><span class="s2">&quot;//input[@id=&#39;navbar-query&#39;]&quot;</span><span class="p">)</span>
-    <span class="n">elem</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="n">movie_title</span><span class="p">)</span>
-    <span class="n">elem</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_xpath</span><span class="p">(</span><span class="s2">&quot;//div[@class=&#39;magnifyingglass navbarSprite&#39;]&quot;</span><span class="p">)</span>
-    <span class="n">elem</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
-    <span class="n">elem</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_xpath</span><span class="p">(</span><span class="s2">&quot;//ul[@class=&#39;findTitleSubfilterList&#39;]/li[1]/a&quot;</span><span class="p">)</span>
-    <span class="n">elem</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
-    <span class="n">elem</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_xpath</span><span class="p">(</span><span class="s2">&quot;//div[@class=&#39;findSection&#39;][1]/table[@class=&#39;findList&#39;]/tbody/tr[@class=&#39;findResult odd&#39;][1]/td[@class=&#39;result_text&#39;]/a&quot;</span><span class="p">)</span>
-    <span class="n">elem</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
-    <span class="n">elem</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_xpath</span><span class="p">(</span><span class="s2">&quot;//h1&quot;</span><span class="p">)</span>
-    <span class="n">movie_title</span> <span class="o">=</span> <span class="n">elem</span><span class="o">.</span><span class="n">text</span>
-    <span class="n">elem</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_xpath</span><span class="p">(</span><span class="s2">&quot;//strong/span&quot;</span><span class="p">)</span>
-    <span class="n">movie_rating</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">elem</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-    <span class="n">elem</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_xpath</span><span class="p">(</span><span class="s2">&quot;//div[@class=&#39;poster&#39;]/a/img&quot;</span><span class="p">)</span>
-    <span class="n">movie_poster_link</span> <span class="o">=</span> <span class="n">elem</span><span class="o">.</span><span class="n">get_attribute</span><span class="p">(</span><span class="s2">&quot;src&quot;</span><span class="p">)</span>
-    <span class="n">elem</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_elements_by_xpath</span><span class="p">(</span><span class="s2">&quot;//div[@class=&#39;subtext&#39;]/a&quot;</span><span class="p">)</span>
-    <span class="n">movie_genre</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">text</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">elem</span><span class="p">]</span>
-    <span class="n">movie_genre</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-    <span class="n">elem</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_elements_by_xpath</span><span class="p">(</span><span class="s2">&quot;//tbody/tr/td[2]/a&quot;</span><span class="p">)</span>
-    <span class="n">movie_cast</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">text</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">elem</span><span class="p">]</span>
-    <span class="n">driver</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-    <span class="n">movie_data</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s2">&quot;movieTitle&quot;</span><span class="p">:</span> <span class="n">movie_title</span><span class="p">,</span>
-        <span class="s2">&quot;moviePosterLink&quot;</span><span class="p">:</span> <span class="n">movie_poster_link</span><span class="p">,</span>
-        <span class="s2">&quot;movieRating&quot;</span><span class="p">:</span> <span class="n">movie_rating</span><span class="p">,</span>
-        <span class="s2">&quot;movieGenre&quot;</span><span class="p">:</span> <span class="n">movie_genre</span><span class="p">,</span>
-        <span class="s2">&quot;movieCast&quot;</span><span class="p">:</span> <span class="n">movie_cast</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="n">movie_data</span>
-
-<span class="n">get_movie_data</span><span class="p">(</span><span class="s2">&quot;Avengers: Endgame (2019)&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_movie_data</span><span class="p">(</span><span class="s2">&quot;Avengers: Endgame (2019)&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-</div></section><section>
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[4]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;movieTitle&#39;: &#39;Avengers: Endgame (2019)&#39;,
+ &#39;moviePosterLink&#39;: &#39;https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_UX182_CR0,0,182,268_AL_.jpg&#39;,
+ &#39;movieRating&#39;: 8.6,
+ &#39;movieGenre&#39;: [&#39;Action&#39;, &#39;Adventure&#39;, &#39;Sci-Fi&#39;],
+ &#39;movieCast&#39;: [&#39;Robert Downey Jr.&#39;,
+  &#39;Chris Evans&#39;,
+  &#39;Mark Ruffalo&#39;,
+  &#39;Chris Hemsworth&#39;,
+  &#39;Scarlett Johansson&#39;,
+  &#39;Jeremy Renner&#39;,
+  &#39;Don Cheadle&#39;,
+  &#39;Paul Rudd&#39;,
+  &#39;Benedict Cumberbatch&#39;,
+  &#39;Chadwick Boseman&#39;,
+  &#39;Brie Larson&#39;,
+  &#39;Tom Holland&#39;,
+  &#39;Karen Gillan&#39;,
+  &#39;Zoe Saldana&#39;,
+  &#39;Evangeline Lilly&#39;]}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#25215;&#25509;&#19978;&#38988;&#65292;&#25847;&#21462;&#22235;&#37096;&#24489;&#20167;&#32773;&#32879;&#30431;&#30340;&#38651;&#24433;&#36039;&#35338;">&#25215;&#25509;&#19978;&#38988;&#65292;&#25847;&#21462;&#22235;&#37096;&#24489;&#20167;&#32773;&#32879;&#30431;&#30340;&#38651;&#24433;&#36039;&#35338;<a class="anchor-link" href="#&#25215;&#25509;&#19978;&#38988;&#65292;&#25847;&#21462;&#22235;&#37096;&#24489;&#20167;&#32773;&#32879;&#30431;&#30340;&#38651;&#24433;&#36039;&#35338;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="n">avengers_movies</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;The Avengers (2012)&quot;</span><span class="p">,</span> <span class="s2">&quot;Avengers: Age of Ultron (2015)&quot;</span><span class="p">,</span> <span class="s2">&quot;Avengers: Infinity War (2018)&quot;</span><span class="p">,</span> <span class="s2">&quot;Avengers: Endgame (2019)&quot;</span><span class="p">]</span>
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#25847;&#21462;&#22235;&#37096;&#24489;&#20167;&#32773;&#32879;&#30431;&#30340;&#38651;&#24433;&#36039;&#35338;">&#38568;&#22530;&#32244;&#32722;&#65306;&#25847;&#21462;&#22235;&#37096;&#24489;&#20167;&#32773;&#32879;&#30431;&#30340;&#38651;&#24433;&#36039;&#35338;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#25847;&#21462;&#22235;&#37096;&#24489;&#20167;&#32773;&#32879;&#30431;&#30340;&#38651;&#24433;&#36039;&#35338;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="n">avengers_movies</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;The Avengers (2012)&quot;</span><span class="p">,</span> <span class="s2">&quot;Avengers: Age of Ultron (2015)&quot;</span><span class="p">,</span> <span class="s2">&quot;Avengers: Infinity War (2018)&quot;</span><span class="p">,</span> <span class="s2">&quot;Avengers: Endgame (2019)&quot;</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -14514,26 +14510,31 @@ Sci-Fi
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
-<span class="kn">import</span> <span class="nn">time</span>
-
-<span class="n">avengers_movies</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;The Avengers (2012)&quot;</span><span class="p">,</span> <span class="s2">&quot;Avengers: Age of Ultron (2015)&quot;</span><span class="p">,</span> <span class="s2">&quot;Avengers: Infinity War (2018)&quot;</span><span class="p">,</span> <span class="s2">&quot;Avengers: Endgame (2019)&quot;</span><span class="p">]</span>
-<span class="n">avengers_movie_data</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">am</span> <span class="ow">in</span> <span class="n">avengers_movies</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;開始擷取 </span><span class="si">{}</span><span class="s2"> 的電影資訊...&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">am</span><span class="p">))</span>
-    <span class="n">movie_data</span> <span class="o">=</span> <span class="n">get_movie_data</span><span class="p">(</span><span class="n">am</span><span class="p">)</span>
-    <span class="n">avengers_movie_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">movie_data</span><span class="p">)</span>
-    <span class="n">sleep_secs</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;休息 </span><span class="si">{}</span><span class="s2"> 秒...&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sleep_secs</span><span class="p">))</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">sleep_secs</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">avengers_movie_data</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">avengers_movie_data</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[{&#39;movieTitle&#39;: &#39;The Avengers (2012)&#39;, &#39;moviePosterLink&#39;: &#39;https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX182_CR0,0,182,268_AL_.jpg&#39;, &#39;movieRating&#39;: 8.0, &#39;movieGenre&#39;: [&#39;Action&#39;, &#39;Adventure&#39;, &#39;Sci-Fi&#39;], &#39;movieCast&#39;: [&#39;Robert Downey Jr.&#39;, &#39;Chris Evans&#39;, &#39;Mark Ruffalo&#39;, &#39;Chris Hemsworth&#39;, &#39;Scarlett Johansson&#39;, &#39;Jeremy Renner&#39;, &#39;Tom Hiddleston&#39;, &#39;Clark Gregg&#39;, &#39;Cobie Smulders&#39;, &#39;Stellan Skarsgård&#39;, &#39;Samuel L. Jackson&#39;, &#39;Gwyneth Paltrow&#39;, &#39;Paul Bettany&#39;, &#39;Alexis Denisof&#39;, &#39;Tina Benko&#39;]}, {&#39;movieTitle&#39;: &#39;Avengers: Age of Ultron (2015)&#39;, &#39;moviePosterLink&#39;: &#39;https://m.media-amazon.com/images/M/MV5BMTM4OGJmNWMtOTM4Ni00NTE3LTg3MDItZmQxYjc4N2JhNmUxXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_UX182_CR0,0,182,268_AL_.jpg&#39;, &#39;movieRating&#39;: 7.3, &#39;movieGenre&#39;: [&#39;Action&#39;, &#39;Adventure&#39;, &#39;Sci-Fi&#39;], &#39;movieCast&#39;: [&#39;Robert Downey Jr.&#39;, &#39;Chris Hemsworth&#39;, &#39;Mark Ruffalo&#39;, &#39;Chris Evans&#39;, &#39;Scarlett Johansson&#39;, &#39;Jeremy Renner&#39;, &#39;James Spader&#39;, &#39;Samuel L. Jackson&#39;, &#39;Don Cheadle&#39;, &#39;Aaron Taylor-Johnson&#39;, &#39;Elizabeth Olsen&#39;, &#39;Paul Bettany&#39;, &#39;Cobie Smulders&#39;, &#39;Anthony Mackie&#39;, &#39;Hayley Atwell&#39;]}, {&#39;movieTitle&#39;: &#39;Avengers: Infinity War (2018)&#39;, &#39;moviePosterLink&#39;: &#39;https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_UX182_CR0,0,182,268_AL_.jpg&#39;, &#39;movieRating&#39;: 8.5, &#39;movieGenre&#39;: [&#39;Action&#39;, &#39;Adventure&#39;, &#39;Sci-Fi&#39;], &#39;movieCast&#39;: [&#39;Robert Downey Jr.&#39;, &#39;Chris Hemsworth&#39;, &#39;Mark Ruffalo&#39;, &#39;Chris Evans&#39;, &#39;Scarlett Johansson&#39;, &#39;Don Cheadle&#39;, &#39;Benedict Cumberbatch&#39;, &#39;Tom Holland&#39;, &#39;Chadwick Boseman&#39;, &#39;Zoe Saldana&#39;, &#39;Karen Gillan&#39;, &#39;Tom Hiddleston&#39;, &#39;Paul Bettany&#39;, &#39;Elizabeth Olsen&#39;, &#39;Anthony Mackie&#39;]}, {&#39;movieTitle&#39;: &#39;Avengers: Endgame (2019)&#39;, &#39;moviePosterLink&#39;: &#39;https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_UX182_CR0,0,182,268_AL_.jpg&#39;, &#39;movieRating&#39;: 8.6, &#39;movieGenre&#39;: [&#39;Action&#39;, &#39;Adventure&#39;, &#39;Sci-Fi&#39;], &#39;movieCast&#39;: [&#39;Robert Downey Jr.&#39;, &#39;Chris Evans&#39;, &#39;Mark Ruffalo&#39;, &#39;Chris Hemsworth&#39;, &#39;Scarlett Johansson&#39;, &#39;Jeremy Renner&#39;, &#39;Don Cheadle&#39;, &#39;Paul Rudd&#39;, &#39;Benedict Cumberbatch&#39;, &#39;Chadwick Boseman&#39;, &#39;Brie Larson&#39;, &#39;Tom Holland&#39;, &#39;Karen Gillan&#39;, &#39;Zoe Saldana&#39;, &#39;Evangeline Lilly&#39;]}]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -14541,7 +14542,7 @@ Sci-Fi
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#25215;&#25509;&#19978;&#38988;&#65292;&#23559;&#25847;&#21462;&#30340;&#38651;&#24433;&#36039;&#35338;&#21295;&#20986;">&#25215;&#25509;&#19978;&#38988;&#65292;&#23559;&#25847;&#21462;&#30340;&#38651;&#24433;&#36039;&#35338;&#21295;&#20986;<a class="anchor-link" href="#&#25215;&#25509;&#19978;&#38988;&#65292;&#23559;&#25847;&#21462;&#30340;&#38651;&#24433;&#36039;&#35338;&#21295;&#20986;">&#182;</a></h2>
+<h2 id="&#23559;&#25847;&#21462;&#30340;&#38651;&#24433;&#36039;&#35338;&#21295;&#20986;">&#23559;&#25847;&#21462;&#30340;&#38651;&#24433;&#36039;&#35338;&#21295;&#20986;<a class="anchor-link" href="#&#23559;&#25847;&#21462;&#30340;&#38651;&#24433;&#36039;&#35338;&#21295;&#20986;">&#182;</a></h2>
 </div>
 </div>
 </div></section><section>
