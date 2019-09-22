@@ -13335,11 +13335,10 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#22312;-EC2-&#19978;&#22519;&#34892;&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#31243;&#24335;&#65306;&#23433;&#35037;-pip">&#22312; EC2 &#19978;&#22519;&#34892;&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#31243;&#24335;&#65306;&#23433;&#35037; pip<a class="anchor-link" href="#&#22312;-EC2-&#19978;&#22519;&#34892;&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#31243;&#24335;&#65306;&#23433;&#35037;-pip">&#182;</a></h2><ul>
+<h2 id="&#22312;-EC2-&#19978;&#22519;&#34892;&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#31243;&#24335;&#65306;&#23433;&#35037;-miniconda">&#22312; EC2 &#19978;&#22519;&#34892;&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#31243;&#24335;&#65306;&#23433;&#35037; miniconda<a class="anchor-link" href="#&#22312;-EC2-&#19978;&#22519;&#34892;&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#31243;&#24335;&#65306;&#23433;&#35037;-miniconda">&#182;</a></h2><ul>
 <li>更新 apt <code>sudo apt update</code></li>
-<li>安裝 distutils <code>sudo apt-get install python3-distutils</code></li>
-<li>下載 get-pip.py <code>curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py</code></li>
-<li>安裝 pip <code>sudo python3 get-pip.py</code></li>
+<li>取得 Miniconda <code>wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh</code></li>
+<li>安裝 Miniconda <code>bash Miniconda3-latest-Linux-x86_64.sh</code></li>
 </ul>
 
 </div>
@@ -13348,9 +13347,18 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#22312;-EC2-&#19978;&#22519;&#34892;&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#31243;&#24335;&#65306;&#24314;&#31435;&#34395;&#25836;&#29872;&#22659;">&#22312; EC2 &#19978;&#22519;&#34892;&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#31243;&#24335;&#65306;&#24314;&#31435;&#34395;&#25836;&#29872;&#22659;<a class="anchor-link" href="#&#22312;-EC2-&#19978;&#22519;&#34892;&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#31243;&#24335;&#65306;&#24314;&#31435;&#34395;&#25836;&#29872;&#22659;">&#182;</a></h2><div class="highlight"><pre><span></span>conda create -n flask <span class="nv">python</span><span class="o">=</span><span class="m">3</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#22312;-EC2-&#19978;&#22519;&#34892;&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#31243;&#24335;&#65306;&#23433;&#35037;&#25152;&#38656;&#22871;&#20214;">&#22312; EC2 &#19978;&#22519;&#34892;&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#31243;&#24335;&#65306;&#23433;&#35037;&#25152;&#38656;&#22871;&#20214;<a class="anchor-link" href="#&#22312;-EC2-&#19978;&#22519;&#34892;&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#31243;&#24335;&#65306;&#23433;&#35037;&#25152;&#38656;&#22871;&#20214;">&#182;</a></h2><ul>
-<li>安裝所需套件 <code>pip install --user requests beautifulsoup4 pandas</code></li>
-<li>執行程式 <code>python3 YOUR-SCRIPT.py</code></li>
+<li>安裝所需套件 <code>pip install requests beautifulsoup4 pandas flask</code></li>
+<li>執行程式 <code>python YOUR-SCRIPT.py</code></li>
 </ul>
 
 </div>
@@ -13436,7 +13444,7 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#20197;-crontab-&#25490;&#31243;&#65306;&#27599;&#20998;&#37912;&#22519;&#34892;&#19968;&#27425;-YOUR-SCRIPT.py">&#20197; crontab &#25490;&#31243;&#65306;&#27599;&#20998;&#37912;&#22519;&#34892;&#19968;&#27425; YOUR-SCRIPT.py<a class="anchor-link" href="#&#20197;-crontab-&#25490;&#31243;&#65306;&#27599;&#20998;&#37912;&#22519;&#34892;&#19968;&#27425;-YOUR-SCRIPT.py">&#182;</a></h2>
-<pre><code>0-59 * * * * /usr/bin/python3 /home/ubuntu/YOUR-SCRIPT.py</code></pre>
+<pre><code>0-59 * * * * /home/ubuntu/miniconda3/envs/flask/bin/python3 /home/ubuntu/YOUR-SCRIPT.py</code></pre>
 
 </div>
 </div>
@@ -13462,13 +13470,6 @@ a.anchor-link {
 </blockquote>
 <p>Source: <a href="https://palletsprojects.com/p/flask/">https://palletsprojects.com/p/flask/</a></p>
 
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#23433;&#35037;-Flask&#65306;pip-install---user-flask">&#23433;&#35037; Flask&#65306;<code>pip install --user flask</code><a class="anchor-link" href="#&#23433;&#35037;-Flask&#65306;pip-install---user-flask">&#182;</a></h2>
 </div>
 </div>
 </div></section><section>
@@ -13560,10 +13561,11 @@ sudo vim YOUR-SERVICE.service
 <span class="nv">After</span><span class="o">=</span>network.target
 
 <span class="o">[</span>Service<span class="o">]</span>
+<span class="nv">Type</span><span class="o">=</span>notify
 <span class="nv">User</span><span class="o">=</span>ubuntu
 <span class="nv">WorkingDirectory</span><span class="o">=</span>/home/ubuntu
-<span class="nv">ExecStart</span><span class="o">=</span>/usr/bin/python3 /home/ubuntu/api.py
-<span class="nv">RuntimeMaxSec</span><span class="o">=</span><span class="m">60</span>
+<span class="nv">ExecStart</span><span class="o">=</span>/home/ubuntu/miniconda3/envs/flask/bin/python3 /home/ubuntu/api.py
+<span class="nv">WatchdogSec</span><span class="o">=</span><span class="m">60</span>
 <span class="nv">Restart</span><span class="o">=</span>always
 
 <span class="o">[</span>Install<span class="o">]</span>
