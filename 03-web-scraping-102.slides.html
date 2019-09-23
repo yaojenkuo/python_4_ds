@@ -13348,6 +13348,7 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#22312;-EC2-&#19978;&#22519;&#34892;&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#31243;&#24335;&#65306;&#24314;&#31435;&#34395;&#25836;&#29872;&#22659;">&#22312; EC2 &#19978;&#22519;&#34892;&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#31243;&#24335;&#65306;&#24314;&#31435;&#34395;&#25836;&#29872;&#22659;<a class="anchor-link" href="#&#22312;-EC2-&#19978;&#22519;&#34892;&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#31243;&#24335;&#65306;&#24314;&#31435;&#34395;&#25836;&#29872;&#22659;">&#182;</a></h2><div class="highlight"><pre><span></span>conda create -n flask <span class="nv">python</span><span class="o">=</span><span class="m">3</span>
+conda activate flask
 </pre></div>
 
 </div>
@@ -13561,7 +13562,6 @@ sudo vim YOUR-SERVICE.service
 <span class="nv">After</span><span class="o">=</span>network.target
 
 <span class="o">[</span>Service<span class="o">]</span>
-<span class="nv">Type</span><span class="o">=</span>notify
 <span class="nv">User</span><span class="o">=</span>ubuntu
 <span class="nv">WorkingDirectory</span><span class="o">=</span>/home/ubuntu
 <span class="nv">ExecStart</span><span class="o">=</span>/home/ubuntu/miniconda3/envs/flask/bin/python3 /home/ubuntu/api.py
@@ -13593,6 +13593,79 @@ sudo systemctl status YOUR-SERVICE
 <li>中斷 EC2 連線</li>
 <li>過一段時間觀察資料是否有更新</li>
 </ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#26368;&#24460;&#34389;&#29702;&#21855;&#21205;-Flask-&#26381;&#21209;&#26178;&#26371;&#30475;&#21040;&#30340;&#35686;&#21578;&#35338;&#24687;">&#26368;&#24460;&#34389;&#29702;&#21855;&#21205; Flask &#26381;&#21209;&#26178;&#26371;&#30475;&#21040;&#30340;&#35686;&#21578;&#35338;&#24687;<a class="anchor-link" href="#&#26368;&#24460;&#34389;&#29702;&#21855;&#21205;-Flask-&#26381;&#21209;&#26178;&#26371;&#30475;&#21040;&#30340;&#35686;&#21578;&#35338;&#24687;">&#182;</a></h2><blockquote><p>WARNING: This is a development server. Do not use it in a production deployment.</p>
+<p>Use a production WSGI server instead.</p>
+</blockquote>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#36889;&#20491;&#35338;&#24687;&#24314;&#35696;&#22312;-Flask-API-&#33287;-HTTP-&#35531;&#27714;&#20013;&#38291;&#32622;&#25918;&#19968;&#20491;-WSGI">&#36889;&#20491;&#35338;&#24687;&#24314;&#35696;&#22312; Flask API &#33287; HTTP &#35531;&#27714;&#20013;&#38291;&#32622;&#25918;&#19968;&#20491; WSGI<a class="anchor-link" href="#&#36889;&#20491;&#35338;&#24687;&#24314;&#35696;&#22312;-Flask-API-&#33287;-HTTP-&#35531;&#27714;&#20013;&#38291;&#32622;&#25918;&#19968;&#20491;-WSGI">&#182;</a></h2><ol>
+<li>HTTP 請求</li>
+<li>WSGI</li>
+<li>Flask API</li>
+</ol>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="WSGI,-Web-Server-Gateway-Interface-&#20677;&#36969;&#29992;-Python&#65292;&#36000;&#36012;&#20171;&#25509;&#32178;&#38913;&#26381;&#21209;&#33287;&#32178;&#38913;&#26694;&#26550;">WSGI, Web Server Gateway Interface &#20677;&#36969;&#29992; Python&#65292;&#36000;&#36012;&#20171;&#25509;&#32178;&#38913;&#26381;&#21209;&#33287;&#32178;&#38913;&#26694;&#26550;<a class="anchor-link" href="#WSGI,-Web-Server-Gateway-Interface-&#20677;&#36969;&#29992;-Python&#65292;&#36000;&#36012;&#20171;&#25509;&#32178;&#38913;&#26381;&#21209;&#33287;&#32178;&#38913;&#26694;&#26550;">&#182;</a></h2>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#22312;&#23560;&#26696;&#36039;&#26009;&#22846;&#20013;&#26032;&#22686;-wsgi.py">&#22312;&#23560;&#26696;&#36039;&#26009;&#22846;&#20013;&#26032;&#22686; <code>wsgi.py</code><a class="anchor-link" href="#&#22312;&#23560;&#26696;&#36039;&#26009;&#22846;&#20013;&#26032;&#22686;-wsgi.py">&#182;</a></h2><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">api</span> <span class="kn">import</span> <span class="n">app</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#23433;&#35037;-Python-&#32178;&#38913;&#26381;&#21209;&#65306;gunicorn">&#23433;&#35037; Python &#32178;&#38913;&#26381;&#21209;&#65306;gunicorn<a class="anchor-link" href="#&#23433;&#35037;-Python-&#32178;&#38913;&#26381;&#21209;&#65306;gunicorn">&#182;</a></h2><div class="highlight"><pre><span></span>conda activate flask
+pip install gunicorn
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#20462;&#25913;-YOUR-SERVICE.service">&#20462;&#25913; <code>YOUR-SERVICE.service</code><a class="anchor-link" href="#&#20462;&#25913;-YOUR-SERVICE.service">&#182;</a></h2><div class="highlight"><pre><span></span><span class="c1"># YOUR-SERVICE.service</span>
+<span class="o">[</span>Unit<span class="o">]</span>
+<span class="nv">Description</span><span class="o">=</span>Web API
+<span class="nv">After</span><span class="o">=</span>network.target
+
+<span class="o">[</span>Service<span class="o">]</span>
+<span class="nv">User</span><span class="o">=</span>ubuntu
+<span class="nv">WorkingDirectory</span><span class="o">=</span>/home/ubuntu
+<span class="nv">ExecStart</span><span class="o">=</span>/home/ubuntu/miniconda3/envs/flask/bin/gunicorn --bind <span class="m">0</span>.0.0.0:5000 -w <span class="m">4</span> wsgi:app
+<span class="nv">WatchdogSec</span><span class="o">=</span><span class="m">60</span>
+<span class="nv">Restart</span><span class="o">=</span>always
+
+<span class="o">[</span>Install<span class="o">]</span>
+<span class="nv">WantedBy</span><span class="o">=</span>multi-user.target
+</pre></div>
 
 </div>
 </div>
