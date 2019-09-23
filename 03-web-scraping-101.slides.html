@@ -16,8 +16,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <!-- General and theme style sheets -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/reveal.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/theme/simple.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/reveal.css">
+<link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
 
 <!-- If the query includes 'print-pdf', include the PDF print sheet -->
 <script>
@@ -25,14 +25,14 @@ if( window.location.search.match( /print-pdf/gi ) ) {
         var link = document.createElement( 'link' );
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/print/pdf.css';
+        link.href = 'reveal.js/css/print/pdf.css';
         document.getElementsByTagName( 'head' )[0].appendChild( link );
 }
 
 </script>
 
 <!--[if lt IE 9]>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/html5shiv.js"></script>
+<script src="reveal.js/lib/js/html5shiv.js"></script>
 <![endif]-->
 
 <!-- Loading the mathjax macro -->
@@ -13358,42 +13358,22 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#20197;-https://opendata.epa.gov.tw/ws/Data/AQI/?$format=json-&#31034;&#31684;">&#20197; <a href="https://opendata.epa.gov.tw/ws/Data/AQI/?$format=json">https://opendata.epa.gov.tw/ws/Data/AQI/?$format=json</a> &#31034;&#31684;<a class="anchor-link" href="#&#20197;-https://opendata.epa.gov.tw/ws/Data/AQI/?$format=json-&#31034;&#31684;">&#182;</a></h2>
+<h2 id="&#20197;-http://data.nba.net/prod/v2/2019/teams.json-&#31034;&#31684;">&#20197; <a href="http://data.nba.net/prod/v2/2019/teams.json">http://data.nba.net/prod/v2/2019/teams.json</a> &#31034;&#31684;<a class="anchor-link" href="#&#20197;-http://data.nba.net/prod/v2/2019/teams.json-&#31034;&#31684;">&#182;</a></h2>
 </div>
 </div>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">aqi_url</span> <span class="o">=</span> <span class="s2">&quot;https://opendata.epa.gov.tw/ws/Data/AQI/?$format=json&quot;</span>
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">aqi_url</span><span class="p">,</span> <span class="n">verify</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">aqi</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">aqi</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">aqi</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div></div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#21488;&#28771;&#30340;&#28204;&#31449;&#20849;&#26377;&#24190;&#20491;&#65311;">&#38568;&#22530;&#32244;&#32722;&#65306;&#21488;&#28771;&#30340;&#28204;&#31449;&#20849;&#26377;&#24190;&#20491;&#65311;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#21488;&#28771;&#30340;&#28204;&#31449;&#20849;&#26377;&#24190;&#20491;&#65311;">&#182;</a></h2>
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;台灣的測站共有 </span><span class="si">{}</span><span class="s2"> 個&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n_sites</span><span class="p">))</span>
+<span class="n">teams_url</span> <span class="o">=</span> <span class="s2">&quot;http://data.nba.net/prod/v2/2019/teams.json&quot;</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">teams_url</span><span class="p">)</span>
+<span class="n">teams</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">teams</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">teams</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13410,7 +13390,8 @@ a.anchor-link {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>台灣的測站共有 82 個
+<pre>&lt;class &#39;dict&#39;&gt;
+{&#39;_internal&#39;: {&#39;pubDateTime&#39;: &#39;2019-06-26 06:00:23.891 EDT&#39;, &#39;igorPath&#39;: &#39;cron,1561543218800,1561543218800|router,1561543218800,1561543218922|domUpdater,1561543219144,1561543219858|feedProducer,1561543221917,1561543224371&#39;, &#39;xslt&#39;: &#39;NBA/xsl/league/roster/marty_teams_list.xsl&#39;, &#39;xsltForceRecompile&#39;: &#39;true&#39;, &#39;xsltInCache&#39;: &#39;false&#39;, &#39;xsltCompileTimeMillis&#39;: &#39;1545&#39;, &#39;xsltTransformTimeMillis&#39;: &#39;540&#39;, &#39;consolidatedDomKey&#39;: &#39;qamanual__transform__marty_teams_list__5498140551604&#39;, &#39;endToEndTimeMillis&#39;: &#39;5571&#39;}, &#39;league&#39;: {&#39;standard&#39;: [{&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Croatia&#39;, &#39;altCityName&#39;: &#39;Croatia&#39;, &#39;fullName&#39;: &#39;Team Croatia&#39;, &#39;tricode&#39;: &#39;CRO&#39;, &#39;teamId&#39;: &#39;70&#39;, &#39;nickname&#39;: &#39;Croatia&#39;, &#39;urlName&#39;: &#39;croatia&#39;, &#39;teamShortName&#39;: &#39;Croatia&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;China&#39;, &#39;altCityName&#39;: &#39;China&#39;, &#39;fullName&#39;: &#39;Team China&#39;, &#39;tricode&#39;: &#39;CHN&#39;, &#39;teamId&#39;: &#39;45&#39;, &#39;nickname&#39;: &#39;China&#39;, &#39;urlName&#39;: &#39;china&#39;, &#39;teamShortName&#39;: &#39;China&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Adelaide&#39;, &#39;altCityName&#39;: &#39;Adelaide&#39;, &#39;fullName&#39;: &#39;Adelaide 36ers&#39;, &#39;tricode&#39;: &#39;ADL&#39;, &#39;teamId&#39;: &#39;15019&#39;, &#39;nickname&#39;: &#39;36ers&#39;, &#39;urlName&#39;: &#39;36ers&#39;, &#39;teamShortName&#39;: &#39;Adelaide&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Atlanta&#39;, &#39;altCityName&#39;: &#39;Atlanta&#39;, &#39;fullName&#39;: &#39;Atlanta Hawks&#39;, &#39;tricode&#39;: &#39;ATL&#39;, &#39;teamId&#39;: &#39;1610612737&#39;, &#39;nickname&#39;: &#39;Hawks&#39;, &#39;urlName&#39;: &#39;hawks&#39;, &#39;teamShortName&#39;: &#39;Atlanta&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Southeast&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: True, &#39;city&#39;: &#39;Away&#39;, &#39;altCityName&#39;: &#39;Away&#39;, &#39;fullName&#39;: &#39;Away Away&#39;, &#39;tricode&#39;: &#39;AWY&#39;, &#39;teamId&#39;: &#39;1610616840&#39;, &#39;nickname&#39;: &#39;Away&#39;, &#39;urlName&#39;: &#39;away&#39;, &#39;teamShortName&#39;: &#39;Away&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;East&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Beijing&#39;, &#39;altCityName&#39;: &#39;Beijing&#39;, &#39;fullName&#39;: &#39;Beijing Ducks&#39;, &#39;tricode&#39;: &#39;BJD&#39;, &#39;teamId&#39;: &#39;15021&#39;, &#39;nickname&#39;: &#39;Ducks&#39;, &#39;urlName&#39;: &#39;ducks&#39;, &#39;teamShortName&#39;: &#39;Beijing&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Boston&#39;, &#39;altCityName&#39;: &#39;Boston&#39;, &#39;fullName&#39;: &#39;Boston Celtics&#39;, &#39;tricode&#39;: &#39;BOS&#39;, &#39;teamId&#39;: &#39;1610612738&#39;, &#39;nickname&#39;: &#39;Celtics&#39;, &#39;urlName&#39;: &#39;celtics&#39;, &#39;teamShortName&#39;: &#39;Boston&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Atlantic&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Brooklyn&#39;, &#39;altCityName&#39;: &#39;Brooklyn&#39;, &#39;fullName&#39;: &#39;Brooklyn Nets&#39;, &#39;tricode&#39;: &#39;BKN&#39;, &#39;teamId&#39;: &#39;1610612751&#39;, &#39;nickname&#39;: &#39;Nets&#39;, &#39;urlName&#39;: &#39;nets&#39;, &#39;teamShortName&#39;: &#39;Brooklyn&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Atlantic&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Charlotte&#39;, &#39;altCityName&#39;: &#39;Charlotte&#39;, &#39;fullName&#39;: &#39;Charlotte Hornets&#39;, &#39;tricode&#39;: &#39;CHA&#39;, &#39;teamId&#39;: &#39;1610612766&#39;, &#39;nickname&#39;: &#39;Hornets&#39;, &#39;urlName&#39;: &#39;hornets&#39;, &#39;teamShortName&#39;: &#39;Charlotte&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Southeast&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Buenos Aires&#39;, &#39;altCityName&#39;: &#39;Buenos Aires&#39;, &#39;fullName&#39;: &#39;San Lorenzo de Almagro&#39;, &#39;tricode&#39;: &#39;SLA&#39;, &#39;teamId&#39;: &#39;12330&#39;, &#39;nickname&#39;: &#39;San Lorenzo&#39;, &#39;urlName&#39;: &#39;san_lorenzo&#39;, &#39;teamShortName&#39;: &#39;San Lorenzo&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Chicago&#39;, &#39;altCityName&#39;: &#39;Chicago&#39;, &#39;fullName&#39;: &#39;Chicago Bulls&#39;, &#39;tricode&#39;: &#39;CHI&#39;, &#39;teamId&#39;: &#39;1610612741&#39;, &#39;nickname&#39;: &#39;Bulls&#39;, &#39;urlName&#39;: &#39;bulls&#39;, &#39;teamShortName&#39;: &#39;Chicago&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Central&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Cleveland&#39;, &#39;altCityName&#39;: &#39;Cleveland&#39;, &#39;fullName&#39;: &#39;Cleveland Cavaliers&#39;, &#39;tricode&#39;: &#39;CLE&#39;, &#39;teamId&#39;: &#39;1610612739&#39;, &#39;nickname&#39;: &#39;Cavaliers&#39;, &#39;urlName&#39;: &#39;cavaliers&#39;, &#39;teamShortName&#39;: &#39;Cleveland&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Central&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Dallas&#39;, &#39;altCityName&#39;: &#39;Dallas&#39;, &#39;fullName&#39;: &#39;Dallas Mavericks&#39;, &#39;tricode&#39;: &#39;DAL&#39;, &#39;teamId&#39;: &#39;1610612742&#39;, &#39;nickname&#39;: &#39;Mavericks&#39;, &#39;urlName&#39;: &#39;mavericks&#39;, &#39;teamShortName&#39;: &#39;Dallas&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Southwest&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Denver&#39;, &#39;altCityName&#39;: &#39;Denver&#39;, &#39;fullName&#39;: &#39;Denver Nuggets&#39;, &#39;tricode&#39;: &#39;DEN&#39;, &#39;teamId&#39;: &#39;1610612743&#39;, &#39;nickname&#39;: &#39;Nuggets&#39;, &#39;urlName&#39;: &#39;nuggets&#39;, &#39;teamShortName&#39;: &#39;Denver&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Northwest&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Detroit&#39;, &#39;altCityName&#39;: &#39;Detroit&#39;, &#39;fullName&#39;: &#39;Detroit Pistons&#39;, &#39;tricode&#39;: &#39;DET&#39;, &#39;teamId&#39;: &#39;1610612765&#39;, &#39;nickname&#39;: &#39;Pistons&#39;, &#39;urlName&#39;: &#39;pistons&#39;, &#39;teamShortName&#39;: &#39;Detroit&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Central&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Franca&#39;, &#39;altCityName&#39;: &#39;Franca&#39;, &#39;fullName&#39;: &#39;SESI/Franca&#39;, &#39;tricode&#39;: &#39;FRA&#39;, &#39;teamId&#39;: &#39;12332&#39;, &#39;nickname&#39;: &#39;Franca&#39;, &#39;urlName&#39;: &#39;franca&#39;, &#39;teamShortName&#39;: &#39;Franca&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Golden State&#39;, &#39;altCityName&#39;: &#39;Golden State&#39;, &#39;fullName&#39;: &#39;Golden State Warriors&#39;, &#39;tricode&#39;: &#39;GSW&#39;, &#39;teamId&#39;: &#39;1610612744&#39;, &#39;nickname&#39;: &#39;Warriors&#39;, &#39;urlName&#39;: &#39;warriors&#39;, &#39;teamShortName&#39;: &#39;Golden State&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Pacific&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Guangzhou&#39;, &#39;altCityName&#39;: &#39;Guangzhou&#39;, &#39;fullName&#39;: &#39;Guangzhou Long-Lions&#39;, &#39;tricode&#39;: &#39;GUA&#39;, &#39;teamId&#39;: &#39;15018&#39;, &#39;nickname&#39;: &#39;Long-Lions&#39;, &#39;urlName&#39;: &#39;long-lions&#39;, &#39;teamShortName&#39;: &#39;Guangzhou&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Haifa&#39;, &#39;altCityName&#39;: &#39;Haifa&#39;, &#39;fullName&#39;: &#39;Haifa Maccabi Haifa&#39;, &#39;tricode&#39;: &#39;MAC&#39;, &#39;teamId&#39;: &#39;93&#39;, &#39;nickname&#39;: &#39;Maccabi Haifa&#39;, &#39;urlName&#39;: &#39;maccabi_haifa&#39;, &#39;teamShortName&#39;: &#39;Maccabi Haifa&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: True, &#39;city&#39;: &#39;Home&#39;, &#39;altCityName&#39;: &#39;Home&#39;, &#39;fullName&#39;: &#39;Home Home&#39;, &#39;tricode&#39;: &#39;HME&#39;, &#39;teamId&#39;: &#39;1610616839&#39;, &#39;nickname&#39;: &#39;Home&#39;, &#39;urlName&#39;: &#39;home&#39;, &#39;teamShortName&#39;: &#39;Home&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;East&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Houston&#39;, &#39;altCityName&#39;: &#39;Houston&#39;, &#39;fullName&#39;: &#39;Houston Rockets&#39;, &#39;tricode&#39;: &#39;HOU&#39;, &#39;teamId&#39;: &#39;1610612745&#39;, &#39;nickname&#39;: &#39;Rockets&#39;, &#39;urlName&#39;: &#39;rockets&#39;, &#39;teamShortName&#39;: &#39;Houston&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Southwest&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Indiana&#39;, &#39;altCityName&#39;: &#39;Indiana&#39;, &#39;fullName&#39;: &#39;Indiana Pacers&#39;, &#39;tricode&#39;: &#39;IND&#39;, &#39;teamId&#39;: &#39;1610612754&#39;, &#39;nickname&#39;: &#39;Pacers&#39;, &#39;urlName&#39;: &#39;pacers&#39;, &#39;teamShortName&#39;: &#39;Indiana&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Central&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;LA&#39;, &#39;altCityName&#39;: &#39;LA Clippers&#39;, &#39;fullName&#39;: &#39;LA Clippers&#39;, &#39;tricode&#39;: &#39;LAC&#39;, &#39;teamId&#39;: &#39;1610612746&#39;, &#39;nickname&#39;: &#39;Clippers&#39;, &#39;urlName&#39;: &#39;clippers&#39;, &#39;teamShortName&#39;: &#39;LA Clippers&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Pacific&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Los Angeles&#39;, &#39;altCityName&#39;: &#39;Los Angeles Lakers&#39;, &#39;fullName&#39;: &#39;Los Angeles Lakers&#39;, &#39;tricode&#39;: &#39;LAL&#39;, &#39;teamId&#39;: &#39;1610612747&#39;, &#39;nickname&#39;: &#39;Lakers&#39;, &#39;urlName&#39;: &#39;lakers&#39;, &#39;teamShortName&#39;: &#39;L.A. Lakers&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Pacific&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Melbourne&#39;, &#39;altCityName&#39;: &#39;Melbourne&#39;, &#39;fullName&#39;: &#39;Melbourne United&#39;, &#39;tricode&#39;: &#39;MEL&#39;, &#39;teamId&#39;: &#39;15016&#39;, &#39;nickname&#39;: &#39;United&#39;, &#39;urlName&#39;: &#39;united&#39;, &#39;teamShortName&#39;: &#39;Melbourne&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Memphis&#39;, &#39;altCityName&#39;: &#39;Memphis&#39;, &#39;fullName&#39;: &#39;Memphis Grizzlies&#39;, &#39;tricode&#39;: &#39;MEM&#39;, &#39;teamId&#39;: &#39;1610612763&#39;, &#39;nickname&#39;: &#39;Grizzlies&#39;, &#39;urlName&#39;: &#39;grizzlies&#39;, &#39;teamShortName&#39;: &#39;Memphis&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Southwest&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Miami&#39;, &#39;altCityName&#39;: &#39;Miami&#39;, &#39;fullName&#39;: &#39;Miami Heat&#39;, &#39;tricode&#39;: &#39;MIA&#39;, &#39;teamId&#39;: &#39;1610612748&#39;, &#39;nickname&#39;: &#39;Heat&#39;, &#39;urlName&#39;: &#39;heat&#39;, &#39;teamShortName&#39;: &#39;Miami&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Southeast&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Milwaukee&#39;, &#39;altCityName&#39;: &#39;Milwaukee&#39;, &#39;fullName&#39;: &#39;Milwaukee Bucks&#39;, &#39;tricode&#39;: &#39;MIL&#39;, &#39;teamId&#39;: &#39;1610612749&#39;, &#39;nickname&#39;: &#39;Bucks&#39;, &#39;urlName&#39;: &#39;bucks&#39;, &#39;teamShortName&#39;: &#39;Milwaukee&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Central&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Minnesota&#39;, &#39;altCityName&#39;: &#39;Minnesota&#39;, &#39;fullName&#39;: &#39;Minnesota Timberwolves&#39;, &#39;tricode&#39;: &#39;MIN&#39;, &#39;teamId&#39;: &#39;1610612750&#39;, &#39;nickname&#39;: &#39;Timberwolves&#39;, &#39;urlName&#39;: &#39;timberwolves&#39;, &#39;teamShortName&#39;: &#39;Minnesota&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Northwest&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;New Orleans&#39;, &#39;altCityName&#39;: &#39;New Orleans&#39;, &#39;fullName&#39;: &#39;New Orleans Pelicans&#39;, &#39;tricode&#39;: &#39;NOP&#39;, &#39;teamId&#39;: &#39;1610612740&#39;, &#39;nickname&#39;: &#39;Pelicans&#39;, &#39;urlName&#39;: &#39;pelicans&#39;, &#39;teamShortName&#39;: &#39;New Orleans&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Southwest&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;New York&#39;, &#39;altCityName&#39;: &#39;New York&#39;, &#39;fullName&#39;: &#39;New York Knicks&#39;, &#39;tricode&#39;: &#39;NYK&#39;, &#39;teamId&#39;: &#39;1610612752&#39;, &#39;nickname&#39;: &#39;Knicks&#39;, &#39;urlName&#39;: &#39;knicks&#39;, &#39;teamShortName&#39;: &#39;New York&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Atlantic&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;New Zealand&#39;, &#39;altCityName&#39;: &#39;New Zealand&#39;, &#39;fullName&#39;: &#39;New Zealand Breakers&#39;, &#39;tricode&#39;: &#39;NZB&#39;, &#39;teamId&#39;: &#39;15020&#39;, &#39;nickname&#39;: &#39;Breakers&#39;, &#39;urlName&#39;: &#39;breakers&#39;, &#39;teamShortName&#39;: &#39;New Zealand&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Oklahoma City&#39;, &#39;altCityName&#39;: &#39;Oklahoma City&#39;, &#39;fullName&#39;: &#39;Oklahoma City Thunder&#39;, &#39;tricode&#39;: &#39;OKC&#39;, &#39;teamId&#39;: &#39;1610612760&#39;, &#39;nickname&#39;: &#39;Thunder&#39;, &#39;urlName&#39;: &#39;thunder&#39;, &#39;teamShortName&#39;: &#39;Oklahoma City&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Northwest&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Orlando&#39;, &#39;altCityName&#39;: &#39;Orlando&#39;, &#39;fullName&#39;: &#39;Orlando Magic&#39;, &#39;tricode&#39;: &#39;ORL&#39;, &#39;teamId&#39;: &#39;1610612753&#39;, &#39;nickname&#39;: &#39;Magic&#39;, &#39;urlName&#39;: &#39;magic&#39;, &#39;teamShortName&#39;: &#39;Orlando&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Southeast&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Perth&#39;, &#39;altCityName&#39;: &#39;Perth&#39;, &#39;fullName&#39;: &#39;Perth Wildcats&#39;, &#39;tricode&#39;: &#39;PER&#39;, &#39;teamId&#39;: &#39;104&#39;, &#39;nickname&#39;: &#39;Wildcats&#39;, &#39;urlName&#39;: &#39;wildcats&#39;, &#39;teamShortName&#39;: &#39;Perth&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Philadelphia&#39;, &#39;altCityName&#39;: &#39;Philadelphia&#39;, &#39;fullName&#39;: &#39;Philadelphia 76ers&#39;, &#39;tricode&#39;: &#39;PHI&#39;, &#39;teamId&#39;: &#39;1610612755&#39;, &#39;nickname&#39;: &#39;76ers&#39;, &#39;urlName&#39;: &#39;sixers&#39;, &#39;teamShortName&#39;: &#39;Philadelphia&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Atlantic&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Phoenix&#39;, &#39;altCityName&#39;: &#39;Phoenix&#39;, &#39;fullName&#39;: &#39;Phoenix Suns&#39;, &#39;tricode&#39;: &#39;PHX&#39;, &#39;teamId&#39;: &#39;1610612756&#39;, &#39;nickname&#39;: &#39;Suns&#39;, &#39;urlName&#39;: &#39;suns&#39;, &#39;teamShortName&#39;: &#39;Phoenix&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Pacific&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Portland&#39;, &#39;altCityName&#39;: &#39;Portland&#39;, &#39;fullName&#39;: &#39;Portland Trail Blazers&#39;, &#39;tricode&#39;: &#39;POR&#39;, &#39;teamId&#39;: &#39;1610612757&#39;, &#39;nickname&#39;: &#39;Trail Blazers&#39;, &#39;urlName&#39;: &#39;blazers&#39;, &#39;teamShortName&#39;: &#39;Portland&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Northwest&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Rio de Janeiro&#39;, &#39;altCityName&#39;: &#39;Rio de Janeiro&#39;, &#39;fullName&#39;: &#39;Rio de Janeiro Flamengo&#39;, &#39;tricode&#39;: &#39;FLA&#39;, &#39;teamId&#39;: &#39;12325&#39;, &#39;nickname&#39;: &#39;Flamengo&#39;, &#39;urlName&#39;: &#39;flamengo&#39;, &#39;teamShortName&#39;: &#39;Flamengo&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Sacramento&#39;, &#39;altCityName&#39;: &#39;Sacramento&#39;, &#39;fullName&#39;: &#39;Sacramento Kings&#39;, &#39;tricode&#39;: &#39;SAC&#39;, &#39;teamId&#39;: &#39;1610612758&#39;, &#39;nickname&#39;: &#39;Kings&#39;, &#39;urlName&#39;: &#39;kings&#39;, &#39;teamShortName&#39;: &#39;Sacramento&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Pacific&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;San Antonio&#39;, &#39;altCityName&#39;: &#39;San Antonio&#39;, &#39;fullName&#39;: &#39;San Antonio Spurs&#39;, &#39;tricode&#39;: &#39;SAS&#39;, &#39;teamId&#39;: &#39;1610612759&#39;, &#39;nickname&#39;: &#39;Spurs&#39;, &#39;urlName&#39;: &#39;spurs&#39;, &#39;teamShortName&#39;: &#39;San Antonio&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Southwest&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Shanghai&#39;, &#39;altCityName&#39;: &#39;Shanghai&#39;, &#39;fullName&#39;: &#39;Shanghai Sharks&#39;, &#39;tricode&#39;: &#39;SDS&#39;, &#39;teamId&#39;: &#39;12329&#39;, &#39;nickname&#39;: &#39;Shanghai Sharks&#39;, &#39;urlName&#39;: &#39;shanghai_sharks&#39;, &#39;teamShortName&#39;: &#39;Shanghai&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Sydney&#39;, &#39;altCityName&#39;: &#39;Sydney&#39;, &#39;fullName&#39;: &#39;Sydney Kings&#39;, &#39;tricode&#39;: &#39;SYD&#39;, &#39;teamId&#39;: &#39;15015&#39;, &#39;nickname&#39;: &#39;Kings&#39;, &#39;urlName&#39;: &#39;sydkings&#39;, &#39;teamShortName&#39;: &#39;Sydney&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: True, &#39;city&#39;: &#39;Team&#39;, &#39;altCityName&#39;: &#39;Team&#39;, &#39;fullName&#39;: &#39;All-Stars&#39;, &#39;tricode&#39;: &#39;EST&#39;, &#39;teamId&#39;: &#39;1699999999&#39;, &#39;nickname&#39;: &#39;All-Stars&#39;, &#39;urlName&#39;: &#39;assn_away&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;East&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: True, &#39;city&#39;: &#39;Team&#39;, &#39;altCityName&#39;: &#39;Team&#39;, &#39;fullName&#39;: &#39;All-Stars&#39;, &#39;tricode&#39;: &#39;WST&#39;, &#39;teamId&#39;: &#39;1699999998&#39;, &#39;nickname&#39;: &#39;All-Stars&#39;, &#39;urlName&#39;: &#39;assn_home&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;West&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: True, &#39;city&#39;: &#39;Team Giannis&#39;, &#39;altCityName&#39;: &#39;Team Giannis&#39;, &#39;fullName&#39;: &#39;Team Giannis&#39;, &#39;tricode&#39;: &#39;GNS&#39;, &#39;teamId&#39;: &#39;1610616833&#39;, &#39;nickname&#39;: &#39;Team Giannis&#39;, &#39;urlName&#39;: &#39;team_giannis&#39;, &#39;teamShortName&#39;: &#39;Team Giannis&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;East&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: True, &#39;city&#39;: &#39;Team LeBron&#39;, &#39;altCityName&#39;: &#39;Team LeBron&#39;, &#39;fullName&#39;: &#39;Team LeBron&#39;, &#39;tricode&#39;: &#39;LBN&#39;, &#39;teamId&#39;: &#39;1610616834&#39;, &#39;nickname&#39;: &#39;Team LeBron&#39;, &#39;urlName&#39;: &#39;team_lebron&#39;, &#39;teamShortName&#39;: &#39;Team LeBron&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;West&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Toronto&#39;, &#39;altCityName&#39;: &#39;Toronto&#39;, &#39;fullName&#39;: &#39;Toronto Raptors&#39;, &#39;tricode&#39;: &#39;TOR&#39;, &#39;teamId&#39;: &#39;1610612761&#39;, &#39;nickname&#39;: &#39;Raptors&#39;, &#39;urlName&#39;: &#39;raptors&#39;, &#39;teamShortName&#39;: &#39;Toronto&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Atlantic&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: True, &#39;city&#39;: &#39;USA&#39;, &#39;altCityName&#39;: &#39;USA&#39;, &#39;fullName&#39;: &#39;USA&#39;, &#39;tricode&#39;: &#39;USA&#39;, &#39;teamId&#39;: &#39;1610616843&#39;, &#39;nickname&#39;: &#39;USA&#39;, &#39;urlName&#39;: &#39;usa&#39;, &#39;teamShortName&#39;: &#39;USA&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;East&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Utah&#39;, &#39;altCityName&#39;: &#39;Utah&#39;, &#39;fullName&#39;: &#39;Utah Jazz&#39;, &#39;tricode&#39;: &#39;UTA&#39;, &#39;teamId&#39;: &#39;1610612762&#39;, &#39;nickname&#39;: &#39;Jazz&#39;, &#39;urlName&#39;: &#39;jazz&#39;, &#39;teamShortName&#39;: &#39;Utah&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Northwest&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Washington&#39;, &#39;altCityName&#39;: &#39;Washington&#39;, &#39;fullName&#39;: &#39;Washington Wizards&#39;, &#39;tricode&#39;: &#39;WAS&#39;, &#39;teamId&#39;: &#39;1610612764&#39;, &#39;nickname&#39;: &#39;Wizards&#39;, &#39;urlName&#39;: &#39;wizards&#39;, &#39;teamShortName&#39;: &#39;Washington&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Southeast&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: True, &#39;city&#39;: &#39;World&#39;, &#39;altCityName&#39;: &#39;World&#39;, &#39;fullName&#39;: &#39;World&#39;, &#39;tricode&#39;: &#39;WLD&#39;, &#39;teamId&#39;: &#39;1610616844&#39;, &#39;nickname&#39;: &#39;World&#39;, &#39;urlName&#39;: &#39;world&#39;, &#39;teamShortName&#39;: &#39;World&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;East&#39;}], &#39;africa&#39;: [{&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Team&#39;, &#39;altCityName&#39;: &#39;Team&#39;, &#39;fullName&#39;: &#39;Team USA&#39;, &#39;tricode&#39;: &#39;USA&#39;, &#39;teamId&#39;: &#39;22&#39;, &#39;nickname&#39;: &#39;USA&#39;, &#39;urlName&#39;: &#39;nhs_usa&#39;, &#39;teamShortName&#39;: &#39;USA&#39;, &#39;confName&#39;: &#39;&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Team&#39;, &#39;altCityName&#39;: &#39;Team&#39;, &#39;fullName&#39;: &#39;Team World&#39;, &#39;tricode&#39;: &#39;WLD&#39;, &#39;teamId&#39;: &#39;21&#39;, &#39;nickname&#39;: &#39;World&#39;, &#39;urlName&#39;: &#39;nhs_world&#39;, &#39;teamShortName&#39;: &#39;World&#39;, &#39;confName&#39;: &#39;&#39;, &#39;divName&#39;: &#39;&#39;}], &#39;sacramento&#39;: [{&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Golden State&#39;, &#39;altCityName&#39;: &#39;Golden State&#39;, &#39;fullName&#39;: &#39;Golden State Warriors&#39;, &#39;tricode&#39;: &#39;GSW&#39;, &#39;teamId&#39;: &#39;1610612744&#39;, &#39;nickname&#39;: &#39;Warriors&#39;, &#39;urlName&#39;: &#39;warriors&#39;, &#39;teamShortName&#39;: &#39;Golden State&#39;, &#39;confName&#39;: &#39;Sacramento&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Los Angeles&#39;, &#39;altCityName&#39;: &#39;Los Angeles Lakers&#39;, &#39;fullName&#39;: &#39;Los Angeles Lakers&#39;, &#39;tricode&#39;: &#39;LAL&#39;, &#39;teamId&#39;: &#39;1610612747&#39;, &#39;nickname&#39;: &#39;Lakers&#39;, &#39;urlName&#39;: &#39;lakers&#39;, &#39;teamShortName&#39;: &#39;L.A. Lakers&#39;, &#39;confName&#39;: &#39;Sacramento&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Miami&#39;, &#39;altCityName&#39;: &#39;Miami&#39;, &#39;fullName&#39;: &#39;Miami Heat&#39;, &#39;tricode&#39;: &#39;MIA&#39;, &#39;teamId&#39;: &#39;1610612748&#39;, &#39;nickname&#39;: &#39;Heat&#39;, &#39;urlName&#39;: &#39;heat&#39;, &#39;teamShortName&#39;: &#39;Miami&#39;, &#39;confName&#39;: &#39;Sacramento&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Sacramento&#39;, &#39;altCityName&#39;: &#39;Sacramento&#39;, &#39;fullName&#39;: &#39;Sacramento Kings&#39;, &#39;tricode&#39;: &#39;SAC&#39;, &#39;teamId&#39;: &#39;1610612758&#39;, &#39;nickname&#39;: &#39;Kings&#39;, &#39;urlName&#39;: &#39;kings&#39;, &#39;teamShortName&#39;: &#39;Sacramento&#39;, &#39;confName&#39;: &#39;Sacramento&#39;, &#39;divName&#39;: &#39;&#39;}], &#39;vegas&#39;: [{&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Atlanta&#39;, &#39;altCityName&#39;: &#39;Atlanta&#39;, &#39;fullName&#39;: &#39;Atlanta Hawks&#39;, &#39;tricode&#39;: &#39;ATL&#39;, &#39;teamId&#39;: &#39;1610612737&#39;, &#39;nickname&#39;: &#39;Hawks&#39;, &#39;urlName&#39;: &#39;hawks&#39;, &#39;teamShortName&#39;: &#39;Atlanta&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Boston&#39;, &#39;altCityName&#39;: &#39;Boston&#39;, &#39;fullName&#39;: &#39;Boston Celtics&#39;, &#39;tricode&#39;: &#39;BOS&#39;, &#39;teamId&#39;: &#39;1610612738&#39;, &#39;nickname&#39;: &#39;Celtics&#39;, &#39;urlName&#39;: &#39;celtics&#39;, &#39;teamShortName&#39;: &#39;Boston&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Brooklyn&#39;, &#39;altCityName&#39;: &#39;Brooklyn&#39;, &#39;fullName&#39;: &#39;Brooklyn Nets&#39;, &#39;tricode&#39;: &#39;BKN&#39;, &#39;teamId&#39;: &#39;1610612751&#39;, &#39;nickname&#39;: &#39;Nets&#39;, &#39;urlName&#39;: &#39;nets&#39;, &#39;teamShortName&#39;: &#39;Brooklyn&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Charlotte&#39;, &#39;altCityName&#39;: &#39;Charlotte&#39;, &#39;fullName&#39;: &#39;Charlotte Hornets&#39;, &#39;tricode&#39;: &#39;CHA&#39;, &#39;teamId&#39;: &#39;1610612766&#39;, &#39;nickname&#39;: &#39;Hornets&#39;, &#39;urlName&#39;: &#39;hornets&#39;, &#39;teamShortName&#39;: &#39;Charlotte&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Chicago&#39;, &#39;altCityName&#39;: &#39;Chicago&#39;, &#39;fullName&#39;: &#39;Chicago Bulls&#39;, &#39;tricode&#39;: &#39;CHI&#39;, &#39;teamId&#39;: &#39;1610612741&#39;, &#39;nickname&#39;: &#39;Bulls&#39;, &#39;urlName&#39;: &#39;bulls&#39;, &#39;teamShortName&#39;: &#39;Chicago&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;China&#39;, &#39;altCityName&#39;: &#39;China&#39;, &#39;fullName&#39;: &#39;Team China&#39;, &#39;tricode&#39;: &#39;CHN&#39;, &#39;teamId&#39;: &#39;45&#39;, &#39;nickname&#39;: &#39;China&#39;, &#39;urlName&#39;: &#39;china&#39;, &#39;teamShortName&#39;: &#39;China&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Cleveland&#39;, &#39;altCityName&#39;: &#39;Cleveland&#39;, &#39;fullName&#39;: &#39;Cleveland Cavaliers&#39;, &#39;tricode&#39;: &#39;CLE&#39;, &#39;teamId&#39;: &#39;1610612739&#39;, &#39;nickname&#39;: &#39;Cavaliers&#39;, &#39;urlName&#39;: &#39;cavaliers&#39;, &#39;teamShortName&#39;: &#39;Cleveland&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Croatia&#39;, &#39;altCityName&#39;: &#39;Croatia&#39;, &#39;fullName&#39;: &#39;Team Croatia&#39;, &#39;tricode&#39;: &#39;CRO&#39;, &#39;teamId&#39;: &#39;70&#39;, &#39;nickname&#39;: &#39;Croatia&#39;, &#39;urlName&#39;: &#39;croatia&#39;, &#39;teamShortName&#39;: &#39;Croatia&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Dallas&#39;, &#39;altCityName&#39;: &#39;Dallas&#39;, &#39;fullName&#39;: &#39;Dallas Mavericks&#39;, &#39;tricode&#39;: &#39;DAL&#39;, &#39;teamId&#39;: &#39;1610612742&#39;, &#39;nickname&#39;: &#39;Mavericks&#39;, &#39;urlName&#39;: &#39;mavericks&#39;, &#39;teamShortName&#39;: &#39;Dallas&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Denver&#39;, &#39;altCityName&#39;: &#39;Denver&#39;, &#39;fullName&#39;: &#39;Denver Nuggets&#39;, &#39;tricode&#39;: &#39;DEN&#39;, &#39;teamId&#39;: &#39;1610612743&#39;, &#39;nickname&#39;: &#39;Nuggets&#39;, &#39;urlName&#39;: &#39;nuggets&#39;, &#39;teamShortName&#39;: &#39;Denver&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Detroit&#39;, &#39;altCityName&#39;: &#39;Detroit&#39;, &#39;fullName&#39;: &#39;Detroit Pistons&#39;, &#39;tricode&#39;: &#39;DET&#39;, &#39;teamId&#39;: &#39;1610612765&#39;, &#39;nickname&#39;: &#39;Pistons&#39;, &#39;urlName&#39;: &#39;pistons&#39;, &#39;teamShortName&#39;: &#39;Detroit&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Golden State&#39;, &#39;altCityName&#39;: &#39;Golden State&#39;, &#39;fullName&#39;: &#39;Golden State Warriors&#39;, &#39;tricode&#39;: &#39;GSW&#39;, &#39;teamId&#39;: &#39;1610612744&#39;, &#39;nickname&#39;: &#39;Warriors&#39;, &#39;urlName&#39;: &#39;warriors&#39;, &#39;teamShortName&#39;: &#39;Golden State&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Houston&#39;, &#39;altCityName&#39;: &#39;Houston&#39;, &#39;fullName&#39;: &#39;Houston Rockets&#39;, &#39;tricode&#39;: &#39;HOU&#39;, &#39;teamId&#39;: &#39;1610612745&#39;, &#39;nickname&#39;: &#39;Rockets&#39;, &#39;urlName&#39;: &#39;rockets&#39;, &#39;teamShortName&#39;: &#39;Houston&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Indiana&#39;, &#39;altCityName&#39;: &#39;Indiana&#39;, &#39;fullName&#39;: &#39;Indiana Pacers&#39;, &#39;tricode&#39;: &#39;IND&#39;, &#39;teamId&#39;: &#39;1610612754&#39;, &#39;nickname&#39;: &#39;Pacers&#39;, &#39;urlName&#39;: &#39;pacers&#39;, &#39;teamShortName&#39;: &#39;Indiana&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;LA&#39;, &#39;altCityName&#39;: &#39;LA Clippers&#39;, &#39;fullName&#39;: &#39;LA Clippers&#39;, &#39;tricode&#39;: &#39;LAC&#39;, &#39;teamId&#39;: &#39;1610612746&#39;, &#39;nickname&#39;: &#39;Clippers&#39;, &#39;urlName&#39;: &#39;clippers&#39;, &#39;teamShortName&#39;: &#39;LA Clippers&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Los Angeles&#39;, &#39;altCityName&#39;: &#39;Los Angeles Lakers&#39;, &#39;fullName&#39;: &#39;Los Angeles Lakers&#39;, &#39;tricode&#39;: &#39;LAL&#39;, &#39;teamId&#39;: &#39;1610612747&#39;, &#39;nickname&#39;: &#39;Lakers&#39;, &#39;urlName&#39;: &#39;lakers&#39;, &#39;teamShortName&#39;: &#39;L.A. Lakers&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Memphis&#39;, &#39;altCityName&#39;: &#39;Memphis&#39;, &#39;fullName&#39;: &#39;Memphis Grizzlies&#39;, &#39;tricode&#39;: &#39;MEM&#39;, &#39;teamId&#39;: &#39;1610612763&#39;, &#39;nickname&#39;: &#39;Grizzlies&#39;, &#39;urlName&#39;: &#39;grizzlies&#39;, &#39;teamShortName&#39;: &#39;Memphis&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Miami&#39;, &#39;altCityName&#39;: &#39;Miami&#39;, &#39;fullName&#39;: &#39;Miami Heat&#39;, &#39;tricode&#39;: &#39;MIA&#39;, &#39;teamId&#39;: &#39;1610612748&#39;, &#39;nickname&#39;: &#39;Heat&#39;, &#39;urlName&#39;: &#39;heat&#39;, &#39;teamShortName&#39;: &#39;Miami&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Milwaukee&#39;, &#39;altCityName&#39;: &#39;Milwaukee&#39;, &#39;fullName&#39;: &#39;Milwaukee Bucks&#39;, &#39;tricode&#39;: &#39;MIL&#39;, &#39;teamId&#39;: &#39;1610612749&#39;, &#39;nickname&#39;: &#39;Bucks&#39;, &#39;urlName&#39;: &#39;bucks&#39;, &#39;teamShortName&#39;: &#39;Milwaukee&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Minnesota&#39;, &#39;altCityName&#39;: &#39;Minnesota&#39;, &#39;fullName&#39;: &#39;Minnesota Timberwolves&#39;, &#39;tricode&#39;: &#39;MIN&#39;, &#39;teamId&#39;: &#39;1610612750&#39;, &#39;nickname&#39;: &#39;Timberwolves&#39;, &#39;urlName&#39;: &#39;timberwolves&#39;, &#39;teamShortName&#39;: &#39;Minnesota&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;New Orleans&#39;, &#39;altCityName&#39;: &#39;New Orleans&#39;, &#39;fullName&#39;: &#39;New Orleans Pelicans&#39;, &#39;tricode&#39;: &#39;NOP&#39;, &#39;teamId&#39;: &#39;1610612740&#39;, &#39;nickname&#39;: &#39;Pelicans&#39;, &#39;urlName&#39;: &#39;pelicans&#39;, &#39;teamShortName&#39;: &#39;New Orleans&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;New York&#39;, &#39;altCityName&#39;: &#39;New York&#39;, &#39;fullName&#39;: &#39;New York Knicks&#39;, &#39;tricode&#39;: &#39;NYK&#39;, &#39;teamId&#39;: &#39;1610612752&#39;, &#39;nickname&#39;: &#39;Knicks&#39;, &#39;urlName&#39;: &#39;knicks&#39;, &#39;teamShortName&#39;: &#39;New York&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Oklahoma City&#39;, &#39;altCityName&#39;: &#39;Oklahoma City&#39;, &#39;fullName&#39;: &#39;Oklahoma City Thunder&#39;, &#39;tricode&#39;: &#39;OKC&#39;, &#39;teamId&#39;: &#39;1610612760&#39;, &#39;nickname&#39;: &#39;Thunder&#39;, &#39;urlName&#39;: &#39;thunder&#39;, &#39;teamShortName&#39;: &#39;Oklahoma City&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Orlando&#39;, &#39;altCityName&#39;: &#39;Orlando&#39;, &#39;fullName&#39;: &#39;Orlando Magic&#39;, &#39;tricode&#39;: &#39;ORL&#39;, &#39;teamId&#39;: &#39;1610612753&#39;, &#39;nickname&#39;: &#39;Magic&#39;, &#39;urlName&#39;: &#39;magic&#39;, &#39;teamShortName&#39;: &#39;Orlando&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Philadelphia&#39;, &#39;altCityName&#39;: &#39;Philadelphia&#39;, &#39;fullName&#39;: &#39;Philadelphia 76ers&#39;, &#39;tricode&#39;: &#39;PHI&#39;, &#39;teamId&#39;: &#39;1610612755&#39;, &#39;nickname&#39;: &#39;76ers&#39;, &#39;urlName&#39;: &#39;sixers&#39;, &#39;teamShortName&#39;: &#39;Philadelphia&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Phoenix&#39;, &#39;altCityName&#39;: &#39;Phoenix&#39;, &#39;fullName&#39;: &#39;Phoenix Suns&#39;, &#39;tricode&#39;: &#39;PHX&#39;, &#39;teamId&#39;: &#39;1610612756&#39;, &#39;nickname&#39;: &#39;Suns&#39;, &#39;urlName&#39;: &#39;suns&#39;, &#39;teamShortName&#39;: &#39;Phoenix&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Portland&#39;, &#39;altCityName&#39;: &#39;Portland&#39;, &#39;fullName&#39;: &#39;Portland Trail Blazers&#39;, &#39;tricode&#39;: &#39;POR&#39;, &#39;teamId&#39;: &#39;1610612757&#39;, &#39;nickname&#39;: &#39;Trail Blazers&#39;, &#39;urlName&#39;: &#39;blazers&#39;, &#39;teamShortName&#39;: &#39;Portland&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Sacramento&#39;, &#39;altCityName&#39;: &#39;Sacramento&#39;, &#39;fullName&#39;: &#39;Sacramento Kings&#39;, &#39;tricode&#39;: &#39;SAC&#39;, &#39;teamId&#39;: &#39;1610612758&#39;, &#39;nickname&#39;: &#39;Kings&#39;, &#39;urlName&#39;: &#39;kings&#39;, &#39;teamShortName&#39;: &#39;Sacramento&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;San Antonio&#39;, &#39;altCityName&#39;: &#39;San Antonio&#39;, &#39;fullName&#39;: &#39;San Antonio Spurs&#39;, &#39;tricode&#39;: &#39;SAS&#39;, &#39;teamId&#39;: &#39;1610612759&#39;, &#39;nickname&#39;: &#39;Spurs&#39;, &#39;urlName&#39;: &#39;spurs&#39;, &#39;teamShortName&#39;: &#39;San Antonio&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Toronto&#39;, &#39;altCityName&#39;: &#39;Toronto&#39;, &#39;fullName&#39;: &#39;Toronto Raptors&#39;, &#39;tricode&#39;: &#39;TOR&#39;, &#39;teamId&#39;: &#39;1610612761&#39;, &#39;nickname&#39;: &#39;Raptors&#39;, &#39;urlName&#39;: &#39;raptors&#39;, &#39;teamShortName&#39;: &#39;Toronto&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Utah&#39;, &#39;altCityName&#39;: &#39;Utah&#39;, &#39;fullName&#39;: &#39;Utah Jazz&#39;, &#39;tricode&#39;: &#39;UTA&#39;, &#39;teamId&#39;: &#39;1610612762&#39;, &#39;nickname&#39;: &#39;Jazz&#39;, &#39;urlName&#39;: &#39;jazz&#39;, &#39;teamShortName&#39;: &#39;Utah&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Washington&#39;, &#39;altCityName&#39;: &#39;Washington&#39;, &#39;fullName&#39;: &#39;Washington Wizards&#39;, &#39;tricode&#39;: &#39;WAS&#39;, &#39;teamId&#39;: &#39;1610612764&#39;, &#39;nickname&#39;: &#39;Wizards&#39;, &#39;urlName&#39;: &#39;wizards&#39;, &#39;teamShortName&#39;: &#39;Washington&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}], &#39;utah&#39;: [{&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Cleveland&#39;, &#39;altCityName&#39;: &#39;Cleveland&#39;, &#39;fullName&#39;: &#39;Cleveland Cavaliers&#39;, &#39;tricode&#39;: &#39;CLE&#39;, &#39;teamId&#39;: &#39;1610612739&#39;, &#39;nickname&#39;: &#39;Cavaliers&#39;, &#39;urlName&#39;: &#39;cavaliers&#39;, &#39;teamShortName&#39;: &#39;Cleveland&#39;, &#39;confName&#39;: &#39;Utah&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Memphis&#39;, &#39;altCityName&#39;: &#39;Memphis&#39;, &#39;fullName&#39;: &#39;Memphis Grizzlies&#39;, &#39;tricode&#39;: &#39;MEM&#39;, &#39;teamId&#39;: &#39;1610612763&#39;, &#39;nickname&#39;: &#39;Grizzlies&#39;, &#39;urlName&#39;: &#39;grizzlies&#39;, &#39;teamShortName&#39;: &#39;Memphis&#39;, &#39;confName&#39;: &#39;Utah&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;San Antonio&#39;, &#39;altCityName&#39;: &#39;San Antonio&#39;, &#39;fullName&#39;: &#39;San Antonio Spurs&#39;, &#39;tricode&#39;: &#39;SAS&#39;, &#39;teamId&#39;: &#39;1610612759&#39;, &#39;nickname&#39;: &#39;Spurs&#39;, &#39;urlName&#39;: &#39;spurs&#39;, &#39;teamShortName&#39;: &#39;San Antonio&#39;, &#39;confName&#39;: &#39;Utah&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Utah&#39;, &#39;altCityName&#39;: &#39;Utah&#39;, &#39;fullName&#39;: &#39;Utah Jazz&#39;, &#39;tricode&#39;: &#39;UTA&#39;, &#39;teamId&#39;: &#39;1610612762&#39;, &#39;nickname&#39;: &#39;Jazz&#39;, &#39;urlName&#39;: &#39;jazz&#39;, &#39;teamShortName&#39;: &#39;Utah&#39;, &#39;confName&#39;: &#39;Utah&#39;, &#39;divName&#39;: &#39;&#39;}]}}
 </pre>
 </div>
 </div>
@@ -13422,17 +13403,16 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#20301;&#26044;&#33274;&#21271;&#24066;&#33287;&#26032;&#21271;&#24066;&#30340;&#28204;&#31449;&#20849;&#26377;&#24190;&#20491;&#65311;&#21508;&#28204;&#31449;&#21517;&#28858;&#65311;">&#38568;&#22530;&#32244;&#32722;&#65306;&#20301;&#26044;&#33274;&#21271;&#24066;&#33287;&#26032;&#21271;&#24066;&#30340;&#28204;&#31449;&#20849;&#26377;&#24190;&#20491;&#65311;&#21508;&#28204;&#31449;&#21517;&#28858;&#65311;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#20301;&#26044;&#33274;&#21271;&#24066;&#33287;&#26032;&#21271;&#24066;&#30340;&#28204;&#31449;&#20849;&#26377;&#24190;&#20491;&#65311;&#21508;&#28204;&#31449;&#21517;&#28858;&#65311;">&#182;</a></h2>
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;2019-2020-&#29699;&#23395;-NBA-&#26377;&#24190;&#25903;&#29699;&#38538;&#65311;">&#38568;&#22530;&#32244;&#32722;&#65306;2019-2020 &#29699;&#23395; NBA &#26377;&#24190;&#25903;&#29699;&#38538;&#65311;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;2019-2020-&#29699;&#23395;-NBA-&#26377;&#24190;&#25903;&#29699;&#38538;&#65311;">&#182;</a></h2>
 </div>
 </div>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;位於臺北市與新北市的測站共有 </span><span class="si">{}</span><span class="s2"> 個：&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n_sites_in_tp</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">sites_in_tp</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2019-2020 球季 NBA 有 </span><span class="si">{}</span><span class="s2"> 支球隊&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n_nba_teams</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -13449,8 +13429,7 @@ a.anchor-link {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>位於臺北市與新北市的測站共有 19 個：
-[&#39;富貴角&#39;, &#39;永和&#39;, &#39;三重&#39;, &#39;陽明&#39;, &#39;大同&#39;, &#39;松山&#39;, &#39;古亭&#39;, &#39;萬華&#39;, &#39;中山&#39;, &#39;士林&#39;, &#39;淡水&#39;, &#39;林口&#39;, &#39;菜寮&#39;, &#39;新莊&#39;, &#39;板橋&#39;, &#39;土城&#39;, &#39;新店&#39;, &#39;萬里&#39;, &#39;汐止&#39;]
+<pre>2019-2020 球季 NBA 有 30 支球隊
 </pre>
 </div>
 </div>
@@ -13462,17 +13441,18 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#36942;&#21435;&#19968;&#23567;&#26178;-PM2.5_AVG-&#26368;&#39640;&#33287;&#26368;&#20302;&#30340;&#28204;&#31449;&#20998;&#21029;&#28858;&#65311;">&#38568;&#22530;&#32244;&#32722;&#65306;&#36942;&#21435;&#19968;&#23567;&#26178; PM2.5_AVG &#26368;&#39640;&#33287;&#26368;&#20302;&#30340;&#28204;&#31449;&#20998;&#21029;&#28858;&#65311;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#36942;&#21435;&#19968;&#23567;&#26178;-PM2.5_AVG-&#26368;&#39640;&#33287;&#26368;&#20302;&#30340;&#28204;&#31449;&#20998;&#21029;&#28858;&#65311;">&#182;</a></h2>
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#23660;&#26044;-Atlantic-&#33287;-Southwest-&#30340;&#29699;&#38538;&#26377;&#24190;&#20491;&#65311;&#21508;&#38538;&#21517;&#28858;&#65311;">&#38568;&#22530;&#32244;&#32722;&#65306;&#23660;&#26044; Atlantic &#33287; Southwest &#30340;&#29699;&#38538;&#26377;&#24190;&#20491;&#65311;&#21508;&#38538;&#21517;&#28858;&#65311;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#23660;&#26044;-Atlantic-&#33287;-Southwest-&#30340;&#29699;&#38538;&#26377;&#24190;&#20491;&#65311;&#21508;&#38538;&#21517;&#28858;&#65311;">&#182;</a></h2>
 </div>
 </div>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;過去一小時 PM2.5_AVG 最高為 </span><span class="si">{}</span><span class="s2">，測站為：&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">max_val</span><span class="p">),</span> <span class="n">max_sites</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;過去一小時 PM2.5_AVG 最低為 </span><span class="si">{}</span><span class="s2">，測站為：&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">min_val</span><span class="p">),</span> <span class="n">min_sites</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;屬於 Atlantic 與 Southwest 的球隊有 </span><span class="si">{}</span><span class="s2"> 個:&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n_as_teams</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Atlantic: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">team_dict</span><span class="p">[</span><span class="s2">&quot;Atlantic&quot;</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Southwest: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">team_dict</span><span class="p">[</span><span class="s2">&quot;Southwest&quot;</span><span class="p">]))</span>
 </pre></div>
 
     </div>
@@ -13489,8 +13469,9 @@ a.anchor-link {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>過去一小時 PM2.5_AVG 最高為 30.0，測站為： [&#39;桃園&#39;]
-過去一小時 PM2.5_AVG 最低為 5.0，測站為： [&#39;冬山&#39;, &#39;宜蘭&#39;]
+<pre>屬於 Atlantic 與 Southwest 的球隊有 10 個:
+Atlantic: [&#39;Boston Celtics&#39;, &#39;Brooklyn Nets&#39;, &#39;New York Knicks&#39;, &#39;Philadelphia 76ers&#39;, &#39;Toronto Raptors&#39;]
+Southwest: [&#39;Dallas Mavericks&#39;, &#39;Houston Rockets&#39;, &#39;Memphis Grizzlies&#39;, &#39;New Orleans Pelicans&#39;, &#39;San Antonio Spurs&#39;]
 </pre>
 </div>
 </div>
@@ -13602,7 +13583,7 @@ a.anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
@@ -13618,10 +13599,28 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;bs4.BeautifulSoup&#39;&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">))</span>
@@ -13633,10 +13632,30 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;h1 class=&#34;&#34;&gt;Avengers: Endgame &lt;span id=&#34;titleYear&#34;&gt;(&lt;a href=&#34;/year/2019/&#34;&gt;2019&lt;/a&gt;)&lt;/span&gt; &lt;/h1&gt;
+&lt;class &#39;bs4.element.Tag&#39;&gt;
+Avengers: Endgame (2019) 
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;img&quot;</span><span class="p">)))</span>
@@ -13649,10 +13668,31 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>98
+&lt;img alt=&#34;Avengers: Endgame Poster&#34; src=&#34;https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_UX182_CR0,0,182,268_AL_.jpg&#34; title=&#34;Avengers: Endgame Poster&#34;/&gt;
+Avengers: Endgame Poster
+https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_UX182_CR0,0,182,268_AL_.jpg
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;strong span&quot;</span><span class="p">))</span>
@@ -13660,6 +13700,25 @@ a.anchor-link {
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&lt;span itemprop=&#34;ratingValue&#34;&gt;8.6&lt;/span&gt;]
+8.6
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -13673,7 +13732,7 @@ a.anchor-link {
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">genre</span><span class="p">:</span>
@@ -13714,7 +13773,7 @@ Sci-Fi
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">cast</span><span class="p">)</span>
@@ -13766,7 +13825,7 @@ Sci-Fi
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
@@ -13782,10 +13841,28 @@ Sci-Fi
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;pyquery.pyquery.PyQuery&#39;&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">))</span>
@@ -13798,10 +13875,31 @@ Sci-Fi
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;h1 class=&#34;&#34;&gt;Avengers: Endgame &lt;span id=&#34;titleYear&#34;&gt;(&lt;a href=&#34;/year/2019/&#34;&gt;2019&lt;/a&gt;)&lt;/span&gt;            &lt;/h1&gt;
+            
+&lt;class &#39;pyquery.pyquery.PyQuery&#39;&gt;
+Avengers: Endgame (2019)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">d</span><span class="p">(</span><span class="s2">&quot;.poster img&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
@@ -13812,10 +13910,28 @@ Sci-Fi
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_UX182_CR0,0,182,268_AL_.jpg
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">d</span><span class="p">(</span><span class="s2">&quot;strong span&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
@@ -13823,6 +13939,24 @@ Sci-Fi
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>8.6
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -13836,7 +13970,7 @@ Sci-Fi
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">genre</span><span class="p">)</span>
@@ -13874,7 +14008,7 @@ Sci-Fi
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">cast</span><span class="p">)</span>
@@ -13912,7 +14046,7 @@ Sci-Fi
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_movie_data</span><span class="p">(</span><span class="s2">&quot;https://www.imdb.com/title/tt4154796&quot;</span><span class="p">)</span>
@@ -13928,7 +14062,7 @@ Sci-Fi
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[21]:</div>
+    <div class="prompt output_prompt">Out[25]:</div>
 
 
 
@@ -13974,7 +14108,7 @@ Sci-Fi
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="k">import</span> <span class="n">quote_plus</span>
@@ -13987,10 +14121,28 @@ Sci-Fi
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Avengers%3A+Endgame+%282019%29
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">query_str</span> <span class="o">=</span> <span class="n">quote_plus</span><span class="p">(</span><span class="s2">&quot;Avengers: Endgame (2019)&quot;</span><span class="p">)</span>
@@ -13999,6 +14151,24 @@ Sci-Fi
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>https://www.imdb.com/find?q=Avengers%3A+Endgame+%282019%29&amp;s=tt&amp;ttype=ft&amp;ref_=fn_ft
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -14012,7 +14182,7 @@ Sci-Fi
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
@@ -14051,7 +14221,7 @@ Sci-Fi
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_movie_data</span><span class="p">(</span><span class="s2">&quot;Avengers: Endgame (2019)&quot;</span><span class="p">)</span>
@@ -14067,7 +14237,7 @@ Sci-Fi
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[23]:</div>
+    <div class="prompt output_prompt">Out[29]:</div>
 
 
 
@@ -14113,7 +14283,7 @@ Sci-Fi
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
@@ -14126,10 +14296,94 @@ Sci-Fi
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset=&#34;utf-8&#34;&gt;
+		
+
+&lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1&#34;&gt;
+
+&lt;title&gt;批踢踢實業坊&lt;/title&gt;
+
+&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;//images.ptt.cc/bbs/v2.27/bbs-common.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;//images.ptt.cc/bbs/v2.27/bbs-base.css&#34; media=&#34;screen&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;//images.ptt.cc/bbs/v2.27/bbs-custom.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;//images.ptt.cc/bbs/v2.27/pushstream.css&#34; media=&#34;screen&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;//images.ptt.cc/bbs/v2.27/bbs-print.css&#34; media=&#34;print&#34;&gt;
+
+
+
+
+	&lt;/head&gt;
+    &lt;body&gt;
+		
+&lt;div class=&#34;bbs-screen bbs-content&#34;&gt;
+    &lt;div class=&#34;over18-notice&#34;&gt;
+        &lt;p&gt;本網站已依網站內容分級規定處理&lt;/p&gt;
+
+        &lt;p&gt;警告︰您即將進入之看板內容需滿十八歲方可瀏覽。&lt;/p&gt;
+
+        &lt;p&gt;若您尚未年滿十八歲，請點選離開。若您已滿十八歲，亦不可將本區之內容派發、傳閱、出售、出租、交給或借予年齡未滿18歲的人士瀏覽，或將本網站內容向該人士出示、播放或放映。&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;bbs-screen bbs-content center clear&#34;&gt;
+    &lt;form action=&#34;/ask/over18&#34; method=&#34;post&#34;&gt;
+        &lt;input type=&#34;hidden&#34; name=&#34;from&#34; value=&#34;/bbs/Gossiping/index.html&#34;&gt;
+        &lt;div class=&#34;over18-button-container&#34;&gt;
+            &lt;button class=&#34;btn-big&#34; type=&#34;submit&#34; name=&#34;yes&#34; value=&#34;yes&#34;&gt;我同意，我已年滿十八歲&lt;br&gt;&lt;small&gt;進入&lt;/small&gt;&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;over18-button-container&#34;&gt;
+            &lt;button class=&#34;btn-big&#34; type=&#34;submit&#34; name=&#34;no&#34; value=&#34;no&#34;&gt;未滿十八歲或不同意本條款&lt;br&gt;&lt;small&gt;離開&lt;/small&gt;&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+
+		
+
+&lt;script&gt;
+  (function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,&#39;script&#39;,&#39;https://www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);
+
+  ga(&#39;create&#39;, &#39;UA-32365737-1&#39;, {
+    cookieDomain: &#39;ptt.cc&#39;,
+    legacyCookieDomain: &#39;ptt.cc&#39;
+  });
+  ga(&#39;send&#39;, &#39;pageview&#39;);
+&lt;/script&gt;
+
+
+		
+&lt;script src=&#34;//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//images.ptt.cc/bbs/v2.27/bbs.js&#34;&gt;&lt;/script&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
@@ -14145,6 +14399,24 @@ Sci-Fi
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;阿拉丁&#39;, &#39;狗狗的旅程&#39;, &#39;MIB星際戰警：跨國行動&#39;, &#39;名偵探皮卡丘&#39;, &#39;X戰警：黑鳳凰&#39;, &#39;火箭人&#39;, &#39;寵物當家2&#39;, &#39;捍衛任務3：全面開戰&#39;, &#39;復仇者聯盟4：終局之戰&#39;, &#39;沙贊！&#39;, &#39;庫爾斯克號：深海救援&#39;, &#39;阿波羅11號&#39;, &#39;紅色密令&#39;, &#39;斯德哥爾摩症候&#39;, &#39;魔力女聲&#39;, &#39;大象席地而坐&#39;, &#39;廉政風雲：煙幕&#39;, &#39;拾芳&#39;, &#39;老大人&#39;, &#39;最是橙黃橘綠時&#39;, &#39;後勁：王建民&#39;, &#39;神探蒲松齡&#39;, &#39;半世界&#39;, &#39;飛翔吧！埼玉&#39;, &#39;地球最後的夜晚&#39;, &#39;看不見的旋律&#39;, &#39;漫長的告別&#39;, &#39;警察小姐&#39;, &#39;90分鐘末日倒數&#39;, &#39;逆轉劫局&#39;, &#39;上流世界&#39;, &#39;七個會議&#39;, &#39;飆風特警隊&#39;, &#39;96&#39;, &#39;別問我是誰&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14156,7 +14428,7 @@ Sci-Fi
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
@@ -14169,10 +14441,466 @@ Sci-Fi
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset=&#34;utf-8&#34;&gt;
+		
+
+&lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1&#34;&gt;
+
+&lt;title&gt;看板 Gossiping 文章列表 - 批踢踢實業坊&lt;/title&gt;
+
+&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;//images.ptt.cc/bbs/v2.27/bbs-common.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;//images.ptt.cc/bbs/v2.27/bbs-base.css&#34; media=&#34;screen&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;//images.ptt.cc/bbs/v2.27/bbs-custom.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;//images.ptt.cc/bbs/v2.27/pushstream.css&#34; media=&#34;screen&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;//images.ptt.cc/bbs/v2.27/bbs-print.css&#34; media=&#34;print&#34;&gt;
+
+
+
+
+	&lt;/head&gt;
+    &lt;body&gt;
+		
+&lt;div id=&#34;topbar-container&#34;&gt;
+	&lt;div id=&#34;topbar&#34; class=&#34;bbs-content&#34;&gt;
+		&lt;a id=&#34;logo&#34; href=&#34;/bbs/&#34;&gt;批踢踢實業坊&lt;/a&gt;
+		&lt;span&gt;&amp;rsaquo;&lt;/span&gt;
+		&lt;a class=&#34;board&#34; href=&#34;/bbs/Gossiping/index.html&#34;&gt;&lt;span class=&#34;board-label&#34;&gt;看板 &lt;/span&gt;Gossiping&lt;/a&gt;
+		&lt;a class=&#34;right small&#34; href=&#34;/about.html&#34;&gt;關於我們&lt;/a&gt;
+		&lt;a class=&#34;right small&#34; href=&#34;/contact.html&#34;&gt;聯絡資訊&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;main-container&#34;&gt;
+	&lt;div id=&#34;action-bar-container&#34;&gt;
+		&lt;div class=&#34;action-bar&#34;&gt;
+			&lt;div class=&#34;btn-group btn-group-dir&#34;&gt;
+				&lt;a class=&#34;btn selected&#34; href=&#34;/bbs/Gossiping/index.html&#34;&gt;看板&lt;/a&gt;
+				&lt;a class=&#34;btn&#34; href=&#34;/man/Gossiping/index.html&#34;&gt;精華區&lt;/a&gt;
+			&lt;/div&gt;
+			&lt;div class=&#34;btn-group btn-group-paging&#34;&gt;
+				&lt;a class=&#34;btn wide&#34; href=&#34;/bbs/Gossiping/index1.html&#34;&gt;最舊&lt;/a&gt;
+				&lt;a class=&#34;btn wide&#34; href=&#34;/bbs/Gossiping/index39024.html&#34;&gt;&amp;lsaquo; 上頁&lt;/a&gt;
+				&lt;a class=&#34;btn wide disabled&#34;&gt;下頁 &amp;rsaquo;&lt;/a&gt;
+				&lt;a class=&#34;btn wide&#34; href=&#34;/bbs/Gossiping/index.html&#34;&gt;最新&lt;/a&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;div class=&#34;r-list-container action-bar-margin bbs-screen&#34;&gt;
+		&lt;div class=&#34;search-bar&#34;&gt;
+			&lt;form type=&#34;get&#34; action=&#34;search&#34; id=&#34;search-bar&#34;&gt;
+				&lt;input class=&#34;query&#34; type=&#34;text&#34; name=&#34;q&#34; value=&#34;&#34; placeholder=&#34;搜尋文章&amp;#x22ef;&#34;&gt;
+			&lt;/form&gt;
+		&lt;/div&gt;
+
+		
+		
+            
+        
+        
+		&lt;div class=&#34;r-ent&#34;&gt;
+			&lt;div class=&#34;nrec&#34;&gt;&lt;span class=&#34;hl f2&#34;&gt;4&lt;/span&gt;&lt;/div&gt;
+			&lt;div class=&#34;title&#34;&gt;
+			
+				&lt;a href=&#34;/bbs/Gossiping/M.1569265925.A.D44.html&#34;&gt;[問卦] 80歲阿嬤看返校會不會太刺激&lt;/a&gt;
+			
+			&lt;/div&gt;
+			&lt;div class=&#34;meta&#34;&gt;
+				&lt;div class=&#34;author&#34;&gt;shrape&lt;/div&gt;
+				&lt;div class=&#34;article-menu&#34;&gt;
+					
+					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
+					&lt;div class=&#34;dropdown&#34;&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%95%8F%E5%8D%A6%5D&amp;#43;80%E6%AD%B2%E9%98%BF%E5%AC%A4%E7%9C%8B%E8%BF%94%E6%A0%A1%E6%9C%83%E4%B8%8D%E6%9C%83%E5%A4%AA%E5%88%BA%E6%BF%80&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Ashrape&#34;&gt;搜尋看板內 shrape 的文章&lt;/a&gt;&lt;/div&gt;
+						
+					&lt;/div&gt;
+					
+				&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt; 9/24&lt;/div&gt;
+				&lt;div class=&#34;mark&#34;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+		
+            
+        
+        
+		&lt;div class=&#34;r-ent&#34;&gt;
+			&lt;div class=&#34;nrec&#34;&gt;&lt;/div&gt;
+			&lt;div class=&#34;title&#34;&gt;
+			
+				&lt;a href=&#34;/bbs/Gossiping/M.1569266016.A.BE3.html&#34;&gt;[問卦] 基努李維好像我，我的錯覺？&lt;/a&gt;
+			
+			&lt;/div&gt;
+			&lt;div class=&#34;meta&#34;&gt;
+				&lt;div class=&#34;author&#34;&gt;Dinenger&lt;/div&gt;
+				&lt;div class=&#34;article-menu&#34;&gt;
+					
+					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
+					&lt;div class=&#34;dropdown&#34;&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%95%8F%E5%8D%A6%5D&amp;#43;%E5%9F%BA%E5%8A%AA%E6%9D%8E%E7%B6%AD%E5%A5%BD%E5%83%8F%E6%88%91%EF%BC%8C%E6%88%91%E7%9A%84%E9%8C%AF%E8%A6%BA%EF%BC%9F&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3ADinenger&#34;&gt;搜尋看板內 Dinenger 的文章&lt;/a&gt;&lt;/div&gt;
+						
+					&lt;/div&gt;
+					
+				&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt; 9/24&lt;/div&gt;
+				&lt;div class=&#34;mark&#34;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+		
+            
+        
+        
+		&lt;div class=&#34;r-ent&#34;&gt;
+			&lt;div class=&#34;nrec&#34;&gt;&lt;span class=&#34;hl f2&#34;&gt;4&lt;/span&gt;&lt;/div&gt;
+			&lt;div class=&#34;title&#34;&gt;
+			
+				&lt;a href=&#34;/bbs/Gossiping/M.1569266069.A.E55.html&#34;&gt;[問卦] 女森灑花 囊森要灑什麼？&lt;/a&gt;
+			
+			&lt;/div&gt;
+			&lt;div class=&#34;meta&#34;&gt;
+				&lt;div class=&#34;author&#34;&gt;jason83813&lt;/div&gt;
+				&lt;div class=&#34;article-menu&#34;&gt;
+					
+					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
+					&lt;div class=&#34;dropdown&#34;&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%95%8F%E5%8D%A6%5D&amp;#43;%E5%A5%B3%E6%A3%AE%E7%81%91%E8%8A%B1&amp;#43;%E5%9B%8A%E6%A3%AE%E8%A6%81%E7%81%91%E4%BB%80%E9%BA%BC%EF%BC%9F&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Ajason83813&#34;&gt;搜尋看板內 jason83813 的文章&lt;/a&gt;&lt;/div&gt;
+						
+					&lt;/div&gt;
+					
+				&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt; 9/24&lt;/div&gt;
+				&lt;div class=&#34;mark&#34;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+		
+            
+        
+        
+		&lt;div class=&#34;r-ent&#34;&gt;
+			&lt;div class=&#34;nrec&#34;&gt;&lt;/div&gt;
+			&lt;div class=&#34;title&#34;&gt;
+			
+				&lt;a href=&#34;/bbs/Gossiping/M.1569266507.A.0AF.html&#34;&gt;Re: [問卦] 活著是為了什麼？&lt;/a&gt;
+			
+			&lt;/div&gt;
+			&lt;div class=&#34;meta&#34;&gt;
+				&lt;div class=&#34;author&#34;&gt;killerchi&lt;/div&gt;
+				&lt;div class=&#34;article-menu&#34;&gt;
+					
+					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
+					&lt;div class=&#34;dropdown&#34;&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%95%8F%E5%8D%A6%5D&amp;#43;%E6%B4%BB%E8%91%97%E6%98%AF%E7%82%BA%E4%BA%86%E4%BB%80%E9%BA%BC%EF%BC%9F&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Akillerchi&#34;&gt;搜尋看板內 killerchi 的文章&lt;/a&gt;&lt;/div&gt;
+						
+					&lt;/div&gt;
+					
+				&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt; 9/24&lt;/div&gt;
+				&lt;div class=&#34;mark&#34;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+		
+            
+        
+        
+		&lt;div class=&#34;r-ent&#34;&gt;
+			&lt;div class=&#34;nrec&#34;&gt;&lt;/div&gt;
+			&lt;div class=&#34;title&#34;&gt;
+			
+				&lt;a href=&#34;/bbs/Gossiping/M.1569266625.A.E60.html&#34;&gt;Re: [問卦] 台灣男森在東南亞有多帥？&lt;/a&gt;
+			
+			&lt;/div&gt;
+			&lt;div class=&#34;meta&#34;&gt;
+				&lt;div class=&#34;author&#34;&gt;deepdish&lt;/div&gt;
+				&lt;div class=&#34;article-menu&#34;&gt;
+					
+					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
+					&lt;div class=&#34;dropdown&#34;&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%95%8F%E5%8D%A6%5D&amp;#43;%E5%8F%B0%E7%81%A3%E7%94%B7%E6%A3%AE%E5%9C%A8%E6%9D%B1%E5%8D%97%E4%BA%9E%E6%9C%89%E5%A4%9A%E5%B8%A5%EF%BC%9F&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Adeepdish&#34;&gt;搜尋看板內 deepdish 的文章&lt;/a&gt;&lt;/div&gt;
+						
+					&lt;/div&gt;
+					
+				&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt; 9/24&lt;/div&gt;
+				&lt;div class=&#34;mark&#34;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+		
+            
+        
+        
+		&lt;div class=&#34;r-ent&#34;&gt;
+			&lt;div class=&#34;nrec&#34;&gt;&lt;span class=&#34;hl f2&#34;&gt;1&lt;/span&gt;&lt;/div&gt;
+			&lt;div class=&#34;title&#34;&gt;
+			
+				&lt;a href=&#34;/bbs/Gossiping/M.1569266815.A.627.html&#34;&gt;Re: [問卦] 我媽的房門打不開了（認真求解&lt;/a&gt;
+			
+			&lt;/div&gt;
+			&lt;div class=&#34;meta&#34;&gt;
+				&lt;div class=&#34;author&#34;&gt;Dinenger&lt;/div&gt;
+				&lt;div class=&#34;article-menu&#34;&gt;
+					
+					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
+					&lt;div class=&#34;dropdown&#34;&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%95%8F%E5%8D%A6%5D&amp;#43;%E6%88%91%E5%AA%BD%E7%9A%84%E6%88%BF%E9%96%80%E6%89%93%E4%B8%8D%E9%96%8B%E4%BA%86%EF%BC%88%E8%AA%8D%E7%9C%9F%E6%B1%82%E8%A7%A3&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3ADinenger&#34;&gt;搜尋看板內 Dinenger 的文章&lt;/a&gt;&lt;/div&gt;
+						
+					&lt;/div&gt;
+					
+				&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt; 9/24&lt;/div&gt;
+				&lt;div class=&#34;mark&#34;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+		
+            
+        
+        
+		&lt;div class=&#34;r-ent&#34;&gt;
+			&lt;div class=&#34;nrec&#34;&gt;&lt;/div&gt;
+			&lt;div class=&#34;title&#34;&gt;
+			
+				&lt;a href=&#34;/bbs/Gossiping/M.1569266863.A.BBE.html&#34;&gt;[問卦] 一般人入黨可以幹嘛&lt;/a&gt;
+			
+			&lt;/div&gt;
+			&lt;div class=&#34;meta&#34;&gt;
+				&lt;div class=&#34;author&#34;&gt;clever0705&lt;/div&gt;
+				&lt;div class=&#34;article-menu&#34;&gt;
+					
+					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
+					&lt;div class=&#34;dropdown&#34;&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%95%8F%E5%8D%A6%5D&amp;#43;%E4%B8%80%E8%88%AC%E4%BA%BA%E5%85%A5%E9%BB%A8%E5%8F%AF%E4%BB%A5%E5%B9%B9%E5%98%9B&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Aclever0705&#34;&gt;搜尋看板內 clever0705 的文章&lt;/a&gt;&lt;/div&gt;
+						
+					&lt;/div&gt;
+					
+				&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt; 9/24&lt;/div&gt;
+				&lt;div class=&#34;mark&#34;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+		
+            
+        
+        
+		&lt;div class=&#34;r-ent&#34;&gt;
+			&lt;div class=&#34;nrec&#34;&gt;&lt;span class=&#34;hl f2&#34;&gt;4&lt;/span&gt;&lt;/div&gt;
+			&lt;div class=&#34;title&#34;&gt;
+			
+				&lt;a href=&#34;/bbs/Gossiping/M.1569266888.A.533.html&#34;&gt;[問卦] 大家會拒讀義大嗎&lt;/a&gt;
+			
+			&lt;/div&gt;
+			&lt;div class=&#34;meta&#34;&gt;
+				&lt;div class=&#34;author&#34;&gt;bupayu&lt;/div&gt;
+				&lt;div class=&#34;article-menu&#34;&gt;
+					
+					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
+					&lt;div class=&#34;dropdown&#34;&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%95%8F%E5%8D%A6%5D&amp;#43;%E5%A4%A7%E5%AE%B6%E6%9C%83%E6%8B%92%E8%AE%80%E7%BE%A9%E5%A4%A7%E5%97%8E&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Abupayu&#34;&gt;搜尋看板內 bupayu 的文章&lt;/a&gt;&lt;/div&gt;
+						
+					&lt;/div&gt;
+					
+				&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt; 9/24&lt;/div&gt;
+				&lt;div class=&#34;mark&#34;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+		
+        
+        &lt;div class=&#34;r-list-sep&#34;&gt;&lt;/div&gt;
+            
+                
+        
+        
+		&lt;div class=&#34;r-ent&#34;&gt;
+			&lt;div class=&#34;nrec&#34;&gt;&lt;/div&gt;
+			&lt;div class=&#34;title&#34;&gt;
+			
+				&lt;a href=&#34;/bbs/Gossiping/M.1566347622.A.9C7.html&#34;&gt;[公告] 八卦板板規(2019.08.21)&lt;/a&gt;
+			
+			&lt;/div&gt;
+			&lt;div class=&#34;meta&#34;&gt;
+				&lt;div class=&#34;author&#34;&gt;arsonlolita&lt;/div&gt;
+				&lt;div class=&#34;article-menu&#34;&gt;
+					
+					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
+					&lt;div class=&#34;dropdown&#34;&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%85%AC%E5%91%8A%5D&amp;#43;%E5%85%AB%E5%8D%A6%E6%9D%BF%E6%9D%BF%E8%A6%8F%282019.08.21%29&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Aarsonlolita&#34;&gt;搜尋看板內 arsonlolita 的文章&lt;/a&gt;&lt;/div&gt;
+						
+					&lt;/div&gt;
+					
+				&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt; 8/21&lt;/div&gt;
+				&lt;div class=&#34;mark&#34;&gt;!&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+            
+                
+        
+        
+		&lt;div class=&#34;r-ent&#34;&gt;
+			&lt;div class=&#34;nrec&#34;&gt;&lt;span class=&#34;hl f3&#34;&gt;11&lt;/span&gt;&lt;/div&gt;
+			&lt;div class=&#34;title&#34;&gt;
+			
+				&lt;a href=&#34;/bbs/Gossiping/M.1568569396.A.D48.html&#34;&gt;[公告] 呼籲!!請勿於看板發布販賣帳號之訊息&lt;/a&gt;
+			
+			&lt;/div&gt;
+			&lt;div class=&#34;meta&#34;&gt;
+				&lt;div class=&#34;author&#34;&gt;Bignana&lt;/div&gt;
+				&lt;div class=&#34;article-menu&#34;&gt;
+					
+					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
+					&lt;div class=&#34;dropdown&#34;&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%85%AC%E5%91%8A%5D&amp;#43;%E5%91%BC%E7%B1%B2%21%21%E8%AB%8B%E5%8B%BF%E6%96%BC%E7%9C%8B%E6%9D%BF%E7%99%BC%E5%B8%83%E8%B2%A9%E8%B3%A3%E5%B8%B3%E8%99%9F%E4%B9%8B%E8%A8%8A%E6%81%AF&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3ABignana&#34;&gt;搜尋看板內 Bignana 的文章&lt;/a&gt;&lt;/div&gt;
+						
+					&lt;/div&gt;
+					
+				&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt; 9/16&lt;/div&gt;
+				&lt;div class=&#34;mark&#34;&gt;M&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+            
+                
+        
+        
+		&lt;div class=&#34;r-ent&#34;&gt;
+			&lt;div class=&#34;nrec&#34;&gt;&lt;span class=&#34;hl f3&#34;&gt;48&lt;/span&gt;&lt;/div&gt;
+			&lt;div class=&#34;title&#34;&gt;
+			
+				&lt;a href=&#34;/bbs/Gossiping/M.1569227318.A.583.html&#34;&gt;[公告] 關於客家人水桶事件，可申請改判。&lt;/a&gt;
+			
+			&lt;/div&gt;
+			&lt;div class=&#34;meta&#34;&gt;
+				&lt;div class=&#34;author&#34;&gt;Bignana&lt;/div&gt;
+				&lt;div class=&#34;article-menu&#34;&gt;
+					
+					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
+					&lt;div class=&#34;dropdown&#34;&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%85%AC%E5%91%8A%5D&amp;#43;%E9%97%9C%E6%96%BC%E5%AE%A2%E5%AE%B6%E4%BA%BA%E6%B0%B4%E6%A1%B6%E4%BA%8B%E4%BB%B6%EF%BC%8C%E5%8F%AF%E7%94%B3%E8%AB%8B%E6%94%B9%E5%88%A4%E3%80%82&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3ABignana&#34;&gt;搜尋看板內 Bignana 的文章&lt;/a&gt;&lt;/div&gt;
+						
+					&lt;/div&gt;
+					
+				&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt; 9/23&lt;/div&gt;
+				&lt;div class=&#34;mark&#34;&gt;M&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+            
+                
+        
+        
+		&lt;div class=&#34;r-ent&#34;&gt;
+			&lt;div class=&#34;nrec&#34;&gt;&lt;span class=&#34;hl f2&#34;&gt;8&lt;/span&gt;&lt;/div&gt;
+			&lt;div class=&#34;title&#34;&gt;
+			
+				&lt;a href=&#34;/bbs/Gossiping/M.1568306552.A.64D.html&#34;&gt;[公告] 九月份中秋線上烤肉兼置底閒聊區&lt;/a&gt;
+			
+			&lt;/div&gt;
+			&lt;div class=&#34;meta&#34;&gt;
+				&lt;div class=&#34;author&#34;&gt;Bignana&lt;/div&gt;
+				&lt;div class=&#34;article-menu&#34;&gt;
+					
+					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
+					&lt;div class=&#34;dropdown&#34;&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%85%AC%E5%91%8A%5D&amp;#43;%E4%B9%9D%E6%9C%88%E4%BB%BD%E4%B8%AD%E7%A7%8B%E7%B7%9A%E4%B8%8A%E7%83%A4%E8%82%89%E5%85%BC%E7%BD%AE%E5%BA%95%E9%96%92%E8%81%8A%E5%8D%80&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3ABignana&#34;&gt;搜尋看板內 Bignana 的文章&lt;/a&gt;&lt;/div&gt;
+						
+					&lt;/div&gt;
+					
+				&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt; 9/13&lt;/div&gt;
+				&lt;div class=&#34;mark&#34;&gt;M&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+            
+        
+	&lt;/div&gt;
+
+    
+&lt;div class=&#34;bbs-screen bbs-footer-message&#34;&gt;本網站已依台灣網站內容分級規定處理。此區域為限制級，未滿十八歲者不得瀏覽。&lt;/div&gt;
+
+&lt;/div&gt;
+
+		
+
+&lt;script&gt;
+  (function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,&#39;script&#39;,&#39;https://www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);
+
+  ga(&#39;create&#39;, &#39;UA-32365737-1&#39;, {
+    cookieDomain: &#39;ptt.cc&#39;,
+    legacyCookieDomain: &#39;ptt.cc&#39;
+  });
+  ga(&#39;send&#39;, &#39;pageview&#39;);
+&lt;/script&gt;
+
+
+		
+&lt;script src=&#34;//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//images.ptt.cc/bbs/v2.27/bbs.js&#34;&gt;&lt;/script&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
@@ -14188,6 +14916,24 @@ Sci-Fi
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;Aladdin&#39;, &#34;A Dog&#39;s Journey&#34;, &#39;Men in Black: International&#39;, &#39;Pokémon Detective Pikachu&#39;, &#39;X-Men: Dark Phoenix&#39;, &#39;Rocketman&#39;, &#39;The Secret Life of Pets 2&#39;, &#39;John Wick: Chapter 3 - Parabellum&#39;, &#39;Avengers: Endgame&#39;, &#39;Shazam!&#39;, &#39;Kursk&#39;, &#39;Apollo 11&#39;, &#39;Red Joan&#39;, &#39;Stockholm&#39;, &#39;Teen Spirit&#39;, &#39;An Elephant Sitting Still&#39;, &#39;Integrity&#39;, &#39;Dearest Anita&#39;, &#34;Dad&#39;s Suit&#34;, &#39;When Green Turns to Gold&#39;, &#39;Late Life: The Chien-Ming Wang Story&#39;, &#39;The Knight of Shadows…&#39;, &#39;Another World&#39;, &#39;Fly Me To The Saitama&#39;, &#34;Long Day&#39;s Journey Into Night&#34;, &#39;Andhadhun&#39;, &#39;A Long Goodbye&#39;, &#39;Miss &amp; Mrs Cops&#39;, &#39;Take Point&#39;, &#39;70 Big Ones&#39;, &#39;Loro&#39;, &#39;Whistleblower&#39;, &#39;Hit-and-Run Squad&#39;, &#39;96&#39;, &#39;Who You Think I Am&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14198,7 +14944,7 @@ Sci-Fi
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">ca_movie_titles</span><span class="p">)</span>
@@ -14218,7 +14964,7 @@ Sci-Fi
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;Avengers: Endgame&#39;, &#39;Red Joan&#39;, &#39;Stockholm&#39;, &#39;Kursk&#39;, &#39;Apollo 11&#39;, &#39;Greta&#39;, &#39;Teen Spirit&#39;, &#39;Shazam!&#39;, &#34;Isn&#39;t it Romantic&#34;, &#39;Alita: Battle Angel&#39;, &#39;Dumbo&#39;, &#39;Five Feet Apart&#39;, &#39;Hellboy&#39;, &#39;The Aftermath&#39;, &#34;Long Day&#39;s Journey Into Night&#34;, &#39;Late Life: The Chien-Ming Wang Story&#39;, &#34;Dad&#39;s Suit&#34;, &#39;Dearest Anita&#39;, &#39;The Knight of Shadows…&#39;, &#39;When Green Turns to Gold&#39;, &#39;Master Z: Ip Man Legacy&#39;, &#39;Shadow&#39;, &#39;Single Day&#39;, &#39;Still Human&#39;, &#39;Tracey&#39;, &#39;Who You Think I Am&#39;, &#39;Another World&#39;, &#39;Fly Me To The Saitama&#39;, &#39;Whistleblower&#39;, &#39;Hit-and-Run Squad&#39;, &#39;96&#39;, &#39;Dragon Ball Super: Broly&#39;, &#39;Masquerade Hotel&#39;, &#39;Extreme Job&#39;, &#39;Innocent Witness&#39;, &#39;Badhaai Ho&#39;, &#39;Border&#39;, &#39;Family is Family&#39;, &#39;The Peanuts Movie&#39;, &#39;Ferdinand&#39;, &#39;Where the Wild Things Are&#39;, &#39;Hop&#39;, &#39;Pan&#39;, &#39;Sing&#39;, &#39;Puss In Boots&#39;, &#39;The Lego Batman Movie&#39;, &#39;Wreck-It Ralph&#39;, &#39;The Polar Express&#39;, &#39;Trolls&#39;, &#39;Turbo&#39;, &#39;Yogi Bear&#39;, &#39;Detective Conan: Crimson Love Letter&#39;, &#39;Lupin the 3rd vs. Detective Conan&#39;, &#39;Detective Conan Episode &#34;ONE&#34;&#39;, &#39;Attack On Titan: Kakusei&#39;, &#39;My Hero Academia: Two Heroes&#39;, &#39;Mirai&#39;, &#39;U - July 22&#39;, &#39;A Better Tomorrow&#39;, &#39;Handan&#39;, &#39;Rampant&#39;, &#39;Hidden Man&#39;, &#39;A Land Imagined&#39;, &#39;Last Letter&#39;, &#39;The Scoundrels&#39;, &#39;More Than Blue&#39;, &#39;Stolen Identity&#39;, &#39;Hibiki&#39;, &#39;Project Gutenberg&#39;, &#39;Default&#39;, &#39;Capernaum&#39;, &#39;Million Dollar Man&#39;, &#39;The House Where The Mermaid Sleeps&#39;, &#39;Unstoppable&#39;, &#39;Territory Of Love&#39;, &#39;A Real Vermeer&#39;, &#34;Jupiter&#39;s Moon&#34;, &#39;Simpel…&#39;, &#39;Wished&#39;, &#39;Rouge&#39;, &#39;Gintama 2&#39;, &#39;After The Storm&#39;, &#39;Cafe Funiculi Funicula&#39;, &#39;Code Blue: The Movie&#39;, &#39;Monstrum&#39;, &#39;On Happiness Road&#39;, &#39;Still Walking&#39;, &#39;Life in Overtime&#39;, &#39;Like Father, Like Son&#39;, &#39;A Chinese Ghost Story&#39;, &#39;Shoplifters&#39;, &#39;Hichki&#39;, &#39;The Square&#39;, &#39;The Negotiation&#39;, &#39;Euforia&#39;, &#39;Father to Son&#39;, &#39;Father&#39;, &#39;The Benefit of the Doubt&#39;, &#39;Hello Mr. Billionaire&#39;, &#39;Secret Superstar&#39;, &#39;Long Time No Sea&#39;, &#39;Le Brio&#39;, &#39;Pad Man&#39;, &#39;Avengers: Infinity War&#39;, &#39;Avengers: Age of Ultron&#39;, &#39;The Avengers&#39;, &#39;Iron Man&#39;, &#39;Iron Man 2&#39;, &#39;Iron Man 3&#39;, &#39;Captain America: Civil War&#39;, &#39;Chef&#39;, &#39;The Judge&#39;, &#39;Crazy, Stupid, Love.&#39;, &#39;Crazy Heart&#39;, &#39;Aquaman&#39;, &#39;Captain Marvel&#39;, &#39;Deepwater Horizon&#39;, &#39;Creed&#39;, &#39;Eddie The Eagle&#39;, &#39;Les Misérables&#39;, &#39;Knight and Day&#39;, &#39;Invictus&#39;, &#39;Café Society&#39;, &#39;Going In Style&#39;, &#39;Fantastic Beasts and…&#39;, &#39;American Pastoral&#39;, &#39;J. Edgar&#39;, &#39;John Wick: Chapter 2&#39;, &#39;A Star is Born&#39;, &#39;Manchester By The Sea&#39;, &#39;Hitman: Agent 47&#39;, &#39;I, Daniel Blake&#39;, &#39;My Cousin Rachel&#39;, &#39;Prometheus&#39;, &#39;Moulin Rouge&#39;, &#39;Chronicle&#39;, &#39;Ruby Sparks&#39;, &#39;Life of Pi&#39;, &#39;Hidden Figures&#39;, &#39;Logan&#39;, &#39;Runner Runner&#39;, &#39;Collateral Beauty&#39;, &#39;Sherlock Holmes: A Game of Shadows&#39;, &#39;Snatched&#39;, &#39;The Intern&#39;, &#39;The Mule&#39;, &#39;Before I Fall&#39;, &#39;Black Swan&#39;, &#39;Spy&#39;, &#39;Superman Returns&#39;, &#39;The Shape of Water&#39;, &#39;The Pianist&#39;, &#39;The Grand Budapest Hotel&#39;, &#39;Australia&#39;, &#39;The Great Gatsby&#39;, &#39;The Lego Ninjago Movie&#39;, &#39;The Tree Of Life&#39;, &#39;The Book Thief&#39;, &#39;Steve Jobs&#39;, &#39;The Martian&#39;, &#39;The Devil Wears Prada&#39;, &#39;The Drop&#39;, &#39;The Mummy&#39;, &#39;Three Billboards Outside Ebbing, Missouri&#39;, &#39;This Means War&#39;, &#39;The Descendants&#39;, &#39;We Bought A Zoo&#39;, &#39;The Shawshank Redemption&#39;, &#39;Wonder Woman&#39;]
+<pre>[&#39;Aladdin&#39;, &#34;A Dog&#39;s Journey&#34;, &#39;Men in Black: International&#39;, &#39;Pokémon Detective Pikachu&#39;, &#39;X-Men: Dark Phoenix&#39;, &#39;Rocketman&#39;, &#39;The Secret Life of Pets 2&#39;, &#39;John Wick: Chapter 3 - Parabellum&#39;, &#39;Avengers: Endgame&#39;, &#39;Shazam!&#39;, &#39;Kursk&#39;, &#39;Apollo 11&#39;, &#39;Red Joan&#39;, &#39;Stockholm&#39;, &#39;Teen Spirit&#39;, &#39;An Elephant Sitting Still&#39;, &#39;Integrity&#39;, &#39;Dearest Anita&#39;, &#34;Dad&#39;s Suit&#34;, &#39;When Green Turns to Gold&#39;, &#39;Late Life: The Chien-Ming Wang Story&#39;, &#39;The Knight of Shadows…&#39;, &#39;Another World&#39;, &#39;Fly Me To The Saitama&#39;, &#34;Long Day&#39;s Journey Into Night&#34;, &#39;Andhadhun&#39;, &#39;A Long Goodbye&#39;, &#39;Miss &amp; Mrs Cops&#39;, &#39;Take Point&#39;, &#39;70 Big Ones&#39;, &#39;Loro&#39;, &#39;Whistleblower&#39;, &#39;Hit-and-Run Squad&#39;, &#39;96&#39;, &#39;Who You Think I Am&#39;, &#34;Tim Burton&#39;s Corpse Bride&#34;, &#39;The Peanuts Movie&#39;, &#39;Sing&#39;, &#39;Puss In Boots&#39;, &#39;The Lego Batman Movie&#39;, &#39;Ferdinand&#39;, &#39;The Polar Express&#39;, &#39;Hop&#39;, &#39;Pan&#39;, &#39;Where the Wild Things Are&#39;, &#39;Three Times&#39;, &#39;Beyond Beauty - Taiwan from Above&#39;, &#39;The Wedding Banquet&#39;, &#39;Millennium Mambo&#39;, &#39;On Happiness Road&#39;, &#39;Father to Son&#39;, &#39;Long Time No Sea&#39;, &#39;More Than Blue&#39;, &#39;Handan&#39;, &#39;Master Z: Ip Man Legacy&#39;, &#39;Shadow&#39;, &#39;Hidden Man&#39;, &#39;Still Human&#39;, &#39;Last Letter&#39;, &#39;Tracey&#39;, &#39;Dragon Ball Super: Broly&#39;, &#39;Stolen Identity&#39;, &#39;Hibiki&#39;, &#39;Project Gutenberg&#39;, &#39;Default&#39;, &#39;Masquerade Hotel&#39;, &#39;Million Dollar Man&#39;, &#39;The House Where The Mermaid Sleeps&#39;, &#39;Unstoppable&#39;, &#39;Extreme Job&#39;, &#39;Innocent Witness&#39;, &#39;Badhaai Ho&#39;, &#39;Border&#39;, &#39;Family is Family&#39;, &#39;Capernaum&#39;, &#39;U - July 22&#39;, &#39;A Better Tomorrow&#39;, &#39;A Chinese Ghost Story&#39;, &#39;Rouge&#39;, &#39;Gintama 2&#39;, &#39;A Real Vermeer&#39;, &#39;Cafe Funiculi Funicula&#39;, &#39;Code Blue: The Movie&#39;, &#34;Jupiter&#39;s Moon&#34;, &#39;Simpel…&#39;, &#39;Shoplifters&#39;, &#34;Midsummer&#39;s Equation&#34;, &#39;Attack On Titan: Kakusei&#39;, &#39;Detective Conan: Crimson Love Letter&#39;, &#39;Detective Conan Episode &#34;ONE&#34;&#39;, &#39;Hichki&#39;, &#39;My Hero Academia: Two Heroes&#39;, &#39;Mirai&#39;, &#39;Lupin the 3rd vs. Detective Conan&#39;, &#39;The Negotiation&#39;, &#39;Euforia&#39;, &#39;The Benefit of the Doubt&#39;, &#39;Hello Mr. Billionaire&#39;, &#39;Wished&#39;, &#39;The Square&#39;, &#39;Le Brio&#39;, &#39;Pad Man&#39;, &#39;John Wick&#39;, &#39;X-Men&#39;, &#39;X-Men: First Class&#39;, &#39;X-Men: Days of Future Past&#39;, &#39;X-Men: Apocalypse&#39;, &#39;The Mule&#39;, &#39;Aquaman&#39;, &#39;Iron Man&#39;, &#39;Iron Man 2&#39;, &#39;Iron Man 3&#39;, &#39;The Avengers&#39;, &#39;Avengers: Age of Ultron&#39;, &#39;Avengers: Infinity War&#39;, &#39;Alita: Battle Angel&#39;, &#34;Isn&#39;t it Romantic&#34;, &#39;Eddie The Eagle&#39;, &#39;Les Misérables&#39;, &#39;Knight and Day&#39;, &#39;Invictus&#39;, &#39;Café Society&#39;, &#39;Going In Style&#39;, &#39;Fantastic Beasts and…&#39;, &#39;Crazy, Stupid, Love.&#39;, &#39;J. Edgar&#39;, &#39;John Wick: Chapter 2&#39;, &#39;A Star is Born&#39;, &#39;Manchester By The Sea&#39;, &#39;Hitman: Agent 47&#39;, &#39;I, Daniel Blake&#39;, &#39;My Cousin Rachel&#39;, &#39;Prometheus&#39;, &#39;Crazy Heart&#39;, &#39;Ruby Sparks&#39;, &#39;Life of Pi&#39;, &#39;Moulin Rouge&#39;, &#39;Hidden Figures&#39;, &#39;Logan&#39;, &#39;Runner Runner&#39;, &#39;Creed&#39;, &#39;Sherlock Holmes: A Game of Shadows&#39;, &#39;Deepwater Horizon&#39;, &#39;The Intern&#39;, &#39;Captain America: Civil War&#39;, &#39;Before I Fall&#39;, &#39;Black Swan&#39;, &#39;Superman Returns&#39;, &#39;The Shape of Water&#39;, &#39;The Judge&#39;, &#39;The Pianist&#39;, &#39;The Grand Budapest Hotel&#39;, &#39;Australia&#39;, &#39;The Great Gatsby&#39;, &#39;Chef&#39;, &#39;The Tree Of Life&#39;, &#39;The Book Thief&#39;, &#39;Steve Jobs&#39;, &#39;The Martian&#39;, &#39;The Devil Wears Prada&#39;, &#39;The Drop&#39;, &#39;The Mummy&#39;, &#39;Three Billboards Outside Ebbing, Missouri&#39;, &#39;This Means War&#39;, &#39;The Descendants&#39;, &#39;We Bought A Zoo&#39;, &#39;The Shawshank Redemption&#39;, &#39;Wonder Woman&#39;]
 </pre>
 </div>
 </div>
@@ -14236,7 +14982,7 @@ Sci-Fi
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">ca_movie_titles</span><span class="p">[</span><span class="n">best_movie_index</span><span class="p">])</span>
@@ -14450,7 +15196,7 @@ Sci-Fi
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_movie_data</span><span class="p">(</span><span class="s2">&quot;Avengers: Endgame (2019)&quot;</span><span class="p">)</span>
@@ -14466,7 +15212,7 @@ Sci-Fi
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[4]:</div>
+    <div class="prompt output_prompt">Out[41]:</div>
 
 
 
@@ -14502,7 +15248,7 @@ Sci-Fi
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#25847;&#21462;&#22235;&#37096;&#24489;&#20167;&#32773;&#32879;&#30431;&#30340;&#38651;&#24433;&#36039;&#35338;">&#38568;&#22530;&#32244;&#32722;&#65306;&#25847;&#21462;&#22235;&#37096;&#24489;&#20167;&#32773;&#32879;&#30431;&#30340;&#38651;&#24433;&#36039;&#35338;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#25847;&#21462;&#22235;&#37096;&#24489;&#20167;&#32773;&#32879;&#30431;&#30340;&#38651;&#24433;&#36039;&#35338;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="n">avengers_movies</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;The Avengers (2012)&quot;</span><span class="p">,</span> <span class="s2">&quot;Avengers: Age of Ultron (2015)&quot;</span><span class="p">,</span> <span class="s2">&quot;Avengers: Infinity War (2018)&quot;</span><span class="p">,</span> <span class="s2">&quot;Avengers: Endgame (2019)&quot;</span><span class="p">]</span>
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#20197;-selenium-&#25847;&#21462;&#22235;&#37096;&#24489;&#20167;&#32773;&#32879;&#30431;&#30340;&#38651;&#24433;&#36039;&#35338;">&#38568;&#22530;&#32244;&#32722;&#65306;&#20197; selenium &#25847;&#21462;&#22235;&#37096;&#24489;&#20167;&#32773;&#32879;&#30431;&#30340;&#38651;&#24433;&#36039;&#35338;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#20197;-selenium-&#25847;&#21462;&#22235;&#37096;&#24489;&#20167;&#32773;&#32879;&#30431;&#30340;&#38651;&#24433;&#36039;&#35338;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="n">avengers_movies</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;The Avengers (2012)&quot;</span><span class="p">,</span> <span class="s2">&quot;Avengers: Age of Ultron (2015)&quot;</span><span class="p">,</span> <span class="s2">&quot;Avengers: Infinity War (2018)&quot;</span><span class="p">,</span> <span class="s2">&quot;Avengers: Endgame (2019)&quot;</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -14510,7 +15256,7 @@ Sci-Fi
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">avengers_movie_data</span><span class="p">)</span>
@@ -14592,7 +15338,7 @@ Sci-Fi
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ans</span><span class="p">()</span>
@@ -14608,7 +15354,7 @@ Sci-Fi
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[2]:</div>
+    <div class="prompt output_prompt">Out[45]:</div>
 
 
 
@@ -14616,11 +15362,16 @@ Sci-Fi
 <div class="output_text output_subarea output_execute_result">
 <pre>{&#39;22 April 2019&#39;: 1,
  &#39;23 April 2019&#39;: 1,
- &#39;24 April 2019&#39;: 31,
+ &#39;24 April 2019&#39;: 33,
  &#39;25 April 2019&#39;: 22,
  &#39;26 April 2019&#39;: 14,
  &#39;28 April 2019&#39;: 1,
- &#39;29 April 2019&#39;: 1}</pre>
+ &#39;29 April 2019&#39;: 1,
+ &#39;28 June 2019&#39;: 3,
+ &#39;29 June 2019&#39;: 1,
+ &#39;4 July 2019&#39;: 1,
+ &#39;12 July 2019&#39;: 2,
+ &#39;26 July 2019&#39;: 1}</pre>
 </div>
 
 </div>
@@ -14641,8 +15392,8 @@ require(
       waitSeconds: 15
     },
     [
-      "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/head.min.js",
-      "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/js/reveal.js"
+      "reveal.js/lib/js/head.min.js",
+      "reveal.js/js/reveal.js"
     ],
 
     function(head, Reveal){
@@ -14657,9 +15408,9 @@ require(
 
             // Optional libraries used to extend on reveal.js
             dependencies: [
-                { src: "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/classList.js",
+                { src: "reveal.js/lib/js/classList.js",
                   condition: function() { return !document.body.classList; } },
-                { src: "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/notes/notes.js",
+                { src: "reveal.js/plugin/notes/notes.js",
                   async: true,
                   condition: function() { return !!document.body.classList; } }
             ]
