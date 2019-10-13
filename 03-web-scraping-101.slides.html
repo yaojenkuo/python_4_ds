@@ -13254,7 +13254,9 @@ a.anchor-link {
 <h2 id="&#22823;&#32177;">&#22823;&#32177;<a class="anchor-link" href="#&#22823;&#32177;">&#182;</a></h2><ul>
 <li>網頁資料擷取的核心任務</li>
 <li>擷取 JSON 格式網頁資料</li>
+<li>擷取 XML 格式網頁資料</li>
 <li>擷取 HTML 格式網頁資料</li>
+<li>進行 POST 請求</li>
 <li>瀏覽器自動化</li>
 </ul>
 
@@ -13294,9 +13296,23 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#35531;&#27714;&#36039;&#26009;&#26159;&#38617;&#21521;&#30340;">&#35531;&#27714;&#36039;&#26009;&#26159;&#38617;&#21521;&#30340;<a class="anchor-link" href="#&#35531;&#27714;&#36039;&#26009;&#26159;&#38617;&#21521;&#30340;">&#182;</a></h2><ul>
+<li>由瀏覽器發給網頁伺服器的請求稱為 HTTP Request，HTTP Request 包含 Header 和 Body</li>
+<li>由網頁伺服器回應瀏覽器的請求稱為 HTTP Response，HTTP Response 也包含 Header 和 Body</li>
+<li>Request Header 中的 Request Method 表示瀏覽器希望網頁伺服器做些什麼事</li>
+<li>Response Header 中的 Status Code 表示網頁伺服器告訴瀏覽器事情辦好沒</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#24120;&#29992;&#30340;-requests-&#26041;&#27861;&#12289;&#23660;&#24615;">&#24120;&#29992;&#30340; <code>requests</code> &#26041;&#27861;&#12289;&#23660;&#24615;<a class="anchor-link" href="#&#24120;&#29992;&#30340;-requests-&#26041;&#27861;&#12289;&#23660;&#24615;">&#182;</a></h2><ul>
 <li><code>requests.get()</code>：進行 GET 請求</li>
-<li><code>r.status_code</code>：查看 HTTP 狀態碼</li>
+<li><code>requests.post()</code>：進行 POST 請求</li>
+<li><code>r.status_code</code>：查看狀態碼</li>
 <li><code>r.json()</code>：將回應直接轉換為 Python 的資料結構（<code>list</code> 或 <code>dict</code>）</li>
 <li><code>r.content</code>：將回應轉換為 <code>bytes</code></li>
 <li><code>r.text</code>：將回應轉換為 <code>str</code></li>
@@ -13308,9 +13324,63 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#29228;&#34802;&#26371;&#29992;&#21040;&#30340;&#35531;&#27714;">&#29228;&#34802;&#26371;&#29992;&#21040;&#30340;&#35531;&#27714;<a class="anchor-link" href="#&#29228;&#34802;&#26371;&#29992;&#21040;&#30340;&#35531;&#27714;">&#182;</a></h2><ul>
+<li>GET 請求：下載檔案</li>
+<li>POST 請求：上傳資料</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#21892;&#29992;-Chrome-&#38283;&#30332;&#32773;&#24037;&#20855;&#26296;&#35299;&#35531;&#27714;">&#21892;&#29992; Chrome &#38283;&#30332;&#32773;&#24037;&#20855;&#26296;&#35299;&#35531;&#27714;<a class="anchor-link" href="#&#21892;&#29992;-Chrome-&#38283;&#30332;&#32773;&#24037;&#20855;&#26296;&#35299;&#35531;&#27714;">&#182;</a></h2><p><img src="https://i.imgur.com/3Synk8m.png?1" alt="Imgur"></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#40670;&#36984;-Network-&#20043;&#24460;&#37325;&#26032;&#25972;&#29702;">&#40670;&#36984; Network &#20043;&#24460;&#37325;&#26032;&#25972;&#29702;<a class="anchor-link" href="#&#40670;&#36984;-Network-&#20043;&#24460;&#37325;&#26032;&#25972;&#29702;">&#182;</a></h2><p><img src="https://i.imgur.com/OG0Huwj.png?1" alt="Imgur"></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#36890;&#24120;&#25105;&#20497;&#38656;&#35201;&#25847;&#21462;&#30340;&#36039;&#26009;&#26371;&#34987;&#27512;&#39006;&#22312;&#36889;&#20841;&#20491;&#22823;&#39006;&#20013;">&#36890;&#24120;&#25105;&#20497;&#38656;&#35201;&#25847;&#21462;&#30340;&#36039;&#26009;&#26371;&#34987;&#27512;&#39006;&#22312;&#36889;&#20841;&#20491;&#22823;&#39006;&#20013;<a class="anchor-link" href="#&#36890;&#24120;&#25105;&#20497;&#38656;&#35201;&#25847;&#21462;&#30340;&#36039;&#26009;&#26371;&#34987;&#27512;&#39006;&#22312;&#36889;&#20841;&#20491;&#22823;&#39006;&#20013;">&#182;</a></h2><ul>
+<li>XHR(XMLHttpRequest)</li>
+<li>Doc</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#25214;&#21040;&#36039;&#26009;&#20043;&#24460;&#21363;&#21487;&#35264;&#23519;&#35531;&#27714;&#31278;&#39006;&#33287;-headers">&#25214;&#21040;&#36039;&#26009;&#20043;&#24460;&#21363;&#21487;&#35264;&#23519;&#35531;&#27714;&#31278;&#39006;&#33287; headers<a class="anchor-link" href="#&#25214;&#21040;&#36039;&#26009;&#20043;&#24460;&#21363;&#21487;&#35264;&#23519;&#35531;&#27714;&#31278;&#39006;&#33287;-headers">&#182;</a></h2><p><img src="https://i.imgur.com/pBUt2e8.png?1" alt="Imgur"></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#25214;&#21040;&#36039;&#26009;&#20043;&#24460;&#21363;&#21487;&#35264;&#23519;&#35531;&#27714;&#31278;&#39006;&#33287;-headers">&#25214;&#21040;&#36039;&#26009;&#20043;&#24460;&#21363;&#21487;&#35264;&#23519;&#35531;&#27714;&#31278;&#39006;&#33287; headers<a class="anchor-link" href="#&#25214;&#21040;&#36039;&#26009;&#20043;&#24460;&#21363;&#21487;&#35264;&#23519;&#35531;&#27714;&#31278;&#39006;&#33287;-headers">&#182;</a></h2><p><img src="https://i.imgur.com/LMVp0m7.png?1" alt="Imgur"></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#35299;&#26512;&#36039;&#26009;">&#35299;&#26512;&#36039;&#26009;<a class="anchor-link" href="#&#35299;&#26512;&#36039;&#26009;">&#182;</a></h2><ul>
 <li>如果資料是 JSON 格式：以 <code>requests</code> 獲取後可直接以 Python 資料結構解析</li>
-<li>如果資料是 HTML 格式：以 <code>bs4</code>、<code>pyquery</code> 或 <code>selenium</code> 搭配 CSS Selector/XPath 解析</li>
+<li>如果資料是 XML/HTML 格式：以 <code>lxml</code>, <code>bs4</code>、<code>pyquery</code> 或 <code>selenium</code> 搭配 CSS Selector/XPath 解析</li>
 </ul>
 
 </div>
@@ -13391,7 +13461,7 @@ a.anchor-link {
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>&lt;class &#39;dict&#39;&gt;
-{&#39;_internal&#39;: {&#39;pubDateTime&#39;: &#39;2019-06-26 06:00:23.891 EDT&#39;, &#39;igorPath&#39;: &#39;cron,1561543218800,1561543218800|router,1561543218800,1561543218922|domUpdater,1561543219144,1561543219858|feedProducer,1561543221917,1561543224371&#39;, &#39;xslt&#39;: &#39;NBA/xsl/league/roster/marty_teams_list.xsl&#39;, &#39;xsltForceRecompile&#39;: &#39;true&#39;, &#39;xsltInCache&#39;: &#39;false&#39;, &#39;xsltCompileTimeMillis&#39;: &#39;1545&#39;, &#39;xsltTransformTimeMillis&#39;: &#39;540&#39;, &#39;consolidatedDomKey&#39;: &#39;qamanual__transform__marty_teams_list__5498140551604&#39;, &#39;endToEndTimeMillis&#39;: &#39;5571&#39;}, &#39;league&#39;: {&#39;standard&#39;: [{&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Croatia&#39;, &#39;altCityName&#39;: &#39;Croatia&#39;, &#39;fullName&#39;: &#39;Team Croatia&#39;, &#39;tricode&#39;: &#39;CRO&#39;, &#39;teamId&#39;: &#39;70&#39;, &#39;nickname&#39;: &#39;Croatia&#39;, &#39;urlName&#39;: &#39;croatia&#39;, &#39;teamShortName&#39;: &#39;Croatia&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;China&#39;, &#39;altCityName&#39;: &#39;China&#39;, &#39;fullName&#39;: &#39;Team China&#39;, &#39;tricode&#39;: &#39;CHN&#39;, &#39;teamId&#39;: &#39;45&#39;, &#39;nickname&#39;: &#39;China&#39;, &#39;urlName&#39;: &#39;china&#39;, &#39;teamShortName&#39;: &#39;China&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Adelaide&#39;, &#39;altCityName&#39;: &#39;Adelaide&#39;, &#39;fullName&#39;: &#39;Adelaide 36ers&#39;, &#39;tricode&#39;: &#39;ADL&#39;, &#39;teamId&#39;: &#39;15019&#39;, &#39;nickname&#39;: &#39;36ers&#39;, &#39;urlName&#39;: &#39;36ers&#39;, &#39;teamShortName&#39;: &#39;Adelaide&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Atlanta&#39;, &#39;altCityName&#39;: &#39;Atlanta&#39;, &#39;fullName&#39;: &#39;Atlanta Hawks&#39;, &#39;tricode&#39;: &#39;ATL&#39;, &#39;teamId&#39;: &#39;1610612737&#39;, &#39;nickname&#39;: &#39;Hawks&#39;, &#39;urlName&#39;: &#39;hawks&#39;, &#39;teamShortName&#39;: &#39;Atlanta&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Southeast&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: True, &#39;city&#39;: &#39;Away&#39;, &#39;altCityName&#39;: &#39;Away&#39;, &#39;fullName&#39;: &#39;Away Away&#39;, &#39;tricode&#39;: &#39;AWY&#39;, &#39;teamId&#39;: &#39;1610616840&#39;, &#39;nickname&#39;: &#39;Away&#39;, &#39;urlName&#39;: &#39;away&#39;, &#39;teamShortName&#39;: &#39;Away&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;East&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Beijing&#39;, &#39;altCityName&#39;: &#39;Beijing&#39;, &#39;fullName&#39;: &#39;Beijing Ducks&#39;, &#39;tricode&#39;: &#39;BJD&#39;, &#39;teamId&#39;: &#39;15021&#39;, &#39;nickname&#39;: &#39;Ducks&#39;, &#39;urlName&#39;: &#39;ducks&#39;, &#39;teamShortName&#39;: &#39;Beijing&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Boston&#39;, &#39;altCityName&#39;: &#39;Boston&#39;, &#39;fullName&#39;: &#39;Boston Celtics&#39;, &#39;tricode&#39;: &#39;BOS&#39;, &#39;teamId&#39;: &#39;1610612738&#39;, &#39;nickname&#39;: &#39;Celtics&#39;, &#39;urlName&#39;: &#39;celtics&#39;, &#39;teamShortName&#39;: &#39;Boston&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Atlantic&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Brooklyn&#39;, &#39;altCityName&#39;: &#39;Brooklyn&#39;, &#39;fullName&#39;: &#39;Brooklyn Nets&#39;, &#39;tricode&#39;: &#39;BKN&#39;, &#39;teamId&#39;: &#39;1610612751&#39;, &#39;nickname&#39;: &#39;Nets&#39;, &#39;urlName&#39;: &#39;nets&#39;, &#39;teamShortName&#39;: &#39;Brooklyn&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Atlantic&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Charlotte&#39;, &#39;altCityName&#39;: &#39;Charlotte&#39;, &#39;fullName&#39;: &#39;Charlotte Hornets&#39;, &#39;tricode&#39;: &#39;CHA&#39;, &#39;teamId&#39;: &#39;1610612766&#39;, &#39;nickname&#39;: &#39;Hornets&#39;, &#39;urlName&#39;: &#39;hornets&#39;, &#39;teamShortName&#39;: &#39;Charlotte&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Southeast&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Buenos Aires&#39;, &#39;altCityName&#39;: &#39;Buenos Aires&#39;, &#39;fullName&#39;: &#39;San Lorenzo de Almagro&#39;, &#39;tricode&#39;: &#39;SLA&#39;, &#39;teamId&#39;: &#39;12330&#39;, &#39;nickname&#39;: &#39;San Lorenzo&#39;, &#39;urlName&#39;: &#39;san_lorenzo&#39;, &#39;teamShortName&#39;: &#39;San Lorenzo&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Chicago&#39;, &#39;altCityName&#39;: &#39;Chicago&#39;, &#39;fullName&#39;: &#39;Chicago Bulls&#39;, &#39;tricode&#39;: &#39;CHI&#39;, &#39;teamId&#39;: &#39;1610612741&#39;, &#39;nickname&#39;: &#39;Bulls&#39;, &#39;urlName&#39;: &#39;bulls&#39;, &#39;teamShortName&#39;: &#39;Chicago&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Central&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Cleveland&#39;, &#39;altCityName&#39;: &#39;Cleveland&#39;, &#39;fullName&#39;: &#39;Cleveland Cavaliers&#39;, &#39;tricode&#39;: &#39;CLE&#39;, &#39;teamId&#39;: &#39;1610612739&#39;, &#39;nickname&#39;: &#39;Cavaliers&#39;, &#39;urlName&#39;: &#39;cavaliers&#39;, &#39;teamShortName&#39;: &#39;Cleveland&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Central&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Dallas&#39;, &#39;altCityName&#39;: &#39;Dallas&#39;, &#39;fullName&#39;: &#39;Dallas Mavericks&#39;, &#39;tricode&#39;: &#39;DAL&#39;, &#39;teamId&#39;: &#39;1610612742&#39;, &#39;nickname&#39;: &#39;Mavericks&#39;, &#39;urlName&#39;: &#39;mavericks&#39;, &#39;teamShortName&#39;: &#39;Dallas&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Southwest&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Denver&#39;, &#39;altCityName&#39;: &#39;Denver&#39;, &#39;fullName&#39;: &#39;Denver Nuggets&#39;, &#39;tricode&#39;: &#39;DEN&#39;, &#39;teamId&#39;: &#39;1610612743&#39;, &#39;nickname&#39;: &#39;Nuggets&#39;, &#39;urlName&#39;: &#39;nuggets&#39;, &#39;teamShortName&#39;: &#39;Denver&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Northwest&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Detroit&#39;, &#39;altCityName&#39;: &#39;Detroit&#39;, &#39;fullName&#39;: &#39;Detroit Pistons&#39;, &#39;tricode&#39;: &#39;DET&#39;, &#39;teamId&#39;: &#39;1610612765&#39;, &#39;nickname&#39;: &#39;Pistons&#39;, &#39;urlName&#39;: &#39;pistons&#39;, &#39;teamShortName&#39;: &#39;Detroit&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Central&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Franca&#39;, &#39;altCityName&#39;: &#39;Franca&#39;, &#39;fullName&#39;: &#39;SESI/Franca&#39;, &#39;tricode&#39;: &#39;FRA&#39;, &#39;teamId&#39;: &#39;12332&#39;, &#39;nickname&#39;: &#39;Franca&#39;, &#39;urlName&#39;: &#39;franca&#39;, &#39;teamShortName&#39;: &#39;Franca&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Golden State&#39;, &#39;altCityName&#39;: &#39;Golden State&#39;, &#39;fullName&#39;: &#39;Golden State Warriors&#39;, &#39;tricode&#39;: &#39;GSW&#39;, &#39;teamId&#39;: &#39;1610612744&#39;, &#39;nickname&#39;: &#39;Warriors&#39;, &#39;urlName&#39;: &#39;warriors&#39;, &#39;teamShortName&#39;: &#39;Golden State&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Pacific&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Guangzhou&#39;, &#39;altCityName&#39;: &#39;Guangzhou&#39;, &#39;fullName&#39;: &#39;Guangzhou Long-Lions&#39;, &#39;tricode&#39;: &#39;GUA&#39;, &#39;teamId&#39;: &#39;15018&#39;, &#39;nickname&#39;: &#39;Long-Lions&#39;, &#39;urlName&#39;: &#39;long-lions&#39;, &#39;teamShortName&#39;: &#39;Guangzhou&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Haifa&#39;, &#39;altCityName&#39;: &#39;Haifa&#39;, &#39;fullName&#39;: &#39;Haifa Maccabi Haifa&#39;, &#39;tricode&#39;: &#39;MAC&#39;, &#39;teamId&#39;: &#39;93&#39;, &#39;nickname&#39;: &#39;Maccabi Haifa&#39;, &#39;urlName&#39;: &#39;maccabi_haifa&#39;, &#39;teamShortName&#39;: &#39;Maccabi Haifa&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: True, &#39;city&#39;: &#39;Home&#39;, &#39;altCityName&#39;: &#39;Home&#39;, &#39;fullName&#39;: &#39;Home Home&#39;, &#39;tricode&#39;: &#39;HME&#39;, &#39;teamId&#39;: &#39;1610616839&#39;, &#39;nickname&#39;: &#39;Home&#39;, &#39;urlName&#39;: &#39;home&#39;, &#39;teamShortName&#39;: &#39;Home&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;East&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Houston&#39;, &#39;altCityName&#39;: &#39;Houston&#39;, &#39;fullName&#39;: &#39;Houston Rockets&#39;, &#39;tricode&#39;: &#39;HOU&#39;, &#39;teamId&#39;: &#39;1610612745&#39;, &#39;nickname&#39;: &#39;Rockets&#39;, &#39;urlName&#39;: &#39;rockets&#39;, &#39;teamShortName&#39;: &#39;Houston&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Southwest&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Indiana&#39;, &#39;altCityName&#39;: &#39;Indiana&#39;, &#39;fullName&#39;: &#39;Indiana Pacers&#39;, &#39;tricode&#39;: &#39;IND&#39;, &#39;teamId&#39;: &#39;1610612754&#39;, &#39;nickname&#39;: &#39;Pacers&#39;, &#39;urlName&#39;: &#39;pacers&#39;, &#39;teamShortName&#39;: &#39;Indiana&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Central&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;LA&#39;, &#39;altCityName&#39;: &#39;LA Clippers&#39;, &#39;fullName&#39;: &#39;LA Clippers&#39;, &#39;tricode&#39;: &#39;LAC&#39;, &#39;teamId&#39;: &#39;1610612746&#39;, &#39;nickname&#39;: &#39;Clippers&#39;, &#39;urlName&#39;: &#39;clippers&#39;, &#39;teamShortName&#39;: &#39;LA Clippers&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Pacific&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Los Angeles&#39;, &#39;altCityName&#39;: &#39;Los Angeles Lakers&#39;, &#39;fullName&#39;: &#39;Los Angeles Lakers&#39;, &#39;tricode&#39;: &#39;LAL&#39;, &#39;teamId&#39;: &#39;1610612747&#39;, &#39;nickname&#39;: &#39;Lakers&#39;, &#39;urlName&#39;: &#39;lakers&#39;, &#39;teamShortName&#39;: &#39;L.A. Lakers&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Pacific&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Melbourne&#39;, &#39;altCityName&#39;: &#39;Melbourne&#39;, &#39;fullName&#39;: &#39;Melbourne United&#39;, &#39;tricode&#39;: &#39;MEL&#39;, &#39;teamId&#39;: &#39;15016&#39;, &#39;nickname&#39;: &#39;United&#39;, &#39;urlName&#39;: &#39;united&#39;, &#39;teamShortName&#39;: &#39;Melbourne&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Memphis&#39;, &#39;altCityName&#39;: &#39;Memphis&#39;, &#39;fullName&#39;: &#39;Memphis Grizzlies&#39;, &#39;tricode&#39;: &#39;MEM&#39;, &#39;teamId&#39;: &#39;1610612763&#39;, &#39;nickname&#39;: &#39;Grizzlies&#39;, &#39;urlName&#39;: &#39;grizzlies&#39;, &#39;teamShortName&#39;: &#39;Memphis&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Southwest&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Miami&#39;, &#39;altCityName&#39;: &#39;Miami&#39;, &#39;fullName&#39;: &#39;Miami Heat&#39;, &#39;tricode&#39;: &#39;MIA&#39;, &#39;teamId&#39;: &#39;1610612748&#39;, &#39;nickname&#39;: &#39;Heat&#39;, &#39;urlName&#39;: &#39;heat&#39;, &#39;teamShortName&#39;: &#39;Miami&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Southeast&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Milwaukee&#39;, &#39;altCityName&#39;: &#39;Milwaukee&#39;, &#39;fullName&#39;: &#39;Milwaukee Bucks&#39;, &#39;tricode&#39;: &#39;MIL&#39;, &#39;teamId&#39;: &#39;1610612749&#39;, &#39;nickname&#39;: &#39;Bucks&#39;, &#39;urlName&#39;: &#39;bucks&#39;, &#39;teamShortName&#39;: &#39;Milwaukee&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Central&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Minnesota&#39;, &#39;altCityName&#39;: &#39;Minnesota&#39;, &#39;fullName&#39;: &#39;Minnesota Timberwolves&#39;, &#39;tricode&#39;: &#39;MIN&#39;, &#39;teamId&#39;: &#39;1610612750&#39;, &#39;nickname&#39;: &#39;Timberwolves&#39;, &#39;urlName&#39;: &#39;timberwolves&#39;, &#39;teamShortName&#39;: &#39;Minnesota&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Northwest&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;New Orleans&#39;, &#39;altCityName&#39;: &#39;New Orleans&#39;, &#39;fullName&#39;: &#39;New Orleans Pelicans&#39;, &#39;tricode&#39;: &#39;NOP&#39;, &#39;teamId&#39;: &#39;1610612740&#39;, &#39;nickname&#39;: &#39;Pelicans&#39;, &#39;urlName&#39;: &#39;pelicans&#39;, &#39;teamShortName&#39;: &#39;New Orleans&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Southwest&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;New York&#39;, &#39;altCityName&#39;: &#39;New York&#39;, &#39;fullName&#39;: &#39;New York Knicks&#39;, &#39;tricode&#39;: &#39;NYK&#39;, &#39;teamId&#39;: &#39;1610612752&#39;, &#39;nickname&#39;: &#39;Knicks&#39;, &#39;urlName&#39;: &#39;knicks&#39;, &#39;teamShortName&#39;: &#39;New York&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Atlantic&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;New Zealand&#39;, &#39;altCityName&#39;: &#39;New Zealand&#39;, &#39;fullName&#39;: &#39;New Zealand Breakers&#39;, &#39;tricode&#39;: &#39;NZB&#39;, &#39;teamId&#39;: &#39;15020&#39;, &#39;nickname&#39;: &#39;Breakers&#39;, &#39;urlName&#39;: &#39;breakers&#39;, &#39;teamShortName&#39;: &#39;New Zealand&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Oklahoma City&#39;, &#39;altCityName&#39;: &#39;Oklahoma City&#39;, &#39;fullName&#39;: &#39;Oklahoma City Thunder&#39;, &#39;tricode&#39;: &#39;OKC&#39;, &#39;teamId&#39;: &#39;1610612760&#39;, &#39;nickname&#39;: &#39;Thunder&#39;, &#39;urlName&#39;: &#39;thunder&#39;, &#39;teamShortName&#39;: &#39;Oklahoma City&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Northwest&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Orlando&#39;, &#39;altCityName&#39;: &#39;Orlando&#39;, &#39;fullName&#39;: &#39;Orlando Magic&#39;, &#39;tricode&#39;: &#39;ORL&#39;, &#39;teamId&#39;: &#39;1610612753&#39;, &#39;nickname&#39;: &#39;Magic&#39;, &#39;urlName&#39;: &#39;magic&#39;, &#39;teamShortName&#39;: &#39;Orlando&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Southeast&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Perth&#39;, &#39;altCityName&#39;: &#39;Perth&#39;, &#39;fullName&#39;: &#39;Perth Wildcats&#39;, &#39;tricode&#39;: &#39;PER&#39;, &#39;teamId&#39;: &#39;104&#39;, &#39;nickname&#39;: &#39;Wildcats&#39;, &#39;urlName&#39;: &#39;wildcats&#39;, &#39;teamShortName&#39;: &#39;Perth&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Philadelphia&#39;, &#39;altCityName&#39;: &#39;Philadelphia&#39;, &#39;fullName&#39;: &#39;Philadelphia 76ers&#39;, &#39;tricode&#39;: &#39;PHI&#39;, &#39;teamId&#39;: &#39;1610612755&#39;, &#39;nickname&#39;: &#39;76ers&#39;, &#39;urlName&#39;: &#39;sixers&#39;, &#39;teamShortName&#39;: &#39;Philadelphia&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Atlantic&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Phoenix&#39;, &#39;altCityName&#39;: &#39;Phoenix&#39;, &#39;fullName&#39;: &#39;Phoenix Suns&#39;, &#39;tricode&#39;: &#39;PHX&#39;, &#39;teamId&#39;: &#39;1610612756&#39;, &#39;nickname&#39;: &#39;Suns&#39;, &#39;urlName&#39;: &#39;suns&#39;, &#39;teamShortName&#39;: &#39;Phoenix&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Pacific&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Portland&#39;, &#39;altCityName&#39;: &#39;Portland&#39;, &#39;fullName&#39;: &#39;Portland Trail Blazers&#39;, &#39;tricode&#39;: &#39;POR&#39;, &#39;teamId&#39;: &#39;1610612757&#39;, &#39;nickname&#39;: &#39;Trail Blazers&#39;, &#39;urlName&#39;: &#39;blazers&#39;, &#39;teamShortName&#39;: &#39;Portland&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Northwest&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Rio de Janeiro&#39;, &#39;altCityName&#39;: &#39;Rio de Janeiro&#39;, &#39;fullName&#39;: &#39;Rio de Janeiro Flamengo&#39;, &#39;tricode&#39;: &#39;FLA&#39;, &#39;teamId&#39;: &#39;12325&#39;, &#39;nickname&#39;: &#39;Flamengo&#39;, &#39;urlName&#39;: &#39;flamengo&#39;, &#39;teamShortName&#39;: &#39;Flamengo&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Sacramento&#39;, &#39;altCityName&#39;: &#39;Sacramento&#39;, &#39;fullName&#39;: &#39;Sacramento Kings&#39;, &#39;tricode&#39;: &#39;SAC&#39;, &#39;teamId&#39;: &#39;1610612758&#39;, &#39;nickname&#39;: &#39;Kings&#39;, &#39;urlName&#39;: &#39;kings&#39;, &#39;teamShortName&#39;: &#39;Sacramento&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Pacific&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;San Antonio&#39;, &#39;altCityName&#39;: &#39;San Antonio&#39;, &#39;fullName&#39;: &#39;San Antonio Spurs&#39;, &#39;tricode&#39;: &#39;SAS&#39;, &#39;teamId&#39;: &#39;1610612759&#39;, &#39;nickname&#39;: &#39;Spurs&#39;, &#39;urlName&#39;: &#39;spurs&#39;, &#39;teamShortName&#39;: &#39;San Antonio&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Southwest&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Shanghai&#39;, &#39;altCityName&#39;: &#39;Shanghai&#39;, &#39;fullName&#39;: &#39;Shanghai Sharks&#39;, &#39;tricode&#39;: &#39;SDS&#39;, &#39;teamId&#39;: &#39;12329&#39;, &#39;nickname&#39;: &#39;Shanghai Sharks&#39;, &#39;urlName&#39;: &#39;shanghai_sharks&#39;, &#39;teamShortName&#39;: &#39;Shanghai&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Sydney&#39;, &#39;altCityName&#39;: &#39;Sydney&#39;, &#39;fullName&#39;: &#39;Sydney Kings&#39;, &#39;tricode&#39;: &#39;SYD&#39;, &#39;teamId&#39;: &#39;15015&#39;, &#39;nickname&#39;: &#39;Kings&#39;, &#39;urlName&#39;: &#39;sydkings&#39;, &#39;teamShortName&#39;: &#39;Sydney&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: True, &#39;city&#39;: &#39;Team&#39;, &#39;altCityName&#39;: &#39;Team&#39;, &#39;fullName&#39;: &#39;All-Stars&#39;, &#39;tricode&#39;: &#39;EST&#39;, &#39;teamId&#39;: &#39;1699999999&#39;, &#39;nickname&#39;: &#39;All-Stars&#39;, &#39;urlName&#39;: &#39;assn_away&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;East&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: True, &#39;city&#39;: &#39;Team&#39;, &#39;altCityName&#39;: &#39;Team&#39;, &#39;fullName&#39;: &#39;All-Stars&#39;, &#39;tricode&#39;: &#39;WST&#39;, &#39;teamId&#39;: &#39;1699999998&#39;, &#39;nickname&#39;: &#39;All-Stars&#39;, &#39;urlName&#39;: &#39;assn_home&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;West&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: True, &#39;city&#39;: &#39;Team Giannis&#39;, &#39;altCityName&#39;: &#39;Team Giannis&#39;, &#39;fullName&#39;: &#39;Team Giannis&#39;, &#39;tricode&#39;: &#39;GNS&#39;, &#39;teamId&#39;: &#39;1610616833&#39;, &#39;nickname&#39;: &#39;Team Giannis&#39;, &#39;urlName&#39;: &#39;team_giannis&#39;, &#39;teamShortName&#39;: &#39;Team Giannis&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;East&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: True, &#39;city&#39;: &#39;Team LeBron&#39;, &#39;altCityName&#39;: &#39;Team LeBron&#39;, &#39;fullName&#39;: &#39;Team LeBron&#39;, &#39;tricode&#39;: &#39;LBN&#39;, &#39;teamId&#39;: &#39;1610616834&#39;, &#39;nickname&#39;: &#39;Team LeBron&#39;, &#39;urlName&#39;: &#39;team_lebron&#39;, &#39;teamShortName&#39;: &#39;Team LeBron&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;West&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Toronto&#39;, &#39;altCityName&#39;: &#39;Toronto&#39;, &#39;fullName&#39;: &#39;Toronto Raptors&#39;, &#39;tricode&#39;: &#39;TOR&#39;, &#39;teamId&#39;: &#39;1610612761&#39;, &#39;nickname&#39;: &#39;Raptors&#39;, &#39;urlName&#39;: &#39;raptors&#39;, &#39;teamShortName&#39;: &#39;Toronto&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Atlantic&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: True, &#39;city&#39;: &#39;USA&#39;, &#39;altCityName&#39;: &#39;USA&#39;, &#39;fullName&#39;: &#39;USA&#39;, &#39;tricode&#39;: &#39;USA&#39;, &#39;teamId&#39;: &#39;1610616843&#39;, &#39;nickname&#39;: &#39;USA&#39;, &#39;urlName&#39;: &#39;usa&#39;, &#39;teamShortName&#39;: &#39;USA&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;East&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Utah&#39;, &#39;altCityName&#39;: &#39;Utah&#39;, &#39;fullName&#39;: &#39;Utah Jazz&#39;, &#39;tricode&#39;: &#39;UTA&#39;, &#39;teamId&#39;: &#39;1610612762&#39;, &#39;nickname&#39;: &#39;Jazz&#39;, &#39;urlName&#39;: &#39;jazz&#39;, &#39;teamShortName&#39;: &#39;Utah&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Northwest&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Washington&#39;, &#39;altCityName&#39;: &#39;Washington&#39;, &#39;fullName&#39;: &#39;Washington Wizards&#39;, &#39;tricode&#39;: &#39;WAS&#39;, &#39;teamId&#39;: &#39;1610612764&#39;, &#39;nickname&#39;: &#39;Wizards&#39;, &#39;urlName&#39;: &#39;wizards&#39;, &#39;teamShortName&#39;: &#39;Washington&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Southeast&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: True, &#39;city&#39;: &#39;World&#39;, &#39;altCityName&#39;: &#39;World&#39;, &#39;fullName&#39;: &#39;World&#39;, &#39;tricode&#39;: &#39;WLD&#39;, &#39;teamId&#39;: &#39;1610616844&#39;, &#39;nickname&#39;: &#39;World&#39;, &#39;urlName&#39;: &#39;world&#39;, &#39;teamShortName&#39;: &#39;World&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;East&#39;}], &#39;africa&#39;: [{&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Team&#39;, &#39;altCityName&#39;: &#39;Team&#39;, &#39;fullName&#39;: &#39;Team USA&#39;, &#39;tricode&#39;: &#39;USA&#39;, &#39;teamId&#39;: &#39;22&#39;, &#39;nickname&#39;: &#39;USA&#39;, &#39;urlName&#39;: &#39;nhs_usa&#39;, &#39;teamShortName&#39;: &#39;USA&#39;, &#39;confName&#39;: &#39;&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Team&#39;, &#39;altCityName&#39;: &#39;Team&#39;, &#39;fullName&#39;: &#39;Team World&#39;, &#39;tricode&#39;: &#39;WLD&#39;, &#39;teamId&#39;: &#39;21&#39;, &#39;nickname&#39;: &#39;World&#39;, &#39;urlName&#39;: &#39;nhs_world&#39;, &#39;teamShortName&#39;: &#39;World&#39;, &#39;confName&#39;: &#39;&#39;, &#39;divName&#39;: &#39;&#39;}], &#39;sacramento&#39;: [{&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Golden State&#39;, &#39;altCityName&#39;: &#39;Golden State&#39;, &#39;fullName&#39;: &#39;Golden State Warriors&#39;, &#39;tricode&#39;: &#39;GSW&#39;, &#39;teamId&#39;: &#39;1610612744&#39;, &#39;nickname&#39;: &#39;Warriors&#39;, &#39;urlName&#39;: &#39;warriors&#39;, &#39;teamShortName&#39;: &#39;Golden State&#39;, &#39;confName&#39;: &#39;Sacramento&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Los Angeles&#39;, &#39;altCityName&#39;: &#39;Los Angeles Lakers&#39;, &#39;fullName&#39;: &#39;Los Angeles Lakers&#39;, &#39;tricode&#39;: &#39;LAL&#39;, &#39;teamId&#39;: &#39;1610612747&#39;, &#39;nickname&#39;: &#39;Lakers&#39;, &#39;urlName&#39;: &#39;lakers&#39;, &#39;teamShortName&#39;: &#39;L.A. Lakers&#39;, &#39;confName&#39;: &#39;Sacramento&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Miami&#39;, &#39;altCityName&#39;: &#39;Miami&#39;, &#39;fullName&#39;: &#39;Miami Heat&#39;, &#39;tricode&#39;: &#39;MIA&#39;, &#39;teamId&#39;: &#39;1610612748&#39;, &#39;nickname&#39;: &#39;Heat&#39;, &#39;urlName&#39;: &#39;heat&#39;, &#39;teamShortName&#39;: &#39;Miami&#39;, &#39;confName&#39;: &#39;Sacramento&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Sacramento&#39;, &#39;altCityName&#39;: &#39;Sacramento&#39;, &#39;fullName&#39;: &#39;Sacramento Kings&#39;, &#39;tricode&#39;: &#39;SAC&#39;, &#39;teamId&#39;: &#39;1610612758&#39;, &#39;nickname&#39;: &#39;Kings&#39;, &#39;urlName&#39;: &#39;kings&#39;, &#39;teamShortName&#39;: &#39;Sacramento&#39;, &#39;confName&#39;: &#39;Sacramento&#39;, &#39;divName&#39;: &#39;&#39;}], &#39;vegas&#39;: [{&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Atlanta&#39;, &#39;altCityName&#39;: &#39;Atlanta&#39;, &#39;fullName&#39;: &#39;Atlanta Hawks&#39;, &#39;tricode&#39;: &#39;ATL&#39;, &#39;teamId&#39;: &#39;1610612737&#39;, &#39;nickname&#39;: &#39;Hawks&#39;, &#39;urlName&#39;: &#39;hawks&#39;, &#39;teamShortName&#39;: &#39;Atlanta&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Boston&#39;, &#39;altCityName&#39;: &#39;Boston&#39;, &#39;fullName&#39;: &#39;Boston Celtics&#39;, &#39;tricode&#39;: &#39;BOS&#39;, &#39;teamId&#39;: &#39;1610612738&#39;, &#39;nickname&#39;: &#39;Celtics&#39;, &#39;urlName&#39;: &#39;celtics&#39;, &#39;teamShortName&#39;: &#39;Boston&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Brooklyn&#39;, &#39;altCityName&#39;: &#39;Brooklyn&#39;, &#39;fullName&#39;: &#39;Brooklyn Nets&#39;, &#39;tricode&#39;: &#39;BKN&#39;, &#39;teamId&#39;: &#39;1610612751&#39;, &#39;nickname&#39;: &#39;Nets&#39;, &#39;urlName&#39;: &#39;nets&#39;, &#39;teamShortName&#39;: &#39;Brooklyn&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Charlotte&#39;, &#39;altCityName&#39;: &#39;Charlotte&#39;, &#39;fullName&#39;: &#39;Charlotte Hornets&#39;, &#39;tricode&#39;: &#39;CHA&#39;, &#39;teamId&#39;: &#39;1610612766&#39;, &#39;nickname&#39;: &#39;Hornets&#39;, &#39;urlName&#39;: &#39;hornets&#39;, &#39;teamShortName&#39;: &#39;Charlotte&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Chicago&#39;, &#39;altCityName&#39;: &#39;Chicago&#39;, &#39;fullName&#39;: &#39;Chicago Bulls&#39;, &#39;tricode&#39;: &#39;CHI&#39;, &#39;teamId&#39;: &#39;1610612741&#39;, &#39;nickname&#39;: &#39;Bulls&#39;, &#39;urlName&#39;: &#39;bulls&#39;, &#39;teamShortName&#39;: &#39;Chicago&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;China&#39;, &#39;altCityName&#39;: &#39;China&#39;, &#39;fullName&#39;: &#39;Team China&#39;, &#39;tricode&#39;: &#39;CHN&#39;, &#39;teamId&#39;: &#39;45&#39;, &#39;nickname&#39;: &#39;China&#39;, &#39;urlName&#39;: &#39;china&#39;, &#39;teamShortName&#39;: &#39;China&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Cleveland&#39;, &#39;altCityName&#39;: &#39;Cleveland&#39;, &#39;fullName&#39;: &#39;Cleveland Cavaliers&#39;, &#39;tricode&#39;: &#39;CLE&#39;, &#39;teamId&#39;: &#39;1610612739&#39;, &#39;nickname&#39;: &#39;Cavaliers&#39;, &#39;urlName&#39;: &#39;cavaliers&#39;, &#39;teamShortName&#39;: &#39;Cleveland&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Croatia&#39;, &#39;altCityName&#39;: &#39;Croatia&#39;, &#39;fullName&#39;: &#39;Team Croatia&#39;, &#39;tricode&#39;: &#39;CRO&#39;, &#39;teamId&#39;: &#39;70&#39;, &#39;nickname&#39;: &#39;Croatia&#39;, &#39;urlName&#39;: &#39;croatia&#39;, &#39;teamShortName&#39;: &#39;Croatia&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Dallas&#39;, &#39;altCityName&#39;: &#39;Dallas&#39;, &#39;fullName&#39;: &#39;Dallas Mavericks&#39;, &#39;tricode&#39;: &#39;DAL&#39;, &#39;teamId&#39;: &#39;1610612742&#39;, &#39;nickname&#39;: &#39;Mavericks&#39;, &#39;urlName&#39;: &#39;mavericks&#39;, &#39;teamShortName&#39;: &#39;Dallas&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Denver&#39;, &#39;altCityName&#39;: &#39;Denver&#39;, &#39;fullName&#39;: &#39;Denver Nuggets&#39;, &#39;tricode&#39;: &#39;DEN&#39;, &#39;teamId&#39;: &#39;1610612743&#39;, &#39;nickname&#39;: &#39;Nuggets&#39;, &#39;urlName&#39;: &#39;nuggets&#39;, &#39;teamShortName&#39;: &#39;Denver&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Detroit&#39;, &#39;altCityName&#39;: &#39;Detroit&#39;, &#39;fullName&#39;: &#39;Detroit Pistons&#39;, &#39;tricode&#39;: &#39;DET&#39;, &#39;teamId&#39;: &#39;1610612765&#39;, &#39;nickname&#39;: &#39;Pistons&#39;, &#39;urlName&#39;: &#39;pistons&#39;, &#39;teamShortName&#39;: &#39;Detroit&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Golden State&#39;, &#39;altCityName&#39;: &#39;Golden State&#39;, &#39;fullName&#39;: &#39;Golden State Warriors&#39;, &#39;tricode&#39;: &#39;GSW&#39;, &#39;teamId&#39;: &#39;1610612744&#39;, &#39;nickname&#39;: &#39;Warriors&#39;, &#39;urlName&#39;: &#39;warriors&#39;, &#39;teamShortName&#39;: &#39;Golden State&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Houston&#39;, &#39;altCityName&#39;: &#39;Houston&#39;, &#39;fullName&#39;: &#39;Houston Rockets&#39;, &#39;tricode&#39;: &#39;HOU&#39;, &#39;teamId&#39;: &#39;1610612745&#39;, &#39;nickname&#39;: &#39;Rockets&#39;, &#39;urlName&#39;: &#39;rockets&#39;, &#39;teamShortName&#39;: &#39;Houston&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Indiana&#39;, &#39;altCityName&#39;: &#39;Indiana&#39;, &#39;fullName&#39;: &#39;Indiana Pacers&#39;, &#39;tricode&#39;: &#39;IND&#39;, &#39;teamId&#39;: &#39;1610612754&#39;, &#39;nickname&#39;: &#39;Pacers&#39;, &#39;urlName&#39;: &#39;pacers&#39;, &#39;teamShortName&#39;: &#39;Indiana&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;LA&#39;, &#39;altCityName&#39;: &#39;LA Clippers&#39;, &#39;fullName&#39;: &#39;LA Clippers&#39;, &#39;tricode&#39;: &#39;LAC&#39;, &#39;teamId&#39;: &#39;1610612746&#39;, &#39;nickname&#39;: &#39;Clippers&#39;, &#39;urlName&#39;: &#39;clippers&#39;, &#39;teamShortName&#39;: &#39;LA Clippers&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Los Angeles&#39;, &#39;altCityName&#39;: &#39;Los Angeles Lakers&#39;, &#39;fullName&#39;: &#39;Los Angeles Lakers&#39;, &#39;tricode&#39;: &#39;LAL&#39;, &#39;teamId&#39;: &#39;1610612747&#39;, &#39;nickname&#39;: &#39;Lakers&#39;, &#39;urlName&#39;: &#39;lakers&#39;, &#39;teamShortName&#39;: &#39;L.A. Lakers&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Memphis&#39;, &#39;altCityName&#39;: &#39;Memphis&#39;, &#39;fullName&#39;: &#39;Memphis Grizzlies&#39;, &#39;tricode&#39;: &#39;MEM&#39;, &#39;teamId&#39;: &#39;1610612763&#39;, &#39;nickname&#39;: &#39;Grizzlies&#39;, &#39;urlName&#39;: &#39;grizzlies&#39;, &#39;teamShortName&#39;: &#39;Memphis&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Miami&#39;, &#39;altCityName&#39;: &#39;Miami&#39;, &#39;fullName&#39;: &#39;Miami Heat&#39;, &#39;tricode&#39;: &#39;MIA&#39;, &#39;teamId&#39;: &#39;1610612748&#39;, &#39;nickname&#39;: &#39;Heat&#39;, &#39;urlName&#39;: &#39;heat&#39;, &#39;teamShortName&#39;: &#39;Miami&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Milwaukee&#39;, &#39;altCityName&#39;: &#39;Milwaukee&#39;, &#39;fullName&#39;: &#39;Milwaukee Bucks&#39;, &#39;tricode&#39;: &#39;MIL&#39;, &#39;teamId&#39;: &#39;1610612749&#39;, &#39;nickname&#39;: &#39;Bucks&#39;, &#39;urlName&#39;: &#39;bucks&#39;, &#39;teamShortName&#39;: &#39;Milwaukee&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Minnesota&#39;, &#39;altCityName&#39;: &#39;Minnesota&#39;, &#39;fullName&#39;: &#39;Minnesota Timberwolves&#39;, &#39;tricode&#39;: &#39;MIN&#39;, &#39;teamId&#39;: &#39;1610612750&#39;, &#39;nickname&#39;: &#39;Timberwolves&#39;, &#39;urlName&#39;: &#39;timberwolves&#39;, &#39;teamShortName&#39;: &#39;Minnesota&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;New Orleans&#39;, &#39;altCityName&#39;: &#39;New Orleans&#39;, &#39;fullName&#39;: &#39;New Orleans Pelicans&#39;, &#39;tricode&#39;: &#39;NOP&#39;, &#39;teamId&#39;: &#39;1610612740&#39;, &#39;nickname&#39;: &#39;Pelicans&#39;, &#39;urlName&#39;: &#39;pelicans&#39;, &#39;teamShortName&#39;: &#39;New Orleans&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;New York&#39;, &#39;altCityName&#39;: &#39;New York&#39;, &#39;fullName&#39;: &#39;New York Knicks&#39;, &#39;tricode&#39;: &#39;NYK&#39;, &#39;teamId&#39;: &#39;1610612752&#39;, &#39;nickname&#39;: &#39;Knicks&#39;, &#39;urlName&#39;: &#39;knicks&#39;, &#39;teamShortName&#39;: &#39;New York&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Oklahoma City&#39;, &#39;altCityName&#39;: &#39;Oklahoma City&#39;, &#39;fullName&#39;: &#39;Oklahoma City Thunder&#39;, &#39;tricode&#39;: &#39;OKC&#39;, &#39;teamId&#39;: &#39;1610612760&#39;, &#39;nickname&#39;: &#39;Thunder&#39;, &#39;urlName&#39;: &#39;thunder&#39;, &#39;teamShortName&#39;: &#39;Oklahoma City&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Orlando&#39;, &#39;altCityName&#39;: &#39;Orlando&#39;, &#39;fullName&#39;: &#39;Orlando Magic&#39;, &#39;tricode&#39;: &#39;ORL&#39;, &#39;teamId&#39;: &#39;1610612753&#39;, &#39;nickname&#39;: &#39;Magic&#39;, &#39;urlName&#39;: &#39;magic&#39;, &#39;teamShortName&#39;: &#39;Orlando&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Philadelphia&#39;, &#39;altCityName&#39;: &#39;Philadelphia&#39;, &#39;fullName&#39;: &#39;Philadelphia 76ers&#39;, &#39;tricode&#39;: &#39;PHI&#39;, &#39;teamId&#39;: &#39;1610612755&#39;, &#39;nickname&#39;: &#39;76ers&#39;, &#39;urlName&#39;: &#39;sixers&#39;, &#39;teamShortName&#39;: &#39;Philadelphia&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Phoenix&#39;, &#39;altCityName&#39;: &#39;Phoenix&#39;, &#39;fullName&#39;: &#39;Phoenix Suns&#39;, &#39;tricode&#39;: &#39;PHX&#39;, &#39;teamId&#39;: &#39;1610612756&#39;, &#39;nickname&#39;: &#39;Suns&#39;, &#39;urlName&#39;: &#39;suns&#39;, &#39;teamShortName&#39;: &#39;Phoenix&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Portland&#39;, &#39;altCityName&#39;: &#39;Portland&#39;, &#39;fullName&#39;: &#39;Portland Trail Blazers&#39;, &#39;tricode&#39;: &#39;POR&#39;, &#39;teamId&#39;: &#39;1610612757&#39;, &#39;nickname&#39;: &#39;Trail Blazers&#39;, &#39;urlName&#39;: &#39;blazers&#39;, &#39;teamShortName&#39;: &#39;Portland&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Sacramento&#39;, &#39;altCityName&#39;: &#39;Sacramento&#39;, &#39;fullName&#39;: &#39;Sacramento Kings&#39;, &#39;tricode&#39;: &#39;SAC&#39;, &#39;teamId&#39;: &#39;1610612758&#39;, &#39;nickname&#39;: &#39;Kings&#39;, &#39;urlName&#39;: &#39;kings&#39;, &#39;teamShortName&#39;: &#39;Sacramento&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;San Antonio&#39;, &#39;altCityName&#39;: &#39;San Antonio&#39;, &#39;fullName&#39;: &#39;San Antonio Spurs&#39;, &#39;tricode&#39;: &#39;SAS&#39;, &#39;teamId&#39;: &#39;1610612759&#39;, &#39;nickname&#39;: &#39;Spurs&#39;, &#39;urlName&#39;: &#39;spurs&#39;, &#39;teamShortName&#39;: &#39;San Antonio&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Toronto&#39;, &#39;altCityName&#39;: &#39;Toronto&#39;, &#39;fullName&#39;: &#39;Toronto Raptors&#39;, &#39;tricode&#39;: &#39;TOR&#39;, &#39;teamId&#39;: &#39;1610612761&#39;, &#39;nickname&#39;: &#39;Raptors&#39;, &#39;urlName&#39;: &#39;raptors&#39;, &#39;teamShortName&#39;: &#39;Toronto&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Utah&#39;, &#39;altCityName&#39;: &#39;Utah&#39;, &#39;fullName&#39;: &#39;Utah Jazz&#39;, &#39;tricode&#39;: &#39;UTA&#39;, &#39;teamId&#39;: &#39;1610612762&#39;, &#39;nickname&#39;: &#39;Jazz&#39;, &#39;urlName&#39;: &#39;jazz&#39;, &#39;teamShortName&#39;: &#39;Utah&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Washington&#39;, &#39;altCityName&#39;: &#39;Washington&#39;, &#39;fullName&#39;: &#39;Washington Wizards&#39;, &#39;tricode&#39;: &#39;WAS&#39;, &#39;teamId&#39;: &#39;1610612764&#39;, &#39;nickname&#39;: &#39;Wizards&#39;, &#39;urlName&#39;: &#39;wizards&#39;, &#39;teamShortName&#39;: &#39;Washington&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}], &#39;utah&#39;: [{&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Cleveland&#39;, &#39;altCityName&#39;: &#39;Cleveland&#39;, &#39;fullName&#39;: &#39;Cleveland Cavaliers&#39;, &#39;tricode&#39;: &#39;CLE&#39;, &#39;teamId&#39;: &#39;1610612739&#39;, &#39;nickname&#39;: &#39;Cavaliers&#39;, &#39;urlName&#39;: &#39;cavaliers&#39;, &#39;teamShortName&#39;: &#39;Cleveland&#39;, &#39;confName&#39;: &#39;Utah&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Memphis&#39;, &#39;altCityName&#39;: &#39;Memphis&#39;, &#39;fullName&#39;: &#39;Memphis Grizzlies&#39;, &#39;tricode&#39;: &#39;MEM&#39;, &#39;teamId&#39;: &#39;1610612763&#39;, &#39;nickname&#39;: &#39;Grizzlies&#39;, &#39;urlName&#39;: &#39;grizzlies&#39;, &#39;teamShortName&#39;: &#39;Memphis&#39;, &#39;confName&#39;: &#39;Utah&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;San Antonio&#39;, &#39;altCityName&#39;: &#39;San Antonio&#39;, &#39;fullName&#39;: &#39;San Antonio Spurs&#39;, &#39;tricode&#39;: &#39;SAS&#39;, &#39;teamId&#39;: &#39;1610612759&#39;, &#39;nickname&#39;: &#39;Spurs&#39;, &#39;urlName&#39;: &#39;spurs&#39;, &#39;teamShortName&#39;: &#39;San Antonio&#39;, &#39;confName&#39;: &#39;Utah&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Utah&#39;, &#39;altCityName&#39;: &#39;Utah&#39;, &#39;fullName&#39;: &#39;Utah Jazz&#39;, &#39;tricode&#39;: &#39;UTA&#39;, &#39;teamId&#39;: &#39;1610612762&#39;, &#39;nickname&#39;: &#39;Jazz&#39;, &#39;urlName&#39;: &#39;jazz&#39;, &#39;teamShortName&#39;: &#39;Utah&#39;, &#39;confName&#39;: &#39;Utah&#39;, &#39;divName&#39;: &#39;&#39;}]}}
+{&#39;_internal&#39;: {&#39;pubDateTime&#39;: &#39;2019-06-26 06:00:23.891 EDT&#39;, &#39;igorPath&#39;: &#39;cron,1561543218800,1561543218800|router,1561543218800,1561543218922|domUpdater,1561543219144,1561543219858|feedProducer,1561543221917,1561543224371&#39;, &#39;xslt&#39;: &#39;NBA/xsl/league/roster/marty_teams_list.xsl&#39;, &#39;xsltForceRecompile&#39;: &#39;true&#39;, &#39;xsltInCache&#39;: &#39;false&#39;, &#39;xsltCompileTimeMillis&#39;: &#39;1545&#39;, &#39;xsltTransformTimeMillis&#39;: &#39;540&#39;, &#39;consolidatedDomKey&#39;: &#39;qamanual__transform__marty_teams_list__5498140551604&#39;, &#39;endToEndTimeMillis&#39;: &#39;5571&#39;}, &#39;league&#39;: {&#39;standard&#39;: [{&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Croatia&#39;, &#39;altCityName&#39;: &#39;Croatia&#39;, &#39;fullName&#39;: &#39;Team Croatia&#39;, &#39;tricode&#39;: &#39;CRO&#39;, &#39;teamId&#39;: &#39;70&#39;, &#39;nickname&#39;: &#39;Croatia&#39;, &#39;urlName&#39;: &#39;croatia&#39;, &#39;teamShortName&#39;: &#39;Croatia&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;China&#39;, &#39;altCityName&#39;: &#39;China&#39;, &#39;fullName&#39;: &#39;Team China&#39;, &#39;tricode&#39;: &#39;CHN&#39;, &#39;teamId&#39;: &#39;45&#39;, &#39;nickname&#39;: &#39;China&#39;, &#39;urlName&#39;: &#39;china&#39;, &#39;teamShortName&#39;: &#39;China&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Adelaide&#39;, &#39;altCityName&#39;: &#39;Adelaide&#39;, &#39;fullName&#39;: &#39;Adelaide 36ers&#39;, &#39;tricode&#39;: &#39;ADL&#39;, &#39;teamId&#39;: &#39;15019&#39;, &#39;nickname&#39;: &#39;36ers&#39;, &#39;urlName&#39;: &#39;36ers&#39;, &#39;teamShortName&#39;: &#39;Adelaide&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Atlanta&#39;, &#39;altCityName&#39;: &#39;Atlanta&#39;, &#39;fullName&#39;: &#39;Atlanta Hawks&#39;, &#39;tricode&#39;: &#39;ATL&#39;, &#39;teamId&#39;: &#39;1610612737&#39;, &#39;nickname&#39;: &#39;Hawks&#39;, &#39;urlName&#39;: &#39;hawks&#39;, &#39;teamShortName&#39;: &#39;Atlanta&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Southeast&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: True, &#39;city&#39;: &#39;Away&#39;, &#39;altCityName&#39;: &#39;Away&#39;, &#39;fullName&#39;: &#39;Away Away&#39;, &#39;tricode&#39;: &#39;AWY&#39;, &#39;teamId&#39;: &#39;1610616840&#39;, &#39;nickname&#39;: &#39;Away&#39;, &#39;urlName&#39;: &#39;away&#39;, &#39;teamShortName&#39;: &#39;Away&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;East&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Beijing&#39;, &#39;altCityName&#39;: &#39;Beijing&#39;, &#39;fullName&#39;: &#39;Beijing Ducks&#39;, &#39;tricode&#39;: &#39;BJD&#39;, &#39;teamId&#39;: &#39;15021&#39;, &#39;nickname&#39;: &#39;Ducks&#39;, &#39;urlName&#39;: &#39;ducks&#39;, &#39;teamShortName&#39;: &#39;Beijing&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Boston&#39;, &#39;altCityName&#39;: &#39;Boston&#39;, &#39;fullName&#39;: &#39;Boston Celtics&#39;, &#39;tricode&#39;: &#39;BOS&#39;, &#39;teamId&#39;: &#39;1610612738&#39;, &#39;nickname&#39;: &#39;Celtics&#39;, &#39;urlName&#39;: &#39;celtics&#39;, &#39;teamShortName&#39;: &#39;Boston&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Atlantic&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Brooklyn&#39;, &#39;altCityName&#39;: &#39;Brooklyn&#39;, &#39;fullName&#39;: &#39;Brooklyn Nets&#39;, &#39;tricode&#39;: &#39;BKN&#39;, &#39;teamId&#39;: &#39;1610612751&#39;, &#39;nickname&#39;: &#39;Nets&#39;, &#39;urlName&#39;: &#39;nets&#39;, &#39;teamShortName&#39;: &#39;Brooklyn&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Atlantic&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Charlotte&#39;, &#39;altCityName&#39;: &#39;Charlotte&#39;, &#39;fullName&#39;: &#39;Charlotte Hornets&#39;, &#39;tricode&#39;: &#39;CHA&#39;, &#39;teamId&#39;: &#39;1610612766&#39;, &#39;nickname&#39;: &#39;Hornets&#39;, &#39;urlName&#39;: &#39;hornets&#39;, &#39;teamShortName&#39;: &#39;Charlotte&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Southeast&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Buenos Aires&#39;, &#39;altCityName&#39;: &#39;Buenos Aires&#39;, &#39;fullName&#39;: &#39;San Lorenzo de Almagro&#39;, &#39;tricode&#39;: &#39;SLA&#39;, &#39;teamId&#39;: &#39;12330&#39;, &#39;nickname&#39;: &#39;San Lorenzo&#39;, &#39;urlName&#39;: &#39;san_lorenzo&#39;, &#39;teamShortName&#39;: &#39;San Lorenzo&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Chicago&#39;, &#39;altCityName&#39;: &#39;Chicago&#39;, &#39;fullName&#39;: &#39;Chicago Bulls&#39;, &#39;tricode&#39;: &#39;CHI&#39;, &#39;teamId&#39;: &#39;1610612741&#39;, &#39;nickname&#39;: &#39;Bulls&#39;, &#39;urlName&#39;: &#39;bulls&#39;, &#39;teamShortName&#39;: &#39;Chicago&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Central&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Cleveland&#39;, &#39;altCityName&#39;: &#39;Cleveland&#39;, &#39;fullName&#39;: &#39;Cleveland Cavaliers&#39;, &#39;tricode&#39;: &#39;CLE&#39;, &#39;teamId&#39;: &#39;1610612739&#39;, &#39;nickname&#39;: &#39;Cavaliers&#39;, &#39;urlName&#39;: &#39;cavaliers&#39;, &#39;teamShortName&#39;: &#39;Cleveland&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Central&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Dallas&#39;, &#39;altCityName&#39;: &#39;Dallas&#39;, &#39;fullName&#39;: &#39;Dallas Mavericks&#39;, &#39;tricode&#39;: &#39;DAL&#39;, &#39;teamId&#39;: &#39;1610612742&#39;, &#39;nickname&#39;: &#39;Mavericks&#39;, &#39;urlName&#39;: &#39;mavericks&#39;, &#39;teamShortName&#39;: &#39;Dallas&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Southwest&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Denver&#39;, &#39;altCityName&#39;: &#39;Denver&#39;, &#39;fullName&#39;: &#39;Denver Nuggets&#39;, &#39;tricode&#39;: &#39;DEN&#39;, &#39;teamId&#39;: &#39;1610612743&#39;, &#39;nickname&#39;: &#39;Nuggets&#39;, &#39;urlName&#39;: &#39;nuggets&#39;, &#39;teamShortName&#39;: &#39;Denver&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Northwest&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Detroit&#39;, &#39;altCityName&#39;: &#39;Detroit&#39;, &#39;fullName&#39;: &#39;Detroit Pistons&#39;, &#39;tricode&#39;: &#39;DET&#39;, &#39;teamId&#39;: &#39;1610612765&#39;, &#39;nickname&#39;: &#39;Pistons&#39;, &#39;urlName&#39;: &#39;pistons&#39;, &#39;teamShortName&#39;: &#39;Detroit&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Central&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Franca&#39;, &#39;altCityName&#39;: &#39;Franca&#39;, &#39;fullName&#39;: &#39;SESI/Franca&#39;, &#39;tricode&#39;: &#39;FRA&#39;, &#39;teamId&#39;: &#39;12332&#39;, &#39;nickname&#39;: &#39;Franca&#39;, &#39;urlName&#39;: &#39;franca&#39;, &#39;teamShortName&#39;: &#39;Franca&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Golden State&#39;, &#39;altCityName&#39;: &#39;Golden State&#39;, &#39;fullName&#39;: &#39;Golden State Warriors&#39;, &#39;tricode&#39;: &#39;GSW&#39;, &#39;teamId&#39;: &#39;1610612744&#39;, &#39;nickname&#39;: &#39;Warriors&#39;, &#39;urlName&#39;: &#39;warriors&#39;, &#39;teamShortName&#39;: &#39;Golden State&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Pacific&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Guangzhou&#39;, &#39;altCityName&#39;: &#39;Guangzhou&#39;, &#39;fullName&#39;: &#39;Guangzhou Long-Lions&#39;, &#39;tricode&#39;: &#39;GUA&#39;, &#39;teamId&#39;: &#39;15018&#39;, &#39;nickname&#39;: &#39;Long-Lions&#39;, &#39;urlName&#39;: &#39;long-lions&#39;, &#39;teamShortName&#39;: &#39;Guangzhou&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Haifa&#39;, &#39;altCityName&#39;: &#39;Haifa&#39;, &#39;fullName&#39;: &#39;Haifa Maccabi Haifa&#39;, &#39;tricode&#39;: &#39;MAC&#39;, &#39;teamId&#39;: &#39;93&#39;, &#39;nickname&#39;: &#39;Maccabi Haifa&#39;, &#39;urlName&#39;: &#39;maccabi_haifa&#39;, &#39;teamShortName&#39;: &#39;Maccabi Haifa&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: True, &#39;city&#39;: &#39;Home&#39;, &#39;altCityName&#39;: &#39;Home&#39;, &#39;fullName&#39;: &#39;Home Home&#39;, &#39;tricode&#39;: &#39;HME&#39;, &#39;teamId&#39;: &#39;1610616839&#39;, &#39;nickname&#39;: &#39;Home&#39;, &#39;urlName&#39;: &#39;home&#39;, &#39;teamShortName&#39;: &#39;Home&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;East&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Houston&#39;, &#39;altCityName&#39;: &#39;Houston&#39;, &#39;fullName&#39;: &#39;Houston Rockets&#39;, &#39;tricode&#39;: &#39;HOU&#39;, &#39;teamId&#39;: &#39;1610612745&#39;, &#39;nickname&#39;: &#39;Rockets&#39;, &#39;urlName&#39;: &#39;rockets&#39;, &#39;teamShortName&#39;: &#39;Houston&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Southwest&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Indiana&#39;, &#39;altCityName&#39;: &#39;Indiana&#39;, &#39;fullName&#39;: &#39;Indiana Pacers&#39;, &#39;tricode&#39;: &#39;IND&#39;, &#39;teamId&#39;: &#39;1610612754&#39;, &#39;nickname&#39;: &#39;Pacers&#39;, &#39;urlName&#39;: &#39;pacers&#39;, &#39;teamShortName&#39;: &#39;Indiana&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Central&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;LA&#39;, &#39;altCityName&#39;: &#39;LA Clippers&#39;, &#39;fullName&#39;: &#39;LA Clippers&#39;, &#39;tricode&#39;: &#39;LAC&#39;, &#39;teamId&#39;: &#39;1610612746&#39;, &#39;nickname&#39;: &#39;Clippers&#39;, &#39;urlName&#39;: &#39;clippers&#39;, &#39;teamShortName&#39;: &#39;LA Clippers&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Pacific&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Los Angeles&#39;, &#39;altCityName&#39;: &#39;Los Angeles Lakers&#39;, &#39;fullName&#39;: &#39;Los Angeles Lakers&#39;, &#39;tricode&#39;: &#39;LAL&#39;, &#39;teamId&#39;: &#39;1610612747&#39;, &#39;nickname&#39;: &#39;Lakers&#39;, &#39;urlName&#39;: &#39;lakers&#39;, &#39;teamShortName&#39;: &#39;L.A. Lakers&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Pacific&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Melbourne&#39;, &#39;altCityName&#39;: &#39;Melbourne&#39;, &#39;fullName&#39;: &#39;Melbourne United&#39;, &#39;tricode&#39;: &#39;MEL&#39;, &#39;teamId&#39;: &#39;15016&#39;, &#39;nickname&#39;: &#39;United&#39;, &#39;urlName&#39;: &#39;united&#39;, &#39;teamShortName&#39;: &#39;Melbourne&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Memphis&#39;, &#39;altCityName&#39;: &#39;Memphis&#39;, &#39;fullName&#39;: &#39;Memphis Grizzlies&#39;, &#39;tricode&#39;: &#39;MEM&#39;, &#39;teamId&#39;: &#39;1610612763&#39;, &#39;nickname&#39;: &#39;Grizzlies&#39;, &#39;urlName&#39;: &#39;grizzlies&#39;, &#39;teamShortName&#39;: &#39;Memphis&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Southwest&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Miami&#39;, &#39;altCityName&#39;: &#39;Miami&#39;, &#39;fullName&#39;: &#39;Miami Heat&#39;, &#39;tricode&#39;: &#39;MIA&#39;, &#39;teamId&#39;: &#39;1610612748&#39;, &#39;nickname&#39;: &#39;Heat&#39;, &#39;urlName&#39;: &#39;heat&#39;, &#39;teamShortName&#39;: &#39;Miami&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Southeast&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Milwaukee&#39;, &#39;altCityName&#39;: &#39;Milwaukee&#39;, &#39;fullName&#39;: &#39;Milwaukee Bucks&#39;, &#39;tricode&#39;: &#39;MIL&#39;, &#39;teamId&#39;: &#39;1610612749&#39;, &#39;nickname&#39;: &#39;Bucks&#39;, &#39;urlName&#39;: &#39;bucks&#39;, &#39;teamShortName&#39;: &#39;Milwaukee&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Central&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Minnesota&#39;, &#39;altCityName&#39;: &#39;Minnesota&#39;, &#39;fullName&#39;: &#39;Minnesota Timberwolves&#39;, &#39;tricode&#39;: &#39;MIN&#39;, &#39;teamId&#39;: &#39;1610612750&#39;, &#39;nickname&#39;: &#39;Timberwolves&#39;, &#39;urlName&#39;: &#39;timberwolves&#39;, &#39;teamShortName&#39;: &#39;Minnesota&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Northwest&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;New Orleans&#39;, &#39;altCityName&#39;: &#39;New Orleans&#39;, &#39;fullName&#39;: &#39;New Orleans Pelicans&#39;, &#39;tricode&#39;: &#39;NOP&#39;, &#39;teamId&#39;: &#39;1610612740&#39;, &#39;nickname&#39;: &#39;Pelicans&#39;, &#39;urlName&#39;: &#39;pelicans&#39;, &#39;teamShortName&#39;: &#39;New Orleans&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Southwest&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;New York&#39;, &#39;altCityName&#39;: &#39;New York&#39;, &#39;fullName&#39;: &#39;New York Knicks&#39;, &#39;tricode&#39;: &#39;NYK&#39;, &#39;teamId&#39;: &#39;1610612752&#39;, &#39;nickname&#39;: &#39;Knicks&#39;, &#39;urlName&#39;: &#39;knicks&#39;, &#39;teamShortName&#39;: &#39;New York&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Atlantic&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;New Zealand&#39;, &#39;altCityName&#39;: &#39;New Zealand&#39;, &#39;fullName&#39;: &#39;New Zealand Breakers&#39;, &#39;tricode&#39;: &#39;NZB&#39;, &#39;teamId&#39;: &#39;15020&#39;, &#39;nickname&#39;: &#39;Breakers&#39;, &#39;urlName&#39;: &#39;breakers&#39;, &#39;teamShortName&#39;: &#39;New Zealand&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Oklahoma City&#39;, &#39;altCityName&#39;: &#39;Oklahoma City&#39;, &#39;fullName&#39;: &#39;Oklahoma City Thunder&#39;, &#39;tricode&#39;: &#39;OKC&#39;, &#39;teamId&#39;: &#39;1610612760&#39;, &#39;nickname&#39;: &#39;Thunder&#39;, &#39;urlName&#39;: &#39;thunder&#39;, &#39;teamShortName&#39;: &#39;Oklahoma City&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Northwest&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Orlando&#39;, &#39;altCityName&#39;: &#39;Orlando&#39;, &#39;fullName&#39;: &#39;Orlando Magic&#39;, &#39;tricode&#39;: &#39;ORL&#39;, &#39;teamId&#39;: &#39;1610612753&#39;, &#39;nickname&#39;: &#39;Magic&#39;, &#39;urlName&#39;: &#39;magic&#39;, &#39;teamShortName&#39;: &#39;Orlando&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Southeast&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Perth&#39;, &#39;altCityName&#39;: &#39;Perth&#39;, &#39;fullName&#39;: &#39;Perth Wildcats&#39;, &#39;tricode&#39;: &#39;PER&#39;, &#39;teamId&#39;: &#39;104&#39;, &#39;nickname&#39;: &#39;Wildcats&#39;, &#39;urlName&#39;: &#39;wildcats&#39;, &#39;teamShortName&#39;: &#39;Perth&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Philadelphia&#39;, &#39;altCityName&#39;: &#39;Philadelphia&#39;, &#39;fullName&#39;: &#39;Philadelphia 76ers&#39;, &#39;tricode&#39;: &#39;PHI&#39;, &#39;teamId&#39;: &#39;1610612755&#39;, &#39;nickname&#39;: &#39;76ers&#39;, &#39;urlName&#39;: &#39;sixers&#39;, &#39;teamShortName&#39;: &#39;Philadelphia&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Atlantic&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Phoenix&#39;, &#39;altCityName&#39;: &#39;Phoenix&#39;, &#39;fullName&#39;: &#39;Phoenix Suns&#39;, &#39;tricode&#39;: &#39;PHX&#39;, &#39;teamId&#39;: &#39;1610612756&#39;, &#39;nickname&#39;: &#39;Suns&#39;, &#39;urlName&#39;: &#39;suns&#39;, &#39;teamShortName&#39;: &#39;Phoenix&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Pacific&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Portland&#39;, &#39;altCityName&#39;: &#39;Portland&#39;, &#39;fullName&#39;: &#39;Portland Trail Blazers&#39;, &#39;tricode&#39;: &#39;POR&#39;, &#39;teamId&#39;: &#39;1610612757&#39;, &#39;nickname&#39;: &#39;Trail Blazers&#39;, &#39;urlName&#39;: &#39;blazers&#39;, &#39;teamShortName&#39;: &#39;Portland&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Northwest&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Rio de Janeiro&#39;, &#39;altCityName&#39;: &#39;Rio de Janeiro&#39;, &#39;fullName&#39;: &#39;Rio de Janeiro Flamengo&#39;, &#39;tricode&#39;: &#39;FLA&#39;, &#39;teamId&#39;: &#39;12325&#39;, &#39;nickname&#39;: &#39;Flamengo&#39;, &#39;urlName&#39;: &#39;flamengo&#39;, &#39;teamShortName&#39;: &#39;Flamengo&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Sacramento&#39;, &#39;altCityName&#39;: &#39;Sacramento&#39;, &#39;fullName&#39;: &#39;Sacramento Kings&#39;, &#39;tricode&#39;: &#39;SAC&#39;, &#39;teamId&#39;: &#39;1610612758&#39;, &#39;nickname&#39;: &#39;Kings&#39;, &#39;urlName&#39;: &#39;kings&#39;, &#39;teamShortName&#39;: &#39;Sacramento&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Pacific&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;San Antonio&#39;, &#39;altCityName&#39;: &#39;San Antonio&#39;, &#39;fullName&#39;: &#39;San Antonio Spurs&#39;, &#39;tricode&#39;: &#39;SAS&#39;, &#39;teamId&#39;: &#39;1610612759&#39;, &#39;nickname&#39;: &#39;Spurs&#39;, &#39;urlName&#39;: &#39;spurs&#39;, &#39;teamShortName&#39;: &#39;San Antonio&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Southwest&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Shanghai&#39;, &#39;altCityName&#39;: &#39;Shanghai&#39;, &#39;fullName&#39;: &#39;Shanghai Sharks&#39;, &#39;tricode&#39;: &#39;SDS&#39;, &#39;teamId&#39;: &#39;12329&#39;, &#39;nickname&#39;: &#39;Sharks&#39;, &#39;urlName&#39;: &#39;shanghai_sharks&#39;, &#39;teamShortName&#39;: &#39;Shanghai&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Sydney&#39;, &#39;altCityName&#39;: &#39;Sydney&#39;, &#39;fullName&#39;: &#39;Sydney Kings&#39;, &#39;tricode&#39;: &#39;SYD&#39;, &#39;teamId&#39;: &#39;15015&#39;, &#39;nickname&#39;: &#39;Kings&#39;, &#39;urlName&#39;: &#39;sydkings&#39;, &#39;teamShortName&#39;: &#39;Sydney&#39;, &#39;confName&#39;: &#39;Intl&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: True, &#39;city&#39;: &#39;Team&#39;, &#39;altCityName&#39;: &#39;Team&#39;, &#39;fullName&#39;: &#39;All-Stars&#39;, &#39;tricode&#39;: &#39;EST&#39;, &#39;teamId&#39;: &#39;1699999999&#39;, &#39;nickname&#39;: &#39;All-Stars&#39;, &#39;urlName&#39;: &#39;assn_away&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;East&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: True, &#39;city&#39;: &#39;Team&#39;, &#39;altCityName&#39;: &#39;Team&#39;, &#39;fullName&#39;: &#39;All-Stars&#39;, &#39;tricode&#39;: &#39;WST&#39;, &#39;teamId&#39;: &#39;1699999998&#39;, &#39;nickname&#39;: &#39;All-Stars&#39;, &#39;urlName&#39;: &#39;assn_home&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;West&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: True, &#39;city&#39;: &#39;Team Giannis&#39;, &#39;altCityName&#39;: &#39;Team Giannis&#39;, &#39;fullName&#39;: &#39;Team Giannis&#39;, &#39;tricode&#39;: &#39;GNS&#39;, &#39;teamId&#39;: &#39;1610616833&#39;, &#39;nickname&#39;: &#39;Team Giannis&#39;, &#39;urlName&#39;: &#39;team_giannis&#39;, &#39;teamShortName&#39;: &#39;Team Giannis&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;East&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: True, &#39;city&#39;: &#39;Team LeBron&#39;, &#39;altCityName&#39;: &#39;Team LeBron&#39;, &#39;fullName&#39;: &#39;Team LeBron&#39;, &#39;tricode&#39;: &#39;LBN&#39;, &#39;teamId&#39;: &#39;1610616834&#39;, &#39;nickname&#39;: &#39;Team LeBron&#39;, &#39;urlName&#39;: &#39;team_lebron&#39;, &#39;teamShortName&#39;: &#39;Team LeBron&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;West&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Toronto&#39;, &#39;altCityName&#39;: &#39;Toronto&#39;, &#39;fullName&#39;: &#39;Toronto Raptors&#39;, &#39;tricode&#39;: &#39;TOR&#39;, &#39;teamId&#39;: &#39;1610612761&#39;, &#39;nickname&#39;: &#39;Raptors&#39;, &#39;urlName&#39;: &#39;raptors&#39;, &#39;teamShortName&#39;: &#39;Toronto&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Atlantic&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: True, &#39;city&#39;: &#39;USA&#39;, &#39;altCityName&#39;: &#39;USA&#39;, &#39;fullName&#39;: &#39;USA&#39;, &#39;tricode&#39;: &#39;USA&#39;, &#39;teamId&#39;: &#39;1610616843&#39;, &#39;nickname&#39;: &#39;USA&#39;, &#39;urlName&#39;: &#39;usa&#39;, &#39;teamShortName&#39;: &#39;USA&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;East&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Utah&#39;, &#39;altCityName&#39;: &#39;Utah&#39;, &#39;fullName&#39;: &#39;Utah Jazz&#39;, &#39;tricode&#39;: &#39;UTA&#39;, &#39;teamId&#39;: &#39;1610612762&#39;, &#39;nickname&#39;: &#39;Jazz&#39;, &#39;urlName&#39;: &#39;jazz&#39;, &#39;teamShortName&#39;: &#39;Utah&#39;, &#39;confName&#39;: &#39;West&#39;, &#39;divName&#39;: &#39;Northwest&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Washington&#39;, &#39;altCityName&#39;: &#39;Washington&#39;, &#39;fullName&#39;: &#39;Washington Wizards&#39;, &#39;tricode&#39;: &#39;WAS&#39;, &#39;teamId&#39;: &#39;1610612764&#39;, &#39;nickname&#39;: &#39;Wizards&#39;, &#39;urlName&#39;: &#39;wizards&#39;, &#39;teamShortName&#39;: &#39;Washington&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;Southeast&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: True, &#39;city&#39;: &#39;World&#39;, &#39;altCityName&#39;: &#39;World&#39;, &#39;fullName&#39;: &#39;World&#39;, &#39;tricode&#39;: &#39;WLD&#39;, &#39;teamId&#39;: &#39;1610616844&#39;, &#39;nickname&#39;: &#39;World&#39;, &#39;urlName&#39;: &#39;world&#39;, &#39;teamShortName&#39;: &#39;World&#39;, &#39;confName&#39;: &#39;East&#39;, &#39;divName&#39;: &#39;East&#39;}], &#39;africa&#39;: [{&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Team&#39;, &#39;altCityName&#39;: &#39;Team&#39;, &#39;fullName&#39;: &#39;Team USA&#39;, &#39;tricode&#39;: &#39;USA&#39;, &#39;teamId&#39;: &#39;22&#39;, &#39;nickname&#39;: &#39;USA&#39;, &#39;urlName&#39;: &#39;nhs_usa&#39;, &#39;teamShortName&#39;: &#39;USA&#39;, &#39;confName&#39;: &#39;&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Team&#39;, &#39;altCityName&#39;: &#39;Team&#39;, &#39;fullName&#39;: &#39;Team World&#39;, &#39;tricode&#39;: &#39;WLD&#39;, &#39;teamId&#39;: &#39;21&#39;, &#39;nickname&#39;: &#39;World&#39;, &#39;urlName&#39;: &#39;nhs_world&#39;, &#39;teamShortName&#39;: &#39;World&#39;, &#39;confName&#39;: &#39;&#39;, &#39;divName&#39;: &#39;&#39;}], &#39;sacramento&#39;: [{&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Golden State&#39;, &#39;altCityName&#39;: &#39;Golden State&#39;, &#39;fullName&#39;: &#39;Golden State Warriors&#39;, &#39;tricode&#39;: &#39;GSW&#39;, &#39;teamId&#39;: &#39;1610612744&#39;, &#39;nickname&#39;: &#39;Warriors&#39;, &#39;urlName&#39;: &#39;warriors&#39;, &#39;teamShortName&#39;: &#39;Golden State&#39;, &#39;confName&#39;: &#39;Sacramento&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Los Angeles&#39;, &#39;altCityName&#39;: &#39;Los Angeles Lakers&#39;, &#39;fullName&#39;: &#39;Los Angeles Lakers&#39;, &#39;tricode&#39;: &#39;LAL&#39;, &#39;teamId&#39;: &#39;1610612747&#39;, &#39;nickname&#39;: &#39;Lakers&#39;, &#39;urlName&#39;: &#39;lakers&#39;, &#39;teamShortName&#39;: &#39;L.A. Lakers&#39;, &#39;confName&#39;: &#39;Sacramento&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Miami&#39;, &#39;altCityName&#39;: &#39;Miami&#39;, &#39;fullName&#39;: &#39;Miami Heat&#39;, &#39;tricode&#39;: &#39;MIA&#39;, &#39;teamId&#39;: &#39;1610612748&#39;, &#39;nickname&#39;: &#39;Heat&#39;, &#39;urlName&#39;: &#39;heat&#39;, &#39;teamShortName&#39;: &#39;Miami&#39;, &#39;confName&#39;: &#39;Sacramento&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Sacramento&#39;, &#39;altCityName&#39;: &#39;Sacramento&#39;, &#39;fullName&#39;: &#39;Sacramento Kings&#39;, &#39;tricode&#39;: &#39;SAC&#39;, &#39;teamId&#39;: &#39;1610612758&#39;, &#39;nickname&#39;: &#39;Kings&#39;, &#39;urlName&#39;: &#39;kings&#39;, &#39;teamShortName&#39;: &#39;Sacramento&#39;, &#39;confName&#39;: &#39;Sacramento&#39;, &#39;divName&#39;: &#39;&#39;}], &#39;vegas&#39;: [{&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Atlanta&#39;, &#39;altCityName&#39;: &#39;Atlanta&#39;, &#39;fullName&#39;: &#39;Atlanta Hawks&#39;, &#39;tricode&#39;: &#39;ATL&#39;, &#39;teamId&#39;: &#39;1610612737&#39;, &#39;nickname&#39;: &#39;Hawks&#39;, &#39;urlName&#39;: &#39;hawks&#39;, &#39;teamShortName&#39;: &#39;Atlanta&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Boston&#39;, &#39;altCityName&#39;: &#39;Boston&#39;, &#39;fullName&#39;: &#39;Boston Celtics&#39;, &#39;tricode&#39;: &#39;BOS&#39;, &#39;teamId&#39;: &#39;1610612738&#39;, &#39;nickname&#39;: &#39;Celtics&#39;, &#39;urlName&#39;: &#39;celtics&#39;, &#39;teamShortName&#39;: &#39;Boston&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Brooklyn&#39;, &#39;altCityName&#39;: &#39;Brooklyn&#39;, &#39;fullName&#39;: &#39;Brooklyn Nets&#39;, &#39;tricode&#39;: &#39;BKN&#39;, &#39;teamId&#39;: &#39;1610612751&#39;, &#39;nickname&#39;: &#39;Nets&#39;, &#39;urlName&#39;: &#39;nets&#39;, &#39;teamShortName&#39;: &#39;Brooklyn&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Charlotte&#39;, &#39;altCityName&#39;: &#39;Charlotte&#39;, &#39;fullName&#39;: &#39;Charlotte Hornets&#39;, &#39;tricode&#39;: &#39;CHA&#39;, &#39;teamId&#39;: &#39;1610612766&#39;, &#39;nickname&#39;: &#39;Hornets&#39;, &#39;urlName&#39;: &#39;hornets&#39;, &#39;teamShortName&#39;: &#39;Charlotte&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Chicago&#39;, &#39;altCityName&#39;: &#39;Chicago&#39;, &#39;fullName&#39;: &#39;Chicago Bulls&#39;, &#39;tricode&#39;: &#39;CHI&#39;, &#39;teamId&#39;: &#39;1610612741&#39;, &#39;nickname&#39;: &#39;Bulls&#39;, &#39;urlName&#39;: &#39;bulls&#39;, &#39;teamShortName&#39;: &#39;Chicago&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;China&#39;, &#39;altCityName&#39;: &#39;China&#39;, &#39;fullName&#39;: &#39;Team China&#39;, &#39;tricode&#39;: &#39;CHN&#39;, &#39;teamId&#39;: &#39;45&#39;, &#39;nickname&#39;: &#39;China&#39;, &#39;urlName&#39;: &#39;china&#39;, &#39;teamShortName&#39;: &#39;China&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Cleveland&#39;, &#39;altCityName&#39;: &#39;Cleveland&#39;, &#39;fullName&#39;: &#39;Cleveland Cavaliers&#39;, &#39;tricode&#39;: &#39;CLE&#39;, &#39;teamId&#39;: &#39;1610612739&#39;, &#39;nickname&#39;: &#39;Cavaliers&#39;, &#39;urlName&#39;: &#39;cavaliers&#39;, &#39;teamShortName&#39;: &#39;Cleveland&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: False, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Croatia&#39;, &#39;altCityName&#39;: &#39;Croatia&#39;, &#39;fullName&#39;: &#39;Team Croatia&#39;, &#39;tricode&#39;: &#39;CRO&#39;, &#39;teamId&#39;: &#39;70&#39;, &#39;nickname&#39;: &#39;Croatia&#39;, &#39;urlName&#39;: &#39;croatia&#39;, &#39;teamShortName&#39;: &#39;Croatia&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Dallas&#39;, &#39;altCityName&#39;: &#39;Dallas&#39;, &#39;fullName&#39;: &#39;Dallas Mavericks&#39;, &#39;tricode&#39;: &#39;DAL&#39;, &#39;teamId&#39;: &#39;1610612742&#39;, &#39;nickname&#39;: &#39;Mavericks&#39;, &#39;urlName&#39;: &#39;mavericks&#39;, &#39;teamShortName&#39;: &#39;Dallas&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Denver&#39;, &#39;altCityName&#39;: &#39;Denver&#39;, &#39;fullName&#39;: &#39;Denver Nuggets&#39;, &#39;tricode&#39;: &#39;DEN&#39;, &#39;teamId&#39;: &#39;1610612743&#39;, &#39;nickname&#39;: &#39;Nuggets&#39;, &#39;urlName&#39;: &#39;nuggets&#39;, &#39;teamShortName&#39;: &#39;Denver&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Detroit&#39;, &#39;altCityName&#39;: &#39;Detroit&#39;, &#39;fullName&#39;: &#39;Detroit Pistons&#39;, &#39;tricode&#39;: &#39;DET&#39;, &#39;teamId&#39;: &#39;1610612765&#39;, &#39;nickname&#39;: &#39;Pistons&#39;, &#39;urlName&#39;: &#39;pistons&#39;, &#39;teamShortName&#39;: &#39;Detroit&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Golden State&#39;, &#39;altCityName&#39;: &#39;Golden State&#39;, &#39;fullName&#39;: &#39;Golden State Warriors&#39;, &#39;tricode&#39;: &#39;GSW&#39;, &#39;teamId&#39;: &#39;1610612744&#39;, &#39;nickname&#39;: &#39;Warriors&#39;, &#39;urlName&#39;: &#39;warriors&#39;, &#39;teamShortName&#39;: &#39;Golden State&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Houston&#39;, &#39;altCityName&#39;: &#39;Houston&#39;, &#39;fullName&#39;: &#39;Houston Rockets&#39;, &#39;tricode&#39;: &#39;HOU&#39;, &#39;teamId&#39;: &#39;1610612745&#39;, &#39;nickname&#39;: &#39;Rockets&#39;, &#39;urlName&#39;: &#39;rockets&#39;, &#39;teamShortName&#39;: &#39;Houston&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Indiana&#39;, &#39;altCityName&#39;: &#39;Indiana&#39;, &#39;fullName&#39;: &#39;Indiana Pacers&#39;, &#39;tricode&#39;: &#39;IND&#39;, &#39;teamId&#39;: &#39;1610612754&#39;, &#39;nickname&#39;: &#39;Pacers&#39;, &#39;urlName&#39;: &#39;pacers&#39;, &#39;teamShortName&#39;: &#39;Indiana&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;LA&#39;, &#39;altCityName&#39;: &#39;LA Clippers&#39;, &#39;fullName&#39;: &#39;LA Clippers&#39;, &#39;tricode&#39;: &#39;LAC&#39;, &#39;teamId&#39;: &#39;1610612746&#39;, &#39;nickname&#39;: &#39;Clippers&#39;, &#39;urlName&#39;: &#39;clippers&#39;, &#39;teamShortName&#39;: &#39;LA Clippers&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Los Angeles&#39;, &#39;altCityName&#39;: &#39;Los Angeles Lakers&#39;, &#39;fullName&#39;: &#39;Los Angeles Lakers&#39;, &#39;tricode&#39;: &#39;LAL&#39;, &#39;teamId&#39;: &#39;1610612747&#39;, &#39;nickname&#39;: &#39;Lakers&#39;, &#39;urlName&#39;: &#39;lakers&#39;, &#39;teamShortName&#39;: &#39;L.A. Lakers&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Memphis&#39;, &#39;altCityName&#39;: &#39;Memphis&#39;, &#39;fullName&#39;: &#39;Memphis Grizzlies&#39;, &#39;tricode&#39;: &#39;MEM&#39;, &#39;teamId&#39;: &#39;1610612763&#39;, &#39;nickname&#39;: &#39;Grizzlies&#39;, &#39;urlName&#39;: &#39;grizzlies&#39;, &#39;teamShortName&#39;: &#39;Memphis&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Miami&#39;, &#39;altCityName&#39;: &#39;Miami&#39;, &#39;fullName&#39;: &#39;Miami Heat&#39;, &#39;tricode&#39;: &#39;MIA&#39;, &#39;teamId&#39;: &#39;1610612748&#39;, &#39;nickname&#39;: &#39;Heat&#39;, &#39;urlName&#39;: &#39;heat&#39;, &#39;teamShortName&#39;: &#39;Miami&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Milwaukee&#39;, &#39;altCityName&#39;: &#39;Milwaukee&#39;, &#39;fullName&#39;: &#39;Milwaukee Bucks&#39;, &#39;tricode&#39;: &#39;MIL&#39;, &#39;teamId&#39;: &#39;1610612749&#39;, &#39;nickname&#39;: &#39;Bucks&#39;, &#39;urlName&#39;: &#39;bucks&#39;, &#39;teamShortName&#39;: &#39;Milwaukee&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Minnesota&#39;, &#39;altCityName&#39;: &#39;Minnesota&#39;, &#39;fullName&#39;: &#39;Minnesota Timberwolves&#39;, &#39;tricode&#39;: &#39;MIN&#39;, &#39;teamId&#39;: &#39;1610612750&#39;, &#39;nickname&#39;: &#39;Timberwolves&#39;, &#39;urlName&#39;: &#39;timberwolves&#39;, &#39;teamShortName&#39;: &#39;Minnesota&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;New Orleans&#39;, &#39;altCityName&#39;: &#39;New Orleans&#39;, &#39;fullName&#39;: &#39;New Orleans Pelicans&#39;, &#39;tricode&#39;: &#39;NOP&#39;, &#39;teamId&#39;: &#39;1610612740&#39;, &#39;nickname&#39;: &#39;Pelicans&#39;, &#39;urlName&#39;: &#39;pelicans&#39;, &#39;teamShortName&#39;: &#39;New Orleans&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;New York&#39;, &#39;altCityName&#39;: &#39;New York&#39;, &#39;fullName&#39;: &#39;New York Knicks&#39;, &#39;tricode&#39;: &#39;NYK&#39;, &#39;teamId&#39;: &#39;1610612752&#39;, &#39;nickname&#39;: &#39;Knicks&#39;, &#39;urlName&#39;: &#39;knicks&#39;, &#39;teamShortName&#39;: &#39;New York&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Oklahoma City&#39;, &#39;altCityName&#39;: &#39;Oklahoma City&#39;, &#39;fullName&#39;: &#39;Oklahoma City Thunder&#39;, &#39;tricode&#39;: &#39;OKC&#39;, &#39;teamId&#39;: &#39;1610612760&#39;, &#39;nickname&#39;: &#39;Thunder&#39;, &#39;urlName&#39;: &#39;thunder&#39;, &#39;teamShortName&#39;: &#39;Oklahoma City&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Orlando&#39;, &#39;altCityName&#39;: &#39;Orlando&#39;, &#39;fullName&#39;: &#39;Orlando Magic&#39;, &#39;tricode&#39;: &#39;ORL&#39;, &#39;teamId&#39;: &#39;1610612753&#39;, &#39;nickname&#39;: &#39;Magic&#39;, &#39;urlName&#39;: &#39;magic&#39;, &#39;teamShortName&#39;: &#39;Orlando&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Philadelphia&#39;, &#39;altCityName&#39;: &#39;Philadelphia&#39;, &#39;fullName&#39;: &#39;Philadelphia 76ers&#39;, &#39;tricode&#39;: &#39;PHI&#39;, &#39;teamId&#39;: &#39;1610612755&#39;, &#39;nickname&#39;: &#39;76ers&#39;, &#39;urlName&#39;: &#39;sixers&#39;, &#39;teamShortName&#39;: &#39;Philadelphia&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Phoenix&#39;, &#39;altCityName&#39;: &#39;Phoenix&#39;, &#39;fullName&#39;: &#39;Phoenix Suns&#39;, &#39;tricode&#39;: &#39;PHX&#39;, &#39;teamId&#39;: &#39;1610612756&#39;, &#39;nickname&#39;: &#39;Suns&#39;, &#39;urlName&#39;: &#39;suns&#39;, &#39;teamShortName&#39;: &#39;Phoenix&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Portland&#39;, &#39;altCityName&#39;: &#39;Portland&#39;, &#39;fullName&#39;: &#39;Portland Trail Blazers&#39;, &#39;tricode&#39;: &#39;POR&#39;, &#39;teamId&#39;: &#39;1610612757&#39;, &#39;nickname&#39;: &#39;Trail Blazers&#39;, &#39;urlName&#39;: &#39;blazers&#39;, &#39;teamShortName&#39;: &#39;Portland&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Sacramento&#39;, &#39;altCityName&#39;: &#39;Sacramento&#39;, &#39;fullName&#39;: &#39;Sacramento Kings&#39;, &#39;tricode&#39;: &#39;SAC&#39;, &#39;teamId&#39;: &#39;1610612758&#39;, &#39;nickname&#39;: &#39;Kings&#39;, &#39;urlName&#39;: &#39;kings&#39;, &#39;teamShortName&#39;: &#39;Sacramento&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;San Antonio&#39;, &#39;altCityName&#39;: &#39;San Antonio&#39;, &#39;fullName&#39;: &#39;San Antonio Spurs&#39;, &#39;tricode&#39;: &#39;SAS&#39;, &#39;teamId&#39;: &#39;1610612759&#39;, &#39;nickname&#39;: &#39;Spurs&#39;, &#39;urlName&#39;: &#39;spurs&#39;, &#39;teamShortName&#39;: &#39;San Antonio&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Toronto&#39;, &#39;altCityName&#39;: &#39;Toronto&#39;, &#39;fullName&#39;: &#39;Toronto Raptors&#39;, &#39;tricode&#39;: &#39;TOR&#39;, &#39;teamId&#39;: &#39;1610612761&#39;, &#39;nickname&#39;: &#39;Raptors&#39;, &#39;urlName&#39;: &#39;raptors&#39;, &#39;teamShortName&#39;: &#39;Toronto&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Utah&#39;, &#39;altCityName&#39;: &#39;Utah&#39;, &#39;fullName&#39;: &#39;Utah Jazz&#39;, &#39;tricode&#39;: &#39;UTA&#39;, &#39;teamId&#39;: &#39;1610612762&#39;, &#39;nickname&#39;: &#39;Jazz&#39;, &#39;urlName&#39;: &#39;jazz&#39;, &#39;teamShortName&#39;: &#39;Utah&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Washington&#39;, &#39;altCityName&#39;: &#39;Washington&#39;, &#39;fullName&#39;: &#39;Washington Wizards&#39;, &#39;tricode&#39;: &#39;WAS&#39;, &#39;teamId&#39;: &#39;1610612764&#39;, &#39;nickname&#39;: &#39;Wizards&#39;, &#39;urlName&#39;: &#39;wizards&#39;, &#39;teamShortName&#39;: &#39;Washington&#39;, &#39;confName&#39;: &#39;summer&#39;, &#39;divName&#39;: &#39;&#39;}], &#39;utah&#39;: [{&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Cleveland&#39;, &#39;altCityName&#39;: &#39;Cleveland&#39;, &#39;fullName&#39;: &#39;Cleveland Cavaliers&#39;, &#39;tricode&#39;: &#39;CLE&#39;, &#39;teamId&#39;: &#39;1610612739&#39;, &#39;nickname&#39;: &#39;Cavaliers&#39;, &#39;urlName&#39;: &#39;cavaliers&#39;, &#39;teamShortName&#39;: &#39;Cleveland&#39;, &#39;confName&#39;: &#39;Utah&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Memphis&#39;, &#39;altCityName&#39;: &#39;Memphis&#39;, &#39;fullName&#39;: &#39;Memphis Grizzlies&#39;, &#39;tricode&#39;: &#39;MEM&#39;, &#39;teamId&#39;: &#39;1610612763&#39;, &#39;nickname&#39;: &#39;Grizzlies&#39;, &#39;urlName&#39;: &#39;grizzlies&#39;, &#39;teamShortName&#39;: &#39;Memphis&#39;, &#39;confName&#39;: &#39;Utah&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;San Antonio&#39;, &#39;altCityName&#39;: &#39;San Antonio&#39;, &#39;fullName&#39;: &#39;San Antonio Spurs&#39;, &#39;tricode&#39;: &#39;SAS&#39;, &#39;teamId&#39;: &#39;1610612759&#39;, &#39;nickname&#39;: &#39;Spurs&#39;, &#39;urlName&#39;: &#39;spurs&#39;, &#39;teamShortName&#39;: &#39;San Antonio&#39;, &#39;confName&#39;: &#39;Utah&#39;, &#39;divName&#39;: &#39;&#39;}, {&#39;isNBAFranchise&#39;: True, &#39;isAllStar&#39;: False, &#39;city&#39;: &#39;Utah&#39;, &#39;altCityName&#39;: &#39;Utah&#39;, &#39;fullName&#39;: &#39;Utah Jazz&#39;, &#39;tricode&#39;: &#39;UTA&#39;, &#39;teamId&#39;: &#39;1610612762&#39;, &#39;nickname&#39;: &#39;Jazz&#39;, &#39;urlName&#39;: &#39;jazz&#39;, &#39;teamShortName&#39;: &#39;Utah&#39;, &#39;confName&#39;: &#39;Utah&#39;, &#39;divName&#39;: &#39;&#39;}]}}
 </pre>
 </div>
 </div>
@@ -13480,6 +13550,104 @@ Southwest: [&#39;Dallas Mavericks&#39;, &#39;Houston Rockets&#39;, &#39;Memphis 
 </div>
 
 </div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#25847;&#21462;-XML-&#26684;&#24335;&#32178;&#38913;&#36039;&#26009;">&#25847;&#21462; XML &#26684;&#24335;&#32178;&#38913;&#36039;&#26009;<a class="anchor-link" href="#&#25847;&#21462;-XML-&#26684;&#24335;&#32178;&#38913;&#36039;&#26009;">&#182;</a></h2>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#25847;&#21462;-XML-&#26684;&#24335;&#32178;&#38913;&#36039;&#26009;&#27493;&#39519;">&#25847;&#21462; XML &#26684;&#24335;&#32178;&#38913;&#36039;&#26009;&#27493;&#39519;<a class="anchor-link" href="#&#25847;&#21462;-XML-&#26684;&#24335;&#32178;&#38913;&#36039;&#26009;&#27493;&#39519;">&#182;</a></h2><ul>
+<li><code>requests.get()</code></li>
+<li><code>r.content</code></li>
+<li>以 <code>lxml</code> 搭配 XPath 解析</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#20197;-https://opendata.epa.gov.tw/ws/Data/AQI/?$format=xml-&#31034;&#31684;">&#20197; <a href="https://opendata.epa.gov.tw/ws/Data/AQI/?$format=xml">https://opendata.epa.gov.tw/ws/Data/AQI/?$format=xml</a> &#31034;&#31684;<a class="anchor-link" href="#&#20197;-https://opendata.epa.gov.tw/ws/Data/AQI/?$format=xml-&#31034;&#31684;">&#182;</a></h2>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">aqi_url</span> <span class="o">=</span> <span class="s2">&quot;https://opendata.epa.gov.tw/ws/Data/AQI/?$format=xml&quot;</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">aqi_url</span><span class="p">,</span> <span class="n">verify</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/Users/kuoyaojen/anaconda3/lib/python3.7/site-packages/urllib3/connectionpool.py:847: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">lxml</span> <span class="k">import</span> <span class="n">etree</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="k">import</span> <span class="n">BytesIO</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="n">BytesIO</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+<span class="n">tree</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">site_names</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span><span class="o">.</span><span class="n">text</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tree</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s2">&quot;//SiteName&quot;</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">site_names</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;桃園(觀音工業區)&#39;, &#39;屏東(琉球)&#39;, &#39;新竹(香山)&#39;, &#39;彰化(大城)&#39;, &#39;臺南(麻豆)&#39;, &#39;富貴角&#39;, &#39;麥寮&#39;, &#39;關山&#39;, &#39;馬公&#39;, &#39;金門&#39;, &#39;馬祖&#39;, &#39;埔里&#39;, &#39;復興&#39;, &#39;永和&#39;, &#39;竹山&#39;, &#39;中壢&#39;, &#39;三重&#39;, &#39;冬山&#39;, &#39;宜蘭&#39;, &#39;陽明&#39;, &#39;花蓮&#39;, &#39;臺東&#39;, &#39;恆春&#39;, &#39;潮州&#39;, &#39;屏東&#39;, &#39;小港&#39;, &#39;前鎮&#39;, &#39;前金&#39;, &#39;左營&#39;, &#39;楠梓&#39;, &#39;林園&#39;, &#39;大寮&#39;, &#39;鳳山&#39;, &#39;仁武&#39;, &#39;橋頭&#39;, &#39;美濃&#39;, &#39;臺南&#39;, &#39;安南&#39;, &#39;善化&#39;, &#39;新營&#39;, &#39;嘉義&#39;, &#39;臺西&#39;, &#39;朴子&#39;, &#39;新港&#39;, &#39;崙背&#39;, &#39;斗六&#39;, &#39;南投&#39;, &#39;二林&#39;, &#39;線西&#39;, &#39;彰化&#39;, &#39;西屯&#39;, &#39;忠明&#39;, &#39;大里&#39;, &#39;沙鹿&#39;, &#39;豐原&#39;, &#39;三義&#39;, &#39;苗栗&#39;, &#39;頭份&#39;, &#39;新竹&#39;, &#39;竹東&#39;, &#39;湖口&#39;, &#39;龍潭&#39;, &#39;平鎮&#39;, &#39;觀音&#39;, &#39;大園&#39;, &#39;桃園&#39;, &#39;大同&#39;, &#39;松山&#39;, &#39;古亭&#39;, &#39;萬華&#39;, &#39;中山&#39;, &#39;士林&#39;, &#39;淡水&#39;, &#39;林口&#39;, &#39;菜寮&#39;, &#39;新莊&#39;, &#39;板橋&#39;, &#39;土城&#39;, &#39;新店&#39;, &#39;萬里&#39;, &#39;汐止&#39;, &#39;基隆&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13678,7 +13846,7 @@ Avengers: Endgame (2019)
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>98
+<pre>95
 &lt;img alt=&#34;Avengers: Endgame Poster&#34; src=&#34;https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_UX182_CR0,0,182,268_AL_.jpg&#34; title=&#34;Avengers: Endgame Poster&#34;/&gt;
 Avengers: Endgame Poster
 https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_UX182_CR0,0,182,268_AL_.jpg
@@ -13713,8 +13881,8 @@ https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[&lt;span itemprop=&#34;ratingValue&#34;&gt;8.6&lt;/span&gt;]
-8.6
+<pre>[&lt;span itemprop=&#34;ratingValue&#34;&gt;8.5&lt;/span&gt;]
+8.5
 </pre>
 </div>
 </div>
@@ -13952,7 +14120,7 @@ Avengers: Endgame (2019)
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>8.6
+<pre>8.5
 </pre>
 </div>
 </div>
@@ -14070,7 +14238,7 @@ Avengers: Endgame (2019)
 <div class="output_text output_subarea output_execute_result">
 <pre>{&#39;movieTitle&#39;: &#39;Avengers: Endgame (2019)&#39;,
  &#39;moviePoster&#39;: &#39;https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_UX182_CR0,0,182,268_AL_.jpg&#39;,
- &#39;movieRating&#39;: 8.6,
+ &#39;movieRating&#39;: 8.5,
  &#39;movieGenre&#39;: [&#39;Action&#39;, &#39;Adventure&#39;, &#39;Sci-Fi&#39;],
  &#39;movieCast&#39;: [&#39;Robert Downey Jr.&#39;,
   &#39;Chris Evans&#39;,
@@ -14245,7 +14413,7 @@ Avengers: Endgame (2019)
 <div class="output_text output_subarea output_execute_result">
 <pre>{&#39;movieTitle&#39;: &#39;Avengers: Endgame (2019)&#39;,
  &#39;moviePoster&#39;: &#39;https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_UX182_CR0,0,182,268_AL_.jpg&#39;,
- &#39;movieRating&#39;: 8.6,
+ &#39;movieRating&#39;: 8.5,
  &#39;movieGenre&#39;: [&#39;Action&#39;, &#39;Adventure&#39;, &#39;Sci-Fi&#39;],
  &#39;movieCast&#39;: [&#39;Robert Downey Jr.&#39;,
   &#39;Chris Evans&#39;,
@@ -14409,7 +14577,7 @@ Avengers: Endgame (2019)
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;阿拉丁&#39;, &#39;狗狗的旅程&#39;, &#39;MIB星際戰警：跨國行動&#39;, &#39;名偵探皮卡丘&#39;, &#39;X戰警：黑鳳凰&#39;, &#39;火箭人&#39;, &#39;寵物當家2&#39;, &#39;捍衛任務3：全面開戰&#39;, &#39;復仇者聯盟4：終局之戰&#39;, &#39;沙贊！&#39;, &#39;庫爾斯克號：深海救援&#39;, &#39;阿波羅11號&#39;, &#39;紅色密令&#39;, &#39;斯德哥爾摩症候&#39;, &#39;魔力女聲&#39;, &#39;大象席地而坐&#39;, &#39;廉政風雲：煙幕&#39;, &#39;拾芳&#39;, &#39;老大人&#39;, &#39;最是橙黃橘綠時&#39;, &#39;後勁：王建民&#39;, &#39;神探蒲松齡&#39;, &#39;半世界&#39;, &#39;飛翔吧！埼玉&#39;, &#39;地球最後的夜晚&#39;, &#39;看不見的旋律&#39;, &#39;漫長的告別&#39;, &#39;警察小姐&#39;, &#39;90分鐘末日倒數&#39;, &#39;逆轉劫局&#39;, &#39;上流世界&#39;, &#39;七個會議&#39;, &#39;飆風特警隊&#39;, &#39;96&#39;, &#39;別問我是誰&#39;]
+<pre>[&#39;玩具總動員4&#39;, &#39;狗狗的旅程&#39;, &#39;蜘蛛人：離家日&#39;, &#39;玩命憂步&#39;, &#39;恰吉&#39;, &#39;哥吉拉II怪獸之王&#39;, &#39;學霸&#39;, &#39;靠譜歌王&#39;, &#39;阿拉丁&#39;, &#39;名偵探皮卡丘&#39;, &#39;捍衛任務3：全面開戰&#39;, &#39;MIB星際戰警：跨國行動&#39;, &#39;火箭人&#39;, &#39;寵物當家2&#39;, &#39;X戰警：黑鳳凰&#39;, &#39;我的青春都是你&#39;, &#39;一吻定情&#39;, &#39;我的教練我們的菜&#39;, &#39;大象席地而坐&#39;, &#39;廉政風雲：煙幕&#39;, &#39;看不見的旋律&#39;, &#39;小島來了陌生爸爸&#39;, &#39;錢力遊戲&#39;, &#39;王者天下&#39;, &#39;警察小姐&#39;, &#39;90分鐘末日倒數&#39;, &#39;逆轉劫局&#39;, &#39;上流世界&#39;]
 </pre>
 </div>
 </div>
@@ -14492,7 +14660,7 @@ Avengers: Endgame (2019)
 			&lt;/div&gt;
 			&lt;div class=&#34;btn-group btn-group-paging&#34;&gt;
 				&lt;a class=&#34;btn wide&#34; href=&#34;/bbs/Gossiping/index1.html&#34;&gt;最舊&lt;/a&gt;
-				&lt;a class=&#34;btn wide&#34; href=&#34;/bbs/Gossiping/index39024.html&#34;&gt;&amp;lsaquo; 上頁&lt;/a&gt;
+				&lt;a class=&#34;btn wide&#34; href=&#34;/bbs/Gossiping/index38878.html&#34;&gt;&amp;lsaquo; 上頁&lt;/a&gt;
 				&lt;a class=&#34;btn wide disabled&#34;&gt;下頁 &amp;rsaquo;&lt;/a&gt;
 				&lt;a class=&#34;btn wide&#34; href=&#34;/bbs/Gossiping/index.html&#34;&gt;最新&lt;/a&gt;
 			&lt;/div&gt;
@@ -14512,26 +14680,26 @@ Avengers: Endgame (2019)
         
         
 		&lt;div class=&#34;r-ent&#34;&gt;
-			&lt;div class=&#34;nrec&#34;&gt;&lt;span class=&#34;hl f2&#34;&gt;4&lt;/span&gt;&lt;/div&gt;
+			&lt;div class=&#34;nrec&#34;&gt;&lt;span class=&#34;hl f2&#34;&gt;2&lt;/span&gt;&lt;/div&gt;
 			&lt;div class=&#34;title&#34;&gt;
 			
-				&lt;a href=&#34;/bbs/Gossiping/M.1569265925.A.D44.html&#34;&gt;[問卦] 80歲阿嬤看返校會不會太刺激&lt;/a&gt;
+				&lt;a href=&#34;/bbs/Gossiping/M.1570951080.A.1C1.html&#34;&gt;[問卦] 板主水桶前要講一堆幹話&lt;/a&gt;
 			
 			&lt;/div&gt;
 			&lt;div class=&#34;meta&#34;&gt;
-				&lt;div class=&#34;author&#34;&gt;shrape&lt;/div&gt;
+				&lt;div class=&#34;author&#34;&gt;Reewalker&lt;/div&gt;
 				&lt;div class=&#34;article-menu&#34;&gt;
 					
 					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
 					&lt;div class=&#34;dropdown&#34;&gt;
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%95%8F%E5%8D%A6%5D&amp;#43;80%E6%AD%B2%E9%98%BF%E5%AC%A4%E7%9C%8B%E8%BF%94%E6%A0%A1%E6%9C%83%E4%B8%8D%E6%9C%83%E5%A4%AA%E5%88%BA%E6%BF%80&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%95%8F%E5%8D%A6%5D&amp;#43;%E6%9D%BF%E4%B8%BB%E6%B0%B4%E6%A1%B6%E5%89%8D%E8%A6%81%E8%AC%9B%E4%B8%80%E5%A0%86%E5%B9%B9%E8%A9%B1&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
 						
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Ashrape&#34;&gt;搜尋看板內 shrape 的文章&lt;/a&gt;&lt;/div&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3AReewalker&#34;&gt;搜尋看板內 Reewalker 的文章&lt;/a&gt;&lt;/div&gt;
 						
 					&lt;/div&gt;
 					
 				&lt;/div&gt;
-				&lt;div class=&#34;date&#34;&gt; 9/24&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt;10/13&lt;/div&gt;
 				&lt;div class=&#34;mark&#34;&gt;&lt;/div&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
@@ -14544,52 +14712,23 @@ Avengers: Endgame (2019)
 			&lt;div class=&#34;nrec&#34;&gt;&lt;/div&gt;
 			&lt;div class=&#34;title&#34;&gt;
 			
-				&lt;a href=&#34;/bbs/Gossiping/M.1569266016.A.BE3.html&#34;&gt;[問卦] 基努李維好像我，我的錯覺？&lt;/a&gt;
+				&lt;a href=&#34;/bbs/Gossiping/M.1570951124.A.B2A.html&#34;&gt;Re: [新聞] 貸款千萬研發出「電產電」 獲專利&lt;/a&gt;
 			
 			&lt;/div&gt;
 			&lt;div class=&#34;meta&#34;&gt;
-				&lt;div class=&#34;author&#34;&gt;Dinenger&lt;/div&gt;
+				&lt;div class=&#34;author&#34;&gt;ilovettb&lt;/div&gt;
 				&lt;div class=&#34;article-menu&#34;&gt;
 					
 					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
 					&lt;div class=&#34;dropdown&#34;&gt;
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%95%8F%E5%8D%A6%5D&amp;#43;%E5%9F%BA%E5%8A%AA%E6%9D%8E%E7%B6%AD%E5%A5%BD%E5%83%8F%E6%88%91%EF%BC%8C%E6%88%91%E7%9A%84%E9%8C%AF%E8%A6%BA%EF%BC%9F&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E6%96%B0%E8%81%9E%5D&amp;#43;%E8%B2%B8%E6%AC%BE%E5%8D%83%E8%90%AC%E7%A0%94%E7%99%BC%E5%87%BA%E3%80%8C%E9%9B%BB%E7%94%A2%E9%9B%BB%E3%80%8D&amp;#43;%E7%8D%B2%E5%B0%88%E5%88%A9&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
 						
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3ADinenger&#34;&gt;搜尋看板內 Dinenger 的文章&lt;/a&gt;&lt;/div&gt;
-						
-					&lt;/div&gt;
-					
-				&lt;/div&gt;
-				&lt;div class=&#34;date&#34;&gt; 9/24&lt;/div&gt;
-				&lt;div class=&#34;mark&#34;&gt;&lt;/div&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-
-		
-            
-        
-        
-		&lt;div class=&#34;r-ent&#34;&gt;
-			&lt;div class=&#34;nrec&#34;&gt;&lt;span class=&#34;hl f2&#34;&gt;4&lt;/span&gt;&lt;/div&gt;
-			&lt;div class=&#34;title&#34;&gt;
-			
-				&lt;a href=&#34;/bbs/Gossiping/M.1569266069.A.E55.html&#34;&gt;[問卦] 女森灑花 囊森要灑什麼？&lt;/a&gt;
-			
-			&lt;/div&gt;
-			&lt;div class=&#34;meta&#34;&gt;
-				&lt;div class=&#34;author&#34;&gt;jason83813&lt;/div&gt;
-				&lt;div class=&#34;article-menu&#34;&gt;
-					
-					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
-					&lt;div class=&#34;dropdown&#34;&gt;
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%95%8F%E5%8D%A6%5D&amp;#43;%E5%A5%B3%E6%A3%AE%E7%81%91%E8%8A%B1&amp;#43;%E5%9B%8A%E6%A3%AE%E8%A6%81%E7%81%91%E4%BB%80%E9%BA%BC%EF%BC%9F&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
-						
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Ajason83813&#34;&gt;搜尋看板內 jason83813 的文章&lt;/a&gt;&lt;/div&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Ailovettb&#34;&gt;搜尋看板內 ilovettb 的文章&lt;/a&gt;&lt;/div&gt;
 						
 					&lt;/div&gt;
 					
 				&lt;/div&gt;
-				&lt;div class=&#34;date&#34;&gt; 9/24&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt;10/13&lt;/div&gt;
 				&lt;div class=&#34;mark&#34;&gt;&lt;/div&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
@@ -14602,52 +14741,23 @@ Avengers: Endgame (2019)
 			&lt;div class=&#34;nrec&#34;&gt;&lt;/div&gt;
 			&lt;div class=&#34;title&#34;&gt;
 			
-				&lt;a href=&#34;/bbs/Gossiping/M.1569266507.A.0AF.html&#34;&gt;Re: [問卦] 活著是為了什麼？&lt;/a&gt;
+				&lt;a href=&#34;/bbs/Gossiping/M.1570951133.A.98F.html&#34;&gt;Re: [問卦] 鋼鐵人、索爾、女巫飛行有合法嗎？&lt;/a&gt;
 			
 			&lt;/div&gt;
 			&lt;div class=&#34;meta&#34;&gt;
-				&lt;div class=&#34;author&#34;&gt;killerchi&lt;/div&gt;
+				&lt;div class=&#34;author&#34;&gt;CavendishJr&lt;/div&gt;
 				&lt;div class=&#34;article-menu&#34;&gt;
 					
 					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
 					&lt;div class=&#34;dropdown&#34;&gt;
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%95%8F%E5%8D%A6%5D&amp;#43;%E6%B4%BB%E8%91%97%E6%98%AF%E7%82%BA%E4%BA%86%E4%BB%80%E9%BA%BC%EF%BC%9F&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%95%8F%E5%8D%A6%5D&amp;#43;%E9%8B%BC%E9%90%B5%E4%BA%BA%E3%80%81%E7%B4%A2%E7%88%BE%E3%80%81%E5%A5%B3%E5%B7%AB%E9%A3%9B%E8%A1%8C%E6%9C%89%E5%90%88%E6%B3%95%E5%97%8E%EF%BC%9F&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
 						
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Akillerchi&#34;&gt;搜尋看板內 killerchi 的文章&lt;/a&gt;&lt;/div&gt;
-						
-					&lt;/div&gt;
-					
-				&lt;/div&gt;
-				&lt;div class=&#34;date&#34;&gt; 9/24&lt;/div&gt;
-				&lt;div class=&#34;mark&#34;&gt;&lt;/div&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-
-		
-            
-        
-        
-		&lt;div class=&#34;r-ent&#34;&gt;
-			&lt;div class=&#34;nrec&#34;&gt;&lt;/div&gt;
-			&lt;div class=&#34;title&#34;&gt;
-			
-				&lt;a href=&#34;/bbs/Gossiping/M.1569266625.A.E60.html&#34;&gt;Re: [問卦] 台灣男森在東南亞有多帥？&lt;/a&gt;
-			
-			&lt;/div&gt;
-			&lt;div class=&#34;meta&#34;&gt;
-				&lt;div class=&#34;author&#34;&gt;deepdish&lt;/div&gt;
-				&lt;div class=&#34;article-menu&#34;&gt;
-					
-					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
-					&lt;div class=&#34;dropdown&#34;&gt;
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%95%8F%E5%8D%A6%5D&amp;#43;%E5%8F%B0%E7%81%A3%E7%94%B7%E6%A3%AE%E5%9C%A8%E6%9D%B1%E5%8D%97%E4%BA%9E%E6%9C%89%E5%A4%9A%E5%B8%A5%EF%BC%9F&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
-						
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Adeepdish&#34;&gt;搜尋看板內 deepdish 的文章&lt;/a&gt;&lt;/div&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3ACavendishJr&#34;&gt;搜尋看板內 CavendishJr 的文章&lt;/a&gt;&lt;/div&gt;
 						
 					&lt;/div&gt;
 					
 				&lt;/div&gt;
-				&lt;div class=&#34;date&#34;&gt; 9/24&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt;10/13&lt;/div&gt;
 				&lt;div class=&#34;mark&#34;&gt;&lt;/div&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
@@ -14660,23 +14770,52 @@ Avengers: Endgame (2019)
 			&lt;div class=&#34;nrec&#34;&gt;&lt;span class=&#34;hl f2&#34;&gt;1&lt;/span&gt;&lt;/div&gt;
 			&lt;div class=&#34;title&#34;&gt;
 			
-				&lt;a href=&#34;/bbs/Gossiping/M.1569266815.A.627.html&#34;&gt;Re: [問卦] 我媽的房門打不開了（認真求解&lt;/a&gt;
+				&lt;a href=&#34;/bbs/Gossiping/M.1570951150.A.8E3.html&#34;&gt;[新聞] 希望蔡、柯同台支持 高嘉瑜：絕對是放下&lt;/a&gt;
 			
 			&lt;/div&gt;
 			&lt;div class=&#34;meta&#34;&gt;
-				&lt;div class=&#34;author&#34;&gt;Dinenger&lt;/div&gt;
+				&lt;div class=&#34;author&#34;&gt;MikaHakkinen&lt;/div&gt;
 				&lt;div class=&#34;article-menu&#34;&gt;
 					
 					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
 					&lt;div class=&#34;dropdown&#34;&gt;
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%95%8F%E5%8D%A6%5D&amp;#43;%E6%88%91%E5%AA%BD%E7%9A%84%E6%88%BF%E9%96%80%E6%89%93%E4%B8%8D%E9%96%8B%E4%BA%86%EF%BC%88%E8%AA%8D%E7%9C%9F%E6%B1%82%E8%A7%A3&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E6%96%B0%E8%81%9E%5D&amp;#43;%E5%B8%8C%E6%9C%9B%E8%94%A1%E3%80%81%E6%9F%AF%E5%90%8C%E5%8F%B0%E6%94%AF%E6%8C%81&amp;#43;%E9%AB%98%E5%98%89%E7%91%9C%EF%BC%9A%E7%B5%95%E5%B0%8D%E6%98%AF%E6%94%BE%E4%B8%8B&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
 						
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3ADinenger&#34;&gt;搜尋看板內 Dinenger 的文章&lt;/a&gt;&lt;/div&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3AMikaHakkinen&#34;&gt;搜尋看板內 MikaHakkinen 的文章&lt;/a&gt;&lt;/div&gt;
 						
 					&lt;/div&gt;
 					
 				&lt;/div&gt;
-				&lt;div class=&#34;date&#34;&gt; 9/24&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt;10/13&lt;/div&gt;
+				&lt;div class=&#34;mark&#34;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+		
+            
+        
+        
+		&lt;div class=&#34;r-ent&#34;&gt;
+			&lt;div class=&#34;nrec&#34;&gt;&lt;span class=&#34;hl f2&#34;&gt;1&lt;/span&gt;&lt;/div&gt;
+			&lt;div class=&#34;title&#34;&gt;
+			
+				&lt;a href=&#34;/bbs/Gossiping/M.1570951213.A.289.html&#34;&gt;[新聞] 希望蔡、柯同台支持 高嘉瑜：絕對是放下&lt;/a&gt;
+			
+			&lt;/div&gt;
+			&lt;div class=&#34;meta&#34;&gt;
+				&lt;div class=&#34;author&#34;&gt;staedtler&lt;/div&gt;
+				&lt;div class=&#34;article-menu&#34;&gt;
+					
+					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
+					&lt;div class=&#34;dropdown&#34;&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E6%96%B0%E8%81%9E%5D&amp;#43;%E5%B8%8C%E6%9C%9B%E8%94%A1%E3%80%81%E6%9F%AF%E5%90%8C%E5%8F%B0%E6%94%AF%E6%8C%81&amp;#43;%E9%AB%98%E5%98%89%E7%91%9C%EF%BC%9A%E7%B5%95%E5%B0%8D%E6%98%AF%E6%94%BE%E4%B8%8B&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Astaedtler&#34;&gt;搜尋看板內 staedtler 的文章&lt;/a&gt;&lt;/div&gt;
+						
+					&lt;/div&gt;
+					
+				&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt;10/13&lt;/div&gt;
 				&lt;div class=&#34;mark&#34;&gt;&lt;/div&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
@@ -14689,23 +14828,23 @@ Avengers: Endgame (2019)
 			&lt;div class=&#34;nrec&#34;&gt;&lt;/div&gt;
 			&lt;div class=&#34;title&#34;&gt;
 			
-				&lt;a href=&#34;/bbs/Gossiping/M.1569266863.A.BBE.html&#34;&gt;[問卦] 一般人入黨可以幹嘛&lt;/a&gt;
+				&lt;a href=&#34;/bbs/Gossiping/M.1570951229.A.A04.html&#34;&gt;[問卦] 無塵室裡想挖鼻孔怎麼辦&lt;/a&gt;
 			
 			&lt;/div&gt;
 			&lt;div class=&#34;meta&#34;&gt;
-				&lt;div class=&#34;author&#34;&gt;clever0705&lt;/div&gt;
+				&lt;div class=&#34;author&#34;&gt;chuchichan&lt;/div&gt;
 				&lt;div class=&#34;article-menu&#34;&gt;
 					
 					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
 					&lt;div class=&#34;dropdown&#34;&gt;
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%95%8F%E5%8D%A6%5D&amp;#43;%E4%B8%80%E8%88%AC%E4%BA%BA%E5%85%A5%E9%BB%A8%E5%8F%AF%E4%BB%A5%E5%B9%B9%E5%98%9B&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%95%8F%E5%8D%A6%5D&amp;#43;%E7%84%A1%E5%A1%B5%E5%AE%A4%E8%A3%A1%E6%83%B3%E6%8C%96%E9%BC%BB%E5%AD%94%E6%80%8E%E9%BA%BC%E8%BE%A6&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
 						
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Aclever0705&#34;&gt;搜尋看板內 clever0705 的文章&lt;/a&gt;&lt;/div&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Achuchichan&#34;&gt;搜尋看板內 chuchichan 的文章&lt;/a&gt;&lt;/div&gt;
 						
 					&lt;/div&gt;
 					
 				&lt;/div&gt;
-				&lt;div class=&#34;date&#34;&gt; 9/24&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt;10/13&lt;/div&gt;
 				&lt;div class=&#34;mark&#34;&gt;&lt;/div&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
@@ -14715,26 +14854,26 @@ Avengers: Endgame (2019)
         
         
 		&lt;div class=&#34;r-ent&#34;&gt;
-			&lt;div class=&#34;nrec&#34;&gt;&lt;span class=&#34;hl f2&#34;&gt;4&lt;/span&gt;&lt;/div&gt;
+			&lt;div class=&#34;nrec&#34;&gt;&lt;/div&gt;
 			&lt;div class=&#34;title&#34;&gt;
 			
-				&lt;a href=&#34;/bbs/Gossiping/M.1569266888.A.533.html&#34;&gt;[問卦] 大家會拒讀義大嗎&lt;/a&gt;
+				&lt;a href=&#34;/bbs/Gossiping/M.1570951281.A.3D3.html&#34;&gt;Re: [問卦] 知道朋友的PTT帳號能幹嘛&lt;/a&gt;
 			
 			&lt;/div&gt;
 			&lt;div class=&#34;meta&#34;&gt;
-				&lt;div class=&#34;author&#34;&gt;bupayu&lt;/div&gt;
+				&lt;div class=&#34;author&#34;&gt;abcde010710&lt;/div&gt;
 				&lt;div class=&#34;article-menu&#34;&gt;
 					
 					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
 					&lt;div class=&#34;dropdown&#34;&gt;
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%95%8F%E5%8D%A6%5D&amp;#43;%E5%A4%A7%E5%AE%B6%E6%9C%83%E6%8B%92%E8%AE%80%E7%BE%A9%E5%A4%A7%E5%97%8E&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%95%8F%E5%8D%A6%5D&amp;#43;%E7%9F%A5%E9%81%93%E6%9C%8B%E5%8F%8B%E7%9A%84PTT%E5%B8%B3%E8%99%9F%E8%83%BD%E5%B9%B9%E5%98%9B&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
 						
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Abupayu&#34;&gt;搜尋看板內 bupayu 的文章&lt;/a&gt;&lt;/div&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Aabcde010710&#34;&gt;搜尋看板內 abcde010710 的文章&lt;/a&gt;&lt;/div&gt;
 						
 					&lt;/div&gt;
 					
 				&lt;/div&gt;
-				&lt;div class=&#34;date&#34;&gt; 9/24&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt;10/13&lt;/div&gt;
 				&lt;div class=&#34;mark&#34;&gt;&lt;/div&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
@@ -14776,10 +14915,39 @@ Avengers: Endgame (2019)
         
         
 		&lt;div class=&#34;r-ent&#34;&gt;
-			&lt;div class=&#34;nrec&#34;&gt;&lt;span class=&#34;hl f3&#34;&gt;11&lt;/span&gt;&lt;/div&gt;
+			&lt;div class=&#34;nrec&#34;&gt;&lt;span class=&#34;hl f3&#34;&gt;94&lt;/span&gt;&lt;/div&gt;
 			&lt;div class=&#34;title&#34;&gt;
 			
-				&lt;a href=&#34;/bbs/Gossiping/M.1568569396.A.D48.html&#34;&gt;[公告] 呼籲!!請勿於看板發布販賣帳號之訊息&lt;/a&gt;
+				&lt;a href=&#34;/bbs/Gossiping/M.1570071469.A.153.html&#34;&gt;Fw: 尋人 家裡長輩失蹤&lt;/a&gt;
+			
+			&lt;/div&gt;
+			&lt;div class=&#34;meta&#34;&gt;
+				&lt;div class=&#34;author&#34;&gt;RS5566&lt;/div&gt;
+				&lt;div class=&#34;article-menu&#34;&gt;
+					
+					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
+					&lt;div class=&#34;dropdown&#34;&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%E5%B0%8B%E4%BA%BA&amp;#43;%E5%AE%B6%E8%A3%A1%E9%95%B7%E8%BC%A9%E5%A4%B1%E8%B9%A4&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3ARS5566&#34;&gt;搜尋看板內 RS5566 的文章&lt;/a&gt;&lt;/div&gt;
+						
+					&lt;/div&gt;
+					
+				&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt;10/03&lt;/div&gt;
+				&lt;div class=&#34;mark&#34;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+            
+                
+        
+        
+		&lt;div class=&#34;r-ent&#34;&gt;
+			&lt;div class=&#34;nrec&#34;&gt;&lt;span class=&#34;hl f3&#34;&gt;42&lt;/span&gt;&lt;/div&gt;
+			&lt;div class=&#34;title&#34;&gt;
+			
+				&lt;a href=&#34;/bbs/Gossiping/M.1570679043.A.C0B.html&#34;&gt;[公告] 第二階段─板主總決賽投票開始!&lt;/a&gt;
 			
 			&lt;/div&gt;
 			&lt;div class=&#34;meta&#34;&gt;
@@ -14788,14 +14956,14 @@ Avengers: Endgame (2019)
 					
 					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
 					&lt;div class=&#34;dropdown&#34;&gt;
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%85%AC%E5%91%8A%5D&amp;#43;%E5%91%BC%E7%B1%B2%21%21%E8%AB%8B%E5%8B%BF%E6%96%BC%E7%9C%8B%E6%9D%BF%E7%99%BC%E5%B8%83%E8%B2%A9%E8%B3%A3%E5%B8%B3%E8%99%9F%E4%B9%8B%E8%A8%8A%E6%81%AF&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%85%AC%E5%91%8A%5D&amp;#43;%E7%AC%AC%E4%BA%8C%E9%9A%8E%E6%AE%B5%E2%94%80%E6%9D%BF%E4%B8%BB%E7%B8%BD%E6%B1%BA%E8%B3%BD%E6%8A%95%E7%A5%A8%E9%96%8B%E5%A7%8B%21&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
 						
 						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3ABignana&#34;&gt;搜尋看板內 Bignana 的文章&lt;/a&gt;&lt;/div&gt;
 						
 					&lt;/div&gt;
 					
 				&lt;/div&gt;
-				&lt;div class=&#34;date&#34;&gt; 9/16&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt;10/10&lt;/div&gt;
 				&lt;div class=&#34;mark&#34;&gt;M&lt;/div&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
@@ -14805,10 +14973,10 @@ Avengers: Endgame (2019)
         
         
 		&lt;div class=&#34;r-ent&#34;&gt;
-			&lt;div class=&#34;nrec&#34;&gt;&lt;span class=&#34;hl f3&#34;&gt;48&lt;/span&gt;&lt;/div&gt;
+			&lt;div class=&#34;nrec&#34;&gt;&lt;span class=&#34;hl f3&#34;&gt;16&lt;/span&gt;&lt;/div&gt;
 			&lt;div class=&#34;title&#34;&gt;
 			
-				&lt;a href=&#34;/bbs/Gossiping/M.1569227318.A.583.html&#34;&gt;[公告] 關於客家人水桶事件，可申請改判。&lt;/a&gt;
+				&lt;a href=&#34;/bbs/Gossiping/M.1570678358.A.952.html&#34;&gt;[公告] 第一階段板主選舉─候選名單說明&lt;/a&gt;
 			
 			&lt;/div&gt;
 			&lt;div class=&#34;meta&#34;&gt;
@@ -14817,14 +14985,14 @@ Avengers: Endgame (2019)
 					
 					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
 					&lt;div class=&#34;dropdown&#34;&gt;
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%85%AC%E5%91%8A%5D&amp;#43;%E9%97%9C%E6%96%BC%E5%AE%A2%E5%AE%B6%E4%BA%BA%E6%B0%B4%E6%A1%B6%E4%BA%8B%E4%BB%B6%EF%BC%8C%E5%8F%AF%E7%94%B3%E8%AB%8B%E6%94%B9%E5%88%A4%E3%80%82&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%85%AC%E5%91%8A%5D&amp;#43;%E7%AC%AC%E4%B8%80%E9%9A%8E%E6%AE%B5%E6%9D%BF%E4%B8%BB%E9%81%B8%E8%88%89%E2%94%80%E5%80%99%E9%81%B8%E5%90%8D%E5%96%AE%E8%AA%AA%E6%98%8E&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
 						
 						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3ABignana&#34;&gt;搜尋看板內 Bignana 的文章&lt;/a&gt;&lt;/div&gt;
 						
 					&lt;/div&gt;
 					
 				&lt;/div&gt;
-				&lt;div class=&#34;date&#34;&gt; 9/23&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt;10/10&lt;/div&gt;
 				&lt;div class=&#34;mark&#34;&gt;M&lt;/div&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
@@ -14834,10 +15002,10 @@ Avengers: Endgame (2019)
         
         
 		&lt;div class=&#34;r-ent&#34;&gt;
-			&lt;div class=&#34;nrec&#34;&gt;&lt;span class=&#34;hl f2&#34;&gt;8&lt;/span&gt;&lt;/div&gt;
+			&lt;div class=&#34;nrec&#34;&gt;&lt;/div&gt;
 			&lt;div class=&#34;title&#34;&gt;
 			
-				&lt;a href=&#34;/bbs/Gossiping/M.1568306552.A.64D.html&#34;&gt;[公告] 九月份中秋線上烤肉兼置底閒聊區&lt;/a&gt;
+				&lt;a href=&#34;/bbs/Gossiping/M.1569904195.A.A1C.html&#34;&gt;[公告] 十月份置底閒聊文 泡茶的賀索債&lt;/a&gt;
 			
 			&lt;/div&gt;
 			&lt;div class=&#34;meta&#34;&gt;
@@ -14846,14 +15014,14 @@ Avengers: Endgame (2019)
 					
 					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
 					&lt;div class=&#34;dropdown&#34;&gt;
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%85%AC%E5%91%8A%5D&amp;#43;%E4%B9%9D%E6%9C%88%E4%BB%BD%E4%B8%AD%E7%A7%8B%E7%B7%9A%E4%B8%8A%E7%83%A4%E8%82%89%E5%85%BC%E7%BD%AE%E5%BA%95%E9%96%92%E8%81%8A%E5%8D%80&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%85%AC%E5%91%8A%5D&amp;#43;%E5%8D%81%E6%9C%88%E4%BB%BD%E7%BD%AE%E5%BA%95%E9%96%92%E8%81%8A%E6%96%87&amp;#43;%E6%B3%A1%E8%8C%B6%E7%9A%84%E8%B3%80%E7%B4%A2%E5%82%B5&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
 						
 						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3ABignana&#34;&gt;搜尋看板內 Bignana 的文章&lt;/a&gt;&lt;/div&gt;
 						
 					&lt;/div&gt;
 					
 				&lt;/div&gt;
-				&lt;div class=&#34;date&#34;&gt; 9/13&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt;10/01&lt;/div&gt;
 				&lt;div class=&#34;mark&#34;&gt;M&lt;/div&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
@@ -14926,7 +15094,7 @@ Avengers: Endgame (2019)
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;Aladdin&#39;, &#34;A Dog&#39;s Journey&#34;, &#39;Men in Black: International&#39;, &#39;Pokémon Detective Pikachu&#39;, &#39;X-Men: Dark Phoenix&#39;, &#39;Rocketman&#39;, &#39;The Secret Life of Pets 2&#39;, &#39;John Wick: Chapter 3 - Parabellum&#39;, &#39;Avengers: Endgame&#39;, &#39;Shazam!&#39;, &#39;Kursk&#39;, &#39;Apollo 11&#39;, &#39;Red Joan&#39;, &#39;Stockholm&#39;, &#39;Teen Spirit&#39;, &#39;An Elephant Sitting Still&#39;, &#39;Integrity&#39;, &#39;Dearest Anita&#39;, &#34;Dad&#39;s Suit&#34;, &#39;When Green Turns to Gold&#39;, &#39;Late Life: The Chien-Ming Wang Story&#39;, &#39;The Knight of Shadows…&#39;, &#39;Another World&#39;, &#39;Fly Me To The Saitama&#39;, &#34;Long Day&#39;s Journey Into Night&#34;, &#39;Andhadhun&#39;, &#39;A Long Goodbye&#39;, &#39;Miss &amp; Mrs Cops&#39;, &#39;Take Point&#39;, &#39;70 Big Ones&#39;, &#39;Loro&#39;, &#39;Whistleblower&#39;, &#39;Hit-and-Run Squad&#39;, &#39;96&#39;, &#39;Who You Think I Am&#39;]
+<pre>[&#39;Toy Story 4&#39;, &#34;A Dog&#39;s Journey&#34;, &#39;Spider-ManTM: Far From Home&#39;, &#39;Stuber&#39;, &#34;Child&#39;s Play&#34;, &#39;Godzilla: King of the Monsters&#39;, &#39;Booksmart&#39;, &#39;Yesterday&#39;, &#39;Aladdin&#39;, &#39;Pokémon Detective Pikachu&#39;, &#39;John Wick: Chapter 3 - Parabellum&#39;, &#39;Men in Black: International&#39;, &#39;Rocketman&#39;, &#39;The Secret Life of Pets 2&#39;, &#39;X-Men: Dark Phoenix&#39;, &#39;Love The Way You Are&#39;, &#39;Fall in Love at First Kiss&#39;, &#39;The Shiny Shrimps&#39;, &#39;An Elephant Sitting Still&#39;, &#39;Integrity&#39;, &#39;Andhadhun&#39;, &#39;My Extraordinary Summer with Tess&#39;, &#39;Money&#39;, &#39;Kingdom&#39;, &#39;Miss &amp; Mrs Cops&#39;, &#39;Take Point&#39;, &#39;70 Big Ones&#39;, &#39;Loro&#39;]
 </pre>
 </div>
 </div>
@@ -14964,7 +15132,7 @@ Avengers: Endgame (2019)
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;Aladdin&#39;, &#34;A Dog&#39;s Journey&#34;, &#39;Men in Black: International&#39;, &#39;Pokémon Detective Pikachu&#39;, &#39;X-Men: Dark Phoenix&#39;, &#39;Rocketman&#39;, &#39;The Secret Life of Pets 2&#39;, &#39;John Wick: Chapter 3 - Parabellum&#39;, &#39;Avengers: Endgame&#39;, &#39;Shazam!&#39;, &#39;Kursk&#39;, &#39;Apollo 11&#39;, &#39;Red Joan&#39;, &#39;Stockholm&#39;, &#39;Teen Spirit&#39;, &#39;An Elephant Sitting Still&#39;, &#39;Integrity&#39;, &#39;Dearest Anita&#39;, &#34;Dad&#39;s Suit&#34;, &#39;When Green Turns to Gold&#39;, &#39;Late Life: The Chien-Ming Wang Story&#39;, &#39;The Knight of Shadows…&#39;, &#39;Another World&#39;, &#39;Fly Me To The Saitama&#39;, &#34;Long Day&#39;s Journey Into Night&#34;, &#39;Andhadhun&#39;, &#39;A Long Goodbye&#39;, &#39;Miss &amp; Mrs Cops&#39;, &#39;Take Point&#39;, &#39;70 Big Ones&#39;, &#39;Loro&#39;, &#39;Whistleblower&#39;, &#39;Hit-and-Run Squad&#39;, &#39;96&#39;, &#39;Who You Think I Am&#39;, &#34;Tim Burton&#39;s Corpse Bride&#34;, &#39;The Peanuts Movie&#39;, &#39;Sing&#39;, &#39;Puss In Boots&#39;, &#39;The Lego Batman Movie&#39;, &#39;Ferdinand&#39;, &#39;The Polar Express&#39;, &#39;Hop&#39;, &#39;Pan&#39;, &#39;Where the Wild Things Are&#39;, &#39;Three Times&#39;, &#39;Beyond Beauty - Taiwan from Above&#39;, &#39;The Wedding Banquet&#39;, &#39;Millennium Mambo&#39;, &#39;On Happiness Road&#39;, &#39;Father to Son&#39;, &#39;Long Time No Sea&#39;, &#39;More Than Blue&#39;, &#39;Handan&#39;, &#39;Master Z: Ip Man Legacy&#39;, &#39;Shadow&#39;, &#39;Hidden Man&#39;, &#39;Still Human&#39;, &#39;Last Letter&#39;, &#39;Tracey&#39;, &#39;Dragon Ball Super: Broly&#39;, &#39;Stolen Identity&#39;, &#39;Hibiki&#39;, &#39;Project Gutenberg&#39;, &#39;Default&#39;, &#39;Masquerade Hotel&#39;, &#39;Million Dollar Man&#39;, &#39;The House Where The Mermaid Sleeps&#39;, &#39;Unstoppable&#39;, &#39;Extreme Job&#39;, &#39;Innocent Witness&#39;, &#39;Badhaai Ho&#39;, &#39;Border&#39;, &#39;Family is Family&#39;, &#39;Capernaum&#39;, &#39;U - July 22&#39;, &#39;A Better Tomorrow&#39;, &#39;A Chinese Ghost Story&#39;, &#39;Rouge&#39;, &#39;Gintama 2&#39;, &#39;A Real Vermeer&#39;, &#39;Cafe Funiculi Funicula&#39;, &#39;Code Blue: The Movie&#39;, &#34;Jupiter&#39;s Moon&#34;, &#39;Simpel…&#39;, &#39;Shoplifters&#39;, &#34;Midsummer&#39;s Equation&#34;, &#39;Attack On Titan: Kakusei&#39;, &#39;Detective Conan: Crimson Love Letter&#39;, &#39;Detective Conan Episode &#34;ONE&#34;&#39;, &#39;Hichki&#39;, &#39;My Hero Academia: Two Heroes&#39;, &#39;Mirai&#39;, &#39;Lupin the 3rd vs. Detective Conan&#39;, &#39;The Negotiation&#39;, &#39;Euforia&#39;, &#39;The Benefit of the Doubt&#39;, &#39;Hello Mr. Billionaire&#39;, &#39;Wished&#39;, &#39;The Square&#39;, &#39;Le Brio&#39;, &#39;Pad Man&#39;, &#39;John Wick&#39;, &#39;X-Men&#39;, &#39;X-Men: First Class&#39;, &#39;X-Men: Days of Future Past&#39;, &#39;X-Men: Apocalypse&#39;, &#39;The Mule&#39;, &#39;Aquaman&#39;, &#39;Iron Man&#39;, &#39;Iron Man 2&#39;, &#39;Iron Man 3&#39;, &#39;The Avengers&#39;, &#39;Avengers: Age of Ultron&#39;, &#39;Avengers: Infinity War&#39;, &#39;Alita: Battle Angel&#39;, &#34;Isn&#39;t it Romantic&#34;, &#39;Eddie The Eagle&#39;, &#39;Les Misérables&#39;, &#39;Knight and Day&#39;, &#39;Invictus&#39;, &#39;Café Society&#39;, &#39;Going In Style&#39;, &#39;Fantastic Beasts and…&#39;, &#39;Crazy, Stupid, Love.&#39;, &#39;J. Edgar&#39;, &#39;John Wick: Chapter 2&#39;, &#39;A Star is Born&#39;, &#39;Manchester By The Sea&#39;, &#39;Hitman: Agent 47&#39;, &#39;I, Daniel Blake&#39;, &#39;My Cousin Rachel&#39;, &#39;Prometheus&#39;, &#39;Crazy Heart&#39;, &#39;Ruby Sparks&#39;, &#39;Life of Pi&#39;, &#39;Moulin Rouge&#39;, &#39;Hidden Figures&#39;, &#39;Logan&#39;, &#39;Runner Runner&#39;, &#39;Creed&#39;, &#39;Sherlock Holmes: A Game of Shadows&#39;, &#39;Deepwater Horizon&#39;, &#39;The Intern&#39;, &#39;Captain America: Civil War&#39;, &#39;Before I Fall&#39;, &#39;Black Swan&#39;, &#39;Superman Returns&#39;, &#39;The Shape of Water&#39;, &#39;The Judge&#39;, &#39;The Pianist&#39;, &#39;The Grand Budapest Hotel&#39;, &#39;Australia&#39;, &#39;The Great Gatsby&#39;, &#39;Chef&#39;, &#39;The Tree Of Life&#39;, &#39;The Book Thief&#39;, &#39;Steve Jobs&#39;, &#39;The Martian&#39;, &#39;The Devil Wears Prada&#39;, &#39;The Drop&#39;, &#39;The Mummy&#39;, &#39;Three Billboards Outside Ebbing, Missouri&#39;, &#39;This Means War&#39;, &#39;The Descendants&#39;, &#39;We Bought A Zoo&#39;, &#39;The Shawshank Redemption&#39;, &#39;Wonder Woman&#39;]
+<pre>[&#39;Toy Story 4&#39;, &#34;A Dog&#39;s Journey&#34;, &#39;Spider-ManTM: Far From Home&#39;, &#39;Stuber&#39;, &#34;Child&#39;s Play&#34;, &#39;Godzilla: King of the Monsters&#39;, &#39;Booksmart&#39;, &#39;Yesterday&#39;, &#39;Aladdin&#39;, &#39;Pokémon Detective Pikachu&#39;, &#39;John Wick: Chapter 3 - Parabellum&#39;, &#39;Men in Black: International&#39;, &#39;Rocketman&#39;, &#39;The Secret Life of Pets 2&#39;, &#39;X-Men: Dark Phoenix&#39;, &#39;Love The Way You Are&#39;, &#39;Fall in Love at First Kiss&#39;, &#39;The Shiny Shrimps&#39;, &#39;An Elephant Sitting Still&#39;, &#39;Integrity&#39;, &#39;Andhadhun&#39;, &#39;My Extraordinary Summer with Tess&#39;, &#39;Money&#39;, &#39;Kingdom&#39;, &#39;Miss &amp; Mrs Cops&#39;, &#39;Take Point&#39;, &#39;70 Big Ones&#39;, &#39;Loro&#39;, &#39;Toy Story&#39;, &#39;Shark Tale&#39;, &#39;Toy Story 2&#39;, &#39;Toy Story 3&#39;, &#34;Tim Burton&#39;s Corpse Bride&#34;, &#39;Ferdinand&#39;, &#39;Puss In Boots&#39;, &#39;The Lego Batman Movie&#39;, &#39;The Peanuts Movie&#39;, &#39;Where the Wild Things Are&#39;, &#39;A Simple Life&#39;, &#39;Dying To Survive&#39;, &#39;Infernal Affairs&#39;, &#34;Dad&#39;s Suit&#34;, &#39;Dearest Anita&#39;, &#39;Late Life: The Chien-Ming Wang Story&#39;, &#34;Long Day&#39;s Journey Into Night&#34;, &#39;The Knight of Shadows…&#39;, &#39;Single Day&#39;, &#39;More Than Blue&#39;, &#39;Another World&#39;, &#39;Master Z: Ip Man Legacy&#39;, &#39;Shadow&#39;, &#39;Hidden Man&#39;, &#39;Still Human&#39;, &#39;Last Letter&#39;, &#39;Tracey&#39;, &#39;Dragon Ball Super: Broly&#39;, &#39;Stolen Identity&#39;, &#39;Hibiki&#39;, &#39;Project Gutenberg&#39;, &#39;When Green Turns to Gold&#39;, &#39;Masquerade Hotel&#39;, &#39;Million Dollar Man&#39;, &#39;The House Where The Mermaid Sleeps&#39;, &#39;Unstoppable&#39;, &#39;Extreme Job&#39;, &#39;Three Times&#39;, &#39;Beyond Beauty - Taiwan from Above&#39;, &#39;The Wedding Banquet&#39;, &#39;Father to Son&#39;, &#39;Long Time No Sea&#39;, &#39;Millennium Mambo&#39;, &#39;On Happiness Road&#39;, &#39;Attack On Titan: Kakusei&#39;, &#39;Cafe Funiculi Funicula&#39;, &#39;Gintama 2&#39;, &#39;The Negotiation&#39;, &#39;A Real Vermeer&#39;, &#39;Hichki&#39;, &#39;Innocent Witness&#39;, &#39;Badhaai Ho&#39;, &#39;Border&#39;, &#39;Capernaum&#39;, &#39;Family is Family&#39;, &#39;96&#39;, &#39;Hit-and-Run Squad&#39;, &#39;Fly Me To The Saitama&#39;, &#39;Whistleblower&#39;, &#39;Who You Think I Am&#39;, &#34;Jupiter&#39;s Moon&#34;, &#39;Hello Mr. Billionaire&#39;, &#39;Simpel…&#39;, &#39;The Benefit of the Doubt&#39;, &#39;Le Brio&#39;, &#39;Code Blue: The Movie&#39;, &#39;Wished&#39;, &#39;Shoplifters&#39;, &#34;Midsummer&#39;s Equation&#34;, &#39;My Hero Academia: Two Heroes&#39;, &#39;Detective Conan Episode &#34;ONE&#34;&#39;, &#39;Lupin the 3rd vs. Detective Conan&#39;, &#39;Pad Man&#39;, &#39;The Square&#39;, &#39;Euforia&#39;, &#39;Detective Conan: Crimson Love Letter&#39;, &#34;Bridget Jones&#39;s Baby&#34;, &#39;Spider-ManTM: Homecoming&#39;, &#39;Godzilla&#39;, &#39;Never Let Me Go&#39;, &#39;Straight Outta Compton&#39;, &#39;The Bucket List&#39;, &#39;The Curious Case of Benjamin Button&#39;, &#39;Wrath of the Titans&#39;, &#39;Avengers: Endgame&#39;, &#39;Shazam!&#39;, &#39;John Wick&#39;, &#39;John Wick: Chapter 2&#39;, &#34;Isn&#39;t it Romantic&#34;, &#39;The Mule&#39;, &#39;Superman Returns&#39;, &#39;Invictus&#39;, &#39;Manchester By The Sea&#39;, &#39;Les Misérables&#39;, &#39;Avengers: Age of Ultron&#39;, &#39;The Avengers&#39;, &#39;Prometheus&#39;, &#39;Moulin Rouge&#39;, &#39;Crazy Heart&#39;, &#39;Ruby Sparks&#39;, &#39;Life of Pi&#39;, &#39;Fantastic Beasts and…&#39;, &#39;Hidden Figures&#39;, &#39;Logan&#39;, &#39;Runner Runner&#39;, &#39;The Intern&#39;, &#39;Sherlock Holmes: A Game of Shadows&#39;, &#39;Deepwater Horizon&#39;, &#39;I, Daniel Blake&#39;, &#39;Captain America: Civil War&#39;, &#39;Iron Man&#39;, &#39;Iron Man 2&#39;, &#39;Iron Man 3&#39;, &#39;The Shape of Water&#39;, &#39;Before I Fall&#39;, &#39;The Pianist&#39;, &#39;The Grand Budapest Hotel&#39;, &#39;Australia&#39;, &#39;The Tree Of Life&#39;, &#39;Hitman: Agent 47&#39;, &#39;The Great Gatsby&#39;, &#39;Chef&#39;, &#39;J. Edgar&#39;, &#39;The Book Thief&#39;, &#39;Crazy, Stupid, Love.&#39;, &#39;The Martian&#39;, &#39;The Mummy&#39;, &#39;Black Swan&#39;, &#39;The Devil Wears Prada&#39;, &#39;The Drop&#39;, &#39;The Judge&#39;, &#39;X-Men&#39;, &#39;X-Men: First Class&#39;, &#39;X-Men: Days of Future Past&#39;, &#39;X-Men: Apocalypse&#39;, &#39;Three Billboards Outside Ebbing, Missouri&#39;, &#39;The Descendants&#39;, &#39;The Shawshank Redemption&#39;, &#39;Wonder Woman&#39;]
 </pre>
 </div>
 </div>
@@ -15011,6 +15179,190 @@ Avengers: Endgame (2019)
 </div>
 
 </div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#36914;&#34892;-POST-&#35531;&#27714;">&#36914;&#34892; POST &#35531;&#27714;<a class="anchor-link" href="#&#36914;&#34892;-POST-&#35531;&#27714;">&#182;</a></h2>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#21482;&#35201;&#32178;&#38913;&#20013;&#26377;&#35731;&#20351;&#29992;&#32773;&#22635;&#20837;&#36039;&#26009;&#30340;&#34920;&#21934;&#65292;&#22823;&#37096;&#20998;&#37117;&#26371;&#38656;&#35201;&#29992;-POST-&#35531;&#27714;&#20358;&#34389;&#29702;">&#21482;&#35201;&#32178;&#38913;&#20013;&#26377;&#35731;&#20351;&#29992;&#32773;&#22635;&#20837;&#36039;&#26009;&#30340;&#34920;&#21934;&#65292;&#22823;&#37096;&#20998;&#37117;&#26371;&#38656;&#35201;&#29992; POST &#35531;&#27714;&#20358;&#34389;&#29702;<a class="anchor-link" href="#&#21482;&#35201;&#32178;&#38913;&#20013;&#26377;&#35731;&#20351;&#29992;&#32773;&#22635;&#20837;&#36039;&#26009;&#30340;&#34920;&#21934;&#65292;&#22823;&#37096;&#20998;&#37117;&#26371;&#38656;&#35201;&#29992;-POST-&#35531;&#27714;&#20358;&#34389;&#29702;">&#182;</a></h2><p>例如在論壇發文，將文章標題和內文填好，按下送出時，就是送出一個 POST 請求</p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#36914;&#34892;-POST-&#35531;&#27714;&#26178;&#35201;&#25884;&#24118;&#36039;&#26009;&#65292;&#20197;-https://emap.pcsc.com.tw-&#28858;&#20363;">&#36914;&#34892; POST &#35531;&#27714;&#26178;&#35201;&#25884;&#24118;&#36039;&#26009;&#65292;&#20197; <a href="https://emap.pcsc.com.tw">https://emap.pcsc.com.tw</a> &#28858;&#20363;<a class="anchor-link" href="#&#36914;&#34892;-POST-&#35531;&#27714;&#26178;&#35201;&#25884;&#24118;&#36039;&#26009;&#65292;&#20197;-https://emap.pcsc.com.tw-&#28858;&#20363;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">form_data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;commandid&quot;</span><span class="p">:</span> <span class="s2">&quot;GetTown&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;cityid&quot;</span><span class="p">:</span> <span class="s2">&quot;01&quot;</span>
+<span class="p">}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;https://emap.pcsc.com.tw/EMapSDK.aspx&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">form_data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>200
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#35531;&#27714;&#30340;&#22238;&#25033;&#26159;-XML-&#26684;&#24335;">&#35531;&#27714;&#30340;&#22238;&#25033;&#26159; XML &#26684;&#24335;<a class="anchor-link" href="#&#35531;&#27714;&#30340;&#22238;&#25033;&#26159;-XML-&#26684;&#24335;">&#182;</a></h2>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>b&#39;&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;&lt;iMapSDKOutput&gt;&lt;MessageID&gt;00000&lt;/MessageID&gt;&lt;CommandID&gt;GetTown&lt;/CommandID&gt;&lt;Status&gt;\xe9\x80\xa3\xe7\xb7\x9a\xe6\x88\x90\xe5\x8a\x9f&lt;/Status&gt;&lt;TimeStamp&gt;2019/10/13 \xe4\xb8\x8b\xe5\x8d\x88 03:27:51&lt;/TimeStamp&gt;&lt;GeoPosition&gt;&lt;TownID&gt;01&lt;/TownID&gt;&lt;TownName&gt;\xe6\x9d\xbe\xe5\xb1\xb1\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121577218&lt;/X&gt;&lt;Y&gt;25049837&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;GeoPosition&gt;&lt;TownID&gt;02&lt;/TownID&gt;&lt;TownName&gt;\xe4\xbf\xa1\xe7\xbe\xa9\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121567161&lt;/X&gt;&lt;Y&gt;25033147&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;GeoPosition&gt;&lt;TownID&gt;03&lt;/TownID&gt;&lt;TownName&gt;\xe5\xa4\xa7\xe5\xae\x89\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121534593&lt;/X&gt;&lt;Y&gt;25026482&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;GeoPosition&gt;&lt;TownID&gt;04&lt;/TownID&gt;&lt;TownName&gt;\xe4\xb8\xad\xe5\xb1\xb1\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121533655&lt;/X&gt;&lt;Y&gt;25064427&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;GeoPosition&gt;&lt;TownID&gt;05&lt;/TownID&gt;&lt;TownName&gt;\xe4\xb8\xad\xe6\xad\xa3\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121518245&lt;/X&gt;&lt;Y&gt;25032251&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;GeoPosition&gt;&lt;TownID&gt;06&lt;/TownID&gt;&lt;TownName&gt;\xe5\xa4\xa7\xe5\x90\x8c\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121515830&lt;/X&gt;&lt;Y&gt;25066142&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;GeoPosition&gt;&lt;TownID&gt;07&lt;/TownID&gt;&lt;TownName&gt;\xe8\x90\xac\xe8\x8f\xaf\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121499745&lt;/X&gt;&lt;Y&gt;25034807&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;GeoPosition&gt;&lt;TownID&gt;08&lt;/TownID&gt;&lt;TownName&gt;\xe6\x96\x87\xe5\xb1\xb1\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121570280&lt;/X&gt;&lt;Y&gt;24989800&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;GeoPosition&gt;&lt;TownID&gt;09&lt;/TownID&gt;&lt;TownName&gt;\xe5\x8d\x97\xe6\xb8\xaf\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121607043&lt;/X&gt;&lt;Y&gt;25054684&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;GeoPosition&gt;&lt;TownID&gt;10&lt;/TownID&gt;&lt;TownName&gt;\xe5\x85\xa7\xe6\xb9\x96\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121589471&lt;/X&gt;&lt;Y&gt;25069353&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;GeoPosition&gt;&lt;TownID&gt;11&lt;/TownID&gt;&lt;TownName&gt;\xe5\xa3\xab\xe6\x9e\x97\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121525380&lt;/X&gt;&lt;Y&gt;25090430&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;GeoPosition&gt;&lt;TownID&gt;12&lt;/TownID&gt;&lt;TownName&gt;\xe5\x8c\x97\xe6\x8a\x95\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121503066&lt;/X&gt;&lt;Y&gt;25132054&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;/iMapSDKOutput&gt;&#39;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#20197;-lxml-&#35299;&#26512;">&#20197; <code>lxml</code> &#35299;&#26512;<a class="anchor-link" href="#&#20197;-lxml-&#35299;&#26512;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">lxml</span> <span class="k">import</span> <span class="n">etree</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="k">import</span> <span class="n">BytesIO</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="n">BytesIO</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+<span class="n">tree</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">town_names</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span><span class="o">.</span><span class="n">text</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tree</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s2">&quot;//TownName&quot;</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">town_names</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;松山區&#39;, &#39;信義區&#39;, &#39;大安區&#39;, &#39;中山區&#39;, &#39;中正區&#39;, &#39;大同區&#39;, &#39;萬華區&#39;, &#39;文山區&#39;, &#39;南港區&#39;, &#39;內湖區&#39;, &#39;士林區&#39;, &#39;北投區&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#25847;&#21462;&#21488;&#21271;&#24066;&#25152;&#26377;-7-11-&#20415;&#21033;&#21830;&#24215;&#36039;&#35338;">&#38568;&#22530;&#32244;&#32722;&#65306;&#25847;&#21462;&#21488;&#21271;&#24066;&#25152;&#26377; 7-11 &#20415;&#21033;&#21830;&#24215;&#36039;&#35338;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#25847;&#21462;&#21488;&#21271;&#24066;&#25152;&#26377;-7-11-&#20415;&#21033;&#21830;&#24215;&#36039;&#35338;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">tp_711_stores</span><span class="p">[</span><span class="s2">&quot;松山區&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tp_711_stores</span><span class="p">[</span><span class="s2">&quot;信義區&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tp_711_stores</span><span class="p">[</span><span class="s2">&quot;大安區&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;POIID&#39;: &#39;170945&#39;, &#39;POIName&#39;: &#39;上弘&#39;, &#39;Longitude&#39;: 121.548287390895, &#39;Latitude&#39;: 25.056390968531797, &#39;Address&#39;: &#39;台北市松山區敦化北路168號B2&#39;}
+{&#39;POIID&#39;: &#39;167651&#39;, &#39;POIName&#39;: &#39;一零一&#39;, &#39;Longitude&#39;: 121.565077, &#39;Latitude&#39;: 25.033373, &#39;Address&#39;: &#39;台北市信義區信義路五段7號35樓&#39;}
+{&#39;POIID&#39;: &#39;153319&#39;, &#39;POIName&#39;: &#39;大台&#39;, &#39;Longitude&#39;: 121.53261437826, &#39;Latitude&#39;: 25.0179598345753, &#39;Address&#39;: &#39;台北市大安區羅斯福路三段283巷14弄16號1樓&#39;}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15196,7 +15548,7 @@ Avengers: Endgame (2019)
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_movie_data</span><span class="p">(</span><span class="s2">&quot;Avengers: Endgame (2019)&quot;</span><span class="p">)</span>
@@ -15212,7 +15564,7 @@ Avengers: Endgame (2019)
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[41]:</div>
+    <div class="prompt output_prompt">Out[47]:</div>
 
 
 
@@ -15220,7 +15572,7 @@ Avengers: Endgame (2019)
 <div class="output_text output_subarea output_execute_result">
 <pre>{&#39;movieTitle&#39;: &#39;Avengers: Endgame (2019)&#39;,
  &#39;moviePosterLink&#39;: &#39;https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_UX182_CR0,0,182,268_AL_.jpg&#39;,
- &#39;movieRating&#39;: 8.6,
+ &#39;movieRating&#39;: 8.5,
  &#39;movieGenre&#39;: [&#39;Action&#39;, &#39;Adventure&#39;, &#39;Sci-Fi&#39;],
  &#39;movieCast&#39;: [&#39;Robert Downey Jr.&#39;,
   &#39;Chris Evans&#39;,
@@ -15256,7 +15608,7 @@ Avengers: Endgame (2019)
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">avengers_movie_data</span><span class="p">)</span>
@@ -15276,7 +15628,7 @@ Avengers: Endgame (2019)
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[{&#39;movieTitle&#39;: &#39;The Avengers (2012)&#39;, &#39;moviePosterLink&#39;: &#39;https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX182_CR0,0,182,268_AL_.jpg&#39;, &#39;movieRating&#39;: 8.0, &#39;movieGenre&#39;: [&#39;Action&#39;, &#39;Adventure&#39;, &#39;Sci-Fi&#39;], &#39;movieCast&#39;: [&#39;Robert Downey Jr.&#39;, &#39;Chris Evans&#39;, &#39;Mark Ruffalo&#39;, &#39;Chris Hemsworth&#39;, &#39;Scarlett Johansson&#39;, &#39;Jeremy Renner&#39;, &#39;Tom Hiddleston&#39;, &#39;Clark Gregg&#39;, &#39;Cobie Smulders&#39;, &#39;Stellan Skarsgård&#39;, &#39;Samuel L. Jackson&#39;, &#39;Gwyneth Paltrow&#39;, &#39;Paul Bettany&#39;, &#39;Alexis Denisof&#39;, &#39;Tina Benko&#39;]}, {&#39;movieTitle&#39;: &#39;Avengers: Age of Ultron (2015)&#39;, &#39;moviePosterLink&#39;: &#39;https://m.media-amazon.com/images/M/MV5BMTM4OGJmNWMtOTM4Ni00NTE3LTg3MDItZmQxYjc4N2JhNmUxXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_UX182_CR0,0,182,268_AL_.jpg&#39;, &#39;movieRating&#39;: 7.3, &#39;movieGenre&#39;: [&#39;Action&#39;, &#39;Adventure&#39;, &#39;Sci-Fi&#39;], &#39;movieCast&#39;: [&#39;Robert Downey Jr.&#39;, &#39;Chris Hemsworth&#39;, &#39;Mark Ruffalo&#39;, &#39;Chris Evans&#39;, &#39;Scarlett Johansson&#39;, &#39;Jeremy Renner&#39;, &#39;James Spader&#39;, &#39;Samuel L. Jackson&#39;, &#39;Don Cheadle&#39;, &#39;Aaron Taylor-Johnson&#39;, &#39;Elizabeth Olsen&#39;, &#39;Paul Bettany&#39;, &#39;Cobie Smulders&#39;, &#39;Anthony Mackie&#39;, &#39;Hayley Atwell&#39;]}, {&#39;movieTitle&#39;: &#39;Avengers: Infinity War (2018)&#39;, &#39;moviePosterLink&#39;: &#39;https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_UX182_CR0,0,182,268_AL_.jpg&#39;, &#39;movieRating&#39;: 8.5, &#39;movieGenre&#39;: [&#39;Action&#39;, &#39;Adventure&#39;, &#39;Sci-Fi&#39;], &#39;movieCast&#39;: [&#39;Robert Downey Jr.&#39;, &#39;Chris Hemsworth&#39;, &#39;Mark Ruffalo&#39;, &#39;Chris Evans&#39;, &#39;Scarlett Johansson&#39;, &#39;Don Cheadle&#39;, &#39;Benedict Cumberbatch&#39;, &#39;Tom Holland&#39;, &#39;Chadwick Boseman&#39;, &#39;Zoe Saldana&#39;, &#39;Karen Gillan&#39;, &#39;Tom Hiddleston&#39;, &#39;Paul Bettany&#39;, &#39;Elizabeth Olsen&#39;, &#39;Anthony Mackie&#39;]}, {&#39;movieTitle&#39;: &#39;Avengers: Endgame (2019)&#39;, &#39;moviePosterLink&#39;: &#39;https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_UX182_CR0,0,182,268_AL_.jpg&#39;, &#39;movieRating&#39;: 8.6, &#39;movieGenre&#39;: [&#39;Action&#39;, &#39;Adventure&#39;, &#39;Sci-Fi&#39;], &#39;movieCast&#39;: [&#39;Robert Downey Jr.&#39;, &#39;Chris Evans&#39;, &#39;Mark Ruffalo&#39;, &#39;Chris Hemsworth&#39;, &#39;Scarlett Johansson&#39;, &#39;Jeremy Renner&#39;, &#39;Don Cheadle&#39;, &#39;Paul Rudd&#39;, &#39;Benedict Cumberbatch&#39;, &#39;Chadwick Boseman&#39;, &#39;Brie Larson&#39;, &#39;Tom Holland&#39;, &#39;Karen Gillan&#39;, &#39;Zoe Saldana&#39;, &#39;Evangeline Lilly&#39;]}]
+<pre>[{&#39;movieTitle&#39;: &#39;The Avengers (2012)&#39;, &#39;moviePosterLink&#39;: &#39;https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX182_CR0,0,182,268_AL_.jpg&#39;, &#39;movieRating&#39;: 8.0, &#39;movieGenre&#39;: [&#39;Action&#39;, &#39;Adventure&#39;, &#39;Sci-Fi&#39;], &#39;movieCast&#39;: [&#39;Robert Downey Jr.&#39;, &#39;Chris Evans&#39;, &#39;Mark Ruffalo&#39;, &#39;Chris Hemsworth&#39;, &#39;Scarlett Johansson&#39;, &#39;Jeremy Renner&#39;, &#39;Tom Hiddleston&#39;, &#39;Clark Gregg&#39;, &#39;Cobie Smulders&#39;, &#39;Stellan Skarsgård&#39;, &#39;Samuel L. Jackson&#39;, &#39;Gwyneth Paltrow&#39;, &#39;Paul Bettany&#39;, &#39;Alexis Denisof&#39;, &#39;Tina Benko&#39;]}, {&#39;movieTitle&#39;: &#39;Avengers: Age of Ultron (2015)&#39;, &#39;moviePosterLink&#39;: &#39;https://m.media-amazon.com/images/M/MV5BMTM4OGJmNWMtOTM4Ni00NTE3LTg3MDItZmQxYjc4N2JhNmUxXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_UX182_CR0,0,182,268_AL_.jpg&#39;, &#39;movieRating&#39;: 7.3, &#39;movieGenre&#39;: [&#39;Action&#39;, &#39;Adventure&#39;, &#39;Sci-Fi&#39;], &#39;movieCast&#39;: [&#39;Robert Downey Jr.&#39;, &#39;Chris Hemsworth&#39;, &#39;Mark Ruffalo&#39;, &#39;Chris Evans&#39;, &#39;Scarlett Johansson&#39;, &#39;Jeremy Renner&#39;, &#39;James Spader&#39;, &#39;Samuel L. Jackson&#39;, &#39;Don Cheadle&#39;, &#39;Aaron Taylor-Johnson&#39;, &#39;Elizabeth Olsen&#39;, &#39;Paul Bettany&#39;, &#39;Cobie Smulders&#39;, &#39;Anthony Mackie&#39;, &#39;Hayley Atwell&#39;]}, {&#39;movieTitle&#39;: &#39;Avengers: Infinity War (2018)&#39;, &#39;moviePosterLink&#39;: &#39;https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_UX182_CR0,0,182,268_AL_.jpg&#39;, &#39;movieRating&#39;: 8.5, &#39;movieGenre&#39;: [&#39;Action&#39;, &#39;Adventure&#39;, &#39;Sci-Fi&#39;], &#39;movieCast&#39;: [&#39;Robert Downey Jr.&#39;, &#39;Chris Hemsworth&#39;, &#39;Mark Ruffalo&#39;, &#39;Chris Evans&#39;, &#39;Scarlett Johansson&#39;, &#39;Don Cheadle&#39;, &#39;Benedict Cumberbatch&#39;, &#39;Tom Holland&#39;, &#39;Chadwick Boseman&#39;, &#39;Zoe Saldana&#39;, &#39;Karen Gillan&#39;, &#39;Tom Hiddleston&#39;, &#39;Paul Bettany&#39;, &#39;Elizabeth Olsen&#39;, &#39;Anthony Mackie&#39;]}, {&#39;movieTitle&#39;: &#39;Avengers: Endgame (2019)&#39;, &#39;moviePosterLink&#39;: &#39;https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_UX182_CR0,0,182,268_AL_.jpg&#39;, &#39;movieRating&#39;: 8.5, &#39;movieGenre&#39;: [&#39;Action&#39;, &#39;Adventure&#39;, &#39;Sci-Fi&#39;], &#39;movieCast&#39;: [&#39;Robert Downey Jr.&#39;, &#39;Chris Evans&#39;, &#39;Mark Ruffalo&#39;, &#39;Chris Hemsworth&#39;, &#39;Scarlett Johansson&#39;, &#39;Jeremy Renner&#39;, &#39;Don Cheadle&#39;, &#39;Paul Rudd&#39;, &#39;Benedict Cumberbatch&#39;, &#39;Chadwick Boseman&#39;, &#39;Brie Larson&#39;, &#39;Tom Holland&#39;, &#39;Karen Gillan&#39;, &#39;Zoe Saldana&#39;, &#39;Evangeline Lilly&#39;]}]
 </pre>
 </div>
 </div>
@@ -15294,7 +15646,7 @@ Avengers: Endgame (2019)
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
@@ -15338,7 +15690,7 @@ Avengers: Endgame (2019)
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ans</span><span class="p">()</span>
@@ -15354,7 +15706,7 @@ Avengers: Endgame (2019)
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[45]:</div>
+    <div class="prompt output_prompt">Out[52]:</div>
 
 
 
