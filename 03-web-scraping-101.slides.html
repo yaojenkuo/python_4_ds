@@ -14347,45 +14347,6 @@ Avengers: Endgame (2019)
 <h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#33258;&#35330;&#19968;&#20491;&#20989;&#25976;-get_movie_data(movie_title)">&#38568;&#22530;&#32244;&#32722;&#65306;&#33258;&#35330;&#19968;&#20491;&#20989;&#25976; <code>get_movie_data(movie_title)</code><a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#33258;&#35330;&#19968;&#20491;&#20989;&#25976;-get_movie_data(movie_title)">&#182;</a></h2>
 </div>
 </div>
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">from</span> <span class="nn">pyquery</span> <span class="k">import</span> <span class="n">PyQuery</span> <span class="k">as</span> <span class="n">pq</span>
-<span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="k">import</span> <span class="n">quote_plus</span>
-
-<span class="k">def</span> <span class="nf">get_movie_data</span><span class="p">(</span><span class="n">movie_title</span><span class="p">):</span>
-    <span class="n">query_str</span> <span class="o">=</span> <span class="n">quote_plus</span><span class="p">(</span><span class="n">movie_title</span><span class="p">)</span>
-    <span class="n">query_url</span> <span class="o">=</span> <span class="s2">&quot;https://www.imdb.com/find?q=</span><span class="si">{}</span><span class="s2">&amp;s=tt&amp;ttype=ft&amp;ref_=fn_ft&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">query_str</span><span class="p">)</span>
-    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">query_url</span><span class="p">)</span>
-    <span class="n">d</span> <span class="o">=</span> <span class="n">pq</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-    <span class="n">search_results</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">attr</span><span class="p">(</span><span class="s2">&quot;href&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">d</span><span class="p">(</span><span class="s2">&quot;.result_text a&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
-    <span class="n">movie_url</span> <span class="o">=</span> <span class="s2">&quot;https://www.imdb.com&quot;</span> <span class="o">+</span> <span class="n">search_results</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">movie_url</span><span class="p">)</span>
-    <span class="n">d</span> <span class="o">=</span> <span class="n">pq</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-    <span class="n">movie_title</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">text</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\xa0</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">d</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()][</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">movie_poster</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">attr</span><span class="p">(</span><span class="s2">&quot;src&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">d</span><span class="p">(</span><span class="s2">&quot;.poster img&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()][</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">movie_rating</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">text</span><span class="p">())</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">d</span><span class="p">(</span><span class="s2">&quot;strong span&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()][</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">movie_genre</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">text</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">d</span><span class="p">(</span><span class="s2">&quot;.subtext a&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
-    <span class="n">movie_genre</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-    <span class="n">movie_cast</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">text</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">d</span><span class="p">(</span><span class="s2">&quot;.primary_photo+ td a&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
-    <span class="n">movie_data</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s2">&quot;movieTitle&quot;</span><span class="p">:</span> <span class="n">movie_title</span><span class="p">,</span>
-        <span class="s2">&quot;moviePoster&quot;</span><span class="p">:</span> <span class="n">movie_poster</span><span class="p">,</span>
-        <span class="s2">&quot;movieRating&quot;</span><span class="p">:</span> <span class="n">movie_rating</span><span class="p">,</span>
-        <span class="s2">&quot;movieGenre&quot;</span><span class="p">:</span> <span class="n">movie_genre</span><span class="p">,</span>
-        <span class="s2">&quot;movieCast&quot;</span><span class="p">:</span> <span class="n">movie_cast</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="n">movie_data</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
