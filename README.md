@@ -12,6 +12,7 @@
 
 ### 作業上傳表單
 
+- [321 期假日下午班](https://forms.gle/Pc2csi5X283urXwv7)
 - [319 期假日下午班](https://forms.gle/ymgTzpi758kKBBK97)
 - [315 期暑期密集班](https://forms.gle/wSPvWDXeMaJYAH4Q7)
 - [312 期假日下午班](https://forms.gle/xrh3SkSV9WszWdMm9)
@@ -21,7 +22,7 @@
 
 ### 課程互動頻道
 
-<https://www.sli.do>
+<https://www.sli.do> 頻道代號：H527
 
 ### 課程 Facebook 群組
 
@@ -29,6 +30,7 @@
 
 ### 課程共筆
 
+- [321 期假日下午班](https://colab.research.google.com/drive/1UbsIuNh5exfKvadu6YqINRq6DlRcybiB)
 - [319 期假日下午班](https://colab.research.google.com/drive/1BOQ0PO11Lcans-zqnk2qNuArWXo0i-tC)
 - [315 期暑期密集班](https://colab.research.google.com/drive/1qGAngB7FykvWaKVGdIc4hHAKyHktWOTJ)
 - [312 期假日下午班](https://colab.research.google.com/drive/1qrlyUWt7BIB4Xv2YYms7PHFELQzZuoEi)
@@ -41,7 +43,7 @@
 
 ### 課程大綱
 
-- [關於](00-about.slides.html)
+- [關於](https://yaojenkuo.io/00-about.slides.html)
 - [起步走](01-setup.slides.html)
 - [Python 程式設計常用技巧](02-python-programming-skills.slides.html)
 - [網頁資料擷取](03-web-scraping-101.slides.html)
@@ -60,6 +62,7 @@
 
 ### 近期課程錄影清單
 
+- [第 321 期 Python 與資料科學應用（假日班下午）]()
 - [第 319 期 Python 與資料科學應用（假日班下午）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuVYc8lSg6kwn9CGnx28orHc)
 - [第 315 期 Python 與資料科學應用（暑期密集班）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuVyoGYwn46IlStidqqTcEwB)
 - [第 312 期 Python 與資料科學應用（假日班下午）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuU2MjWUWArwjxQnp55yXTtt)
