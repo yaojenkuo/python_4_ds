@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,7 +36,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 
 <!-- Loading the mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -13069,45 +13068,6 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
-<style type="text/css">
-    
-/* Temporary definitions which will become obsolete with Notebook release 5.0 */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-bold { font-weight: bold; }
-
-    </style>
 
 
 <style type="text/css">
@@ -13256,7 +13216,6 @@ a.anchor-link {
 <li>擷取 JSON 格式網頁資料</li>
 <li>擷取 XML 格式網頁資料</li>
 <li>擷取 HTML 格式網頁資料</li>
-<li>進行 POST 請求</li>
 <li>瀏覽器自動化</li>
 </ul>
 
@@ -13285,9 +13244,19 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#35531;&#27714;&#36039;&#26009;">&#35531;&#27714;&#36039;&#26009;<a class="anchor-link" href="#&#35531;&#27714;&#36039;&#26009;">&#182;</a></h2><ul>
-<li>使用 <a href="https://chrome.google.com/webstore/detail/quick-javascript-switcher/geddoclleiomckbhadiaipdggiiccfje">Quick JavaScript Switcher</a> 與 Chrome 開發者工具判斷網頁資料類型</li>
-<li>以 <code>requests</code> 或 <code>selenium</code> 發送 HTTP 請求獲得網頁資料</li>
+<h2 id="HTTP">HTTP<a class="anchor-link" href="#HTTP">&#182;</a></h2><blockquote><p>超文本傳輸協定 (HTTP) 是一種用來傳輸超媒體文件 (像是HTML文件) 的應用層協定，被設計來讓瀏覽器和伺服器進行溝通，但也可做其他用途。HTTP 遵循標準客戶端—伺服器模式，由客戶端連線以發送請求，然後等待接收回應。</p>
+</blockquote>
+<p>Source: <a href="https://developer.mozilla.org/zh-TW/docs/Web/HTTP">https://developer.mozilla.org/zh-TW/docs/Web/HTTP</a></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="HTTP-&#23450;&#32681;&#20102;&#19968;&#32068;&#33021;&#20196;&#32102;&#23450;&#36039;&#28304;&#65292;&#22519;&#34892;&#29305;&#23450;&#25805;&#20316;&#30340;&#35531;&#27714;&#26041;&#27861;&#65288;request-methods&#65289;&#65292;&#20854;&#20013;&#33287;&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#30340;&#35531;&#27714;&#36039;&#26009;&#26368;&#30456;&#38364;&#30340;&#26159;&#65306;">HTTP &#23450;&#32681;&#20102;&#19968;&#32068;&#33021;&#20196;&#32102;&#23450;&#36039;&#28304;&#65292;&#22519;&#34892;&#29305;&#23450;&#25805;&#20316;&#30340;&#35531;&#27714;&#26041;&#27861;&#65288;request methods&#65289;&#65292;&#20854;&#20013;&#33287;&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#30340;&#35531;&#27714;&#36039;&#26009;&#26368;&#30456;&#38364;&#30340;&#26159;&#65306;<a class="anchor-link" href="#HTTP-&#23450;&#32681;&#20102;&#19968;&#32068;&#33021;&#20196;&#32102;&#23450;&#36039;&#28304;&#65292;&#22519;&#34892;&#29305;&#23450;&#25805;&#20316;&#30340;&#35531;&#27714;&#26041;&#27861;&#65288;request-methods&#65289;&#65292;&#20854;&#20013;&#33287;&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#30340;&#35531;&#27714;&#36039;&#26009;&#26368;&#30456;&#38364;&#30340;&#26159;&#65306;">&#182;</a></h2><ul>
+<li>GET</li>
+<li>POST</li>
 </ul>
 
 </div>
@@ -13309,13 +13278,10 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#24120;&#29992;&#30340;-requests-&#26041;&#27861;&#12289;&#23660;&#24615;">&#24120;&#29992;&#30340; <code>requests</code> &#26041;&#27861;&#12289;&#23660;&#24615;<a class="anchor-link" href="#&#24120;&#29992;&#30340;-requests-&#26041;&#27861;&#12289;&#23660;&#24615;">&#182;</a></h2><ul>
-<li><code>requests.get()</code>：進行 GET 請求</li>
-<li><code>requests.post()</code>：進行 POST 請求</li>
-<li><code>r.status_code</code>：查看狀態碼</li>
-<li><code>r.json()</code>：將回應直接轉換為 Python 的資料結構（<code>list</code> 或 <code>dict</code>）</li>
-<li><code>r.content</code>：將回應轉換為 <code>bytes</code></li>
-<li><code>r.text</code>：將回應轉換為 <code>str</code></li>
+<h2 id="&#35531;&#27714;&#36039;&#26009;&#38656;&#35201;&#20351;&#29992;&#30340;&#24037;&#20855;">&#35531;&#27714;&#36039;&#26009;&#38656;&#35201;&#20351;&#29992;&#30340;&#24037;&#20855;<a class="anchor-link" href="#&#35531;&#27714;&#36039;&#26009;&#38656;&#35201;&#20351;&#29992;&#30340;&#24037;&#20855;">&#182;</a></h2><ul>
+<li>Chrome 開發者工具</li>
+<li><a href="https://chrome.google.com/webstore/detail/quick-javascript-switcher/geddoclleiomckbhadiaipdggiiccfje">Quick JavaScript Switcher</a></li>
+<li><code>requests</code> 套件</li>
 </ul>
 
 </div>
@@ -13324,10 +13290,9 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#29228;&#34802;&#26371;&#29992;&#21040;&#30340;&#35531;&#27714;">&#29228;&#34802;&#26371;&#29992;&#21040;&#30340;&#35531;&#27714;<a class="anchor-link" href="#&#29228;&#34802;&#26371;&#29992;&#21040;&#30340;&#35531;&#27714;">&#182;</a></h2><ul>
-<li>GET 請求：下載檔案</li>
-<li>POST 請求：上傳資料</li>
-</ul>
+<h2 id="Chrome-&#38283;&#30332;&#32773;&#24037;&#20855;">Chrome &#38283;&#30332;&#32773;&#24037;&#20855;<a class="anchor-link" href="#Chrome-&#38283;&#30332;&#32773;&#24037;&#20855;">&#182;</a></h2><blockquote><p>Chrome 開發者工具是一套內建於 Google Chrome 中的 Web 開發和測試工具。</p>
+</blockquote>
+<p>Source: <a href="https://developers.google.com/web/tools/chrome-devtools/?hl=zh-TW">https://developers.google.com/web/tools/chrome-devtools/?hl=zh-TW</a></p>
 
 </div>
 </div>
@@ -13335,7 +13300,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#21892;&#29992;-Chrome-&#38283;&#30332;&#32773;&#24037;&#20855;&#26296;&#35299;&#35531;&#27714;">&#21892;&#29992; Chrome &#38283;&#30332;&#32773;&#24037;&#20855;&#26296;&#35299;&#35531;&#27714;<a class="anchor-link" href="#&#21892;&#29992;-Chrome-&#38283;&#30332;&#32773;&#24037;&#20855;&#26296;&#35299;&#35531;&#27714;">&#182;</a></h2><p><img src="https://i.imgur.com/3Synk8m.png?1" alt="Imgur"></p>
+<p><img src="https://i.imgur.com/3Synk8m.png?1" alt="Imgur"></p>
 
 </div>
 </div>
@@ -13343,7 +13308,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#40670;&#36984;-Network-&#20043;&#24460;&#37325;&#26032;&#25972;&#29702;">&#40670;&#36984; Network &#20043;&#24460;&#37325;&#26032;&#25972;&#29702;<a class="anchor-link" href="#&#40670;&#36984;-Network-&#20043;&#24460;&#37325;&#26032;&#25972;&#29702;">&#182;</a></h2><p><img src="https://i.imgur.com/OG0Huwj.png?1" alt="Imgur"></p>
+<h2 id="&#36914;&#34892;&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#26178;&#65292;&#26371;&#39640;&#24230;&#20208;&#36084;-Chrome-&#38283;&#30332;&#32773;&#24037;&#20855;&#20013;&#30340;-Network-&#38913;&#31844;">&#36914;&#34892;&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#26178;&#65292;&#26371;&#39640;&#24230;&#20208;&#36084; Chrome &#38283;&#30332;&#32773;&#24037;&#20855;&#20013;&#30340; Network &#38913;&#31844;<a class="anchor-link" href="#&#36914;&#34892;&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#26178;&#65292;&#26371;&#39640;&#24230;&#20208;&#36084;-Chrome-&#38283;&#30332;&#32773;&#24037;&#20855;&#20013;&#30340;-Network-&#38913;&#31844;">&#182;</a></h2><p>使用 Network 頁籤瞭解請求和下載的檔案</p>
 
 </div>
 </div>
@@ -13351,7 +13316,15 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#36890;&#24120;&#25105;&#20497;&#38656;&#35201;&#25847;&#21462;&#30340;&#36039;&#26009;&#26371;&#34987;&#27512;&#39006;&#22312;&#36889;&#20841;&#20491;&#22823;&#39006;&#20013;">&#36890;&#24120;&#25105;&#20497;&#38656;&#35201;&#25847;&#21462;&#30340;&#36039;&#26009;&#26371;&#34987;&#27512;&#39006;&#22312;&#36889;&#20841;&#20491;&#22823;&#39006;&#20013;<a class="anchor-link" href="#&#36890;&#24120;&#25105;&#20497;&#38656;&#35201;&#25847;&#21462;&#30340;&#36039;&#26009;&#26371;&#34987;&#27512;&#39006;&#22312;&#36889;&#20841;&#20491;&#22823;&#39006;&#20013;">&#182;</a></h2><ul>
+<h2 id="&#40670;&#36984;-Network-&#20043;&#24460;&#37325;&#26032;&#25972;&#29702;&#32178;&#38913;&#35264;&#23519;">&#40670;&#36984; Network &#20043;&#24460;&#37325;&#26032;&#25972;&#29702;&#32178;&#38913;&#35264;&#23519;<a class="anchor-link" href="#&#40670;&#36984;-Network-&#20043;&#24460;&#37325;&#26032;&#25972;&#29702;&#32178;&#38913;&#35264;&#23519;">&#182;</a></h2><p><img src="https://i.imgur.com/OG0Huwj.png?1" alt="Imgur"></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#36890;&#24120;&#25105;&#20497;&#38656;&#35201;&#25847;&#21462;&#30340;&#36039;&#26009;&#26371;&#34987;&#27512;&#39006;&#22312;&#36889;&#20841;&#20491;&#22823;&#39006;&#27284;&#26696;&#20013;">&#36890;&#24120;&#25105;&#20497;&#38656;&#35201;&#25847;&#21462;&#30340;&#36039;&#26009;&#26371;&#34987;&#27512;&#39006;&#22312;&#36889;&#20841;&#20491;&#22823;&#39006;&#27284;&#26696;&#20013;<a class="anchor-link" href="#&#36890;&#24120;&#25105;&#20497;&#38656;&#35201;&#25847;&#21462;&#30340;&#36039;&#26009;&#26371;&#34987;&#27512;&#39006;&#22312;&#36889;&#20841;&#20491;&#22823;&#39006;&#27284;&#26696;&#20013;">&#182;</a></h2><ul>
 <li>XHR(XMLHttpRequest)</li>
 <li>Doc</li>
 </ul>
@@ -13362,7 +13335,9 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#25214;&#21040;&#36039;&#26009;&#20043;&#24460;&#21363;&#21487;&#35264;&#23519;&#35531;&#27714;&#31278;&#39006;&#33287;-headers">&#25214;&#21040;&#36039;&#26009;&#20043;&#24460;&#21363;&#21487;&#35264;&#23519;&#35531;&#27714;&#31278;&#39006;&#33287; headers<a class="anchor-link" href="#&#25214;&#21040;&#36039;&#26009;&#20043;&#24460;&#21363;&#21487;&#35264;&#23519;&#35531;&#27714;&#31278;&#39006;&#33287;-headers">&#182;</a></h2><p><img src="https://i.imgur.com/pBUt2e8.png?1" alt="Imgur"></p>
+<h2 id="&#21487;&#20197;&#20351;&#29992;-Quick-JavaScript-Switcher-&#21332;&#21161;&#21028;&#26039;">&#21487;&#20197;&#20351;&#29992; Quick JavaScript Switcher &#21332;&#21161;&#21028;&#26039;<a class="anchor-link" href="#&#21487;&#20197;&#20351;&#29992;-Quick-JavaScript-Switcher-&#21332;&#21161;&#21028;&#26039;">&#182;</a></h2><blockquote><p>快速地開啟、關閉 JavaScript</p>
+</blockquote>
+<p>Source: <a href="https://chrome.google.com/webstore/detail/quick-javascript-switcher/geddoclleiomckbhadiaipdggiiccfje">https://chrome.google.com/webstore/detail/quick-javascript-switcher/geddoclleiomckbhadiaipdggiiccfje</a></p>
 
 </div>
 </div>
@@ -13370,7 +13345,10 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#25214;&#21040;&#36039;&#26009;&#20043;&#24460;&#21363;&#21487;&#35264;&#23519;&#35531;&#27714;&#31278;&#39006;&#33287;-headers">&#25214;&#21040;&#36039;&#26009;&#20043;&#24460;&#21363;&#21487;&#35264;&#23519;&#35531;&#27714;&#31278;&#39006;&#33287; headers<a class="anchor-link" href="#&#25214;&#21040;&#36039;&#26009;&#20043;&#24460;&#21363;&#21487;&#35264;&#23519;&#35531;&#27714;&#31278;&#39006;&#33287;-headers">&#182;</a></h2><p><img src="https://i.imgur.com/LMVp0m7.png?1" alt="Imgur"></p>
+<h2 id="&#31034;&#31684;-Quick-JavaScript-Switcher-&#21151;&#33021;">&#31034;&#31684; Quick JavaScript Switcher &#21151;&#33021;<a class="anchor-link" href="#&#31034;&#31684;-Quick-JavaScript-Switcher-&#21151;&#33021;">&#182;</a></h2><ul>
+<li><a href="https://www.imdb.com/title/tt7286456/">https://www.imdb.com/title/tt7286456/</a></li>
+<li><a href="https://ecshweb.pchome.com.tw/search/v3.3/">https://ecshweb.pchome.com.tw/search/v3.3/</a></li>
+</ul>
 
 </div>
 </div>
@@ -13378,9 +13356,102 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#35299;&#26512;&#36039;&#26009;">&#35299;&#26512;&#36039;&#26009;<a class="anchor-link" href="#&#35299;&#26512;&#36039;&#26009;">&#182;</a></h2><ul>
-<li>如果資料是 JSON 格式：以 <code>requests</code> 獲取後可直接以 Python 資料結構解析</li>
-<li>如果資料是 XML/HTML 格式：以 <code>lxml</code>, <code>bs4</code>、<code>pyquery</code> 或 <code>selenium</code> 搭配 CSS Selector/XPath 解析</li>
+<h2 id="&#25214;&#21040;&#36039;&#26009;&#20043;&#24460;&#21363;&#21487;&#27298;&#35222;&#32048;&#31680;">&#25214;&#21040;&#36039;&#26009;&#20043;&#24460;&#21363;&#21487;&#27298;&#35222;&#32048;&#31680;<a class="anchor-link" href="#&#25214;&#21040;&#36039;&#26009;&#20043;&#24460;&#21363;&#21487;&#27298;&#35222;&#32048;&#31680;">&#182;</a></h2><ul>
+<li>Headers<ul>
+<li>General</li>
+<li>Response Headers</li>
+<li>Request Headers</li>
+<li>Query String Parameters(if any)</li>
+<li>Form Data(if any, for POST)</li>
+</ul>
+</li>
+<li>Preview</li>
+<li>Response</li>
+<li>Cookies</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://i.imgur.com/cTva78r.png?1" alt="Imgur"></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://i.imgur.com/LMVp0m7.png?1" alt="Imgur"></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#24120;&#29992;&#30340;-requests-&#20989;&#25976;">&#24120;&#29992;&#30340; <code>requests</code> &#20989;&#25976;<a class="anchor-link" href="#&#24120;&#29992;&#30340;-requests-&#20989;&#25976;">&#182;</a></h2><ul>
+<li><code>requests.get()</code>：進行 GET 請求（下載檔案）</li>
+<li><code>requests.post()</code>：進行 POST 請求（上傳資料）</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">request_url</span> <span class="o">=</span> <span class="s2">&quot;https://www.imdb.com/&quot;</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">request_url</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">request_url</span> <span class="o">=</span> <span class="s2">&quot;https://mops.twse.com.tw/mops/web/t05st10_ifrs&quot;</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">request_url</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#22238;&#25033;&#65288;Response-&#39006;&#21029;&#65289;&#30340;&#26041;&#27861;&#33287;&#23660;&#24615;">&#22238;&#25033;&#65288;Response &#39006;&#21029;&#65289;&#30340;&#26041;&#27861;&#33287;&#23660;&#24615;<a class="anchor-link" href="#&#22238;&#25033;&#65288;Response-&#39006;&#21029;&#65289;&#30340;&#26041;&#27861;&#33287;&#23660;&#24615;">&#182;</a></h2><ul>
+<li><code>response.status_code</code>：查看狀態碼</li>
+<li><code>response.json()</code>：將回應直接轉換為 Python 的資料結構（<code>list</code> 或 <code>dict</code>）</li>
+<li><code>response.content</code>：將回應轉換為 <code>bytes</code></li>
+<li><code>response.text</code>：將回應轉換為 <code>str</code></li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#27298;&#35222;&#36039;&#26009;&#32048;&#31680;&#30340;-Preview-&#33287;-Response&#30906;&#35469;&#26684;&#24335;">&#27298;&#35222;&#36039;&#26009;&#32048;&#31680;&#30340; Preview &#33287; Response&#30906;&#35469;&#26684;&#24335;<a class="anchor-link" href="#&#27298;&#35222;&#36039;&#26009;&#32048;&#31680;&#30340;-Preview-&#33287;-Response&#30906;&#35469;&#26684;&#24335;">&#182;</a></h2><ul>
+<li>如果資料是 JSON 格式：呼叫回應的 <code>.json()</code> 方法後直接以 Python 資料結構解析</li>
+<li>如果資料是 XML 格式：呼叫回應的 <code>.content</code> 屬性後以 <code>lxml</code> 搭配 XPath 解析</li>
+<li>如果資料是 HTML 格式：呼叫回應的 <code>.text</code> 屬性後以 <code>bs4</code> 搭配 CSS Selector 解析</li>
 </ul>
 
 </div>
@@ -13397,7 +13468,6 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="JSON-&#26684;&#24335;&#32178;&#38913;&#36039;&#26009;&#31684;&#20363;">JSON &#26684;&#24335;&#32178;&#38913;&#36039;&#26009;&#31684;&#20363;<a class="anchor-link" href="#JSON-&#26684;&#24335;&#32178;&#38913;&#36039;&#26009;&#31684;&#20363;">&#182;</a></h2><ul>
-<li><a href="https://opendata.epa.gov.tw/ws/Data/AQI/?$format=json">空氣品質指標(AQI)</a></li>
 <li><a href="http://data.nba.net/prod/v1/today.json">data.nba</a></li>
 <li><a href="https://ecshweb.pchome.com.tw/search/v3.3/all/results?q=macbook&amp;page=1&amp;sort=sale/dc">PChome</a></li>
 </ul>
@@ -13417,8 +13487,8 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#25847;&#21462;-JSON-&#26684;&#24335;&#32178;&#38913;&#36039;&#26009;&#27493;&#39519;">&#25847;&#21462; JSON &#26684;&#24335;&#32178;&#38913;&#36039;&#26009;&#27493;&#39519;<a class="anchor-link" href="#&#25847;&#21462;-JSON-&#26684;&#24335;&#32178;&#38913;&#36039;&#26009;&#27493;&#39519;">&#182;</a></h2><ul>
-<li><code>requests.get()</code></li>
-<li><code>r.json()</code></li>
+<li>使用 <code>requests</code> 請求資料</li>
+<li>呼叫回應的 <code>.json()</code> 方法，例如 <code>response.json()</code></li>
 <li>視需求進行摘要</li>
 </ul>
 
@@ -13434,14 +13504,14 @@ a.anchor-link {
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">teams_url</span> <span class="o">=</span> <span class="s2">&quot;http://data.nba.net/prod/v2/2019/teams.json&quot;</span>
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">teams_url</span><span class="p">)</span>
-<span class="n">teams</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+<span class="n">request_url</span> <span class="o">=</span> <span class="s2">&quot;http://data.nba.net/prod/v2/2019/teams.json&quot;</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">request_url</span><span class="p">)</span>
+<span class="n">teams</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">teams</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">teams</span><span class="p">)</span>
 </pre></div>
@@ -13479,7 +13549,7 @@ a.anchor-link {
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2019-2020 球季 NBA 有 </span><span class="si">{}</span><span class="s2"> 支球隊&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n_nba_teams</span><span class="p">))</span>
@@ -13517,7 +13587,7 @@ a.anchor-link {
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;屬於 Atlantic 與 Southwest 的球隊有 </span><span class="si">{}</span><span class="s2"> 個:&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n_as_teams</span><span class="p">))</span>
@@ -13561,8 +13631,8 @@ Southwest: [&#39;Dallas Mavericks&#39;, &#39;Houston Rockets&#39;, &#39;Memphis 
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#25847;&#21462;-XML-&#26684;&#24335;&#32178;&#38913;&#36039;&#26009;&#27493;&#39519;">&#25847;&#21462; XML &#26684;&#24335;&#32178;&#38913;&#36039;&#26009;&#27493;&#39519;<a class="anchor-link" href="#&#25847;&#21462;-XML-&#26684;&#24335;&#32178;&#38913;&#36039;&#26009;&#27493;&#39519;">&#182;</a></h2><ul>
-<li><code>requests.get()</code></li>
-<li><code>r.content</code></li>
+<li>使用 <code>requests</code> 請求資料</li>
+<li>使用回應的 <code>.content</code> 屬性，例如 <code>response.content</code></li>
 <li>以 <code>lxml</code> 搭配 XPath 解析</li>
 </ul>
 
@@ -13572,57 +13642,25 @@ Southwest: [&#39;Dallas Mavericks&#39;, &#39;Houston Rockets&#39;, &#39;Memphis 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#20197;-https://opendata.epa.gov.tw/ws/Data/AQI/?$format=xml-&#31034;&#31684;">&#20197; <a href="https://opendata.epa.gov.tw/ws/Data/AQI/?$format=xml">https://opendata.epa.gov.tw/ws/Data/AQI/?$format=xml</a> &#31034;&#31684;<a class="anchor-link" href="#&#20197;-https://opendata.epa.gov.tw/ws/Data/AQI/?$format=xml-&#31034;&#31684;">&#182;</a></h2>
+<h2 id="&#20197;-https://emap.pcsc.com.tw-&#31034;&#31684;">&#20197; <a href="https://emap.pcsc.com.tw">https://emap.pcsc.com.tw</a> &#31034;&#31684;<a class="anchor-link" href="#&#20197;-https://emap.pcsc.com.tw-&#31034;&#31684;">&#182;</a></h2>
 </div>
 </div>
-</div></section><section>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">aqi_url</span> <span class="o">=</span> <span class="s2">&quot;https://opendata.epa.gov.tw/ws/Data/AQI/?$format=xml&quot;</span>
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">aqi_url</span><span class="p">,</span> <span class="n">verify</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/Users/kuoyaojen/anaconda3/lib/python3.7/site-packages/urllib3/connectionpool.py:847: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  InsecureRequestWarning)
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">lxml</span> <span class="k">import</span> <span class="n">etree</span>
-<span class="kn">from</span> <span class="nn">io</span> <span class="k">import</span> <span class="n">BytesIO</span>
-
-<span class="n">f</span> <span class="o">=</span> <span class="n">BytesIO</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
-<span class="n">tree</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-<span class="n">site_names</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span><span class="o">.</span><span class="n">text</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tree</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s2">&quot;//SiteName&quot;</span><span class="p">)]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">site_names</span><span class="p">)</span>
+<span class="c1">#進行 POST 請求時要攜帶資料</span>
+<span class="n">form_data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;commandid&quot;</span><span class="p">:</span> <span class="s2">&quot;GetTown&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;cityid&quot;</span><span class="p">:</span> <span class="s2">&quot;01&quot;</span>
+<span class="p">}</span>
+<span class="n">request_url</span> <span class="o">=</span> <span class="s2">&quot;https://emap.pcsc.com.tw/EMapSDK.aspx&quot;</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">request_url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">form_data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13639,7 +13677,7 @@ Southwest: [&#39;Dallas Mavericks&#39;, &#39;Houston Rockets&#39;, &#39;Memphis 
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;桃園(觀音工業區)&#39;, &#39;屏東(琉球)&#39;, &#39;新竹(香山)&#39;, &#39;彰化(大城)&#39;, &#39;臺南(麻豆)&#39;, &#39;富貴角&#39;, &#39;麥寮&#39;, &#39;關山&#39;, &#39;馬公&#39;, &#39;金門&#39;, &#39;馬祖&#39;, &#39;埔里&#39;, &#39;復興&#39;, &#39;永和&#39;, &#39;竹山&#39;, &#39;中壢&#39;, &#39;三重&#39;, &#39;冬山&#39;, &#39;宜蘭&#39;, &#39;陽明&#39;, &#39;花蓮&#39;, &#39;臺東&#39;, &#39;恆春&#39;, &#39;潮州&#39;, &#39;屏東&#39;, &#39;小港&#39;, &#39;前鎮&#39;, &#39;前金&#39;, &#39;左營&#39;, &#39;楠梓&#39;, &#39;林園&#39;, &#39;大寮&#39;, &#39;鳳山&#39;, &#39;仁武&#39;, &#39;橋頭&#39;, &#39;美濃&#39;, &#39;臺南&#39;, &#39;安南&#39;, &#39;善化&#39;, &#39;新營&#39;, &#39;嘉義&#39;, &#39;臺西&#39;, &#39;朴子&#39;, &#39;新港&#39;, &#39;崙背&#39;, &#39;斗六&#39;, &#39;南投&#39;, &#39;二林&#39;, &#39;線西&#39;, &#39;彰化&#39;, &#39;西屯&#39;, &#39;忠明&#39;, &#39;大里&#39;, &#39;沙鹿&#39;, &#39;豐原&#39;, &#39;三義&#39;, &#39;苗栗&#39;, &#39;頭份&#39;, &#39;新竹&#39;, &#39;竹東&#39;, &#39;湖口&#39;, &#39;龍潭&#39;, &#39;平鎮&#39;, &#39;觀音&#39;, &#39;大園&#39;, &#39;桃園&#39;, &#39;大同&#39;, &#39;松山&#39;, &#39;古亭&#39;, &#39;萬華&#39;, &#39;中山&#39;, &#39;士林&#39;, &#39;淡水&#39;, &#39;林口&#39;, &#39;菜寮&#39;, &#39;新莊&#39;, &#39;板橋&#39;, &#39;土城&#39;, &#39;新店&#39;, &#39;萬里&#39;, &#39;汐止&#39;, &#39;基隆&#39;]
+<pre>200
 </pre>
 </div>
 </div>
@@ -13647,7 +13685,169 @@ Southwest: [&#39;Dallas Mavericks&#39;, &#39;Houston Rockets&#39;, &#39;Memphis 
 </div>
 </div>
 
-</div></section></section><section><section>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#20351;&#29992;-.content-&#23660;&#24615;">&#20351;&#29992; <code>.content</code> &#23660;&#24615;<a class="anchor-link" href="#&#20351;&#29992;-.content-&#23660;&#24615;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">response_content</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">content</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response_content</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>b&#39;&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;&lt;iMapSDKOutput&gt;&lt;MessageID&gt;00000&lt;/MessageID&gt;&lt;CommandID&gt;GetTown&lt;/CommandID&gt;&lt;Status&gt;\xe9\x80\xa3\xe7\xb7\x9a\xe6\x88\x90\xe5\x8a\x9f&lt;/Status&gt;&lt;TimeStamp&gt;2019/11/29 \xe4\xb8\x8b\xe5\x8d\x88 04:04:18&lt;/TimeStamp&gt;&lt;GeoPosition&gt;&lt;TownID&gt;01&lt;/TownID&gt;&lt;TownName&gt;\xe6\x9d\xbe\xe5\xb1\xb1\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121577218&lt;/X&gt;&lt;Y&gt;25049837&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;GeoPosition&gt;&lt;TownID&gt;02&lt;/TownID&gt;&lt;TownName&gt;\xe4\xbf\xa1\xe7\xbe\xa9\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121567161&lt;/X&gt;&lt;Y&gt;25033147&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;GeoPosition&gt;&lt;TownID&gt;03&lt;/TownID&gt;&lt;TownName&gt;\xe5\xa4\xa7\xe5\xae\x89\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121534593&lt;/X&gt;&lt;Y&gt;25026482&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;GeoPosition&gt;&lt;TownID&gt;04&lt;/TownID&gt;&lt;TownName&gt;\xe4\xb8\xad\xe5\xb1\xb1\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121533655&lt;/X&gt;&lt;Y&gt;25064427&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;GeoPosition&gt;&lt;TownID&gt;05&lt;/TownID&gt;&lt;TownName&gt;\xe4\xb8\xad\xe6\xad\xa3\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121518245&lt;/X&gt;&lt;Y&gt;25032251&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;GeoPosition&gt;&lt;TownID&gt;06&lt;/TownID&gt;&lt;TownName&gt;\xe5\xa4\xa7\xe5\x90\x8c\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121515830&lt;/X&gt;&lt;Y&gt;25066142&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;GeoPosition&gt;&lt;TownID&gt;07&lt;/TownID&gt;&lt;TownName&gt;\xe8\x90\xac\xe8\x8f\xaf\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121499745&lt;/X&gt;&lt;Y&gt;25034807&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;GeoPosition&gt;&lt;TownID&gt;08&lt;/TownID&gt;&lt;TownName&gt;\xe6\x96\x87\xe5\xb1\xb1\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121570280&lt;/X&gt;&lt;Y&gt;24989800&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;GeoPosition&gt;&lt;TownID&gt;09&lt;/TownID&gt;&lt;TownName&gt;\xe5\x8d\x97\xe6\xb8\xaf\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121607043&lt;/X&gt;&lt;Y&gt;25054684&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;GeoPosition&gt;&lt;TownID&gt;10&lt;/TownID&gt;&lt;TownName&gt;\xe5\x85\xa7\xe6\xb9\x96\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121589471&lt;/X&gt;&lt;Y&gt;25069353&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;GeoPosition&gt;&lt;TownID&gt;11&lt;/TownID&gt;&lt;TownName&gt;\xe5\xa3\xab\xe6\x9e\x97\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121525380&lt;/X&gt;&lt;Y&gt;25090430&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;GeoPosition&gt;&lt;TownID&gt;12&lt;/TownID&gt;&lt;TownName&gt;\xe5\x8c\x97\xe6\x8a\x95\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121503066&lt;/X&gt;&lt;Y&gt;25132054&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;/iMapSDKOutput&gt;&#39;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#20197;-lxml-&#35299;&#26512;">&#20197; <code>lxml</code> &#35299;&#26512;<a class="anchor-link" href="#&#20197;-lxml-&#35299;&#26512;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">lxml</span> <span class="k">import</span> <span class="n">etree</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="k">import</span> <span class="n">BytesIO</span>
+
+<span class="n">file</span> <span class="o">=</span> <span class="n">BytesIO</span><span class="p">(</span><span class="n">response_content</span><span class="p">)</span>
+<span class="n">tree</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+<span class="n">town_names</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span><span class="o">.</span><span class="n">text</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tree</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s2">&quot;//TownName&quot;</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">town_names</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;松山區&#39;, &#39;信義區&#39;, &#39;大安區&#39;, &#39;中山區&#39;, &#39;中正區&#39;, &#39;大同區&#39;, &#39;萬華區&#39;, &#39;文山區&#39;, &#39;南港區&#39;, &#39;內湖區&#39;, &#39;士林區&#39;, &#39;北投區&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">lxml</span> <span class="k">import</span> <span class="n">etree</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="k">import</span> <span class="n">BytesIO</span>
+
+<span class="n">file</span> <span class="o">=</span> <span class="n">BytesIO</span><span class="p">(</span><span class="n">response_content</span><span class="p">)</span>
+<span class="n">tree</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+<span class="n">town_names</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span><span class="o">.</span><span class="n">text</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tree</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s2">&quot;//TownName&quot;</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">town_names</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;松山區&#39;, &#39;信義區&#39;, &#39;大安區&#39;, &#39;中山區&#39;, &#39;中正區&#39;, &#39;大同區&#39;, &#39;萬華區&#39;, &#39;文山區&#39;, &#39;南港區&#39;, &#39;內湖區&#39;, &#39;士林區&#39;, &#39;北投區&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#25847;&#21462;&#21488;&#21271;&#24066;&#25152;&#26377;-7-11-&#20415;&#21033;&#21830;&#24215;&#36039;&#35338;">&#38568;&#22530;&#32244;&#32722;&#65306;&#25847;&#21462;&#21488;&#21271;&#24066;&#25152;&#26377; 7-11 &#20415;&#21033;&#21830;&#24215;&#36039;&#35338;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#25847;&#21462;&#21488;&#21271;&#24066;&#25152;&#26377;-7-11-&#20415;&#21033;&#21830;&#24215;&#36039;&#35338;">&#182;</a></h2>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">tp_711_stores</span><span class="p">[</span><span class="s2">&quot;松山區&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tp_711_stores</span><span class="p">[</span><span class="s2">&quot;信義區&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tp_711_stores</span><span class="p">[</span><span class="s2">&quot;大安區&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;POIID&#39;: &#39;170945&#39;, &#39;POIName&#39;: &#39;上弘&#39;, &#39;Longitude&#39;: 121.548287390895, &#39;Latitude&#39;: 25.056390968531797, &#39;Address&#39;: &#39;台北市松山區敦化北路168號B2&#39;}
+{&#39;POIID&#39;: &#39;167651&#39;, &#39;POIName&#39;: &#39;一零一&#39;, &#39;Longitude&#39;: 121.565077, &#39;Latitude&#39;: 25.033373, &#39;Address&#39;: &#39;台北市信義區信義路五段7號35樓&#39;}
+{&#39;POIID&#39;: &#39;153319&#39;, &#39;POIName&#39;: &#39;大台&#39;, &#39;Longitude&#39;: 121.53261437826, &#39;Latitude&#39;: 25.0179598345753, &#39;Address&#39;: &#39;台北市大安區羅斯福路三段283巷14弄16號1樓&#39;}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13659,9 +13859,9 @@ Southwest: [&#39;Dallas Mavericks&#39;, &#39;Houston Rockets&#39;, &#39;Memphis 
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#25847;&#21462;-HTML-&#26684;&#24335;&#32178;&#38913;&#36039;&#26009;&#27493;&#39519;">&#25847;&#21462; HTML &#26684;&#24335;&#32178;&#38913;&#36039;&#26009;&#27493;&#39519;<a class="anchor-link" href="#&#25847;&#21462;-HTML-&#26684;&#24335;&#32178;&#38913;&#36039;&#26009;&#27493;&#39519;">&#182;</a></h2><ul>
-<li><code>requests.get()</code></li>
-<li><code>r.text</code></li>
-<li>以 <code>bs4</code> 或 <code>pyquery</code> 搭配 Tag Name/CSS Selector 解析</li>
+<li>使用 <code>requests</code> 請求資料</li>
+<li>使用回應的 <code>.text</code> 屬性，例如 <code>response.text</code></li>
+<li>以 <code>bs4</code> 搭配 Tag Name/CSS Selector 解析</li>
 </ul>
 
 </div>
@@ -13684,7 +13884,7 @@ Southwest: [&#39;Dallas Mavericks&#39;, &#39;Houston Rockets&#39;, &#39;Memphis 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#24171;&#21161;-CSS-&#36984;&#25799;&#30340;-Chrome-&#22806;&#25499;">&#24171;&#21161; CSS &#36984;&#25799;&#30340; Chrome &#22806;&#25499;<a class="anchor-link" href="#&#24171;&#21161;-CSS-&#36984;&#25799;&#30340;-Chrome-&#22806;&#25499;">&#182;</a></h2><p><a href="https://chrome.google.com/webstore/detail/selectorgadget/mhjhnkcfbdhnjickkkdbjoemdmbfginb">SelectorGadget</a></p>
+<h2 id="&#24171;&#21161;&#23450;&#20301;-CSS-&#36984;&#25799;&#22120;&#30340;-Chrome-&#22806;&#25499;">&#24171;&#21161;&#23450;&#20301; CSS &#36984;&#25799;&#22120;&#30340; Chrome &#22806;&#25499;<a class="anchor-link" href="#&#24171;&#21161;&#23450;&#20301;-CSS-&#36984;&#25799;&#22120;&#30340;-Chrome-&#22806;&#25499;">&#182;</a></h2><p><a href="https://chrome.google.com/webstore/detail/selectorgadget/mhjhnkcfbdhnjickkkdbjoemdmbfginb">SelectorGadget</a></p>
 
 </div>
 </div>
@@ -13720,46 +13920,30 @@ Southwest: [&#39;Dallas Mavericks&#39;, &#39;Houston Rockets&#39;, &#39;Memphis 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#20351;&#29992;-bs4-&#25110;-pyquery-&#35299;&#26512;&#32178;&#38913;&#36039;&#26009;">&#20351;&#29992; bs4 &#25110; pyquery &#35299;&#26512;&#32178;&#38913;&#36039;&#26009;<a class="anchor-link" href="#&#20351;&#29992;-bs4-&#25110;-pyquery-&#35299;&#26512;&#32178;&#38913;&#36039;&#26009;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
-<span class="kn">from</span> <span class="nn">pyquery</span> <span class="kn">import</span> <span class="n">PyQuery</span> <span class="k">as</span> <span class="n">pq</span>
-</pre></div>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#24120;&#29992;&#30340;-bs4-&#26041;&#27861;&#12289;&#23660;&#24615;">&#24120;&#29992;&#30340; bs4 &#26041;&#27861;&#12289;&#23660;&#24615;<a class="anchor-link" href="#&#24120;&#29992;&#30340;-bs4-&#26041;&#27861;&#12289;&#23660;&#24615;">&#182;</a></h2><ul>
-<li><code>BeautifulSoup()</code>：創建 <code>soup</code> 類別</li>
-<li><code>soup.find()</code>：尋找第一個符合標記名稱的資料</li>
-<li><code>soup.find_all()</code>：尋找所有符合標記名稱的資料</li>
-<li><code>soup.select()</code>：尋找所有符合 CSS Selectors 的資料</li>
-<li><code>element.Tag.text</code>：取出標記中的文字值</li>
-<li><code>element.Tag.get(attr)</code>：取出標記中的指定屬性</li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#20197;-Avengers:-Endgame-(2019)-&#31034;&#31684;-bs4">&#20197; <a href="https://www.imdb.com/title/tt4154796">Avengers: Endgame (2019)</a> &#31034;&#31684; bs4<a class="anchor-link" href="#&#20197;-Avengers:-Endgame-(2019)-&#31034;&#31684;-bs4">&#182;</a></h2>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#24120;&#29992;&#30340;-bs4-&#20989;&#25976;">&#24120;&#29992;&#30340; bs4 &#20989;&#25976;<a class="anchor-link" href="#&#24120;&#29992;&#30340;-bs4-&#20989;&#25976;">&#182;</a></h2><p><code>BeautifulSoup()</code>：創建 <code>soup</code> 類別</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 <span class="kn">from</span> <span class="nn">bs4</span> <span class="k">import</span> <span class="n">BeautifulSoup</span>
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://www.imdb.com/title/tt4154796&quot;</span><span class="p">)</span>
-<span class="n">html_doc</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span>
-<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html_doc</span><span class="p">)</span>
+<span class="n">request_url</span> <span class="o">=</span> <span class="s2">&quot;https://www.imdb.com/title/tt4154796&quot;</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">request_url</span><span class="p">)</span>
+<span class="n">response_text</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response_text</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">soup</span><span class="p">))</span>
 </pre></div>
 
@@ -13786,14 +13970,28 @@ Southwest: [&#39;Dallas Mavericks&#39;, &#39;Houston Rockets&#39;, &#39;Memphis 
 </div>
 
 </div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#24120;&#29992;&#30340;-soup-&#26041;&#27861;">&#24120;&#29992;&#30340; soup &#26041;&#27861;<a class="anchor-link" href="#&#24120;&#29992;&#30340;-soup-&#26041;&#27861;">&#182;</a></h2><ul>
+<li><code>soup.find()</code>：尋找第一個符合標記名稱的資料</li>
+<li><code>soup.find_all()</code>：尋找所有符合標記名稱的資料</li>
+<li><code>soup.select()</code>：尋找所有符合 CSS 選擇的資料</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">)))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;strong span&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;strong span&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -13813,6 +14011,8 @@ Southwest: [&#39;Dallas Mavericks&#39;, &#39;Houston Rockets&#39;, &#39;Memphis 
 <pre>&lt;h1 class=&#34;&#34;&gt;Avengers: Endgame &lt;span id=&#34;titleYear&#34;&gt;(&lt;a href=&#34;/year/2019/&#34;&gt;2019&lt;/a&gt;)&lt;/span&gt; &lt;/h1&gt;
 &lt;class &#39;bs4.element.Tag&#39;&gt;
 Avengers: Endgame (2019) 
+[&lt;span itemprop=&#34;ratingValue&#34;&gt;8.5&lt;/span&gt;]
+8.5
 </pre>
 </div>
 </div>
@@ -13821,9 +14021,20 @@ Avengers: Endgame (2019)
 </div>
 
 </div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#24120;&#29992;&#30340;-element.Tag-&#23660;&#24615;&#12289;&#26041;&#27861;">&#24120;&#29992;&#30340; element.Tag &#23660;&#24615;&#12289;&#26041;&#27861;<a class="anchor-link" href="#&#24120;&#29992;&#30340;-element.Tag-&#23660;&#24615;&#12289;&#26041;&#27861;">&#182;</a></h2><ul>
+<li><code>element.Tag.text</code>：取出標記中的文字值</li>
+<li><code>element.Tag.get(attr)</code>：取出標記中的指定屬性</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;img&quot;</span><span class="p">)))</span>
@@ -13846,10 +14057,10 @@ Avengers: Endgame (2019)
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>95
-&lt;img alt=&#34;Avengers: Endgame Poster&#34; src=&#34;https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_UX182_CR0,0,182,268_AL_.jpg&#34; title=&#34;Avengers: Endgame Poster&#34;/&gt;
-Avengers: Endgame Poster
-https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_UX182_CR0,0,182,268_AL_.jpg
+<pre>90
+&lt;img class=&#34;pro_logo&#34; src=&#34;https://m.media-amazon.com/images/G/01/imdb/IMDbConsumerSiteProTitleViews/images/logo/pro_logo_dark-3176609149._CB455053166_.png&#34;/&gt;
+None
+https://m.media-amazon.com/images/G/01/imdb/IMDbConsumerSiteProTitleViews/images/logo/pro_logo_dark-3176609149._CB455053166_.png
 </pre>
 </div>
 </div>
@@ -13860,7 +14071,7 @@ https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;strong span&quot;</span><span class="p">))</span>
@@ -13900,7 +14111,7 @@ https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">genre</span><span class="p">:</span>
@@ -13923,7 +14134,7 @@ https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Action
 Adventure
-Sci-Fi
+Drama
 </pre>
 </div>
 </div>
@@ -13941,242 +14152,7 @@ Sci-Fi
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">cast</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;Robert Downey Jr.&#39;, &#39;Chris Evans&#39;, &#39;Mark Ruffalo&#39;, &#39;Chris Hemsworth&#39;, &#39;Scarlett Johansson&#39;, &#39;Jeremy Renner&#39;, &#39;Don Cheadle&#39;, &#39;Paul Rudd&#39;, &#39;Benedict Cumberbatch&#39;, &#39;Chadwick Boseman&#39;, &#39;Brie Larson&#39;, &#39;Tom Holland&#39;, &#39;Karen Gillan&#39;, &#39;Zoe Saldana&#39;, &#39;Evangeline Lilly&#39;]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#24120;&#29992;&#30340;-pyquery-&#26041;&#27861;&#12289;&#23660;&#24615;">&#24120;&#29992;&#30340; pyquery &#26041;&#27861;&#12289;&#23660;&#24615;<a class="anchor-link" href="#&#24120;&#29992;&#30340;-pyquery-&#26041;&#27861;&#12289;&#23660;&#24615;">&#182;</a></h2><ul>
-<li><code>PyQuery()</code>：創建 <code>PyQuery</code> 類別</li>
-<li><code>d("YOUR-CSS-SELECTOR")</code>：尋找所有符合 CSS Selectors 的資料</li>
-<li><code>d("YOUR-CSS-SELECTOR").items()</code>：回傳所有符合 CSS Selectors 的文字與屬性</li>
-<li><code>elem.text()</code>：取出標記中的文字值</li>
-<li><code>elem.attr(ATTR)</code>：取出標記中的指定屬性</li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#20197;-Avengers:-Endgame-(2019)-&#31034;&#31684;-PyQuery">&#20197; <a href="https://www.imdb.com/title/tt4154796">Avengers: Endgame (2019)</a> &#31034;&#31684; PyQuery<a class="anchor-link" href="#&#20197;-Avengers:-Endgame-(2019)-&#31034;&#31684;-PyQuery">&#182;</a></h2>
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">from</span> <span class="nn">pyquery</span> <span class="k">import</span> <span class="n">PyQuery</span> <span class="k">as</span> <span class="n">pq</span>
-
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://www.imdb.com/title/tt4154796&quot;</span><span class="p">)</span>
-<span class="n">html_doc</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span>
-<span class="n">d</span> <span class="o">=</span> <span class="n">pq</span><span class="p">(</span><span class="n">html_doc</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">d</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>&lt;class &#39;pyquery.pyquery.PyQuery&#39;&gt;
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">d</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">)))</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">d</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>&lt;h1 class=&#34;&#34;&gt;Avengers: Endgame &lt;span id=&#34;titleYear&#34;&gt;(&lt;a href=&#34;/year/2019/&#34;&gt;2019&lt;/a&gt;)&lt;/span&gt;            &lt;/h1&gt;
-            
-&lt;class &#39;pyquery.pyquery.PyQuery&#39;&gt;
-Avengers: Endgame (2019)
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">d</span><span class="p">(</span><span class="s2">&quot;.poster img&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">attr</span><span class="p">(</span><span class="s2">&quot;src&quot;</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_UX182_CR0,0,182,268_AL_.jpg
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">d</span><span class="p">(</span><span class="s2">&quot;strong span&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">text</span><span class="p">()))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>8.5
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#20197;-requests-&#25645;&#37197;-pyquery-&#25847;&#21462;-Avengers:-Endgame-(2019)-&#30340;&#21127;&#24773;&#39006;&#22411;">&#38568;&#22530;&#32244;&#32722;&#65306;&#20197; <code>requests</code> &#25645;&#37197; <code>pyquery</code> &#25847;&#21462; <a href="https://www.imdb.com/title/tt4154796">Avengers: Endgame (2019)</a> &#30340;&#21127;&#24773;&#39006;&#22411;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#20197;-requests-&#25645;&#37197;-pyquery-&#25847;&#21462;-Avengers:-Endgame-(2019)-&#30340;&#21127;&#24773;&#39006;&#22411;">&#182;</a></h2>
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
 <div class="prompt input_prompt">In&nbsp;[21]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">genre</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;Action&#39;, &#39;Adventure&#39;, &#39;Sci-Fi&#39;]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#20197;-requests-&#25645;&#37197;-pyquery-&#25847;&#21462;-Avengers:-Endgame-(2019)-&#30340;&#28436;&#21729;&#38499;&#23481;">&#38568;&#22530;&#32244;&#32722;&#65306;&#20197; <code>requests</code> &#25645;&#37197; <code>pyquery</code> &#25847;&#21462; <a href="https://www.imdb.com/title/tt4154796">Avengers: Endgame (2019)</a> &#30340;&#28436;&#21729;&#38499;&#23481;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#20197;-requests-&#25645;&#37197;-pyquery-&#25847;&#21462;-Avengers:-Endgame-(2019)-&#30340;&#28436;&#21729;&#38499;&#23481;">&#182;</a></h2>
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">cast</span><span class="p">)</span>
@@ -14214,7 +14190,7 @@ Avengers: Endgame (2019)
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_movie_data</span><span class="p">(</span><span class="s2">&quot;https://www.imdb.com/title/tt4154796&quot;</span><span class="p">)</span>
@@ -14230,7 +14206,7 @@ Avengers: Endgame (2019)
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[25]:</div>
+    <div class="prompt output_prompt">Out[31]:</div>
 
 
 
@@ -14239,7 +14215,7 @@ Avengers: Endgame (2019)
 <pre>{&#39;movieTitle&#39;: &#39;Avengers: Endgame (2019)&#39;,
  &#39;moviePoster&#39;: &#39;https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_UX182_CR0,0,182,268_AL_.jpg&#39;,
  &#39;movieRating&#39;: 8.5,
- &#39;movieGenre&#39;: [&#39;Action&#39;, &#39;Adventure&#39;, &#39;Sci-Fi&#39;],
+ &#39;movieGenre&#39;: [&#39;Action&#39;, &#39;Adventure&#39;, &#39;Drama&#39;],
  &#39;movieCast&#39;: [&#39;Robert Downey Jr.&#39;,
   &#39;Chris Evans&#39;,
   &#39;Mark Ruffalo&#39;,
@@ -14268,54 +14244,31 @@ Avengers: Endgame (2019)
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#35731;-get_movie_data()-&#26356;&#26041;&#20415;&#20351;&#29992;">&#35731; <code>get_movie_data()</code> &#26356;&#26041;&#20415;&#20351;&#29992;<a class="anchor-link" href="#&#35731;-get_movie_data()-&#26356;&#26041;&#20415;&#20351;&#29992;">&#182;</a></h2><ul>
 <li>可以輸入電影名稱，而非 URL！</li>
-<li>以 <code>urllib.parse.quote_plus()</code> 製作 query string</li>
+<li>觀察 <a href="https://www.imdb.com/find?q=Avengers%3A+Endgame&amp;ref_=nv_sr_sm">https://www.imdb.com/find?q=Avengers%3A+Endgame&amp;ref_=nv_sr_sm</a></li>
 </ul>
 
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="k">import</span> <span class="n">quote_plus</span>
-
-<span class="n">query_str</span> <span class="o">=</span> <span class="n">quote_plus</span><span class="p">(</span><span class="s2">&quot;Avengers: Endgame (2019)&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">query_str</span><span class="p">)</span>
-</pre></div>
-
-    </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#22312;-get()-&#20013;&#21152;&#20837;-params">&#22312; <code>get()</code> &#20013;&#21152;&#20837; <code>params</code><a class="anchor-link" href="#&#22312;-get()-&#20013;&#21152;&#20837;-params">&#182;</a></h2>
 </div>
 </div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Avengers%3A+Endgame+%282019%29
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">query_str</span> <span class="o">=</span> <span class="n">quote_plus</span><span class="p">(</span><span class="s2">&quot;Avengers: Endgame (2019)&quot;</span><span class="p">)</span>
-<span class="n">query_url</span> <span class="o">=</span> <span class="s2">&quot;https://www.imdb.com/find?q=</span><span class="si">{}</span><span class="s2">&amp;s=tt&amp;ttype=ft&amp;ref_=fn_ft&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">query_str</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">query_url</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">query_string</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;Avengers: Endgame&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;ref_&#39;</span><span class="p">:</span> <span class="s1">&#39;nv_sr_sm&#39;</span>
+<span class="p">}</span>
+<span class="n">request_url</span> <span class="o">=</span> <span class="s2">&quot;https://www.imdb.com/find&quot;</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">request_url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">query_string</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14332,7 +14285,7 @@ Avengers: Endgame (2019)
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>https://www.imdb.com/find?q=Avengers%3A+Endgame+%282019%29&amp;s=tt&amp;ttype=ft&amp;ref_=fn_ft
+<pre>200
 </pre>
 </div>
 </div>
@@ -14350,7 +14303,7 @@ Avengers: Endgame (2019)
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_movie_data</span><span class="p">(</span><span class="s2">&quot;Avengers: Endgame (2019)&quot;</span><span class="p">)</span>
@@ -14366,7 +14319,7 @@ Avengers: Endgame (2019)
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[29]:</div>
+    <div class="prompt output_prompt">Out[34]:</div>
 
 
 
@@ -14375,7 +14328,7 @@ Avengers: Endgame (2019)
 <pre>{&#39;movieTitle&#39;: &#39;Avengers: Endgame (2019)&#39;,
  &#39;moviePoster&#39;: &#39;https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_UX182_CR0,0,182,268_AL_.jpg&#39;,
  &#39;movieRating&#39;: 8.5,
- &#39;movieGenre&#39;: [&#39;Action&#39;, &#39;Adventure&#39;, &#39;Sci-Fi&#39;],
+ &#39;movieGenre&#39;: [&#39;Action&#39;, &#39;Adventure&#39;, &#39;Drama&#39;],
  &#39;movieCast&#39;: [&#39;Robert Downey Jr.&#39;,
   &#39;Chris Evans&#39;,
   &#39;Mark Ruffalo&#39;,
@@ -14412,13 +14365,13 @@ Avengers: Endgame (2019)
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://www.ptt.cc/bbs/Gossiping/index.html&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://www.ptt.cc/bbs/Gossiping/index.html&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14512,14 +14465,14 @@ Avengers: Endgame (2019)
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 <span class="kn">from</span> <span class="nn">bs4</span> <span class="k">import</span> <span class="n">BeautifulSoup</span>
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;http://www.fantasy-sky.com/ContentList.aspx?section=002&quot;</span><span class="p">)</span>
-<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;http://www.fantasy-sky.com/ContentList.aspx?section=002&quot;</span><span class="p">)</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
 <span class="n">movie_titles</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">text</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;.movies-name&quot;</span><span class="p">)]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">movie_titles</span><span class="p">)</span>
 </pre></div>
@@ -14538,7 +14491,7 @@ Avengers: Endgame (2019)
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;玩具總動員4&#39;, &#39;狗狗的旅程&#39;, &#39;蜘蛛人：離家日&#39;, &#39;玩命憂步&#39;, &#39;恰吉&#39;, &#39;哥吉拉II怪獸之王&#39;, &#39;學霸&#39;, &#39;靠譜歌王&#39;, &#39;阿拉丁&#39;, &#39;名偵探皮卡丘&#39;, &#39;捍衛任務3：全面開戰&#39;, &#39;MIB星際戰警：跨國行動&#39;, &#39;火箭人&#39;, &#39;寵物當家2&#39;, &#39;X戰警：黑鳳凰&#39;, &#39;我的青春都是你&#39;, &#39;一吻定情&#39;, &#39;我的教練我們的菜&#39;, &#39;大象席地而坐&#39;, &#39;廉政風雲：煙幕&#39;, &#39;看不見的旋律&#39;, &#39;小島來了陌生爸爸&#39;, &#39;錢力遊戲&#39;, &#39;王者天下&#39;, &#39;警察小姐&#39;, &#39;90分鐘末日倒數&#39;, &#39;逆轉劫局&#39;, &#39;上流世界&#39;]
+<pre>[&#39;從前，有個好萊塢&#39;, &#39;安娜貝爾回家囉&#39;, &#39;恰吉&#39;, &#39;殺戮戰警2&#39;, &#39;獅子王&#39;, &#39;雙面特務&#39;, &#39;無上婚宴&#39;, &#39;我在雨中等你&#39;, &#39;玩具總動員4&#39;, &#39;蜘蛛人：離家日&#39;, &#39;學霸&#39;, &#39;哥吉拉II怪獸之王&#39;, &#39;玩命憂步&#39;, &#39;靠譜歌王&#39;, &#39;出發&#39;, &#39;非分熟女&#39;, &#39;風中有朵雨做的雲&#39;, &#39;掃毒2 天地對決&#39;, &#39;大象席地而坐&#39;, &#39;一吻定情&#39;, &#39;廉政風雲：煙幕&#39;, &#39;我的青春都是你&#39;, &#39;我出去透透氣&#39;, &#39;信用詐欺師JP&#39;, &#39;完美搭檔&#39;, &#39;男子啦啦隊&#39;, &#39;極惡對決&#39;, &#39;奧林匹克金牌之路&#39;, &#39;首席指揮家&#39;, &#39;王者天下&#39;, &#39;錢力遊戲&#39;, &#39;小島來了陌生爸爸&#39;, &#39;我的教練我們的菜&#39;]
 </pre>
 </div>
 </div>
@@ -14550,20 +14503,35 @@ Avengers: Endgame (2019)
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#24171;&#21161;&#27298;&#35222;-cookies-&#30340;-Chrome-&#22806;&#25499;">&#24171;&#21161;&#27298;&#35222; cookies &#30340; Chrome &#22806;&#25499;<a class="anchor-link" href="#&#24171;&#21161;&#27298;&#35222;-cookies-&#30340;-Chrome-&#22806;&#25499;">&#182;</a></h2><p><a href="https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg">EditThisCookie</a></p>
+<h2 id="&#24478;&#38283;&#30332;&#20154;&#21729;&#24037;&#20855;&#27298;&#35222;-Cookies">&#24478;&#38283;&#30332;&#20154;&#21729;&#24037;&#20855;&#27298;&#35222; Cookies<a class="anchor-link" href="#&#24478;&#38283;&#30332;&#20154;&#21729;&#24037;&#20855;&#27298;&#35222;-Cookies">&#182;</a></h2>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://i.imgur.com/dvVHg29.png?1" alt="Imgur"></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://i.imgur.com/lTYWNmX.png" alt="Imgur"></p>
 
 </div>
 </div>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://www.ptt.cc/bbs/Gossiping/index.html&quot;</span><span class="p">,</span> <span class="n">cookies</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;over18&#39;</span><span class="p">:</span> <span class="s1">&#39;1&#39;</span><span class="p">})</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://www.ptt.cc/bbs/Gossiping/index.html&quot;</span><span class="p">,</span> <span class="n">cookies</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;over18&#39;</span><span class="p">:</span> <span class="s1">&#39;1&#39;</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14621,7 +14589,7 @@ Avengers: Endgame (2019)
 			&lt;/div&gt;
 			&lt;div class=&#34;btn-group btn-group-paging&#34;&gt;
 				&lt;a class=&#34;btn wide&#34; href=&#34;/bbs/Gossiping/index1.html&#34;&gt;最舊&lt;/a&gt;
-				&lt;a class=&#34;btn wide&#34; href=&#34;/bbs/Gossiping/index38878.html&#34;&gt;&amp;lsaquo; 上頁&lt;/a&gt;
+				&lt;a class=&#34;btn wide&#34; href=&#34;/bbs/Gossiping/index39286.html&#34;&gt;&amp;lsaquo; 上頁&lt;/a&gt;
 				&lt;a class=&#34;btn wide disabled&#34;&gt;下頁 &amp;rsaquo;&lt;/a&gt;
 				&lt;a class=&#34;btn wide&#34; href=&#34;/bbs/Gossiping/index.html&#34;&gt;最新&lt;/a&gt;
 			&lt;/div&gt;
@@ -14641,26 +14609,26 @@ Avengers: Endgame (2019)
         
         
 		&lt;div class=&#34;r-ent&#34;&gt;
-			&lt;div class=&#34;nrec&#34;&gt;&lt;span class=&#34;hl f2&#34;&gt;2&lt;/span&gt;&lt;/div&gt;
+			&lt;div class=&#34;nrec&#34;&gt;&lt;/div&gt;
 			&lt;div class=&#34;title&#34;&gt;
 			
-				&lt;a href=&#34;/bbs/Gossiping/M.1570951080.A.1C1.html&#34;&gt;[問卦] 板主水桶前要講一堆幹話&lt;/a&gt;
+				&lt;a href=&#34;/bbs/Gossiping/M.1575014242.A.DED.html&#34;&gt;[新聞] 睡夢中一陣痛又舒服「暖流」襲來　醒來驚見他趴在床尾&lt;/a&gt;
 			
 			&lt;/div&gt;
 			&lt;div class=&#34;meta&#34;&gt;
-				&lt;div class=&#34;author&#34;&gt;Reewalker&lt;/div&gt;
+				&lt;div class=&#34;author&#34;&gt;chinaeatshit&lt;/div&gt;
 				&lt;div class=&#34;article-menu&#34;&gt;
 					
 					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
 					&lt;div class=&#34;dropdown&#34;&gt;
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%95%8F%E5%8D%A6%5D&amp;#43;%E6%9D%BF%E4%B8%BB%E6%B0%B4%E6%A1%B6%E5%89%8D%E8%A6%81%E8%AC%9B%E4%B8%80%E5%A0%86%E5%B9%B9%E8%A9%B1&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E6%96%B0%E8%81%9E%5D&amp;#43;%E7%9D%A1%E5%A4%A2%E4%B8%AD%E4%B8%80%E9%99%A3%E7%97%9B%E5%8F%88%E8%88%92%E6%9C%8D%E3%80%8C%E6%9A%96%E6%B5%81%E3%80%8D%E8%A5%B2%E4%BE%86%E3%80%80%E9%86%92%E4%BE%86%E9%A9%9A%E8%A6%8B%E4%BB%96%E8%B6%B4%E5%9C%A8%E5%BA%8A%E5%B0%BE&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
 						
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3AReewalker&#34;&gt;搜尋看板內 Reewalker 的文章&lt;/a&gt;&lt;/div&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Achinaeatshit&#34;&gt;搜尋看板內 chinaeatshit 的文章&lt;/a&gt;&lt;/div&gt;
 						
 					&lt;/div&gt;
 					
 				&lt;/div&gt;
-				&lt;div class=&#34;date&#34;&gt;10/13&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt;11/29&lt;/div&gt;
 				&lt;div class=&#34;mark&#34;&gt;&lt;/div&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
@@ -14673,23 +14641,52 @@ Avengers: Endgame (2019)
 			&lt;div class=&#34;nrec&#34;&gt;&lt;/div&gt;
 			&lt;div class=&#34;title&#34;&gt;
 			
-				&lt;a href=&#34;/bbs/Gossiping/M.1570951124.A.B2A.html&#34;&gt;Re: [新聞] 貸款千萬研發出「電產電」 獲專利&lt;/a&gt;
+				&lt;a href=&#34;/bbs/Gossiping/M.1575014250.A.21C.html&#34;&gt;Re: [新聞] 韓國瑜又改口！軍公教免費出國進修沒&lt;/a&gt;
 			
 			&lt;/div&gt;
 			&lt;div class=&#34;meta&#34;&gt;
-				&lt;div class=&#34;author&#34;&gt;ilovettb&lt;/div&gt;
+				&lt;div class=&#34;author&#34;&gt;ihaveseven&lt;/div&gt;
 				&lt;div class=&#34;article-menu&#34;&gt;
 					
 					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
 					&lt;div class=&#34;dropdown&#34;&gt;
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E6%96%B0%E8%81%9E%5D&amp;#43;%E8%B2%B8%E6%AC%BE%E5%8D%83%E8%90%AC%E7%A0%94%E7%99%BC%E5%87%BA%E3%80%8C%E9%9B%BB%E7%94%A2%E9%9B%BB%E3%80%8D&amp;#43;%E7%8D%B2%E5%B0%88%E5%88%A9&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E6%96%B0%E8%81%9E%5D&amp;#43;%E9%9F%93%E5%9C%8B%E7%91%9C%E5%8F%88%E6%94%B9%E5%8F%A3%EF%BC%81%E8%BB%8D%E5%85%AC%E6%95%99%E5%85%8D%E8%B2%BB%E5%87%BA%E5%9C%8B%E9%80%B2%E4%BF%AE%E6%B2%92&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
 						
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Ailovettb&#34;&gt;搜尋看板內 ilovettb 的文章&lt;/a&gt;&lt;/div&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Aihaveseven&#34;&gt;搜尋看板內 ihaveseven 的文章&lt;/a&gt;&lt;/div&gt;
 						
 					&lt;/div&gt;
 					
 				&lt;/div&gt;
-				&lt;div class=&#34;date&#34;&gt;10/13&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt;11/29&lt;/div&gt;
+				&lt;div class=&#34;mark&#34;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+		
+            
+        
+        
+		&lt;div class=&#34;r-ent&#34;&gt;
+			&lt;div class=&#34;nrec&#34;&gt;&lt;span class=&#34;hl f2&#34;&gt;4&lt;/span&gt;&lt;/div&gt;
+			&lt;div class=&#34;title&#34;&gt;
+			
+				&lt;a href=&#34;/bbs/Gossiping/M.1575014261.A.A8F.html&#34;&gt;[問卦] 為什麼巨乳對男生如此有吸引力？&lt;/a&gt;
+			
+			&lt;/div&gt;
+			&lt;div class=&#34;meta&#34;&gt;
+				&lt;div class=&#34;author&#34;&gt;xzcb2008&lt;/div&gt;
+				&lt;div class=&#34;article-menu&#34;&gt;
+					
+					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
+					&lt;div class=&#34;dropdown&#34;&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%95%8F%E5%8D%A6%5D&amp;#43;%E7%82%BA%E4%BB%80%E9%BA%BC%E5%B7%A8%E4%B9%B3%E5%B0%8D%E7%94%B7%E7%94%9F%E5%A6%82%E6%AD%A4%E6%9C%89%E5%90%B8%E5%BC%95%E5%8A%9B%EF%BC%9F&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Axzcb2008&#34;&gt;搜尋看板內 xzcb2008 的文章&lt;/a&gt;&lt;/div&gt;
+						
+					&lt;/div&gt;
+					
+				&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt;11/29&lt;/div&gt;
 				&lt;div class=&#34;mark&#34;&gt;&lt;/div&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
@@ -14702,23 +14699,197 @@ Avengers: Endgame (2019)
 			&lt;div class=&#34;nrec&#34;&gt;&lt;/div&gt;
 			&lt;div class=&#34;title&#34;&gt;
 			
-				&lt;a href=&#34;/bbs/Gossiping/M.1570951133.A.98F.html&#34;&gt;Re: [問卦] 鋼鐵人、索爾、女巫飛行有合法嗎？&lt;/a&gt;
+				&lt;a href=&#34;/bbs/Gossiping/M.1575014276.A.92B.html&#34;&gt;[問卦] 肥宅從事砂石業有加分嗎？&lt;/a&gt;
 			
 			&lt;/div&gt;
 			&lt;div class=&#34;meta&#34;&gt;
-				&lt;div class=&#34;author&#34;&gt;CavendishJr&lt;/div&gt;
+				&lt;div class=&#34;author&#34;&gt;remmurds&lt;/div&gt;
 				&lt;div class=&#34;article-menu&#34;&gt;
 					
 					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
 					&lt;div class=&#34;dropdown&#34;&gt;
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%95%8F%E5%8D%A6%5D&amp;#43;%E9%8B%BC%E9%90%B5%E4%BA%BA%E3%80%81%E7%B4%A2%E7%88%BE%E3%80%81%E5%A5%B3%E5%B7%AB%E9%A3%9B%E8%A1%8C%E6%9C%89%E5%90%88%E6%B3%95%E5%97%8E%EF%BC%9F&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%95%8F%E5%8D%A6%5D&amp;#43;%E8%82%A5%E5%AE%85%E5%BE%9E%E4%BA%8B%E7%A0%82%E7%9F%B3%E6%A5%AD%E6%9C%89%E5%8A%A0%E5%88%86%E5%97%8E%EF%BC%9F&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
 						
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3ACavendishJr&#34;&gt;搜尋看板內 CavendishJr 的文章&lt;/a&gt;&lt;/div&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Aremmurds&#34;&gt;搜尋看板內 remmurds 的文章&lt;/a&gt;&lt;/div&gt;
 						
 					&lt;/div&gt;
 					
 				&lt;/div&gt;
-				&lt;div class=&#34;date&#34;&gt;10/13&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt;11/29&lt;/div&gt;
+				&lt;div class=&#34;mark&#34;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+		
+            
+        
+        
+		&lt;div class=&#34;r-ent&#34;&gt;
+			&lt;div class=&#34;nrec&#34;&gt;&lt;span class=&#34;hl f2&#34;&gt;3&lt;/span&gt;&lt;/div&gt;
+			&lt;div class=&#34;title&#34;&gt;
+			
+				&lt;a href=&#34;/bbs/Gossiping/M.1575014323.A.F5B.html&#34;&gt;[問卦] 要如何加入砂石業&lt;/a&gt;
+			
+			&lt;/div&gt;
+			&lt;div class=&#34;meta&#34;&gt;
+				&lt;div class=&#34;author&#34;&gt;BrandonRoy7&lt;/div&gt;
+				&lt;div class=&#34;article-menu&#34;&gt;
+					
+					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
+					&lt;div class=&#34;dropdown&#34;&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%95%8F%E5%8D%A6%5D&amp;#43;%E8%A6%81%E5%A6%82%E4%BD%95%E5%8A%A0%E5%85%A5%E7%A0%82%E7%9F%B3%E6%A5%AD&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3ABrandonRoy7&#34;&gt;搜尋看板內 BrandonRoy7 的文章&lt;/a&gt;&lt;/div&gt;
+						
+					&lt;/div&gt;
+					
+				&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt;11/29&lt;/div&gt;
+				&lt;div class=&#34;mark&#34;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+		
+            
+        
+        
+		&lt;div class=&#34;r-ent&#34;&gt;
+			&lt;div class=&#34;nrec&#34;&gt;&lt;span class=&#34;hl f2&#34;&gt;3&lt;/span&gt;&lt;/div&gt;
+			&lt;div class=&#34;title&#34;&gt;
+			
+				&lt;a href=&#34;/bbs/Gossiping/M.1575014421.A.DB8.html&#34;&gt;[問卦] 苗栗國跟花蓮國哪一國比較團結？&lt;/a&gt;
+			
+			&lt;/div&gt;
+			&lt;div class=&#34;meta&#34;&gt;
+				&lt;div class=&#34;author&#34;&gt;ronnyvvang&lt;/div&gt;
+				&lt;div class=&#34;article-menu&#34;&gt;
+					
+					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
+					&lt;div class=&#34;dropdown&#34;&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%95%8F%E5%8D%A6%5D&amp;#43;%E8%8B%97%E6%A0%97%E5%9C%8B%E8%B7%9F%E8%8A%B1%E8%93%AE%E5%9C%8B%E5%93%AA%E4%B8%80%E5%9C%8B%E6%AF%94%E8%BC%83%E5%9C%98%E7%B5%90%EF%BC%9F&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Aronnyvvang&#34;&gt;搜尋看板內 ronnyvvang 的文章&lt;/a&gt;&lt;/div&gt;
+						
+					&lt;/div&gt;
+					
+				&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt;11/29&lt;/div&gt;
+				&lt;div class=&#34;mark&#34;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+		
+            
+        
+        
+		&lt;div class=&#34;r-ent&#34;&gt;
+			&lt;div class=&#34;nrec&#34;&gt;&lt;span class=&#34;hl f2&#34;&gt;3&lt;/span&gt;&lt;/div&gt;
+			&lt;div class=&#34;title&#34;&gt;
+			
+				&lt;a href=&#34;/bbs/Gossiping/M.1575014468.A.8AF.html&#34;&gt;[新聞] 要求核廢遷出蘭嶼 長老批蔡政府25億收買&lt;/a&gt;
+			
+			&lt;/div&gt;
+			&lt;div class=&#34;meta&#34;&gt;
+				&lt;div class=&#34;author&#34;&gt;ff760725&lt;/div&gt;
+				&lt;div class=&#34;article-menu&#34;&gt;
+					
+					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
+					&lt;div class=&#34;dropdown&#34;&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E6%96%B0%E8%81%9E%5D&amp;#43;%E8%A6%81%E6%B1%82%E6%A0%B8%E5%BB%A2%E9%81%B7%E5%87%BA%E8%98%AD%E5%B6%BC&amp;#43;%E9%95%B7%E8%80%81%E6%89%B9%E8%94%A1%E6%94%BF%E5%BA%9C25%E5%84%84%E6%94%B6%E8%B2%B7&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Aff760725&#34;&gt;搜尋看板內 ff760725 的文章&lt;/a&gt;&lt;/div&gt;
+						
+					&lt;/div&gt;
+					
+				&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt;11/29&lt;/div&gt;
+				&lt;div class=&#34;mark&#34;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+		
+            
+        
+        
+		&lt;div class=&#34;r-ent&#34;&gt;
+			&lt;div class=&#34;nrec&#34;&gt;&lt;span class=&#34;hl f2&#34;&gt;9&lt;/span&gt;&lt;/div&gt;
+			&lt;div class=&#34;title&#34;&gt;
+			
+				&lt;a href=&#34;/bbs/Gossiping/M.1575014481.A.A70.html&#34;&gt;[新聞] 批吳怡農送肥皂賄選？　蔡宜芳哽咽道歉&lt;/a&gt;
+			
+			&lt;/div&gt;
+			&lt;div class=&#34;meta&#34;&gt;
+				&lt;div class=&#34;author&#34;&gt;pshuang&lt;/div&gt;
+				&lt;div class=&#34;article-menu&#34;&gt;
+					
+					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
+					&lt;div class=&#34;dropdown&#34;&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E6%96%B0%E8%81%9E%5D&amp;#43;%E6%89%B9%E5%90%B3%E6%80%A1%E8%BE%B2%E9%80%81%E8%82%A5%E7%9A%82%E8%B3%84%E9%81%B8%EF%BC%9F%E3%80%80%E8%94%A1%E5%AE%9C%E8%8A%B3%E5%93%BD%E5%92%BD%E9%81%93%E6%AD%89&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Apshuang&#34;&gt;搜尋看板內 pshuang 的文章&lt;/a&gt;&lt;/div&gt;
+						
+					&lt;/div&gt;
+					
+				&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt;11/29&lt;/div&gt;
+				&lt;div class=&#34;mark&#34;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+		
+            
+        
+        
+		&lt;div class=&#34;r-ent&#34;&gt;
+			&lt;div class=&#34;nrec&#34;&gt;&lt;/div&gt;
+			&lt;div class=&#34;title&#34;&gt;
+			
+				&lt;a href=&#34;/bbs/Gossiping/M.1575014487.A.8BF.html&#34;&gt;[問卦] 請問這是什麼鳥?&lt;/a&gt;
+			
+			&lt;/div&gt;
+			&lt;div class=&#34;meta&#34;&gt;
+				&lt;div class=&#34;author&#34;&gt;graywater&lt;/div&gt;
+				&lt;div class=&#34;article-menu&#34;&gt;
+					
+					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
+					&lt;div class=&#34;dropdown&#34;&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%95%8F%E5%8D%A6%5D&amp;#43;%E8%AB%8B%E5%95%8F%E9%80%99%E6%98%AF%E4%BB%80%E9%BA%BC%E9%B3%A5%3F&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Agraywater&#34;&gt;搜尋看板內 graywater 的文章&lt;/a&gt;&lt;/div&gt;
+						
+					&lt;/div&gt;
+					
+				&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt;11/29&lt;/div&gt;
+				&lt;div class=&#34;mark&#34;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+		
+            
+        
+        
+		&lt;div class=&#34;r-ent&#34;&gt;
+			&lt;div class=&#34;nrec&#34;&gt;&lt;span class=&#34;hl f2&#34;&gt;4&lt;/span&gt;&lt;/div&gt;
+			&lt;div class=&#34;title&#34;&gt;
+			
+				&lt;a href=&#34;/bbs/Gossiping/M.1575014558.A.D82.html&#34;&gt;[問卦] 如果上節目酸的是同性戀 風向怎麼吹？&lt;/a&gt;
+			
+			&lt;/div&gt;
+			&lt;div class=&#34;meta&#34;&gt;
+				&lt;div class=&#34;author&#34;&gt;Friend5566&lt;/div&gt;
+				&lt;div class=&#34;article-menu&#34;&gt;
+					
+					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
+					&lt;div class=&#34;dropdown&#34;&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%95%8F%E5%8D%A6%5D&amp;#43;%E5%A6%82%E6%9E%9C%E4%B8%8A%E7%AF%80%E7%9B%AE%E9%85%B8%E7%9A%84%E6%98%AF%E5%90%8C%E6%80%A7%E6%88%80&amp;#43;%E9%A2%A8%E5%90%91%E6%80%8E%E9%BA%BC%E5%90%B9%EF%BC%9F&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3AFriend5566&#34;&gt;搜尋看板內 Friend5566 的文章&lt;/a&gt;&lt;/div&gt;
+						
+					&lt;/div&gt;
+					
+				&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt;11/29&lt;/div&gt;
 				&lt;div class=&#34;mark&#34;&gt;&lt;/div&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
@@ -14731,23 +14902,81 @@ Avengers: Endgame (2019)
 			&lt;div class=&#34;nrec&#34;&gt;&lt;span class=&#34;hl f2&#34;&gt;1&lt;/span&gt;&lt;/div&gt;
 			&lt;div class=&#34;title&#34;&gt;
 			
-				&lt;a href=&#34;/bbs/Gossiping/M.1570951150.A.8E3.html&#34;&gt;[新聞] 希望蔡、柯同台支持 高嘉瑜：絕對是放下&lt;/a&gt;
+				&lt;a href=&#34;/bbs/Gossiping/M.1575014583.A.DF1.html&#34;&gt;Re: [問卦] 京華城關門 下一個是不是美麗華???&lt;/a&gt;
 			
 			&lt;/div&gt;
 			&lt;div class=&#34;meta&#34;&gt;
-				&lt;div class=&#34;author&#34;&gt;MikaHakkinen&lt;/div&gt;
+				&lt;div class=&#34;author&#34;&gt;DoraeCookie&lt;/div&gt;
 				&lt;div class=&#34;article-menu&#34;&gt;
 					
 					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
 					&lt;div class=&#34;dropdown&#34;&gt;
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E6%96%B0%E8%81%9E%5D&amp;#43;%E5%B8%8C%E6%9C%9B%E8%94%A1%E3%80%81%E6%9F%AF%E5%90%8C%E5%8F%B0%E6%94%AF%E6%8C%81&amp;#43;%E9%AB%98%E5%98%89%E7%91%9C%EF%BC%9A%E7%B5%95%E5%B0%8D%E6%98%AF%E6%94%BE%E4%B8%8B&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%95%8F%E5%8D%A6%5D&amp;#43;%E4%BA%AC%E8%8F%AF%E5%9F%8E%E9%97%9C%E9%96%80&amp;#43;%E4%B8%8B%E4%B8%80%E5%80%8B%E6%98%AF%E4%B8%8D%E6%98%AF%E7%BE%8E%E9%BA%97%E8%8F%AF%3F%3F%3F&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
 						
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3AMikaHakkinen&#34;&gt;搜尋看板內 MikaHakkinen 的文章&lt;/a&gt;&lt;/div&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3ADoraeCookie&#34;&gt;搜尋看板內 DoraeCookie 的文章&lt;/a&gt;&lt;/div&gt;
 						
 					&lt;/div&gt;
 					
 				&lt;/div&gt;
-				&lt;div class=&#34;date&#34;&gt;10/13&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt;11/29&lt;/div&gt;
+				&lt;div class=&#34;mark&#34;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+		
+            
+        
+        
+		&lt;div class=&#34;r-ent&#34;&gt;
+			&lt;div class=&#34;nrec&#34;&gt;&lt;/div&gt;
+			&lt;div class=&#34;title&#34;&gt;
+			
+				&lt;a href=&#34;/bbs/Gossiping/M.1575014622.A.365.html&#34;&gt;[問卦] 一隻穿雲箭怎麼還沒澄清砂石案？&lt;/a&gt;
+			
+			&lt;/div&gt;
+			&lt;div class=&#34;meta&#34;&gt;
+				&lt;div class=&#34;author&#34;&gt;ununnihao&lt;/div&gt;
+				&lt;div class=&#34;article-menu&#34;&gt;
+					
+					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
+					&lt;div class=&#34;dropdown&#34;&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%95%8F%E5%8D%A6%5D&amp;#43;%E4%B8%80%E9%9A%BB%E7%A9%BF%E9%9B%B2%E7%AE%AD%E6%80%8E%E9%BA%BC%E9%82%84%E6%B2%92%E6%BE%84%E6%B8%85%E7%A0%82%E7%9F%B3%E6%A1%88%EF%BC%9F&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Aununnihao&#34;&gt;搜尋看板內 ununnihao 的文章&lt;/a&gt;&lt;/div&gt;
+						
+					&lt;/div&gt;
+					
+				&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt;11/29&lt;/div&gt;
+				&lt;div class=&#34;mark&#34;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+		
+            
+        
+        
+		&lt;div class=&#34;r-ent&#34;&gt;
+			&lt;div class=&#34;nrec&#34;&gt;&lt;/div&gt;
+			&lt;div class=&#34;title&#34;&gt;
+			
+				&lt;a href=&#34;/bbs/Gossiping/M.1575014663.A.1F0.html&#34;&gt;[問卦] 大廈外面人行道擋住當停車場合法嗎&lt;/a&gt;
+			
+			&lt;/div&gt;
+			&lt;div class=&#34;meta&#34;&gt;
+				&lt;div class=&#34;author&#34;&gt;ufoshooter&lt;/div&gt;
+				&lt;div class=&#34;article-menu&#34;&gt;
+					
+					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
+					&lt;div class=&#34;dropdown&#34;&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%95%8F%E5%8D%A6%5D&amp;#43;%E5%A4%A7%E5%BB%88%E5%A4%96%E9%9D%A2%E4%BA%BA%E8%A1%8C%E9%81%93%E6%93%8B%E4%BD%8F%E7%95%B6%E5%81%9C%E8%BB%8A%E5%A0%B4%E5%90%88%E6%B3%95%E5%97%8E&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Aufoshooter&#34;&gt;搜尋看板內 ufoshooter 的文章&lt;/a&gt;&lt;/div&gt;
+						
+					&lt;/div&gt;
+					
+				&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt;11/29&lt;/div&gt;
 				&lt;div class=&#34;mark&#34;&gt;&lt;/div&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
@@ -14760,23 +14989,23 @@ Avengers: Endgame (2019)
 			&lt;div class=&#34;nrec&#34;&gt;&lt;span class=&#34;hl f2&#34;&gt;1&lt;/span&gt;&lt;/div&gt;
 			&lt;div class=&#34;title&#34;&gt;
 			
-				&lt;a href=&#34;/bbs/Gossiping/M.1570951213.A.289.html&#34;&gt;[新聞] 希望蔡、柯同台支持 高嘉瑜：絕對是放下&lt;/a&gt;
+				&lt;a href=&#34;/bbs/Gossiping/M.1575014674.A.362.html&#34;&gt;[新聞] 妙齡女爛醉夢中喊暗戀男名字 醒來看內褲&lt;/a&gt;
 			
 			&lt;/div&gt;
 			&lt;div class=&#34;meta&#34;&gt;
-				&lt;div class=&#34;author&#34;&gt;staedtler&lt;/div&gt;
+				&lt;div class=&#34;author&#34;&gt;jodojeda&lt;/div&gt;
 				&lt;div class=&#34;article-menu&#34;&gt;
 					
 					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
 					&lt;div class=&#34;dropdown&#34;&gt;
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E6%96%B0%E8%81%9E%5D&amp;#43;%E5%B8%8C%E6%9C%9B%E8%94%A1%E3%80%81%E6%9F%AF%E5%90%8C%E5%8F%B0%E6%94%AF%E6%8C%81&amp;#43;%E9%AB%98%E5%98%89%E7%91%9C%EF%BC%9A%E7%B5%95%E5%B0%8D%E6%98%AF%E6%94%BE%E4%B8%8B&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E6%96%B0%E8%81%9E%5D&amp;#43;%E5%A6%99%E9%BD%A1%E5%A5%B3%E7%88%9B%E9%86%89%E5%A4%A2%E4%B8%AD%E5%96%8A%E6%9A%97%E6%88%80%E7%94%B7%E5%90%8D%E5%AD%97&amp;#43;%E9%86%92%E4%BE%86%E7%9C%8B%E5%85%A7%E8%A4%B2&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
 						
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Astaedtler&#34;&gt;搜尋看板內 staedtler 的文章&lt;/a&gt;&lt;/div&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Ajodojeda&#34;&gt;搜尋看板內 jodojeda 的文章&lt;/a&gt;&lt;/div&gt;
 						
 					&lt;/div&gt;
 					
 				&lt;/div&gt;
-				&lt;div class=&#34;date&#34;&gt;10/13&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt;11/29&lt;/div&gt;
 				&lt;div class=&#34;mark&#34;&gt;&lt;/div&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
@@ -14789,23 +15018,23 @@ Avengers: Endgame (2019)
 			&lt;div class=&#34;nrec&#34;&gt;&lt;/div&gt;
 			&lt;div class=&#34;title&#34;&gt;
 			
-				&lt;a href=&#34;/bbs/Gossiping/M.1570951229.A.A04.html&#34;&gt;[問卦] 無塵室裡想挖鼻孔怎麼辦&lt;/a&gt;
+				&lt;a href=&#34;/bbs/Gossiping/M.1575014676.A.2A8.html&#34;&gt;[問卦] 看的最膩的月經文&lt;/a&gt;
 			
 			&lt;/div&gt;
 			&lt;div class=&#34;meta&#34;&gt;
-				&lt;div class=&#34;author&#34;&gt;chuchichan&lt;/div&gt;
+				&lt;div class=&#34;author&#34;&gt;AsllaPiscu&lt;/div&gt;
 				&lt;div class=&#34;article-menu&#34;&gt;
 					
 					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
 					&lt;div class=&#34;dropdown&#34;&gt;
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%95%8F%E5%8D%A6%5D&amp;#43;%E7%84%A1%E5%A1%B5%E5%AE%A4%E8%A3%A1%E6%83%B3%E6%8C%96%E9%BC%BB%E5%AD%94%E6%80%8E%E9%BA%BC%E8%BE%A6&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%95%8F%E5%8D%A6%5D&amp;#43;%E7%9C%8B%E7%9A%84%E6%9C%80%E8%86%A9%E7%9A%84%E6%9C%88%E7%B6%93%E6%96%87&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
 						
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Achuchichan&#34;&gt;搜尋看板內 chuchichan 的文章&lt;/a&gt;&lt;/div&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3AAsllaPiscu&#34;&gt;搜尋看板內 AsllaPiscu 的文章&lt;/a&gt;&lt;/div&gt;
 						
 					&lt;/div&gt;
 					
 				&lt;/div&gt;
-				&lt;div class=&#34;date&#34;&gt;10/13&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt;11/29&lt;/div&gt;
 				&lt;div class=&#34;mark&#34;&gt;&lt;/div&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
@@ -14818,23 +15047,23 @@ Avengers: Endgame (2019)
 			&lt;div class=&#34;nrec&#34;&gt;&lt;/div&gt;
 			&lt;div class=&#34;title&#34;&gt;
 			
-				&lt;a href=&#34;/bbs/Gossiping/M.1570951281.A.3D3.html&#34;&gt;Re: [問卦] 知道朋友的PTT帳號能幹嘛&lt;/a&gt;
+				&lt;a href=&#34;/bbs/Gossiping/M.1575014698.A.3F2.html&#34;&gt;Re: [問卦] 知道多年來喊媽媽的不是親生媽媽怎麼調適&lt;/a&gt;
 			
 			&lt;/div&gt;
 			&lt;div class=&#34;meta&#34;&gt;
-				&lt;div class=&#34;author&#34;&gt;abcde010710&lt;/div&gt;
+				&lt;div class=&#34;author&#34;&gt;pauljet&lt;/div&gt;
 				&lt;div class=&#34;article-menu&#34;&gt;
 					
 					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
 					&lt;div class=&#34;dropdown&#34;&gt;
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%95%8F%E5%8D%A6%5D&amp;#43;%E7%9F%A5%E9%81%93%E6%9C%8B%E5%8F%8B%E7%9A%84PTT%E5%B8%B3%E8%99%9F%E8%83%BD%E5%B9%B9%E5%98%9B&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%95%8F%E5%8D%A6%5D&amp;#43;%E7%9F%A5%E9%81%93%E5%A4%9A%E5%B9%B4%E4%BE%86%E5%96%8A%E5%AA%BD%E5%AA%BD%E7%9A%84%E4%B8%8D%E6%98%AF%E8%A6%AA%E7%94%9F%E5%AA%BD%E5%AA%BD%E6%80%8E%E9%BA%BC%E8%AA%BF%E9%81%A9&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
 						
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Aabcde010710&#34;&gt;搜尋看板內 abcde010710 的文章&lt;/a&gt;&lt;/div&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Apauljet&#34;&gt;搜尋看板內 pauljet 的文章&lt;/a&gt;&lt;/div&gt;
 						
 					&lt;/div&gt;
 					
 				&lt;/div&gt;
-				&lt;div class=&#34;date&#34;&gt;10/13&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt;11/29&lt;/div&gt;
 				&lt;div class=&#34;mark&#34;&gt;&lt;/div&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
@@ -14876,26 +15105,84 @@ Avengers: Endgame (2019)
         
         
 		&lt;div class=&#34;r-ent&#34;&gt;
-			&lt;div class=&#34;nrec&#34;&gt;&lt;span class=&#34;hl f3&#34;&gt;94&lt;/span&gt;&lt;/div&gt;
+			&lt;div class=&#34;nrec&#34;&gt;&lt;span class=&#34;hl f3&#34;&gt;22&lt;/span&gt;&lt;/div&gt;
 			&lt;div class=&#34;title&#34;&gt;
 			
-				&lt;a href=&#34;/bbs/Gossiping/M.1570071469.A.153.html&#34;&gt;Fw: 尋人 家裡長輩失蹤&lt;/a&gt;
+				&lt;a href=&#34;/bbs/Gossiping/M.1573743900.A.A37.html&#34;&gt;尋求9/23敦化南路(國泰綜合證卷前)行車紀錄影像&lt;/a&gt;
 			
 			&lt;/div&gt;
 			&lt;div class=&#34;meta&#34;&gt;
-				&lt;div class=&#34;author&#34;&gt;RS5566&lt;/div&gt;
+				&lt;div class=&#34;author&#34;&gt;zyx0809449&lt;/div&gt;
 				&lt;div class=&#34;article-menu&#34;&gt;
 					
 					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
 					&lt;div class=&#34;dropdown&#34;&gt;
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%E5%B0%8B%E4%BA%BA&amp;#43;%E5%AE%B6%E8%A3%A1%E9%95%B7%E8%BC%A9%E5%A4%B1%E8%B9%A4&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%E5%B0%8B%E6%B1%829%2F23%E6%95%A6%E5%8C%96%E5%8D%97%E8%B7%AF%28%E5%9C%8B%E6%B3%B0%E7%B6%9C%E5%90%88%E8%AD%89%E5%8D%B7%E5%89%8D%29%E8%A1%8C%E8%BB%8A%E7%B4%80%E9%8C%84%E5%BD%B1%E5%83%8F&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
 						
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3ARS5566&#34;&gt;搜尋看板內 RS5566 的文章&lt;/a&gt;&lt;/div&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Azyx0809449&#34;&gt;搜尋看板內 zyx0809449 的文章&lt;/a&gt;&lt;/div&gt;
 						
 					&lt;/div&gt;
 					
 				&lt;/div&gt;
-				&lt;div class=&#34;date&#34;&gt;10/03&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt;11/14&lt;/div&gt;
+				&lt;div class=&#34;mark&#34;&gt;M&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+            
+                
+        
+        
+		&lt;div class=&#34;r-ent&#34;&gt;
+			&lt;div class=&#34;nrec&#34;&gt;&lt;span class=&#34;hl f3&#34;&gt;12&lt;/span&gt;&lt;/div&gt;
+			&lt;div class=&#34;title&#34;&gt;
+			
+				&lt;a href=&#34;/bbs/Gossiping/M.1574212486.A.222.html&#34;&gt;[公告] 宣導禁止回文政問&lt;/a&gt;
+			
+			&lt;/div&gt;
+			&lt;div class=&#34;meta&#34;&gt;
+				&lt;div class=&#34;author&#34;&gt;arsonlolita&lt;/div&gt;
+				&lt;div class=&#34;article-menu&#34;&gt;
+					
+					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
+					&lt;div class=&#34;dropdown&#34;&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%85%AC%E5%91%8A%5D&amp;#43;%E5%AE%A3%E5%B0%8E%E7%A6%81%E6%AD%A2%E5%9B%9E%E6%96%87%E6%94%BF%E5%95%8F&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Aarsonlolita&#34;&gt;搜尋看板內 arsonlolita 的文章&lt;/a&gt;&lt;/div&gt;
+						
+					&lt;/div&gt;
+					
+				&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt;11/20&lt;/div&gt;
+				&lt;div class=&#34;mark&#34;&gt;M&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+            
+                
+        
+        
+		&lt;div class=&#34;r-ent&#34;&gt;
+			&lt;div class=&#34;nrec&#34;&gt;&lt;span class=&#34;hl f2&#34;&gt;7&lt;/span&gt;&lt;/div&gt;
+			&lt;div class=&#34;title&#34;&gt;
+			
+				&lt;a href=&#34;/bbs/Gossiping/M.1574602085.A.66D.html&#34;&gt;[協尋] 11/20高市大順一路548號順明街行車記錄&lt;/a&gt;
+			
+			&lt;/div&gt;
+			&lt;div class=&#34;meta&#34;&gt;
+				&lt;div class=&#34;author&#34;&gt;witty&lt;/div&gt;
+				&lt;div class=&#34;article-menu&#34;&gt;
+					
+					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
+					&lt;div class=&#34;dropdown&#34;&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%8D%94%E5%B0%8B%5D&amp;#43;11%2F20%E9%AB%98%E5%B8%82%E5%A4%A7%E9%A0%86%E4%B8%80%E8%B7%AF548%E8%99%9F%E9%A0%86%E6%98%8E%E8%A1%97%E8%A1%8C%E8%BB%8A%E8%A8%98%E9%8C%84&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3Awitty&#34;&gt;搜尋看板內 witty 的文章&lt;/a&gt;&lt;/div&gt;
+						
+					&lt;/div&gt;
+					
+				&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt;11/24&lt;/div&gt;
 				&lt;div class=&#34;mark&#34;&gt;&lt;/div&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
@@ -14905,10 +15192,10 @@ Avengers: Endgame (2019)
         
         
 		&lt;div class=&#34;r-ent&#34;&gt;
-			&lt;div class=&#34;nrec&#34;&gt;&lt;span class=&#34;hl f3&#34;&gt;42&lt;/span&gt;&lt;/div&gt;
+			&lt;div class=&#34;nrec&#34;&gt;&lt;span class=&#34;hl f2&#34;&gt;8&lt;/span&gt;&lt;/div&gt;
 			&lt;div class=&#34;title&#34;&gt;
 			
-				&lt;a href=&#34;/bbs/Gossiping/M.1570679043.A.C0B.html&#34;&gt;[公告] 第二階段─板主總決賽投票開始!&lt;/a&gt;
+				&lt;a href=&#34;/bbs/Gossiping/M.1572625135.A.19E.html&#34;&gt;[公告] 文殊起劍，十一月份置底閒聊區&lt;/a&gt;
 			
 			&lt;/div&gt;
 			&lt;div class=&#34;meta&#34;&gt;
@@ -14917,72 +15204,14 @@ Avengers: Endgame (2019)
 					
 					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
 					&lt;div class=&#34;dropdown&#34;&gt;
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%85%AC%E5%91%8A%5D&amp;#43;%E7%AC%AC%E4%BA%8C%E9%9A%8E%E6%AE%B5%E2%94%80%E6%9D%BF%E4%B8%BB%E7%B8%BD%E6%B1%BA%E8%B3%BD%E6%8A%95%E7%A5%A8%E9%96%8B%E5%A7%8B%21&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
+						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%85%AC%E5%91%8A%5D&amp;#43;%E6%96%87%E6%AE%8A%E8%B5%B7%E5%8A%8D%EF%BC%8C%E5%8D%81%E4%B8%80%E6%9C%88%E4%BB%BD%E7%BD%AE%E5%BA%95%E9%96%92%E8%81%8A%E5%8D%80&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
 						
 						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3ABignana&#34;&gt;搜尋看板內 Bignana 的文章&lt;/a&gt;&lt;/div&gt;
 						
 					&lt;/div&gt;
 					
 				&lt;/div&gt;
-				&lt;div class=&#34;date&#34;&gt;10/10&lt;/div&gt;
-				&lt;div class=&#34;mark&#34;&gt;M&lt;/div&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-
-            
-                
-        
-        
-		&lt;div class=&#34;r-ent&#34;&gt;
-			&lt;div class=&#34;nrec&#34;&gt;&lt;span class=&#34;hl f3&#34;&gt;16&lt;/span&gt;&lt;/div&gt;
-			&lt;div class=&#34;title&#34;&gt;
-			
-				&lt;a href=&#34;/bbs/Gossiping/M.1570678358.A.952.html&#34;&gt;[公告] 第一階段板主選舉─候選名單說明&lt;/a&gt;
-			
-			&lt;/div&gt;
-			&lt;div class=&#34;meta&#34;&gt;
-				&lt;div class=&#34;author&#34;&gt;Bignana&lt;/div&gt;
-				&lt;div class=&#34;article-menu&#34;&gt;
-					
-					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
-					&lt;div class=&#34;dropdown&#34;&gt;
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%85%AC%E5%91%8A%5D&amp;#43;%E7%AC%AC%E4%B8%80%E9%9A%8E%E6%AE%B5%E6%9D%BF%E4%B8%BB%E9%81%B8%E8%88%89%E2%94%80%E5%80%99%E9%81%B8%E5%90%8D%E5%96%AE%E8%AA%AA%E6%98%8E&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
-						
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3ABignana&#34;&gt;搜尋看板內 Bignana 的文章&lt;/a&gt;&lt;/div&gt;
-						
-					&lt;/div&gt;
-					
-				&lt;/div&gt;
-				&lt;div class=&#34;date&#34;&gt;10/10&lt;/div&gt;
-				&lt;div class=&#34;mark&#34;&gt;M&lt;/div&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-
-            
-                
-        
-        
-		&lt;div class=&#34;r-ent&#34;&gt;
-			&lt;div class=&#34;nrec&#34;&gt;&lt;/div&gt;
-			&lt;div class=&#34;title&#34;&gt;
-			
-				&lt;a href=&#34;/bbs/Gossiping/M.1569904195.A.A1C.html&#34;&gt;[公告] 十月份置底閒聊文 泡茶的賀索債&lt;/a&gt;
-			
-			&lt;/div&gt;
-			&lt;div class=&#34;meta&#34;&gt;
-				&lt;div class=&#34;author&#34;&gt;Bignana&lt;/div&gt;
-				&lt;div class=&#34;article-menu&#34;&gt;
-					
-					&lt;div class=&#34;trigger&#34;&gt;&amp;#x22ef;&lt;/div&gt;
-					&lt;div class=&#34;dropdown&#34;&gt;
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=thread%3A%5B%E5%85%AC%E5%91%8A%5D&amp;#43;%E5%8D%81%E6%9C%88%E4%BB%BD%E7%BD%AE%E5%BA%95%E9%96%92%E8%81%8A%E6%96%87&amp;#43;%E6%B3%A1%E8%8C%B6%E7%9A%84%E8%B3%80%E7%B4%A2%E5%82%B5&#34;&gt;搜尋同標題文章&lt;/a&gt;&lt;/div&gt;
-						
-						&lt;div class=&#34;item&#34;&gt;&lt;a href=&#34;/bbs/Gossiping/search?q=author%3ABignana&#34;&gt;搜尋看板內 Bignana 的文章&lt;/a&gt;&lt;/div&gt;
-						
-					&lt;/div&gt;
-					
-				&lt;/div&gt;
-				&lt;div class=&#34;date&#34;&gt;10/01&lt;/div&gt;
+				&lt;div class=&#34;date&#34;&gt;11/02&lt;/div&gt;
 				&lt;div class=&#34;mark&#34;&gt;M&lt;/div&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
@@ -15029,14 +15258,14 @@ Avengers: Endgame (2019)
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 <span class="kn">from</span> <span class="nn">bs4</span> <span class="k">import</span> <span class="n">BeautifulSoup</span>
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;http://www.fantasy-sky.com/ContentList.aspx?section=002&quot;</span><span class="p">,</span> <span class="n">cookies</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;COOKIE_LANGUAGE&#39;</span><span class="p">:</span> <span class="s1">&#39;en&#39;</span><span class="p">})</span>
-<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;http://www.fantasy-sky.com/ContentList.aspx?section=002&quot;</span><span class="p">,</span> <span class="n">cookies</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;COOKIE_LANGUAGE&#39;</span><span class="p">:</span> <span class="s1">&#39;en&#39;</span><span class="p">})</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
 <span class="n">movie_titles</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">text</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;.movies-name&quot;</span><span class="p">)]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">movie_titles</span><span class="p">)</span>
 </pre></div>
@@ -15055,7 +15284,7 @@ Avengers: Endgame (2019)
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;Toy Story 4&#39;, &#34;A Dog&#39;s Journey&#34;, &#39;Spider-ManTM: Far From Home&#39;, &#39;Stuber&#39;, &#34;Child&#39;s Play&#34;, &#39;Godzilla: King of the Monsters&#39;, &#39;Booksmart&#39;, &#39;Yesterday&#39;, &#39;Aladdin&#39;, &#39;Pokémon Detective Pikachu&#39;, &#39;John Wick: Chapter 3 - Parabellum&#39;, &#39;Men in Black: International&#39;, &#39;Rocketman&#39;, &#39;The Secret Life of Pets 2&#39;, &#39;X-Men: Dark Phoenix&#39;, &#39;Love The Way You Are&#39;, &#39;Fall in Love at First Kiss&#39;, &#39;The Shiny Shrimps&#39;, &#39;An Elephant Sitting Still&#39;, &#39;Integrity&#39;, &#39;Andhadhun&#39;, &#39;My Extraordinary Summer with Tess&#39;, &#39;Money&#39;, &#39;Kingdom&#39;, &#39;Miss &amp; Mrs Cops&#39;, &#39;Take Point&#39;, &#39;70 Big Ones&#39;, &#39;Loro&#39;]
+<pre>[&#39;Once Upon a Time... in Hollywood&#39;, &#39;Annabelle Comes Home&#39;, &#34;Child&#39;s Play&#34;, &#39;Shaft&#39;, &#39;Disney’s The Lion King&#39;, &#39;The Operative&#39;, &#39;Top End Wedding&#39;, &#39;The Art of Racing in the Rain&#39;, &#39;Toy Story 4&#39;, &#39;Spider-ManTM: Far From Home&#39;, &#39;Booksmart&#39;, &#39;Godzilla: King of the Monsters&#39;, &#39;Stuber&#39;, &#39;Yesterday&#39;, &#39;Run for Dream&#39;, &#39;The Lady Improper&#39;, &#39;Cloud In The Wind&#39;, &#39;The White Storm 2 – Drug Lords&#39;, &#39;An Elephant Sitting Still&#39;, &#39;Fall in Love at First Kiss&#39;, &#39;Integrity&#39;, &#39;Love The Way You Are&#39;, &#39;All About Me&#39;, &#39;The Confidence Man JP: The Movie&#39;, &#39;Inseparable Bros&#39;, &#39;Cheer Boys!!&#39;, &#39;The Gangster, The Cop, The Devil&#39;, &#39;Gold&#39;, &#39;The Conductor&#39;, &#39;Kingdom&#39;, &#39;Money&#39;, &#39;My Extraordinary Summer with Tess&#39;, &#39;The Shiny Shrimps&#39;]
 </pre>
 </div>
 </div>
@@ -15073,7 +15302,7 @@ Avengers: Endgame (2019)
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">ca_movie_titles</span><span class="p">)</span>
@@ -15093,7 +15322,7 @@ Avengers: Endgame (2019)
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;Toy Story 4&#39;, &#34;A Dog&#39;s Journey&#34;, &#39;Spider-ManTM: Far From Home&#39;, &#39;Stuber&#39;, &#34;Child&#39;s Play&#34;, &#39;Godzilla: King of the Monsters&#39;, &#39;Booksmart&#39;, &#39;Yesterday&#39;, &#39;Aladdin&#39;, &#39;Pokémon Detective Pikachu&#39;, &#39;John Wick: Chapter 3 - Parabellum&#39;, &#39;Men in Black: International&#39;, &#39;Rocketman&#39;, &#39;The Secret Life of Pets 2&#39;, &#39;X-Men: Dark Phoenix&#39;, &#39;Love The Way You Are&#39;, &#39;Fall in Love at First Kiss&#39;, &#39;The Shiny Shrimps&#39;, &#39;An Elephant Sitting Still&#39;, &#39;Integrity&#39;, &#39;Andhadhun&#39;, &#39;My Extraordinary Summer with Tess&#39;, &#39;Money&#39;, &#39;Kingdom&#39;, &#39;Miss &amp; Mrs Cops&#39;, &#39;Take Point&#39;, &#39;70 Big Ones&#39;, &#39;Loro&#39;, &#39;Toy Story&#39;, &#39;Shark Tale&#39;, &#39;Toy Story 2&#39;, &#39;Toy Story 3&#39;, &#34;Tim Burton&#39;s Corpse Bride&#34;, &#39;Ferdinand&#39;, &#39;Puss In Boots&#39;, &#39;The Lego Batman Movie&#39;, &#39;The Peanuts Movie&#39;, &#39;Where the Wild Things Are&#39;, &#39;A Simple Life&#39;, &#39;Dying To Survive&#39;, &#39;Infernal Affairs&#39;, &#34;Dad&#39;s Suit&#34;, &#39;Dearest Anita&#39;, &#39;Late Life: The Chien-Ming Wang Story&#39;, &#34;Long Day&#39;s Journey Into Night&#34;, &#39;The Knight of Shadows…&#39;, &#39;Single Day&#39;, &#39;More Than Blue&#39;, &#39;Another World&#39;, &#39;Master Z: Ip Man Legacy&#39;, &#39;Shadow&#39;, &#39;Hidden Man&#39;, &#39;Still Human&#39;, &#39;Last Letter&#39;, &#39;Tracey&#39;, &#39;Dragon Ball Super: Broly&#39;, &#39;Stolen Identity&#39;, &#39;Hibiki&#39;, &#39;Project Gutenberg&#39;, &#39;When Green Turns to Gold&#39;, &#39;Masquerade Hotel&#39;, &#39;Million Dollar Man&#39;, &#39;The House Where The Mermaid Sleeps&#39;, &#39;Unstoppable&#39;, &#39;Extreme Job&#39;, &#39;Three Times&#39;, &#39;Beyond Beauty - Taiwan from Above&#39;, &#39;The Wedding Banquet&#39;, &#39;Father to Son&#39;, &#39;Long Time No Sea&#39;, &#39;Millennium Mambo&#39;, &#39;On Happiness Road&#39;, &#39;Attack On Titan: Kakusei&#39;, &#39;Cafe Funiculi Funicula&#39;, &#39;Gintama 2&#39;, &#39;The Negotiation&#39;, &#39;A Real Vermeer&#39;, &#39;Hichki&#39;, &#39;Innocent Witness&#39;, &#39;Badhaai Ho&#39;, &#39;Border&#39;, &#39;Capernaum&#39;, &#39;Family is Family&#39;, &#39;96&#39;, &#39;Hit-and-Run Squad&#39;, &#39;Fly Me To The Saitama&#39;, &#39;Whistleblower&#39;, &#39;Who You Think I Am&#39;, &#34;Jupiter&#39;s Moon&#34;, &#39;Hello Mr. Billionaire&#39;, &#39;Simpel…&#39;, &#39;The Benefit of the Doubt&#39;, &#39;Le Brio&#39;, &#39;Code Blue: The Movie&#39;, &#39;Wished&#39;, &#39;Shoplifters&#39;, &#34;Midsummer&#39;s Equation&#34;, &#39;My Hero Academia: Two Heroes&#39;, &#39;Detective Conan Episode &#34;ONE&#34;&#39;, &#39;Lupin the 3rd vs. Detective Conan&#39;, &#39;Pad Man&#39;, &#39;The Square&#39;, &#39;Euforia&#39;, &#39;Detective Conan: Crimson Love Letter&#39;, &#34;Bridget Jones&#39;s Baby&#34;, &#39;Spider-ManTM: Homecoming&#39;, &#39;Godzilla&#39;, &#39;Never Let Me Go&#39;, &#39;Straight Outta Compton&#39;, &#39;The Bucket List&#39;, &#39;The Curious Case of Benjamin Button&#39;, &#39;Wrath of the Titans&#39;, &#39;Avengers: Endgame&#39;, &#39;Shazam!&#39;, &#39;John Wick&#39;, &#39;John Wick: Chapter 2&#39;, &#34;Isn&#39;t it Romantic&#34;, &#39;The Mule&#39;, &#39;Superman Returns&#39;, &#39;Invictus&#39;, &#39;Manchester By The Sea&#39;, &#39;Les Misérables&#39;, &#39;Avengers: Age of Ultron&#39;, &#39;The Avengers&#39;, &#39;Prometheus&#39;, &#39;Moulin Rouge&#39;, &#39;Crazy Heart&#39;, &#39;Ruby Sparks&#39;, &#39;Life of Pi&#39;, &#39;Fantastic Beasts and…&#39;, &#39;Hidden Figures&#39;, &#39;Logan&#39;, &#39;Runner Runner&#39;, &#39;The Intern&#39;, &#39;Sherlock Holmes: A Game of Shadows&#39;, &#39;Deepwater Horizon&#39;, &#39;I, Daniel Blake&#39;, &#39;Captain America: Civil War&#39;, &#39;Iron Man&#39;, &#39;Iron Man 2&#39;, &#39;Iron Man 3&#39;, &#39;The Shape of Water&#39;, &#39;Before I Fall&#39;, &#39;The Pianist&#39;, &#39;The Grand Budapest Hotel&#39;, &#39;Australia&#39;, &#39;The Tree Of Life&#39;, &#39;Hitman: Agent 47&#39;, &#39;The Great Gatsby&#39;, &#39;Chef&#39;, &#39;J. Edgar&#39;, &#39;The Book Thief&#39;, &#39;Crazy, Stupid, Love.&#39;, &#39;The Martian&#39;, &#39;The Mummy&#39;, &#39;Black Swan&#39;, &#39;The Devil Wears Prada&#39;, &#39;The Drop&#39;, &#39;The Judge&#39;, &#39;X-Men&#39;, &#39;X-Men: First Class&#39;, &#39;X-Men: Days of Future Past&#39;, &#39;X-Men: Apocalypse&#39;, &#39;Three Billboards Outside Ebbing, Missouri&#39;, &#39;The Descendants&#39;, &#39;The Shawshank Redemption&#39;, &#39;Wonder Woman&#39;]
+<pre>[&#39;Once Upon a Time... in Hollywood&#39;, &#39;Annabelle Comes Home&#39;, &#34;Child&#39;s Play&#34;, &#39;Shaft&#39;, &#39;Disney’s The Lion King&#39;, &#39;The Operative&#39;, &#39;Top End Wedding&#39;, &#39;The Art of Racing in the Rain&#39;, &#39;Toy Story 4&#39;, &#39;Spider-ManTM: Far From Home&#39;, &#39;Booksmart&#39;, &#39;Godzilla: King of the Monsters&#39;, &#39;Stuber&#39;, &#39;Yesterday&#39;, &#39;Run for Dream&#39;, &#39;The Lady Improper&#39;, &#39;Cloud In The Wind&#39;, &#39;The White Storm 2 – Drug Lords&#39;, &#39;An Elephant Sitting Still&#39;, &#39;Fall in Love at First Kiss&#39;, &#39;Integrity&#39;, &#39;Love The Way You Are&#39;, &#39;All About Me&#39;, &#39;The Confidence Man JP: The Movie&#39;, &#39;Inseparable Bros&#39;, &#39;Cheer Boys!!&#39;, &#39;The Gangster, The Cop, The Devil&#39;, &#39;Gold&#39;, &#39;The Conductor&#39;, &#39;Kingdom&#39;, &#39;Money&#39;, &#39;My Extraordinary Summer with Tess&#39;, &#39;The Shiny Shrimps&#39;, &#39;Up&#39;, &#39;Smallfoot&#39;, &#39;Ice Age: Collision Course&#39;, &#39;Ferdinand&#39;, &#39;Puss In Boots&#39;, &#39;Shark Tale&#39;, &#39;The Lego Batman Movie&#39;, &#39;The Peanuts Movie&#39;, &#34;Tim Burton&#39;s Corpse Bride&#34;, &#39;Toy Story&#39;, &#39;Toy Story 2&#39;, &#39;Toy Story 3&#39;, &#39;So Young&#39;, &#39;The Golden Era&#39;, &#39;Three Times&#39;, &#39;The Wedding Banquet&#39;, &#39;A Simple Life&#39;, &#39;Beyond Beauty - Taiwan from Above&#39;, &#39;Dying To Survive&#39;, &#39;Infernal Affairs&#39;, &#39;Millennium Mambo&#39;, &#34;Long Day&#39;s Journey Into Night&#34;, &#39;Shadow&#39;, &#39;Tracey&#39;, &#39;Late Life: The Chien-Ming Wang Story&#39;, &#34;Dad&#39;s Suit&#34;, &#39;Hidden Man&#39;, &#39;Still Human&#39;, &#39;Last Letter&#39;, &#39;Dearest Anita&#39;, &#39;More Than Blue&#39;, &#39;Stolen Identity&#39;, &#39;Hibiki&#39;, &#39;Project Gutenberg&#39;, &#39;When Green Turns to Gold&#39;, &#39;Masquerade Hotel&#39;, &#39;Million Dollar Man&#39;, &#39;The House Where The Mermaid Sleeps&#39;, &#39;Unstoppable&#39;, &#39;The Knight of Shadows…&#39;, &#39;The 12th Man&#39;, &#39;Wished&#39;, &#34;Midsummer&#39;s Equation&#34;, &#39;Detective Conan: Crimson Love Letter&#39;, &#39;Hichki&#39;, &#39;A Real Vermeer&#39;, &#39;Another World&#39;, &#39;A Long Goodbye&#39;, &#39;Miss &amp; Mrs Cops&#39;, &#39;Capernaum&#39;, &#39;Take Point&#39;, &#39;96&#39;, &#39;Hit-and-Run Squad&#39;, &#39;Fly Me To The Saitama&#39;, &#39;Whistleblower&#39;, &#39;Who You Think I Am&#39;, &#39;Andhadhun&#39;, &#39;70 Big Ones&#39;, &#39;Loro&#39;, &#39;Simpel…&#39;, &#34;Jupiter&#39;s Moon&#34;, &#39;Code Blue: The Movie&#39;, &#39;Detective Conan Episode &#34;ONE&#34;&#39;, &#39;Attack On Titan: Kakusei&#39;, &#39;My Hero Academia: Two Heroes&#39;, &#39;Gintama 2&#39;, &#39;Lupin the 3rd vs. Detective Conan&#39;, &#34;A Dog&#39;s Purpose&#34;, &#39;Home Again&#39;, &#39;American Made&#39;, &#39;Johnny English Reborn&#39;, &#39;Romeo + Juliet&#39;, &#39;The Book of Henry&#39;, &#34;Bridget Jones&#39;s Baby&#34;, &#39;Spider-ManTM: Homecoming&#39;, &#39;The Great Wall&#39;, &#39;The Legend of Tarzan&#39;, &#39;The Lost City of Z&#39;, &#39;Walk the Line&#39;, &#39;Why Him?&#39;, &#39;Aladdin&#39;, &#39;Pokémon Detective Pikachu&#39;, &#39;Avengers: Infinity War&#39;, &#39;Shazam!&#39;, &#39;John Wick&#39;, &#39;John Wick: Chapter 2&#39;, &#39;Before I Fall&#39;, &#39;Godzilla&#39;, &#39;Superman Returns&#39;, &#39;Invictus&#39;, &#39;Manchester By The Sea&#39;, &#39;Les Misérables&#39;, &#39;Avengers: Age of Ultron&#39;, &#39;The Avengers&#39;, &#39;Never Let Me Go&#39;, &#39;Moulin Rouge&#39;, &#39;Crazy Heart&#39;, &#39;Straight Outta Compton&#39;, &#39;Life of Pi&#39;, &#39;Fantastic Beasts and…&#39;, &#39;Hidden Figures&#39;, &#39;Logan&#39;, &#39;Runner Runner&#39;, &#39;The Intern&#39;, &#39;Café Society&#39;, &#39;Sherlock Holmes: A Game of Shadows&#39;, &#39;Deepwater Horizon&#39;, &#39;I, Daniel Blake&#39;, &#39;Captain America: Civil War&#39;, &#39;Iron Man&#39;, &#39;Iron Man 2&#39;, &#39;Iron Man 3&#39;, &#39;The Pianist&#39;, &#39;The Curious Case of Benjamin Button&#39;, &#39;Australia&#39;, &#39;The Tree Of Life&#39;, &#39;The Bucket List&#39;, &#39;The Great Gatsby&#39;, &#39;Chef&#39;, &#39;J. Edgar&#39;, &#39;The Book Thief&#39;, &#39;Crazy, Stupid, Love.&#39;, &#39;The Shape of Water&#39;, &#39;The Mummy&#39;, &#39;Black Swan&#39;, &#39;The Devil Wears Prada&#39;, &#39;The Drop&#39;, &#39;The Judge&#39;, &#39;X-Men&#39;, &#39;X-Men: First Class&#39;, &#39;X-Men: Days of Future Past&#39;, &#39;X-Men: Apocalypse&#39;, &#39;Wrath of the Titans&#39;, &#39;The Descendants&#39;, &#39;The Shawshank Redemption&#39;, &#39;Wonder Woman&#39;]
 </pre>
 </div>
 </div>
@@ -15111,7 +15340,7 @@ Avengers: Endgame (2019)
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">ca_movie_titles</span><span class="p">[</span><span class="n">best_movie_index</span><span class="p">])</span>
@@ -15140,190 +15369,6 @@ Avengers: Endgame (2019)
 </div>
 
 </div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#36914;&#34892;-POST-&#35531;&#27714;">&#36914;&#34892; POST &#35531;&#27714;<a class="anchor-link" href="#&#36914;&#34892;-POST-&#35531;&#27714;">&#182;</a></h2>
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#21482;&#35201;&#32178;&#38913;&#20013;&#26377;&#35731;&#20351;&#29992;&#32773;&#22635;&#20837;&#36039;&#26009;&#30340;&#34920;&#21934;&#65292;&#22823;&#37096;&#20998;&#37117;&#26371;&#38656;&#35201;&#29992;-POST-&#35531;&#27714;&#20358;&#34389;&#29702;">&#21482;&#35201;&#32178;&#38913;&#20013;&#26377;&#35731;&#20351;&#29992;&#32773;&#22635;&#20837;&#36039;&#26009;&#30340;&#34920;&#21934;&#65292;&#22823;&#37096;&#20998;&#37117;&#26371;&#38656;&#35201;&#29992; POST &#35531;&#27714;&#20358;&#34389;&#29702;<a class="anchor-link" href="#&#21482;&#35201;&#32178;&#38913;&#20013;&#26377;&#35731;&#20351;&#29992;&#32773;&#22635;&#20837;&#36039;&#26009;&#30340;&#34920;&#21934;&#65292;&#22823;&#37096;&#20998;&#37117;&#26371;&#38656;&#35201;&#29992;-POST-&#35531;&#27714;&#20358;&#34389;&#29702;">&#182;</a></h2><p>例如在論壇發文，將文章標題和內文填好，按下送出時，就是送出一個 POST 請求</p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#36914;&#34892;-POST-&#35531;&#27714;&#26178;&#35201;&#25884;&#24118;&#36039;&#26009;&#65292;&#20197;-https://emap.pcsc.com.tw-&#28858;&#20363;">&#36914;&#34892; POST &#35531;&#27714;&#26178;&#35201;&#25884;&#24118;&#36039;&#26009;&#65292;&#20197; <a href="https://emap.pcsc.com.tw">https://emap.pcsc.com.tw</a> &#28858;&#20363;<a class="anchor-link" href="#&#36914;&#34892;-POST-&#35531;&#27714;&#26178;&#35201;&#25884;&#24118;&#36039;&#26009;&#65292;&#20197;-https://emap.pcsc.com.tw-&#28858;&#20363;">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
-
-<span class="n">form_data</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;commandid&quot;</span><span class="p">:</span> <span class="s2">&quot;GetTown&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;cityid&quot;</span><span class="p">:</span> <span class="s2">&quot;01&quot;</span>
-<span class="p">}</span>
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;https://emap.pcsc.com.tw/EMapSDK.aspx&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">form_data</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>200
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#35531;&#27714;&#30340;&#22238;&#25033;&#26159;-XML-&#26684;&#24335;">&#35531;&#27714;&#30340;&#22238;&#25033;&#26159; XML &#26684;&#24335;<a class="anchor-link" href="#&#35531;&#27714;&#30340;&#22238;&#25033;&#26159;-XML-&#26684;&#24335;">&#182;</a></h2>
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>b&#39;&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;&lt;iMapSDKOutput&gt;&lt;MessageID&gt;00000&lt;/MessageID&gt;&lt;CommandID&gt;GetTown&lt;/CommandID&gt;&lt;Status&gt;\xe9\x80\xa3\xe7\xb7\x9a\xe6\x88\x90\xe5\x8a\x9f&lt;/Status&gt;&lt;TimeStamp&gt;2019/10/13 \xe4\xb8\x8b\xe5\x8d\x88 03:27:51&lt;/TimeStamp&gt;&lt;GeoPosition&gt;&lt;TownID&gt;01&lt;/TownID&gt;&lt;TownName&gt;\xe6\x9d\xbe\xe5\xb1\xb1\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121577218&lt;/X&gt;&lt;Y&gt;25049837&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;GeoPosition&gt;&lt;TownID&gt;02&lt;/TownID&gt;&lt;TownName&gt;\xe4\xbf\xa1\xe7\xbe\xa9\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121567161&lt;/X&gt;&lt;Y&gt;25033147&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;GeoPosition&gt;&lt;TownID&gt;03&lt;/TownID&gt;&lt;TownName&gt;\xe5\xa4\xa7\xe5\xae\x89\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121534593&lt;/X&gt;&lt;Y&gt;25026482&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;GeoPosition&gt;&lt;TownID&gt;04&lt;/TownID&gt;&lt;TownName&gt;\xe4\xb8\xad\xe5\xb1\xb1\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121533655&lt;/X&gt;&lt;Y&gt;25064427&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;GeoPosition&gt;&lt;TownID&gt;05&lt;/TownID&gt;&lt;TownName&gt;\xe4\xb8\xad\xe6\xad\xa3\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121518245&lt;/X&gt;&lt;Y&gt;25032251&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;GeoPosition&gt;&lt;TownID&gt;06&lt;/TownID&gt;&lt;TownName&gt;\xe5\xa4\xa7\xe5\x90\x8c\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121515830&lt;/X&gt;&lt;Y&gt;25066142&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;GeoPosition&gt;&lt;TownID&gt;07&lt;/TownID&gt;&lt;TownName&gt;\xe8\x90\xac\xe8\x8f\xaf\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121499745&lt;/X&gt;&lt;Y&gt;25034807&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;GeoPosition&gt;&lt;TownID&gt;08&lt;/TownID&gt;&lt;TownName&gt;\xe6\x96\x87\xe5\xb1\xb1\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121570280&lt;/X&gt;&lt;Y&gt;24989800&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;GeoPosition&gt;&lt;TownID&gt;09&lt;/TownID&gt;&lt;TownName&gt;\xe5\x8d\x97\xe6\xb8\xaf\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121607043&lt;/X&gt;&lt;Y&gt;25054684&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;GeoPosition&gt;&lt;TownID&gt;10&lt;/TownID&gt;&lt;TownName&gt;\xe5\x85\xa7\xe6\xb9\x96\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121589471&lt;/X&gt;&lt;Y&gt;25069353&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;GeoPosition&gt;&lt;TownID&gt;11&lt;/TownID&gt;&lt;TownName&gt;\xe5\xa3\xab\xe6\x9e\x97\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121525380&lt;/X&gt;&lt;Y&gt;25090430&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;GeoPosition&gt;&lt;TownID&gt;12&lt;/TownID&gt;&lt;TownName&gt;\xe5\x8c\x97\xe6\x8a\x95\xe5\x8d\x80&lt;/TownName&gt;&lt;X&gt;121503066&lt;/X&gt;&lt;Y&gt;25132054&lt;/Y&gt;&lt;/GeoPosition&gt;&lt;/iMapSDKOutput&gt;&#39;
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#20197;-lxml-&#35299;&#26512;">&#20197; <code>lxml</code> &#35299;&#26512;<a class="anchor-link" href="#&#20197;-lxml-&#35299;&#26512;">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">lxml</span> <span class="k">import</span> <span class="n">etree</span>
-<span class="kn">from</span> <span class="nn">io</span> <span class="k">import</span> <span class="n">BytesIO</span>
-
-<span class="n">f</span> <span class="o">=</span> <span class="n">BytesIO</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
-<span class="n">tree</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-<span class="n">town_names</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span><span class="o">.</span><span class="n">text</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tree</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s2">&quot;//TownName&quot;</span><span class="p">)]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">town_names</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;松山區&#39;, &#39;信義區&#39;, &#39;大安區&#39;, &#39;中山區&#39;, &#39;中正區&#39;, &#39;大同區&#39;, &#39;萬華區&#39;, &#39;文山區&#39;, &#39;南港區&#39;, &#39;內湖區&#39;, &#39;士林區&#39;, &#39;北投區&#39;]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#25847;&#21462;&#21488;&#21271;&#24066;&#25152;&#26377;-7-11-&#20415;&#21033;&#21830;&#24215;&#36039;&#35338;">&#38568;&#22530;&#32244;&#32722;&#65306;&#25847;&#21462;&#21488;&#21271;&#24066;&#25152;&#26377; 7-11 &#20415;&#21033;&#21830;&#24215;&#36039;&#35338;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#25847;&#21462;&#21488;&#21271;&#24066;&#25152;&#26377;-7-11-&#20415;&#21033;&#21830;&#24215;&#36039;&#35338;">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">tp_711_stores</span><span class="p">[</span><span class="s2">&quot;松山區&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">tp_711_stores</span><span class="p">[</span><span class="s2">&quot;信義區&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">tp_711_stores</span><span class="p">[</span><span class="s2">&quot;大安區&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;POIID&#39;: &#39;170945&#39;, &#39;POIName&#39;: &#39;上弘&#39;, &#39;Longitude&#39;: 121.548287390895, &#39;Latitude&#39;: 25.056390968531797, &#39;Address&#39;: &#39;台北市松山區敦化北路168號B2&#39;}
-{&#39;POIID&#39;: &#39;167651&#39;, &#39;POIName&#39;: &#39;一零一&#39;, &#39;Longitude&#39;: 121.565077, &#39;Latitude&#39;: 25.033373, &#39;Address&#39;: &#39;台北市信義區信義路五段7號35樓&#39;}
-{&#39;POIID&#39;: &#39;153319&#39;, &#39;POIName&#39;: &#39;大台&#39;, &#39;Longitude&#39;: 121.53261437826, &#39;Latitude&#39;: 25.0179598345753, &#39;Address&#39;: &#39;台北市大安區羅斯福路三段283巷14弄16號1樓&#39;}
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15391,7 +15436,7 @@ Avengers: Endgame (2019)
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#28204;&#35430;&#26159;&#21542;&#35373;&#23450;&#23436;&#25104;">&#28204;&#35430;&#26159;&#21542;&#35373;&#23450;&#23436;&#25104;<a class="anchor-link" href="#&#28204;&#35430;&#26159;&#21542;&#35373;&#23450;&#23436;&#25104;">&#182;</a></h2><p>用程式碼透過 ChromeDriver 操控 Chrome 瀏覽器前往 IMDB 首頁並將首頁的網址印出再關閉瀏覽器</p>
+<h2 id="&#28204;&#35430;-Chrome-&#26159;&#21542;&#35373;&#23450;&#23436;&#25104;">&#28204;&#35430; Chrome &#26159;&#21542;&#35373;&#23450;&#23436;&#25104;<a class="anchor-link" href="#&#28204;&#35430;-Chrome-&#26159;&#21542;&#35373;&#23450;&#23436;&#25104;">&#182;</a></h2><p>用程式碼透過 ChromeDriver 操控 Chrome 瀏覽器前往 IMDB 首頁並將首頁的網址印出再關閉瀏覽器</p>
 
 </div>
 </div>
@@ -15401,7 +15446,8 @@ Avengers: Endgame (2019)
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="ch">#!pip install selenium</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#set HTTPS_PROXY=10.160.3.88:8080</span>
+<span class="c1">#!pip install selenium</span>
 <span class="kn">from</span> <span class="nn">selenium</span> <span class="k">import</span> <span class="n">webdriver</span>
 
 <span class="n">driver_path</span> <span class="o">=</span> <span class="s2">&quot;c:/YOUR/PATH/TO/CHROMEDRIVER&quot;</span>
@@ -15420,7 +15466,7 @@ Avengers: Endgame (2019)
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#28204;&#35430;&#26159;&#21542;&#35373;&#23450;&#23436;&#25104;">&#28204;&#35430;&#26159;&#21542;&#35373;&#23450;&#23436;&#25104;<a class="anchor-link" href="#&#28204;&#35430;&#26159;&#21542;&#35373;&#23450;&#23436;&#25104;">&#182;</a></h2><p>用程式碼透過 geckodriver 操控 Firefox 瀏覽器前往 IMDB 首頁並將首頁的網址印出再關閉瀏覽器</p>
+<h2 id="&#28204;&#35430;-Firefox-&#26159;&#21542;&#35373;&#23450;&#23436;&#25104;">&#28204;&#35430; Firefox &#26159;&#21542;&#35373;&#23450;&#23436;&#25104;<a class="anchor-link" href="#&#28204;&#35430;-Firefox-&#26159;&#21542;&#35373;&#23450;&#23436;&#25104;">&#182;</a></h2><p>用程式碼透過 geckodriver 操控 Firefox 瀏覽器前往 IMDB 首頁並將首頁的網址印出再關閉瀏覽器</p>
 
 </div>
 </div>
@@ -15430,8 +15476,7 @@ Avengers: Endgame (2019)
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="ch">#!pip install selenium</span>
-<span class="kn">from</span> <span class="nn">selenium</span> <span class="k">import</span> <span class="n">webdriver</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">selenium</span> <span class="k">import</span> <span class="n">webdriver</span>
 
 <span class="n">driver_path</span> <span class="o">=</span> <span class="s2">&quot;c:/YOUR/PATH/TO/GECKODRIVER&quot;</span>
 <span class="n">imdb_home</span> <span class="o">=</span> <span class="s2">&quot;https://www.imdb.com/&quot;</span>
@@ -15449,17 +15494,13 @@ Avengers: Endgame (2019)
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#24120;&#20351;&#29992;&#30340;&#26041;&#27861;&#12289;&#23660;&#24615;">&#24120;&#20351;&#29992;&#30340;&#26041;&#27861;&#12289;&#23660;&#24615;<a class="anchor-link" href="#&#24120;&#20351;&#29992;&#30340;&#26041;&#27861;&#12289;&#23660;&#24615;">&#182;</a></h2><ul>
+<h2 id="&#24120;&#20351;&#29992;&#30340;-driver-&#26041;&#27861;&#12289;&#23660;&#24615;">&#24120;&#20351;&#29992;&#30340; <code>driver</code> &#26041;&#27861;&#12289;&#23660;&#24615;<a class="anchor-link" href="#&#24120;&#20351;&#29992;&#30340;-driver-&#26041;&#27861;&#12289;&#23660;&#24615;">&#182;</a></h2><ul>
 <li><code>driver.get()</code> ：前往指定網址</li>
 <li><code>driver.find_element_by_css_selector()</code> ：定位搜尋欄位、搜尋按鈕與搜尋結果連結（單數）</li>
 <li><code>driver.find_elements_by_css_selector()</code> ：定位搜尋欄位、搜尋按鈕與搜尋結果連結（複數）</li>
 <li><code>driver.find_element_by_xpath()</code> ：定位搜尋欄位、搜尋按鈕與搜尋結果連結（單數）</li>
 <li><code>driver.find_elements_by_xpath()</code> ：定位搜尋欄位、搜尋按鈕與搜尋結果連結（複數）</li>
 <li><code>driver.current_url</code> ：取得當下瀏覽器的網址</li>
-<li><code>elem.send_keys()</code> ：輸入文字</li>
-<li><code>elem.click()</code> ：按下搜尋按鈕與連結</li>
-<li><code>elem.text</code>：取出標記中的文字值</li>
-<li><code>elem.get_attribute(ATTR)</code>：取出標記中的指定屬性</li>
 </ul>
 
 </div>
@@ -15503,57 +15544,32 @@ Avengers: Endgame (2019)
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#24120;&#20351;&#29992;&#30340;-element-&#26041;&#27861;&#12289;&#23660;&#24615;">&#24120;&#20351;&#29992;&#30340; <code>element</code> &#26041;&#27861;&#12289;&#23660;&#24615;<a class="anchor-link" href="#&#24120;&#20351;&#29992;&#30340;-element-&#26041;&#27861;&#12289;&#23660;&#24615;">&#182;</a></h2><ul>
+<li><code>element.send_keys()</code> ：輸入文字</li>
+<li><code>element.click()</code> ：按下搜尋按鈕與連結</li>
+<li><code>element.text</code>：取出標記中的文字值</li>
+<li><code>element.get_attribute(ATTR)</code>：取出標記中的指定屬性</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#20197;-selenium-&#23526;&#20316;-get_movie_data(movie_title)">&#38568;&#22530;&#32244;&#32722;&#65306;&#20197; <code>selenium</code> &#23526;&#20316; <code>get_movie_data(movie_title)</code><a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#20197;-selenium-&#23526;&#20316;-get_movie_data(movie_title)">&#182;</a></h2>
 </div>
 </div>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_movie_data</span><span class="p">(</span><span class="s2">&quot;Avengers: Endgame (2019)&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[47]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>{&#39;movieTitle&#39;: &#39;Avengers: Endgame (2019)&#39;,
- &#39;moviePosterLink&#39;: &#39;https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_UX182_CR0,0,182,268_AL_.jpg&#39;,
- &#39;movieRating&#39;: 8.5,
- &#39;movieGenre&#39;: [&#39;Action&#39;, &#39;Adventure&#39;, &#39;Sci-Fi&#39;],
- &#39;movieCast&#39;: [&#39;Robert Downey Jr.&#39;,
-  &#39;Chris Evans&#39;,
-  &#39;Mark Ruffalo&#39;,
-  &#39;Chris Hemsworth&#39;,
-  &#39;Scarlett Johansson&#39;,
-  &#39;Jeremy Renner&#39;,
-  &#39;Don Cheadle&#39;,
-  &#39;Paul Rudd&#39;,
-  &#39;Benedict Cumberbatch&#39;,
-  &#39;Chadwick Boseman&#39;,
-  &#39;Brie Larson&#39;,
-  &#39;Tom Holland&#39;,
-  &#39;Karen Gillan&#39;,
-  &#39;Zoe Saldana&#39;,
-  &#39;Evangeline Lilly&#39;]}</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -15569,31 +15585,13 @@ Avengers: Endgame (2019)
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">avengers_movie_data</span><span class="p">)</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[{&#39;movieTitle&#39;: &#39;The Avengers (2012)&#39;, &#39;moviePosterLink&#39;: &#39;https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX182_CR0,0,182,268_AL_.jpg&#39;, &#39;movieRating&#39;: 8.0, &#39;movieGenre&#39;: [&#39;Action&#39;, &#39;Adventure&#39;, &#39;Sci-Fi&#39;], &#39;movieCast&#39;: [&#39;Robert Downey Jr.&#39;, &#39;Chris Evans&#39;, &#39;Mark Ruffalo&#39;, &#39;Chris Hemsworth&#39;, &#39;Scarlett Johansson&#39;, &#39;Jeremy Renner&#39;, &#39;Tom Hiddleston&#39;, &#39;Clark Gregg&#39;, &#39;Cobie Smulders&#39;, &#39;Stellan Skarsgård&#39;, &#39;Samuel L. Jackson&#39;, &#39;Gwyneth Paltrow&#39;, &#39;Paul Bettany&#39;, &#39;Alexis Denisof&#39;, &#39;Tina Benko&#39;]}, {&#39;movieTitle&#39;: &#39;Avengers: Age of Ultron (2015)&#39;, &#39;moviePosterLink&#39;: &#39;https://m.media-amazon.com/images/M/MV5BMTM4OGJmNWMtOTM4Ni00NTE3LTg3MDItZmQxYjc4N2JhNmUxXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_UX182_CR0,0,182,268_AL_.jpg&#39;, &#39;movieRating&#39;: 7.3, &#39;movieGenre&#39;: [&#39;Action&#39;, &#39;Adventure&#39;, &#39;Sci-Fi&#39;], &#39;movieCast&#39;: [&#39;Robert Downey Jr.&#39;, &#39;Chris Hemsworth&#39;, &#39;Mark Ruffalo&#39;, &#39;Chris Evans&#39;, &#39;Scarlett Johansson&#39;, &#39;Jeremy Renner&#39;, &#39;James Spader&#39;, &#39;Samuel L. Jackson&#39;, &#39;Don Cheadle&#39;, &#39;Aaron Taylor-Johnson&#39;, &#39;Elizabeth Olsen&#39;, &#39;Paul Bettany&#39;, &#39;Cobie Smulders&#39;, &#39;Anthony Mackie&#39;, &#39;Hayley Atwell&#39;]}, {&#39;movieTitle&#39;: &#39;Avengers: Infinity War (2018)&#39;, &#39;moviePosterLink&#39;: &#39;https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_UX182_CR0,0,182,268_AL_.jpg&#39;, &#39;movieRating&#39;: 8.5, &#39;movieGenre&#39;: [&#39;Action&#39;, &#39;Adventure&#39;, &#39;Sci-Fi&#39;], &#39;movieCast&#39;: [&#39;Robert Downey Jr.&#39;, &#39;Chris Hemsworth&#39;, &#39;Mark Ruffalo&#39;, &#39;Chris Evans&#39;, &#39;Scarlett Johansson&#39;, &#39;Don Cheadle&#39;, &#39;Benedict Cumberbatch&#39;, &#39;Tom Holland&#39;, &#39;Chadwick Boseman&#39;, &#39;Zoe Saldana&#39;, &#39;Karen Gillan&#39;, &#39;Tom Hiddleston&#39;, &#39;Paul Bettany&#39;, &#39;Elizabeth Olsen&#39;, &#39;Anthony Mackie&#39;]}, {&#39;movieTitle&#39;: &#39;Avengers: Endgame (2019)&#39;, &#39;moviePosterLink&#39;: &#39;https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_UX182_CR0,0,182,268_AL_.jpg&#39;, &#39;movieRating&#39;: 8.5, &#39;movieGenre&#39;: [&#39;Action&#39;, &#39;Adventure&#39;, &#39;Sci-Fi&#39;], &#39;movieCast&#39;: [&#39;Robert Downey Jr.&#39;, &#39;Chris Evans&#39;, &#39;Mark Ruffalo&#39;, &#39;Chris Hemsworth&#39;, &#39;Scarlett Johansson&#39;, &#39;Jeremy Renner&#39;, &#39;Don Cheadle&#39;, &#39;Paul Rudd&#39;, &#39;Benedict Cumberbatch&#39;, &#39;Chadwick Boseman&#39;, &#39;Brie Larson&#39;, &#39;Tom Holland&#39;, &#39;Karen Gillan&#39;, &#39;Zoe Saldana&#39;, &#39;Evangeline Lilly&#39;]}]
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -15607,7 +15605,7 @@ Avengers: Endgame (2019)
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
@@ -15627,7 +15625,6 @@ Avengers: Endgame (2019)
 <h2 id="&#24310;&#20280;&#38321;&#35712;">&#24310;&#20280;&#38321;&#35712;<a class="anchor-link" href="#&#24310;&#20280;&#38321;&#35712;">&#182;</a></h2><ul>
 <li><a href="http://docs.python-requests.org/en/master/">Requests: HTTP for Humans</a></li>
 <li><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/#">Beautiful Soup Documentation</a></li>
-<li><a href="https://pythonhosted.org/pyquery/">pyquery: a jquery-like library for python</a></li>
 <li><a href="https://selenium-python.readthedocs.io/">Selenium with Python</a></li>
 <li><a href="https://medium.com/datainpoint/web-scraping-with-python/home">Python 與網頁資料擷取 - DataInPoint</a></li>
 </ul>
@@ -15684,7 +15681,8 @@ Avengers: Endgame (2019)
  &#39;29 June 2019&#39;: 1,
  &#39;4 July 2019&#39;: 1,
  &#39;12 July 2019&#39;: 2,
- &#39;26 July 2019&#39;: 1}</pre>
+ &#39;26 July 2019&#39;: 1,
+ &#39;2 September 2019&#39;: 1}</pre>
 </div>
 
 </div>
