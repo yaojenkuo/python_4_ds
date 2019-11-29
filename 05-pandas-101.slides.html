@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,7 +36,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 
 <!-- Loading the mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -13069,45 +13068,6 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
-<style type="text/css">
-    
-/* Temporary definitions which will become obsolete with Notebook release 5.0 */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-bold { font-weight: bold; }
-
-    </style>
 
 
 <style type="text/css">
@@ -13254,6 +13214,7 @@ a.anchor-link {
 <h2 id="&#22823;&#32177;">&#22823;&#32177;<a class="anchor-link" href="#&#22823;&#32177;">&#182;</a></h2><ul>
 <li>pandas 解決了什麼問題</li>
 <li>pandas 基礎</li>
+<li>Series 與 DataFrame 的基礎操作</li>
 <li>奧運獎牌排行</li>
 <li>pandas 技巧</li>
 <li>美國普查</li>
@@ -13302,9 +13263,9 @@ a.anchor-link {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;3008&#39;, &#39;6409&#39;, &#39;6415&#39;, &#39;5269&#39;, &#39;2207&#39;, &#39;6669&#39;, &#39;3406&#39;, &#39;1476&#39;, &#39;2454&#39;, &#39;3563&#39;, &#39;2059&#39;, &#39;1590&#39;, &#39;2912&#39;, &#39;2231&#39;, &#39;8464&#39;, &#39;2395&#39;, &#39;8341&#39;, &#39;2330&#39;, &#39;8454&#39;, &#39;2049&#39;, &#39;6230&#39;, &#39;3533&#39;, &#39;2227&#39;, &#39;3443&#39;, &#39;6452&#39;, &#39;2327&#39;, &#39;6414&#39;, &#39;4137&#39;, &#39;8462&#39;, &#39;2474&#39;, &#39;9921&#39;, &#39;3665&#39;, &#39;2379&#39;, &#39;9910&#39;, &#39;2357&#39;, &#39;1256&#39;, &#39;1707&#39;, &#39;3034&#39;, &#39;1477&#39;, &#39;9914&#39;, &#39;6666&#39;, &#39;3130&#39;, &#39;2345&#39;, &#39;2707&#39;, &#39;6670&#39;, &#39;4766&#39;, &#39;8016&#39;, &#39;8070&#39;, &#39;2492&#39;, &#39;4438&#39;, &#39;4943&#39;, &#39;4551&#39;, &#39;4536&#39;, &#39;2404&#39;, &#39;8422&#39;, &#39;2360&#39;, &#39;2723&#39;, &#39;6504&#39;, &#39;1537&#39;, &#39;4968&#39;, &#39;4763&#39;, &#39;3653&#39;, &#39;2308&#39;, &#39;2439&#39;, &#39;3023&#39;, &#39;3661&#39;, &#39;6213&#39;, &#39;1558&#39;, &#39;2383&#39;, &#39;2228&#39;, &#39;5288&#39;, &#39;8482&#39;, &#39;8499&#39;, &#39;1723&#39;, &#39;6533&#39;, &#39;8480&#39;, &#39;5871&#39;, &#39;1232&#39;, &#39;8081&#39;, &#39;3376&#39;, &#39;4912&#39;, &#39;6271&#39;, &#39;4958&#39;, &#39;1536&#39;, &#39;3413&#39;, &#39;3044&#39;, &#39;6176&#39;, &#39;6451&#39;, &#39;3045&#39;, &#39;8114&#39;, &#39;9941&#39;, &#39;2412&#39;, &#39;6464&#39;, &#39;3004&#39;, &#39;3596&#39;, &#39;2939&#39;, &#39;008201&#39;, &#39;6456&#39;, &#39;2239&#39;, &#39;3454&#39;]
-[&#39;大立光&#39;, &#39;旭隼&#39;, &#39;矽力-KY&#39;, &#39;祥碩&#39;, &#39;和泰車&#39;, &#39;緯穎&#39;, &#39;玉晶光&#39;, &#39;儒鴻&#39;, &#39;聯發科&#39;, &#39;牧德&#39;, &#39;川湖&#39;, &#39;亞德客-KY&#39;, &#39;統一超&#39;, &#39;為升&#39;, &#39;億豐&#39;, &#39;研華&#39;, &#39;日友&#39;, &#39;台積電&#39;, &#39;富邦媒&#39;, &#39;上銀&#39;, &#39;超眾&#39;, &#39;嘉澤&#39;, &#39;裕日車&#39;, &#39;創意&#39;, &#39;康友-KY&#39;, &#39;國巨&#39;, &#39;樺漢&#39;, &#39;麗豐-KY&#39;, &#39;柏文&#39;, &#39;可成&#39;, &#39;巨大&#39;, &#39;貿聯-KY&#39;, &#39;瑞昱&#39;, &#39;豐泰&#39;, &#39;華碩&#39;, &#39;鮮活果汁-KY&#39;, &#39;葡萄王&#39;, &#39;聯詠&#39;, &#39;聚陽&#39;, &#39;美利達&#39;, &#39;羅麗芬-KY&#39;, &#39;一零四&#39;, &#39;智邦&#39;, &#39;晶華&#39;, &#39;復盛應用&#39;, &#39;南寶&#39;, &#39;矽創&#39;, &#39;長華&#39;, &#39;華新科&#39;, &#39;廣越&#39;, &#39;康控-KY&#39;, &#39;智伸科&#39;, &#39;拓凱&#39;, &#39;漢唐&#39;, &#39;可寧衛&#39;, &#39;致茂&#39;, &#39;美食-KY&#39;, &#39;南六&#39;, &#39;廣隆&#39;, &#39;立積&#39;, &#39;材料-KY&#39;, &#39;健策&#39;, &#39;台達電&#39;, &#39;美律&#39;, &#39;信邦&#39;, &#39;世芯-KY&#39;, &#39;聯茂&#39;, &#39;伸興&#39;, &#39;台光電&#39;, &#39;劍麟&#39;, &#39;豐祥-KY&#39;, &#39;商億-KY&#39;, &#39;鼎炫-KY&#39;, &#39;中碳&#39;, &#39;晶心科&#39;, &#39;泰昇-KY&#39;, &#39;中租-KY&#39;, &#39;大統益&#39;, &#39;致新&#39;, &#39;新日興&#39;, &#39;聯德控股-KY&#39;, &#39;同欣電&#39;, &#39;臻鼎-KY&#39;, &#39;和大&#39;, &#39;京鼎&#39;, &#39;健鼎&#39;, &#39;瑞儀&#39;, &#39;訊芯-KY&#39;, &#39;台灣大&#39;, &#39;振樺電&#39;, &#39;裕融&#39;, &#39;中華電&#39;, &#39;台數科&#39;, &#39;豐達科&#39;, &#39;智易&#39;, &#39;凱羿-KY&#39;, &#39;BP上證50&#39;, &#39;GIS-KY&#39;, &#39;英利-KY&#39;, &#39;晶睿&#39;]
-[3890.0, 705.0, 698.0, 505.0, 442.5, 430.0, 414.0, 384.0, 367.5, 340.0, 328.0, 323.5, 292.0, 286.5, 275.0, 267.0, 261.5, 259.0, 258.5, 254.5, 252.5, 250.0, 247.0, 237.0, 227.5, 227.0, 224.5, 221.0, 221.0, 220.5, 218.5, 215.5, 215.0, 204.5, 204.0, 200.0, 193.0, 186.0, 185.0, 181.5, 176.5, 169.0, 165.5, 164.5, 164.0, 163.0, 162.0, 159.0, 158.0, 156.5, 156.0, 155.5, 155.0, 155.0, 152.5, 152.0, 150.0, 149.0, 149.0, 148.5, 147.5, 147.0, 146.5, 146.0, 137.5, 137.0, 137.0, 132.5, 132.0, 130.5, 130.0, 128.5, 126.5, 126.0, 126.0, 125.5, 124.5, 121.5, 120.0, 120.0, 120.0, 119.5, 116.0, 116.0, 115.0, 113.5, 113.5, 112.5, 112.0, 110.0, 110.0, 109.0, 107.0, 105.0, 104.5, 104.5, 104.5, 103.0, 102.5, 102.5]
+<pre>[&#39;3008&#39;, &#39;6415&#39;, &#39;6409&#39;, &#39;2207&#39;, &#39;5269&#39;, &#39;6669&#39;, &#39;1590&#39;, &#39;2454&#39;, &#39;3406&#39;, &#39;1476&#39;, &#39;2059&#39;, &#39;2327&#39;, &#39;3533&#39;, &#39;2330&#39;, &#39;2912&#39;, &#39;2395&#39;, &#39;3563&#39;, &#39;8454&#39;, &#39;2227&#39;, &#39;8464&#39;, &#39;3443&#39;, &#39;2049&#39;, &#39;6414&#39;, &#39;2474&#39;, &#39;2231&#39;, &#39;4137&#39;, &#39;2379&#39;, &#39;2357&#39;, &#39;3665&#39;, &#39;9921&#39;, &#39;3034&#39;, &#39;1256&#39;, &#39;3661&#39;, &#39;6230&#39;, &#39;6452&#39;, &#39;3653&#39;, &#39;1707&#39;, &#39;8462&#39;, &#39;9910&#39;, &#39;8070&#39;, &#39;4551&#39;, &#39;4943&#39;, &#39;9914&#39;, &#39;2404&#39;, &#39;4968&#39;, &#39;8016&#39;, &#39;2492&#39;, &#39;2707&#39;, &#39;3413&#39;, &#39;6491&#39;, &#39;2345&#39;, &#39;4766&#39;, &#39;2439&#39;, &#39;8422&#39;, &#39;1477&#39;, &#39;1537&#39;, &#39;4438&#39;, &#39;2360&#39;, &#39;6451&#39;, &#39;6213&#39;, &#39;2308&#39;, &#39;8482&#39;, &#39;8480&#39;, &#39;5871&#39;, &#39;4958&#39;, &#39;4935&#39;, &#39;1558&#39;, &#39;4572&#39;, &#39;4536&#39;, &#39;6271&#39;, &#39;3044&#39;, &#39;2723&#39;, &#39;9802&#39;, &#39;3376&#39;, &#39;2383&#39;, &#39;1723&#39;, &#39;5288&#39;, &#39;2228&#39;, &#39;2455&#39;, &#39;6533&#39;, &#39;8081&#39;, &#39;3023&#39;, &#39;9941&#39;, &#39;6176&#39;, &#39;6269&#39;, &#39;3045&#39;, &#39;3617&#39;, &#39;1536&#39;, &#39;4763&#39;, &#39;2412&#39;, &#39;4119&#39;, &#39;5203&#39;, &#39;6278&#39;, &#39;8499&#39;, &#39;3532&#39;, &#39;4190&#39;, &#39;6456&#39;, &#39;8114&#39;, &#39;4977&#39;, &#39;3026&#39;]
+[&#39;大立光&#39;, &#39;矽力-KY&#39;, &#39;旭隼&#39;, &#39;和泰車&#39;, &#39;祥碩&#39;, &#39;緯穎&#39;, &#39;亞德客-KY&#39;, &#39;聯發科&#39;, &#39;玉晶光&#39;, &#39;儒鴻&#39;, &#39;川湖&#39;, &#39;國巨&#39;, &#39;嘉澤&#39;, &#39;台積電&#39;, &#39;統一超&#39;, &#39;研華&#39;, &#39;牧德&#39;, &#39;富邦媒&#39;, &#39;裕日車&#39;, &#39;億豐&#39;, &#39;創意&#39;, &#39;上銀&#39;, &#39;樺漢&#39;, &#39;可成&#39;, &#39;為升&#39;, &#39;麗豐-KY&#39;, &#39;瑞昱&#39;, &#39;華碩&#39;, &#39;貿聯-KY&#39;, &#39;巨大&#39;, &#39;聯詠&#39;, &#39;鮮活果汁-KY&#39;, &#39;世芯-KY&#39;, &#39;超眾&#39;, &#39;康友-KY&#39;, &#39;健策&#39;, &#39;葡萄王&#39;, &#39;柏文&#39;, &#39;豐泰&#39;, &#39;長華&#39;, &#39;智伸科&#39;, &#39;康控-KY&#39;, &#39;美利達&#39;, &#39;漢唐&#39;, &#39;立積&#39;, &#39;矽創&#39;, &#39;華新科&#39;, &#39;晶華&#39;, &#39;京鼎&#39;, &#39;晶碩&#39;, &#39;智邦&#39;, &#39;南寶&#39;, &#39;美律&#39;, &#39;可寧衛&#39;, &#39;聚陽&#39;, &#39;廣隆&#39;, &#39;廣越&#39;, &#39;致茂&#39;, &#39;訊芯-KY&#39;, &#39;聯茂&#39;, &#39;台達電&#39;, &#39;商億-KY&#39;, &#39;泰昇-KY&#39;, &#39;中租-KY&#39;, &#39;臻鼎-KY&#39;, &#39;茂林-KY&#39;, &#39;伸興&#39;, &#39;駐龍&#39;, &#39;拓凱&#39;, &#39;同欣電&#39;, &#39;健鼎&#39;, &#39;美食-KY&#39;, &#39;鈺齊-KY&#39;, &#39;新日興&#39;, &#39;台光電&#39;, &#39;中碳&#39;, &#39;豐祥-KY&#39;, &#39;劍麟&#39;, &#39;全新&#39;, &#39;晶心科&#39;, &#39;致新&#39;, &#39;信邦&#39;, &#39;裕融&#39;, &#39;瑞儀&#39;, &#39;台郡&#39;, &#39;台灣大&#39;, &#39;碩天&#39;, &#39;和大&#39;, &#39;材料-KY&#39;, &#39;中華電&#39;, &#39;旭富&#39;, &#39;訊連&#39;, &#39;台表科&#39;, &#39;鼎炫-KY&#39;, &#39;台勝科&#39;, &#39;佐登-KY&#39;, &#39;GIS-KY&#39;, &#39;振樺電&#39;, &#39;眾達-KY&#39;, &#39;禾伸堂&#39;]
+[4520.0, 907.0, 688.0, 609.0, 577.0, 552.0, 447.5, 436.0, 411.0, 398.0, 361.0, 335.5, 310.0, 309.0, 308.0, 300.5, 295.0, 288.5, 284.5, 283.0, 268.5, 263.0, 260.5, 256.0, 249.0, 243.5, 239.0, 230.5, 230.0, 225.5, 225.0, 221.0, 219.0, 217.5, 213.5, 204.0, 193.5, 193.0, 192.5, 180.5, 180.0, 175.5, 175.5, 175.5, 174.5, 174.0, 174.0, 172.5, 169.0, 165.0, 161.5, 161.0, 158.0, 157.0, 151.5, 146.5, 146.0, 145.5, 144.0, 143.0, 143.0, 139.5, 139.0, 139.0, 138.0, 134.5, 134.0, 131.0, 130.0, 130.0, 128.0, 127.5, 127.0, 127.0, 125.5, 123.5, 122.5, 119.5, 118.5, 118.5, 118.0, 117.5, 117.5, 117.5, 115.5, 115.0, 114.5, 114.0, 114.0, 113.0, 112.5, 112.0, 111.0, 109.5, 108.0, 105.0, 104.5, 104.0, 104.0, 100.5]
 </pre>
 </div>
 </div>
@@ -13338,7 +13299,7 @@ a.anchor-link {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>133.5
+<pre>139.0
 </pre>
 </div>
 </div>
@@ -13408,34 +13369,34 @@ a.anchor-link {
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <td>0</td>
       <td>3008</td>
       <td>大立光</td>
-      <td>3890.0</td>
+      <td>4520.0</td>
     </tr>
     <tr>
-      <th>1</th>
-      <td>6409</td>
-      <td>旭隼</td>
-      <td>705.0</td>
-    </tr>
-    <tr>
-      <th>2</th>
+      <td>1</td>
       <td>6415</td>
       <td>矽力-KY</td>
-      <td>698.0</td>
+      <td>907.0</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>5269</td>
-      <td>祥碩</td>
-      <td>505.0</td>
+      <td>2</td>
+      <td>6409</td>
+      <td>旭隼</td>
+      <td>688.0</td>
     </tr>
     <tr>
-      <th>4</th>
+      <td>3</td>
       <td>2207</td>
       <td>和泰車</td>
-      <td>442.5</td>
+      <td>609.0</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>5269</td>
+      <td>祥碩</td>
+      <td>577.0</td>
     </tr>
   </tbody>
 </table>
@@ -13472,7 +13433,7 @@ a.anchor-link {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>133.5</pre>
+<pre>139.0</pre>
 </div>
 
 </div>
@@ -13487,7 +13448,7 @@ a.anchor-link {
 <h2 id="pandas-&#25552;&#20379;&#20102;&#26032;&#30340;&#36039;&#26009;&#32080;&#27083;">pandas &#25552;&#20379;&#20102;&#26032;&#30340;&#36039;&#26009;&#32080;&#27083;<a class="anchor-link" href="#pandas-&#25552;&#20379;&#20102;&#26032;&#30340;&#36039;&#26009;&#32080;&#27083;">&#182;</a></h2><ul>
 <li>Series 是具備索引的 ndarray</li>
 <li>DataFrame 能完美處理表格式資料（tabular data）</li>
-<li>Panel 能為 DataFrame 加入第三個維度（通常為時間）</li>
+<li>Panel 能為 DataFrame 加入第三個維度，通常為時間（自 Pandas 0.20.0 版本之後取消了此類別）</li>
 </ul>
 
 </div>
@@ -13524,10 +13485,30 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="pandas-&#30340;&#21629;&#21517;&#28304;&#33258;&#22905;&#30340;&#19977;&#20491;&#36039;&#26009;&#32080;&#27083;">pandas &#30340;&#21629;&#21517;&#28304;&#33258;&#22905;&#30340;&#19977;&#20491;&#36039;&#26009;&#32080;&#27083;<a class="anchor-link" href="#pandas-&#30340;&#21629;&#21517;&#28304;&#33258;&#22905;&#30340;&#19977;&#20491;&#36039;&#26009;&#32080;&#27083;">&#182;</a></h2><ul>
-<li><strong>Pan</strong>el</li>
+<h2 id="&#23433;&#35037;&#33287;&#36617;&#20837;-pandas">&#23433;&#35037;&#33287;&#36617;&#20837; pandas<a class="anchor-link" href="#&#23433;&#35037;&#33287;&#36617;&#20837;-pandas">&#182;</a></h2><ul>
+<li>安裝</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="c1"># run in bash shell</span>
+pip install pandas
+</pre></div>
+<ul>
+<li>載入</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="c1"># run in python console</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="pandas-&#30340;&#21629;&#21517;&#28304;&#33258;&#22905;&#30340;&#36039;&#26009;&#32080;&#27083;">pandas &#30340;&#21629;&#21517;&#28304;&#33258;&#22905;&#30340;&#36039;&#26009;&#32080;&#27083;<a class="anchor-link" href="#pandas-&#30340;&#21629;&#21517;&#28304;&#33258;&#22905;&#30340;&#36039;&#26009;&#32080;&#27083;">&#182;</a></h2><ul>
+<li><strong>Pan</strong>el（自 Pandas 0.20.0 版本之後取消了此類別）</li>
 <li><strong>Da</strong>taFrame</li>
 <li><strong>S</strong>eries</li>
+<li>Index</li>
 </ul>
 
 </div>
@@ -13536,7 +13517,8 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#21109;&#24314;-Series">&#21109;&#24314; Series<a class="anchor-link" href="#&#21109;&#24314;-Series">&#182;</a></h2>
+<h2 id="pandas-&#20013;&#30340;-Series">pandas &#20013;&#30340; Series<a class="anchor-link" href="#pandas-&#20013;&#30340;-Series">&#182;</a></h2><p>使用 <code>pd.Series()</code> 函數創建 Series 類別，Series 從 ndarray 繼承了所有特性，並加上一組 Index。</p>
+
 </div>
 </div>
 </div>
@@ -13547,10 +13529,11 @@ a.anchor-link {
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span>
-<span class="n">players</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Ron Harper&quot;</span><span class="p">,</span> <span class="s2">&quot;Michael Jordan&quot;</span><span class="p">,</span> <span class="s2">&quot;Scottie Pippen&quot;</span><span class="p">,</span> <span class="s2">&quot;Dennis Rodman&quot;</span><span class="p">,</span> <span class="s2">&quot;Luc Longley&quot;</span><span class="p">]</span>
-<span class="n">ser</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">players</span><span class="p">)</span>
-<span class="n">ser</span>
+<span class="n">movie_ratings</span> <span class="o">=</span> <span class="p">[</span><span class="mf">8.0</span><span class="p">,</span> <span class="mf">7.3</span><span class="p">,</span> <span class="mf">8.5</span><span class="p">,</span> <span class="mf">8.6</span><span class="p">]</span>
+<span class="n">ser</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">movie_ratings</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">ser</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -13563,59 +13546,19 @@ a.anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[6]:</div>
+    <div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>0        Ron Harper
-1    Michael Jordan
-2    Scottie Pippen
-3     Dennis Rodman
-4       Luc Longley
-dtype: object</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;pandas.core.series.Series&#39;&gt;
+0    8.0
+1    7.3
+2    8.5
+3    8.6
+dtype: float64
+8.6
+</pre>
 </div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ser</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">numbers</span>
-<span class="n">ser</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[7]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>9         Ron Harper
-23    Michael Jordan
-33    Scottie Pippen
-91     Dennis Rodman
-13       Luc Longley
-dtype: object</pre>
-</div>
-
 </div>
 
 </div>
@@ -13625,7 +13568,54 @@ dtype: object</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#21109;&#24314;-DataFrame">&#21109;&#24314; DataFrame<a class="anchor-link" href="#&#21109;&#24314;-DataFrame">&#182;</a></h2>
+<h2 id="&#36889;&#20351;&#24471;&#22905;&#19981;&#21482;&#33021;&#22816;&#36879;&#36942;&#32085;&#23565;&#20301;&#32622;&#20358;&#32034;&#24341;&#65292;&#20134;&#21487;&#20197;&#36879;&#36942;&#20687;&#25805;&#20316;-dict-&#19968;&#33324;&#65292;&#20197;&#37749;&#65288;Key&#65289;&#20316;&#28858;&#36984;&#25799;&#32034;&#24341;&#20381;&#25818;">&#36889;&#20351;&#24471;&#22905;&#19981;&#21482;&#33021;&#22816;&#36879;&#36942;&#32085;&#23565;&#20301;&#32622;&#20358;&#32034;&#24341;&#65292;&#20134;&#21487;&#20197;&#36879;&#36942;&#20687;&#25805;&#20316; dict &#19968;&#33324;&#65292;&#20197;&#37749;&#65288;Key&#65289;&#20316;&#28858;&#36984;&#25799;&#32034;&#24341;&#20381;&#25818;<a class="anchor-link" href="#&#36889;&#20351;&#24471;&#22905;&#19981;&#21482;&#33021;&#22816;&#36879;&#36942;&#32085;&#23565;&#20301;&#32622;&#20358;&#32034;&#24341;&#65292;&#20134;&#21487;&#20197;&#36879;&#36942;&#20687;&#25805;&#20316;-dict-&#19968;&#33324;&#65292;&#20197;&#37749;&#65288;Key&#65289;&#20316;&#28858;&#36984;&#25799;&#32034;&#24341;&#20381;&#25818;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">movie_ratings</span> <span class="o">=</span> <span class="p">[</span><span class="mf">8.0</span><span class="p">,</span> <span class="mf">7.3</span><span class="p">,</span> <span class="mf">8.5</span><span class="p">,</span> <span class="mf">8.6</span><span class="p">]</span>
+<span class="n">movie_titles</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;The Avengers&quot;</span><span class="p">,</span> <span class="s2">&quot;Avengers: Age of Ultron&quot;</span><span class="p">,</span> <span class="s2">&quot;Avengers: Infinity War&quot;</span><span class="p">,</span> <span class="s2">&quot;Avengers: Endgame&quot;</span><span class="p">]</span>
+<span class="n">ser</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">movie_ratings</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">movie_titles</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="p">[</span><span class="s2">&quot;Avengers: Endgame&quot;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The Avengers               8.0
+Avengers: Age of Ultron    7.3
+Avengers: Infinity War     8.5
+Avengers: Endgame          8.6
+dtype: float64
+8.6
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#21487;&#20197;&#23559;-Series-&#35222;&#28858;&#19968;&#31278;&#36611;&#28858;&#27867;&#29992;&#30340;-ndarray&#65292;&#21516;&#26178;&#20855;&#20633;-list-&#21644;-dict-&#30340;&#29305;&#24615;&#65292;&#20197;-.index-&#23660;&#24615;&#33287;-.values-&#23660;&#24615;&#21487;&#20197;&#23559;-Series-&#25286;&#20998;&#28858;-Index-&#39006;&#21029;&#33287;-ndarray">&#21487;&#20197;&#23559; Series &#35222;&#28858;&#19968;&#31278;&#36611;&#28858;&#27867;&#29992;&#30340; ndarray&#65292;&#21516;&#26178;&#20855;&#20633; list &#21644; dict &#30340;&#29305;&#24615;&#65292;&#20197; .index &#23660;&#24615;&#33287; .values &#23660;&#24615;&#21487;&#20197;&#23559; Series &#25286;&#20998;&#28858; Index &#39006;&#21029;&#33287; ndarray<a class="anchor-link" href="#&#21487;&#20197;&#23559;-Series-&#35222;&#28858;&#19968;&#31278;&#36611;&#28858;&#27867;&#29992;&#30340;-ndarray&#65292;&#21516;&#26178;&#20855;&#20633;-list-&#21644;-dict-&#30340;&#29305;&#24615;&#65292;&#20197;-.index-&#23660;&#24615;&#33287;-.values-&#23660;&#24615;&#21487;&#20197;&#23559;-Series-&#25286;&#20998;&#28858;-Index-&#39006;&#21029;&#33287;-ndarray">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13634,9 +13624,62 @@ dtype: object</pre>
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
-<span class="n">df</span><span class="p">[</span><span class="s2">&quot;number&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">numbers</span>
-<span class="n">df</span><span class="p">[</span><span class="s2">&quot;player&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">players</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">movie_ratings</span> <span class="o">=</span> <span class="p">[</span><span class="mf">8.0</span><span class="p">,</span> <span class="mf">7.3</span><span class="p">,</span> <span class="mf">8.5</span><span class="p">,</span> <span class="mf">8.6</span><span class="p">]</span>
+<span class="n">movie_titles</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;The Avengers&quot;</span><span class="p">,</span> <span class="s2">&quot;Avengers: Age of Ultron&quot;</span><span class="p">,</span> <span class="s2">&quot;Avengers: Infinity War&quot;</span><span class="p">,</span> <span class="s2">&quot;Avengers: Endgame&quot;</span><span class="p">]</span>
+<span class="n">ser</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">movie_ratings</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">movie_titles</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">ser</span><span class="o">.</span><span class="n">index</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">ser</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Index([&#39;The Avengers&#39;, &#39;Avengers: Age of Ultron&#39;, &#39;Avengers: Infinity War&#39;,
+       &#39;Avengers: Endgame&#39;],
+      dtype=&#39;object&#39;)
+[8.  7.3 8.5 8.6]
+&lt;class &#39;pandas.core.indexes.base.Index&#39;&gt;
+&lt;class &#39;numpy.ndarray&#39;&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="pandas-&#20013;&#30340;-DataFrame">pandas &#20013;&#30340; DataFrame<a class="anchor-link" href="#pandas-&#20013;&#30340;-DataFrame">&#182;</a></h2><p>我們可以使用 <code>pd.DataFrame()</code> 函數創建 DataFrame 類別。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">movie_ratings</span> <span class="o">=</span> <span class="p">[</span><span class="mf">8.0</span><span class="p">,</span> <span class="mf">7.3</span><span class="p">,</span> <span class="mf">8.5</span><span class="p">,</span> <span class="mf">8.6</span><span class="p">]</span>
+<span class="n">movie_titles</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;The Avengers&quot;</span><span class="p">,</span> <span class="s2">&quot;Avengers: Age of Ultron&quot;</span><span class="p">,</span> <span class="s2">&quot;Avengers: Infinity War&quot;</span><span class="p">,</span> <span class="s2">&quot;Avengers: Endgame&quot;</span><span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">movie_titles</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;rating&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">movie_ratings</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">df</span><span class="p">))</span>
 <span class="n">df</span>
 </pre></div>
 
@@ -13650,85 +13693,14 @@ dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[8]:</div>
+    <div class="prompt"></div>
 
 
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>number</th>
-      <th>player</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>9</td>
-      <td>Ron Harper</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>23</td>
-      <td>Michael Jordan</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>33</td>
-      <td>Scottie Pippen</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>91</td>
-      <td>Dennis Rodman</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>13</td>
-      <td>Luc Longley</td>
-    </tr>
-  </tbody>
-</table>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+</pre>
 </div>
 </div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;player&quot;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
 
 <div class="output_area">
 
@@ -13755,33 +13727,30 @@ dtype: object</pre>
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>number</th>
-    </tr>
-    <tr>
-      <th>player</th>
-      <th></th>
+      <th>title</th>
+      <th>rating</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>Ron Harper</th>
-      <td>9</td>
+      <td>0</td>
+      <td>The Avengers</td>
+      <td>8.0</td>
     </tr>
     <tr>
-      <th>Michael Jordan</th>
-      <td>23</td>
+      <td>1</td>
+      <td>Avengers: Age of Ultron</td>
+      <td>7.3</td>
     </tr>
     <tr>
-      <th>Scottie Pippen</th>
-      <td>33</td>
+      <td>2</td>
+      <td>Avengers: Infinity War</td>
+      <td>8.5</td>
     </tr>
     <tr>
-      <th>Dennis Rodman</th>
-      <td>91</td>
-    </tr>
-    <tr>
-      <th>Luc Longley</th>
-      <td>13</td>
+      <td>3</td>
+      <td>Avengers: Endgame</td>
+      <td>8.6</td>
     </tr>
   </tbody>
 </table>
@@ -13797,7 +13766,7 @@ dtype: object</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#20197;-df.&lt;TAB&gt;-&#35264;&#23519;&#23660;&#24615;&#33287;&#26041;&#27861;">&#20197; <code>df.&lt;TAB&gt;</code> &#35264;&#23519;&#23660;&#24615;&#33287;&#26041;&#27861;<a class="anchor-link" href="#&#20197;-df.&lt;TAB&gt;-&#35264;&#23519;&#23660;&#24615;&#33287;&#26041;&#27861;">&#182;</a></h2>
+<h2 id="DataFrame-&#23559;&#22810;&#32068;&#20849;&#20139;-Index-&#30340;-Series-&#32068;&#21512;&#28858;&#19968;&#20491;&#20855;&#20633;&#21015;&#32034;&#24341;&#65288;row-index&#65289;&#33287;&#27396;&#27161;&#31844;&#65288;column-label&#65289;&#30340;&#36039;&#26009;&#38598;&#65292;&#25105;&#20497;&#21487;&#20197;&#36914;&#19968;&#27493;&#20998;&#25286;&#25104;&#21015;&#32034;&#24341;&#12289;&#27396;&#27161;&#31844;&#33287;-Series">DataFrame &#23559;&#22810;&#32068;&#20849;&#20139; Index &#30340; Series &#32068;&#21512;&#28858;&#19968;&#20491;&#20855;&#20633;&#21015;&#32034;&#24341;&#65288;row index&#65289;&#33287;&#27396;&#27161;&#31844;&#65288;column label&#65289;&#30340;&#36039;&#26009;&#38598;&#65292;&#25105;&#20497;&#21487;&#20197;&#36914;&#19968;&#27493;&#20998;&#25286;&#25104;&#21015;&#32034;&#24341;&#12289;&#27396;&#27161;&#31844;&#33287; Series<a class="anchor-link" href="#DataFrame-&#23559;&#22810;&#32068;&#20849;&#20139;-Index-&#30340;-Series-&#32068;&#21512;&#28858;&#19968;&#20491;&#20855;&#20633;&#21015;&#32034;&#24341;&#65288;row-index&#65289;&#33287;&#27396;&#27161;&#31844;&#65288;column-label&#65289;&#30340;&#36039;&#26009;&#38598;&#65292;&#25105;&#20497;&#21487;&#20197;&#36914;&#19968;&#27493;&#20998;&#25286;&#25104;&#21015;&#32034;&#24341;&#12289;&#27396;&#27161;&#31844;&#33287;-Series">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13806,7 +13775,15 @@ dtype: object</pre>
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">movie_ratings</span> <span class="o">=</span> <span class="p">[</span><span class="mf">8.0</span><span class="p">,</span> <span class="mf">7.3</span><span class="p">,</span> <span class="mf">8.5</span><span class="p">,</span> <span class="mf">8.6</span><span class="p">]</span>
+<span class="n">movie_titles</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;The Avengers&quot;</span><span class="p">,</span> <span class="s2">&quot;Avengers: Age of Ultron&quot;</span><span class="p">,</span> <span class="s2">&quot;Avengers: Infinity War&quot;</span><span class="p">,</span> <span class="s2">&quot;Avengers: Endgame&quot;</span><span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">movie_titles</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;rating&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">movie_ratings</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;rating&quot;</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -13819,257 +13796,24 @@ dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[10]:</div>
+    <div class="prompt"></div>
 
 
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>number</th>
-      <th>player</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>9</td>
-      <td>Ron Harper</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>23</td>
-      <td>Michael Jordan</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>33</td>
-      <td>Scottie Pippen</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>91</td>
-      <td>Dennis Rodman</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>13</td>
-      <td>Luc Longley</td>
-    </tr>
-  </tbody>
-</table>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>RangeIndex(start=0, stop=4, step=1)
+Index([&#39;title&#39;, &#39;rating&#39;], dtype=&#39;object&#39;)
+0               The Avengers
+1    Avengers: Age of Ultron
+2     Avengers: Infinity War
+3          Avengers: Endgame
+Name: title, dtype: object
+0    8.0
+1    7.3
+2    8.5
+3    8.6
+Name: rating, dtype: float64
+</pre>
 </div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[11]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>number</th>
-      <th>player</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>2</th>
-      <td>33</td>
-      <td>Scottie Pippen</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>91</td>
-      <td>Dennis Rodman</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>13</td>
-      <td>Luc Longley</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">index</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[12]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>RangeIndex(start=0, stop=5, step=1)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[13]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>number</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>5.000000</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>33.800000</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>33.304654</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>9.000000</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>13.000000</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>23.000000</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>33.000000</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>91.000000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
 </div>
 
 </div>
@@ -14079,7 +13823,170 @@ dtype: object</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#36984;&#25799;&#35722;&#25976;-Select">&#36984;&#25799;&#35722;&#25976; Select<a class="anchor-link" href="#&#36984;&#25799;&#35722;&#25976;-Select">&#182;</a></h2>
+<h2 id="pandas-&#20013;&#30340;-Index">pandas &#20013;&#30340; Index<a class="anchor-link" href="#pandas-&#20013;&#30340;-Index">&#182;</a></h2><p>不論是 Series 或 DataFrame 物件都包含一個 Index 類別，作為萃取以及更新資料的根據，Index 可以被視為是一種結合了 tuple 的不可變（Immutable）特性以及 set 集合運算特性的資料結構類別，我們可以使用 <code>pd.Index()</code> 函數創建出下列的範例</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd_index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Index</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">pd_index</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pd_index</span><span class="p">)</span>
+<span class="n">pd_index</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;pandas.core.indexes.numeric.Int64Index&#39;&gt;
+Int64Index([0, 2, 3, 4], dtype=&#39;int64&#39;)
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-11-b5275c789408&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> print<span class="ansi-blue-fg">(</span>type<span class="ansi-blue-fg">(</span>pd_index<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> print<span class="ansi-blue-fg">(</span>pd_index<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 4</span><span class="ansi-red-fg"> </span>pd_index<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">1</span>
+
+<span class="ansi-green-fg">~/.local/lib/python3.7/site-packages/pandas/core/indexes/base.py</span> in <span class="ansi-cyan-fg">__setitem__</span><span class="ansi-blue-fg">(self, key, value)</span>
+<span class="ansi-green-intense-fg ansi-bold">   4258</span> 
+<span class="ansi-green-intense-fg ansi-bold">   4259</span>     <span class="ansi-green-fg">def</span> __setitem__<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> key<span class="ansi-blue-fg">,</span> value<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">-&gt; 4260</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">raise</span> TypeError<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;Index does not support mutable operations&#34;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   4261</span> 
+<span class="ansi-green-intense-fg ansi-bold">   4262</span>     <span class="ansi-green-fg">def</span> __getitem__<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> key<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-red-fg">TypeError</span>: Index does not support mutable operations</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#21109;&#24314;&#24460;&#19981;&#33021;&#26356;&#26032;&#65292;Index-&#20063;&#25903;&#25588;-Set-&#39006;&#21029;&#30340;&#38598;&#21512;&#36939;&#31639;&#65292;&#21487;&#20197;&#23565;&#20841;&#32068;-Index-&#39006;&#21029;&#65288;&#22914;&#20363;&#23376;&#20013;&#30340;&#20116;&#20491;&#22855;&#25976;&#12289;&#22235;&#20491;&#36074;&#25976;&#65289;&#20351;&#29992;&#20132;&#38598;&#12289;&#32879;&#38598;&#33287;-XOR&#65288;Exclusive-OR&#65289;">&#21109;&#24314;&#24460;&#19981;&#33021;&#26356;&#26032;&#65292;Index &#20063;&#25903;&#25588; Set &#39006;&#21029;&#30340;&#38598;&#21512;&#36939;&#31639;&#65292;&#21487;&#20197;&#23565;&#20841;&#32068; Index &#39006;&#21029;&#65288;&#22914;&#20363;&#23376;&#20013;&#30340;&#20116;&#20491;&#22855;&#25976;&#12289;&#22235;&#20491;&#36074;&#25976;&#65289;&#20351;&#29992;&#20132;&#38598;&#12289;&#32879;&#38598;&#33287; XOR&#65288;Exclusive OR&#65289;<a class="anchor-link" href="#&#21109;&#24314;&#24460;&#19981;&#33021;&#26356;&#26032;&#65292;Index-&#20063;&#25903;&#25588;-Set-&#39006;&#21029;&#30340;&#38598;&#21512;&#36939;&#31639;&#65292;&#21487;&#20197;&#23565;&#20841;&#32068;-Index-&#39006;&#21029;&#65288;&#22914;&#20363;&#23376;&#20013;&#30340;&#20116;&#20491;&#22855;&#25976;&#12289;&#22235;&#20491;&#36074;&#25976;&#65289;&#20351;&#29992;&#20132;&#38598;&#12289;&#32879;&#38598;&#33287;-XOR&#65288;Exclusive-OR&#65289;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">odds_index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Index</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
+<span class="n">primes_index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Index</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">odds_index</span> <span class="o">&amp;</span> <span class="n">primes_index</span><span class="p">)</span> <span class="c1"># and</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">odds_index</span> <span class="o">|</span> <span class="n">primes_index</span><span class="p">)</span> <span class="c1"># or</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">odds_index</span> <span class="o">^</span> <span class="n">primes_index</span><span class="p">)</span> <span class="c1"># exclusive or</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Int64Index([3, 5, 7], dtype=&#39;int64&#39;)
+Int64Index([1, 2, 3, 5, 7, 9], dtype=&#39;int64&#39;)
+Int64Index([1, 2, 9], dtype=&#39;int64&#39;)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Series-&#33287;-DataFrame-&#30340;&#22522;&#30990;&#25216;&#24039;">Series &#33287; DataFrame &#30340;&#22522;&#30990;&#25216;&#24039;<a class="anchor-link" href="#Series-&#33287;-DataFrame-&#30340;&#22522;&#30990;&#25216;&#24039;">&#182;</a></h2>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#24120;&#35211;&#21109;&#24314;-Series-&#30340;&#26041;&#24335;&#26159;&#20351;&#29992;-pd.Series()-&#20989;&#25976;&#20659;&#20837;&#19968;&#20491;&#12300;&#39006;&#20284;&#28165;&#21934;&#65288;list-like&#65289;&#12301;&#30340;&#29289;&#20214;&#65292;&#21253;&#21547;-list-&#12289;tuple-&#25110;-ndarray&#65292;&#22914;&#26524;&#27794;&#26377;&#25351;&#23450;&#21478;&#22806;&#19968;&#20491;&#12300;&#39006;&#20284;&#28165;&#21934;&#12301;&#30340;&#29289;&#20214;&#20316;&#28858;&#32034;&#24341;&#65292;Series-&#26371;&#33258;&#21205;&#20197;&#39006;&#20284;-range()-&#20989;&#25976;&#35373;&#23450;&#23565;&#25033;&#38263;&#24230;&#30340;&#32034;&#24341;">&#24120;&#35211;&#21109;&#24314; Series &#30340;&#26041;&#24335;&#26159;&#20351;&#29992; <code>pd.Series()</code> &#20989;&#25976;&#20659;&#20837;&#19968;&#20491;&#12300;&#39006;&#20284;&#28165;&#21934;&#65288;list-like&#65289;&#12301;&#30340;&#29289;&#20214;&#65292;&#21253;&#21547; list &#12289;tuple &#25110; ndarray&#65292;&#22914;&#26524;&#27794;&#26377;&#25351;&#23450;&#21478;&#22806;&#19968;&#20491;&#12300;&#39006;&#20284;&#28165;&#21934;&#12301;&#30340;&#29289;&#20214;&#20316;&#28858;&#32034;&#24341;&#65292;Series &#26371;&#33258;&#21205;&#20197;&#39006;&#20284; <code>range()</code> &#20989;&#25976;&#35373;&#23450;&#23565;&#25033;&#38263;&#24230;&#30340;&#32034;&#24341;<a class="anchor-link" href="#&#24120;&#35211;&#21109;&#24314;-Series-&#30340;&#26041;&#24335;&#26159;&#20351;&#29992;-pd.Series()-&#20989;&#25976;&#20659;&#20837;&#19968;&#20491;&#12300;&#39006;&#20284;&#28165;&#21934;&#65288;list-like&#65289;&#12301;&#30340;&#29289;&#20214;&#65292;&#21253;&#21547;-list-&#12289;tuple-&#25110;-ndarray&#65292;&#22914;&#26524;&#27794;&#26377;&#25351;&#23450;&#21478;&#22806;&#19968;&#20491;&#12300;&#39006;&#20284;&#28165;&#21934;&#12301;&#30340;&#29289;&#20214;&#20316;&#28858;&#32034;&#24341;&#65292;Series-&#26371;&#33258;&#21205;&#20197;&#39006;&#20284;-range()-&#20989;&#25976;&#35373;&#23450;&#23565;&#25033;&#38263;&#24230;&#30340;&#32034;&#24341;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">movie_ratings</span> <span class="o">=</span> <span class="p">[</span><span class="mf">9.0</span><span class="p">,</span> <span class="mf">8.9</span><span class="p">,</span> <span class="mf">8.8</span><span class="p">,</span> <span class="mf">8.7</span><span class="p">]</span>
+<span class="n">ser</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">movie_ratings</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0    9.0
+1    8.9
+2    8.8
+3    8.7
+dtype: float64
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#22312;-pd.Series()-&#20989;&#25976;&#20013;&#21152;&#20837;-index-&#21443;&#25976;&#25351;&#23450;&#23565;&#25033;&#38263;&#24230;&#30340;&#32034;&#24341;">&#22312; <code>pd.Series()</code> &#20989;&#25976;&#20013;&#21152;&#20837; index &#21443;&#25976;&#25351;&#23450;&#23565;&#25033;&#38263;&#24230;&#30340;&#32034;&#24341;<a class="anchor-link" href="#&#22312;-pd.Series()-&#20989;&#25976;&#20013;&#21152;&#20837;-index-&#21443;&#25976;&#25351;&#23450;&#23565;&#25033;&#38263;&#24230;&#30340;&#32034;&#24341;">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -14088,7 +13995,12 @@ dtype: object</pre>
 <div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;player&quot;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">movie_ratings</span> <span class="o">=</span> <span class="p">[</span><span class="mf">9.0</span><span class="p">,</span> <span class="mf">8.9</span><span class="p">,</span> <span class="mf">8.8</span><span class="p">,</span> <span class="mf">8.7</span><span class="p">]</span>
+<span class="n">movie_titles</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;The Dark Knight&quot;</span><span class="p">,</span> <span class="s2">&quot;Schindler&#39;s List&quot;</span><span class="p">,</span> <span class="s2">&quot;Forrest Gump&quot;</span><span class="p">,</span> <span class="s2">&quot;Inception&quot;</span><span class="p">]</span>
+<span class="n">ser</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">movie_ratings</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">movie_titles</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14101,20 +14013,19 @@ dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[14]:</div>
+    <div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>0        Ron Harper
-1    Michael Jordan
-2    Scottie Pippen
-3     Dennis Rodman
-4       Luc Longley
-Name: player, dtype: object</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Index([&#39;The Dark Knight&#39;, &#39;Schindler&#39;s List&#39;, &#39;Forrest Gump&#39;, &#39;Inception&#39;], dtype=&#39;object&#39;)
+[9.  8.9 8.8 8.7]
+The Dark Knight     9.0
+Schindler&#39;s List    8.9
+Forrest Gump        8.8
+Inception           8.7
+dtype: float64
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -14124,12 +14035,7 @@ Name: player, dtype: object</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#31721;&#36984;&#35264;&#28204;&#20540;-Filter">&#31721;&#36984;&#35264;&#28204;&#20540; Filter<a class="anchor-link" href="#&#31721;&#36984;&#35264;&#28204;&#20540;-Filter">&#182;</a></h2><ul>
-<li><code>df.loc[]</code> 以標籤為準</li>
-<li><code>df.iloc[]</code> 以位置為準</li>
-<li>以布林陣列篩選</li>
-</ul>
-
+<h2 id="Series-&#34987;&#35373;&#35336;&#25104;&#30001;&#19968;&#32068;&#32034;&#24341;&#33287;&#19968;&#32068;&#36039;&#26009;&#25152;&#25645;&#24314;&#32780;&#25104;&#30340;&#36039;&#26009;&#32080;&#27083;&#65292;&#22240;&#27492;&#25105;&#20497;&#20134;&#21487;&#20197;&#22312;-pd.Series()-&#20989;&#25976;&#20013;&#20659;&#20837;-dict&#65292;&#22914;&#27492;&#19968;&#20358;&#23383;&#20856;&#20013;&#30340;&#37749;&#65288;Keys&#65289;&#26371;&#34987;&#35352;&#37636;&#25104;&#28858;&#32034;&#24341;&#12289;&#23383;&#20856;&#20013;&#30340;&#20540;&#65288;Values&#65289;&#21063;&#26371;&#34987;&#35352;&#37636;&#25104;&#28858;&#38499;&#21015;&#20013;&#30340;&#36039;&#26009;">Series &#34987;&#35373;&#35336;&#25104;&#30001;&#19968;&#32068;&#32034;&#24341;&#33287;&#19968;&#32068;&#36039;&#26009;&#25152;&#25645;&#24314;&#32780;&#25104;&#30340;&#36039;&#26009;&#32080;&#27083;&#65292;&#22240;&#27492;&#25105;&#20497;&#20134;&#21487;&#20197;&#22312; <code>pd.Series()</code> &#20989;&#25976;&#20013;&#20659;&#20837; dict&#65292;&#22914;&#27492;&#19968;&#20358;&#23383;&#20856;&#20013;&#30340;&#37749;&#65288;Keys&#65289;&#26371;&#34987;&#35352;&#37636;&#25104;&#28858;&#32034;&#24341;&#12289;&#23383;&#20856;&#20013;&#30340;&#20540;&#65288;Values&#65289;&#21063;&#26371;&#34987;&#35352;&#37636;&#25104;&#28858;&#38499;&#21015;&#20013;&#30340;&#36039;&#26009;<a class="anchor-link" href="#Series-&#34987;&#35373;&#35336;&#25104;&#30001;&#19968;&#32068;&#32034;&#24341;&#33287;&#19968;&#32068;&#36039;&#26009;&#25152;&#25645;&#24314;&#32780;&#25104;&#30340;&#36039;&#26009;&#32080;&#27083;&#65292;&#22240;&#27492;&#25105;&#20497;&#20134;&#21487;&#20197;&#22312;-pd.Series()-&#20989;&#25976;&#20013;&#20659;&#20837;-dict&#65292;&#22914;&#27492;&#19968;&#20358;&#23383;&#20856;&#20013;&#30340;&#37749;&#65288;Keys&#65289;&#26371;&#34987;&#35352;&#37636;&#25104;&#28858;&#32034;&#24341;&#12289;&#23383;&#20856;&#20013;&#30340;&#20540;&#65288;Values&#65289;&#21063;&#26371;&#34987;&#35352;&#37636;&#25104;&#28858;&#38499;&#21015;&#20013;&#30340;&#36039;&#26009;">&#182;</a></h2>
 </div>
 </div>
 </div></section><section>
@@ -14138,8 +14044,19 @@ Name: player, dtype: object</pre>
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;PG&quot;</span><span class="p">,</span> <span class="s2">&quot;SG&quot;</span><span class="p">,</span> <span class="s2">&quot;SF&quot;</span><span class="p">,</span> <span class="s2">&quot;PF&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">]</span>
-<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="s2">&quot;SG&quot;</span><span class="p">,</span> <span class="s2">&quot;SF&quot;</span><span class="p">,</span> <span class="s2">&quot;PF&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;number&quot;</span><span class="p">,</span> <span class="s2">&quot;player&quot;</span><span class="p">]]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">movie_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;The Dark Knight&quot;</span><span class="p">:</span> <span class="mf">9.0</span><span class="p">,</span>
+    <span class="s2">&quot;Schindler&#39;s List&quot;</span><span class="p">:</span> <span class="mf">8.9</span><span class="p">,</span>
+    <span class="s2">&quot;Forrest Gump&quot;</span><span class="p">:</span> <span class="mf">8.8</span><span class="p">,</span>
+    <span class="s2">&quot;Inception&quot;</span><span class="p">:</span> <span class="mf">8.7</span>
+<span class="p">}</span>
+<span class="n">ser</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">movie_dict</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">movie_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">movie_dict</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14152,66 +14069,47 @@ Name: player, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[15]:</div>
+    <div class="prompt"></div>
 
 
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>dict_keys([&#39;The Dark Knight&#39;, &#34;Schindler&#39;s List&#34;, &#39;Forrest Gump&#39;, &#39;Inception&#39;])
+dict_values([9.0, 8.9, 8.8, 8.7])
 
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>number</th>
-      <th>player</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>SG</th>
-      <td>23</td>
-      <td>Michael Jordan</td>
-    </tr>
-    <tr>
-      <th>SF</th>
-      <td>33</td>
-      <td>Scottie Pippen</td>
-    </tr>
-    <tr>
-      <th>PF</th>
-      <td>91</td>
-      <td>Dennis Rodman</td>
-    </tr>
-  </tbody>
-</table>
+Index([&#39;The Dark Knight&#39;, &#39;Schindler&#39;s List&#39;, &#39;Forrest Gump&#39;, &#39;Inception&#39;], dtype=&#39;object&#39;)
+[9.  8.9 8.8 8.7]
+The Dark Knight     9.0
+Schindler&#39;s List    8.9
+Forrest Gump        8.8
+Inception           8.7
+dtype: float64
+</pre>
 </div>
-</div>
-
 </div>
 
 </div>
 </div>
 
 </div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#24120;&#35211;&#21109;&#24314;-DataFrame-&#30340;&#26041;&#24335;&#26159;&#20351;&#29992;-pd.DataFrame()-&#20989;&#25976;&#20659;&#20837;&#22810;&#20491;&#12300;&#39006;&#20284;&#28165;&#21934;&#65288;list-like&#65289;&#12301;&#30340;&#29289;&#20214;&#65292;&#21253;&#21547;-list-&#12289;tuple-&#25110;-ndarray&#65292;&#20006;&#35222;&#38656;&#27714;&#25351;&#23450;&#35722;&#25976;&#21517;&#31281;&#25110;&#32034;&#24341;&#65307;&#21516;&#27171;&#22320;&#65292;&#33509;&#26159;&#22312;&#27794;&#26377;&#25351;&#23450;&#32034;&#24341;&#30340;&#24773;&#27841;&#19979;&#65292;DataFrame-&#26371;&#33258;&#21205;&#20197;&#39006;&#20284;-range()-&#20989;&#25976;&#35373;&#23450;&#23565;&#25033;&#38263;&#24230;&#30340;&#32034;&#24341;">&#24120;&#35211;&#21109;&#24314; DataFrame &#30340;&#26041;&#24335;&#26159;&#20351;&#29992; <code>pd.DataFrame()</code> &#20989;&#25976;&#20659;&#20837;&#22810;&#20491;&#12300;&#39006;&#20284;&#28165;&#21934;&#65288;list-like&#65289;&#12301;&#30340;&#29289;&#20214;&#65292;&#21253;&#21547; list &#12289;tuple &#25110; ndarray&#65292;&#20006;&#35222;&#38656;&#27714;&#25351;&#23450;&#35722;&#25976;&#21517;&#31281;&#25110;&#32034;&#24341;&#65307;&#21516;&#27171;&#22320;&#65292;&#33509;&#26159;&#22312;&#27794;&#26377;&#25351;&#23450;&#32034;&#24341;&#30340;&#24773;&#27841;&#19979;&#65292;DataFrame &#26371;&#33258;&#21205;&#20197;&#39006;&#20284; <code>range()</code> &#20989;&#25976;&#35373;&#23450;&#23565;&#25033;&#38263;&#24230;&#30340;&#32034;&#24341;<a class="anchor-link" href="#&#24120;&#35211;&#21109;&#24314;-DataFrame-&#30340;&#26041;&#24335;&#26159;&#20351;&#29992;-pd.DataFrame()-&#20989;&#25976;&#20659;&#20837;&#22810;&#20491;&#12300;&#39006;&#20284;&#28165;&#21934;&#65288;list-like&#65289;&#12301;&#30340;&#29289;&#20214;&#65292;&#21253;&#21547;-list-&#12289;tuple-&#25110;-ndarray&#65292;&#20006;&#35222;&#38656;&#27714;&#25351;&#23450;&#35722;&#25976;&#21517;&#31281;&#25110;&#32034;&#24341;&#65307;&#21516;&#27171;&#22320;&#65292;&#33509;&#26159;&#22312;&#27794;&#26377;&#25351;&#23450;&#32034;&#24341;&#30340;&#24773;&#27841;&#19979;&#65292;DataFrame-&#26371;&#33258;&#21205;&#20197;&#39006;&#20284;-range()-&#20989;&#25976;&#35373;&#23450;&#23565;&#25033;&#38263;&#24230;&#30340;&#32034;&#24341;">&#182;</a></h2>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">movie_ratings</span> <span class="o">=</span> <span class="p">[</span><span class="mf">9.0</span><span class="p">,</span> <span class="mf">8.9</span><span class="p">,</span> <span class="mf">8.8</span><span class="p">,</span> <span class="mf">8.7</span><span class="p">]</span>
+<span class="n">movie_titles</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;The Dark Knight&quot;</span><span class="p">,</span> <span class="s2">&quot;Schindler&#39;s List&quot;</span><span class="p">,</span> <span class="s2">&quot;Forrest Gump&quot;</span><span class="p">,</span> <span class="s2">&quot;Inception&quot;</span><span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">movie_titles</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;rating&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">movie_ratings</span>
+<span class="n">df</span>
 </pre></div>
 
     </div>
@@ -14247,25 +14145,30 @@ Name: player, dtype: object</pre>
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>number</th>
-      <th>player</th>
+      <th>title</th>
+      <th>rating</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>SG</th>
-      <td>23</td>
-      <td>Michael Jordan</td>
+      <td>0</td>
+      <td>The Dark Knight</td>
+      <td>9.0</td>
     </tr>
     <tr>
-      <th>SF</th>
-      <td>33</td>
-      <td>Scottie Pippen</td>
+      <td>1</td>
+      <td>Schindler's List</td>
+      <td>8.9</td>
     </tr>
     <tr>
-      <th>PF</th>
-      <td>91</td>
-      <td>Dennis Rodman</td>
+      <td>2</td>
+      <td>Forrest Gump</td>
+      <td>8.8</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Inception</td>
+      <td>8.7</td>
     </tr>
   </tbody>
 </table>
@@ -14278,14 +14181,24 @@ Name: player, dtype: object</pre>
 </div>
 
 </div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#33287;-Series-&#30456;&#21516;&#65292;DataFrame-&#34987;&#35373;&#35336;&#25104;&#30001;&#19968;&#32068;&#32034;&#24341;&#33287;&#22810;&#32068;&#39006;&#20284;&#28165;&#21934;&#36039;&#26009;&#25152;&#25645;&#24314;&#32780;&#25104;&#30340;&#36039;&#26009;&#32080;&#27083;&#65292;&#22240;&#27492;&#25105;&#20497;&#20134;&#21487;&#20197;&#22312;-pd.DataFrame()-&#20989;&#25976;&#20013;&#20659;&#20837;-dict&#65292;&#22914;&#27492;&#19968;&#20358;&#23383;&#20856;&#20013;&#30340;&#37749;&#65288;Keys&#65289;&#26371;&#34987;&#35352;&#37636;&#25104;&#28858;&#35722;&#25976;&#21517;&#31281;&#12289;&#23383;&#20856;&#20013;&#30340;&#20540;&#65288;Values&#65289;&#21063;&#26371;&#34987;&#35352;&#37636;&#25104;&#28858;&#38499;&#21015;&#20013;&#30340;&#36039;&#26009;">&#33287; Series &#30456;&#21516;&#65292;DataFrame &#34987;&#35373;&#35336;&#25104;&#30001;&#19968;&#32068;&#32034;&#24341;&#33287;&#22810;&#32068;&#39006;&#20284;&#28165;&#21934;&#36039;&#26009;&#25152;&#25645;&#24314;&#32780;&#25104;&#30340;&#36039;&#26009;&#32080;&#27083;&#65292;&#22240;&#27492;&#25105;&#20497;&#20134;&#21487;&#20197;&#22312; <code>pd.DataFrame()</code> &#20989;&#25976;&#20013;&#20659;&#20837; dict&#65292;&#22914;&#27492;&#19968;&#20358;&#23383;&#20856;&#20013;&#30340;&#37749;&#65288;Keys&#65289;&#26371;&#34987;&#35352;&#37636;&#25104;&#28858;&#35722;&#25976;&#21517;&#31281;&#12289;&#23383;&#20856;&#20013;&#30340;&#20540;&#65288;Values&#65289;&#21063;&#26371;&#34987;&#35352;&#37636;&#25104;&#28858;&#38499;&#21015;&#20013;&#30340;&#36039;&#26009;<a class="anchor-link" href="#&#33287;-Series-&#30456;&#21516;&#65292;DataFrame-&#34987;&#35373;&#35336;&#25104;&#30001;&#19968;&#32068;&#32034;&#24341;&#33287;&#22810;&#32068;&#39006;&#20284;&#28165;&#21934;&#36039;&#26009;&#25152;&#25645;&#24314;&#32780;&#25104;&#30340;&#36039;&#26009;&#32080;&#27083;&#65292;&#22240;&#27492;&#25105;&#20497;&#20134;&#21487;&#20197;&#22312;-pd.DataFrame()-&#20989;&#25976;&#20013;&#20659;&#20837;-dict&#65292;&#22914;&#27492;&#19968;&#20358;&#23383;&#20856;&#20013;&#30340;&#37749;&#65288;Keys&#65289;&#26371;&#34987;&#35352;&#37636;&#25104;&#28858;&#35722;&#25976;&#21517;&#31281;&#12289;&#23383;&#20856;&#20013;&#30340;&#20540;&#65288;Values&#65289;&#21063;&#26371;&#34987;&#35352;&#37636;&#25104;&#28858;&#38499;&#21015;&#20013;&#30340;&#36039;&#26009;">&#182;</a></h2>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">is_trio</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;number&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="mi">23</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">91</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">is_trio</span><span class="p">)</span>
-<span class="n">df</span><span class="p">[</span><span class="n">is_trio</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">movie_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;The Dark Knight&quot;</span><span class="p">,</span> <span class="s2">&quot;Schindler&#39;s List&quot;</span><span class="p">,</span> <span class="s2">&quot;Forrest Gump&quot;</span><span class="p">,</span> <span class="s2">&quot;Inception&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;rating&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">9.0</span><span class="p">,</span> <span class="mf">8.9</span><span class="p">,</span> <span class="mf">8.8</span><span class="p">,</span> <span class="mf">8.7</span><span class="p">]</span>
+<span class="p">}</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">movie_dict</span><span class="p">)</span>
+<span class="n">df</span>
 </pre></div>
 
     </div>
@@ -14295,22 +14208,6 @@ Name: player, dtype: object</pre>
 <div class="output_wrapper">
 <div class="output">
 
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>PG    False
-SG     True
-SF     True
-PF     True
-C     False
-Name: number, dtype: bool
-</pre>
-</div>
-</div>
 
 <div class="output_area">
 
@@ -14337,25 +14234,30 @@ Name: number, dtype: bool
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>number</th>
-      <th>player</th>
+      <th>title</th>
+      <th>rating</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>SG</th>
-      <td>23</td>
-      <td>Michael Jordan</td>
+      <td>0</td>
+      <td>The Dark Knight</td>
+      <td>9.0</td>
     </tr>
     <tr>
-      <th>SF</th>
-      <td>33</td>
-      <td>Scottie Pippen</td>
+      <td>1</td>
+      <td>Schindler's List</td>
+      <td>8.9</td>
     </tr>
     <tr>
-      <th>PF</th>
-      <td>91</td>
-      <td>Dennis Rodman</td>
+      <td>2</td>
+      <td>Forrest Gump</td>
+      <td>8.8</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Inception</td>
+      <td>8.7</td>
     </tr>
   </tbody>
 </table>
@@ -14371,20 +14273,31 @@ Name: number, dtype: bool
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#25490;&#24207;&#35264;&#28204;&#20540;-Arrange">&#25490;&#24207;&#35264;&#28204;&#20540; Arrange<a class="anchor-link" href="#&#25490;&#24207;&#35264;&#28204;&#20540;-Arrange">&#182;</a></h2><ul>
-<li><code>df.sort_index()</code></li>
-<li><code>df.sort_values()</code></li>
+<h2 id="&#23526;&#21209;&#25033;&#29992;&#36039;&#26009;&#26694;&#29289;&#20214;&#26178;&#65292;&#22810;&#25976;&#24773;&#27841;&#37117;&#19981;&#26371;&#26159;&#25163;&#21205;&#36664;&#20837;&#36039;&#26009;&#20839;&#23481;&#65292;&#32780;&#26159;&#30001;&#22806;&#37096;&#36039;&#26009;&#28304;&#36617;&#20837;">&#23526;&#21209;&#25033;&#29992;&#36039;&#26009;&#26694;&#29289;&#20214;&#26178;&#65292;&#22810;&#25976;&#24773;&#27841;&#37117;&#19981;&#26371;&#26159;&#25163;&#21205;&#36664;&#20837;&#36039;&#26009;&#20839;&#23481;&#65292;&#32780;&#26159;&#30001;&#22806;&#37096;&#36039;&#26009;&#28304;&#36617;&#20837;<a class="anchor-link" href="#&#23526;&#21209;&#25033;&#29992;&#36039;&#26009;&#26694;&#29289;&#20214;&#26178;&#65292;&#22810;&#25976;&#24773;&#27841;&#37117;&#19981;&#26371;&#26159;&#25163;&#21205;&#36664;&#20837;&#36039;&#26009;&#20839;&#23481;&#65292;&#32780;&#26159;&#30001;&#22806;&#37096;&#36039;&#26009;&#28304;&#36617;&#20837;">&#182;</a></h2><ul>
+<li>以逗號區隔變數的 CSV 文字檔</li>
+<li>以特定符號區隔變數的 TXT 文字檔</li>
+<li>以 JSON 所組成的陣列文字檔</li>
+<li>試算表</li>
+<li>資料庫中的表格</li>
 </ul>
 
 </div>
 </div>
 </div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#20351;&#29992;-pd.read_csv()-&#20989;&#25976;&#35712;&#20837;&#20197;&#36887;&#34399;&#21312;&#38548;&#35722;&#25976;&#30340;-CSV-&#25991;&#23383;&#27284;">&#20351;&#29992; <code>pd.read_csv()</code> &#20989;&#25976;&#35712;&#20837;&#20197;&#36887;&#34399;&#21312;&#38548;&#35722;&#25976;&#30340; CSV &#25991;&#23383;&#27284;<a class="anchor-link" href="#&#20351;&#29992;-pd.read_csv()-&#20989;&#25976;&#35712;&#20837;&#20197;&#36887;&#34399;&#21312;&#38548;&#35722;&#25976;&#30340;-CSV-&#25991;&#23383;&#27284;">&#182;</a></h2>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://python4ds.s3-ap-northeast-1.amazonaws.com/movies.csv&quot;</span><span class="p">)</span>
+<span class="n">df</span>
 </pre></div>
 
     </div>
@@ -14420,35 +14333,30 @@ Name: number, dtype: bool
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>number</th>
-      <th>player</th>
+      <th>title</th>
+      <th>rating</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>C</th>
-      <td>13</td>
-      <td>Luc Longley</td>
+      <td>0</td>
+      <td>The Dark Knight</td>
+      <td>9.0</td>
     </tr>
     <tr>
-      <th>PF</th>
-      <td>91</td>
-      <td>Dennis Rodman</td>
+      <td>1</td>
+      <td>Schindler's List</td>
+      <td>8.9</td>
     </tr>
     <tr>
-      <th>PG</th>
-      <td>9</td>
-      <td>Ron Harper</td>
+      <td>2</td>
+      <td>Forrest Gump</td>
+      <td>8.8</td>
     </tr>
     <tr>
-      <th>SF</th>
-      <td>33</td>
-      <td>Scottie Pippen</td>
-    </tr>
-    <tr>
-      <th>SG</th>
-      <td>23</td>
-      <td>Michael Jordan</td>
+      <td>3</td>
+      <td>Inception</td>
+      <td>8.7</td>
     </tr>
   </tbody>
 </table>
@@ -14461,12 +14369,20 @@ Name: number, dtype: bool
 </div>
 
 </div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#20351;&#29992;-pd.read_json()-&#20989;&#25976;&#35712;&#20837;&#20197;-JSON-&#25152;&#32068;&#25104;&#30340;&#38499;&#21015;&#25991;&#23383;&#27284;">&#20351;&#29992; <code>pd.read_json()</code> &#20989;&#25976;&#35712;&#20837;&#20197; JSON &#25152;&#32068;&#25104;&#30340;&#38499;&#21015;&#25991;&#23383;&#27284;<a class="anchor-link" href="#&#20351;&#29992;-pd.read_json()-&#20989;&#25976;&#35712;&#20837;&#20197;-JSON-&#25152;&#32068;&#25104;&#30340;&#38499;&#21015;&#25991;&#23383;&#27284;">&#182;</a></h2>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;number&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="s2">&quot;https://python4ds.s3-ap-northeast-1.amazonaws.com/movies.json&quot;</span><span class="p">)</span>
+<span class="n">df</span>
 </pre></div>
 
     </div>
@@ -14502,35 +14418,30 @@ Name: number, dtype: bool
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>number</th>
-      <th>player</th>
+      <th>title</th>
+      <th>rating</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>PG</th>
-      <td>9</td>
-      <td>Ron Harper</td>
+      <td>0</td>
+      <td>The Dark Knight</td>
+      <td>9.0</td>
     </tr>
     <tr>
-      <th>C</th>
-      <td>13</td>
-      <td>Luc Longley</td>
+      <td>1</td>
+      <td>Schindler's List</td>
+      <td>8.9</td>
     </tr>
     <tr>
-      <th>SG</th>
-      <td>23</td>
-      <td>Michael Jordan</td>
+      <td>2</td>
+      <td>Forrest Gump</td>
+      <td>8.8</td>
     </tr>
     <tr>
-      <th>SF</th>
-      <td>33</td>
-      <td>Scottie Pippen</td>
-    </tr>
-    <tr>
-      <th>PF</th>
-      <td>91</td>
-      <td>Dennis Rodman</td>
+      <td>3</td>
+      <td>Inception</td>
+      <td>8.7</td>
     </tr>
   </tbody>
 </table>
@@ -14546,29 +14457,7 @@ Name: number, dtype: bool
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#29554;&#21462;&#36039;&#26009;&#30340;&#26368;&#22823;&#20540;&#26368;&#23567;&#20540;">&#29554;&#21462;&#36039;&#26009;&#30340;&#26368;&#22823;&#20540;&#26368;&#23567;&#20540;<a class="anchor-link" href="#&#29554;&#21462;&#36039;&#26009;&#30340;&#26368;&#22823;&#20540;&#26368;&#23567;&#20540;">&#182;</a></h2><ul>
-<li><code>df["col_name"].max()</code></li>
-<li><code>df["col_name"].min()</code></li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#29554;&#21462;&#36039;&#26009;&#26368;&#22823;&#20540;&#26368;&#23567;&#20540;&#30340;&#32034;&#24341;&#20540;">&#29554;&#21462;&#36039;&#26009;&#26368;&#22823;&#20540;&#26368;&#23567;&#20540;&#30340;&#32034;&#24341;&#20540;<a class="anchor-link" href="#&#29554;&#21462;&#36039;&#26009;&#26368;&#22823;&#20540;&#26368;&#23567;&#20540;&#30340;&#32034;&#24341;&#20540;">&#182;</a></h2><ul>
-<li><code>df["col_name"].idxmax()</code></li>
-<li><code>df["col_name"].idxmin()</code></li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#35504;&#30340;&#32972;&#34399;&#25976;&#23383;&#26368;&#22823;&#65311;">&#38568;&#22530;&#32244;&#32722;&#65306;&#35504;&#30340;&#32972;&#34399;&#25976;&#23383;&#26368;&#22823;&#65311;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#35504;&#30340;&#32972;&#34399;&#25976;&#23383;&#26368;&#22823;&#65311;">&#182;</a></h2>
+<h2 id="&#20351;&#29992;-pd.read_excel()-&#20989;&#25976;&#35712;&#20837;&#35430;&#31639;&#34920;">&#20351;&#29992; <code>pd.read_excel()</code> &#20989;&#25976;&#35712;&#20837;&#35430;&#31639;&#34920;<a class="anchor-link" href="#&#20351;&#29992;-pd.read_excel()-&#20989;&#25976;&#35712;&#20837;&#35430;&#31639;&#34920;">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -14577,13 +14466,7 @@ Name: number, dtype: bool
 <div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-
-<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span>
-<span class="n">players</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Ron Harper&quot;</span><span class="p">,</span> <span class="s2">&quot;Michael Jordan&quot;</span><span class="p">,</span> <span class="s2">&quot;Scottie Pippen&quot;</span><span class="p">,</span> <span class="s2">&quot;Dennis Rodman&quot;</span><span class="p">,</span> <span class="s2">&quot;Luc Longley&quot;</span><span class="p">]</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
-<span class="n">df</span><span class="p">[</span><span class="s2">&quot;number&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">numbers</span>
-<span class="n">df</span><span class="p">[</span><span class="s2">&quot;player&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">players</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;https://python4ds.s3-ap-northeast-1.amazonaws.com/movies.xlsx&quot;</span><span class="p">)</span>
 <span class="n">df</span>
 </pre></div>
 
@@ -14620,35 +14503,30 @@ Name: number, dtype: bool
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>number</th>
-      <th>player</th>
+      <th>title</th>
+      <th>rating</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>9</td>
-      <td>Ron Harper</td>
+      <td>0</td>
+      <td>The Dark Knight</td>
+      <td>9.0</td>
     </tr>
     <tr>
-      <th>1</th>
-      <td>23</td>
-      <td>Michael Jordan</td>
+      <td>1</td>
+      <td>Schindler's List</td>
+      <td>8.9</td>
     </tr>
     <tr>
-      <th>2</th>
-      <td>33</td>
-      <td>Scottie Pippen</td>
+      <td>2</td>
+      <td>Forrest Gump</td>
+      <td>8.8</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>91</td>
-      <td>Dennis Rodman</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>13</td>
-      <td>Luc Longley</td>
+      <td>3</td>
+      <td>Inception</td>
+      <td>8.7</td>
     </tr>
   </tbody>
 </table>
@@ -14661,13 +14539,36 @@ Name: number, dtype: bool
 </div>
 
 </div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#20351;&#29992;-pd.read_sql()-&#20989;&#25976;&#35712;&#20837;&#36039;&#26009;&#24235;&#20013;&#30340;&#34920;&#26684;">&#20351;&#29992; <code>pd.read_sql()</code> &#20989;&#25976;&#35712;&#20837;&#36039;&#26009;&#24235;&#20013;&#30340;&#34920;&#26684;<a class="anchor-link" href="#&#20351;&#29992;-pd.read_sql()-&#20989;&#25976;&#35712;&#20837;&#36039;&#26009;&#24235;&#20013;&#30340;&#34920;&#26684;">&#182;</a></h2>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">max_number</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;number&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
-<span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;number&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">max_number</span><span class="p">][</span><span class="s2">&quot;player&quot;</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+
+<span class="c1"># Creating a demo.db database in working directory</span>
+<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;demo.db&#39;</span><span class="p">)</span>
+<span class="c1"># Importing a table</span>
+<span class="n">movie_ratings</span> <span class="o">=</span> <span class="p">[</span><span class="mf">9.0</span><span class="p">,</span> <span class="mf">8.9</span><span class="p">,</span> <span class="mf">8.8</span><span class="p">,</span> <span class="mf">8.7</span><span class="p">]</span>
+<span class="n">movie_titles</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;The Dark Knight&quot;</span><span class="p">,</span> <span class="s2">&quot;Schindler&#39;s List&quot;</span><span class="p">,</span> <span class="s2">&quot;Forrest Gump&quot;</span><span class="p">,</span> <span class="s2">&quot;Inception&quot;</span><span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">movie_titles</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;rating&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">movie_ratings</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="s2">&quot;movies&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">con</span><span class="o">=</span><span class="n">conn</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s1">&#39;replace&#39;</span><span class="p">)</span>
+<span class="c1"># Importing data from demo.movies</span>
+<span class="n">query_str</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT *</span>
+<span class="s2">    FROM movies</span>
+<span class="s2">    WHERE rating &lt; 9.0;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">query_str</span><span class="p">,</span> <span class="n">con</span><span class="o">=</span><span class="n">conn</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14684,6 +14585,578 @@ Name: number, dtype: bool
 
 
 
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>title</th>
+      <th>rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>Schindler's List</td>
+      <td>8.9</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Forrest Gump</td>
+      <td>8.8</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Inception</td>
+      <td>8.7</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Series-&#30340;&#32034;&#24341;&#12289;&#20999;&#21106;&#33287;&#31721;&#36984;">Series &#30340;&#32034;&#24341;&#12289;&#20999;&#21106;&#33287;&#31721;&#36984;<a class="anchor-link" href="#Series-&#30340;&#32034;&#24341;&#12289;&#20999;&#21106;&#33287;&#31721;&#36984;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">movie_ratings</span> <span class="o">=</span> <span class="p">[</span><span class="mf">9.0</span><span class="p">,</span> <span class="mf">8.9</span><span class="p">,</span> <span class="mf">8.8</span><span class="p">,</span> <span class="mf">8.7</span><span class="p">]</span>
+<span class="n">movie_titles</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;The Dark Knight&quot;</span><span class="p">,</span> <span class="s2">&quot;Schindler&#39;s List&quot;</span><span class="p">,</span> <span class="s2">&quot;Forrest Gump&quot;</span><span class="p">,</span> <span class="s2">&quot;Inception&quot;</span><span class="p">]</span>
+<span class="n">ser</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">movie_ratings</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">movie_titles</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="p">[</span><span class="s2">&quot;Forrest Gump&quot;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The Dark Knight     9.0
+Schindler&#39;s List    8.9
+Forrest Gump        8.8
+Inception           8.7
+dtype: float64
+9.0
+8.8
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#36914;&#34892;&#36039;&#26009;&#20540;&#30340;&#20999;&#21106;&#26178;&#65292;&#21487;&#20197;&#22312;&#20013;&#25324;&#34399;&#36664;&#20837;&#25152;&#38656;&#36039;&#26009;&#30340;&#36215;&#40670;&#33287;&#32066;&#40670;&#65292;&#20659;&#20837;&#32085;&#23565;&#20301;&#32622;&#21063;&#33287;-Python-&#24931;&#20363;&#19968;&#33268;&#65306;&#19981;&#21253;&#21547;&#32066;&#40670;&#65307;&#33509;&#26159;&#20659;&#20837;&#32034;&#24341;&#20540;&#21063;&#26371;&#21253;&#21547;&#32066;&#40670;">&#36914;&#34892;&#36039;&#26009;&#20540;&#30340;&#20999;&#21106;&#26178;&#65292;&#21487;&#20197;&#22312;&#20013;&#25324;&#34399;&#36664;&#20837;&#25152;&#38656;&#36039;&#26009;&#30340;&#36215;&#40670;&#33287;&#32066;&#40670;&#65292;&#20659;&#20837;&#32085;&#23565;&#20301;&#32622;&#21063;&#33287; Python &#24931;&#20363;&#19968;&#33268;&#65306;&#19981;&#21253;&#21547;&#32066;&#40670;&#65307;&#33509;&#26159;&#20659;&#20837;&#32034;&#24341;&#20540;&#21063;&#26371;&#21253;&#21547;&#32066;&#40670;<a class="anchor-link" href="#&#36914;&#34892;&#36039;&#26009;&#20540;&#30340;&#20999;&#21106;&#26178;&#65292;&#21487;&#20197;&#22312;&#20013;&#25324;&#34399;&#36664;&#20837;&#25152;&#38656;&#36039;&#26009;&#30340;&#36215;&#40670;&#33287;&#32066;&#40670;&#65292;&#20659;&#20837;&#32085;&#23565;&#20301;&#32622;&#21063;&#33287;-Python-&#24931;&#20363;&#19968;&#33268;&#65306;&#19981;&#21253;&#21547;&#32066;&#40670;&#65307;&#33509;&#26159;&#20659;&#20837;&#32034;&#24341;&#20540;&#21063;&#26371;&#21253;&#21547;&#32066;&#40670;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">movie_ratings</span> <span class="o">=</span> <span class="p">[</span><span class="mf">9.0</span><span class="p">,</span> <span class="mf">8.9</span><span class="p">,</span> <span class="mf">8.8</span><span class="p">,</span> <span class="mf">8.7</span><span class="p">]</span>
+<span class="n">movie_titles</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;The Dark Knight&quot;</span><span class="p">,</span> <span class="s2">&quot;Schindler&#39;s List&quot;</span><span class="p">,</span> <span class="s2">&quot;Forrest Gump&quot;</span><span class="p">,</span> <span class="s2">&quot;Inception&quot;</span><span class="p">]</span>
+<span class="n">ser</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">movie_ratings</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">movie_titles</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="p">[</span><span class="s2">&quot;Schindler&#39;s List&quot;</span><span class="p">:</span><span class="s2">&quot;Inception&quot;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Schindler&#39;s List    8.9
+Forrest Gump        8.8
+Inception           8.7
+dtype: float64
+Schindler&#39;s List    8.9
+Forrest Gump        8.8
+Inception           8.7
+dtype: float64
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Series-&#32380;&#25215;&#20102;-ndarray-&#30340;&#25152;&#26377;&#29305;&#24615;&#65292;&#22240;&#27492;&#23436;&#20840;&#36969;&#29992;&#33775;&#40599;&#32034;&#24341;&#33287;&#24067;&#26519;&#31721;&#36984;&#36889;&#20841;&#20491;&#20415;&#21033;&#30340;&#25216;&#27861;Series-&#30340;&#32034;&#24341;&#12289;&#20999;&#21106;&#33287;&#31721;&#36984;">Series &#32380;&#25215;&#20102; ndarray &#30340;&#25152;&#26377;&#29305;&#24615;&#65292;&#22240;&#27492;&#23436;&#20840;&#36969;&#29992;&#33775;&#40599;&#32034;&#24341;&#33287;&#24067;&#26519;&#31721;&#36984;&#36889;&#20841;&#20491;&#20415;&#21033;&#30340;&#25216;&#27861;Series &#30340;&#32034;&#24341;&#12289;&#20999;&#21106;&#33287;&#31721;&#36984;<a class="anchor-link" href="#Series-&#32380;&#25215;&#20102;-ndarray-&#30340;&#25152;&#26377;&#29305;&#24615;&#65292;&#22240;&#27492;&#23436;&#20840;&#36969;&#29992;&#33775;&#40599;&#32034;&#24341;&#33287;&#24067;&#26519;&#31721;&#36984;&#36889;&#20841;&#20491;&#20415;&#21033;&#30340;&#25216;&#27861;Series-&#30340;&#32034;&#24341;&#12289;&#20999;&#21106;&#33287;&#31721;&#36984;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">movie_ratings</span> <span class="o">=</span> <span class="p">[</span><span class="mf">9.0</span><span class="p">,</span> <span class="mf">8.9</span><span class="p">,</span> <span class="mf">8.8</span><span class="p">,</span> <span class="mf">8.7</span><span class="p">]</span>
+<span class="n">movie_titles</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;The Dark Knight&quot;</span><span class="p">,</span> <span class="s2">&quot;Schindler&#39;s List&quot;</span><span class="p">,</span> <span class="s2">&quot;Forrest Gump&quot;</span><span class="p">,</span> <span class="s2">&quot;Inception&quot;</span><span class="p">]</span>
+<span class="n">ser</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">movie_ratings</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">movie_titles</span><span class="p">)</span>
+<span class="c1"># Fancy indexing</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="p">[[</span><span class="s2">&quot;Schindler&#39;s List&quot;</span><span class="p">,</span> <span class="s2">&quot;Forrest Gump&quot;</span><span class="p">,</span> <span class="s2">&quot;Inception&quot;</span><span class="p">]])</span>
+<span class="c1"># Boolean filtering</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span> <span class="o">&lt;</span> <span class="mi">9</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ser</span><span class="p">[</span><span class="n">ser</span> <span class="o">&lt;</span> <span class="mi">9</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Schindler&#39;s List    8.9
+Forrest Gump        8.8
+Inception           8.7
+dtype: float64
+Schindler&#39;s List    8.9
+Forrest Gump        8.8
+Inception           8.7
+dtype: float64
+The Dark Knight     False
+Schindler&#39;s List     True
+Forrest Gump         True
+Inception            True
+dtype: bool
+Schindler&#39;s List    8.9
+Forrest Gump        8.8
+Inception           8.7
+dtype: float64
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="DataFrame-&#30340;&#36984;&#25799;&#33287;&#31721;&#36984;">DataFrame &#30340;&#36984;&#25799;&#33287;&#31721;&#36984;<a class="anchor-link" href="#DataFrame-&#30340;&#36984;&#25799;&#33287;&#31721;&#36984;">&#182;</a></h2><p>利用 <code>[COLUMN]</code> 或 <code>.COLUMN</code> 能夠從資料框中選擇出單一或多個變數，成為一個 Series 或者變數欄位較少的資料框子集，實踐 SQL 語法中的 SELECT</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">movie_ratings</span> <span class="o">=</span> <span class="p">[</span><span class="mf">9.0</span><span class="p">,</span> <span class="mf">8.9</span><span class="p">,</span> <span class="mf">8.8</span><span class="p">,</span> <span class="mf">8.7</span><span class="p">]</span>
+<span class="n">movie_titles</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;The Dark Knight&quot;</span><span class="p">,</span> <span class="s2">&quot;Schindler&#39;s List&quot;</span><span class="p">,</span> <span class="s2">&quot;Forrest Gump&quot;</span><span class="p">,</span> <span class="s2">&quot;Inception&quot;</span><span class="p">]</span>
+<span class="n">release_years</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2008</span><span class="p">,</span> <span class="mi">1993</span><span class="p">,</span> <span class="mi">1994</span><span class="p">,</span> <span class="mi">2010</span><span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">movie_titles</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;rating&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">movie_ratings</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;release_year&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">release_years</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">rating</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[[</span><span class="s2">&quot;title&quot;</span><span class="p">,</span> <span class="s2">&quot;release_year&quot;</span><span class="p">]]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0     The Dark Knight
+1    Schindler&#39;s List
+2        Forrest Gump
+3           Inception
+Name: title, dtype: object
+0    9.0
+1    8.9
+2    8.8
+3    8.7
+Name: rating, dtype: float64
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[25]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>title</th>
+      <th>release_year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>The Dark Knight</td>
+      <td>2008</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Schindler's List</td>
+      <td>1993</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Forrest Gump</td>
+      <td>1994</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Inception</td>
+      <td>2010</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#23565;&#36039;&#26009;&#26694;&#30452;&#25509;&#25033;&#29992;&#24067;&#26519;&#31721;&#36984;&#21487;&#20197;&#25361;&#20986;&#31526;&#21512;&#26781;&#20214;&#65288;&#26781;&#20214;&#21028;&#26039;&#32080;&#26524;&#28858;-True&#65289;&#30340;&#35264;&#28204;&#20540;&#21015;&#25976;&#65292;&#23526;&#36368;-SQL-&#35486;&#27861;&#20013;&#30340;-WHERE">&#23565;&#36039;&#26009;&#26694;&#30452;&#25509;&#25033;&#29992;&#24067;&#26519;&#31721;&#36984;&#21487;&#20197;&#25361;&#20986;&#31526;&#21512;&#26781;&#20214;&#65288;&#26781;&#20214;&#21028;&#26039;&#32080;&#26524;&#28858; True&#65289;&#30340;&#35264;&#28204;&#20540;&#21015;&#25976;&#65292;&#23526;&#36368; SQL &#35486;&#27861;&#20013;&#30340; WHERE<a class="anchor-link" href="#&#23565;&#36039;&#26009;&#26694;&#30452;&#25509;&#25033;&#29992;&#24067;&#26519;&#31721;&#36984;&#21487;&#20197;&#25361;&#20986;&#31526;&#21512;&#26781;&#20214;&#65288;&#26781;&#20214;&#21028;&#26039;&#32080;&#26524;&#28858;-True&#65289;&#30340;&#35264;&#28204;&#20540;&#21015;&#25976;&#65292;&#23526;&#36368;-SQL-&#35486;&#27861;&#20013;&#30340;-WHERE">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">movie_ratings</span> <span class="o">=</span> <span class="p">[</span><span class="mf">9.0</span><span class="p">,</span> <span class="mf">8.9</span><span class="p">,</span> <span class="mf">8.8</span><span class="p">,</span> <span class="mf">8.7</span><span class="p">]</span>
+<span class="n">movie_titles</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;The Dark Knight&quot;</span><span class="p">,</span> <span class="s2">&quot;Schindler&#39;s List&quot;</span><span class="p">,</span> <span class="s2">&quot;Forrest Gump&quot;</span><span class="p">,</span> <span class="s2">&quot;Inception&quot;</span><span class="p">]</span>
+<span class="n">release_years</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2008</span><span class="p">,</span> <span class="mi">1993</span><span class="p">,</span> <span class="mi">1994</span><span class="p">,</span> <span class="mi">2010</span><span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">movie_titles</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;rating&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">movie_ratings</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;release_year&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">release_years</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;release_year&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">2000</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;release_year&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">2000</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0     True
+1    False
+2    False
+3     True
+Name: release_year, dtype: bool
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[26]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>title</th>
+      <th>rating</th>
+      <th>release_year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>The Dark Knight</td>
+      <td>9.0</td>
+      <td>2008</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Inception</td>
+      <td>8.7</td>
+      <td>2010</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Series-&#32380;&#25215;&#20102;-ndarray-&#30340;&#25152;&#26377;&#29305;&#24615;&#65292;&#22240;&#27492;&#23436;&#20840;&#36969;&#29992;&#33775;&#40599;&#32034;&#24341;&#33287;&#24067;&#26519;&#31721;&#36984;&#36889;&#20841;&#20491;&#20415;&#21033;&#30340;&#25216;&#27861;Series-&#30340;&#32034;&#24341;&#12289;&#20999;&#21106;&#33287;&#31721;&#36984;">Series &#32380;&#25215;&#20102; ndarray &#30340;&#25152;&#26377;&#29305;&#24615;&#65292;&#22240;&#27492;&#23436;&#20840;&#36969;&#29992;&#33775;&#40599;&#32034;&#24341;&#33287;&#24067;&#26519;&#31721;&#36984;&#36889;&#20841;&#20491;&#20415;&#21033;&#30340;&#25216;&#27861;Series &#30340;&#32034;&#24341;&#12289;&#20999;&#21106;&#33287;&#31721;&#36984;<a class="anchor-link" href="#Series-&#32380;&#25215;&#20102;-ndarray-&#30340;&#25152;&#26377;&#29305;&#24615;&#65292;&#22240;&#27492;&#23436;&#20840;&#36969;&#29992;&#33775;&#40599;&#32034;&#24341;&#33287;&#24067;&#26519;&#31721;&#36984;&#36889;&#20841;&#20491;&#20415;&#21033;&#30340;&#25216;&#27861;Series-&#30340;&#32034;&#24341;&#12289;&#20999;&#21106;&#33287;&#31721;&#36984;">&#182;</a></h2>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#29554;&#21462;&#36039;&#26009;&#30340;&#26368;&#22823;&#20540;&#26368;&#23567;&#20540;">&#29554;&#21462;&#36039;&#26009;&#30340;&#26368;&#22823;&#20540;&#26368;&#23567;&#20540;<a class="anchor-link" href="#&#29554;&#21462;&#36039;&#26009;&#30340;&#26368;&#22823;&#20540;&#26368;&#23567;&#20540;">&#182;</a></h2><ul>
+<li><code>df["col_name"].max()</code></li>
+<li><code>df["col_name"].min()</code></li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#29554;&#21462;&#36039;&#26009;&#26368;&#22823;&#20540;&#26368;&#23567;&#20540;&#30340;&#32034;&#24341;&#20540;">&#29554;&#21462;&#36039;&#26009;&#26368;&#22823;&#20540;&#26368;&#23567;&#20540;&#30340;&#32034;&#24341;&#20540;<a class="anchor-link" href="#&#29554;&#21462;&#36039;&#26009;&#26368;&#22823;&#20540;&#26368;&#23567;&#20540;&#30340;&#32034;&#24341;&#20540;">&#182;</a></h2><ul>
+<li><code>df["col_name"].idxmax()</code></li>
+<li><code>df["col_name"].idxmin()</code></li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#35504;&#30340;&#32972;&#34399;&#25976;&#23383;&#26368;&#22823;&#65311;">&#38568;&#22530;&#32244;&#32722;&#65306;&#35504;&#30340;&#32972;&#34399;&#25976;&#23383;&#26368;&#22823;&#65311;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#35504;&#30340;&#32972;&#34399;&#25976;&#23383;&#26368;&#22823;&#65311;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span>
+<span class="n">players</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Ron Harper&quot;</span><span class="p">,</span> <span class="s2">&quot;Michael Jordan&quot;</span><span class="p">,</span> <span class="s2">&quot;Scottie Pippen&quot;</span><span class="p">,</span> <span class="s2">&quot;Dennis Rodman&quot;</span><span class="p">,</span> <span class="s2">&quot;Luc Longley&quot;</span><span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;number&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">numbers</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;player&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">players</span>
+<span class="n">df</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[27]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>number</th>
+      <th>player</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>9</td>
+      <td>Ron Harper</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>23</td>
+      <td>Michael Jordan</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>33</td>
+      <td>Scottie Pippen</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>91</td>
+      <td>Dennis Rodman</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>13</td>
+      <td>Luc Longley</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">max_number</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;number&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;number&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">max_number</span><span class="p">][</span><span class="s2">&quot;player&quot;</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[28]:</div>
+
+
+
 
 <div class="output_text output_subarea output_execute_result">
 <pre>&#39;Dennis Rodman&#39;</pre>
@@ -14697,7 +15170,7 @@ Name: number, dtype: bool
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;player&quot;</span><span class="p">)[</span><span class="s2">&quot;number&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()</span>
@@ -14713,7 +15186,7 @@ Name: number, dtype: bool
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[22]:</div>
+    <div class="prompt output_prompt">Out[29]:</div>
 
 
 
@@ -14737,7 +15210,7 @@ Name: number, dtype: bool
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">min_number</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;number&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
@@ -14754,7 +15227,7 @@ Name: number, dtype: bool
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[23]:</div>
+    <div class="prompt output_prompt">Out[30]:</div>
 
 
 
@@ -14771,7 +15244,7 @@ Name: number, dtype: bool
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;player&quot;</span><span class="p">)[</span><span class="s2">&quot;number&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmin</span><span class="p">()</span>
@@ -14787,7 +15260,7 @@ Name: number, dtype: bool
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[24]:</div>
+    <div class="prompt output_prompt">Out[31]:</div>
 
 
 
@@ -14819,7 +15292,7 @@ Name: number, dtype: bool
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -14834,7 +15307,7 @@ Name: number, dtype: bool
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -14850,7 +15323,7 @@ Name: number, dtype: bool
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[26]:</div>
+    <div class="prompt output_prompt">Out[33]:</div>
 
 
 
@@ -14893,7 +15366,7 @@ Name: number, dtype: bool
   </thead>
   <tbody>
     <tr>
-      <th>Afghanistan</th>
+      <td>Afghanistan</td>
       <td>13</td>
       <td>0</td>
       <td>0</td>
@@ -14912,7 +15385,7 @@ Name: number, dtype: bool
       <td>AFG</td>
     </tr>
     <tr>
-      <th>Algeria</th>
+      <td>Algeria</td>
       <td>12</td>
       <td>5</td>
       <td>2</td>
@@ -14931,7 +15404,7 @@ Name: number, dtype: bool
       <td>ALG</td>
     </tr>
     <tr>
-      <th>Argentina</th>
+      <td>Argentina</td>
       <td>23</td>
       <td>18</td>
       <td>24</td>
@@ -14950,7 +15423,7 @@ Name: number, dtype: bool
       <td>ARG</td>
     </tr>
     <tr>
-      <th>Armenia</th>
+      <td>Armenia</td>
       <td>5</td>
       <td>1</td>
       <td>2</td>
@@ -14969,7 +15442,7 @@ Name: number, dtype: bool
       <td>ARM</td>
     </tr>
     <tr>
-      <th>Australasia</th>
+      <td>Australasia</td>
       <td>2</td>
       <td>3</td>
       <td>4</td>
@@ -15013,7 +15486,7 @@ Name: number, dtype: bool
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">answer_one</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
@@ -15029,7 +15502,7 @@ Name: number, dtype: bool
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[28]:</div>
+    <div class="prompt output_prompt">Out[35]:</div>
 
 
 
@@ -15059,7 +15532,7 @@ Name: number, dtype: bool
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">answer_two</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
@@ -15075,7 +15548,7 @@ Name: number, dtype: bool
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[30]:</div>
+    <div class="prompt output_prompt">Out[37]:</div>
 
 
 
@@ -15105,7 +15578,7 @@ Name: number, dtype: bool
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">answer_three</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
@@ -15121,7 +15594,7 @@ Name: number, dtype: bool
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[32]:</div>
+    <div class="prompt output_prompt">Out[39]:</div>
 
 
 
@@ -15151,7 +15624,7 @@ Name: number, dtype: bool
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">answer_four</span><span class="p">(</span><span class="n">df</span><span class="p">)[:</span><span class="mi">10</span><span class="p">]</span>
@@ -15167,7 +15640,7 @@ Name: number, dtype: bool
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[34]:</div>
+    <div class="prompt output_prompt">Out[41]:</div>
 
 
 
@@ -15235,7 +15708,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
@@ -15250,7 +15723,7 @@ dtype: int64</pre>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -15270,7 +15743,7 @@ dtype: int64</pre>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">query_str</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
@@ -15291,7 +15764,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[37]:</div>
+    <div class="prompt output_prompt">Out[44]:</div>
 
 
 
@@ -15320,17 +15793,17 @@ dtype: int64</pre>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <td>0</td>
       <td>23</td>
       <td>Michael Jordan</td>
     </tr>
     <tr>
-      <th>1</th>
+      <td>1</td>
       <td>33</td>
       <td>Scottie Pippen</td>
     </tr>
     <tr>
-      <th>2</th>
+      <td>2</td>
       <td>91</td>
       <td>Dennis Rodman</td>
     </tr>
@@ -15354,7 +15827,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -15373,7 +15846,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[38]:</div>
+    <div class="prompt output_prompt">Out[45]:</div>
 
 
 
@@ -15406,7 +15879,7 @@ dtype: int64</pre>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <td>0</td>
       <td>Afghanistan</td>
       <td>Asia</td>
       <td>1952</td>
@@ -15415,7 +15888,7 @@ dtype: int64</pre>
       <td>779.445314</td>
     </tr>
     <tr>
-      <th>1</th>
+      <td>1</td>
       <td>Afghanistan</td>
       <td>Asia</td>
       <td>1957</td>
@@ -15424,7 +15897,7 @@ dtype: int64</pre>
       <td>820.853030</td>
     </tr>
     <tr>
-      <th>2</th>
+      <td>2</td>
       <td>Afghanistan</td>
       <td>Asia</td>
       <td>1962</td>
@@ -15433,7 +15906,7 @@ dtype: int64</pre>
       <td>853.100710</td>
     </tr>
     <tr>
-      <th>3</th>
+      <td>3</td>
       <td>Afghanistan</td>
       <td>Asia</td>
       <td>1967</td>
@@ -15442,7 +15915,7 @@ dtype: int64</pre>
       <td>836.197138</td>
     </tr>
     <tr>
-      <th>4</th>
+      <td>4</td>
       <td>Afghanistan</td>
       <td>Asia</td>
       <td>1972</td>
@@ -15470,7 +15943,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
@@ -15503,7 +15976,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[39]:</div>
+    <div class="prompt output_prompt">Out[46]:</div>
 
 
 
@@ -15526,149 +15999,149 @@ dtype: int64</pre>
   <thead>
     <tr style="text-align: right;">
       <th></th>
+      <th>SiteName</th>
+      <th>County</th>
       <th>AQI</th>
+      <th>Pollutant</th>
+      <th>Status</th>
+      <th>SO2</th>
       <th>CO</th>
       <th>CO_8hr</th>
-      <th>County</th>
-      <th>Latitude</th>
-      <th>Longitude</th>
-      <th>NO</th>
-      <th>NO2</th>
-      <th>NOx</th>
       <th>O3</th>
+      <th>O3_8hr</th>
       <th>...</th>
-      <th>PM2.5_AVG</th>
-      <th>Pollutant</th>
-      <th>PublishTime</th>
-      <th>SO2</th>
-      <th>SO2_AVG</th>
-      <th>SiteId</th>
-      <th>SiteName</th>
-      <th>Status</th>
-      <th>WindDirec</th>
+      <th>NO</th>
       <th>WindSpeed</th>
+      <th>WindDirec</th>
+      <th>PublishTime</th>
+      <th>PM2.5_AVG</th>
+      <th>PM10_AVG</th>
+      <th>SO2_AVG</th>
+      <th>Longitude</th>
+      <th>Latitude</th>
+      <th>SiteId</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>42</td>
-      <td>0.14</td>
-      <td>0.2</td>
+      <td>0</td>
+      <td>平鎮</td>
       <td>桃園市</td>
-      <td>25.063039</td>
-      <td>121.128044</td>
+      <td>24</td>
+      <td></td>
+      <td>良好</td>
+      <td>1.3</td>
+      <td>0.33</td>
       <td>0.4</td>
-      <td>4.3</td>
-      <td>4.7</td>
-      <td>56</td>
+      <td>25</td>
+      <td>25</td>
+      <td>...</td>
+      <td>3.4</td>
+      <td>4.4</td>
+      <td>45</td>
+      <td>2019-11-28 13:00</td>
+      <td>7</td>
+      <td>20</td>
+      <td></td>
+      <td>121.203986</td>
+      <td>24.952786</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>桃園(觀音工業區)</td>
+      <td>桃園市</td>
+      <td>47</td>
+      <td></td>
+      <td>良好</td>
+      <td>0.5</td>
+      <td>0.1</td>
+      <td>0.1</td>
+      <td>24</td>
+      <td>25</td>
       <td>...</td>
       <td>13</td>
-      <td></td>
-      <td>2019-09-01 11:00</td>
-      <td>2.5</td>
-      <td>2</td>
-      <td>312</td>
-      <td>桃園(觀音工業區)</td>
-      <td>良好</td>
-      <td>300</td>
-      <td>1.8</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>34</td>
-      <td>0.24</td>
-      <td>0.2</td>
-      <td>屏東縣</td>
-      <td>22.352222</td>
-      <td>120.377222</td>
-      <td>1.2</td>
-      <td>3.3</td>
-      <td>4.5</td>
-      <td>48</td>
-      <td>...</td>
-      <td>11</td>
-      <td></td>
-      <td>2019-09-01 11:00</td>
-      <td>3.3</td>
-      <td>3</td>
-      <td>204</td>
-      <td>屏東(琉球)</td>
-      <td>良好</td>
-      <td>74</td>
+      <td>4.2</td>
+      <td>69</td>
+      <td>2019-11-29 09:00</td>
+      <td>15</td>
+      <td>40</td>
       <td>1</td>
+      <td>121.128044</td>
+      <td>25.063039</td>
+      <td>312</td>
     </tr>
     <tr>
-      <th>2</th>
-      <td></td>
-      <td>0.39</td>
-      <td>0.4</td>
-      <td>苗栗縣</td>
-      <td>24.616369</td>
-      <td>120.786028</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>...</td>
-      <td>28</td>
-      <td></td>
-      <td>2019-09-01 11:00</td>
-      <td></td>
       <td>2</td>
-      <td>203</td>
-      <td>苗栗(後龍)</td>
-      <td>設備維護</td>
-      <td>307</td>
-      <td>1.6</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>31</td>
-      <td>0.14</td>
-      <td>0.2</td>
-      <td>彰化縣</td>
-      <td>23.843139</td>
-      <td>120.273117</td>
-      <td>2.4</td>
-      <td>2.3</td>
-      <td>4.7</td>
-      <td>35</td>
-      <td>...</td>
-      <td>8</td>
-      <td></td>
-      <td>2019-09-01 11:00</td>
-      <td>1.9</td>
-      <td>2</td>
-      <td>202</td>
-      <td>彰化(大城)</td>
-      <td>良好</td>
-      <td>271</td>
-      <td>2.9</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>51</td>
-      <td>0.03</td>
-      <td>0.1</td>
-      <td>臺南市</td>
-      <td>23.179047</td>
-      <td>120.245831</td>
-      <td>0.2</td>
-      <td>2.9</td>
-      <td>3</td>
-      <td>39</td>
-      <td>...</td>
-      <td>16</td>
+      <td>屏東(琉球)</td>
+      <td>屏東縣</td>
+      <td>70</td>
       <td>細懸浮微粒</td>
-      <td>2019-09-01 11:00</td>
-      <td>2</td>
-      <td>3</td>
-      <td>201</td>
-      <td>臺南(麻豆)</td>
       <td>普通</td>
-      <td>306</td>
-      <td>1.1</td>
+      <td>8.4</td>
+      <td>0.59</td>
+      <td>0.6</td>
+      <td>21</td>
+      <td>6</td>
+      <td>...</td>
+      <td>7.1</td>
+      <td>1.7</td>
+      <td>341</td>
+      <td>2019-11-29 09:00</td>
+      <td>23</td>
+      <td>63</td>
+      <td>5</td>
+      <td>120.377222</td>
+      <td>22.352222</td>
+      <td>204</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>新竹(香山)</td>
+      <td>新竹市</td>
+      <td>33</td>
+      <td></td>
+      <td>良好</td>
+      <td>2.4</td>
+      <td>0.27</td>
+      <td>0.2</td>
+      <td>31</td>
+      <td>36</td>
+      <td>...</td>
+      <td>2.6</td>
+      <td>2.1</td>
+      <td>232</td>
+      <td>2019-11-29 09:00</td>
+      <td>10</td>
+      <td>26</td>
+      <td>2</td>
+      <td>120.913297</td>
+      <td>24.765925</td>
+      <td>203</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>彰化(大城)</td>
+      <td>彰化縣</td>
+      <td>33</td>
+      <td></td>
+      <td>良好</td>
+      <td>2.5</td>
+      <td>0.13</td>
+      <td>0.2</td>
+      <td>39</td>
+      <td>36</td>
+      <td>...</td>
+      <td>0.8</td>
+      <td>4.7</td>
+      <td>51</td>
+      <td>2019-11-29 09:00</td>
+      <td>7</td>
+      <td>25</td>
+      <td>2</td>
+      <td>120.273117</td>
+      <td>23.843139</td>
+      <td>202</td>
     </tr>
   </tbody>
 </table>
@@ -15691,7 +16164,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -15710,7 +16183,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[40]:</div>
+    <div class="prompt output_prompt">Out[47]:</div>
 
 
 
@@ -15754,7 +16227,7 @@ dtype: int64</pre>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <td>0</td>
       <td>Afghanistan</td>
       <td>13</td>
       <td>0</td>
@@ -15774,7 +16247,7 @@ dtype: int64</pre>
       <td>AFG</td>
     </tr>
     <tr>
-      <th>1</th>
+      <td>1</td>
       <td>Algeria</td>
       <td>12</td>
       <td>5</td>
@@ -15794,7 +16267,7 @@ dtype: int64</pre>
       <td>ALG</td>
     </tr>
     <tr>
-      <th>2</th>
+      <td>2</td>
       <td>Argentina</td>
       <td>23</td>
       <td>18</td>
@@ -15814,7 +16287,7 @@ dtype: int64</pre>
       <td>ARG</td>
     </tr>
     <tr>
-      <th>3</th>
+      <td>3</td>
       <td>Armenia</td>
       <td>5</td>
       <td>1</td>
@@ -15834,7 +16307,7 @@ dtype: int64</pre>
       <td>ARM</td>
     </tr>
     <tr>
-      <th>4</th>
+      <td>4</td>
       <td>Australasia</td>
       <td>2</td>
       <td>3</td>
@@ -15877,7 +16350,7 @@ $$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cb</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://sqlite-demo-data.s3-ap-northeast-1.amazonaws.com/chicago_bulls_1995_1996.csv&quot;</span><span class="p">)</span>
@@ -15894,7 +16367,7 @@ $$
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[41]:</div>
+    <div class="prompt output_prompt">Out[48]:</div>
 
 
 
@@ -15929,7 +16402,7 @@ $$
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <td>0</td>
       <td>0</td>
       <td>Randy Brown</td>
       <td>6-2</td>
@@ -15940,7 +16413,7 @@ $$
       <td>University of Houston New Mexico State University</td>
     </tr>
     <tr>
-      <th>1</th>
+      <td>1</td>
       <td>30</td>
       <td>Jud Buechler</td>
       <td>6-6</td>
@@ -15951,7 +16424,7 @@ $$
       <td>University of Arizona</td>
     </tr>
     <tr>
-      <th>2</th>
+      <td>2</td>
       <td>35</td>
       <td>Jason Caffey</td>
       <td>6-8</td>
@@ -15962,7 +16435,7 @@ $$
       <td>University of Alabama</td>
     </tr>
     <tr>
-      <th>3</th>
+      <td>3</td>
       <td>53</td>
       <td>James Edwards</td>
       <td>7-0</td>
@@ -15973,7 +16446,7 @@ $$
       <td>University of Washington</td>
     </tr>
     <tr>
-      <th>4</th>
+      <td>4</td>
       <td>54</td>
       <td>Jack Haley</td>
       <td>6-10</td>
@@ -15996,7 +16469,7 @@ $$
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_ht_cm</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
@@ -16018,7 +16491,7 @@ $$
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[42]:</div>
+    <div class="prompt output_prompt">Out[49]:</div>
 
 
 
@@ -16057,7 +16530,7 @@ Name: Ht, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -16100,7 +16573,7 @@ Name: Ht, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">gapminder</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="s2">&quot;continent&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()[</span><span class="s2">&quot;pop&quot;</span><span class="p">]</span>
@@ -16116,7 +16589,7 @@ Name: Ht, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[48]:</div>
+    <div class="prompt output_prompt">Out[55]:</div>
 
 
 
@@ -16212,7 +16685,7 @@ Name: pop, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cb</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://sqlite-demo-data.s3-ap-northeast-1.amazonaws.com/chicago_bulls_1995_1996.csv&quot;</span><span class="p">)</span>
@@ -16230,7 +16703,7 @@ Name: pop, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[49]:</div>
+    <div class="prompt output_prompt">Out[56]:</div>
 
 
 
@@ -16261,35 +16734,35 @@ Name: pop, dtype: float64</pre>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <td>0</td>
       <td>Randy Brown</td>
       <td>6-2</td>
       <td>May 22 1968</td>
       <td>University of Houston New Mexico State University</td>
     </tr>
     <tr>
-      <th>1</th>
+      <td>1</td>
       <td>Jud Buechler</td>
       <td>6-6</td>
       <td>June 19 1968</td>
       <td>University of Arizona</td>
     </tr>
     <tr>
-      <th>2</th>
+      <td>2</td>
       <td>Jason Caffey</td>
       <td>6-8</td>
       <td>June 12 1973</td>
       <td>University of Alabama</td>
     </tr>
     <tr>
-      <th>3</th>
+      <td>3</td>
       <td>James Edwards</td>
       <td>7-0</td>
       <td>November 22 1955</td>
       <td>University of Washington</td>
     </tr>
     <tr>
-      <th>4</th>
+      <td>4</td>
       <td>Jack Haley</td>
       <td>6-10</td>
       <td>January 27 1964</td>
@@ -16315,7 +16788,7 @@ Name: pop, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">long</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">wide</span><span class="p">,</span> <span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Player&quot;</span><span class="p">],</span> <span class="n">value_vars</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Ht&quot;</span><span class="p">,</span> <span class="s2">&quot;Birth Date&quot;</span><span class="p">,</span> <span class="s2">&quot;College&quot;</span><span class="p">],</span> <span class="n">var_name</span><span class="o">=</span><span class="s2">&quot;variable&quot;</span><span class="p">,</span> <span class="n">value_name</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">)</span>
@@ -16332,7 +16805,7 @@ Name: pop, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[50]:</div>
+    <div class="prompt output_prompt">Out[57]:</div>
 
 
 
@@ -16362,271 +16835,271 @@ Name: pop, dtype: float64</pre>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <td>0</td>
       <td>Randy Brown</td>
       <td>Ht</td>
       <td>6-2</td>
     </tr>
     <tr>
-      <th>1</th>
+      <td>1</td>
       <td>Jud Buechler</td>
       <td>Ht</td>
       <td>6-6</td>
     </tr>
     <tr>
-      <th>2</th>
+      <td>2</td>
       <td>Jason Caffey</td>
       <td>Ht</td>
       <td>6-8</td>
     </tr>
     <tr>
-      <th>3</th>
+      <td>3</td>
       <td>James Edwards</td>
       <td>Ht</td>
       <td>7-0</td>
     </tr>
     <tr>
-      <th>4</th>
+      <td>4</td>
       <td>Jack Haley</td>
       <td>Ht</td>
       <td>6-10</td>
     </tr>
     <tr>
-      <th>5</th>
+      <td>5</td>
       <td>Ron Harper</td>
       <td>Ht</td>
       <td>6-6</td>
     </tr>
     <tr>
-      <th>6</th>
+      <td>6</td>
       <td>Michael Jordan</td>
       <td>Ht</td>
       <td>6-6</td>
     </tr>
     <tr>
-      <th>7</th>
+      <td>7</td>
       <td>Steve Kerr</td>
       <td>Ht</td>
       <td>6-3</td>
     </tr>
     <tr>
-      <th>8</th>
+      <td>8</td>
       <td>Toni Kukoč</td>
       <td>Ht</td>
       <td>6-10</td>
     </tr>
     <tr>
-      <th>9</th>
+      <td>9</td>
       <td>Luc Longley</td>
       <td>Ht</td>
       <td>7-2</td>
     </tr>
     <tr>
-      <th>10</th>
+      <td>10</td>
       <td>Scottie Pippen</td>
       <td>Ht</td>
       <td>6-8</td>
     </tr>
     <tr>
-      <th>11</th>
+      <td>11</td>
       <td>Dennis Rodman</td>
       <td>Ht</td>
       <td>6-7</td>
     </tr>
     <tr>
-      <th>12</th>
+      <td>12</td>
       <td>John Salley</td>
       <td>Ht</td>
       <td>6-11</td>
     </tr>
     <tr>
-      <th>13</th>
+      <td>13</td>
       <td>Dickey Simpkins</td>
       <td>Ht</td>
       <td>6-9</td>
     </tr>
     <tr>
-      <th>14</th>
+      <td>14</td>
       <td>Bill Wennington</td>
       <td>Ht</td>
       <td>7-0</td>
     </tr>
     <tr>
-      <th>15</th>
+      <td>15</td>
       <td>Randy Brown</td>
       <td>Birth Date</td>
       <td>May 22 1968</td>
     </tr>
     <tr>
-      <th>16</th>
+      <td>16</td>
       <td>Jud Buechler</td>
       <td>Birth Date</td>
       <td>June 19 1968</td>
     </tr>
     <tr>
-      <th>17</th>
+      <td>17</td>
       <td>Jason Caffey</td>
       <td>Birth Date</td>
       <td>June 12 1973</td>
     </tr>
     <tr>
-      <th>18</th>
+      <td>18</td>
       <td>James Edwards</td>
       <td>Birth Date</td>
       <td>November 22 1955</td>
     </tr>
     <tr>
-      <th>19</th>
+      <td>19</td>
       <td>Jack Haley</td>
       <td>Birth Date</td>
       <td>January 27 1964</td>
     </tr>
     <tr>
-      <th>20</th>
+      <td>20</td>
       <td>Ron Harper</td>
       <td>Birth Date</td>
       <td>January 20 1964</td>
     </tr>
     <tr>
-      <th>21</th>
+      <td>21</td>
       <td>Michael Jordan</td>
       <td>Birth Date</td>
       <td>February 17 1963</td>
     </tr>
     <tr>
-      <th>22</th>
+      <td>22</td>
       <td>Steve Kerr</td>
       <td>Birth Date</td>
       <td>September 27 1965</td>
     </tr>
     <tr>
-      <th>23</th>
+      <td>23</td>
       <td>Toni Kukoč</td>
       <td>Birth Date</td>
       <td>September 18 1968</td>
     </tr>
     <tr>
-      <th>24</th>
+      <td>24</td>
       <td>Luc Longley</td>
       <td>Birth Date</td>
       <td>January 19 1969</td>
     </tr>
     <tr>
-      <th>25</th>
+      <td>25</td>
       <td>Scottie Pippen</td>
       <td>Birth Date</td>
       <td>September 25 1965</td>
     </tr>
     <tr>
-      <th>26</th>
+      <td>26</td>
       <td>Dennis Rodman</td>
       <td>Birth Date</td>
       <td>May 13 1961</td>
     </tr>
     <tr>
-      <th>27</th>
+      <td>27</td>
       <td>John Salley</td>
       <td>Birth Date</td>
       <td>May 16 1964</td>
     </tr>
     <tr>
-      <th>28</th>
+      <td>28</td>
       <td>Dickey Simpkins</td>
       <td>Birth Date</td>
       <td>April 6 1972</td>
     </tr>
     <tr>
-      <th>29</th>
+      <td>29</td>
       <td>Bill Wennington</td>
       <td>Birth Date</td>
       <td>April 26 1963</td>
     </tr>
     <tr>
-      <th>30</th>
+      <td>30</td>
       <td>Randy Brown</td>
       <td>College</td>
       <td>University of Houston New Mexico State University</td>
     </tr>
     <tr>
-      <th>31</th>
+      <td>31</td>
       <td>Jud Buechler</td>
       <td>College</td>
       <td>University of Arizona</td>
     </tr>
     <tr>
-      <th>32</th>
+      <td>32</td>
       <td>Jason Caffey</td>
       <td>College</td>
       <td>University of Alabama</td>
     </tr>
     <tr>
-      <th>33</th>
+      <td>33</td>
       <td>James Edwards</td>
       <td>College</td>
       <td>University of Washington</td>
     </tr>
     <tr>
-      <th>34</th>
+      <td>34</td>
       <td>Jack Haley</td>
       <td>College</td>
       <td>University of California Los Angeles</td>
     </tr>
     <tr>
-      <th>35</th>
+      <td>35</td>
       <td>Ron Harper</td>
       <td>College</td>
       <td>Miami University</td>
     </tr>
     <tr>
-      <th>36</th>
+      <td>36</td>
       <td>Michael Jordan</td>
       <td>College</td>
       <td>University of North Carolina</td>
     </tr>
     <tr>
-      <th>37</th>
+      <td>37</td>
       <td>Steve Kerr</td>
       <td>College</td>
       <td>University of Arizona</td>
     </tr>
     <tr>
-      <th>38</th>
+      <td>38</td>
       <td>Toni Kukoč</td>
       <td>College</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <th>39</th>
+      <td>39</td>
       <td>Luc Longley</td>
       <td>College</td>
       <td>University of New Mexico</td>
     </tr>
     <tr>
-      <th>40</th>
+      <td>40</td>
       <td>Scottie Pippen</td>
       <td>College</td>
       <td>University of Central Arkansas</td>
     </tr>
     <tr>
-      <th>41</th>
+      <td>41</td>
       <td>Dennis Rodman</td>
       <td>College</td>
       <td>Southeastern Oklahoma State University</td>
     </tr>
     <tr>
-      <th>42</th>
+      <td>42</td>
       <td>John Salley</td>
       <td>College</td>
       <td>Georgia Institute of Technology</td>
     </tr>
     <tr>
-      <th>43</th>
+      <td>43</td>
       <td>Dickey Simpkins</td>
       <td>College</td>
       <td>Providence College</td>
     </tr>
     <tr>
-      <th>44</th>
+      <td>44</td>
       <td>Bill Wennington</td>
       <td>College</td>
       <td>St. John's University</td>
@@ -16651,7 +17124,7 @@ Name: pop, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pivot</span> <span class="o">=</span> <span class="n">long</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s2">&quot;Player&quot;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;variable&quot;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">)</span>
@@ -16670,7 +17143,7 @@ Name: pop, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[51]:</div>
+    <div class="prompt output_prompt">Out[58]:</div>
 
 
 
@@ -16701,35 +17174,35 @@ Name: pop, dtype: float64</pre>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <td>0</td>
       <td>Bill Wennington</td>
       <td>April 26 1963</td>
       <td>St. John's University</td>
       <td>7-0</td>
     </tr>
     <tr>
-      <th>1</th>
+      <td>1</td>
       <td>Dennis Rodman</td>
       <td>May 13 1961</td>
       <td>Southeastern Oklahoma State University</td>
       <td>6-7</td>
     </tr>
     <tr>
-      <th>2</th>
+      <td>2</td>
       <td>Dickey Simpkins</td>
       <td>April 6 1972</td>
       <td>Providence College</td>
       <td>6-9</td>
     </tr>
     <tr>
-      <th>3</th>
+      <td>3</td>
       <td>Jack Haley</td>
       <td>January 27 1964</td>
       <td>University of California Los Angeles</td>
       <td>6-10</td>
     </tr>
     <tr>
-      <th>4</th>
+      <td>4</td>
       <td>James Edwards</td>
       <td>November 22 1955</td>
       <td>University of Washington</td>
@@ -16763,7 +17236,7 @@ Name: pop, dtype: float64</pre>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -16782,7 +17255,7 @@ Name: pop, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[52]:</div>
+    <div class="prompt output_prompt">Out[59]:</div>
 
 
 
@@ -16799,7 +17272,7 @@ Name: pop, dtype: float64</pre>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">census_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -16815,7 +17288,7 @@ Name: pop, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[53]:</div>
+    <div class="prompt output_prompt">Out[60]:</div>
 
 
 
@@ -16863,7 +17336,7 @@ Name: pop, dtype: float64</pre>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <td>0</td>
       <td>40</td>
       <td>3</td>
       <td>6</td>
@@ -16887,7 +17360,7 @@ Name: pop, dtype: float64</pre>
       <td>0.712594</td>
     </tr>
     <tr>
-      <th>1</th>
+      <td>1</td>
       <td>50</td>
       <td>3</td>
       <td>6</td>
@@ -16911,7 +17384,7 @@ Name: pop, dtype: float64</pre>
       <td>-2.187333</td>
     </tr>
     <tr>
-      <th>2</th>
+      <td>2</td>
       <td>50</td>
       <td>3</td>
       <td>6</td>
@@ -16935,7 +17408,7 @@ Name: pop, dtype: float64</pre>
       <td>18.293499</td>
     </tr>
     <tr>
-      <th>3</th>
+      <td>3</td>
       <td>50</td>
       <td>3</td>
       <td>6</td>
@@ -16959,7 +17432,7 @@ Name: pop, dtype: float64</pre>
       <td>-10.543299</td>
     </tr>
     <tr>
-      <th>4</th>
+      <td>4</td>
       <td>50</td>
       <td>3</td>
       <td>6</td>
@@ -17009,7 +17482,7 @@ Name: pop, dtype: float64</pre>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">answer_one</span><span class="p">(</span><span class="n">census_df</span><span class="p">)</span>
@@ -17025,7 +17498,7 @@ Name: pop, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[55]:</div>
+    <div class="prompt output_prompt">Out[62]:</div>
 
 
 
@@ -17055,7 +17528,7 @@ Name: pop, dtype: float64</pre>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">answer_two</span><span class="p">(</span><span class="n">census_df</span><span class="p">)</span>
@@ -17071,7 +17544,7 @@ Name: pop, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[57]:</div>
+    <div class="prompt output_prompt">Out[64]:</div>
 
 
 
@@ -17102,7 +17575,7 @@ Name: pop, dtype: float64</pre>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">answer_three</span><span class="p">(</span><span class="n">census_df</span><span class="p">)</span>
@@ -17118,7 +17591,7 @@ Name: pop, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[59]:</div>
+    <div class="prompt output_prompt">Out[66]:</div>
 
 
 
@@ -17150,7 +17623,7 @@ Name: pop, dtype: float64</pre>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">answer_four</span><span class="p">(</span><span class="n">census_df</span><span class="p">)</span>
@@ -17166,7 +17639,7 @@ Name: pop, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[61]:</div>
+    <div class="prompt output_prompt">Out[68]:</div>
 
 
 
@@ -17195,27 +17668,27 @@ Name: pop, dtype: float64</pre>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <td>0</td>
       <td>Iowa</td>
       <td>Washington County</td>
     </tr>
     <tr>
-      <th>1</th>
+      <td>1</td>
       <td>Minnesota</td>
       <td>Washington County</td>
     </tr>
     <tr>
-      <th>2</th>
+      <td>2</td>
       <td>Pennsylvania</td>
       <td>Washington County</td>
     </tr>
     <tr>
-      <th>3</th>
+      <td>3</td>
       <td>Rhode Island</td>
       <td>Washington County</td>
     </tr>
     <tr>
-      <th>4</th>
+      <td>4</td>
       <td>Wisconsin</td>
       <td>Washington County</td>
     </tr>
@@ -17254,7 +17727,7 @@ Name: pop, dtype: float64</pre>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">answer_one</span><span class="p">()</span>
@@ -17270,25 +17743,26 @@ Name: pop, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[63]:</div>
+    <div class="prompt output_prompt">Out[70]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
 <pre>release_date
-12 July 2019      2
-22 April 2019     1
-23 April 2019     1
-24 April 2019    33
-25 April 2019    22
-26 April 2019    14
-26 July 2019      1
-28 April 2019     1
-28 June 2019      3
-29 April 2019     1
-29 June 2019      1
-4 July 2019       1
+12 July 2019         2
+2 September 2019     1
+22 April 2019        1
+23 April 2019        1
+24 April 2019       33
+25 April 2019       22
+26 April 2019       14
+26 July 2019         1
+28 April 2019        1
+28 June 2019         3
+29 April 2019        1
+29 June 2019         1
+4 July 2019          1
 Name: country, dtype: int64</pre>
 </div>
 
@@ -17300,7 +17774,7 @@ Name: country, dtype: int64</pre>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">answer_one</span><span class="p">()</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()</span>
@@ -17316,7 +17790,7 @@ Name: country, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[64]:</div>
+    <div class="prompt output_prompt">Out[71]:</div>
 
 
 
@@ -17340,7 +17814,7 @@ Name: country, dtype: int64</pre>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="prompt input_prompt">In&nbsp;[73]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">answer_two</span><span class="p">()</span>
@@ -17356,7 +17830,7 @@ Name: country, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[66]:</div>
+    <div class="prompt output_prompt">Out[73]:</div>
 
 
 
