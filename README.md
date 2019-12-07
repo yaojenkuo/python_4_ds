@@ -30,7 +30,9 @@
 
 ### 課程共筆
 
-- [321 期假日下午班](https://colab.research.google.com/drive/1UbsIuNh5exfKvadu6YqINRq6DlRcybiB)
+- 321 期假日下午班
+    - [PART 1](https://colab.research.google.com/drive/1UbsIuNh5exfKvadu6YqINRq6DlRcybiB)
+    - [PART 2](https://colab.research.google.com/drive/1kzdUO8prpjz0PvNogpKiwI-G7vp9kvYO)
 - [319 期假日下午班](https://colab.research.google.com/drive/1BOQ0PO11Lcans-zqnk2qNuArWXo0i-tC)
 - [315 期暑期密集班](https://colab.research.google.com/drive/1qGAngB7FykvWaKVGdIc4hHAKyHktWOTJ)
 - [312 期假日下午班](https://colab.research.google.com/drive/1qrlyUWt7BIB4Xv2YYms7PHFELQzZuoEi)
@@ -50,7 +52,7 @@
 - [NumPy 101](04-numpy-101.slides.html)
 - [Pandas 101](05-pandas-101.slides.html)
 - [Pandas 專題：資料處理](06-pandas-data-wrangling.slides.html)
-- [Matplotlib PyPlot 101](07-pyplot-101.slides.html)
+- [Matplotlib PyPlot 101](07-matplotlib-101.slides.html)
 - [Seaborn 101](08-seaborn-101.slides.html)
 
 ### 延伸閱讀
