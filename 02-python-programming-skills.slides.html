@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,7 +36,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 
 <!-- Loading the mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -13069,45 +13068,6 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
-<style type="text/css">
-    
-/* Temporary definitions which will become obsolete with Notebook release 5.0 */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-bold { font-weight: bold; }
-
-    </style>
 
 
 <style type="text/css">
@@ -13263,7 +13223,8 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#22823;&#32177;">&#22823;&#32177;<a class="anchor-link" href="#&#22823;&#32177;">&#182;</a></h2><ul>
 <li>Python 程式設計小抄</li>
-<li>Python 與資料科學的旋風之旅</li>
+<li>自訂函數</li>
+<li>錯誤與例外</li>
 <li>彈性參數</li>
 <li>匿名函數</li>
 <li>迭代函數（Iterators）</li>
@@ -13301,13 +13262,6 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#25105;&#25512;&#34214;&#20351;&#29992;&#24190;&#20491;-Python-&#31243;&#24335;&#35373;&#35336;&#23567;&#25220;&#20358;&#24171;&#21161;&#35079;&#32722;">&#25105;&#25512;&#34214;&#20351;&#29992;&#24190;&#20491; Python &#31243;&#24335;&#35373;&#35336;&#23567;&#25220;&#20358;&#24171;&#21161;&#35079;&#32722;<a class="anchor-link" href="#&#25105;&#25512;&#34214;&#20351;&#29992;&#24190;&#20491;-Python-&#31243;&#24335;&#35373;&#35336;&#23567;&#25220;&#20358;&#24171;&#21161;&#35079;&#32722;">&#182;</a></h2>
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="DataCamp"><a href="https://www.datacamp.com?tap_a=5644-dce66f&amp;tap_s=194899-1fb421">DataCamp</a><a class="anchor-link" href="#DataCamp">&#182;</a></h2><p><a href="https://python-cheat-sheets.s3-ap-northeast-1.amazonaws.com/PythonForDataScience.pdf">Python for Data Science Cheat Sheet</a></p>
 <p>Source: <a href="https://www.datacamp.com?tap_a=5644-dce66f&amp;tap_s=194899-1fb421">DataCamp</a></p>
 
@@ -13329,9 +13283,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Python-Crash-Course"><a href="https://ehmatthes.github.io/pcc/">Python Crash Course</a><a class="anchor-link" href="#Python-Crash-Course">&#182;</a></h2><ul>
-<li><a href="https://python-cheat-sheets.s3-ap-northeast-1.amazonaws.com/beginners_python_cheat_sheet_pcc_all.pdf">Beginner's Python Cheat Sheet</a></li>
-</ul>
+<h2 id="Python-Crash-Course"><a href="https://ehmatthes.github.io/pcc/">Python Crash Course</a><a class="anchor-link" href="#Python-Crash-Course">&#182;</a></h2><p><a href="https://python-cheat-sheets.s3-ap-northeast-1.amazonaws.com/beginners_python_cheat_sheet_pcc_all.pdf">Beginner's Python Cheat Sheet</a></p>
 <p>Source: <a href="https://ehmatthes.github.io/pcc/">Python Crash Course</a></p>
 
 </div>
@@ -13340,17 +13292,197 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Python-&#33287;&#36039;&#26009;&#31185;&#23416;&#30340;&#26059;&#39080;&#20043;&#26053;">Python &#33287;&#36039;&#26009;&#31185;&#23416;&#30340;&#26059;&#39080;&#20043;&#26053;<a class="anchor-link" href="#Python-&#33287;&#36039;&#26009;&#31185;&#23416;&#30340;&#26059;&#39080;&#20043;&#26053;">&#182;</a></h2>
+<h2 id="&#33258;&#35330;&#20989;&#25976;">&#33258;&#35330;&#20989;&#25976;<a class="anchor-link" href="#&#33258;&#35330;&#20989;&#25976;">&#182;</a></h2>
 </div>
 </div>
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#25105;&#26366;&#32147;&#22039;&#35430;&#36942;-3-&#23567;&#26178;&#30340;&#30701;&#35611;">&#25105;&#26366;&#32147;&#22039;&#35430;&#36942; 3 &#23567;&#26178;&#30340;&#30701;&#35611;<a class="anchor-link" href="#&#25105;&#26366;&#32147;&#22039;&#35430;&#36942;-3-&#23567;&#26178;&#30340;&#30701;&#35611;">&#182;</a></h2><p><a href="https://yaojenkuo.io/py_prg/a-whirlwind-tour-of-python.slides#/">Python 與資料科學的旋風之旅</a></p>
+<h2 id="&#33258;&#35330;&#20989;&#25976;-Code-Block-&#32080;&#27083;">&#33258;&#35330;&#20989;&#25976; Code Block &#32080;&#27083;<a class="anchor-link" href="#&#33258;&#35330;&#20989;&#25976;-Code-Block-&#32080;&#27083;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">function_name</span><span class="p">(</span><span class="err">輸入</span><span class="p">,</span> <span class="err">參數</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Docstrings</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># 做些什麼事</span>
+    <span class="k">return</span> <span class="err">輸出</span>
+</pre></div>
 
 </div>
 </div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Define</span>
+<span class="k">def</span> <span class="nf">get_abs</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    取得 x 的絕對值。</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">-</span><span class="n">x</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">x</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Use</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">help</span><span class="p">(</span><span class="n">get_abs</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">get_abs</span><span class="p">(</span><span class="o">-</span><span class="mi">5556</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">get_abs</span><span class="p">(</span><span class="mi">5566</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Help on function get_abs in module __main__:
+
+get_abs(x)
+    取得 x 的絕對值。
+
+None
+5556
+5566
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#37679;&#35492;&#33287;&#20363;&#22806;">&#37679;&#35492;&#33287;&#20363;&#22806;<a class="anchor-link" href="#&#37679;&#35492;&#33287;&#20363;&#22806;">&#182;</a></h2>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#24120;&#35211;&#30340;-Runtime-error:-ZeroDivisionError">&#24120;&#35211;&#30340; Runtime error: ZeroDivisionError<a class="anchor-link" href="#&#24120;&#35211;&#30340;-Runtime-error:-ZeroDivisionError">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">divide</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    將輸入的兩個數字相除</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">/</span> <span class="n">y</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">divide</span><span class="p">(</span><span class="mi">5566</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ZeroDivisionError</span>                         Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-3-400a2a8f876f&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span>     <span class="ansi-green-fg">return</span> x <span class="ansi-blue-fg">/</span> y
+<span class="ansi-green-intense-fg ansi-bold">      6</span> 
+<span class="ansi-green-fg">----&gt; 7</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span>divide<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">5566</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">&lt;ipython-input-3-400a2a8f876f&gt;</span> in <span class="ansi-cyan-fg">divide</span><span class="ansi-blue-fg">(x, y)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span>     將輸入的兩個數字相除
+<span class="ansi-green-intense-fg ansi-bold">      4</span>     &#34;&#34;&#34;
+<span class="ansi-green-fg">----&gt; 5</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">return</span> x <span class="ansi-blue-fg">/</span> y
+<span class="ansi-green-intense-fg ansi-bold">      6</span> 
+<span class="ansi-green-intense-fg ansi-bold">      7</span> print<span class="ansi-blue-fg">(</span>divide<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">5566</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">ZeroDivisionError</span>: division by zero</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#20351;&#29992;-try...except...-&#34389;&#29702;&#37679;&#35492;&#33287;&#20363;&#22806;">&#20351;&#29992; <code>try...except...</code> &#34389;&#29702;&#37679;&#35492;&#33287;&#20363;&#22806;<a class="anchor-link" href="#&#20351;&#29992;-try...except...-&#34389;&#29702;&#37679;&#35492;&#33287;&#20363;&#22806;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">safe_divide</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    將輸入的兩個數字相除</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">x</span> <span class="o">/</span> <span class="n">y</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Something went wrong...&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">safe_divide</span><span class="p">(</span><span class="mi">5566</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Something went wrong...
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13362,17 +13494,14 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#26377;&#26178;&#25105;&#20497;&#30340;&#20989;&#25976;&#19981;&#30906;&#23450;&#20351;&#29992;&#32773;&#26371;&#24819;&#36664;&#20837;&#24190;&#20491;&#21443;&#25976;">&#26377;&#26178;&#25105;&#20497;&#30340;&#20989;&#25976;&#19981;&#30906;&#23450;&#20351;&#29992;&#32773;&#26371;&#24819;&#36664;&#20837;&#24190;&#20491;&#21443;&#25976;<a class="anchor-link" href="#&#26377;&#26178;&#25105;&#20497;&#30340;&#20989;&#25976;&#19981;&#30906;&#23450;&#20351;&#29992;&#32773;&#26371;&#24819;&#36664;&#20837;&#24190;&#20491;&#21443;&#25976;">&#182;</a></h2><ul>
-<li><code>*args</code> : for list-like arguments</li>
-<li><code>**kwargs</code>: for dict-like arguments</li>
-</ul>
+<h2 id="&#26377;&#26178;&#25105;&#20497;&#30340;&#20989;&#25976;&#19981;&#30906;&#23450;&#20351;&#29992;&#32773;&#26371;&#24819;&#36664;&#20837;&#24190;&#20491;&#21443;&#25976;">&#26377;&#26178;&#25105;&#20497;&#30340;&#20989;&#25976;&#19981;&#30906;&#23450;&#20351;&#29992;&#32773;&#26371;&#24819;&#36664;&#20837;&#24190;&#20491;&#21443;&#25976;<a class="anchor-link" href="#&#26377;&#26178;&#25105;&#20497;&#30340;&#20989;&#25976;&#19981;&#30906;&#23450;&#20351;&#29992;&#32773;&#26371;&#24819;&#36664;&#20837;&#24190;&#20491;&#21443;&#25976;">&#182;</a></h2><p><code>*args</code> : for list-like arguments</p>
 
 </div>
 </div>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_fahrenheit</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
@@ -13391,7 +13520,7 @@ a.anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[1]:</div>
+    <div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -13408,7 +13537,43 @@ a.anchor-link {
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_fahrenheit</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">22</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-6-07d7bb62e8ca&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>get_fahrenheit<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">18</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">20</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">22</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">TypeError</span>: get_fahrenheit() takes 1 positional argument but 3 were given</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_fahrenheits</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
@@ -13418,7 +13583,6 @@ a.anchor-link {
     <span class="k">return</span> <span class="n">fahrenheits</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">get_fahrenheits</span><span class="p">(</span><span class="mi">18</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">get_fahrenheits</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">get_fahrenheits</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">22</span><span class="p">))</span>
 </pre></div>
 
@@ -13437,7 +13601,6 @@ a.anchor-link {
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[64.4]
-[64.4, 68.0]
 [64.4, 68.0, 71.6]
 </pre>
 </div>
@@ -13447,60 +13610,38 @@ a.anchor-link {
 </div>
 
 </div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#23531;&#19968;&#20491;&#20989;&#25976;-get_mean(*args)-&#22238;&#20659;-*args-&#25152;&#32068;&#25104;&#20043;&#25976;&#21015;&#30340;&#24179;&#22343;&#25976;">&#23531;&#19968;&#20491;&#20989;&#25976; <code>get_mean(*args)</code> &#22238;&#20659; <code>*args</code> &#25152;&#32068;&#25104;&#20043;&#25976;&#21015;&#30340;&#24179;&#22343;&#25976;<a class="anchor-link" href="#&#23531;&#19968;&#20491;&#20989;&#25976;-get_mean(*args)-&#22238;&#20659;-*args-&#25152;&#32068;&#25104;&#20043;&#25976;&#21015;&#30340;&#24179;&#22343;&#25976;">&#182;</a></h2>$$\bar{x} = \frac{\sum_i^n x_i}{n}$$
+</div>
+</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_city_fahrenheit</span><span class="p">(</span><span class="n">city</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
-    <span class="n">city_f</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="n">city</span><span class="p">:</span> <span class="n">c</span><span class="o">*</span><span class="mi">9</span><span class="o">/</span><span class="mi">5</span> <span class="o">+</span> <span class="mi">32</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="n">city_f</span>
-
-<span class="n">get_city_fahrenheit</span><span class="p">(</span><span class="s2">&quot;Taipei&quot;</span><span class="p">,</span> <span class="mi">18</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_mean</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="n">summation</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+    <span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+    <span class="n">x_bar</span> <span class="o">=</span> <span class="n">summation</span> <span class="o">/</span> <span class="n">length</span>
+    <span class="k">return</span> <span class="n">x_bar</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[3]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>{&#39;Taipei&#39;: 64.4}</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_city_fahrenheits</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="n">city_f</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-        <span class="n">v</span> <span class="o">=</span> <span class="n">v</span><span class="o">*</span><span class="mi">9</span><span class="o">/</span><span class="mi">5</span> <span class="o">+</span> <span class="mi">32</span>
-        <span class="n">city_f</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
-    <span class="k">return</span> <span class="n">city_f</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">get_city_fahrenheits</span><span class="p">(</span><span class="n">Taipei</span><span class="o">=</span><span class="mi">18</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">get_city_fahrenheits</span><span class="p">(</span><span class="n">Taipei</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="n">London</span><span class="o">=</span><span class="mi">20</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">get_city_fahrenheits</span><span class="p">(</span><span class="n">Taipei</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="n">London</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">Japan</span><span class="o">=</span><span class="mi">22</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">get_mean</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">get_mean</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">get_mean</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -13517,9 +13658,9 @@ a.anchor-link {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;Taipei&#39;: 64.4}
-{&#39;Taipei&#39;: 64.4, &#39;London&#39;: 68.0}
-{&#39;Taipei&#39;: 64.4, &#39;London&#39;: 68.0, &#39;Japan&#39;: 71.6}
+<pre>5.0
+5.0
+3.0
 </pre>
 </div>
 </div>
@@ -13527,7 +13668,7 @@ a.anchor-link {
 </div>
 </div>
 
-</div></section><section>
+</div></div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13538,7 +13679,7 @@ a.anchor-link {
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">get_std</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">))</span>
@@ -13587,7 +13728,7 @@ Please input at least 2 numbers.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">squared</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
@@ -13606,7 +13747,7 @@ Please input at least 2 numbers.
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[14]:</div>
 
 
 
@@ -13632,7 +13773,7 @@ Please input at least 2 numbers.
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">squared</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
@@ -13650,7 +13791,7 @@ Please input at least 2 numbers.
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[8]:</div>
+    <div class="prompt output_prompt">Out[15]:</div>
 
 
 
@@ -13667,7 +13808,7 @@ Please input at least 2 numbers.
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_abs</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="o">-</span><span class="n">x</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">x</span>
@@ -13727,7 +13868,7 @@ Please input at least 2 numbers.
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_fahrenheit</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
@@ -13748,7 +13889,7 @@ Please input at least 2 numbers.
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[10]:</div>
+    <div class="prompt output_prompt">Out[17]:</div>
 
 
 
@@ -13765,7 +13906,7 @@ Please input at least 2 numbers.
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># map()</span>
@@ -13784,7 +13925,7 @@ Please input at least 2 numbers.
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[11]:</div>
+    <div class="prompt output_prompt">Out[18]:</div>
 
 
 
@@ -13801,7 +13942,7 @@ Please input at least 2 numbers.
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># filter()</span>
@@ -13820,7 +13961,7 @@ Please input at least 2 numbers.
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[12]:</div>
+    <div class="prompt output_prompt">Out[19]:</div>
 
 
 
@@ -13848,7 +13989,7 @@ Please input at least 2 numbers.
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># enumerate()：同時取用一個 iterable 中的 index 與 value</span>
@@ -13885,7 +14026,7 @@ Please input at least 2 numbers.
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># zip()：同時取用多個 iterables 中的 values</span>
@@ -13937,7 +14078,7 @@ Avengers: Endgame 上映年份 2019
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># loop construction</span>
@@ -13972,7 +14113,7 @@ Avengers: Endgame 上映年份 2019
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># list comprehension</span>
@@ -14005,7 +14146,7 @@ Avengers: Endgame 上映年份 2019
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># list comprehension with if</span>
@@ -14038,7 +14179,7 @@ Avengers: Endgame 上映年份 2019
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># list comprehension with if-else</span>
@@ -14078,7 +14219,7 @@ Avengers: Endgame 上映年份 2019
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">kilometers</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">21.095</span><span class="p">,</span> <span class="mf">42.195</span><span class="p">]</span>
@@ -14091,7 +14232,7 @@ Avengers: Endgame 上映年份 2019
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">miles</span><span class="p">)</span>
@@ -14149,7 +14290,7 @@ Avengers: Endgame 上映年份 2019
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># map()</span>
@@ -14174,7 +14315,7 @@ Avengers: Endgame 上映年份 2019
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>&lt;class &#39;map&#39;&gt;
-&lt;map object at 0x1048b2240&gt;
+&lt;map object at 0x10b3d7750&gt;
 </pre>
 </div>
 </div>
@@ -14185,7 +14326,7 @@ Avengers: Endgame 上映年份 2019
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">temp_f</span><span class="p">)</span>
@@ -14201,7 +14342,7 @@ Avengers: Endgame 上映年份 2019
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[23]:</div>
+    <div class="prompt output_prompt">Out[30]:</div>
 
 
 
@@ -14218,7 +14359,7 @@ Avengers: Endgame 上映年份 2019
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">temp_f</span><span class="p">)</span>
@@ -14234,7 +14375,7 @@ Avengers: Endgame 上映年份 2019
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[24]:</div>
+    <div class="prompt output_prompt">Out[31]:</div>
 
 
 
@@ -14251,7 +14392,7 @@ Avengers: Endgame 上映年份 2019
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># filter()</span>
@@ -14276,7 +14417,7 @@ Avengers: Endgame 上映年份 2019
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>&lt;class &#39;filter&#39;&gt;
-&lt;filter object at 0x1048b24e0&gt;
+&lt;filter object at 0x10bc0c2d0&gt;
 </pre>
 </div>
 </div>
@@ -14287,7 +14428,7 @@ Avengers: Endgame 上映年份 2019
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">below_zero</span><span class="p">)</span>
@@ -14303,7 +14444,7 @@ Avengers: Endgame 上映年份 2019
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[26]:</div>
+    <div class="prompt output_prompt">Out[33]:</div>
 
 
 
@@ -14320,7 +14461,7 @@ Avengers: Endgame 上映年份 2019
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">below_zero</span><span class="p">)</span>
@@ -14336,7 +14477,7 @@ Avengers: Endgame 上映年份 2019
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[27]:</div>
+    <div class="prompt output_prompt">Out[34]:</div>
 
 
 
@@ -14360,7 +14501,7 @@ Avengers: Endgame 上映年份 2019
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">kilometers</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">21.095</span><span class="p">,</span> <span class="mf">42.195</span><span class="p">]</span>
@@ -14373,7 +14514,7 @@ Avengers: Endgame 上映年份 2019
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">miles</span><span class="p">)</span>
@@ -14394,7 +14535,7 @@ Avengers: Endgame 上映年份 2019
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>&lt;generator object &lt;genexpr&gt; at 0x1048a7a20&gt;
+<pre>&lt;generator object &lt;genexpr&gt; at 0x10bc071d0&gt;
 [0.994192, 1.86411, 3.1068499999999997, 6.213699999999999, 13.10780015, 26.21870715]
 </pre>
 </div>
@@ -14406,7 +14547,7 @@ Avengers: Endgame 上映年份 2019
 </div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># enumerate()</span>
@@ -14431,7 +14572,7 @@ Avengers: Endgame 上映年份 2019
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>&lt;class &#39;enumerate&#39;&gt;
-&lt;enumerate object at 0x10488b828&gt;
+&lt;enumerate object at 0x10bc03fa0&gt;
 </pre>
 </div>
 </div>
@@ -14442,7 +14583,7 @@ Avengers: Endgame 上映年份 2019
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">enumerate_generator</span><span class="p">)</span>
@@ -14458,7 +14599,7 @@ Avengers: Endgame 上映年份 2019
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[32]:</div>
+    <div class="prompt output_prompt">Out[39]:</div>
 
 
 
@@ -14478,7 +14619,7 @@ Avengers: Endgame 上映年份 2019
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">enumerate_generator</span><span class="p">)</span>
@@ -14494,7 +14635,7 @@ Avengers: Endgame 上映年份 2019
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[33]:</div>
+    <div class="prompt output_prompt">Out[40]:</div>
 
 
 
@@ -14511,7 +14652,7 @@ Avengers: Endgame 上映年份 2019
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># zip()</span>
@@ -14537,7 +14678,7 @@ Avengers: Endgame 上映年份 2019
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>&lt;class &#39;zip&#39;&gt;
-&lt;zip object at 0x1048b8148&gt;
+&lt;zip object at 0x10bc226e0&gt;
 </pre>
 </div>
 </div>
@@ -14548,7 +14689,7 @@ Avengers: Endgame 上映年份 2019
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">zip_generator</span><span class="p">)</span>
@@ -14564,7 +14705,7 @@ Avengers: Endgame 上映年份 2019
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[35]:</div>
+    <div class="prompt output_prompt">Out[42]:</div>
 
 
 
@@ -14584,7 +14725,7 @@ Avengers: Endgame 上映年份 2019
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">zip_generator</span><span class="p">)</span>
@@ -14600,7 +14741,7 @@ Avengers: Endgame 上映年份 2019
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[36]:</div>
+    <div class="prompt output_prompt">Out[43]:</div>
 
 
 
@@ -14636,7 +14777,7 @@ Avengers: Endgame 上映年份 2019
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Movie</span><span class="p">:</span>
@@ -14666,7 +14807,7 @@ Avengers: Endgame 上映年份 2019
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">avengers_endgame</span> <span class="o">=</span> <span class="n">Movie</span><span class="p">(</span><span class="mf">8.8</span><span class="p">,</span> <span class="s1">&#39;3h 1min&#39;</span><span class="p">)</span> <span class="c1"># 初始化</span>
@@ -14703,7 +14844,7 @@ Avengers: Endgame 上映年份 2019
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 動態的方法</span>
@@ -14759,7 +14900,7 @@ Avengers: Endgame 上映年份 2019
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14159</span>
@@ -14791,7 +14932,7 @@ Avengers: Endgame 上映年份 2019
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pi_str</span> <span class="o">=</span> <span class="s2">&quot;圓周率&quot;</span>
@@ -14839,7 +14980,7 @@ Avengers: Endgame 上映年份 2019
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">use_the_force</span> <span class="o">=</span> <span class="s2">&quot;Luke, use the Force!&quot;</span>
@@ -14888,7 +15029,7 @@ luke, use the force!
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">use_the_force</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
@@ -14910,7 +15051,7 @@ luke, use the force!
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[43]:</div>
+    <div class="prompt output_prompt">Out[50]:</div>
 
 
 
@@ -14927,7 +15068,7 @@ luke, use the force!
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">use_the_force</span><span class="o">.</span><span class="n">rstrip</span><span class="p">())</span>
@@ -14974,7 +15115,7 @@ Luke, use the Force!
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">skywalker</span> <span class="o">=</span> <span class="s2">&quot;Anakin Skywalker&quot;</span>
@@ -15016,7 +15157,7 @@ Luke Skywalker
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">use_the_force</span> <span class="o">=</span> <span class="s2">&quot;Luke, use the Force!&quot;</span>
@@ -15047,7 +15188,97 @@ Luke Skywalker
 </div>
 </div>
 
-</div></section></section>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#35336;&#31639;&#25991;&#23383;&#38971;&#29575;&#30340;&#31777;&#21934;&#26041;&#27861;">&#35336;&#31639;&#25991;&#23383;&#38971;&#29575;&#30340;&#31777;&#21934;&#26041;&#27861;<a class="anchor-link" href="#&#35336;&#31639;&#25991;&#23383;&#38971;&#29575;&#30340;&#31777;&#21934;&#26041;&#27861;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="n">episode_ix_opening_crawl</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">A long time ago in a galaxy far, far away....</span>
+
+<span class="s2">The dead speak! The galaxy has heard a mysterious broadcast, a threat of REVENGE in the sinister voice of the late EMPEROR PALPATINE. </span>
+
+<span class="s2">GENERAL LEIA ORGANA dispatches secret agents to gather intelligence, while REY, the last hope of the Jedi, trains for battle against the diabolical FIRST ORDER.</span>
+
+<span class="s2">Meanwhile, Supreme Leader KYLO REN rages in search of the phantom Emperor, determined to destroy any threat to his power....</span>
+<span class="s2">&quot;&quot;&quot;</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_word_frequency</span><span class="p">(</span><span class="n">long_str</span><span class="p">):</span>
+    <span class="n">long_str_split</span> <span class="o">=</span> <span class="n">long_str</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="n">word_frequency</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">long_str_split</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">word_frequency</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">word_frequency</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">word_frequency</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">word_frequency</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">episode_ix_opening_crawl</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">A long time ago in a galaxy far, far away....</span>
+
+<span class="s2">The dead speak! The galaxy has heard a mysterious broadcast, a threat of REVENGE in the sinister voice of the late EMPEROR PALPATINE. </span>
+
+<span class="s2">GENERAL LEIA ORGANA dispatches secret agents to gather intelligence, while REY, the last hope of the Jedi, trains for battle against the diabolical FIRST ORDER.</span>
+
+<span class="s2">Meanwhile, Supreme Leader KYLO REN rages in search of the phantom Emperor, determined to destroy any threat to his power....</span>
+<span class="s2">&quot;&quot;&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">get_word_frequency</span><span class="p">(</span><span class="n">episode_ix_opening_crawl</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;A&#39;: 1, &#39;long&#39;: 1, &#39;time&#39;: 1, &#39;ago&#39;: 1, &#39;in&#39;: 3, &#39;a&#39;: 3, &#39;galaxy&#39;: 2, &#39;far,&#39;: 1, &#39;far&#39;: 1, &#39;away....&#39;: 1, &#39;The&#39;: 2, &#39;dead&#39;: 1, &#39;speak!&#39;: 1, &#39;has&#39;: 1, &#39;heard&#39;: 1, &#39;mysterious&#39;: 1, &#39;broadcast,&#39;: 1, &#39;threat&#39;: 2, &#39;of&#39;: 4, &#39;REVENGE&#39;: 1, &#39;the&#39;: 6, &#39;sinister&#39;: 1, &#39;voice&#39;: 1, &#39;late&#39;: 1, &#39;EMPEROR&#39;: 1, &#39;PALPATINE.&#39;: 1, &#39;GENERAL&#39;: 1, &#39;LEIA&#39;: 1, &#39;ORGANA&#39;: 1, &#39;dispatches&#39;: 1, &#39;secret&#39;: 1, &#39;agents&#39;: 1, &#39;to&#39;: 3, &#39;gather&#39;: 1, &#39;intelligence,&#39;: 1, &#39;while&#39;: 1, &#39;REY,&#39;: 1, &#39;last&#39;: 1, &#39;hope&#39;: 1, &#39;Jedi,&#39;: 1, &#39;trains&#39;: 1, &#39;for&#39;: 1, &#39;battle&#39;: 1, &#39;against&#39;: 1, &#39;diabolical&#39;: 1, &#39;FIRST&#39;: 1, &#39;ORDER.&#39;: 1, &#39;Meanwhile,&#39;: 1, &#39;Supreme&#39;: 1, &#39;Leader&#39;: 1, &#39;KYLO&#39;: 1, &#39;REN&#39;: 1, &#39;rages&#39;: 1, &#39;search&#39;: 1, &#39;phantom&#39;: 1, &#39;Emperor,&#39;: 1, &#39;determined&#39;: 1, &#39;destroy&#39;: 1, &#39;any&#39;: 1, &#39;his&#39;: 1, &#39;power....&#39;: 1}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div></section></section>
 </div>
 </div>
 
