@@ -1,17 +1,18 @@
-## 成為初級資料分析師 | Python 與資料科學應用
+## 成為初級資料分析師 | Python 資料科學應用
 
 ### 簡介
 
-這是[郭耀仁](https://www.facebook.com/yaojen.kuo.1)在[台灣大學資訊工程學系資訊系統訓練班](https://www.csie.ntu.edu.tw/train/)所開設的 Python 與資料科學應用課程網頁，課程時數 30 小時。
+這是[郭耀仁](https://www.facebook.com/yaojen.kuo.1)在[台灣大學資訊工程學系資訊系統訓練班](https://www.csie.ntu.edu.tw/train/)所開設的 Python 資料科學應用課程網頁，課程時數 30 小時。
 
 ### 評分標準
 
-- 一個作業的分數為 25 分
+- 一個作業的分數為 35 分
 - 70 分即可獲得證書，作業請上傳至 Google 表單
 - 作業繳交期限為課程結束後一週內，如遇長假期（春節、連假）則順延
 
 ### 作業上傳表單
 
+- [322 期假日下午班](https://forms.gle/hLg7VefXV9Cvhd3E7)
 - [321 期假日下午班](https://forms.gle/Pc2csi5X283urXwv7)
 - [319 期假日下午班](https://forms.gle/ymgTzpi758kKBBK97)
 - [315 期暑期密集班](https://forms.gle/wSPvWDXeMaJYAH4Q7)
@@ -30,6 +31,7 @@
 
 ### 課程共筆
 
+- [322 期假日下午班](https://colab.research.google.com/drive/1rXzZTaU-utngh68XlfFeM_szzteJOCkl)
 - 321 期假日下午班
     - [PART 1](https://colab.research.google.com/drive/1UbsIuNh5exfKvadu6YqINRq6DlRcybiB)
     - [PART 2](https://colab.research.google.com/drive/1kzdUO8prpjz0PvNogpKiwI-G7vp9kvYO)
@@ -49,11 +51,14 @@
 - [起步走](01-setup.slides.html)
 - [Python 程式設計常用技巧](02-python-programming-skills.slides.html)
 - [網頁資料擷取](03-web-scraping-101.slides.html)
+- [網頁資料擷取排程與分享資料](03-web-scraping-102.slides.html)
 - [NumPy 101](04-numpy-101.slides.html)
 - [Pandas 101](05-pandas-101.slides.html)
 - [Pandas 專題：資料處理](06-pandas-data-wrangling.slides.html)
+<!--
 - [Matplotlib PyPlot 101](07-matplotlib-101.slides.html)
 - [Seaborn 101](08-seaborn-101.slides.html)
+-->
 
 ### 延伸閱讀
 
@@ -64,6 +69,7 @@
 
 ### 近期課程錄影清單
 
+- [第 322 期 Python 與資料科學應用（假日班下午）]()
 - [第 321 期 Python 與資料科學應用（假日班下午）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuUcsyW8joxdekBksn4ZSeNe)
 - [第 319 期 Python 與資料科學應用（假日班下午）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuVYc8lSg6kwn9CGnx28orHc)
 - [第 315 期 Python 與資料科學應用（暑期密集班）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuVyoGYwn46IlStidqqTcEwB)
