@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,7 +36,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 
 <!-- Loading the mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -13069,45 +13068,6 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
-<style type="text/css">
-    
-/* Temporary definitions which will become obsolete with Notebook release 5.0 */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-bold { font-weight: bold; }
-
-    </style>
 
 
 <style type="text/css">
@@ -13347,7 +13307,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#22312;-EC2-&#19978;&#22519;&#34892;&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#31243;&#24335;&#65306;&#24314;&#31435;&#34395;&#25836;&#29872;&#22659;">&#22312; EC2 &#19978;&#22519;&#34892;&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#31243;&#24335;&#65306;&#24314;&#31435;&#34395;&#25836;&#29872;&#22659;<a class="anchor-link" href="#&#22312;-EC2-&#19978;&#22519;&#34892;&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#31243;&#24335;&#65306;&#24314;&#31435;&#34395;&#25836;&#29872;&#22659;">&#182;</a></h2><div class="highlight"><pre><span></span>conda create -n flask <span class="nv">python</span><span class="o">=</span><span class="m">3</span>
+<h2 id="&#22312;-EC2-&#19978;&#22519;&#34892;&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#31243;&#24335;&#65306;&#24314;&#31435;&#34395;&#25836;&#29872;&#22659;">&#22312; EC2 &#19978;&#22519;&#34892;&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#31243;&#24335;&#65306;&#24314;&#31435;&#34395;&#25836;&#29872;&#22659;<a class="anchor-link" href="#&#22312;-EC2-&#19978;&#22519;&#34892;&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#31243;&#24335;&#65306;&#24314;&#31435;&#34395;&#25836;&#29872;&#22659;">&#182;</a></h2><div class="highlight"><pre><span></span>conda create -n flask <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.7
 conda activate flask
 </pre></div>
 
@@ -13375,29 +13335,34 @@ conda activate flask
 <span class="kn">import</span> <span class="nn">sqlite3</span>
 <span class="kn">import</span> <span class="nn">datetime</span>
 
-<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;/home/ubuntu/demo.db&#39;</span><span class="p">)</span>
-<span class="n">current_dt</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2"> </span><span class="si">%X</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="n">repo_social_counts</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">page</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
-    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://github.com/search?p={}&amp;q=stars%3A</span><span class="si">%3E</span><span class="s2">0&amp;s=stars&amp;type=Repositories&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">page</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
-    <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
-    <span class="n">repos</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;href&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;.pr-md-3 .v-align-middle&quot;</span><span class="p">)]</span>
-    <span class="n">repo_links</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;https://github.com&quot;</span> <span class="o">+</span> <span class="n">repo</span> <span class="k">for</span> <span class="n">repo</span> <span class="ow">in</span> <span class="n">repos</span><span class="p">]</span>
-    <span class="k">for</span> <span class="n">repo_link</span><span class="p">,</span> <span class="n">repo</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">repo_links</span><span class="p">,</span> <span class="n">repos</span><span class="p">):</span>
-        <span class="n">repo_dict</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">repo_link</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">insert_data</span><span class="p">():</span>
+    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;/home/ubuntu/demo.db&#39;</span><span class="p">)</span>
+    <span class="n">current_dt</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2"> </span><span class="si">%X</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">repo_social_counts</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">page</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://github.com/search?p={}&amp;q=stars%3A</span><span class="si">%3E</span><span class="s2">0&amp;s=stars&amp;type=Repositories&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">page</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
         <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
-        <span class="n">watches</span><span class="p">,</span> <span class="n">stars</span><span class="p">,</span> <span class="n">forks</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;.social-count&quot;</span><span class="p">)]</span>
-        <span class="n">repo_dict</span><span class="p">[</span><span class="s2">&quot;scrapingTime&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">current_dt</span>
-        <span class="n">repo_dict</span><span class="p">[</span><span class="s2">&quot;repoOrg&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">repo</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
-        <span class="n">repo_dict</span><span class="p">[</span><span class="s2">&quot;repoName&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">repo</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span>
-        <span class="n">repo_dict</span><span class="p">[</span><span class="s2">&quot;watch&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">watches</span>
-        <span class="n">repo_dict</span><span class="p">[</span><span class="s2">&quot;star&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">stars</span>
-        <span class="n">repo_dict</span><span class="p">[</span><span class="s2">&quot;fork&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">forks</span>
-        <span class="n">repo_social_counts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">repo_dict</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Scraping {}...&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">repo</span><span class="p">))</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">repo_social_counts</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="s2">&quot;top_github_repos&quot;</span><span class="p">,</span> <span class="n">con</span><span class="o">=</span><span class="n">conn</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s2">&quot;replace&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+        <span class="n">repos</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;href&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;.pr-md-3 .v-align-middle&quot;</span><span class="p">)]</span>
+        <span class="n">repo_links</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;https://github.com&quot;</span> <span class="o">+</span> <span class="n">repo</span> <span class="k">for</span> <span class="n">repo</span> <span class="ow">in</span> <span class="n">repos</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">repo_link</span><span class="p">,</span> <span class="n">repo</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">repo_links</span><span class="p">,</span> <span class="n">repos</span><span class="p">):</span>
+            <span class="n">repo_dict</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">repo_link</span><span class="p">)</span>
+            <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+            <span class="n">watches</span><span class="p">,</span> <span class="n">stars</span><span class="p">,</span> <span class="n">forks</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;.social-count&quot;</span><span class="p">)]</span>
+            <span class="n">repo_dict</span><span class="p">[</span><span class="s2">&quot;scrapingTime&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">current_dt</span>
+            <span class="n">repo_dict</span><span class="p">[</span><span class="s2">&quot;repoOrg&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">repo</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">repo_dict</span><span class="p">[</span><span class="s2">&quot;repoName&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">repo</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span>
+            <span class="n">repo_dict</span><span class="p">[</span><span class="s2">&quot;watch&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">watches</span>
+            <span class="n">repo_dict</span><span class="p">[</span><span class="s2">&quot;star&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">stars</span>
+            <span class="n">repo_dict</span><span class="p">[</span><span class="s2">&quot;fork&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">forks</span>
+            <span class="n">repo_social_counts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">repo_dict</span><span class="p">)</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Scraping {}...&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">repo</span><span class="p">))</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">repo_social_counts</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="s2">&quot;top_github_repos&quot;</span><span class="p">,</span> <span class="n">con</span><span class="o">=</span><span class="n">conn</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s2">&quot;replace&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">insert_data</span><span class="p">()</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="k">pass</span>
 </pre></div>
 
 </div>
