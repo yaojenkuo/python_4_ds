@@ -13268,11 +13268,26 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#22312;&#36889;&#38272;&#35506;&#20013;&#65292;&#25105;&#20497;&#22810;&#25976;&#31456;&#31680;&#37117;&#22312;&#28687;&#35261;&#22120;&#20351;&#29992;-Google-Colaboratory&#65292;&#20677;&#26377;&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#65306;&#28687;&#35261;&#22120;&#33258;&#21205;&#21270;&#19968;&#31680;&#22312;&#26412;&#27231;&#31471;&#20351;&#29992;-Miniconda">&#22312;&#36889;&#38272;&#35506;&#20013;&#65292;&#25105;&#20497;&#22810;&#25976;&#31456;&#31680;&#37117;&#22312;&#28687;&#35261;&#22120;&#20351;&#29992; Google Colaboratory&#65292;&#20677;&#26377;&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#65306;&#28687;&#35261;&#22120;&#33258;&#21205;&#21270;&#19968;&#31680;&#22312;&#26412;&#27231;&#31471;&#20351;&#29992; Miniconda<a class="anchor-link" href="#&#22312;&#36889;&#38272;&#35506;&#20013;&#65292;&#25105;&#20497;&#22810;&#25976;&#31456;&#31680;&#37117;&#22312;&#28687;&#35261;&#22120;&#20351;&#29992;-Google-Colaboratory&#65292;&#20677;&#26377;&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#65306;&#28687;&#35261;&#22120;&#33258;&#21205;&#21270;&#19968;&#31680;&#22312;&#26412;&#27231;&#31471;&#20351;&#29992;-Miniconda">&#182;</a></h2>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#22312;&#28687;&#35261;&#22120;&#20351;&#29992;-Google-Colaboratory">&#22312;&#28687;&#35261;&#22120;&#20351;&#29992; Google Colaboratory<a class="anchor-link" href="#&#22312;&#28687;&#35261;&#22120;&#20351;&#29992;-Google-Colaboratory">&#182;</a></h2><ol>
 <li>登入 Google 帳號</li>
 <li>前往 <a href="https://colab.research.google.com/">https://colab.research.google.com/</a></li>
 <li>新增 Python 3 Notebook</li>
 </ol>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://i.imgur.com/Tjzs5rR.png?1" alt="Imgur"></p>
 
 </div>
 </div>
@@ -13389,6 +13404,8 @@ a.anchor-link {
 <li>啟動環境</li>
 <li>安裝套件</li>
 <li>創建 Jupyter Notebook Kernel（在已經啟動環境的情況下）</li>
+<li>卸載環境</li>
+<li>開啟 Jupyter Notebook</li>
 </ol>
 
 </div>
@@ -13406,7 +13423,7 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#26356;&#26032;-conda">&#26356;&#26032; conda<a class="anchor-link" href="#&#26356;&#26032;-conda">&#182;</a></h2><div class="highlight"><pre><span></span><span class="c1"># run in command line</span>
-conda update conda
+<span class="o">(</span>base<span class="o">)</span> conda update conda
 </pre></div>
 
 </div>
@@ -13416,7 +13433,7 @@ conda update conda
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#23433;&#35037;-jupyter">&#23433;&#35037; jupyter<a class="anchor-link" href="#&#23433;&#35037;-jupyter">&#182;</a></h2><div class="highlight"><pre><span></span><span class="c1"># run in command line</span>
-conda install jupyter
+<span class="o">(</span>base<span class="o">)</span> conda install jupyter
 </pre></div>
 
 </div>
@@ -13426,7 +13443,7 @@ conda install jupyter
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#27298;&#35222;&#21487;&#29992;&#29872;&#22659;">&#27298;&#35222;&#21487;&#29992;&#29872;&#22659;<a class="anchor-link" href="#&#27298;&#35222;&#21487;&#29992;&#29872;&#22659;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="c1"># run in command line</span>
-conda env list
+<span class="o">(</span>base<span class="o">)</span> conda env list
 </pre></div>
 
 </div>
@@ -13436,7 +13453,7 @@ conda env list
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#21109;&#24314;&#29872;&#22659;">&#21109;&#24314;&#29872;&#22659;<a class="anchor-link" href="#&#21109;&#24314;&#29872;&#22659;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="c1"># run in command line</span>
-conda create --name &lt;env_name&gt; <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.7
+<span class="o">(</span>base<span class="o">)</span> conda create --name &lt;env_name&gt; <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.7
 </pre></div>
 
 </div>
@@ -13446,7 +13463,7 @@ conda create --name &lt;env_name&gt; <span class="nv">python</span><span class="
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#21855;&#21205;&#29872;&#22659;">&#21855;&#21205;&#29872;&#22659;<a class="anchor-link" href="#&#21855;&#21205;&#29872;&#22659;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="c1"># run in command line</span>
-conda activate &lt;env_name&gt;
+<span class="o">(</span>base<span class="o">)</span> conda activate &lt;env_name&gt;
 <span class="c1"># conda deactivate # 回到原本的 (base)</span>
 </pre></div>
 
@@ -13457,7 +13474,7 @@ conda activate &lt;env_name&gt;
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#23433;&#35037;&#22871;&#20214;">&#23433;&#35037;&#22871;&#20214;<a class="anchor-link" href="#&#23433;&#35037;&#22871;&#20214;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="c1"># run in command line</span>
-conda install ipykernel requests lxml beautifulsoup4 selenium numpy pandas matplotlib seaborn
+<span class="o">(</span>env_name<span class="o">)</span> conda install ipykernel requests lxml beautifulsoup4 selenium
 </pre></div>
 
 </div>
@@ -13478,16 +13495,6 @@ conda install ipykernel requests lxml beautifulsoup4 selenium numpy pandas matpl
 <li>selenium</li>
 </ul>
 </li>
-<li>資料處理分析<ul>
-<li>numpy</li>
-<li>pandas</li>
-</ul>
-</li>
-<li>視覺化<ul>
-<li>matplotlib</li>
-<li>seaborn</li>
-</ul>
-</li>
 </ul>
 
 </div>
@@ -13497,9 +13504,47 @@ conda install ipykernel requests lxml beautifulsoup4 selenium numpy pandas matpl
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#21109;&#24314;-Jupyter-Notebook-Kernel&#65288;&#22312;&#24050;&#32147;&#21855;&#21205;&#29872;&#22659;&#30340;&#24773;&#27841;&#19979;&#65289;">&#21109;&#24314; Jupyter Notebook Kernel&#65288;&#22312;&#24050;&#32147;&#21855;&#21205;&#29872;&#22659;&#30340;&#24773;&#27841;&#19979;&#65289;<a class="anchor-link" href="#&#21109;&#24314;-Jupyter-Notebook-Kernel&#65288;&#22312;&#24050;&#32147;&#21855;&#21205;&#29872;&#22659;&#30340;&#24773;&#27841;&#19979;&#65289;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="c1"># run in command line</span>
-python -m ipykernel install --user --name &lt;kernel_name&gt; --display-name <span class="s2">&quot;Python Data Science&quot;</span>
+<span class="o">(</span>env_name<span class="o">)</span> python -m ipykernel install --user --name &lt;kernel_name&gt; --display-name <span class="s2">&quot;Python Web Scraping&quot;</span>
 </pre></div>
 
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#27298;&#35222;&#21487;&#29992;&#30340;-Jupyter-Notebook-Kernel">&#27298;&#35222;&#21487;&#29992;&#30340; Jupyter Notebook Kernel<a class="anchor-link" href="#&#27298;&#35222;&#21487;&#29992;&#30340;-Jupyter-Notebook-Kernel">&#182;</a></h2><div class="highlight"><pre><span></span><span class="c1"># run in command line</span>
+<span class="o">(</span>env_name<span class="o">)</span> jupyter kernelspec list
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#21368;&#36617;&#29872;&#22659;">&#21368;&#36617;&#29872;&#22659;<a class="anchor-link" href="#&#21368;&#36617;&#29872;&#22659;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="c1"># run in command line</span>
+<span class="o">(</span>env_name<span class="o">)</span> conda deactivate
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#38283;&#21855;-Jupyter-Notebook">&#38283;&#21855; Jupyter Notebook<a class="anchor-link" href="#&#38283;&#21855;-Jupyter-Notebook">&#182;</a></h2><div class="highlight"><pre><span></span><span class="c1"># run in command line</span>
+<span class="o">(</span>base<span class="o">)</span> jupyter notebook
+</pre></div>
+<p><img src="https://i.imgur.com/VRFXpEe.png?1" alt="Imgur"></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#22914;&#20309;&#21034;&#38500;-Jupyter-Notebook-Kernel-&#25110;-conda-environment">&#22914;&#20309;&#21034;&#38500; Jupyter Notebook Kernel &#25110; conda environment<a class="anchor-link" href="#&#22914;&#20309;&#21034;&#38500;-Jupyter-Notebook-Kernel-&#25110;-conda-environment">&#182;</a></h2>
 </div>
 </div>
 </div></section><section>
@@ -13521,6 +13566,13 @@ conda deactivate
 conda remove --name &lt;env_name&gt; --all
 </pre></div>
 
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#22914;&#26524;&#24744;&#23565;&#24314;&#31435;&#29872;&#22659;&#30340;&#27493;&#39519;&#36996;&#19981;&#29087;&#24713;&#65292;&#35531;&#19981;&#35201;&#25812;&#24515;&#65292;&#22312;&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#65306;&#28687;&#35261;&#22120;&#33258;&#21205;&#21270;&#19968;&#31680;&#25105;&#20497;&#26371;&#20877;&#20570;&#19968;&#27425;">&#22914;&#26524;&#24744;&#23565;&#24314;&#31435;&#29872;&#22659;&#30340;&#27493;&#39519;&#36996;&#19981;&#29087;&#24713;&#65292;&#35531;&#19981;&#35201;&#25812;&#24515;&#65292;&#22312;&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#65306;&#28687;&#35261;&#22120;&#33258;&#21205;&#21270;&#19968;&#31680;&#25105;&#20497;&#26371;&#20877;&#20570;&#19968;&#27425;<a class="anchor-link" href="#&#22914;&#26524;&#24744;&#23565;&#24314;&#31435;&#29872;&#22659;&#30340;&#27493;&#39519;&#36996;&#19981;&#29087;&#24713;&#65292;&#35531;&#19981;&#35201;&#25812;&#24515;&#65292;&#22312;&#32178;&#38913;&#36039;&#26009;&#25847;&#21462;&#65306;&#28687;&#35261;&#22120;&#33258;&#21205;&#21270;&#19968;&#31680;&#25105;&#20497;&#26371;&#20877;&#20570;&#19968;&#27425;">&#182;</a></h2>
 </div>
 </div>
 </div></section></section>
