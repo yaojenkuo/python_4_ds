@@ -15989,7 +15989,29 @@ https://m.media-amazon.com/images/G/01/imdb/IMDbConsumerSiteProTitleViews/images
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Web-Scraping-in-a-Nutshell">Web Scraping in a Nutshell<a class="anchor-link" href="#Web-Scraping-in-a-Nutshell">&#182;</a></h2><ul>
+<li>請求資料<ul>
+<li>以 Quick JavaScript Switcher 判斷資料分類在 XHR 或 Doc</li>
+<li>以 Chrome 開發人員工具檢視 Preview/Response 確認資料格式</li>
+<li>以 Chrome 開發人員工具檢視請求資料的 Request URL/Request Method/Query String Parameters/Form Data/Cookies</li>
+<li>以 <code>requests</code> 發送請求獲得回應</li>
+</ul>
+</li>
+<li>解析資料<ul>
+<li>資料是 JSON 格式，呼叫回應的 <code>.json()</code> 方法後直接以 Python 資料結構解析</li>
+<li>資料是 XML 格式，使用回應的 <code>.content</code> 屬性後以 <code>lxml</code> 搭配 XPath 解析</li>
+<li>資料是 HTML 格式，使用回應的 <code>.text</code> 屬性後以 <code>bs4</code> 搭配 CSS Selector 解析</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
