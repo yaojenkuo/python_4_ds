@@ -1,16 +1,8 @@
 ## 成為初級資料分析師 | Python 資料科學應用
 
-### 323 期上課時間調整公告
+### 326 期上課時間調整公告
 
-- 因應農曆春節連假，323 期寒密班時間日期調整如下：
-    - 2020-01-13（一）13:30-17:30(4 hours)
-    - 2020-01-14（二）13:30-17:30(4 hours)
-    - 2020-01-15（三）13:30-17:30(4 hours)
-    - 2020-01-16（四）13:30-17:30(4 hours)
-    - 2020-01-17（五）15:30-17:30(2 hours)
-    - 2020-01-20（一）13:30-17:30(4 hours)
-    - 2020-01-21（二）13:30-17:30(4 hours)
-    - 2020-01-22（三）13:30-17:30(4 hours)
+因應清明連假，4/4（六）、4/5（日）不上課。
 
 ### 簡介
 
@@ -26,6 +18,7 @@ Contact me: <tonykuoyj@gmail.com>
 
 ### 作業上傳表單
 
+- [326 期假日下午班](https://forms.gle/HcnKBiREbtK2qoMWA)
 - [323 期寒假密集班](https://forms.gle/G9c3YRcDNwD79erM7)
 - [322 期假日下午班](https://forms.gle/hLg7VefXV9Cvhd3E7)
 - [321 期假日下午班](https://forms.gle/Pc2csi5X283urXwv7)
@@ -44,7 +37,7 @@ Contact me: <tonykuoyj@gmail.com>
 
 ### 課程互動頻道
 
-<https://www.sli.do> 頻道代號：H527
+<https://www.sli.do> 頻道代號：W584
 
 ### 課程 Facebook 群組
 
@@ -52,6 +45,7 @@ Contact me: <tonykuoyj@gmail.com>
 
 ### 課程共筆
 
+- [326 期假日下午班](https://colab.research.google.com/drive/1WMeyZOAmTilQ_TcCbGI1_RW9BWukICdX)
 - [323 期寒假密集班](https://colab.research.google.com/drive/1NKWgEl4LGbZ7ltHotegtkVbypapQSvFz)
 - [322 期假日下午班](https://colab.research.google.com/drive/1rXzZTaU-utngh68XlfFeM_szzteJOCkl)
 - 321 期假日下午班
@@ -85,13 +79,13 @@ Contact me: <tonykuoyj@gmail.com>
 
 ### 延伸閱讀
 
-- [進擊的資料科學](https://www.books.com.tw/products/0010827812)
 - [進擊的資料科學：網頁版](https://www.datainpoint.com/data-science-in-action/)
 - [Python Data Science Handbook](https://www.amazon.com/Python-Data-Science-Handbook-Essential/dp/1491912057)
-- [DataCamp](https://www.datacamp.com?tap_a=5644-dce66f&tap_s=194899-1fb421&utm_medium=affiliate&utm_source=tonykuo)
+- [互動式練習題 DataCamp](https://www.datacamp.com?tap_a=5644-dce66f&tap_s=194899-1fb421&utm_medium=affiliate&utm_source=tonykuo)
 
 ### 近期課程錄影清單
 
+- [第 326 期 Python 與資料科學應用（假日班下午）]()
 - [第 323 期 Python 與資料科學應用（寒假密集班）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuVf4ACy421UYgoQXy_erZa_)
 - [第 322 期 Python 與資料科學應用（假日班下午）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuV10SMxUCWbyuZESVDwxp8R)
 - [第 321 期 Python 與資料科學應用（假日班下午）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuUcsyW8joxdekBksn4ZSeNe)
