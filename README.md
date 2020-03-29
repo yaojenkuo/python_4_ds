@@ -95,7 +95,7 @@ Contact me: <tonykuoyj@gmail.com>
 
 ### 近期課程錄影清單
 
-- [第 326 期 Python 與資料科學應用（假日班下午）]()
+- [第 326 期 Python 與資料科學應用（假日班下午）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuUJUaljfna9B7btnkIw_klv)
 - [第 323 期 Python 與資料科學應用（寒假密集班）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuVf4ACy421UYgoQXy_erZa_)
 - [第 322 期 Python 與資料科學應用（假日班下午）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuV10SMxUCWbyuZESVDwxp8R)
 - [第 321 期 Python 與資料科學應用（假日班下午）](https://www.youtube.com/playlist?list=PLEq7iw5uOtuUcsyW8joxdekBksn4ZSeNe)
